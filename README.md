@@ -1,6 +1,6 @@
 # SAMAYAS - Transportation Services Website
 
-A modern, fully responsive single-page business website for SAMAYAS, a transportation services company offering Acting Driver, Tours & Travels, One-Way Taxi, and Recovery Services.
+A modern, fully responsive single-page business website for SAMAYAS, a transportation services company offering Acting Driver, Tours & Travels, One-Way Taxi, and Recovery Services in Chennai and Trichy, Tamil Nadu.
 
 ![SAMAYAS](https://img.shields.io/badge/React-18.2-blue?logo=react)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwind-css)

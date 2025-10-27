@@ -98,50 +98,6 @@ const Hero = () => {
           ))}
         </div>
 
-        {/* Car 2 - Regular Car */}
-        <div>
-          <motion.div
-            key={`car2-${screenWidth}`}
-            initial={{ x: -200 }}
-            animate={{
-              x: screenWidth + 100,
-              opacity: [0, 1, 1, 0],
-            }}
-            transition={{
-              duration: 6.5,
-              repeat: Infinity,
-              delay: 2.5,
-              ease: "linear",
-              repeatDelay: 0
-            }}
-            className="absolute left-0 z-20"
-            style={{ top: '75%' }}
-          >
-            <Car className="w-20 h-20 text-white/90 drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
-          </motion.div>
-          
-          {/* Dust Trail */}
-          <motion.div
-            key={`dust2-${screenWidth}`}
-            initial={{ x: -250 }}
-            animate={{
-              x: screenWidth + 50,
-              opacity: [0, 0.7, 0.5, 0],
-              scale: [0.5, 2, 3, 0],
-            }}
-            transition={{
-              duration: 6.5,
-              repeat: Infinity,
-              delay: 2.65,
-              ease: "easeOut",
-              repeatDelay: 0
-            }}
-            className="absolute left-0 z-10"
-            style={{ top: '75%' }}
-          >
-            <div className="w-32 h-16 bg-white/30 rounded-full blur-2xl"></div>
-          </motion.div>
-        </div>
 
         
         {/* Subtle road sparkles - minimal */}
@@ -276,15 +232,44 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Car Icon Below Card */}
+            {/* Animated Car Below Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.0, duration: 0.8 }}
-              className="flex justify-center mt-6"
+              className="mt-8 flex justify-center"
             >
-              <Car className="w-16 h-16 text-white/80 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
+              <motion.div
+                animate={{
+                  x: [0, 50, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  repeatDelay: 2
+                }}
+                className="relative"
+              >
+                <Car className="w-20 h-20 text-white/90 drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
+                {/* Dust Trail */}
+                <motion.div
+                  animate={{
+                    x: [0, 50, 0],
+                    opacity: [0.7, 0.5, 0.7],
+                    scale: [1, 1.2, 1],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    repeatDelay: 2
+                  }}
+                  className="absolute -bottom-2 left-0 w-32 h-16 bg-white/30 rounded-full blur-2xl"
+                />
+              </motion.div>
             </motion.div>
+            
           </motion.div>
 
         </motion.div>

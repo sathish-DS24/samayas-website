@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { CircleUserRound, Plane, CarFront, Wrench } from 'lucide-react'
+import { CircleUserRound, Luggage, CarFront, Wrench } from 'lucide-react'
 
 const Services = () => {
   const ref = useRef(null)
@@ -17,7 +17,7 @@ const Services = () => {
       hoverGradient: 'hover:from-blue-600 hover:to-blue-700'
     },
     {
-      icon: Plane,
+      icon: Luggage,
       title: 'Tours & Travels',
       description: 'Plan your holidays or business trips effortlessly with our affordable travel packages.',
       color: 'from-purple-500 to-purple-600',

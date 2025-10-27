@@ -336,14 +336,12 @@ const Hero = () => {
           >
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <div className="text-center mb-6">
-                <Car className="w-16 h-16 text-accent-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Featured Service</h3>
                 <p className="text-gray-300">Most Popular Choice</p>
               </div>
               
               <div className="bg-gradient-to-r from-accent-500/20 to-accent-600/20 rounded-xl p-6 border border-accent-400/30">
                 <div className="flex items-center justify-center space-x-4 mb-4">
-                  <Car className="w-8 h-8 text-accent-400" />
                   <h4 className="text-2xl font-bold text-white">One-Way Taxi</h4>
                   <motion.div
                     animate={{ scale: [1, 1.2, 1] }}

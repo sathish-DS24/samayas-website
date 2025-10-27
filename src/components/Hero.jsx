@@ -276,7 +276,7 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Animated Car Below Card */}
+            {/* Taxi Animation Above Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -285,31 +285,59 @@ const Hero = () => {
             >
               <motion.div
                 animate={{
-                  x: [0, 50, 0],
+                  x: [0, 60, 0],
+                  y: [0, -10, 0],
+                  rotate: [0, 1, 0, -1, 0],
                 }}
                 transition={{
-                  duration: 4,
+                  duration: 5,
                   repeat: Infinity,
-                  ease: "easeInOut",
-                  repeatDelay: 2
+                  ease: "easeInOut"
                 }}
                 className="relative"
               >
-                <Car className="w-20 h-20 text-white/90 drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
+                {/* SVG Taxi Icon */}
+                <svg width="120" height="60" viewBox="0 0 200 100" className="text-white/80 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                  <defs>
+                    <linearGradient id="taxiGradientCard" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#FFD700" />
+                      <stop offset="50%" stopColor="#FFA500" />
+                      <stop offset="100%" stopColor="#FF8C00" />
+                    </linearGradient>
+                  </defs>
+                  {/* Taxi Body */}
+                  <rect x="20" y="40" width="120" height="40" rx="8" fill="url(#taxiGradientCard)" />
+                  {/* Taxi Roof */}
+                  <rect x="30" y="30" width="100" height="20" rx="6" fill="url(#taxiGradientCard)" />
+                  {/* Taxi Sign */}
+                  <rect x="60" y="25" width="40" height="8" rx="4" fill="#FFD700" />
+                  <text x="80" y="31" textAnchor="middle" fontSize="6" fill="#000" fontWeight="bold">TAXI</text>
+                  {/* Wheels */}
+                  <circle cx="40" cy="85" r="12" fill="#333" />
+                  <circle cx="40" cy="85" r="8" fill="#666" />
+                  <circle cx="120" cy="85" r="12" fill="#333" />
+                  <circle cx="120" cy="85" r="8" fill="#666" />
+                  {/* Headlights */}
+                  <circle cx="15" cy="50" r="6" fill="#FFFF99" />
+                  <circle cx="15" cy="60" r="6" fill="#FFFF99" />
+                  {/* Windows */}
+                  <rect x="35" y="35" width="25" height="15" rx="3" fill="#87CEEB" opacity="0.7" />
+                  <rect x="70" y="35" width="25" height="15" rx="3" fill="#87CEEB" opacity="0.7" />
+                  <rect x="105" y="35" width="25" height="15" rx="3" fill="#87CEEB" opacity="0.7" />
+                </svg>
                 {/* Dust Trail */}
                 <motion.div
                   animate={{
-                    x: [0, 50, 0],
-                    opacity: [0.7, 0.5, 0.7],
-                    scale: [1, 1.2, 1],
+                    x: [0, 60, 0],
+                    opacity: [0.6, 0.3, 0.6],
+                    scale: [1, 1.3, 1],
                   }}
                   transition={{
-                    duration: 4,
+                    duration: 5,
                     repeat: Infinity,
-                    ease: "easeInOut",
-                    repeatDelay: 2
+                    ease: "easeInOut"
                   }}
-                  className="absolute -bottom-2 left-0 w-32 h-16 bg-white/30 rounded-full blur-2xl"
+                  className="absolute -bottom-2 left-0 w-24 h-12 bg-yellow-300/30 rounded-full blur-xl"
                 />
               </motion.div>
             </motion.div>

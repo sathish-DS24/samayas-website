@@ -133,6 +133,7 @@ const Services = () => {
                   {/* Icon Container */}
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.1 }}
+                    whileTap={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                     className={`w-16 h-16 ${service.bgColor} rounded-xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors`}
                   >

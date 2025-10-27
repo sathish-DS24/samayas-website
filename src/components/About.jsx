@@ -85,7 +85,7 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="absolute -bottom-8 -right-8 bg-white rounded-xl shadow-xl p-6 max-w-xs"
+              className="absolute bottom-4 right-4 sm:-bottom-8 sm:-right-8 bg-white rounded-xl shadow-xl p-4 sm:p-6 max-w-xs"
             >
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-accent-500 rounded-lg flex items-center justify-center">

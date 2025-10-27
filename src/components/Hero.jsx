@@ -28,22 +28,22 @@ const Hero = () => {
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Taxi Background Image with Motion */}
+        {/* Taxi Background Image with Motion - Above One-Way Taxi Card */}
         <motion.div
           animate={{
-            x: [0, 100, 0],
-            y: [0, -20, 0],
-            rotate: [0, 2, 0, -2, 0],
+            x: [0, 80, 0],
+            y: [0, -15, 0],
+            rotate: [0, 1, 0, -1, 0],
           }}
           transition={{
-            duration: 8,
+            duration: 6,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10"
+          className="absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-15 z-10"
         >
           {/* SVG Taxi Icon */}
-          <svg width="200" height="100" viewBox="0 0 200 100" className="text-white/20">
+          <svg width="150" height="75" viewBox="0 0 200 100" className="text-white/20">
             <defs>
               <linearGradient id="taxiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="#FFD700" />

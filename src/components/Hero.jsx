@@ -28,6 +28,50 @@ const Hero = () => {
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Taxi Background Image with Motion */}
+        <motion.div
+          animate={{
+            x: [0, 100, 0],
+            y: [0, -20, 0],
+            rotate: [0, 2, 0, -2, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10"
+        >
+          {/* SVG Taxi Icon */}
+          <svg width="200" height="100" viewBox="0 0 200 100" className="text-white/20">
+            <defs>
+              <linearGradient id="taxiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#FFD700" />
+                <stop offset="50%" stopColor="#FFA500" />
+                <stop offset="100%" stopColor="#FF8C00" />
+              </linearGradient>
+            </defs>
+            {/* Taxi Body */}
+            <rect x="20" y="40" width="120" height="40" rx="8" fill="url(#taxiGradient)" />
+            {/* Taxi Roof */}
+            <rect x="30" y="30" width="100" height="20" rx="6" fill="url(#taxiGradient)" />
+            {/* Taxi Sign */}
+            <rect x="60" y="25" width="40" height="8" rx="4" fill="#FFD700" />
+            <text x="80" y="31" textAnchor="middle" fontSize="6" fill="#000" fontWeight="bold">TAXI</text>
+            {/* Wheels */}
+            <circle cx="40" cy="85" r="12" fill="#333" />
+            <circle cx="40" cy="85" r="8" fill="#666" />
+            <circle cx="120" cy="85" r="12" fill="#333" />
+            <circle cx="120" cy="85" r="8" fill="#666" />
+            {/* Headlights */}
+            <circle cx="15" cy="50" r="6" fill="#FFFF99" />
+            <circle cx="15" cy="60" r="6" fill="#FFFF99" />
+            {/* Windows */}
+            <rect x="35" y="35" width="25" height="15" rx="3" fill="#87CEEB" opacity="0.7" />
+            <rect x="70" y="35" width="25" height="15" rx="3" fill="#87CEEB" opacity="0.7" />
+            <rect x="105" y="35" width="25" height="15" rx="3" fill="#87CEEB" opacity="0.7" />
+          </svg>
+        </motion.div>
         {/* Fast moving cars with dust trails - Left to Right */}
         {/* Car 1 - Regular Car (Top - above "Your Trusted Partner") */}
         <div>

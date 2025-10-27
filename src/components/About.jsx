@@ -92,7 +92,7 @@ const About = () => {
                   <Award className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-primary-900">5+ Years</div>
+                  <div className="text-2xl font-bold text-primary-900">11+ Years</div>
                   <div className="text-sm text-gray-600">Of Excellence</div>
                 </div>
               </div>

@@ -336,13 +336,7 @@ const Hero = () => {
           >
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <div className="text-center mb-6">
-                <motion.div
-                  animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="inline-block"
-                >
-                  <Car className="w-16 h-16 text-accent-400 mx-auto mb-4" />
-                </motion.div>
+                <Car className="w-16 h-16 text-accent-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Featured Service</h3>
                 <p className="text-gray-300">Most Popular Choice</p>
               </div>

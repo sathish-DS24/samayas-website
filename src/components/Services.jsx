@@ -2,6 +2,16 @@ import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { CircleUserRound, Luggage, CarFront, Wrench } from 'lucide-react'
 
+// Custom Car with Luggage Icon Component
+const CarWithLuggage = ({ className }) => {
+  return (
+    <div className={`relative ${className}`}>
+      <CarFront className="w-full h-full" />
+      <Luggage className="absolute -top-1 left-1/2 -translate-x-1/2 w-4 h-4" />
+    </div>
+  )
+}
+
 const Services = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
@@ -17,7 +27,7 @@ const Services = () => {
       hoverGradient: 'hover:from-blue-600 hover:to-blue-700'
     },
     {
-      icon: Luggage,
+      icon: CarWithLuggage,
       title: 'Tours & Travels',
       description: 'Plan your holidays or business trips effortlessly with our affordable travel packages.',
       color: 'from-purple-500 to-purple-600',

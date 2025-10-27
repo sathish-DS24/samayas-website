@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { CircleUserRound, Luggage, CarFront, Wrench } from 'lucide-react'
+import { CircleUserRound, Luggage, CarFront, Wrench, Car } from 'lucide-react'
 
-// Custom Car with Luggage Icon Component
+// Custom Car with Luggage Icon Component (Side View)
 const CarWithLuggage = ({ className }) => {
   return (
     <div className={`relative ${className}`}>
-      <CarFront className="w-full h-full" />
-      <Luggage className="absolute -top-1 left-1/2 -translate-x-1/2 w-4 h-4" />
+      <Car className="w-full h-full" />
+      <Luggage className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4" />
     </div>
   )
 }

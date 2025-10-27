@@ -275,6 +275,16 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+            
+            {/* Car Icon Below Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.0, duration: 0.8 }}
+              className="flex justify-center mt-6"
+            >
+              <Car className="w-16 h-16 text-white/80 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
+            </motion.div>
           </motion.div>
 
         </motion.div>

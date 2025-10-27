@@ -306,45 +306,6 @@ const Hero = () => {
             </motion.span>
           </motion.h1>
 
-          {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed"
-          >
-            SAMAYAS offers trusted Acting Driver, One-Way Taxi, Tours & Travels,
-            and Vehicle Recovery services at your convenience.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <Link to="booking" smooth={true} duration={800} offset={-100}>
-              <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(251, 191, 36, 0.4)" }}
-                whileTap={{ scale: 0.95 }}
-                className="group px-8 py-4 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-full shadow-2xl flex items-center space-x-2 transition-all"
-              >
-                <span>Book Now</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-            </Link>
-
-            <Link to="services" smooth={true} duration={800} offset={-100}>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 transition-all"
-              >
-                Our Services
-              </motion.button>
-            </Link>
-          </motion.div>
 
         </motion.div>
       </div>

@@ -68,9 +68,9 @@ const Footer = () => {
               <img 
                 src="/logo.png" 
                 alt="SAMAYAS Logo" 
-                className="w-20 h-20 object-contain"
+                className="w-24 h-24 object-contain"
               />
-              <span className="text-2xl font-bold" style={{ color: '#D4AF37' }}>
+              <span className="text-3xl font-bold" style={{ color: '#D4AF37' }}>
                 SAMAYAS
               </span>
             </motion.div>

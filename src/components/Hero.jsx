@@ -9,7 +9,6 @@ const Hero = () => {
   const [videoError, setVideoError] = useState(false)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [isTransitioning, setIsTransitioning] = useState(false)
   const [activeVideo, setActiveVideo] = useState(0) // 0 or 1 for crossfade
   const videoRef1 = React.useRef(null)
   const videoRef2 = React.useRef(null)
@@ -32,35 +31,51 @@ const Hero = () => {
 
   // Handle video end - move to next video with smooth transition
   const handleVideoEnd = useCallback(() => {
-    setIsTransitioning(true)
-    
-    // Preload next video before switching
+    // Next video should already be preloaded and ready
     const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
-    const nextVideoSrc = videoPlaylist[nextIndex]
     const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
     
     if (nextVideoRef.current) {
-      nextVideoRef.current.src = nextVideoSrc
-      nextVideoRef.current.load()
+      // Start crossfade immediately - next video should already be loaded
+      setActiveVideo(activeVideo === 0 ? 1 : 0)
+      setCurrentVideoIndex(nextIndex)
       
-      // Wait for next video to be ready before switching
-      const handleNextVideoReady = () => {
-        if (nextVideoRef.current) {
-          nextVideoRef.current.play().catch(console.error)
-          // Switch active video after a brief delay for smooth transition
-          setTimeout(() => {
-            setActiveVideo(activeVideo === 0 ? 1 : 0)
-            setCurrentVideoIndex(nextIndex)
-            setIsTransitioning(false)
-          }, 300) // 300ms crossfade duration
-        }
+      // Ensure next video is playing
+      if (nextVideoRef.current.paused) {
+        nextVideoRef.current.play().catch(console.error)
       }
+    }
+  }, [currentVideoIndex, activeVideo, videoPlaylist.length])
+
+  // Handle video time update - start preloading next video when current is near end
+  const handleTimeUpdate = useCallback((e) => {
+    const video = e.target
+    const duration = video.duration
+    const currentTime = video.currentTime
+    
+    // When video is 80% complete, start preparing next video
+    if (duration && currentTime / duration > 0.8) {
+      const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
+      const nextVideoSrc = videoPlaylist[nextIndex]
+      const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
       
-      nextVideoRef.current.addEventListener('canplay', handleNextVideoReady, { once: true })
-      
-      // If video is already ready, trigger immediately
-      if (nextVideoRef.current.readyState >= 3) {
-        handleNextVideoReady()
+      if (nextVideoRef.current && nextVideoRef.current.src !== nextVideoSrc) {
+        nextVideoRef.current.src = nextVideoSrc
+        nextVideoRef.current.load()
+        nextVideoRef.current.preload = 'auto'
+        
+        // When next video is ready, start playing it muted in background
+        const handleNextReady = () => {
+          if (nextVideoRef.current && nextVideoRef.current.paused) {
+            nextVideoRef.current.currentTime = 0
+            nextVideoRef.current.play().catch(console.error)
+          }
+        }
+        
+        nextVideoRef.current.addEventListener('canplay', handleNextReady, { once: true })
+        if (nextVideoRef.current.readyState >= 3) {
+          handleNextReady()
+        }
       }
     }
   }, [currentVideoIndex, activeVideo, videoPlaylist.length])
@@ -136,18 +151,31 @@ const Hero = () => {
     }
   }, [handleVideoEnd]) // Include handleVideoEnd in dependencies
 
-  // Preload next video when current video is playing
+  // Preload next video immediately when current video index changes
   useEffect(() => {
     const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
     const nextVideoSrc = videoPlaylist[nextIndex]
     const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
     
-    if (nextVideoRef.current && !isTransitioning) {
+    if (nextVideoRef.current && nextVideoRef.current.src !== nextVideoSrc) {
       nextVideoRef.current.src = nextVideoSrc
       nextVideoRef.current.load()
       nextVideoRef.current.preload = 'auto'
+      
+      // Preload and prepare next video
+      const handleNextReady = () => {
+        if (nextVideoRef.current) {
+          nextVideoRef.current.currentTime = 0
+          // Don't play yet, just prepare it
+        }
+      }
+      
+      nextVideoRef.current.addEventListener('canplay', handleNextReady, { once: true })
+      if (nextVideoRef.current.readyState >= 3) {
+        handleNextReady()
+      }
     }
-  }, [currentVideoIndex, activeVideo, isTransitioning])
+  }, [currentVideoIndex, activeVideo])
 
   const stats = [
     { icon: Users, number: '1000+', label: 'Happy Customers' },
@@ -176,9 +204,10 @@ const Hero = () => {
             style={{ minHeight: '100vh', width: '100vw' }}
             initial={{ opacity: 1 }}
             animate={{ opacity: activeVideo === 0 ? 1 : 0 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            transition={{ duration: 0.8, ease: 'easeInOut' }}
             onError={handleVideoError}
             onEnded={handleVideoEnd}
+            onTimeUpdate={handleTimeUpdate}
             onLoadedData={() => {
               setVideoError(false)
               if (videoRef1.current && activeVideo === 0) {
@@ -201,9 +230,10 @@ const Hero = () => {
             style={{ minHeight: '100vh', width: '100vw' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: activeVideo === 1 ? 1 : 0 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            transition={{ duration: 0.8, ease: 'easeInOut' }}
             onError={handleVideoError}
             onEnded={handleVideoEnd}
+            onTimeUpdate={handleTimeUpdate}
             onLoadedData={() => {
               setVideoError(false)
               if (videoRef2.current && activeVideo === 1) {

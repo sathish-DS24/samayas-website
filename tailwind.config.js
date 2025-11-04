@@ -18,10 +18,10 @@ export default {
           600: '#1e40af',
           700: '#1e3a8a',
           800: '#1e3a8a',
-          900: '#0f172a',
+          900: '#0A1D56', // Deep royal blue
         },
         accent: {
-          500: '#fbbf24',
+          500: '#FDC500', // Gold/yellow
           600: '#f59e0b',
         }
       },

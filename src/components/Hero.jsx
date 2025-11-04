@@ -1,325 +1,204 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
-import { ArrowRight, Car, Sparkles, Truck, Wrench } from 'lucide-react'
+import { Car, Users, Clock, Grid, ChevronDown } from 'lucide-react'
 
 const Hero = () => {
-  const [screenWidth, setScreenWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 2000)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth)
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
     }
-
-    // Set initial width
-    handleResize()
-
-    // Add event listener
-    window.addEventListener('resize', handleResize)
-
-    // Cleanup
-    return () => window.removeEventListener('resize', handleResize)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  const stats = [
+    { icon: Users, number: '1000+', label: 'Happy Customers' },
+    { icon: Clock, number: '24/7', label: 'Available Support' },
+    { icon: Grid, number: '4+', label: 'Services Offered' },
+  ]
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Fast moving cars with dust trails - Left to Right */}
-        {/* Car 1 - Regular Car (Top - above "Your Trusted Partner") */}
-        <div>
-          <motion.div
-            key={`car1-${screenWidth}`}
-            initial={{ x: -200 }}
-            animate={{
-              x: screenWidth + 100,
-              opacity: [0, 1, 1, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              delay: 0,
-              ease: "linear",
-              repeatDelay: 0
-            }}
-            className="absolute left-0 z-20"
-            style={{ top: '8%' }}
-          >
-            <Car className="w-20 h-20 text-white/90 drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
-          </motion.div>
-            
-          {/* Dust Trail 1 */}
-          <motion.div
-            key={`dust1-${screenWidth}`}
-            initial={{ x: -250 }}
-            animate={{
-              x: screenWidth + 50,
-              opacity: [0, 0.7, 0.5, 0],
-              scale: [0.5, 2, 3, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              delay: 0.15,
-              ease: "easeOut",
-              repeatDelay: 0
-            }}
-            className="absolute left-0 z-10"
-            style={{ top: '8%' }}
-          >
-            <div className="w-32 h-16 bg-white/30 rounded-full blur-2xl"></div>
-          </motion.div>
-          
-          {/* Dust particles */}
-          {[...Array(5)].map((_, j) => (
-            <motion.div
-              key={`dust-1-${j}-${screenWidth}`}
-              initial={{ x: -200 }}
-              animate={{
-                x: screenWidth + 100,
-                y: -40 - j * 15,
-                opacity: [0, 0.6, 0.3, 0],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                delay: 0.05 * j,
-                ease: "easeOut",
-                repeatDelay: 0
-              }}
-              className="absolute left-0"
-              style={{ top: '8%' }}
+      {/* Background Video/Image */}
+      <div className="absolute inset-0 z-0">
+        {!isMobile ? (
+          // Desktop: Video background with fallback
+          <div className="relative w-full h-full">
+            {/* Video placeholder - replace with actual video URL */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+              poster="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80"
             >
-              <div className="w-4 h-4 bg-white/40 rounded-full blur-md"></div>
-            </motion.div>
-          ))}
-        </div>
-
-
-        
-        {/* Subtle road sparkles - minimal */}
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key={`sparkle-${i}`}
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: [0, 0.3, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              delay: i * 0.5,
-              ease: "easeInOut"
-            }}
-            className="absolute"
-            style={{ 
-              left: `${10 + i * 11}%`, 
-              top: `${50 + (i % 3) * 10}%`
-            }}
-          >
-            <div className="w-2 h-2 bg-white/40 rounded-full blur-sm"></div>
-          </motion.div>
-        ))}
+              <source src="https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_30fps.mp4" type="video/mp4" />
+              {/* Fallback image if video fails */}
+              <img
+                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80"
+                alt="Highway background"
+                className="w-full h-full object-cover"
+              />
+            </video>
+            {/* Dark gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
+          </div>
+        ) : (
+          // Mobile: Static image for performance
+          <div className="relative w-full h-full">
+            <img
+              src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80"
+              alt="Highway background"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
+          </div>
+        )}
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-8 mt-20 sm:mt-8"
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+        {/* Main Content */}
+        <div className="py-20">
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg sm:text-xl text-white/80 mb-4 font-medium"
           >
-            <Sparkles className="w-4 h-4 text-accent-400" />
-            <span className="text-white text-sm font-medium">
-              Your Trusted Travel Partner
-            </span>
-          </motion.div>
+            Your Trusted Travel Partner
+          </motion.p>
 
-          {/* Main Heading */}
+          {/* Main Title */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight"
           >
             Reliable Rides,
             <br />
-            <motion.span 
-              className="inline-block"
-              animate={{ 
-                scale: [1, 1.02, 1],
-              }}
-              transition={{ 
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              style={{ color: '#D4AF37' }}
-            >
-              Anytime, Anywhere.
-            </motion.span>
+            <span className="text-accent-500">Anytime, Anywhere.</span>
           </motion.h1>
 
-          {/* Stats */}
+          {/* One-Way Taxi CTA Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="mb-12 max-w-2xl mx-auto"
           >
-            {[
-              { number: '1000+', label: 'Happy Customers' },
-              { number: '24/7', label: 'Available Support' },
-              { number: '4+', label: 'Services Offered' },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-sm text-gray-300">{stat.label}</div>
-              </div>
-            ))}
+            <div className="backdrop-blur-sm bg-black/20 rounded-2xl p-8 border border-white/10">
+              {/* Badge */}
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.7, type: "spring" }}
+                className="inline-flex items-center space-x-2 mb-4"
+              >
+                <span className="bg-accent-500 text-black px-4 py-1.5 rounded-full text-sm font-bold">
+                  POPULAR
+                </span>
+                <span className="text-white/90 text-lg font-semibold">One-Way Taxi</span>
+              </motion.div>
+
+              {/* Tagline */}
+              <p className="text-white/80 text-lg mb-6">
+                Pay only for one side — no return charges.
+              </p>
+
+              {/* Primary CTA Button */}
+              <Link to="booking" smooth={true} duration={800} offset={-100}>
+                <motion.button
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.9 }}
+                  whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(253, 197, 0, 0.4)" }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full px-8 py-4 text-lg shadow-xl hover:shadow-yellow-400/40 transition-all duration-300"
+                >
+                  Book One-Way Taxi
+                </motion.button>
+              </Link>
+            </div>
           </motion.div>
 
-          {/* Featured Service Highlight */}
+          {/* Stats Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className="mt-12 max-w-4xl mx-auto"
+            transition={{ duration: 0.8, delay: 1.1 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white mt-12 max-w-4xl mx-auto"
           >
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Featured Service</h3>
-                <p className="text-gray-300">Most Popular Choice</p>
-              </div>
-              
-              <div className="bg-gradient-to-r from-accent-500/20 to-accent-600/20 rounded-xl p-6 border border-accent-400/30">
-                <div className="flex items-center justify-center space-x-4 mb-4">
-                  <h4 className="text-2xl font-bold text-white">One-Way Taxi</h4>
-                  <motion.div
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-semibold"
-                  >
-                    POPULAR
-                  </motion.div>
-                </div>
-                <p className="text-gray-200 text-center mb-4">
-                  Convenient and cost-effective one-way rides to your destination — no return charges.
-                </p>
-                <div className="flex justify-center">
-                  <Link to="booking" smooth={true} duration={800} offset={-100}>
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
-                    >
-                      Book One-Way Taxi
-                    </motion.button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            
-            {/* Taxi Animation Above Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.0, duration: 0.8 }}
-              className="mt-8 flex justify-center"
-            >
+            {stats.map((stat, index) => (
               <motion.div
-                animate={{
-                  x: [0, 60, 0],
-                  y: [0, -10, 0],
-                  rotate: [0, 1, 0, -1, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="relative"
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.3 + index * 0.1 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="backdrop-blur-sm bg-black/20 rounded-xl p-6 border border-white/10"
               >
-                {/* SVG Taxi Icon */}
-                <svg width="120" height="60" viewBox="0 0 200 100" className="text-white/80 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                  <defs>
-                    <linearGradient id="taxiGradientCard" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#FFD700" />
-                      <stop offset="50%" stopColor="#FFA500" />
-                      <stop offset="100%" stopColor="#FF8C00" />
-                    </linearGradient>
-                  </defs>
-                  {/* Taxi Body */}
-                  <rect x="20" y="40" width="120" height="40" rx="8" fill="url(#taxiGradientCard)" />
-                  {/* Taxi Roof */}
-                  <rect x="30" y="30" width="100" height="20" rx="6" fill="url(#taxiGradientCard)" />
-                  {/* Taxi Sign */}
-                  <rect x="60" y="25" width="40" height="8" rx="4" fill="#FFD700" />
-                  <text x="80" y="31" textAnchor="middle" fontSize="6" fill="#000" fontWeight="bold">TAXI</text>
-                  {/* Wheels */}
-                  <circle cx="40" cy="85" r="12" fill="#333" />
-                  <circle cx="40" cy="85" r="8" fill="#666" />
-                  <circle cx="120" cy="85" r="12" fill="#333" />
-                  <circle cx="120" cy="85" r="8" fill="#666" />
-                  {/* Headlights */}
-                  <circle cx="15" cy="50" r="6" fill="#FFFF99" />
-                  <circle cx="15" cy="60" r="6" fill="#FFFF99" />
-                  {/* Windows */}
-                  <rect x="35" y="35" width="25" height="15" rx="3" fill="#87CEEB" opacity="0.7" />
-                  <rect x="70" y="35" width="25" height="15" rx="3" fill="#87CEEB" opacity="0.7" />
-                  <rect x="105" y="35" width="25" height="15" rx="3" fill="#87CEEB" opacity="0.7" />
-                </svg>
-                {/* Dust Trail */}
                 <motion.div
-                  animate={{
-                    x: [0, 60, 0],
-                    opacity: [0.6, 0.3, 0.6],
-                    scale: [1, 1.3, 1],
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                    rotate: [0, 5, 0, -5, 0]
                   }}
-                  transition={{
-                    duration: 5,
+                  transition={{ 
+                    duration: 3, 
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute -bottom-2 left-0 w-24 h-12 bg-yellow-300/30 rounded-full blur-xl"
-                />
+                  className="inline-flex items-center justify-center w-16 h-16 bg-accent-500/20 rounded-full mb-4"
+                >
+                  <stat.icon className="w-8 h-8 text-accent-500" />
+                </motion.div>
+                <div className="text-3xl sm:text-4xl font-bold text-white mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-sm sm:text-base text-white/80">
+                  {stat.label}
+                </div>
               </motion.div>
-            </motion.div>
-            
+            ))}
           </motion.div>
-
-        </motion.div>
+        </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Floating Scroll Indicator */}
       <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.5 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
       >
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
+        <Link to="about" smooth={true} duration={800} offset={-100}>
           <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-1.5 h-1.5 bg-white rounded-full"
-          />
-        </div>
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="flex flex-col items-center cursor-pointer"
+          >
+            <span className="text-white/70 text-sm mb-2">Scroll</span>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <ChevronDown className="w-6 h-6 text-accent-500" />
+            </motion.div>
+          </motion.div>
+        </Link>
       </motion.div>
     </section>
   )
 }
 
 export default Hero
-

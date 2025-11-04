@@ -9,7 +9,10 @@ const Hero = () => {
   const [videoError, setVideoError] = useState(false)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const videoRef = React.useRef(null)
+  const [isTransitioning, setIsTransitioning] = useState(false)
+  const [activeVideo, setActiveVideo] = useState(0) // 0 or 1 for crossfade
+  const videoRef1 = React.useRef(null)
+  const videoRef2 = React.useRef(null)
 
   // Video playlist in sequence
   const videoPlaylist = [
@@ -27,14 +30,40 @@ const Hero = () => {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
-  // Handle video end - move to next video
+  // Handle video end - move to next video with smooth transition
   const handleVideoEnd = useCallback(() => {
-    setCurrentVideoIndex((prevIndex) => {
-      const nextIndex = (prevIndex + 1) % videoPlaylist.length
-      console.log(`Video ${prevIndex} ended, switching to video ${nextIndex}`)
-      return nextIndex
-    })
-  }, [videoPlaylist.length])
+    setIsTransitioning(true)
+    
+    // Preload next video before switching
+    const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
+    const nextVideoSrc = videoPlaylist[nextIndex]
+    const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
+    
+    if (nextVideoRef.current) {
+      nextVideoRef.current.src = nextVideoSrc
+      nextVideoRef.current.load()
+      
+      // Wait for next video to be ready before switching
+      const handleNextVideoReady = () => {
+        if (nextVideoRef.current) {
+          nextVideoRef.current.play().catch(console.error)
+          // Switch active video after a brief delay for smooth transition
+          setTimeout(() => {
+            setActiveVideo(activeVideo === 0 ? 1 : 0)
+            setCurrentVideoIndex(nextIndex)
+            setIsTransitioning(false)
+          }, 300) // 300ms crossfade duration
+        }
+      }
+      
+      nextVideoRef.current.addEventListener('canplay', handleNextVideoReady, { once: true })
+      
+      // If video is already ready, trigger immediately
+      if (nextVideoRef.current.readyState >= 3) {
+        handleNextVideoReady()
+      }
+    }
+  }, [currentVideoIndex, activeVideo, videoPlaylist.length])
 
   // Handle video load error
   const handleVideoError = (e) => {
@@ -57,43 +86,31 @@ const Hero = () => {
     }, 1000)
   }
 
-  // Force video play on load and when video changes
+  // Initialize first video on mount
   useEffect(() => {
-    if (videoRef.current) {
-      const video = videoRef.current
+    if (videoRef1.current) {
+      const video = videoRef1.current
+      const videoSrc = videoPlaylist[0]
       
-      // Load the current video
-      const videoSrc = videoPlaylist[currentVideoIndex]
-      console.log(`Loading video ${currentVideoIndex}: ${videoSrc}`)
       video.src = videoSrc
       video.load()
       
       const playVideo = async () => {
         try {
           await video.play()
-          console.log(`Video ${currentVideoIndex} (${videoSrc}) playing successfully`)
-          setVideoError(false) // Reset error state on successful play
+          setVideoError(false)
         } catch (err) {
           console.log('Autoplay prevented:', err)
-          // Video will play on user interaction
         }
       }
       
-      // Wait for video to be ready
       const handleCanPlay = () => {
-        console.log(`Video ${currentVideoIndex} can play, attempting to play...`)
         playVideo()
       }
       
-      const handleLoadedMetadata = () => {
-        console.log(`Video ${currentVideoIndex} metadata loaded`)
-      }
-      
-      video.addEventListener('canplay', handleCanPlay)
-      video.addEventListener('loadedmetadata', handleLoadedMetadata)
+      video.addEventListener('canplay', handleCanPlay, { once: true })
       video.addEventListener('ended', handleVideoEnd)
       
-      // Try to play immediately if ready
       if (video.readyState >= 3) {
         playVideo()
       }
@@ -107,22 +124,30 @@ const Hero = () => {
         document.removeEventListener('mousemove', handleInteraction)
       }
       
-      document.addEventListener('click', handleInteraction)
-      document.addEventListener('touchstart', handleInteraction)
-      document.addEventListener('scroll', handleInteraction)
-      document.addEventListener('mousemove', handleInteraction)
+      document.addEventListener('click', handleInteraction, { once: true })
+      document.addEventListener('touchstart', handleInteraction, { once: true })
+      document.addEventListener('scroll', handleInteraction, { once: true })
+      document.addEventListener('mousemove', handleInteraction, { once: true })
       
       return () => {
         video.removeEventListener('canplay', handleCanPlay)
-        video.removeEventListener('loadedmetadata', handleLoadedMetadata)
         video.removeEventListener('ended', handleVideoEnd)
-        document.removeEventListener('click', handleInteraction)
-        document.removeEventListener('touchstart', handleInteraction)
-        document.removeEventListener('scroll', handleInteraction)
-        document.removeEventListener('mousemove', handleInteraction)
       }
     }
-  }, [currentVideoIndex, handleVideoEnd])
+  }, [handleVideoEnd]) // Include handleVideoEnd in dependencies
+
+  // Preload next video when current video is playing
+  useEffect(() => {
+    const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
+    const nextVideoSrc = videoPlaylist[nextIndex]
+    const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
+    
+    if (nextVideoRef.current && !isTransitioning) {
+      nextVideoRef.current.src = nextVideoSrc
+      nextVideoRef.current.load()
+      nextVideoRef.current.preload = 'auto'
+    }
+  }, [currentVideoIndex, activeVideo, isTransitioning])
 
   const stats = [
     { icon: Users, number: '1000+', label: 'Happy Customers' },
@@ -139,49 +164,70 @@ const Hero = () => {
       {/* Background Video - Taxi City Drive */}
       <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
         <div className="relative w-full h-full">
-          {/* Taxi City Video Background - Full Screen */}
-          <video
-            ref={videoRef}
+          {/* Video 1 - Crossfade between two videos for smooth transitions */}
+          <motion.video
+            ref={videoRef1}
             autoPlay
             muted
             playsInline
+            loop={false}
             preload="auto"
-            className={`absolute inset-0 w-full h-full object-cover z-0 ${videoError ? 'hidden' : ''}`}
+            className="absolute inset-0 w-full h-full object-cover z-0"
             style={{ minHeight: '100vh', width: '100vw' }}
-            poster="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: activeVideo === 0 ? 1 : 0 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
             onError={handleVideoError}
             onEnded={handleVideoEnd}
             onLoadedData={() => {
-              console.log(`Video ${currentVideoIndex} data loaded, attempting to play...`)
-              setVideoError(false) // Reset error on successful load
-              if (videoRef.current) {
-                videoRef.current.play().catch((err) => {
-                  console.log('Play failed on loadedData:', err)
-                })
-              }
-            }}
-            onCanPlay={() => {
-              console.log(`Video ${currentVideoIndex} can play now`)
-              setVideoError(false) // Reset error when video can play
-              if (videoRef.current && videoRef.current.paused) {
-                videoRef.current.play().catch((err) => {
-                  console.log('Play failed on canPlay:', err)
-                })
+              setVideoError(false)
+              if (videoRef1.current && activeVideo === 0) {
+                videoRef1.current.play().catch(console.error)
               }
             }}
           >
             Your browser does not support the video tag.
-          </video>
-          {/* Fallback background image */}
-          <div 
-            className={`absolute inset-0 w-full h-full object-cover bg-cover bg-center ${videoError ? 'block' : 'hidden'}`}
+          </motion.video>
+          
+          {/* Video 2 - For crossfade transitions */}
+          <motion.video
+            ref={videoRef2}
+            autoPlay
+            muted
+            playsInline
+            loop={false}
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover z-0"
+            style={{ minHeight: '100vh', width: '100vw' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: activeVideo === 1 ? 1 : 0 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            onError={handleVideoError}
+            onEnded={handleVideoEnd}
+            onLoadedData={() => {
+              setVideoError(false)
+              if (videoRef2.current && activeVideo === 1) {
+                videoRef2.current.play().catch(console.error)
+              }
+            }}
+          >
+            Your browser does not support the video tag.
+          </motion.video>
+          
+          {/* Fallback background image - only show if all videos fail */}
+          <motion.div 
+            className="absolute inset-0 w-full h-full object-cover bg-cover bg-center"
             style={{ 
               backgroundImage: "url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80')"
             }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: videoError ? 1 : 0 }}
+            transition={{ duration: 0.5 }}
             id="fallback-bg"
           />
+          
           {/* Dark gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/65 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/65 to-black/80 z-10" />
         </div>
       </div>
 
@@ -325,3 +371,4 @@ const Hero = () => {
 }
 
 export default Hero
+

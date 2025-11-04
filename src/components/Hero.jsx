@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import { Car, Users, Clock, Grid, ChevronDown } from 'lucide-react'
@@ -6,7 +6,15 @@ import { Car, Users, Clock, Grid, ChevronDown } from 'lucide-react'
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false)
   const [videoError, setVideoError] = useState(false)
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const videoRef = React.useRef(null)
+
+  // Video playlist in sequence
+  const videoPlaylist = [
+    '/videos/taxi-city-drive.mp4.mp4', // First video
+    '/videos/Passenger-pickup.mp4',     // Second video
+    '/videos/taxi video.mp4'            // Third video
+  ]
 
   useEffect(() => {
     const checkMobile = () => {
@@ -16,6 +24,15 @@ const Hero = () => {
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  // Handle video end - move to next video
+  const handleVideoEnd = useCallback(() => {
+    setCurrentVideoIndex((prevIndex) => {
+      const nextIndex = (prevIndex + 1) % videoPlaylist.length
+      console.log(`Video ${prevIndex} ended, switching to video ${nextIndex}`)
+      return nextIndex
+    })
+  }, [videoPlaylist.length])
 
   // Handle video load error
   const handleVideoError = (e) => {
@@ -27,15 +44,19 @@ const Hero = () => {
     }
   }
 
-  // Force video play on load
+  // Force video play on load and when video changes
   useEffect(() => {
     if (videoRef.current) {
       const video = videoRef.current
       
+      // Load the current video
+      video.src = videoPlaylist[currentVideoIndex]
+      video.load()
+      
       const playVideo = async () => {
         try {
           await video.play()
-          console.log('Video playing successfully')
+          console.log(`Video ${currentVideoIndex} playing successfully`)
           setVideoError(false)
         } catch (err) {
           console.log('Autoplay prevented:', err)
@@ -45,18 +66,19 @@ const Hero = () => {
       
       // Wait for video to be ready
       const handleCanPlay = () => {
-        console.log('Video can play, attempting to play...')
+        console.log(`Video ${currentVideoIndex} can play, attempting to play...`)
         playVideo()
       }
       
       const handleLoadedMetadata = () => {
-        console.log('Video metadata loaded')
+        console.log(`Video ${currentVideoIndex} metadata loaded`)
       }
       
       video.addEventListener('canplay', handleCanPlay)
       video.addEventListener('loadedmetadata', handleLoadedMetadata)
+      video.addEventListener('ended', handleVideoEnd)
       
-      // Try to play immediately
+      // Try to play immediately if ready
       if (video.readyState >= 3) {
         playVideo()
       }
@@ -78,13 +100,14 @@ const Hero = () => {
       return () => {
         video.removeEventListener('canplay', handleCanPlay)
         video.removeEventListener('loadedmetadata', handleLoadedMetadata)
+        video.removeEventListener('ended', handleVideoEnd)
         document.removeEventListener('click', handleInteraction)
         document.removeEventListener('touchstart', handleInteraction)
         document.removeEventListener('scroll', handleInteraction)
         document.removeEventListener('mousemove', handleInteraction)
       }
     }
-  }, [])
+  }, [currentVideoIndex, handleVideoEnd])
 
   const stats = [
     { icon: Users, number: '1000+', label: 'Happy Customers' },
@@ -95,24 +118,26 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen h-screen w-full flex items-center justify-center overflow-hidden"
+      style={{ minHeight: '100vh', height: '100vh', width: '100vw' }}
     >
       {/* Background Video - Taxi City Drive */}
       <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
         <div className="relative w-full h-full">
-          {/* Taxi City Video Background */}
+          {/* Taxi City Video Background - Full Screen */}
           <video
             ref={videoRef}
             autoPlay
-            loop
             muted
             playsInline
             preload="auto"
             className={`absolute inset-0 w-full h-full object-cover z-0 ${videoError ? 'hidden' : ''}`}
+            style={{ minHeight: '100vh', width: '100vw' }}
             poster="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80"
             onError={handleVideoError}
+            onEnded={handleVideoEnd}
             onLoadedData={() => {
-              console.log('Video data loaded, attempting to play...')
+              console.log(`Video ${currentVideoIndex} data loaded, attempting to play...`)
               if (videoRef.current) {
                 videoRef.current.play().catch((err) => {
                   console.log('Play failed on loadedData:', err)
@@ -120,7 +145,7 @@ const Hero = () => {
               }
             }}
             onCanPlay={() => {
-              console.log('Video can play now')
+              console.log(`Video ${currentVideoIndex} can play now`)
               if (videoRef.current && videoRef.current.paused) {
                 videoRef.current.play().catch((err) => {
                   console.log('Play failed on canPlay:', err)
@@ -128,8 +153,6 @@ const Hero = () => {
               }
             }}
           >
-            {/* Local video source from public folder */}
-            <source src="/videos/taxi-city-drive.mp4.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Fallback background image */}

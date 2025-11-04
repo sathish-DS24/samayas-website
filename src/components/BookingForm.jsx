@@ -1,32 +1,56 @@
 import React, { useState, useRef } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { Calendar, Clock, MapPin, Send, CheckCircle2, Loader2 } from 'lucide-react'
+import { Calendar, Clock, MapPin, User, Phone, Car, Loader2 } from 'lucide-react'
 import emailjs from '@emailjs/browser'
+import BookingSummary from './BookingSummary'
 
 const BookingForm = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
+  const [tripType, setTripType] = useState('one-way') // 'one-way' or 'round-trip'
   const [formData, setFormData] = useState({
-    serviceType: '',
-    date: '',
-    time: '',
     pickupLocation: '',
     dropLocation: '',
+    date: '',
+    time: '',
+    timePeriod: 'AM', // AM or PM
+    vehicleType: '',
     name: '',
     phone: ''
   })
 
   const [errors, setErrors] = useState({})
-  const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [showSummary, setShowSummary] = useState(false)
+  const [calculatedData, setCalculatedData] = useState(null)
 
-  const serviceTypes = [
-    'Acting Driver',
-    'Tours & Travels',
-    'One-Way Taxi',
-    'Recovery Services'
-  ]
+  // Tariff rates
+  const oneWayRates = {
+    SEDAN: 14,
+    ETIOS: 14,
+    SUV: 19,
+    INNOVA: 20
+  }
+
+  const roundTripRates = {
+    SEDAN: 13,
+    ETIOS: 13,
+    SUV: 18,
+    INNOVA: 18
+  }
+
+  // Update vehicle types based on trip type
+  const getVehicleTypes = () => {
+    return [
+      { type: 'SEDAN', icon: Car, rate: tripType === 'one-way' ? oneWayRates.SEDAN : roundTripRates.SEDAN },
+      { type: 'ETIOS', icon: Car, rate: tripType === 'one-way' ? oneWayRates.ETIOS : roundTripRates.ETIOS },
+      { type: 'SUV', icon: Car, rate: tripType === 'one-way' ? oneWayRates.SUV : roundTripRates.SUV },
+      { type: 'INNOVA', icon: Car, rate: tripType === 'one-way' ? oneWayRates.INNOVA : roundTripRates.INNOVA }
+    ]
+  }
+
+  const vehicleTypes = getVehicleTypes()
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -34,7 +58,6 @@ const BookingForm = () => {
       ...prev,
       [name]: value
     }))
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -43,11 +66,41 @@ const BookingForm = () => {
     }
   }
 
+  const handleVehicleSelect = (vehicleType) => {
+    setFormData(prev => ({
+      ...prev,
+      vehicleType
+    }))
+    if (errors.vehicleType) {
+      setErrors(prev => ({
+        ...prev,
+        vehicleType: ''
+      }))
+    }
+  }
+
+  const handleTimePeriodChange = (period) => {
+    setFormData(prev => ({
+      ...prev,
+      timePeriod: period
+    }))
+  }
+
+  // Calculate distance (mock function - in production, use Google Maps API)
+  const calculateDistance = (pickup, drop) => {
+    // Mock calculation - replace with actual distance API
+    // For demo: random distance between 100-400 km
+    return Math.floor(Math.random() * 300) + 100
+  }
+
   const validateForm = () => {
     const newErrors = {}
 
-    if (!formData.serviceType) {
-      newErrors.serviceType = 'Please select a service'
+    if (!formData.pickupLocation.trim()) {
+      newErrors.pickupLocation = 'Pickup location is required'
+    }
+    if (!formData.dropLocation.trim()) {
+      newErrors.dropLocation = 'Drop location is required'
     }
     if (!formData.date) {
       newErrors.date = 'Date is required'
@@ -55,11 +108,8 @@ const BookingForm = () => {
     if (!formData.time) {
       newErrors.time = 'Time is required'
     }
-    if (!formData.pickupLocation.trim()) {
-      newErrors.pickupLocation = 'Pickup location is required'
-    }
-    if (!formData.dropLocation.trim() && formData.serviceType !== 'Recovery Services') {
-      newErrors.dropLocation = 'Drop location is required'
+    if (!formData.vehicleType) {
+      newErrors.vehicleType = 'Please select a vehicle type'
     }
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required'
@@ -74,342 +124,462 @@ const BookingForm = () => {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e) => {
+  const calculateFare = () => {
+    const distance = calculateDistance(formData.pickupLocation, formData.dropLocation)
+    const rates = tripType === 'one-way' ? oneWayRates : roundTripRates
+    const ratePerKm = rates[formData.vehicleType] || 0
+
+    let baseFare = 0
+    let addFare = 0
+    let bata = 0
+    let finalAmount = 0
+
+    if (tripType === 'one-way') {
+      // Drop Trip calculation
+      const minKm = 130
+      baseFare = minKm * ratePerKm
+      if (distance > minKm) {
+        addFare = (distance - minKm) * ratePerKm
+      }
+      bata = 400
+      finalAmount = baseFare + addFare + bata
+    } else {
+      // Round Trip calculation
+      const minKm = 250 // 300 for Bangalore pickup
+      const days = 1 // Calculate based on date range if needed
+      baseFare = minKm * ratePerKm * days
+      if (distance > minKm) {
+        addFare = (distance - minKm) * ratePerKm
+      }
+      bata = 300 * days
+      finalAmount = baseFare + addFare + bata
+    }
+
+    return {
+      distance,
+      baseFare,
+      addFare,
+      bata,
+      finalAmount,
+      minKm: tripType === 'one-way' ? 130 : 250
+    }
+  }
+
+  const handleGetEstimation = (e) => {
     e.preventDefault()
 
     if (validateForm()) {
-      setIsLoading(true)
-      
-      try {
-        // EmailJS configuration
-        const serviceId = 'service_pened45' // Your EmailJS Service ID
-        const templateId = 'template_h3j27hg' // Your EmailJS Template ID
-        const publicKey = 'FlG_Mpal1SeRMkRqx' // Your EmailJS Public Key
+      const calculation = calculateFare()
+      setCalculatedData({
+        ...formData,
+        tripType,
+        ...calculation,
+        fullTime: `${formData.time} ${formData.timePeriod}`
+      })
+      setShowSummary(true)
+    }
+  }
 
-        // Prepare email template parameters
-        const templateParams = {
-          service_type: formData.serviceType,
-          customer_name: formData.name,
-          customer_phone: formData.phone,
-          service_date: formData.date,
-          service_time: formData.time,
-          pickup_location: formData.pickupLocation,
-          drop_location: formData.dropLocation,
-          to_email: 'samayasprem@gmail.com',
-          from_name: formData.name,
-          from_phone: formData.phone,
-          reply_to: formData.phone + '@customer.samayas.com' // For reply functionality
-        }
+  const handleConfirmBooking = async () => {
+    setIsLoading(true)
+    
+    try {
+      const serviceId = 'service_pened45'
+      const templateId = 'template_h3j27hg'
+      const publicKey = 'FlG_Mpal1SeRMkRqx'
 
-        // Send email using EmailJS
-        const result = await emailjs.send(serviceId, templateId, templateParams, publicKey)
-        
-        console.log('Email sent successfully:', result)
-        
-        // Show success state
-        setIsSubmitted(true)
-
-        // Reset form after 3 seconds
-        setTimeout(() => {
-          setFormData({
-            serviceType: '',
-            date: '',
-            time: '',
-            pickupLocation: '',
-            dropLocation: '',
-            name: '',
-            phone: ''
-          })
-          setIsSubmitted(false)
-        }, 3000)
-        
-      } catch (error) {
-        console.error('Error sending email:', error)
-        
-        // Fallback: Show success message anyway (for demo purposes)
-        // In production, you would handle this differently
-        alert('Thank you for your booking request! We have received your details and will contact you shortly at ' + formData.phone)
-        
-        // Show success state even on error (for demo)
-        setIsSubmitted(true)
-        
-        // Reset form after 3 seconds
-        setTimeout(() => {
-          setFormData({
-            serviceType: '',
-            date: '',
-            time: '',
-            pickupLocation: '',
-            dropLocation: '',
-            name: '',
-            phone: ''
-          })
-          setIsSubmitted(false)
-        }, 3000)
-      } finally {
-        setIsLoading(false)
+      const templateParams = {
+        booking_type: tripType === 'one-way' ? 'One Way' : 'Round Trip',
+        vehicle_type: formData.vehicleType,
+        customer_name: formData.name,
+        customer_phone: formData.phone,
+        pickup_location: formData.pickupLocation,
+        drop_location: formData.dropLocation,
+        booking_date: formData.date,
+        booking_time: `${formData.time} ${formData.timePeriod}`,
+        base_fare: `₹ ${calculatedData.baseFare}`,
+        add_fare: `₹ ${calculatedData.addFare}`,
+        bata: `₹ ${calculatedData.bata}`,
+        final_amount: `₹ ${calculatedData.finalAmount}`,
+        distance: `${calculatedData.distance} km`,
+        to_email: 'samayasprem@gmail.com',
+        from_name: formData.name,
+        from_phone: formData.phone,
+        reply_to: formData.phone + '@customer.samayas.com'
       }
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey)
+      
+      console.log('Booking confirmation email sent successfully')
+      
+      // Close summary and reset form
+      setShowSummary(false)
+      setFormData({
+        pickupLocation: '',
+        dropLocation: '',
+        date: '',
+        time: '',
+        timePeriod: 'AM',
+        vehicleType: '',
+        name: '',
+        phone: ''
+      })
+      
+      alert('Booking confirmed! Confirmation email has been sent.')
+      
+    } catch (error) {
+      console.error('Error sending booking confirmation:', error)
+      alert('Booking submitted! We will contact you shortly.')
+    } finally {
+      setIsLoading(false)
     }
   }
 
   return (
-    <section id="booking" className="py-20 bg-gradient-to-br from-primary-50 to-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref}>
-          {/* Section Header */}
-          <div className="text-center mb-12">
+    <>
+      <section id="booking" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div ref={ref}>
+            {/* Section Header */}
+            <div className="text-center mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6 }}
+                className="inline-block px-4 py-2 bg-accent-500/20 text-accent-500 rounded-full text-sm font-semibold mb-4"
+              >
+                Easy Booking
+              </motion.div>
+
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="text-4xl lg:text-5xl font-bold text-white mb-4"
+              >
+                Book Your Service
+              </motion.h2>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="text-lg text-white/70"
+              >
+                Fill out the form below and get an instant quote
+              </motion.p>
+            </div>
+
+            {/* Form Card - Matching Popup Design */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6 }}
-              className="inline-block px-4 py-2 bg-accent-100 text-accent-700 rounded-full text-sm font-semibold mb-4"
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10"
             >
-              Easy Booking
-            </motion.div>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-4xl lg:text-5xl font-bold text-primary-900 mb-4"
-            >
-              Book Your Service
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-lg text-gray-600"
-            >
-              Fill out the form below and we'll get back to you with a quote
-            </motion.p>
-          </div>
-
-          {/* Form Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="bg-white rounded-2xl shadow-2xl p-8 md:p-10 relative overflow-hidden"
-          >
-            {/* Decorative Background */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary-100 to-accent-100 rounded-full blur-3xl opacity-30 -mr-32 -mt-32" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-accent-100 to-primary-100 rounded-full blur-3xl opacity-30 -ml-32 -mb-32" />
-
-            <form onSubmit={handleSubmit} className="relative z-10">
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Service Type */}
-                <div className="md:col-span-2">
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Service Type *
-                  </label>
-                  <select
-                    name="serviceType"
-                    value={formData.serviceType}
-                    onChange={handleChange}
-                    className={`w-full px-4 py-3 border ${
-                      errors.serviceType ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none bg-white`}
+              <form onSubmit={handleGetEstimation} className="space-y-6">
+                {/* Trip Type Selection */}
+                <div className="flex space-x-2 bg-gray-700/50 rounded-lg p-1 mb-6">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setTripType('one-way')
+                      setFormData(prev => ({ ...prev, vehicleType: '' })) // Reset vehicle selection
+                    }}
+                    className={`flex-1 px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      tripType === 'one-way'
+                        ? 'bg-accent-500 text-black shadow-lg'
+                        : 'text-white/70 hover:text-white hover:bg-white/5'
+                    }`}
                   >
-                    <option value="">Select a service...</option>
-                    {serviceTypes.map((service) => (
-                      <option key={service} value={service}>
-                        {service}
-                      </option>
-                    ))}
-                  </select>
-                  {errors.serviceType && (
-                    <p className="mt-1 text-sm text-red-600">{errors.serviceType}</p>
-                  )}
+                    One Way
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setTripType('round-trip')
+                      setFormData(prev => ({ ...prev, vehicleType: '' })) // Reset vehicle selection
+                    }}
+                    className={`flex-1 px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      tripType === 'round-trip'
+                        ? 'bg-accent-500 text-black shadow-lg'
+                        : 'text-white/70 hover:text-white hover:bg-white/5'
+                    }`}
+                  >
+                    Round Trip
+                  </button>
                 </div>
 
-                {/* Name */}
+                {/* Location Fields */}
+                <div className="grid md:grid-cols-2 gap-4">
+                  {/* Pickup Location */}
+                  <div>
+                    <label className="block text-sm font-semibold text-white/90 mb-2">
+                      <MapPin className="w-4 h-4 inline mr-2 text-accent-500" />
+                      Pickup Location *
+                    </label>
+                    <input
+                      type="text"
+                      name="pickupLocation"
+                      value={formData.pickupLocation}
+                      onChange={handleChange}
+                      placeholder="Enter pickup address"
+                      className={`w-full px-4 py-3 bg-white rounded-lg border ${
+                        errors.pickupLocation ? 'border-red-500' : 'border-gray-300'
+                      } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                    />
+                    {errors.pickupLocation && (
+                      <p className="mt-1 text-sm text-red-400">{errors.pickupLocation}</p>
+                    )}
+                  </div>
+
+                  {/* Drop Location */}
+                  <div>
+                    <label className="block text-sm font-semibold text-white/90 mb-2">
+                      <MapPin className="w-4 h-4 inline mr-2 text-accent-500" />
+                      Drop Location *
+                    </label>
+                    <input
+                      type="text"
+                      name="dropLocation"
+                      value={formData.dropLocation}
+                      onChange={handleChange}
+                      placeholder="Enter drop address"
+                      className={`w-full px-4 py-3 bg-white rounded-lg border ${
+                        errors.dropLocation ? 'border-red-500' : 'border-gray-300'
+                      } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                    />
+                    {errors.dropLocation && (
+                      <p className="mt-1 text-sm text-red-400">{errors.dropLocation}</p>
+                    )}
+                  </div>
+                </div>
+
+                {/* Date and Time */}
+                <div className="grid md:grid-cols-2 gap-4">
+                  {/* Date */}
+                  <div>
+                    <label className="block text-sm font-semibold text-white/90 mb-2">
+                      <Calendar className="w-4 h-4 inline mr-2 text-accent-500" />
+                      Date *
+                    </label>
+                    <input
+                      type="date"
+                      name="date"
+                      value={formData.date}
+                      onChange={handleChange}
+                      min={new Date().toISOString().split('T')[0]}
+                      className={`w-full px-4 py-3 bg-white rounded-lg border ${
+                        errors.date ? 'border-red-500' : 'border-gray-300'
+                      } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                    />
+                    {errors.date && (
+                      <p className="mt-1 text-sm text-red-400">{errors.date}</p>
+                    )}
+                  </div>
+
+                  {/* Time with AM/PM */}
+                  <div>
+                    <label className="block text-sm font-semibold text-white/90 mb-2">
+                      <Clock className="w-4 h-4 inline mr-2 text-accent-500" />
+                      Time *
+                    </label>
+                    <div className="flex gap-2">
+                      <input
+                        type="time"
+                        name="time"
+                        value={formData.time}
+                        onChange={handleChange}
+                        className={`flex-1 px-4 py-3 bg-white rounded-lg border ${
+                          errors.time ? 'border-red-500' : 'border-gray-300'
+                        } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                      />
+                      <div className="flex gap-1 bg-gray-700/50 rounded-lg p-1">
+                        <button
+                          type="button"
+                          onClick={() => handleTimePeriodChange('AM')}
+                          className={`px-4 py-3 rounded-md font-semibold transition-all ${
+                            formData.timePeriod === 'AM'
+                              ? 'bg-accent-500 text-black'
+                              : 'text-white/70 hover:text-white'
+                          }`}
+                        >
+                          AM
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleTimePeriodChange('PM')}
+                          className={`px-4 py-3 rounded-md font-semibold transition-all ${
+                            formData.timePeriod === 'PM'
+                              ? 'bg-accent-500 text-black'
+                              : 'text-white/70 hover:text-white'
+                          }`}
+                        >
+                          PM
+                        </button>
+                      </div>
+                    </div>
+                    {errors.time && (
+                      <p className="mt-1 text-sm text-red-400">{errors.time}</p>
+                    )}
+                  </div>
+                </div>
+
+                {/* Vehicle Type Selection */}
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Your Name *
+                  <label className="block text-sm font-semibold text-white/90 mb-4">
+                    Select Vehicle Type *
                   </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="John Doe"
-                    className={`w-full px-4 py-3 border ${
-                      errors.name ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none`}
-                  />
-                  {errors.name && (
-                    <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {vehicleTypes.map((vehicle) => {
+                      const Icon = vehicle.icon
+                      const isSelected = formData.vehicleType === vehicle.type
+                      return (
+                        <motion.div
+                          key={vehicle.type}
+                          onClick={() => handleVehicleSelect(vehicle.type)}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className={`relative cursor-pointer rounded-xl p-4 border-2 transition-all ${
+                            isSelected
+                              ? 'border-accent-500 bg-accent-500/20 shadow-lg shadow-accent-500/30'
+                              : 'border-gray-600 bg-gray-700/30 hover:border-gray-500'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="vehicleType"
+                            value={vehicle.type}
+                            checked={isSelected}
+                            onChange={() => handleVehicleSelect(vehicle.type)}
+                            className="absolute top-2 right-2 w-5 h-5 accent-accent-500"
+                          />
+                          <div className="text-center">
+                            <div className="mb-3 flex justify-center">
+                              {/* Car Illustration */}
+                              <div className={`relative ${isSelected ? 'text-accent-500' : 'text-white/60'}`}>
+                                <svg width="60" height="40" viewBox="0 0 60 40" className="w-full h-auto">
+                                  {vehicle.type === 'SUV' || vehicle.type === 'INNOVA' ? (
+                                    // Taller vehicle for SUV/INNOVA
+                                    <>
+                                      <rect x="10" y="15" width="40" height="20" rx="3" fill="currentColor" opacity="0.9" />
+                                      <rect x="15" y="10" width="30" height="12" rx="2" fill="currentColor" opacity="0.9" />
+                                      <circle cx="18" cy="38" r="4" fill="currentColor" opacity="0.7" />
+                                      <circle cx="42" cy="38" r="4" fill="currentColor" opacity="0.7" />
+                                      <rect x="18" y="18" width="8" height="6" rx="1" fill="white" opacity="0.6" />
+                                      <rect x="34" y="18" width="8" height="6" rx="1" fill="white" opacity="0.6" />
+                                    </>
+                                  ) : (
+                                    // Regular sedan for SEDAN/ETIOS
+                                    <>
+                                      <rect x="12" y="20" width="36" height="15" rx="3" fill="currentColor" opacity="0.9" />
+                                      <rect x="18" y="15" width="24" height="10" rx="2" fill="currentColor" opacity="0.9" />
+                                      <circle cx="20" cy="38" r="3.5" fill="currentColor" opacity="0.7" />
+                                      <circle cx="40" cy="38" r="3.5" fill="currentColor" opacity="0.7" />
+                                      <rect x="20" y="22" width="6" height="5" rx="1" fill="white" opacity="0.6" />
+                                      <rect x="34" y="22" width="6" height="5" rx="1" fill="white" opacity="0.6" />
+                                    </>
+                                  )}
+                                  {/* Orange accent */}
+                                  <rect x="8" y="22" width="4" height="3" rx="1" fill="#FF8C00" />
+                                  <rect x="48" y="22" width="4" height="3" rx="1" fill="#FF8C00" />
+                                </svg>
+                              </div>
+                            </div>
+                            <div className={`text-xs font-semibold mb-1 ${isSelected ? 'text-accent-500' : 'text-white/70'}`}>
+                              ₹{vehicle.rate}/km
+                            </div>
+                            <div className={`text-sm font-bold uppercase ${isSelected ? 'text-white' : 'text-white/80'}`}>
+                              {vehicle.type}
+                            </div>
+                          </div>
+                        </motion.div>
+                      )
+                    })}
+                  </div>
+                  {errors.vehicleType && (
+                    <p className="mt-2 text-sm text-red-400">{errors.vehicleType}</p>
                   )}
                 </div>
 
-                {/* Phone */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="9876543210"
-                    className={`w-full px-4 py-3 border ${
-                      errors.phone ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none`}
-                  />
-                  {errors.phone && (
-                    <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
-                  )}
+                {/* Name and Phone */}
+                <div className="grid md:grid-cols-2 gap-4">
+                  {/* Name */}
+                  <div>
+                    <label className="block text-sm font-semibold text-white/90 mb-2">
+                      <User className="w-4 h-4 inline mr-2 text-accent-500" />
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Enter your full name"
+                      className={`w-full px-4 py-3 bg-white rounded-lg border ${
+                        errors.name ? 'border-red-500' : 'border-gray-300'
+                      } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                    />
+                    {errors.name && (
+                      <p className="mt-1 text-sm text-red-400">{errors.name}</p>
+                    )}
+                  </div>
+
+                  {/* Phone */}
+                  <div>
+                    <label className="block text-sm font-semibold text-white/90 mb-2">
+                      <Phone className="w-4 h-4 inline mr-2 text-accent-500" />
+                      Mobile Number *
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="Enter 10-digit mobile number"
+                      className={`w-full px-4 py-3 bg-white rounded-lg border ${
+                        errors.phone ? 'border-red-500' : 'border-gray-300'
+                      } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                    />
+                    {errors.phone && (
+                      <p className="mt-1 text-sm text-red-400">{errors.phone}</p>
+                    )}
+                  </div>
                 </div>
 
-                {/* Date */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    <Calendar className="w-4 h-4 inline mr-2" />
-                    Date *
-                  </label>
-                  <input
-                    type="date"
-                    name="date"
-                    value={formData.date}
-                    onChange={handleChange}
-                    min={new Date().toISOString().split('T')[0]}
-                    className={`w-full px-4 py-3 border ${
-                      errors.date ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none`}
-                  />
-                  {errors.date && (
-                    <p className="mt-1 text-sm text-red-600">{errors.date}</p>
-                  )}
-                </div>
-
-                {/* Time */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    <Clock className="w-4 h-4 inline mr-2" />
-                    Time *
-                  </label>
-                  <input
-                    type="time"
-                    name="time"
-                    value={formData.time}
-                    onChange={handleChange}
-                    className={`w-full px-4 py-3 border ${
-                      errors.time ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none`}
-                  />
-                  {errors.time && (
-                    <p className="mt-1 text-sm text-red-600">{errors.time}</p>
-                  )}
-                </div>
-
-                {/* Pickup Location */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    <MapPin className="w-4 h-4 inline mr-2" />
-                    Pickup Location *
-                  </label>
-                  <input
-                    type="text"
-                    name="pickupLocation"
-                    value={formData.pickupLocation}
-                    onChange={handleChange}
-                    placeholder="Enter pickup address"
-                    className={`w-full px-4 py-3 border ${
-                      errors.pickupLocation ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none`}
-                  />
-                  {errors.pickupLocation && (
-                    <p className="mt-1 text-sm text-red-600">{errors.pickupLocation}</p>
-                  )}
-                </div>
-
-                {/* Drop Location */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    <MapPin className="w-4 h-4 inline mr-2" />
-                    Drop Location {formData.serviceType !== 'Recovery Services' && '*'}
-                  </label>
-                  <input
-                    type="text"
-                    name="dropLocation"
-                    value={formData.dropLocation}
-                    onChange={handleChange}
-                    placeholder="Enter drop address"
-                    className={`w-full px-4 py-3 border ${
-                      errors.dropLocation ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none`}
-                  />
-                  {errors.dropLocation && (
-                    <p className="mt-1 text-sm text-red-600">{errors.dropLocation}</p>
-                  )}
-                </div>
-              </div>
-
-              {/* Submit Button */}
-              <div className="mt-8">
+                {/* Submit Button */}
                 <motion.button
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  disabled={isSubmitted || isLoading}
-                  className="w-full px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={isLoading}
+                  className="w-full px-8 py-4 bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
                 >
-                  {isSubmitted ? (
+                  {isLoading ? (
                     <>
-                      <CheckCircle2 className="w-5 h-5" />
-                      <span>Request Submitted!</span>
-                    </>
-                  ) : isLoading ? (
-                    <>
-                      <Loader2 className="w-5 h-5 animate-spin" />
-                      <span>Sending Request...</span>
+                      <Loader2 className="w-5 h-5 inline mr-2 animate-spin" />
+                      Processing...
                     </>
                   ) : (
-                    <>
-                      <span>Request for Quote</span>
-                      <Send className="w-5 h-5" />
-                    </>
+                    'GET ESTIMATION'
                   )}
                 </motion.button>
-              </div>
-            </form>
-
-            {/* Success Animation */}
-            <AnimatePresence>
-              {isSubmitted && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  className="absolute inset-0 bg-white/95 backdrop-blur-sm flex items-center justify-center z-20 rounded-2xl"
-                >
-                  <div className="text-center">
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ type: "spring", duration: 0.6 }}
-                    >
-                      <CheckCircle2 className="w-24 h-24 text-green-500 mx-auto mb-4" />
-                    </motion.div>
-                    <h3 className="text-2xl font-bold text-primary-900 mb-2">
-                      Thank You!
-                    </h3>
-                    <p className="text-gray-600">
-                      We'll contact you shortly with a quote
-                    </p>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
+              </form>
+            </motion.div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Booking Summary Modal */}
+      <BookingSummary
+        isOpen={showSummary}
+        onClose={() => setShowSummary(false)}
+        onConfirm={handleConfirmBooking}
+        bookingData={calculatedData}
+        isLoading={isLoading}
+      />
+    </>
   )
 }
 
 export default BookingForm
-

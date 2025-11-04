@@ -19,7 +19,7 @@ const Hero = () => {
 
   // Handle video load error
   const handleVideoError = (e) => {
-    console.log('Video error:', e)
+    console.error('Video error:', e)
     setVideoError(true)
     const fallback = document.getElementById('fallback-bg')
     if (fallback) {
@@ -31,14 +31,35 @@ const Hero = () => {
   useEffect(() => {
     if (videoRef.current) {
       const video = videoRef.current
-      const playVideo = () => {
-        video.play().catch(err => {
+      
+      const playVideo = async () => {
+        try {
+          await video.play()
+          console.log('Video playing successfully')
+          setVideoError(false)
+        } catch (err) {
           console.log('Autoplay prevented:', err)
-        })
+          // Video will play on user interaction
+        }
       }
       
+      // Wait for video to be ready
+      const handleCanPlay = () => {
+        console.log('Video can play, attempting to play...')
+        playVideo()
+      }
+      
+      const handleLoadedMetadata = () => {
+        console.log('Video metadata loaded')
+      }
+      
+      video.addEventListener('canplay', handleCanPlay)
+      video.addEventListener('loadedmetadata', handleLoadedMetadata)
+      
       // Try to play immediately
-      playVideo()
+      if (video.readyState >= 3) {
+        playVideo()
+      }
       
       // If autoplay blocked, play on user interaction
       const handleInteraction = () => {
@@ -46,16 +67,21 @@ const Hero = () => {
         document.removeEventListener('click', handleInteraction)
         document.removeEventListener('touchstart', handleInteraction)
         document.removeEventListener('scroll', handleInteraction)
+        document.removeEventListener('mousemove', handleInteraction)
       }
       
       document.addEventListener('click', handleInteraction)
       document.addEventListener('touchstart', handleInteraction)
       document.addEventListener('scroll', handleInteraction)
+      document.addEventListener('mousemove', handleInteraction)
       
       return () => {
+        video.removeEventListener('canplay', handleCanPlay)
+        video.removeEventListener('loadedmetadata', handleLoadedMetadata)
         document.removeEventListener('click', handleInteraction)
         document.removeEventListener('touchstart', handleInteraction)
         document.removeEventListener('scroll', handleInteraction)
+        document.removeEventListener('mousemove', handleInteraction)
       }
     }
   }, [])
@@ -82,13 +108,22 @@ const Hero = () => {
             muted
             playsInline
             preload="auto"
-            className={`absolute inset-0 w-full h-full object-cover ${videoError ? 'hidden' : ''}`}
+            className={`absolute inset-0 w-full h-full object-cover z-0 ${videoError ? 'hidden' : ''}`}
             poster="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80"
             onError={handleVideoError}
             onLoadedData={() => {
+              console.log('Video data loaded, attempting to play...')
               if (videoRef.current) {
-                videoRef.current.play().catch(() => {
-                  // Autoplay blocked, will play on interaction
+                videoRef.current.play().catch((err) => {
+                  console.log('Play failed on loadedData:', err)
+                })
+              }
+            }}
+            onCanPlay={() => {
+              console.log('Video can play now')
+              if (videoRef.current && videoRef.current.paused) {
+                videoRef.current.play().catch((err) => {
+                  console.log('Play failed on canPlay:', err)
                 })
               }
             }}

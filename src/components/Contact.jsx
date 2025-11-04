@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Phone, Mail, MessageCircle, Clock, Facebook, Instagram } from 'lucide-react'
+import { Phone, Mail, MessageCircle, Clock, Facebook, Instagram, Globe } from 'lucide-react'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -27,6 +27,13 @@ const Contact = () => {
       value: 'samayasprem@gmail.com',
       link: 'mailto:samayasprem@gmail.com',
       color: 'from-red-500 to-red-600'
+    },
+    {
+      icon: Globe,
+      title: 'Country',
+      value: 'India',
+      link: '#',
+      color: 'from-amber-500 to-amber-600'
     },
   ]
 

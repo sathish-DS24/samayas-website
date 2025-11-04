@@ -43,10 +43,30 @@ const BookingForm = () => {
   // Update vehicle types based on trip type
   const getVehicleTypes = () => {
     return [
-      { type: 'SEDAN', icon: Car, rate: tripType === 'one-way' ? oneWayRates.SEDAN : roundTripRates.SEDAN },
-      { type: 'ETIOS', icon: Car, rate: tripType === 'one-way' ? oneWayRates.ETIOS : roundTripRates.ETIOS },
-      { type: 'SUV', icon: Car, rate: tripType === 'one-way' ? oneWayRates.SUV : roundTripRates.SUV },
-      { type: 'INNOVA', icon: Car, rate: tripType === 'one-way' ? oneWayRates.INNOVA : roundTripRates.INNOVA }
+      { 
+        type: 'SEDAN', 
+        icon: Car, 
+        rate: tripType === 'one-way' ? oneWayRates.SEDAN : roundTripRates.SEDAN,
+        image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop&q=80'
+      },
+      { 
+        type: 'ETIOS', 
+        icon: Car, 
+        rate: tripType === 'one-way' ? oneWayRates.ETIOS : roundTripRates.ETIOS,
+        image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop&q=80'
+      },
+      { 
+        type: 'SUV', 
+        icon: Car, 
+        rate: tripType === 'one-way' ? oneWayRates.SUV : roundTripRates.SUV,
+        image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=300&fit=crop&q=80'
+      },
+      { 
+        type: 'INNOVA', 
+        icon: Car, 
+        rate: tripType === 'one-way' ? oneWayRates.INNOVA : roundTripRates.INNOVA,
+        image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop&q=80'
+      }
     ]
   }
 
@@ -456,34 +476,21 @@ const BookingForm = () => {
                           />
                           <div className="text-center">
                             <div className="mb-3 flex justify-center">
-                              {/* Car Illustration */}
-                              <div className={`relative ${isSelected ? 'text-accent-500' : 'text-white/60'}`}>
-                                <svg width="60" height="40" viewBox="0 0 60 40" className="w-full h-auto">
-                                  {vehicle.type === 'SUV' || vehicle.type === 'INNOVA' ? (
-                                    // Taller vehicle for SUV/INNOVA
-                                    <>
-                                      <rect x="10" y="15" width="40" height="20" rx="3" fill="currentColor" opacity="0.9" />
-                                      <rect x="15" y="10" width="30" height="12" rx="2" fill="currentColor" opacity="0.9" />
-                                      <circle cx="18" cy="38" r="4" fill="currentColor" opacity="0.7" />
-                                      <circle cx="42" cy="38" r="4" fill="currentColor" opacity="0.7" />
-                                      <rect x="18" y="18" width="8" height="6" rx="1" fill="white" opacity="0.6" />
-                                      <rect x="34" y="18" width="8" height="6" rx="1" fill="white" opacity="0.6" />
-                                    </>
-                                  ) : (
-                                    // Regular sedan for SEDAN/ETIOS
-                                    <>
-                                      <rect x="12" y="20" width="36" height="15" rx="3" fill="currentColor" opacity="0.9" />
-                                      <rect x="18" y="15" width="24" height="10" rx="2" fill="currentColor" opacity="0.9" />
-                                      <circle cx="20" cy="38" r="3.5" fill="currentColor" opacity="0.7" />
-                                      <circle cx="40" cy="38" r="3.5" fill="currentColor" opacity="0.7" />
-                                      <rect x="20" y="22" width="6" height="5" rx="1" fill="white" opacity="0.6" />
-                                      <rect x="34" y="22" width="6" height="5" rx="1" fill="white" opacity="0.6" />
-                                    </>
-                                  )}
-                                  {/* Orange accent */}
-                                  <rect x="8" y="22" width="4" height="3" rx="1" fill="#FF8C00" />
-                                  <rect x="48" y="22" width="4" height="3" rx="1" fill="#FF8C00" />
-                                </svg>
+                              {/* Real Car Image */}
+                              <div className="relative w-full h-24 flex items-center justify-center overflow-hidden rounded-lg">
+                                <img
+                                  src={vehicle.image}
+                                  alt={vehicle.type}
+                                  className={`w-full h-full object-cover rounded-lg transition-all duration-300 ${
+                                    isSelected 
+                                      ? 'brightness-110 scale-105 ring-2 ring-accent-500' 
+                                      : 'brightness-75 hover:brightness-90'
+                                  }`}
+                                  onError={(e) => {
+                                    // Fallback to a placeholder if image fails to load
+                                    e.target.src = `https://images.unsplash.com/photo-1550355291-bbee04a92027?w=400&h=300&fit=crop&q=80`
+                                  }}
+                                />
                               </div>
                             </div>
                             <div className={`text-xs font-semibold mb-1 ${isSelected ? 'text-accent-500' : 'text-white/70'}`}>

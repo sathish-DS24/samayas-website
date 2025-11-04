@@ -44,7 +44,7 @@ const TariffModal = ({ isOpen, onClose }) => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ duration: 0.3, type: "spring", damping: 25 }}
-              className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden border border-white/10"
+              className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col border border-white/10"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
@@ -68,7 +68,7 @@ const TariffModal = ({ isOpen, onClose }) => {
               </div>
 
               {/* Content */}
-              <div className="p-6 overflow-y-auto max-h-[calc(90vh-180px)]">
+              <div className="flex-1 p-6 overflow-y-auto min-h-0">
                 {/* Tabs */}
                 <div className="flex space-x-2 mb-6 bg-gray-800/50 rounded-lg p-1">
                   <button
@@ -215,10 +215,10 @@ const TariffModal = ({ isOpen, onClose }) => {
               </div>
 
               {/* Footer Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 p-6 bg-gray-900/50 border-t border-white/10">
+              <div className="flex flex-col sm:flex-row gap-3 p-6 bg-gray-900/50 border-t border-white/10 mt-auto">
                 <button
                   onClick={onClose}
-                  className="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-full transition-colors"
+                  className="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-full transition-colors shadow-lg"
                 >
                   Close
                 </button>
@@ -228,7 +228,7 @@ const TariffModal = ({ isOpen, onClose }) => {
                   duration={800}
                   offset={-100}
                   onClick={onClose}
-                  className="flex-1"
+                  className="flex-1 sm:flex-none"
                 >
                   <motion.button
                     whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(253, 197, 0, 0.4)" }}

@@ -2,11 +2,13 @@ import React, { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import { Car, Users, Clock, Grid, ChevronDown } from 'lucide-react'
+import TariffModal from './TariffModal'
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false)
   const [videoError, setVideoError] = useState(false)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const videoRef = React.useRef(null)
 
   // Video playlist in sequence
@@ -236,18 +238,17 @@ const Hero = () => {
               </p>
 
               {/* Primary CTA Button */}
-              <Link to="booking" smooth={true} duration={800} offset={-100}>
-                <motion.button
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.9 }}
-                  whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(253, 197, 0, 0.4)" }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 w-full sm:w-auto"
-                >
-                  Book One-Way Taxi
-                </motion.button>
-              </Link>
+              <motion.button
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(253, 197, 0, 0.4)" }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setIsModalOpen(true)}
+                className="bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 w-full sm:w-auto"
+              >
+                Book One-Way Taxi
+              </motion.button>
             </div>
           </motion.div>
 
@@ -316,6 +317,9 @@ const Hero = () => {
           </motion.div>
         </Link>
       </motion.div>
+
+      {/* Tariff Modal */}
+      <TariffModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   )
 }

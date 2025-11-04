@@ -6,6 +6,7 @@ import { Car, Users, Clock, Grid, ChevronDown } from 'lucide-react'
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false)
   const [videoError, setVideoError] = useState(false)
+  const videoRef = React.useRef(null)
 
   useEffect(() => {
     const checkMobile = () => {
@@ -17,13 +18,47 @@ const Hero = () => {
   }, [])
 
   // Handle video load error
-  const handleVideoError = () => {
+  const handleVideoError = (e) => {
+    console.log('Video error:', e)
     setVideoError(true)
     const fallback = document.getElementById('fallback-bg')
     if (fallback) {
       fallback.style.display = 'block'
     }
   }
+
+  // Force video play on load
+  useEffect(() => {
+    if (videoRef.current) {
+      const video = videoRef.current
+      const playVideo = () => {
+        video.play().catch(err => {
+          console.log('Autoplay prevented:', err)
+        })
+      }
+      
+      // Try to play immediately
+      playVideo()
+      
+      // If autoplay blocked, play on user interaction
+      const handleInteraction = () => {
+        playVideo()
+        document.removeEventListener('click', handleInteraction)
+        document.removeEventListener('touchstart', handleInteraction)
+        document.removeEventListener('scroll', handleInteraction)
+      }
+      
+      document.addEventListener('click', handleInteraction)
+      document.addEventListener('touchstart', handleInteraction)
+      document.addEventListener('scroll', handleInteraction)
+      
+      return () => {
+        document.removeEventListener('click', handleInteraction)
+        document.removeEventListener('touchstart', handleInteraction)
+        document.removeEventListener('scroll', handleInteraction)
+      }
+    }
+  }, [])
 
   const stats = [
     { icon: Users, number: '1000+', label: 'Happy Customers' },
@@ -41,6 +76,7 @@ const Hero = () => {
         <div className="relative w-full h-full">
           {/* Taxi City Video Background */}
           <video
+            ref={videoRef}
             autoPlay
             loop
             muted
@@ -49,10 +85,21 @@ const Hero = () => {
             className={`absolute inset-0 w-full h-full object-cover ${videoError ? 'hidden' : ''}`}
             poster="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80"
             onError={handleVideoError}
+            onLoadedData={() => {
+              if (videoRef.current) {
+                videoRef.current.play().catch(() => {
+                  // Autoplay blocked, will play on interaction
+                })
+              }
+            }}
           >
+            {/* Primary video source - Taxi driving in city street */}
             <source src="https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_30fps.mp4" type="video/mp4" />
-            {/* Alternative video source */}
+            {/* Alternative: City traffic video */}
             <source src="https://videos.pexels.com/video-files/2491284/2491284-hd_1920_1080_30fps.mp4" type="video/mp4" />
+            {/* Fallback: Highway driving video */}
+            <source src="https://videos.pexels.com/video-files/1448291/1448291-hd_1920_1080_30fps.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
           {/* Fallback background image */}
           <div 

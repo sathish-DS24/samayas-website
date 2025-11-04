@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: false, // Disable dark mode to prevent mobile browsers from applying dark styles
+  // darkMode removed - using default behavior to prevent warnings
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",

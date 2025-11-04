@@ -5,6 +5,7 @@ import { Car, Users, Clock, Grid, ChevronDown } from 'lucide-react'
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false)
+  const [videoError, setVideoError] = useState(false)
 
   useEffect(() => {
     const checkMobile = () => {
@@ -14,6 +15,15 @@ const Hero = () => {
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  // Handle video load error
+  const handleVideoError = () => {
+    setVideoError(true)
+    const fallback = document.getElementById('fallback-bg')
+    if (fallback) {
+      fallback.style.display = 'block'
+    }
+  }
 
   const stats = [
     { icon: Users, number: '1000+', label: 'Happy Customers' },
@@ -26,54 +36,47 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Video/Image */}
-      <div className="absolute inset-0 z-0">
-        {!isMobile ? (
-          // Desktop: Video background with fallback
-          <div className="relative w-full h-full">
-            {/* Video placeholder - replace with actual video URL */}
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-              poster="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80"
-            >
-              <source src="https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_30fps.mp4" type="video/mp4" />
-              {/* Fallback image if video fails */}
-              <img
-                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80"
-                alt="Highway background"
-                className="w-full h-full object-cover"
-              />
-            </video>
-            {/* Dark gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
-          </div>
-        ) : (
-          // Mobile: Static image for performance
-          <div className="relative w-full h-full">
-            <img
-              src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80"
-              alt="Highway background"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
-          </div>
-        )}
+      {/* Background Video - Taxi City Drive */}
+      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
+        <div className="relative w-full h-full">
+          {/* Taxi City Video Background */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className={`absolute inset-0 w-full h-full object-cover ${videoError ? 'hidden' : ''}`}
+            poster="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80"
+            onError={handleVideoError}
+          >
+            <source src="https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_30fps.mp4" type="video/mp4" />
+            {/* Alternative video source */}
+            <source src="https://videos.pexels.com/video-files/2491284/2491284-hd_1920_1080_30fps.mp4" type="video/mp4" />
+          </video>
+          {/* Fallback background image */}
+          <div 
+            className={`absolute inset-0 w-full h-full object-cover bg-cover bg-center ${videoError ? 'block' : 'hidden'}`}
+            style={{ 
+              backgroundImage: "url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80')"
+            }}
+            id="fallback-bg"
+          />
+          {/* Dark gradient overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/65 to-black/80" />
+        </div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+      {/* Content - Hero Text Overlay */}
+      <div className="relative z-10 text-center text-white flex flex-col items-center justify-center h-full px-4 sm:px-6 md:px-10 w-full">
         {/* Main Content */}
-        <div className="py-20">
+        <div className="py-20 w-full max-w-7xl mx-auto">
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-white/80 mb-4 font-medium"
+            className="text-lg sm:text-xl text-white/90 mb-4 font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
           >
             Your Trusted Travel Partner
           </motion.p>
@@ -83,11 +86,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
           >
             Reliable Rides,
             <br />
-            <span className="text-accent-500">Anytime, Anywhere.</span>
+            <span className="text-accent-500 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Anytime, Anywhere.</span>
           </motion.h1>
 
           {/* One-Way Taxi CTA Section */}

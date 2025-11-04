@@ -13,7 +13,7 @@ const Hero = () => {
   const videoPlaylist = [
     '/videos/taxi-city-drive.mp4.mp4', // First video
     '/videos/Passenger-pickup.mp4',     // Second video
-    '/videos/taxi video.mp4'            // Third video
+    '/videos/taxi video.mp4'            // Third video (space in filename - URL encoded automatically)
   ]
 
   useEffect(() => {
@@ -36,12 +36,23 @@ const Hero = () => {
 
   // Handle video load error
   const handleVideoError = (e) => {
-    console.error('Video error:', e)
-    setVideoError(true)
-    const fallback = document.getElementById('fallback-bg')
-    if (fallback) {
-      fallback.style.display = 'block'
-    }
+    const video = e.target
+    console.error(`Video error for ${video.src}:`, e)
+    console.error('Video error details:', {
+      error: video.error,
+      networkState: video.networkState,
+      readyState: video.readyState,
+      src: video.src
+    })
+    
+    // Try next video if current one fails
+    setTimeout(() => {
+      setCurrentVideoIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % videoPlaylist.length
+        console.log(`Video ${prevIndex} failed, trying next video ${nextIndex}`)
+        return nextIndex
+      })
+    }, 1000)
   }
 
   // Force video play on load and when video changes
@@ -50,14 +61,16 @@ const Hero = () => {
       const video = videoRef.current
       
       // Load the current video
-      video.src = videoPlaylist[currentVideoIndex]
+      const videoSrc = videoPlaylist[currentVideoIndex]
+      console.log(`Loading video ${currentVideoIndex}: ${videoSrc}`)
+      video.src = videoSrc
       video.load()
       
       const playVideo = async () => {
         try {
           await video.play()
-          console.log(`Video ${currentVideoIndex} playing successfully`)
-          setVideoError(false)
+          console.log(`Video ${currentVideoIndex} (${videoSrc}) playing successfully`)
+          setVideoError(false) // Reset error state on successful play
         } catch (err) {
           console.log('Autoplay prevented:', err)
           // Video will play on user interaction
@@ -138,6 +151,7 @@ const Hero = () => {
             onEnded={handleVideoEnd}
             onLoadedData={() => {
               console.log(`Video ${currentVideoIndex} data loaded, attempting to play...`)
+              setVideoError(false) // Reset error on successful load
               if (videoRef.current) {
                 videoRef.current.play().catch((err) => {
                   console.log('Play failed on loadedData:', err)
@@ -146,6 +160,7 @@ const Hero = () => {
             }}
             onCanPlay={() => {
               console.log(`Video ${currentVideoIndex} can play now`)
+              setVideoError(false) // Reset error when video can play
               if (videoRef.current && videoRef.current.paused) {
                 videoRef.current.play().catch((err) => {
                   console.log('Play failed on canPlay:', err)

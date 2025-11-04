@@ -247,7 +247,7 @@ const Hero = () => {
                 onClick={() => setIsModalOpen(true)}
                 className="bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 w-full sm:w-auto"
               >
-                Book One-Way Taxi
+                       Tariff Details
               </motion.button>
             </div>
           </motion.div>

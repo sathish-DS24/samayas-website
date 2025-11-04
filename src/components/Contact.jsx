@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Phone, Mail, MapPin, MessageCircle, Clock, Facebook, Instagram } from 'lucide-react'
+import { Phone, Mail, MessageCircle, Clock, Facebook, Instagram } from 'lucide-react'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -28,13 +28,6 @@ const Contact = () => {
       link: 'mailto:samayasprem@gmail.com',
       color: 'from-red-500 to-red-600'
     },
-    {
-      icon: MapPin,
-      title: 'Location',
-      value: 'Chennai, Trichy, Tamil Nadu, India',
-      link: '#',
-      color: 'from-purple-500 to-purple-600'
-    }
   ]
 
   const workingHours = [
@@ -181,43 +174,6 @@ const Contact = () => {
             </motion.div>
           </div>
 
-          {/* Map Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="mt-12 bg-white rounded-xl shadow-lg overflow-hidden"
-          >
-            <div className="h-96 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center relative">
-              {/* Placeholder for Google Maps - You can replace this with actual embed */}
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-primary-600 mx-auto mb-4" />
-                <p className="text-primary-900 font-semibold text-lg mb-2">
-                  We're Located Here
-                </p>
-                <p className="text-primary-700">
-                  Chennai, Trichy, India
-                </p>
-              </div>
-              
-              {/* Animated location markers */}
-              {[...Array(3)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.5, 0, 0.5]
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    delay: i * 0.6
-                  }}
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-4 border-primary-600 rounded-full"
-                />
-              ))}
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

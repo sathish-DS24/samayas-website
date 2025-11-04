@@ -93,12 +93,8 @@ const Hero = () => {
               }
             }}
           >
-            {/* Primary video source - Taxi driving in city street */}
-            <source src="https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_30fps.mp4" type="video/mp4" />
-            {/* Alternative: City traffic video */}
-            <source src="https://videos.pexels.com/video-files/2491284/2491284-hd_1920_1080_30fps.mp4" type="video/mp4" />
-            {/* Fallback: Highway driving video */}
-            <source src="https://videos.pexels.com/video-files/1448291/1448291-hd_1920_1080_30fps.mp4" type="video/mp4" />
+            {/* Local video source from public folder */}
+            <source src="/videos/taxi-city-drive.mp4.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Fallback background image */}

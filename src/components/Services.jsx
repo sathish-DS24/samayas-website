@@ -18,6 +18,16 @@ const Services = () => {
 
   const services = [
     {
+      icon: CarFront,
+      title: 'One-Way Taxi',
+      description: 'Convenient and cost-effective one-way rides to your destination — no return charges.',
+      color: 'from-green-500 to-green-600',
+      bgColor: 'bg-green-50',
+      iconColor: 'text-green-600',
+      hoverGradient: 'hover:from-green-600 hover:to-green-700',
+      isPopular: true
+    },
+    {
       icon: CircleUserRound,
       title: 'Acting Driver',
       description: 'Hire professional drivers for short or long trips — reliable, punctual, and experienced.',
@@ -34,15 +44,6 @@ const Services = () => {
       bgColor: 'bg-purple-50',
       iconColor: 'text-purple-600',
       hoverGradient: 'hover:from-purple-600 hover:to-purple-700'
-    },
-    {
-      icon: CarFront,
-      title: 'One-Way Taxi',
-      description: 'Convenient and cost-effective one-way rides to your destination — no return charges.',
-      color: 'from-green-500 to-green-600',
-      bgColor: 'bg-green-50',
-      iconColor: 'text-green-600',
-      hoverGradient: 'hover:from-green-600 hover:to-green-700'
     },
     {
       icon: Wrench,
@@ -176,12 +177,12 @@ const Services = () => {
               </div>
 
               {/* Floating Badge for featured services */}
-              {index === 0 && (
+              {service.isPopular && (
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.8, type: "spring" }}
-                  className="absolute -top-3 -right-3 bg-accent-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg z-20"
+                  className="absolute -top-3 -right-3 bg-accent-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg z-20 uppercase"
                 >
                   Popular
                 </motion.div>

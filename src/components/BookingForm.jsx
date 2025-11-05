@@ -230,23 +230,57 @@ const BookingForm = () => {
       const templateId = 'template_h3j27hg'
       const publicKey = 'FlG_Mpal1SeRMkRqx'
 
+      // Format date from YYYY-MM-DD to DD-MM-YYYY
+      const formatDate = (dateString) => {
+        if (!dateString) return ''
+        const date = new Date(dateString)
+        const day = String(date.getDate()).padStart(2, '0')
+        const month = String(date.getMonth() + 1).padStart(2, '0')
+        const year = date.getFullYear()
+        return `${day}-${month}-${year}`
+      }
+
+      // Format time with AM/PM
+      const formattedTime = calculatedData?.fullTime || `${oneWayData.time} ${oneWayData.timePeriod}`
+
       const templateParams = {
-        booking_type: 'One Way',
-        vehicle_type: oneWayData.vehicleType,
-        customer_name: oneWayData.name,
-        customer_phone: oneWayData.phone,
-        pickup_location: oneWayData.pickupLocation,
-        drop_location: oneWayData.dropLocation,
-        booking_date: oneWayData.date,
-        booking_time: `${oneWayData.time} ${oneWayData.timePeriod}`,
-        base_fare: `₹ ${calculatedData.baseFare}`,
-        add_fare: `₹ ${calculatedData.addFare}`,
-        bata: `₹ ${calculatedData.bata}`,
-        final_amount: `₹ ${calculatedData.finalAmount}`,
-        distance: `${calculatedData.distance} km`,
+        // Service and booking type
+        service_type: 'One-Way Taxi',
+        booking_type: 'One-Way Taxi',
+        
+        // Customer information
+        customer_name: oneWayData.name || calculatedData?.name || '',
+        customer_phone: oneWayData.phone || calculatedData?.phone || '',
+        
+        // Vehicle information
+        vehicle_type: oneWayData.vehicleType || calculatedData?.vehicleType || '',
+        car_type: oneWayData.vehicleType || calculatedData?.vehicleType || '',
+        
+        // Location information
+        pickup_location: oneWayData.pickupLocation || calculatedData?.pickupLocation || '',
+        drop_location: oneWayData.dropLocation || calculatedData?.dropLocation || '',
+        
+        // Date and time (using both formats for compatibility)
+        booking_date: formatDate(oneWayData.date || calculatedData?.date || ''),
+        service_date: formatDate(oneWayData.date || calculatedData?.date || ''),
+        date: formatDate(oneWayData.date || calculatedData?.date || ''),
+        
+        booking_time: formattedTime,
+        service_time: formattedTime,
+        time: formattedTime,
+        
+        // Pricing information
+        base_fare: `₹${calculatedData?.baseFare || 0}`,
+        add_fare: `₹${calculatedData?.addFare || 0}`,
+        bata: `₹${calculatedData?.bata || 0}`,
+        final_amount: `₹${calculatedData?.finalAmount || 0}`,
+        total_amount: `₹${calculatedData?.finalAmount || 0}`,
+        distance: `${calculatedData?.distance || 0} km`,
+        
+        // Email configuration
         to_email: 'samayasprem@gmail.com',
-        from_name: oneWayData.name,
-        from_phone: oneWayData.phone
+        from_name: oneWayData.name || calculatedData?.name || '',
+        from_phone: oneWayData.phone || calculatedData?.phone || ''
       }
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey)

@@ -130,8 +130,8 @@ const About = () => {
                 Your browser does not support the video tag.
               </video>
 
-              {/* Overlay gradient for readability - lighter to show video */}
-              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-blue-900/50 to-blue-900/60 backdrop-blur-[2px] z-[2]" />
+              {/* Overlay gradient for readability - much lighter to show video clearly */}
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-blue-900/25 to-blue-900/35 z-[2]" />
 
               {/* Centered Content */}
               <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">

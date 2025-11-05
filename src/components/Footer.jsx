@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
-import { Facebook, Instagram, MessageCircle, Mail, Phone, MapPin, ArrowUp, Heart } from 'lucide-react'
+import { Facebook, Instagram, MessageCircle, Mail, Phone, ArrowUp, Heart } from 'lucide-react'
 
 const Footer = () => {
   const scrollToTop = () => {

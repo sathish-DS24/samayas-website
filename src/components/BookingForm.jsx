@@ -8,6 +8,14 @@ const BookingForm = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
+  // EmailJS Configuration
+  const serviceId = 'service_pened45'
+  const publicKey = 'FlG_Mpal1SeRMkRqx'
+  
+  // Template IDs for different forms
+  const ONE_WAY_TAXI_TEMPLATE_ID = 'template_h3j27hg' // Update this with your One-Way Taxi template ID
+  const OTHER_SERVICES_TEMPLATE_ID = 'template_other_services' // Update this with your Other Services template ID
+
   const [activeTab, setActiveTab] = useState('oneway') // 'oneway' or 'other'
   
   // One-Way Taxi form data
@@ -198,9 +206,8 @@ const BookingForm = () => {
     if (validateOtherServiceForm()) {
       setIsLoading(true)
       try {
-        const serviceId = 'service_pened45'
-        const templateId = 'template_h3j27hg'
-        const publicKey = 'FlG_Mpal1SeRMkRqx'
+        // Use Other Services template
+        const templateId = OTHER_SERVICES_TEMPLATE_ID
 
         // Format date from YYYY-MM-DD to DD-MM-YYYY
         const formatDate = (dateString) => {
@@ -216,17 +223,30 @@ const BookingForm = () => {
         const formattedTime = `${otherServiceData.time} ${otherServiceData.timePeriod || 'AM'}`
 
         const templateParams = {
+          // Email subject
+          subject: `Other Service Booking - ${otherServiceData.serviceType}`,
+          
+          // Service information
           service_type: otherServiceData.serviceType,
+          booking_type: otherServiceData.serviceType,
+          
+          // Customer information
           customer_name: otherServiceData.name,
           customer_phone: otherServiceData.phone,
+          
+          // Date and time
           service_date: formatDate(otherServiceData.date),
           service_time: formattedTime,
           booking_date: formatDate(otherServiceData.date),
           booking_time: formattedTime,
           date: formatDate(otherServiceData.date),
           time: formattedTime,
+          
+          // Location information
           pickup_location: otherServiceData.pickupLocation,
           drop_location: otherServiceData.dropLocation || 'N/A',
+          
+          // Email configuration
           to_email: 'samayasprem@gmail.com',
           from_name: otherServiceData.name,
           from_phone: otherServiceData.phone
@@ -258,9 +278,8 @@ const BookingForm = () => {
   const handleConfirmBooking = async () => {
     setIsLoading(true)
     try {
-      const serviceId = 'service_pened45'
-      const templateId = 'template_h3j27hg'
-      const publicKey = 'FlG_Mpal1SeRMkRqx'
+      // Use One-Way Taxi template
+      const templateId = ONE_WAY_TAXI_TEMPLATE_ID
 
       // Get the actual date value - prioritize calculatedData since it has all the form data
       const bookingDate = calculatedData?.date || oneWayData.date || ''

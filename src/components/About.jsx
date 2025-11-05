@@ -32,17 +32,21 @@ const About = () => {
     }
   ]
 
-  // Force video playback on mount and user interaction
+  // Initialize video on mount - similar to Hero component
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
 
+    const videoSrc = '/videos/about-journey.mp4'
+    
+    // Explicitly set video source and load
+    video.src = videoSrc
+    video.load()
+
     const playVideo = async () => {
       try {
-        if (video.paused) {
-          await video.play()
-          console.log('About video playing successfully')
-        }
+        await video.play()
+        console.log('About video playing successfully')
       } catch (err) {
         console.log('Autoplay prevented for About video:', err)
       }
@@ -54,6 +58,10 @@ const About = () => {
     }
 
     video.addEventListener('canplay', handleCanPlay, { once: true })
+    video.addEventListener('loadeddata', () => {
+      console.log('About video loaded successfully')
+      playVideo()
+    }, { once: true })
     
     // If video is already ready, play immediately
     if (video.readyState >= 3) {
@@ -105,18 +113,17 @@ const About = () => {
                 preload="auto"
                 className="absolute inset-0 w-full h-full object-cover z-0"
                 onError={(e) => {
-                  console.error('About video failed to load:', e)
+                  const video = e.target
+                  console.error('About video failed to load:', {
+                    error: video.error,
+                    networkState: video.networkState,
+                    readyState: video.readyState,
+                    src: video.src
+                  })
                   // Fallback to gradient if video fails
                   e.target.style.display = 'none'
                 }}
-                onLoadedData={() => {
-                  console.log('About video loaded successfully')
-                  if (videoRef.current && videoRef.current.paused) {
-                    videoRef.current.play().catch(console.error)
-                  }
-                }}
               >
-                <source src="/videos/about-journey.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 

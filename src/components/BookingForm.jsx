@@ -13,8 +13,8 @@ const BookingForm = () => {
   const publicKey = 'FlG_Mpal1SeRMkRqx'
   
   // Template IDs for different forms
-  const ONE_WAY_TAXI_TEMPLATE_ID = 'template_h3j27hg' // Update this with your One-Way Taxi template ID
-  const OTHER_SERVICES_TEMPLATE_ID = 'template_other_services' // Update this with your Other Services template ID
+  const ONE_WAY_TAXI_TEMPLATE_ID = 'template_z0rx3mx' // One-Way Taxi Booking template
+  const OTHER_SERVICES_TEMPLATE_ID = 'template_h3j27hg' // Other Services Booking template
 
   const [activeTab, setActiveTab] = useState('oneway') // 'oneway' or 'other'
   

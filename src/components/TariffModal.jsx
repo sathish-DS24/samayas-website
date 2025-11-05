@@ -10,13 +10,13 @@ const TariffModal = ({ isOpen, onClose }) => {
   const oneWayData = [
     { type: 'SEDAN', rate: 'Rs.14/KM', bata: 'Rs.400', additional: 'One way Toll' },
     { type: 'ETIOS', rate: 'Rs.14/KM', bata: 'Rs.400', additional: 'One way Toll' },
-    { type: 'SUV', rate: 'Rs.19/KM', bata: 'Rs.400', additional: 'One way Toll' },
-    { type: 'INNOVA', rate: 'Rs.20/KM', bata: 'Rs.400', additional: 'One way Toll' },
+    { type: 'SUV', rate: 'Rs.19/KM', bata: 'Rs.500', additional: 'One way Toll' },
+    { type: 'INNOVA', rate: 'Rs.20/KM', bata: 'Rs.500', additional: 'One way Toll' },
   ]
 
   const roundTripData = [
     { type: 'SEDAN', rate: 'Rs.13/KM', bata: 'Rs.400', additional: 'Up & Down Toll' },
-    { type: 'ETIOS', rate: 'Rs.13/KM', bata: 'Rs.500', additional: 'Up & Down Toll' },
+    { type: 'ETIOS', rate: 'Rs.13/KM', bata: 'Rs.400', additional: 'Up & Down Toll' },
     { type: 'SUV', rate: 'Rs.18/KM', bata: 'Rs.500', additional: 'Up & Down Toll' },
     { type: 'INNOVA', rate: 'Rs.18/KM', bata: 'Rs.500', additional: 'Up & Down Toll' },
   ]

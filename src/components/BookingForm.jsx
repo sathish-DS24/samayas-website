@@ -29,6 +29,7 @@ const BookingForm = () => {
     phone: '',
     date: '',
     time: '',
+    timePeriod: 'AM',
     pickupLocation: '',
     dropLocation: ''
   })
@@ -112,6 +113,10 @@ const BookingForm = () => {
     setOneWayData(prev => ({ ...prev, timePeriod: period }))
   }
 
+  const handleOtherServiceTimePeriodChange = (period) => {
+    setOtherServiceData(prev => ({ ...prev, timePeriod: period }))
+  }
+
   // Calculate distance (mock - replace with Google Maps API)
   const calculateDistance = (pickup, drop) => {
     return Math.floor(Math.random() * 300) + 100
@@ -188,12 +193,29 @@ const BookingForm = () => {
         const templateId = 'template_h3j27hg'
         const publicKey = 'FlG_Mpal1SeRMkRqx'
 
+        // Format date from YYYY-MM-DD to DD-MM-YYYY
+        const formatDate = (dateString) => {
+          if (!dateString) return ''
+          const date = new Date(dateString)
+          const day = String(date.getDate()).padStart(2, '0')
+          const month = String(date.getMonth() + 1).padStart(2, '0')
+          const year = date.getFullYear()
+          return `${day}-${month}-${year}`
+        }
+
+        // Format time with AM/PM
+        const formattedTime = `${otherServiceData.time} ${otherServiceData.timePeriod || 'AM'}`
+
         const templateParams = {
           service_type: otherServiceData.serviceType,
           customer_name: otherServiceData.name,
           customer_phone: otherServiceData.phone,
-          service_date: otherServiceData.date,
-          service_time: otherServiceData.time,
+          service_date: formatDate(otherServiceData.date),
+          service_time: formattedTime,
+          booking_date: formatDate(otherServiceData.date),
+          booking_time: formattedTime,
+          date: formatDate(otherServiceData.date),
+          time: formattedTime,
           pickup_location: otherServiceData.pickupLocation,
           drop_location: otherServiceData.dropLocation || 'N/A',
           to_email: 'samayasprem@gmail.com',
@@ -211,6 +233,7 @@ const BookingForm = () => {
           phone: '',
           date: '',
           time: '',
+          timePeriod: 'AM',
           pickupLocation: '',
           dropLocation: ''
         })
@@ -310,7 +333,7 @@ const BookingForm = () => {
     { name: 'name', label: 'Customer Name', icon: User, type: 'text', required: true },
     { name: 'phone', label: 'Phone Number', icon: Phone, type: 'tel', required: true },
     { name: 'date', label: 'Date', icon: Calendar, type: 'date', required: true },
-    { name: 'time', label: 'Time', icon: Clock, type: 'time', required: true },
+    { name: 'time', label: 'Time', icon: Clock, type: 'time', required: true, hasTimePeriod: true },
     { name: 'pickupLocation', label: 'Pickup Location', icon: MapPin, type: 'text', required: true },
     { name: 'dropLocation', label: 'Drop Location', icon: MapPin, type: 'text', required: false }
   ]
@@ -670,6 +693,44 @@ const BookingForm = () => {
                                   <option key={service} value={service}>{service}</option>
                                 ))}
                               </select>
+                            ) : field.type === 'time' && field.hasTimePeriod ? (
+                              <div className="flex gap-2">
+                                <input
+                                  type="time"
+                                  name={field.name}
+                                  value={otherServiceData[field.name]}
+                                  onChange={handleOtherServiceChange}
+                                  placeholder={`Enter ${field.label.toLowerCase()}`}
+                                  required={field.required}
+                                  className={`flex-1 px-4 py-3 bg-white rounded-lg border ${
+                                    errors[field.name] ? 'border-red-500' : 'border-gray-300'
+                                  } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 shadow-sm`}
+                                />
+                                <div className="flex gap-1 bg-primary-700/50 rounded-lg p-1">
+                                  <button
+                                    type="button"
+                                    onClick={() => handleOtherServiceTimePeriodChange('AM')}
+                                    className={`px-4 py-3 rounded-md font-semibold transition-all ${
+                                      otherServiceData.timePeriod === 'AM'
+                                        ? 'bg-accent-500 text-black'
+                                        : 'text-white/70 hover:text-white'
+                                    }`}
+                                  >
+                                    AM
+                                  </button>
+                                  <button
+                                    type="button"
+                                    onClick={() => handleOtherServiceTimePeriodChange('PM')}
+                                    className={`px-4 py-3 rounded-md font-semibold transition-all ${
+                                      otherServiceData.timePeriod === 'PM'
+                                        ? 'bg-accent-500 text-black'
+                                        : 'text-white/70 hover:text-white'
+                                    }`}
+                                  >
+                                    PM
+                                  </button>
+                                </div>
+                              </div>
                             ) : (
                               <input
                                 type={field.type}

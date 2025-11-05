@@ -35,68 +35,87 @@ const About = () => {
     <section id="about" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Image */}
+          {/* Left Side - Video Background */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              {/* Placeholder for travel/driving image - Using gradient with icon */}
-              <div className="bg-gradient-to-br from-primary-600 to-primary-800 aspect-[4/3] flex items-center justify-center">
+            <section className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
+              {/* Background Video */}
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-cover"
+                onError={(e) => {
+                  console.error('Video failed to load:', e)
+                  // Fallback to gradient if video fails
+                  e.target.style.display = 'none'
+                }}
+              >
+                <source src="/videos/about-journey.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+
+              {/* Fallback gradient background if video fails */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800" />
+
+              {/* Overlay gradient for readability */}
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/60 via-blue-900/70 to-blue-900/80 backdrop-blur-sm" />
+
+              {/* Centered Content */}
+              <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
                 <motion.div
-                  animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-0 opacity-10"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6 }}
+                  className="hover:text-yellow-300 transition-colors"
                 >
-                  <div className="absolute top-1/4 left-1/4 w-32 h-32 border-4 border-white rounded-full"></div>
-                  <div className="absolute bottom-1/4 right-1/4 w-24 h-24 border-4 border-white rounded-full"></div>
-                </motion.div>
-                
-                <div className="relative z-10 text-center text-white p-8">
-                  <motion.div
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{ duration: 3, repeat: Infinity }}
+                  <motion.svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto mb-4 text-yellow-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{ delay: 0.2, duration: 0.5 }}
                   >
-                    <svg className="w-32 h-32 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                    </svg>
-                  </motion.div>
-                  <div className="text-2xl font-bold">Your Journey, Our Priority</div>
-                </div>
+                    <path d="M4 19.5V4.5a.5.5 0 01.74-.44L12 8l7.26-3.94A.5.5 0 0120 4.5v15a.5.5 0 01-.74.44L12 16l-7.26 3.94A.5.5 0 014 19.5z" />
+                  </motion.svg>
+
+                  <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ delay: 0.3, duration: 0.6 }}
+                    className="text-2xl sm:text-3xl md:text-4xl font-bold drop-shadow-lg"
+                  >
+                    Your Journey, <span className="text-yellow-400">Our Priority</span>
+                  </motion.h2>
+                </motion.div>
               </div>
 
-              {/* Decorative Elements */}
+              {/* Bottom Right Badge */}
               <motion.div
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent-500 rounded-full blur-2xl opacity-60"
-              />
-              <motion.div
-                animate={{ scale: [1.1, 1, 1.1] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-4 -left-4 w-32 h-32 bg-primary-400 rounded-full blur-2xl opacity-40"
-              />
-            </div>
-
-            {/* Stats Card Overlay - Hidden on mobile, shown on desktop */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="hidden sm:block absolute -bottom-8 -right-8 bg-white rounded-xl shadow-xl p-6 max-w-xs"
-            >
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-accent-500 rounded-lg flex items-center justify-center">
-                  <Award className="w-6 h-6 text-white" />
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ delay: 0.5, duration: 0.6 }}
+                className="absolute bottom-6 right-6 z-10 bg-white text-primary-900 rounded-xl px-4 sm:px-5 py-3 shadow-xl flex items-center space-x-3"
+              >
+                <div className="bg-accent-500 rounded-full p-2">
+                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-primary-900">11+ Years</div>
-                  <div className="text-sm text-gray-600">Of Excellence</div>
+                  <p className="font-bold text-base sm:text-lg">11+ Years</p>
+                  <p className="text-xs sm:text-sm text-gray-500">Of Excellence</p>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </section>
           </motion.div>
 
           {/* Right Side - Content */}

@@ -165,23 +165,25 @@ const About = () => {
                   </motion.h2>
                 </motion.div>
               </div>
+            </section>
 
-              {/* Bottom Right Badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                className="absolute bottom-6 right-6 z-10 bg-white text-primary-900 rounded-xl px-4 sm:px-5 py-3 shadow-xl flex items-center space-x-3"
-              >
+            {/* 11+ Years Badge - Below Video */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="mt-6 flex justify-center"
+            >
+              <div className="bg-white text-primary-900 rounded-xl px-5 py-3 shadow-xl flex items-center space-x-3">
                 <div className="bg-accent-500 rounded-full p-2">
-                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                  <Clock className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="font-bold text-base sm:text-lg">11+ Years</p>
-                  <p className="text-xs sm:text-sm text-gray-500">Of Excellence</p>
+                  <p className="font-bold text-lg">11+ Years</p>
+                  <p className="text-sm text-gray-500">Of Excellence</p>
                 </div>
-              </motion.div>
-            </section>
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Right Side - Content */}

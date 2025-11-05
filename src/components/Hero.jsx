@@ -31,18 +31,34 @@ const Hero = () => {
 
   // Handle video end - move to next video with smooth transition
   const handleVideoEnd = useCallback(() => {
-    // Next video should already be preloaded and ready
     const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
+    const nextVideoSrc = videoPlaylist[nextIndex]
     const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
     
     if (nextVideoRef.current) {
+      // Ensure the next video source is set correctly
+      if (nextVideoRef.current.src !== nextVideoSrc) {
+        nextVideoRef.current.src = nextVideoSrc
+        nextVideoRef.current.load()
+      }
+      
       // Start crossfade immediately - next video should already be loaded
       setActiveVideo(activeVideo === 0 ? 1 : 0)
       setCurrentVideoIndex(nextIndex)
       
       // Ensure next video is playing
-      if (nextVideoRef.current.paused) {
-        nextVideoRef.current.play().catch(console.error)
+      const playNext = () => {
+        if (nextVideoRef.current) {
+          nextVideoRef.current.currentTime = 0
+          nextVideoRef.current.play().catch(console.error)
+        }
+      }
+      
+      // If video is ready, play immediately, otherwise wait for canplay
+      if (nextVideoRef.current.readyState >= 3) {
+        playNext()
+      } else {
+        nextVideoRef.current.addEventListener('canplay', playNext, { once: true })
       }
     }
   }, [currentVideoIndex, activeVideo, videoPlaylist.length])
@@ -163,10 +179,18 @@ const Hero = () => {
     const nextVideoSrc = videoPlaylist[nextIndex]
     const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
     
-    if (nextVideoRef.current && nextVideoRef.current.src !== nextVideoSrc) {
-      nextVideoRef.current.src = nextVideoSrc
-      nextVideoRef.current.load()
-      nextVideoRef.current.preload = 'auto'
+    if (nextVideoRef.current) {
+      // Always ensure the source is set correctly for the next video
+      // This is important when reusing video elements (e.g., videoRef1 for video 0 and video 2)
+      const currentSrc = nextVideoRef.current.src
+      const videoFileName = nextVideoSrc.split('/').pop()
+      
+      // Check if current source doesn't match the next video we need
+      if (!currentSrc || !currentSrc.includes(videoFileName)) {
+        nextVideoRef.current.src = nextVideoSrc
+        nextVideoRef.current.load()
+        nextVideoRef.current.preload = 'auto'
+      }
       
       // Preload and prepare next video
       const handleNextReady = () => {
@@ -176,12 +200,15 @@ const Hero = () => {
         }
       }
       
+      // Remove any existing listeners to avoid duplicates
+      nextVideoRef.current.removeEventListener('canplay', handleNextReady)
       nextVideoRef.current.addEventListener('canplay', handleNextReady, { once: true })
+      
       if (nextVideoRef.current.readyState >= 3) {
         handleNextReady()
       }
     }
-  }, [currentVideoIndex, activeVideo])
+  }, [currentVideoIndex, activeVideo, videoPlaylist])
 
   const stats = [
     { icon: Users, number: '1000+', label: 'Happy Customers' },

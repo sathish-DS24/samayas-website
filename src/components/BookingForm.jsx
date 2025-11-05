@@ -73,7 +73,7 @@ const BookingForm = () => {
       type: 'INNOVA', 
       icon: Car, 
       rate: oneWayRates.INNOVA,
-      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop&q=80',
+      image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=400&h=300&fit=crop&q=80',
       model: 'Toyota Innova Crysta'
     }
   ]

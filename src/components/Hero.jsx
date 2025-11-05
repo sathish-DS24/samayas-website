@@ -338,7 +338,7 @@ const Hero = () => {
                 <span className="bg-accent-500 text-black px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-bold">
                   POPULAR
                 </span>
-                <span className="text-white/90 text-base sm:text-lg font-semibold">One-Way Taxi</span>
+                <span className="text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">One-Way Taxi</span>
               </motion.div>
 
               {/* Tagline */}

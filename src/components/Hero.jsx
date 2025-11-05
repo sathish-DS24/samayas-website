@@ -366,7 +366,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.1 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-center text-white mt-8 sm:mt-12 max-w-4xl mx-auto w-full px-4"
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-center text-white mt-8 sm:mt-12 mb-16 sm:mb-0 max-w-4xl mx-auto w-full px-4"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -408,7 +408,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10"
       >
         <Link to="about" smooth={true} duration={800} offset={-100}>
           <motion.div
@@ -416,12 +416,12 @@ const Hero = () => {
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="flex flex-col items-center cursor-pointer"
           >
-            <span className="text-white/70 text-sm mb-2">Scroll</span>
+            <span className="text-white/70 text-xs sm:text-sm mb-1 sm:mb-2">Scroll</span>
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             >
-              <ChevronDown className="w-6 h-6 text-accent-500" />
+              <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-accent-500" />
             </motion.div>
           </motion.div>
         </Link>

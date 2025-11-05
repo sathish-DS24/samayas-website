@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
@@ -6,6 +6,7 @@ import { Shield, Clock, Users, Award } from 'lucide-react'
 
 const About = () => {
   const ref = useRef(null)
+  const videoRef = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   const features = [
@@ -31,6 +32,57 @@ const About = () => {
     }
   ]
 
+  // Force video playback on mount and user interaction
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const playVideo = async () => {
+      try {
+        if (video.paused) {
+          await video.play()
+          console.log('About video playing successfully')
+        }
+      } catch (err) {
+        console.log('Autoplay prevented for About video:', err)
+      }
+    }
+
+    // Try to play when video is ready
+    const handleCanPlay = () => {
+      playVideo()
+    }
+
+    video.addEventListener('canplay', handleCanPlay, { once: true })
+    
+    // If video is already ready, play immediately
+    if (video.readyState >= 3) {
+      playVideo()
+    }
+
+    // If autoplay blocked, play on user interaction
+    const handleInteraction = () => {
+      playVideo()
+      document.removeEventListener('click', handleInteraction)
+      document.removeEventListener('touchstart', handleInteraction)
+      document.removeEventListener('scroll', handleInteraction)
+      document.removeEventListener('mousemove', handleInteraction)
+    }
+
+    document.addEventListener('click', handleInteraction, { once: true })
+    document.addEventListener('touchstart', handleInteraction, { once: true })
+    document.addEventListener('scroll', handleInteraction, { once: true })
+    document.addEventListener('mousemove', handleInteraction, { once: true })
+
+    return () => {
+      video.removeEventListener('canplay', handleCanPlay)
+      document.removeEventListener('click', handleInteraction)
+      document.removeEventListener('touchstart', handleInteraction)
+      document.removeEventListener('scroll', handleInteraction)
+      document.removeEventListener('mousemove', handleInteraction)
+    }
+  }, [])
+
   return (
     <section id="about" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,16 +97,23 @@ const About = () => {
             <section className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
               {/* Background Video */}
               <video
+                ref={videoRef}
                 autoPlay
                 loop
                 muted
                 playsInline
                 preload="auto"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover z-0"
                 onError={(e) => {
-                  console.error('Video failed to load:', e)
+                  console.error('About video failed to load:', e)
                   // Fallback to gradient if video fails
                   e.target.style.display = 'none'
+                }}
+                onLoadedData={() => {
+                  console.log('About video loaded successfully')
+                  if (videoRef.current && videoRef.current.paused) {
+                    videoRef.current.play().catch(console.error)
+                  }
                 }}
               >
                 <source src="/videos/about-journey.mp4" type="video/mp4" />
@@ -62,10 +121,10 @@ const About = () => {
               </video>
 
               {/* Fallback gradient background if video fails */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800 z-0" />
 
-              {/* Overlay gradient for readability */}
-              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/60 via-blue-900/70 to-blue-900/80 backdrop-blur-sm" />
+              {/* Overlay gradient for readability - lighter to show video */}
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-blue-900/50 to-blue-900/60 backdrop-blur-[2px] z-[1]" />
 
               {/* Centered Content */}
               <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">

@@ -190,25 +190,6 @@ const Services = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="text-center mt-16"
-        >
-          <p className="text-gray-600 mb-6">
-            Need a custom solution? We're here to help!
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-primary-600 text-white font-semibold rounded-full hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl"
-          >
-            Contact Us
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   )

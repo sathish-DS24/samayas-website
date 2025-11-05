@@ -173,7 +173,7 @@ const TariffModal = ({ isOpen, onClose }) => {
                       <ul className="space-y-2 text-white/80 text-sm sm:text-base">
                         <li>• Driver Bata Rs.300/day</li>
                         <li>• Minimum 250 kms/day (Bangalore pickup: 300 kms/day)</li>
-                        <li>• Hill Station Charges: Rs.300</li>
+                        <li>• Hill Station Charges: Rs.300 (Depend upon location the charges may vary)</li>
                         <li>• 1 Day = 1 Calendar Day (12 AM – Next 12 AM)</li>
                       </ul>
                     </div>

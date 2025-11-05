@@ -21,26 +21,26 @@ const Footer = () => {
   ]
 
   const services = [
+    'One-Way Taxi',
     'Acting Driver',
     'Tours & Travels',
-    'One-Way Taxi',
     'Recovery Services'
   ]
 
   const socialLinks = [
     {
       icon: Facebook,
-      link: '#',
+      link: 'https://www.facebook.com/samayas.983477',
       color: 'hover:bg-blue-600'
     },
     {
       icon: Instagram,
-      link: '#',
+      link: 'https://www.instagram.com/samayas_travel_junction/',
       color: 'hover:bg-pink-600'
     },
     {
       icon: MessageCircle,
-      link: 'https://wa.me/919894809439',
+      link: 'http://wa.me/+919894809439',
       color: 'hover:bg-green-600'
     }
   ]
@@ -159,12 +159,6 @@ const Footer = () => {
                   <a href="mailto:samayasprem@gmail.com" className="hover:text-accent-400 transition-colors">
                     samayasprem@gmail.com
                   </a>
-                </div>
-              </li>
-              <li className="flex items-start space-x-3 text-gray-300">
-                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5 text-accent-400" />
-                <div>
-                  Chennai, Trichy, Tamil Nadu, India
                 </div>
               </li>
             </ul>

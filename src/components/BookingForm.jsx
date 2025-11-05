@@ -47,25 +47,25 @@ const BookingForm = () => {
         type: 'SEDAN', 
         icon: Car, 
         rate: tripType === 'one-way' ? oneWayRates.SEDAN : roundTripRates.SEDAN,
-        image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop&q=80'
+        image: '/images/cars/sedan.jpg' // Place your Sedan image at public/images/cars/sedan.jpg
       },
       { 
         type: 'ETIOS', 
         icon: Car, 
         rate: tripType === 'one-way' ? oneWayRates.ETIOS : roundTripRates.ETIOS,
-        image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop&q=80'
+        image: '/images/cars/etios.jpg' // Place your Toyota Etios image at public/images/cars/etios.jpg
       },
       { 
         type: 'SUV', 
         icon: Car, 
         rate: tripType === 'one-way' ? oneWayRates.SUV : roundTripRates.SUV,
-        image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=300&fit=crop&q=80'
+        image: '/images/cars/suv.jpg' // Place your SUV image at public/images/cars/suv.jpg
       },
       { 
         type: 'INNOVA', 
         icon: Car, 
         rate: tripType === 'one-way' ? oneWayRates.INNOVA : roundTripRates.INNOVA,
-        image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop&q=80'
+        image: '/images/cars/innova.jpg' // Place your Toyota Innova image at public/images/cars/innova.jpg
       }
     ]
   }
@@ -488,7 +488,8 @@ const BookingForm = () => {
                                   }`}
                                   onError={(e) => {
                                     // Fallback to a placeholder if image fails to load
-                                    e.target.src = `https://images.unsplash.com/photo-1550355291-bbee04a92027?w=400&h=300&fit=crop&q=80`
+                                    e.target.src = `https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop&q=80`
+                                    console.warn(`Failed to load image for ${vehicle.type}:`, vehicle.image)
                                   }}
                                 />
                               </div>

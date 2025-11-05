@@ -46,34 +46,34 @@ const BookingForm = () => {
     INNOVA: 20
   }
 
-  // Vehicle types for One-Way Taxi
+  // Vehicle types for One-Way Taxi - Using direct online image URLs
   const vehicleTypes = [
     { 
       type: 'SEDAN', 
       icon: Car, 
       rate: oneWayRates.SEDAN,
-      image: '/images/cars/sedan.jpg',
+      image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop&q=80',
       model: 'Maruti Dzire / Honda Amaze'
     },
     { 
       type: 'ETIOS', 
       icon: Car, 
       rate: oneWayRates.ETIOS,
-      image: '/images/cars/etios.jpg',
+      image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=300&fit=crop&q=80',
       model: 'Toyota Etios'
     },
     { 
       type: 'SUV', 
       icon: Car, 
       rate: oneWayRates.SUV,
-      image: '/images/cars/suv.jpg',
+      image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=300&fit=crop&q=80',
       model: 'Hyundai Creta / Kia Seltos'
     },
     { 
       type: 'INNOVA', 
       icon: Car, 
       rate: oneWayRates.INNOVA,
-      image: '/images/cars/innova.jpg',
+      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop&q=80',
       model: 'Toyota Innova Crysta'
     }
   ]
@@ -511,7 +511,9 @@ const BookingForm = () => {
                                           : 'brightness-75 hover:brightness-90'
                                       }`}
                                       onError={(e) => {
+                                        // Fallback to a generic car image if the specific one fails
                                         e.target.src = `https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop&q=80`
+                                        console.warn(`Failed to load image for ${vehicle.type}`)
                                       }}
                                     />
                                   </div>

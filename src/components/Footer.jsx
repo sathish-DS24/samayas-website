@@ -57,7 +57,7 @@ const Footer = () => {
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20 sm:pb-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
@@ -198,12 +198,12 @@ const Footer = () => {
         onClick={scrollToTop}
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-600 text-white rounded-full shadow-2xl flex items-center justify-center z-50 hover:shadow-accent-500/50 transition-all"
+        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-accent-500 to-accent-600 text-white rounded-full shadow-2xl flex items-center justify-center z-50 hover:shadow-accent-500/50 transition-all"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1 }}
       >
-        <ArrowUp className="w-6 h-6" />
+        <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6" />
       </motion.button>
     </footer>
   )

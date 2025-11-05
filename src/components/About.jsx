@@ -255,26 +255,6 @@ const About = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* Mobile Stats Card - Shown below content on mobile */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="sm:hidden mt-8 flex justify-center"
-        >
-          <div className="bg-white rounded-xl shadow-xl p-6 max-w-xs">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-accent-500 rounded-lg flex items-center justify-center">
-                <Award className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-primary-900">11+ Years</div>
-                <div className="text-sm text-gray-600">Of Excellence</div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

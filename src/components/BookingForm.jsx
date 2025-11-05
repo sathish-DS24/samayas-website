@@ -178,7 +178,16 @@ const BookingForm = () => {
         ...oneWayData,
         tripType: 'one-way',
         ...calculation,
-        fullTime: `${oneWayData.time} ${oneWayData.timePeriod}`
+        fullTime: `${oneWayData.time} ${oneWayData.timePeriod}`,
+        // Ensure all fields are included for email
+        date: oneWayData.date,
+        time: oneWayData.time,
+        timePeriod: oneWayData.timePeriod,
+        name: oneWayData.name,
+        phone: oneWayData.phone,
+        vehicleType: oneWayData.vehicleType,
+        pickupLocation: oneWayData.pickupLocation,
+        dropLocation: oneWayData.dropLocation
       })
       setShowSummary(true)
     }
@@ -253,40 +262,57 @@ const BookingForm = () => {
       const templateId = 'template_h3j27hg'
       const publicKey = 'FlG_Mpal1SeRMkRqx'
 
+      // Get the actual date value - prioritize calculatedData since it has all the form data
+      const bookingDate = calculatedData?.date || oneWayData.date || ''
+      
       // Format date from YYYY-MM-DD to DD-MM-YYYY
       const formatDate = (dateString) => {
-        if (!dateString) return ''
-        const date = new Date(dateString)
-        const day = String(date.getDate()).padStart(2, '0')
-        const month = String(date.getMonth() + 1).padStart(2, '0')
-        const year = date.getFullYear()
-        return `${day}-${month}-${year}`
+        if (!dateString || dateString === '') return ''
+        try {
+          const date = new Date(dateString + 'T00:00:00') // Add time to avoid timezone issues
+          if (isNaN(date.getTime())) return dateString // Return original if invalid
+          const day = String(date.getDate()).padStart(2, '0')
+          const month = String(date.getMonth() + 1).padStart(2, '0')
+          const year = date.getFullYear()
+          return `${day}-${month}-${year}`
+        } catch (error) {
+          console.error('Date formatting error:', error)
+          return dateString
+        }
       }
 
-      // Format time with AM/PM
-      const formattedTime = calculatedData?.fullTime || `${oneWayData.time} ${oneWayData.timePeriod}`
+      // Format time with AM/PM - get from calculatedData or oneWayData
+      const bookingTime = calculatedData?.time || oneWayData.time || ''
+      const bookingTimePeriod = calculatedData?.timePeriod || oneWayData.timePeriod || 'AM'
+      const formattedTime = bookingTime ? `${bookingTime} ${bookingTimePeriod}` : ''
+
+      // Format the date
+      const formattedDate = formatDate(bookingDate)
 
       const templateParams = {
+        // Email subject
+        subject: 'One-Way Taxi Booking Request',
+        
         // Service and booking type
         service_type: 'One-Way Taxi',
         booking_type: 'One-Way Taxi',
         
         // Customer information
-        customer_name: oneWayData.name || calculatedData?.name || '',
-        customer_phone: oneWayData.phone || calculatedData?.phone || '',
+        customer_name: calculatedData?.name || oneWayData.name || '',
+        customer_phone: calculatedData?.phone || oneWayData.phone || '',
         
         // Vehicle information
-        vehicle_type: oneWayData.vehicleType || calculatedData?.vehicleType || '',
-        car_type: oneWayData.vehicleType || calculatedData?.vehicleType || '',
+        vehicle_type: calculatedData?.vehicleType || oneWayData.vehicleType || '',
+        car_type: calculatedData?.vehicleType || oneWayData.vehicleType || '',
         
         // Location information
-        pickup_location: oneWayData.pickupLocation || calculatedData?.pickupLocation || '',
-        drop_location: oneWayData.dropLocation || calculatedData?.dropLocation || '',
+        pickup_location: calculatedData?.pickupLocation || oneWayData.pickupLocation || '',
+        drop_location: calculatedData?.dropLocation || oneWayData.dropLocation || '',
         
-        // Date and time (using both formats for compatibility)
-        booking_date: formatDate(oneWayData.date || calculatedData?.date || ''),
-        service_date: formatDate(oneWayData.date || calculatedData?.date || ''),
-        date: formatDate(oneWayData.date || calculatedData?.date || ''),
+        // Date and time (using multiple formats for template compatibility)
+        booking_date: formattedDate,
+        service_date: formattedDate,
+        date: formattedDate,
         
         booking_time: formattedTime,
         service_time: formattedTime,
@@ -302,8 +328,8 @@ const BookingForm = () => {
         
         // Email configuration
         to_email: 'samayasprem@gmail.com',
-        from_name: oneWayData.name || calculatedData?.name || '',
-        from_phone: oneWayData.phone || calculatedData?.phone || ''
+        from_name: calculatedData?.name || oneWayData.name || '',
+        from_phone: calculatedData?.phone || oneWayData.phone || ''
       }
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey)

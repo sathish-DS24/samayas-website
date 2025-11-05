@@ -133,8 +133,8 @@ const About = () => {
               {/* Overlay gradient for readability - much lighter to show video clearly */}
               <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-blue-900/25 to-blue-900/35 z-[2]" />
 
-              {/* Centered Content */}
-              <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+              {/* Centered Content - positioned higher */}
+              <div className="relative z-10 flex flex-col items-center justify-start pt-12 md:pt-16 h-full text-center text-white px-4">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -167,12 +167,12 @@ const About = () => {
               </div>
             </section>
 
-            {/* 11+ Years Badge - Below Video */}
+            {/* 11+ Years Badge - Below Video, aligned right */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="mt-6 flex justify-center"
+              className="mt-6 flex justify-end pr-4"
             >
               <div className="bg-white text-primary-900 rounded-xl px-5 py-3 shadow-xl flex items-center space-x-3">
                 <div className="bg-accent-500 rounded-full p-2">

@@ -103,6 +103,9 @@ const About = () => {
             className="relative"
           >
             <section className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
+              {/* Fallback gradient background - shows only if video fails */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800 z-0" />
+
               {/* Background Video */}
               <video
                 ref={videoRef}
@@ -111,7 +114,7 @@ const About = () => {
                 muted
                 playsInline
                 preload="auto"
-                className="absolute inset-0 w-full h-full object-cover z-0"
+                className="absolute inset-0 w-full h-full object-cover z-[1]"
                 onError={(e) => {
                   const video = e.target
                   console.error('About video failed to load:', {
@@ -127,11 +130,8 @@ const About = () => {
                 Your browser does not support the video tag.
               </video>
 
-              {/* Fallback gradient background if video fails */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800 z-0" />
-
               {/* Overlay gradient for readability - lighter to show video */}
-              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-blue-900/50 to-blue-900/60 backdrop-blur-[2px] z-[1]" />
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-blue-900/50 to-blue-900/60 backdrop-blur-[2px] z-[2]" />
 
               {/* Centered Content */}
               <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">

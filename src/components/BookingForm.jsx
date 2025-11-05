@@ -46,34 +46,34 @@ const BookingForm = () => {
     INNOVA: 20
   }
 
-  // Vehicle types for One-Way Taxi - Using direct online image URLs
+  // Vehicle types for One-Way Taxi - Using local images from public folder
   const vehicleTypes = [
     { 
       type: 'SEDAN', 
       icon: Car, 
       rate: oneWayRates.SEDAN,
-      image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop&q=80',
+      image: '/images/cars/sedan.png',
       model: 'Maruti Dzire / Honda Amaze'
     },
     { 
       type: 'ETIOS', 
       icon: Car, 
       rate: oneWayRates.ETIOS,
-      image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=300&fit=crop&q=80',
+      image: '/images/cars/etios.png',
       model: 'Toyota Etios'
     },
     { 
       type: 'SUV', 
       icon: Car, 
       rate: oneWayRates.SUV,
-      image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=300&fit=crop&q=80',
+      image: '/images/cars/SUV.png',
       model: 'Hyundai Creta / Kia Seltos'
     },
     { 
       type: 'INNOVA', 
       icon: Car, 
       rate: oneWayRates.INNOVA,
-      image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=400&h=300&fit=crop&q=80',
+      image: '/images/cars/innova.png',
       model: 'Toyota Innova Crysta'
     }
   ]
@@ -511,9 +511,10 @@ const BookingForm = () => {
                                           : 'brightness-75 hover:brightness-90'
                                       }`}
                                       onError={(e) => {
-                                        // Fallback to a generic car image if the specific one fails
-                                        e.target.src = `https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop&q=80`
-                                        console.warn(`Failed to load image for ${vehicle.type}`)
+                                        // Fallback if local image fails to load
+                                        console.error(`Failed to load image for ${vehicle.type}: ${vehicle.image}`)
+                                        // Keep the broken image handler to prevent infinite loop
+                                        e.target.style.display = 'none'
                                       }}
                                     />
                                   </div>

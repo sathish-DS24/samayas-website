@@ -50,6 +50,12 @@ const Hero = () => {
   // Handle video time update - start preloading next video when current is near end
   const handleTimeUpdate = useCallback((e) => {
     const video = e.target
+    // Only process time updates from the currently active video
+    const isActiveVideo = (activeVideo === 0 && video === videoRef1.current) || 
+                          (activeVideo === 1 && video === videoRef2.current)
+    
+    if (!isActiveVideo) return
+    
     const duration = video.duration
     const currentTime = video.currentTime
     

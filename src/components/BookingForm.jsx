@@ -14,15 +14,29 @@ const BookingForm = () => {
   
   // Template IDs for different forms
   const ONE_WAY_TAXI_TEMPLATE_ID = 'template_z0rx3mx' // One-Way Taxi Booking template
+  const ROUND_TRIP_TEMPLATE_ID = 'template_z0rx3mx' // Round Trip Booking template (can be same or different)
   const OTHER_SERVICES_TEMPLATE_ID = 'template_h3j27hg' // Other Services Booking template
 
-  const [activeTab, setActiveTab] = useState('oneway') // 'oneway' or 'other'
+  const [activeTab, setActiveTab] = useState('oneway') // 'oneway', 'roundtrip', or 'other'
   
   // One-Way Taxi form data
   const [oneWayData, setOneWayData] = useState({
     pickupLocation: '',
     dropLocation: '',
     date: '',
+    time: '',
+    timePeriod: 'AM',
+    vehicleType: '',
+    name: '',
+    phone: ''
+  })
+
+  // Round Trip form data
+  const [roundTripData, setRoundTripData] = useState({
+    pickupLocation: '',
+    dropLocation: '',
+    date: '',
+    returnDate: '',
     time: '',
     timePeriod: 'AM',
     vehicleType: '',
@@ -55,37 +69,54 @@ const BookingForm = () => {
     INNOVA: 20
   }
 
-  // Vehicle types for One-Way Taxi - Using local images from public folder
-  const vehicleTypes = [
-    { 
-      type: 'SEDAN', 
-      icon: Car, 
-      rate: oneWayRates.SEDAN,
-      image: '/images/cars/sedan.png',
-      model: 'Maruti Dzire / Honda Amaze'
-    },
-    { 
-      type: 'ETIOS', 
-      icon: Car, 
-      rate: oneWayRates.ETIOS,
-      image: '/images/cars/etios.png',
-      model: 'Toyota Etios'
-    },
-    { 
-      type: 'SUV', 
-      icon: Car, 
-      rate: oneWayRates.SUV,
-      image: '/images/cars/SUV.png',
-      model: 'Hyundai Creta / Kia Seltos'
-    },
-    { 
-      type: 'INNOVA', 
-      icon: Car, 
-      rate: oneWayRates.INNOVA,
-      image: '/images/cars/innova.png',
-      model: 'Toyota Innova Crysta'
-    }
-  ]
+  // Tariff rates for Round Trip
+  const roundTripRates = {
+    SEDAN: 13,
+    ETIOS: 13,
+    SUV: 18,
+    INNOVA: 18
+  }
+
+  // Get current rates based on active tab
+  const getCurrentRates = () => {
+    return activeTab === 'roundtrip' ? roundTripRates : oneWayRates
+  }
+
+  // Vehicle types - Using local images from public folder
+  // Rates will be dynamically updated based on active tab
+  const getVehicleTypes = () => {
+    const currentRates = getCurrentRates()
+    return [
+      { 
+        type: 'SEDAN', 
+        icon: Car, 
+        rate: currentRates.SEDAN,
+        image: '/images/cars/sedan.png',
+        model: 'Maruti Dzire / Honda Amaze'
+      },
+      { 
+        type: 'ETIOS', 
+        icon: Car, 
+        rate: currentRates.ETIOS,
+        image: '/images/cars/etios.png',
+        model: 'Toyota Etios'
+      },
+      { 
+        type: 'SUV', 
+        icon: Car, 
+        rate: currentRates.SUV,
+        image: '/images/cars/SUV.png',
+        model: 'Hyundai Creta / Kia Seltos'
+      },
+      { 
+        type: 'INNOVA', 
+        icon: Car, 
+        rate: currentRates.INNOVA,
+        image: '/images/cars/innova.png',
+        model: 'Toyota Innova Crysta'
+      }
+    ]
+  }
 
   // Other Services options
   const otherServices = [
@@ -102,6 +133,14 @@ const BookingForm = () => {
     }
   }
 
+  const handleRoundTripChange = (e) => {
+    const { name, value } = e.target
+    setRoundTripData(prev => ({ ...prev, [name]: value }))
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }))
+    }
+  }
+
   const handleOtherServiceChange = (e) => {
     const { name, value } = e.target
     setOtherServiceData(prev => ({ ...prev, [name]: value }))
@@ -111,14 +150,22 @@ const BookingForm = () => {
   }
 
   const handleVehicleSelect = (vehicleType) => {
-    setOneWayData(prev => ({ ...prev, vehicleType }))
+    if (activeTab === 'roundtrip') {
+      setRoundTripData(prev => ({ ...prev, vehicleType }))
+    } else {
+      setOneWayData(prev => ({ ...prev, vehicleType }))
+    }
     if (errors.vehicleType) {
       setErrors(prev => ({ ...prev, vehicleType: '' }))
     }
   }
 
   const handleTimePeriodChange = (period) => {
-    setOneWayData(prev => ({ ...prev, timePeriod: period }))
+    if (activeTab === 'roundtrip') {
+      setRoundTripData(prev => ({ ...prev, timePeriod: period }))
+    } else {
+      setOneWayData(prev => ({ ...prev, timePeriod: period }))
+    }
   }
 
   const handleOtherServiceTimePeriodChange = (period) => {
@@ -147,6 +194,27 @@ const BookingForm = () => {
     return Object.keys(newErrors).length === 0
   }
 
+  const validateRoundTripForm = () => {
+    const newErrors = {}
+    if (!roundTripData.pickupLocation.trim()) newErrors.pickupLocation = 'Required'
+    if (!roundTripData.dropLocation.trim()) newErrors.dropLocation = 'Required'
+    if (!roundTripData.date) newErrors.date = 'Required'
+    if (!roundTripData.returnDate) newErrors.returnDate = 'Required'
+    if (roundTripData.returnDate && roundTripData.date && roundTripData.returnDate < roundTripData.date) {
+      newErrors.returnDate = 'Return date must be after pickup date'
+    }
+    if (!roundTripData.time) newErrors.time = 'Required'
+    if (!roundTripData.vehicleType) newErrors.vehicleType = 'Please select a vehicle'
+    if (!roundTripData.name.trim()) newErrors.name = 'Required'
+    if (!roundTripData.phone.trim()) {
+      newErrors.phone = 'Required'
+    } else if (!/^\d{10}$/.test(roundTripData.phone.replace(/\s/g, ''))) {
+      newErrors.phone = 'Valid 10-digit number required'
+    }
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
   const validateOtherServiceForm = () => {
     const newErrors = {}
     if (!otherServiceData.serviceType) newErrors.serviceType = 'Required'
@@ -163,25 +231,41 @@ const BookingForm = () => {
     return Object.keys(newErrors).length === 0
   }
 
-  const calculateFare = () => {
-    const distance = calculateDistance(oneWayData.pickupLocation, oneWayData.dropLocation)
-    const ratePerKm = oneWayRates[oneWayData.vehicleType] || 0
-    const minKm = 130
-    const baseFare = minKm * ratePerKm
-    let addFare = 0
-    if (distance > minKm) {
-      addFare = (distance - minKm) * ratePerKm
+  const calculateFare = (tripType = 'one-way') => {
+    const data = tripType === 'round-trip' ? roundTripData : oneWayData
+    const distance = calculateDistance(data.pickupLocation, data.dropLocation)
+    const rates = tripType === 'round-trip' ? roundTripRates : oneWayRates
+    const ratePerKm = rates[data.vehicleType] || 0
+    
+    if (tripType === 'round-trip') {
+      // Round trip calculation
+      const minKm = 250 // Minimum 250 kms/day for round trip
+      const baseFare = minKm * ratePerKm
+      let addFare = 0
+      if (distance > minKm) {
+        addFare = (distance - minKm) * ratePerKm
+      }
+      const bata = 400 // Driver bata for round trip
+      const finalAmount = baseFare + addFare + bata
+      return { distance, baseFare, addFare, bata, finalAmount, minKm }
+    } else {
+      // One-way calculation
+      const minKm = 130
+      const baseFare = minKm * ratePerKm
+      let addFare = 0
+      if (distance > minKm) {
+        addFare = (distance - minKm) * ratePerKm
+      }
+      const bata = 400
+      const finalAmount = baseFare + addFare + bata
+      return { distance, baseFare, addFare, bata, finalAmount, minKm }
     }
-    const bata = 400
-    const finalAmount = baseFare + addFare + bata
-
-    return { distance, baseFare, addFare, bata, finalAmount, minKm }
   }
 
   const handleOneWaySubmit = (e) => {
     e.preventDefault()
     if (validateOneWayForm()) {
-      const calculation = calculateFare()
+      const calculation = calculateFare('one-way')
       setCalculatedData({
         ...oneWayData,
         tripType: 'one-way',
@@ -196,6 +280,30 @@ const BookingForm = () => {
         vehicleType: oneWayData.vehicleType,
         pickupLocation: oneWayData.pickupLocation,
         dropLocation: oneWayData.dropLocation
+      })
+      setShowSummary(true)
+    }
+  }
+
+  const handleRoundTripSubmit = (e) => {
+    e.preventDefault()
+    if (validateRoundTripForm()) {
+      const calculation = calculateFare('round-trip')
+      setCalculatedData({
+        ...roundTripData,
+        tripType: 'round-trip',
+        ...calculation,
+        fullTime: `${roundTripData.time} ${roundTripData.timePeriod}`,
+        // Ensure all fields are included for email
+        date: roundTripData.date,
+        returnDate: roundTripData.returnDate,
+        time: roundTripData.time,
+        timePeriod: roundTripData.timePeriod,
+        name: roundTripData.name,
+        phone: roundTripData.phone,
+        vehicleType: roundTripData.vehicleType,
+        pickupLocation: roundTripData.pickupLocation,
+        dropLocation: roundTripData.dropLocation
       })
       setShowSummary(true)
     }
@@ -278,11 +386,13 @@ const BookingForm = () => {
   const handleConfirmBooking = async () => {
     setIsLoading(true)
     try {
-      // Use One-Way Taxi template
-      const templateId = ONE_WAY_TAXI_TEMPLATE_ID
+      const isRoundTrip = calculatedData?.tripType === 'round-trip'
+      // Use appropriate template based on trip type
+      const templateId = isRoundTrip ? ROUND_TRIP_TEMPLATE_ID : ONE_WAY_TAXI_TEMPLATE_ID
 
       // Get the actual date value - prioritize calculatedData since it has all the form data
-      const bookingDate = calculatedData?.date || oneWayData.date || ''
+      const bookingDate = calculatedData?.date || (isRoundTrip ? roundTripData.date : oneWayData.date) || ''
+      const returnDate = calculatedData?.returnDate || roundTripData.returnDate || ''
       
       // Format date from YYYY-MM-DD to DD-MM-YYYY
       const formatDate = (dateString) => {
@@ -300,38 +410,41 @@ const BookingForm = () => {
         }
       }
 
-      // Format time with AM/PM - get from calculatedData or oneWayData
-      const bookingTime = calculatedData?.time || oneWayData.time || ''
-      const bookingTimePeriod = calculatedData?.timePeriod || oneWayData.timePeriod || 'AM'
+      // Format time with AM/PM - get from calculatedData or form data
+      const bookingTime = calculatedData?.time || (isRoundTrip ? roundTripData.time : oneWayData.time) || ''
+      const bookingTimePeriod = calculatedData?.timePeriod || (isRoundTrip ? roundTripData.timePeriod : oneWayData.timePeriod) || 'AM'
       const formattedTime = bookingTime ? `${bookingTime} ${bookingTimePeriod}` : ''
 
-      // Format the date
+      // Format the dates
       const formattedDate = formatDate(bookingDate)
+      const formattedReturnDate = returnDate ? formatDate(returnDate) : ''
 
       const templateParams = {
         // Email subject
-        subject: 'One-Way Taxi Booking Request',
+        subject: isRoundTrip ? 'Round Trip Taxi Booking Request' : 'One-Way Taxi Booking Request',
         
         // Service and booking type
-        service_type: 'One-Way Taxi',
-        booking_type: 'One-Way Taxi',
+        service_type: isRoundTrip ? 'Round Trip Taxi' : 'One-Way Taxi',
+        booking_type: isRoundTrip ? 'Round Trip Taxi' : 'One-Way Taxi',
+        trip_type: isRoundTrip ? 'Round Trip' : 'One-Way',
         
         // Customer information
-        customer_name: calculatedData?.name || oneWayData.name || '',
-        customer_phone: calculatedData?.phone || oneWayData.phone || '',
+        customer_name: calculatedData?.name || (isRoundTrip ? roundTripData.name : oneWayData.name) || '',
+        customer_phone: calculatedData?.phone || (isRoundTrip ? roundTripData.phone : oneWayData.phone) || '',
         
         // Vehicle information
-        vehicle_type: calculatedData?.vehicleType || oneWayData.vehicleType || '',
-        car_type: calculatedData?.vehicleType || oneWayData.vehicleType || '',
+        vehicle_type: calculatedData?.vehicleType || (isRoundTrip ? roundTripData.vehicleType : oneWayData.vehicleType) || '',
+        car_type: calculatedData?.vehicleType || (isRoundTrip ? roundTripData.vehicleType : oneWayData.vehicleType) || '',
         
         // Location information
-        pickup_location: calculatedData?.pickupLocation || oneWayData.pickupLocation || '',
-        drop_location: calculatedData?.dropLocation || oneWayData.dropLocation || '',
+        pickup_location: calculatedData?.pickupLocation || (isRoundTrip ? roundTripData.pickupLocation : oneWayData.pickupLocation) || '',
+        drop_location: calculatedData?.dropLocation || (isRoundTrip ? roundTripData.dropLocation : oneWayData.dropLocation) || '',
         
         // Date and time (using multiple formats for template compatibility)
         booking_date: formattedDate,
         service_date: formattedDate,
         date: formattedDate,
+        return_date: formattedReturnDate,
         
         booking_time: formattedTime,
         service_time: formattedTime,
@@ -347,22 +460,39 @@ const BookingForm = () => {
         
         // Email configuration
         to_email: 'samayasprem@gmail.com',
-        from_name: calculatedData?.name || oneWayData.name || '',
-        from_phone: calculatedData?.phone || oneWayData.phone || ''
+        from_name: calculatedData?.name || (isRoundTrip ? roundTripData.name : oneWayData.name) || '',
+        from_phone: calculatedData?.phone || (isRoundTrip ? roundTripData.phone : oneWayData.phone) || ''
       }
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey)
       setShowSummary(false)
-      setOneWayData({
-        pickupLocation: '',
-        dropLocation: '',
-        date: '',
-        time: '',
-        timePeriod: 'AM',
-        vehicleType: '',
-        name: '',
-        phone: ''
-      })
+      
+      // Reset appropriate form
+      if (isRoundTrip) {
+        setRoundTripData({
+          pickupLocation: '',
+          dropLocation: '',
+          date: '',
+          returnDate: '',
+          time: '',
+          timePeriod: 'AM',
+          vehicleType: '',
+          name: '',
+          phone: ''
+        })
+      } else {
+        setOneWayData({
+          pickupLocation: '',
+          dropLocation: '',
+          date: '',
+          time: '',
+          timePeriod: 'AM',
+          vehicleType: '',
+          name: '',
+          phone: ''
+        })
+      }
+      
       alert('Booking confirmed! Confirmation email has been sent.')
     } catch (error) {
       console.error('Error sending booking confirmation:', error)
@@ -425,8 +555,11 @@ const BookingForm = () => {
             >
               <button
                 type="button"
-                onClick={() => setActiveTab('oneway')}
-                className={`flex-1 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                onClick={() => {
+                  setActiveTab('oneway')
+                  setErrors({})
+                }}
+                className={`flex-1 px-4 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
                   activeTab === 'oneway'
                     ? 'bg-accent-500 text-black shadow-lg'
                     : 'text-white/70 hover:text-white hover:bg-white/5'
@@ -436,8 +569,25 @@ const BookingForm = () => {
               </button>
               <button
                 type="button"
-                onClick={() => setActiveTab('other')}
-                className={`flex-1 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                onClick={() => {
+                  setActiveTab('roundtrip')
+                  setErrors({})
+                }}
+                className={`flex-1 px-4 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
+                  activeTab === 'roundtrip'
+                    ? 'bg-accent-500 text-black shadow-lg'
+                    : 'text-white/70 hover:text-white hover:bg-white/5'
+                }`}
+              >
+                Round Trip
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveTab('other')
+                  setErrors({})
+                }}
+                className={`flex-1 px-4 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
                   activeTab === 'other'
                     ? 'bg-accent-500 text-black shadow-lg'
                     : 'text-white/70 hover:text-white hover:bg-white/5'
@@ -576,7 +726,7 @@ const BookingForm = () => {
                         Select Vehicle Type *
                       </label>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {vehicleTypes.map((vehicle, index) => {
+                        {getVehicleTypes().map((vehicle, index) => {
                           const isSelected = oneWayData.vehicleType === vehicle.type
                           return (
                             <motion.div
@@ -669,6 +819,275 @@ const BookingForm = () => {
                           name="phone"
                           value={oneWayData.phone}
                           onChange={handleOneWayChange}
+                          placeholder="Enter 10-digit mobile number"
+                          className={`w-full px-4 py-3 bg-white rounded-lg border ${
+                            errors.phone ? 'border-red-500' : 'border-gray-300'
+                          } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                        />
+                        {errors.phone && (
+                          <p className="mt-1 text-sm text-red-400">{errors.phone}</p>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Submit Button */}
+                    <motion.button
+                      type="submit"
+                      whileHover={{ scale: 1.02, y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                      disabled={isLoading}
+                      className="w-full px-8 py-4 bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
+                    >
+                      {isLoading ? (
+                        <>
+                          <Loader2 className="w-5 h-5 inline mr-2 animate-spin" />
+                          Processing...
+                        </>
+                      ) : (
+                        'GET ESTIMATION'
+                      )}
+                    </motion.button>
+                  </form>
+                </motion.div>
+              ) : activeTab === 'roundtrip' ? (
+                <motion.div
+                  key="roundtrip"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4 }}
+                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10"
+                >
+                  <form onSubmit={handleRoundTripSubmit} className="space-y-6">
+                    {/* Location Fields */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <MapPin className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Pickup Location *
+                        </label>
+                        <input
+                          type="text"
+                          name="pickupLocation"
+                          value={roundTripData.pickupLocation}
+                          onChange={handleRoundTripChange}
+                          placeholder="Enter pickup address"
+                          className={`w-full px-4 py-3 bg-white rounded-lg border ${
+                            errors.pickupLocation ? 'border-red-500' : 'border-gray-300'
+                          } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                        />
+                        {errors.pickupLocation && (
+                          <p className="mt-1 text-sm text-red-400">{errors.pickupLocation}</p>
+                        )}
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <MapPin className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Drop Location *
+                        </label>
+                        <input
+                          type="text"
+                          name="dropLocation"
+                          value={roundTripData.dropLocation}
+                          onChange={handleRoundTripChange}
+                          placeholder="Enter drop address"
+                          className={`w-full px-4 py-3 bg-white rounded-lg border ${
+                            errors.dropLocation ? 'border-red-500' : 'border-gray-300'
+                          } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                        />
+                        {errors.dropLocation && (
+                          <p className="mt-1 text-sm text-red-400">{errors.dropLocation}</p>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Date and Return Date */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <Calendar className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Pickup Date *
+                        </label>
+                        <input
+                          type="date"
+                          name="date"
+                          value={roundTripData.date}
+                          onChange={handleRoundTripChange}
+                          min={new Date().toISOString().split('T')[0]}
+                          className={`w-full px-4 py-3 bg-white rounded-lg border ${
+                            errors.date ? 'border-red-500' : 'border-gray-300'
+                          } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                        />
+                        {errors.date && (
+                          <p className="mt-1 text-sm text-red-400">{errors.date}</p>
+                        )}
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <Calendar className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Return Date *
+                        </label>
+                        <input
+                          type="date"
+                          name="returnDate"
+                          value={roundTripData.returnDate}
+                          onChange={handleRoundTripChange}
+                          min={roundTripData.date || new Date().toISOString().split('T')[0]}
+                          className={`w-full px-4 py-3 bg-white rounded-lg border ${
+                            errors.returnDate ? 'border-red-500' : 'border-gray-300'
+                          } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                        />
+                        {errors.returnDate && (
+                          <p className="mt-1 text-sm text-red-400">{errors.returnDate}</p>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Time */}
+                    <div>
+                      <label className="block text-sm font-semibold text-white/90 mb-2">
+                        <Clock className="w-4 h-4 inline mr-2 text-accent-500" />
+                        Time *
+                      </label>
+                      <div className="flex gap-2">
+                        <input
+                          type="time"
+                          name="time"
+                          value={roundTripData.time}
+                          onChange={handleRoundTripChange}
+                          className={`flex-1 px-4 py-3 bg-white rounded-lg border ${
+                            errors.time ? 'border-red-500' : 'border-gray-300'
+                          } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                        />
+                        <div className="flex gap-1 bg-primary-700/50 rounded-lg p-1">
+                          <button
+                            type="button"
+                            onClick={() => handleTimePeriodChange('AM')}
+                            className={`px-4 py-3 rounded-md font-semibold transition-all ${
+                              roundTripData.timePeriod === 'AM'
+                                ? 'bg-accent-500 text-black'
+                                : 'text-white/70 hover:text-white'
+                            }`}
+                          >
+                            AM
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleTimePeriodChange('PM')}
+                            className={`px-4 py-3 rounded-md font-semibold transition-all ${
+                              roundTripData.timePeriod === 'PM'
+                                ? 'bg-accent-500 text-black'
+                                : 'text-white/70 hover:text-white'
+                            }`}
+                          >
+                            PM
+                          </button>
+                        </div>
+                      </div>
+                      {errors.time && (
+                        <p className="mt-1 text-sm text-red-400">{errors.time}</p>
+                      )}
+                    </div>
+
+                    {/* Vehicle Type Selection */}
+                    <div>
+                      <label className="block text-sm font-semibold text-white/90 mb-4">
+                        Select Vehicle Type *
+                      </label>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {getVehicleTypes().map((vehicle, index) => {
+                          const isSelected = roundTripData.vehicleType === vehicle.type
+                          return (
+                            <motion.div
+                              key={vehicle.type}
+                              initial={{ opacity: 0, y: 20 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ delay: index * 0.1 }}
+                              onClick={() => handleVehicleSelect(vehicle.type)}
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                              className={`relative cursor-pointer rounded-xl p-4 border-2 transition-all ${
+                                isSelected
+                                  ? 'border-accent-500 bg-accent-500/20 shadow-lg shadow-accent-500/30 ring-2 ring-accent-500'
+                                  : 'border-gray-600 bg-gray-700/30 hover:border-gray-500'
+                              }`}
+                            >
+                              <input
+                                type="radio"
+                                name="vehicleType"
+                                value={vehicle.type}
+                                checked={isSelected}
+                                onChange={() => handleVehicleSelect(vehicle.type)}
+                                className="absolute top-2 right-2 w-5 h-5 accent-accent-500"
+                              />
+                              <div className="text-center">
+                                <div className="mb-3 flex justify-center">
+                                  <div className="relative w-full h-24 flex items-center justify-center overflow-hidden rounded-lg">
+                                    <img
+                                      src={vehicle.image}
+                                      alt={vehicle.type}
+                                      className={`w-full h-full object-cover rounded-lg transition-all duration-300 ${
+                                        isSelected 
+                                          ? 'brightness-110 scale-105' 
+                                          : 'brightness-75 hover:brightness-90'
+                                      }`}
+                                      onError={(e) => {
+                                        console.error(`Failed to load image for ${vehicle.type}: ${vehicle.image}`)
+                                        e.target.style.display = 'none'
+                                      }}
+                                    />
+                                  </div>
+                                </div>
+                                <div className={`text-xs font-semibold mb-1 ${isSelected ? 'text-accent-500' : 'text-white/70'}`}>
+                                  ₹{vehicle.rate}/km
+                                </div>
+                                <div className={`text-sm font-bold uppercase ${isSelected ? 'text-white' : 'text-white/80'}`}>
+                                  {vehicle.type}
+                                </div>
+                              </div>
+                            </motion.div>
+                          )
+                        })}
+                      </div>
+                      {errors.vehicleType && (
+                        <p className="mt-2 text-sm text-red-400">{errors.vehicleType}</p>
+                      )}
+                    </div>
+
+                    {/* Name and Phone */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <User className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          name="name"
+                          value={roundTripData.name}
+                          onChange={handleRoundTripChange}
+                          placeholder="Enter your full name"
+                          className={`w-full px-4 py-3 bg-white rounded-lg border ${
+                            errors.name ? 'border-red-500' : 'border-gray-300'
+                          } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
+                        />
+                        {errors.name && (
+                          <p className="mt-1 text-sm text-red-400">{errors.name}</p>
+                        )}
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <Phone className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Mobile Number *
+                        </label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={roundTripData.phone}
+                          onChange={handleRoundTripChange}
                           placeholder="Enter 10-digit mobile number"
                           className={`w-full px-4 py-3 bg-white rounded-lg border ${
                             errors.phone ? 'border-red-500' : 'border-gray-300'

@@ -116,12 +116,20 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                         {bookingData.dropLocation}
                       </span>
                     </div>
-                    <div className="flex justify-between items-center py-2">
-                      <span className="text-gray-600 font-medium">Booked At:</span>
+                    <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                      <span className="text-gray-600 font-medium">Pickup Date & Time:</span>
                       <span className="text-gray-800 font-semibold">
                         {formatDate(bookingData.date)} {bookingData.fullTime}
                       </span>
                     </div>
+                    {bookingData.tripType === 'round-trip' && bookingData.returnDate && (
+                      <div className="flex justify-between items-center py-2">
+                        <span className="text-gray-600 font-medium">Return Date:</span>
+                        <span className="text-gray-800 font-semibold">
+                          {formatDate(bookingData.returnDate)}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
 

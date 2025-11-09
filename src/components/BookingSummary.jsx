@@ -18,13 +18,6 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
     return `₹ ${amount.toLocaleString('en-IN')}`
   }
 
-  const getDays = () => {
-    // For round trip, calculate days based on date range
-    // For now, default to 1 day
-    return 1
-  }
-
-  const days = bookingData.tripType === 'round-trip' ? getDays() : 1
 
   return (
     <AnimatePresence>
@@ -54,26 +47,21 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
               <div className="bg-primary-900 p-4 rounded-t-2xl">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex space-x-2">
-                    <button
-                      type="button"
-                      className={`px-4 py-2 rounded-lg font-semibold text-sm ${
-                        bookingData.tripType === 'one-way'
-                          ? 'bg-white text-primary-900'
-                          : 'bg-transparent text-white border border-white/30'
-                      }`}
-                    >
-                      One Way
-                    </button>
-                    <button
-                      type="button"
-                      className={`px-4 py-2 rounded-lg font-semibold text-sm ${
-                        bookingData.tripType === 'round-trip'
-                          ? 'bg-accent-500 text-black'
-                          : 'bg-transparent text-white border border-white/30'
-                      }`}
-                    >
-                      Round Trip
-                    </button>
+                    {bookingData.tripType === 'one-way' ? (
+                      <button
+                        type="button"
+                        className="px-4 py-2 rounded-lg font-semibold text-sm bg-white text-primary-900"
+                      >
+                        One Way
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        className="px-4 py-2 rounded-lg font-semibold text-sm bg-accent-500 text-black"
+                      >
+                        Round Trip
+                      </button>
+                    )}
                   </div>
                   <button
                     onClick={onClose}
@@ -81,6 +69,13 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                   >
                     <X className="w-5 h-5" />
                   </button>
+                </div>
+                
+                {/* Disclaimer */}
+                <div className="mt-3 pt-3 border-t border-white/20">
+                  <p className="text-xs sm:text-sm text-white/80 italic">
+                    <span className="text-accent-400 font-semibold">Disclaimer:</span> The price shown is an estimated price. The final price may vary based on your specific pickup and drop locations.
+                  </p>
                 </div>
               </div>
 
@@ -149,18 +144,8 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                             {formatCurrency(bookingData.baseFare)}
                           </span>
                         </div>
-                        {bookingData.addFare > 0 && (
-                          <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                            <span className="text-gray-600 font-medium">
-                              Add Fare ({bookingData.distance - bookingData.minKm}km):
-                            </span>
-                            <span className="text-gray-800 font-semibold">
-                              {formatCurrency(bookingData.addFare)}
-                            </span>
-                          </div>
-                        )}
                         <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                          <span className="text-gray-600 font-medium">Beta (upto 400km):</span>
+                          <span className="text-gray-600 font-medium">Driver Bata:</span>
                           <span className="text-gray-800 font-semibold">
                             {formatCurrency(bookingData.bata)}
                           </span>
@@ -170,24 +155,14 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                       <>
                         <div className="flex justify-between items-center py-2 border-b border-gray-200">
                           <span className="text-gray-600 font-medium">
-                            Base Fare ({bookingData.minKm}km x {days} days):
+                            Base Fare ({bookingData.minKm}km):
                           </span>
                           <span className="text-gray-800 font-semibold">
                             {formatCurrency(bookingData.baseFare)}
                           </span>
                         </div>
-                        {bookingData.addFare > 0 && (
-                          <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                            <span className="text-gray-600 font-medium">
-                              Add Fare ({bookingData.distance - bookingData.minKm}km):
-                            </span>
-                            <span className="text-gray-800 font-semibold">
-                              {formatCurrency(bookingData.addFare)}
-                            </span>
-                          </div>
-                        )}
                         <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                          <span className="text-gray-600 font-medium">Beta (Round Trip):</span>
+                          <span className="text-gray-600 font-medium">Driver Bata:</span>
                           <span className="text-gray-800 font-semibold">
                             {formatCurrency(bookingData.bata)}
                           </span>

@@ -77,6 +77,15 @@ const BookingForm = () => {
     INNOVA: 18
   }
 
+  // Bata (Driver allowance) rates based on vehicle type
+  // SEDAN/ETIOS: Rs.400, SUV/INNOVA: Rs.500 (same for both one-way and round trip)
+  const bataRates = {
+    SEDAN: 400,
+    ETIOS: 400,
+    SUV: 500,
+    INNOVA: 500
+  }
+
   // Get current rates based on active tab
   const getCurrentRates = () => {
     return activeTab === 'roundtrip' ? roundTripRates : oneWayRates
@@ -237,28 +246,21 @@ const BookingForm = () => {
     const rates = tripType === 'round-trip' ? roundTripRates : oneWayRates
     const ratePerKm = rates[data.vehicleType] || 0
     
+    // Get correct bata based on vehicle type
+    const bata = bataRates[data.vehicleType] || 400
+    
     if (tripType === 'round-trip') {
-      // Round trip calculation
+      // Round trip calculation - only base fare, no add fare
       const minKm = 250 // Minimum 250 kms/day for round trip
       const baseFare = minKm * ratePerKm
-      let addFare = 0
-      if (distance > minKm) {
-        addFare = (distance - minKm) * ratePerKm
-      }
-      const bata = 400 // Driver bata for round trip
-      const finalAmount = baseFare + addFare + bata
-      return { distance, baseFare, addFare, bata, finalAmount, minKm }
+      const finalAmount = baseFare + bata
+      return { distance, baseFare, bata, finalAmount, minKm }
     } else {
-      // One-way calculation
+      // One-way calculation - only base fare, no add fare
       const minKm = 130
       const baseFare = minKm * ratePerKm
-      let addFare = 0
-      if (distance > minKm) {
-        addFare = (distance - minKm) * ratePerKm
-      }
-      const bata = 400
-      const finalAmount = baseFare + addFare + bata
-      return { distance, baseFare, addFare, bata, finalAmount, minKm }
+      const finalAmount = baseFare + bata
+      return { distance, baseFare, bata, finalAmount, minKm }
     }
   }
 
@@ -452,7 +454,6 @@ const BookingForm = () => {
         
         // Pricing information
         base_fare: `₹${calculatedData?.baseFare || 0}`,
-        add_fare: `₹${calculatedData?.addFare || 0}`,
         bata: `₹${calculatedData?.bata || 0}`,
         final_amount: `₹${calculatedData?.finalAmount || 0}`,
         total_amount: `₹${calculatedData?.finalAmount || 0}`,
@@ -544,6 +545,16 @@ const BookingForm = () => {
                 transition={{ delay: 0.3, duration: 0.6 }}
                 className="border-b border-accent-500/40 w-1/4 mx-auto mb-4"
               />
+              
+              {/* Disclaimer */}
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="text-sm sm:text-base text-white/80 italic max-w-2xl mx-auto mt-4"
+              >
+                <span className="text-accent-400 font-semibold">Disclaimer:</span> The price shown is an estimated price. The final price may vary based on your specific pickup and drop locations.
+              </motion.p>
             </div>
 
             {/* Tabs */}

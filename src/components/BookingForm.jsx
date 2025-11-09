@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { Calendar, Clock, MapPin, User, Phone, Car, Loader2, Briefcase } from 'lucide-react'
+import { Calendar, Clock, MapPin, User, Phone, Car, Loader2, Briefcase, CheckCircle } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 import BookingSummary from './BookingSummary'
 
@@ -60,6 +60,7 @@ const BookingForm = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [showSummary, setShowSummary] = useState(false)
   const [calculatedData, setCalculatedData] = useState(null)
+  const [showThankYou, setShowThankYou] = useState(false)
 
   // Tariff rates for One-Way Taxi
   const oneWayRates = {
@@ -362,8 +363,8 @@ const BookingForm = () => {
           from_phone: otherServiceData.phone
         }
 
-        await emailjs.send(serviceId, templateId, templateParams, publicKey)
-        alert('Service booked successfully! We will contact you shortly.')
+      await emailjs.send(serviceId, templateId, templateParams, publicKey)
+      setShowThankYou(true)
         
         // Reset form
         setOtherServiceData({
@@ -378,7 +379,7 @@ const BookingForm = () => {
         })
       } catch (error) {
         console.error('Error sending email:', error)
-        alert('Service booked! We will contact you shortly.')
+        setShowThankYou(true)
       } finally {
         setIsLoading(false)
       }
@@ -494,10 +495,10 @@ const BookingForm = () => {
         })
       }
       
-      alert('Booking confirmed! Confirmation email has been sent.')
+      setShowThankYou(true)
     } catch (error) {
       console.error('Error sending booking confirmation:', error)
-      alert('Booking submitted! We will contact you shortly.')
+      setShowThankYou(true)
     } finally {
       setIsLoading(false)
     }
@@ -1251,6 +1252,82 @@ const BookingForm = () => {
         bookingData={calculatedData}
         isLoading={isLoading}
       />
+
+      {/* Thank You Modal */}
+      <AnimatePresence>
+        {showThankYou && (
+          <>
+            {/* Dark Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+              onClick={() => setShowThankYou(false)}
+            />
+
+            {/* Modal */}
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                transition={{ duration: 0.3, type: "spring", damping: 25 }}
+                className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md border border-gray-200"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Content */}
+                <div className="p-8 text-center">
+                  {/* Success Icon */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                    className="flex justify-center mb-6"
+                  >
+                    <div className="w-20 h-20 bg-accent-500/20 rounded-full flex items-center justify-center">
+                      <CheckCircle className="w-12 h-12 text-accent-500" />
+                    </div>
+                  </motion.div>
+
+                  {/* Message */}
+                  <motion.h2
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    className="text-2xl font-bold text-gray-800 mb-4"
+                  >
+                    Thank You for Choosing SAMAYAS
+                  </motion.h2>
+
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className="text-gray-600 text-lg mb-8"
+                  >
+                    Our Team will reach you shortly.
+                  </motion.p>
+
+                  {/* Close Button */}
+                  <motion.button
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                    onClick={() => setShowThankYou(false)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full px-8 py-4 bg-accent-500 hover:bg-accent-600 text-black font-bold rounded-full shadow-xl hover:shadow-yellow-400/40 transition-all duration-300"
+                  >
+                    Close
+                  </motion.button>
+                </div>
+              </motion.div>
+            </div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   )
 }

@@ -327,13 +327,13 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mb-8 sm:mb-12 max-w-2xl mx-auto w-full px-4"
           >
-            <div className="backdrop-blur-sm bg-black/20 rounded-2xl p-6 sm:p-8 border border-white/10">
+            <div className="backdrop-blur-sm bg-black/20 rounded-2xl p-6 sm:p-8 border border-white/10 text-center">
               {/* Badge */}
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.7, type: "spring" }}
-                className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4"
+                className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4"
               >
                 <span className="bg-accent-500 text-black px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-bold">
                   POPULAR
@@ -344,7 +344,7 @@ const Hero = () => {
               </motion.div>
 
               {/* Tagline */}
-              <p className="text-white/80 text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
+              <p className="text-white/80 text-sm sm:text-base md:text-lg mb-4 sm:mb-6 text-center">
                 Pay only for one side — no return charges.
               </p>
 
@@ -356,9 +356,9 @@ const Hero = () => {
                 whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(253, 197, 0, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsModalOpen(true)}
-                className="bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 w-full sm:w-auto"
+                className="bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 w-full sm:w-auto mx-auto"
               >
-                       Tariff Details
+                Tariff Details
               </motion.button>
             </div>
           </motion.div>

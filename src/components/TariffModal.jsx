@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Car, Luggage, ChevronDown, ChevronUp } from 'lucide-react'
+import { X, Car, Luggage, ChevronDown, ChevronUp, CircleUserRound } from 'lucide-react'
 import { Link } from 'react-scroll'
 
 const TariffModal = ({ isOpen, onClose }) => {
@@ -21,7 +21,23 @@ const TariffModal = ({ isOpen, onClose }) => {
     { type: 'INNOVA', rate: 'Rs.18/KM', bata: 'Rs.500', additional: 'Up & Down Toll' },
   ]
 
-  const currentData = activeTab === 'one-way' ? oneWayData : roundTripData
+  const actingDriverLocalData = [
+    { service: 'Minimum 4 Hour (25 kms surrounding)', rate: 'Rs.500 + Food', additional: 'After per Hour: Rs.80' },
+    { service: 'Night Fare (10:00 PM to 6:00 AM)', rate: 'Rs.100', additional: 'Additional to regular charges' },
+  ]
+
+  const actingDriverOutstationData = [
+    { distance: 'Up & Down Maximum 120 km', first6hrs: 'Rs.800 + Food', afterPerHr: 'Rs.90', nightFare: 'Rs.100' },
+    { distance: 'Up & Down Maximum 250 km', first6hrs: 'Rs.900 + Food', afterPerHr: 'Rs.100', nightFare: 'Rs.100' },
+    { distance: 'Up & Down Maximum 600 km', first6hrs: 'Rs.1600 + Food', afterPerHr: 'Rs.120', nightFare: 'Rs.100' },
+  ]
+
+  const actingDriverDayRentData = [
+    { distance: '12 hrs maximum 250 km', rate: 'Rs.1200 + Food + Accommodation', type: 'per day' },
+    { distance: '12 hrs maximum 600 km', rate: 'Rs.1500 + Food + Accommodation', type: 'per day' },
+  ]
+
+  const currentData = activeTab === 'one-way' ? oneWayData : activeTab === 'round-trip' ? roundTripData : []
 
   return (
     <AnimatePresence>
@@ -70,10 +86,10 @@ const TariffModal = ({ isOpen, onClose }) => {
               {/* Content */}
               <div className="flex-1 p-6 overflow-y-auto min-h-0">
                 {/* Tabs */}
-                <div className="flex space-x-2 mb-6 bg-gray-800/50 rounded-lg p-1">
+                <div className="flex flex-wrap gap-2 mb-6 bg-gray-800/50 rounded-lg p-1">
                   <button
                     onClick={() => setActiveTab('one-way')}
-                    className={`flex-1 px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`flex-1 min-w-[120px] px-4 py-3 rounded-lg font-semibold transition-all duration-300 text-sm ${
                       activeTab === 'one-way'
                         ? 'bg-accent-500 text-black shadow-lg'
                         : 'text-white/70 hover:text-white hover:bg-white/5'
@@ -83,7 +99,7 @@ const TariffModal = ({ isOpen, onClose }) => {
                   </button>
                   <button
                     onClick={() => setActiveTab('round-trip')}
-                    className={`flex-1 px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`flex-1 min-w-[120px] px-4 py-3 rounded-lg font-semibold transition-all duration-300 text-sm ${
                       activeTab === 'round-trip'
                         ? 'bg-accent-500 text-black shadow-lg'
                         : 'text-white/70 hover:text-white hover:bg-white/5'
@@ -91,94 +107,264 @@ const TariffModal = ({ isOpen, onClose }) => {
                   >
                     Round Trip Tariff
                   </button>
+                  <button
+                    onClick={() => setActiveTab('acting-driver')}
+                    className={`flex-1 min-w-[120px] px-4 py-3 rounded-lg font-semibold transition-all duration-300 text-sm ${
+                      activeTab === 'acting-driver'
+                        ? 'bg-accent-500 text-black shadow-lg'
+                        : 'text-white/70 hover:text-white hover:bg-white/5'
+                    }`}
+                  >
+                    Acting Driver
+                  </button>
                 </div>
 
-                {/* Table */}
-                <div className="overflow-x-auto mb-6">
-                  <table className="w-full rounded-lg overflow-hidden">
-                    <thead>
-                      <tr className="bg-accent-500">
-                        <th className="px-4 py-3 text-left text-black font-bold text-sm sm:text-base">
-                          Vehicle Type
-                        </th>
-                        <th className="px-4 py-3 text-center text-black font-bold text-sm sm:text-base">
-                          Rate/KM
-                        </th>
-                        <th className="px-4 py-3 text-center text-black font-bold text-sm sm:text-base">
-                          Driver Bata
-                        </th>
-                        <th className="px-4 py-3 text-center text-black font-bold text-sm sm:text-base">
-                          Additional Charge
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {currentData.map((row, index) => (
-                        <motion.tr
-                          key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.05 }}
-                          className={`${
-                            index % 2 === 0 ? 'bg-gray-800/30' : 'bg-gray-800/50'
-                          } hover:bg-gray-700/50 transition-colors`}
-                        >
-                          <td className="px-4 py-3 text-white font-medium">
-                            <div className="flex items-center space-x-2">
-                              <Car className="w-4 h-4 text-accent-500" />
-                              <span className="text-sm sm:text-base">{row.type}</span>
-                            </div>
-                          </td>
-                          <td className="px-4 py-3 text-white/90 text-center text-sm sm:text-base">
-                            {row.rate}
-                          </td>
-                          <td className="px-4 py-3 text-white/90 text-center text-sm sm:text-base">
-                            {row.bata}
-                          </td>
-                          <td className="px-4 py-3 text-white/90 text-center text-sm sm:text-base">
-                            {row.additional}
-                          </td>
-                        </motion.tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* Additional Information */}
-                <div className="space-y-4 mb-6">
-                  <div className="bg-gray-800/30 rounded-lg p-4 border border-white/10">
-                    <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-                      <span className="font-semibold text-white">Rates given above:</span> Toll fees, Inter-State Permit, and GST charges (if any) are extra.
-                    </p>
+                {/* Table - One-Way and Round Trip */}
+                {activeTab !== 'acting-driver' && (
+                  <div className="overflow-x-auto mb-6">
+                    <table className="w-full rounded-lg overflow-hidden">
+                      <thead>
+                        <tr className="bg-accent-500">
+                          <th className="px-4 py-3 text-left text-black font-bold text-sm sm:text-base">
+                            Vehicle Type
+                          </th>
+                          <th className="px-4 py-3 text-center text-black font-bold text-sm sm:text-base">
+                            Rate/KM
+                          </th>
+                          <th className="px-4 py-3 text-center text-black font-bold text-sm sm:text-base">
+                            Driver Bata
+                          </th>
+                          <th className="px-4 py-3 text-center text-black font-bold text-sm sm:text-base">
+                            Additional Charge
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {currentData.map((row, index) => (
+                          <motion.tr
+                            key={index}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: index * 0.05 }}
+                            className={`${
+                              index % 2 === 0 ? 'bg-gray-800/30' : 'bg-gray-800/50'
+                            } hover:bg-gray-700/50 transition-colors`}
+                          >
+                            <td className="px-4 py-3 text-white font-medium">
+                              <div className="flex items-center space-x-2">
+                                <Car className="w-4 h-4 text-accent-500" />
+                                <span className="text-sm sm:text-base">{row.type}</span>
+                              </div>
+                            </td>
+                            <td className="px-4 py-3 text-white/90 text-center text-sm sm:text-base">
+                              {row.rate}
+                            </td>
+                            <td className="px-4 py-3 text-white/90 text-center text-sm sm:text-base">
+                              {row.bata}
+                            </td>
+                            <td className="px-4 py-3 text-white/90 text-center text-sm sm:text-base">
+                              {row.additional}
+                            </td>
+                          </motion.tr>
+                        ))}
+                      </tbody>
+                    </table>
                   </div>
+                )}
 
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {/* Drop Trips */}
-                    <div className="bg-gray-800/30 rounded-lg p-4 border border-white/10">
-                      <h4 className="text-accent-500 font-semibold mb-3 text-base sm:text-lg">
-                        Drop Trips:
-                      </h4>
-                      <ul className="space-y-2 text-white/80 text-sm sm:text-base">
-                        <li>• Driver Bata Rs.400</li>
-                        <li>• Waiting Charges Rs.100 per hour</li>
-                        <li>• Minimum 130 kms/day</li>
-                      </ul>
+                {/* Acting Driver Content */}
+                {activeTab === 'acting-driver' && (
+                  <div className="space-y-6">
+                    {/* LOCAL Section */}
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <CircleUserRound className="w-5 h-5 text-accent-500" />
+                        LOCAL
+                      </h3>
+                      <div className="overflow-x-auto mb-4">
+                        <table className="w-full rounded-lg overflow-hidden">
+                          <thead>
+                            <tr className="bg-accent-500">
+                              <th className="px-4 py-3 text-left text-black font-bold text-sm sm:text-base">
+                                Service
+                              </th>
+                              <th className="px-4 py-3 text-center text-black font-bold text-sm sm:text-base">
+                                Rate
+                              </th>
+                              <th className="px-4 py-3 text-center text-black font-bold text-sm sm:text-base">
+                                Additional
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {actingDriverLocalData.map((row, index) => (
+                              <motion.tr
+                                key={index}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: index * 0.05 }}
+                                className={`${
+                                  index % 2 === 0 ? 'bg-gray-800/30' : 'bg-gray-800/50'
+                                } hover:bg-gray-700/50 transition-colors`}
+                              >
+                                <td className="px-4 py-3 text-white font-medium text-sm sm:text-base">
+                                  {row.service}
+                                </td>
+                                <td className="px-4 py-3 text-white/90 text-center text-sm sm:text-base">
+                                  {row.rate}
+                                </td>
+                                <td className="px-4 py-3 text-white/90 text-center text-sm sm:text-base">
+                                  {row.additional}
+                                </td>
+                              </motion.tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
 
-                    {/* Round Trips */}
+                    {/* OUTSTATION Section */}
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <CircleUserRound className="w-5 h-5 text-accent-500" />
+                        OUTSTATION
+                      </h3>
+                      <div className="overflow-x-auto mb-4">
+                        <table className="w-full rounded-lg overflow-hidden">
+                          <thead>
+                            <tr className="bg-accent-500">
+                              <th className="px-4 py-3 text-left text-black font-bold text-sm sm:text-base">
+                                Distance
+                              </th>
+                              <th className="px-4 py-3 text-center text-black font-bold text-sm sm:text-base">
+                                First 6 Hour
+                              </th>
+                              <th className="px-4 py-3 text-center text-black font-bold text-sm sm:text-base">
+                                After per Hour
+                              </th>
+                              <th className="px-4 py-3 text-center text-black font-bold text-sm sm:text-base">
+                                Night Fare (10 PM - 6 AM)
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {actingDriverOutstationData.map((row, index) => (
+                              <motion.tr
+                                key={index}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: index * 0.05 }}
+                                className={`${
+                                  index % 2 === 0 ? 'bg-gray-800/30' : 'bg-gray-800/50'
+                                } hover:bg-gray-700/50 transition-colors`}
+                              >
+                                <td className="px-4 py-3 text-white font-medium text-sm sm:text-base">
+                                  {row.distance}
+                                </td>
+                                <td className="px-4 py-3 text-white/90 text-center text-sm sm:text-base">
+                                  {row.first6hrs}
+                                </td>
+                                <td className="px-4 py-3 text-white/90 text-center text-sm sm:text-base">
+                                  {row.afterPerHr}
+                                </td>
+                                <td className="px-4 py-3 text-white/90 text-center text-sm sm:text-base">
+                                  {row.nightFare}
+                                </td>
+                              </motion.tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    {/* Day Rent Section */}
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <CircleUserRound className="w-5 h-5 text-accent-500" />
+                        Day Rent
+                      </h3>
+                      <div className="overflow-x-auto mb-4">
+                        <table className="w-full rounded-lg overflow-hidden">
+                          <thead>
+                            <tr className="bg-accent-500">
+                              <th className="px-4 py-3 text-left text-black font-bold text-sm sm:text-base">
+                                Distance
+                              </th>
+                              <th className="px-4 py-3 text-center text-black font-bold text-sm sm:text-base">
+                                Rate
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {actingDriverDayRentData.map((row, index) => (
+                              <motion.tr
+                                key={index}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: index * 0.05 }}
+                                className={`${
+                                  index % 2 === 0 ? 'bg-gray-800/30' : 'bg-gray-800/50'
+                                } hover:bg-gray-700/50 transition-colors`}
+                              >
+                                <td className="px-4 py-3 text-white font-medium text-sm sm:text-base">
+                                  {row.distance}
+                                </td>
+                                <td className="px-4 py-3 text-white/90 text-center text-sm sm:text-base">
+                                  {row.rate}
+                                </td>
+                              </motion.tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    {/* Drop Only Note */}
                     <div className="bg-gray-800/30 rounded-lg p-4 border border-white/10">
-                      <h4 className="text-accent-500 font-semibold mb-3 text-base sm:text-lg">
-                        Round Trips:
-                      </h4>
-                      <ul className="space-y-2 text-white/80 text-sm sm:text-base">
-                        <li>• Driver Bata Rs.300/day</li>
-                        <li>• Minimum 250 kms/day (Bangalore pickup: 300 kms/day)</li>
-                        <li>• Hill Station Charges: Rs.300 (Depend upon location the charges may vary)</li>
-                        <li>• 1 Day = 1 Calendar Day (12 AM – Next 12 AM)</li>
-                      </ul>
+                      <p className="text-white/80 text-sm sm:text-base leading-relaxed">
+                        <span className="font-semibold text-white">Drop Only Tariff:</span> Depending on kilometre
+                      </p>
                     </div>
                   </div>
-                </div>
+                )}
+
+                {/* Additional Information - Only for One-Way and Round Trip */}
+                {activeTab !== 'acting-driver' && (
+                  <div className="space-y-4 mb-6">
+                    <div className="bg-gray-800/30 rounded-lg p-4 border border-white/10">
+                      <p className="text-white/80 text-sm sm:text-base leading-relaxed">
+                        <span className="font-semibold text-white">Rates given above:</span> Toll fees, Inter-State Permit, and GST charges (if any) are extra.
+                      </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {/* Drop Trips */}
+                      <div className="bg-gray-800/30 rounded-lg p-4 border border-white/10">
+                        <h4 className="text-accent-500 font-semibold mb-3 text-base sm:text-lg">
+                          Drop Trips:
+                        </h4>
+                        <ul className="space-y-2 text-white/80 text-sm sm:text-base">
+                          <li>• Driver Bata Rs.400</li>
+                          <li>• Waiting Charges Rs.100 per hour</li>
+                          <li>• Minimum 130 kms/day</li>
+                        </ul>
+                      </div>
+
+                      {/* Round Trips */}
+                      <div className="bg-gray-800/30 rounded-lg p-4 border border-white/10">
+                        <h4 className="text-accent-500 font-semibold mb-3 text-base sm:text-lg">
+                          Round Trips:
+                        </h4>
+                        <ul className="space-y-2 text-white/80 text-sm sm:text-base">
+                          <li>• Driver Bata Rs.300/day</li>
+                          <li>• Minimum 250 kms/day (Bangalore pickup: 300 kms/day)</li>
+                          <li>• Hill Station Charges: Rs.300 (Depend upon location the charges may vary)</li>
+                          <li>• 1 Day = 1 Calendar Day (12 AM – Next 12 AM)</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {/* Luggage Policy */}
                 <div className="bg-gray-800/30 rounded-lg border border-white/10 overflow-hidden">

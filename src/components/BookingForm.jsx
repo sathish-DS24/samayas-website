@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { Calendar, Clock, MapPin, User, Phone, Car, Loader2, Briefcase, CheckCircle } from 'lucide-react'
+import { Calendar, Clock, MapPin, User, Phone, Car, Loader2, Briefcase, CheckCircle, MessageSquare } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 import BookingSummary from './BookingSummary'
 
@@ -28,7 +28,8 @@ const BookingForm = () => {
     timePeriod: 'AM',
     vehicleType: '',
     name: '',
-    phone: ''
+    phone: '',
+    comments: ''
   })
 
   // Round Trip form data
@@ -41,7 +42,8 @@ const BookingForm = () => {
     timePeriod: 'AM',
     vehicleType: '',
     name: '',
-    phone: ''
+    phone: '',
+    comments: ''
   })
 
   // Other Services form data
@@ -53,7 +55,8 @@ const BookingForm = () => {
     time: '',
     timePeriod: 'AM',
     pickupLocation: '',
-    dropLocation: ''
+    dropLocation: '',
+    comments: ''
   })
 
   const [errors, setErrors] = useState({})
@@ -282,7 +285,8 @@ const BookingForm = () => {
         phone: oneWayData.phone,
         vehicleType: oneWayData.vehicleType,
         pickupLocation: oneWayData.pickupLocation,
-        dropLocation: oneWayData.dropLocation
+        dropLocation: oneWayData.dropLocation,
+        comments: oneWayData.comments
       })
       setShowSummary(true)
     }
@@ -306,7 +310,8 @@ const BookingForm = () => {
         phone: roundTripData.phone,
         vehicleType: roundTripData.vehicleType,
         pickupLocation: roundTripData.pickupLocation,
-        dropLocation: roundTripData.dropLocation
+        dropLocation: roundTripData.dropLocation,
+        comments: roundTripData.comments
       })
       setShowSummary(true)
     }
@@ -357,6 +362,11 @@ const BookingForm = () => {
           pickup_location: otherServiceData.pickupLocation,
           drop_location: otherServiceData.dropLocation || 'N/A',
           
+          // Additional comments/notes
+          comments: otherServiceData.comments || '',
+          customer_notes: otherServiceData.comments || '',
+          additional_notes: otherServiceData.comments || '',
+          
           // Email configuration
           to_email: 'samayasprem@gmail.com',
           from_name: otherServiceData.name,
@@ -375,7 +385,8 @@ const BookingForm = () => {
           time: '',
           timePeriod: 'AM',
           pickupLocation: '',
-          dropLocation: ''
+          dropLocation: '',
+          comments: ''
         })
       } catch (error) {
         console.error('Error sending email:', error)
@@ -460,6 +471,11 @@ const BookingForm = () => {
         total_amount: `₹${calculatedData?.finalAmount || 0}`,
         distance: `${calculatedData?.distance || 0} km`,
         
+        // Additional comments/notes
+        comments: calculatedData?.comments || (isRoundTrip ? roundTripData.comments : oneWayData.comments) || '',
+        customer_notes: calculatedData?.comments || (isRoundTrip ? roundTripData.comments : oneWayData.comments) || '',
+        additional_notes: calculatedData?.comments || (isRoundTrip ? roundTripData.comments : oneWayData.comments) || '',
+        
         // Email configuration
         to_email: 'samayasprem@gmail.com',
         from_name: calculatedData?.name || (isRoundTrip ? roundTripData.name : oneWayData.name) || '',
@@ -480,7 +496,8 @@ const BookingForm = () => {
           timePeriod: 'AM',
           vehicleType: '',
           name: '',
-          phone: ''
+          phone: '',
+          comments: ''
         })
       } else {
         setOneWayData({
@@ -491,7 +508,8 @@ const BookingForm = () => {
           timePeriod: 'AM',
           vehicleType: '',
           name: '',
-          phone: ''
+          phone: '',
+          comments: ''
         })
       }
       
@@ -832,6 +850,22 @@ const BookingForm = () => {
                       </div>
                     </div>
 
+                    {/* Comments/Notes Field */}
+                    <div>
+                      <label className="block text-sm font-semibold text-white/90 mb-2">
+                        <MessageSquare className="w-4 h-4 inline mr-2 text-accent-500" />
+                        Additional Comments / Special Requests (Optional)
+                      </label>
+                      <textarea
+                        name="comments"
+                        value={oneWayData.comments}
+                        onChange={handleOneWayChange}
+                        placeholder="Any customization requests, special instructions, or additional details..."
+                        rows={4}
+                        className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 resize-none"
+                      />
+                    </div>
+
                     {/* Submit Button */}
                     <motion.button
                       type="submit"
@@ -1101,6 +1135,22 @@ const BookingForm = () => {
                       </div>
                     </div>
 
+                    {/* Comments/Notes Field */}
+                    <div>
+                      <label className="block text-sm font-semibold text-white/90 mb-2">
+                        <MessageSquare className="w-4 h-4 inline mr-2 text-accent-500" />
+                        Additional Comments / Special Requests (Optional)
+                      </label>
+                      <textarea
+                        name="comments"
+                        value={roundTripData.comments}
+                        onChange={handleRoundTripChange}
+                        placeholder="Any customization requests, special instructions, or additional details..."
+                        rows={4}
+                        className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 resize-none"
+                      />
+                    </div>
+
                     {/* Submit Button */}
                     <motion.button
                       type="submit"
@@ -1218,6 +1268,27 @@ const BookingForm = () => {
                         )
                       })}
                     </div>
+
+                    {/* Comments/Notes Field */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.7 }}
+                      className="md:col-span-2"
+                    >
+                      <label className="block text-sm font-semibold text-white/90 mb-2">
+                        <MessageSquare className="w-4 h-4 inline mr-2 text-accent-500" />
+                        Additional Comments / Special Requests (Optional)
+                      </label>
+                      <textarea
+                        name="comments"
+                        value={otherServiceData.comments}
+                        onChange={handleOtherServiceChange}
+                        placeholder="Any customization requests, special instructions, or additional details..."
+                        rows={4}
+                        className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 shadow-sm resize-none"
+                      />
+                    </motion.div>
 
                     {/* Submit Button */}
                     <motion.button

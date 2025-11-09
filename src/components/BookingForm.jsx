@@ -545,16 +545,6 @@ const BookingForm = () => {
                 transition={{ delay: 0.3, duration: 0.6 }}
                 className="border-b border-accent-500/40 w-1/4 mx-auto mb-4"
               />
-              
-              {/* Disclaimer */}
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : {}}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-sm sm:text-base text-white/80 italic max-w-2xl mx-auto mt-4"
-              >
-                <span className="text-accent-400 font-semibold">Disclaimer:</span> The price shown is an estimated price. The final price may vary based on your specific pickup and drop locations.
-              </motion.p>
             </div>
 
             {/* Tabs */}

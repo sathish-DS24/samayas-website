@@ -333,14 +333,18 @@ const Hero = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.7, type: "spring" }}
-                className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4"
+                className="flex flex-col items-center justify-center gap-2 sm:gap-3 mb-4"
               >
                 <span className="bg-accent-500 text-black px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-bold">
                   POPULAR
                 </span>
-                <span className="text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">One-Way Taxi</span>
-                <span className="text-white/60 text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">&</span>
-                <span className="text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">Acting Driver</span>
+                <div className="flex flex-col items-center gap-1 sm:gap-2">
+                  <span className="text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">One-Way Taxi</span>
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <span className="text-white/60 text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">&</span>
+                    <span className="text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">Acting Driver</span>
+                  </div>
+                </div>
               </motion.div>
 
               {/* Tagline */}

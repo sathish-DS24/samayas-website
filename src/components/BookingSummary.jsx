@@ -34,13 +34,13 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
           />
 
           {/* Modal */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
+          <div className="fixed inset-0 z-50 flex items-start justify-center p-4 overflow-y-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ duration: 0.3, type: "spring", damping: 25 }}
-              className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl border border-gray-200"
+              className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl border border-gray-200 my-8"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}

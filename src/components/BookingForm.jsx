@@ -338,39 +338,43 @@ const BookingForm = () => {
         // Format time with AM/PM
         const formattedTime = `${otherServiceData.time} ${otherServiceData.timePeriod || 'AM'}`
 
+        // Ensure all values are strings
+        const serviceType = String(otherServiceData.serviceType || 'N/A')
+        const customerName = String(otherServiceData.name || 'N/A')
+        const customerPhone = String(otherServiceData.phone || 'N/A')
+        const serviceDate = formatDate(otherServiceData.date) || 'N/A'
+        const pickupLocation = String(otherServiceData.pickupLocation || 'N/A')
+        const dropLocation = String(otherServiceData.dropLocation || 'N/A')
+        const comments = String(otherServiceData.comments || 'No additional comments')
+
         const templateParams = {
           // Email subject
-          subject: `Other Service Booking - ${otherServiceData.serviceType}`,
+          subject: `Other Service Booking - ${serviceType}`,
           
           // Service information
-          service_type: otherServiceData.serviceType,
-          booking_type: otherServiceData.serviceType,
+          service_type: serviceType,
+          booking_type: serviceType,
           
           // Customer information
-          customer_name: otherServiceData.name,
-          customer_phone: otherServiceData.phone,
+          customer_name: customerName,
+          customer_phone: customerPhone,
           
           // Date and time
-          service_date: formatDate(otherServiceData.date),
-          service_time: formattedTime,
-          booking_date: formatDate(otherServiceData.date),
-          booking_time: formattedTime,
-          date: formatDate(otherServiceData.date),
-          time: formattedTime,
+          service_date: serviceDate,
+          service_time: formattedTime || 'N/A',
+          booking_date: serviceDate,
+          booking_time: formattedTime || 'N/A',
+          date: serviceDate,
+          time: formattedTime || 'N/A',
           
           // Location information
-          pickup_location: otherServiceData.pickupLocation,
-          drop_location: otherServiceData.dropLocation || 'N/A',
+          pickup_location: pickupLocation,
+          drop_location: dropLocation,
           
           // Additional comments/notes
-          comments: otherServiceData.comments || '',
-          customer_notes: otherServiceData.comments || '',
-          additional_notes: otherServiceData.comments || '',
-          
-          // Email configuration
-          to_email: 'samayasprem@gmail.com',
-          from_name: otherServiceData.name,
-          from_phone: otherServiceData.phone
+          comments: comments,
+          customer_notes: comments,
+          additional_notes: comments
         }
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey)
@@ -431,8 +435,21 @@ const BookingForm = () => {
 
       // Format the dates
       const formattedDate = formatDate(bookingDate)
-      const formattedReturnDate = returnDate ? formatDate(returnDate) : ''
+      const formattedReturnDate = returnDate ? formatDate(returnDate) : null
 
+      // Get all values with proper fallbacks and ensure they're strings
+      const customerName = String(calculatedData?.name || (isRoundTrip ? roundTripData.name : oneWayData.name) || 'N/A')
+      const customerPhone = String(calculatedData?.phone || (isRoundTrip ? roundTripData.phone : oneWayData.phone) || 'N/A')
+      const vehicleType = String(calculatedData?.vehicleType || (isRoundTrip ? roundTripData.vehicleType : oneWayData.vehicleType) || 'N/A')
+      const pickupLocation = String(calculatedData?.pickupLocation || (isRoundTrip ? roundTripData.pickupLocation : oneWayData.pickupLocation) || 'N/A')
+      const dropLocation = String(calculatedData?.dropLocation || (isRoundTrip ? roundTripData.dropLocation : oneWayData.dropLocation) || 'N/A')
+      const comments = String(calculatedData?.comments || (isRoundTrip ? roundTripData.comments : oneWayData.comments) || 'No additional comments')
+      const baseFare = calculatedData?.baseFare || 0
+      const bata = calculatedData?.bata || 0
+      const finalAmount = calculatedData?.finalAmount || 0
+      const distance = calculatedData?.distance || 0
+
+      // Build template params - only include return_date if it exists (for round trips)
       const templateParams = {
         // Email subject
         subject: isRoundTrip ? 'Round Trip Taxi Booking Request' : 'One-Way Taxi Booking Request',
@@ -443,43 +460,42 @@ const BookingForm = () => {
         trip_type: isRoundTrip ? 'Round Trip' : 'One-Way',
         
         // Customer information
-        customer_name: calculatedData?.name || (isRoundTrip ? roundTripData.name : oneWayData.name) || '',
-        customer_phone: calculatedData?.phone || (isRoundTrip ? roundTripData.phone : oneWayData.phone) || '',
+        customer_name: customerName,
+        customer_phone: customerPhone,
         
         // Vehicle information
-        vehicle_type: calculatedData?.vehicleType || (isRoundTrip ? roundTripData.vehicleType : oneWayData.vehicleType) || '',
-        car_type: calculatedData?.vehicleType || (isRoundTrip ? roundTripData.vehicleType : oneWayData.vehicleType) || '',
+        vehicle_type: vehicleType,
+        car_type: vehicleType,
         
         // Location information
-        pickup_location: calculatedData?.pickupLocation || (isRoundTrip ? roundTripData.pickupLocation : oneWayData.pickupLocation) || '',
-        drop_location: calculatedData?.dropLocation || (isRoundTrip ? roundTripData.dropLocation : oneWayData.dropLocation) || '',
+        pickup_location: pickupLocation,
+        drop_location: dropLocation,
         
-        // Date and time (using multiple formats for template compatibility)
-        booking_date: formattedDate,
-        service_date: formattedDate,
-        date: formattedDate,
-        return_date: formattedReturnDate,
-        
-        booking_time: formattedTime,
-        service_time: formattedTime,
-        time: formattedTime,
+        // Date and time
+        booking_date: formattedDate || 'N/A',
+        service_date: formattedDate || 'N/A',
+        date: formattedDate || 'N/A',
+        booking_time: formattedTime || 'N/A',
+        service_time: formattedTime || 'N/A',
+        time: formattedTime || 'N/A',
         
         // Pricing information
-        base_fare: `₹${calculatedData?.baseFare || 0}`,
-        bata: `₹${calculatedData?.bata || 0}`,
-        final_amount: `₹${calculatedData?.finalAmount || 0}`,
-        total_amount: `₹${calculatedData?.finalAmount || 0}`,
-        distance: `${calculatedData?.distance || 0} km`,
+        base_fare: `₹${baseFare.toLocaleString('en-IN')}`,
+        bata: `₹${bata.toLocaleString('en-IN')}`,
+        final_amount: `₹${finalAmount.toLocaleString('en-IN')}`,
+        total_amount: `₹${finalAmount.toLocaleString('en-IN')}`,
+        distance: `${distance} km`,
         
         // Additional comments/notes
-        comments: calculatedData?.comments || (isRoundTrip ? roundTripData.comments : oneWayData.comments) || '',
-        customer_notes: calculatedData?.comments || (isRoundTrip ? roundTripData.comments : oneWayData.comments) || '',
-        additional_notes: calculatedData?.comments || (isRoundTrip ? roundTripData.comments : oneWayData.comments) || '',
-        
-        // Email configuration
-        to_email: 'samayasprem@gmail.com',
-        from_name: calculatedData?.name || (isRoundTrip ? roundTripData.name : oneWayData.name) || '',
-        from_phone: calculatedData?.phone || (isRoundTrip ? roundTripData.phone : oneWayData.phone) || ''
+        comments: comments,
+        customer_notes: comments,
+        additional_notes: comments
+      }
+
+      // Only add return_date if it exists (for round trips)
+      // This prevents EmailJS from treating empty string as corrupted variable
+      if (formattedReturnDate) {
+        templateParams.return_date = formattedReturnDate
       }
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey)

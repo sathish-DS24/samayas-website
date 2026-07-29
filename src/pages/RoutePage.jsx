@@ -159,16 +159,16 @@ const RoutePage = () => {
         <TollInfoSection content={content} />
 
         {/* Section 10: Reused Why Choose SAMAYAS */}
-        <WhySamayas districtName={`${content.from} to ${content.to}`} />
+        <WhySamayas districtName={`${content.from} to ${content.to}`} variant="dark" />
 
         {/* Section 11: Nearby Popular Routes */}
         <NearbyRoutesSection content={content} />
 
         {/* Section 12: Reused Customer Reviews */}
-        <CustomerReviews reviews={content.reviews} districtName={`${content.from} to ${content.to}`} />
+        <CustomerReviews reviews={content.reviews} districtName={`${content.from} to ${content.to}`} variant="dark" />
 
         {/* Section 13: Reused FAQs */}
-        <FAQSection faqs={content.faqs} districtName={`${content.from} to ${content.to}`} />
+        <FAQSection faqs={content.faqs} districtName={`${content.from} to ${content.to}`} variant="dark" />
 
         {/* Section 14: Reused Final CTA */}
         <FinalCTA districtName={`${content.from} to ${content.to}`} />

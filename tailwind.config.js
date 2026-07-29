@@ -21,6 +21,15 @@ export default {
           900: '#0A1D56', // Deep royal blue
           950: '#050c26', // Ultra deep midnight blue
         },
+        dark: {
+          600: '#475569',
+          700: '#334155', // Slate 700 border
+          750: '#1e293b', // Slate 800 hover
+          800: '#0f172a', // Slate 900 card background
+          850: '#0b1120',
+          900: '#070d19', // Section background
+          950: '#020617', // Deepest background
+        },
         accent: {
           500: '#FDC500', // Gold/yellow
           600: '#f59e0b',

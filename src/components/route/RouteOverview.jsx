@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigation, Clock, ShieldCheck, Car, ChevronRight } from 'lucide-react'
+import { Navigation, Clock, Car, ShieldCheck, Milestone, Compass } from 'lucide-react'
 
 const RouteOverview = ({ content }) => {
   return (
@@ -21,6 +21,7 @@ const RouteOverview = ({ content }) => {
             Travel from <strong className="text-amber-400 font-semibold">{content.from} to {content.to}</strong> comfortably with SAMAYAS. Whether you are traveling for business, airport transfers, medical appointments, higher education, or family trips, our one-way taxi service provides safe, hygienic, and affordable travel across Tamil Nadu and South India with zero return fare charges.
           </p>
 
+          {/* Quick Metrics Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
             <div className="bg-dark-900/80 p-4 rounded-xl border border-dark-700/60 flex items-center space-x-4">
               <Navigation className="w-8 h-8 text-amber-400 flex-shrink-0" />
@@ -46,6 +47,17 @@ const RouteOverview = ({ content }) => {
               </div>
             </div>
           </div>
+
+          {/* Road Conditions & Expressway Quality Box */}
+          {content.roadConditions && (
+            <div className="bg-dark-900/90 border border-dark-700/80 rounded-xl p-4 flex items-start space-x-3 text-xs text-gray-300">
+              <Milestone className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+              <div>
+                <span className="font-bold text-amber-400 block mb-0.5">Road Conditions & Highway Info:</span>
+                <p className="leading-relaxed">{content.roadConditions}</p>
+              </div>
+            </div>
+          )}
 
         </div>
 

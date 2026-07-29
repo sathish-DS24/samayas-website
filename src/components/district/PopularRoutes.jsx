@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Car, ArrowRight, Clock, Route, Search, X } from 'lucide-react'
+import { Car, ArrowRight, Clock, Route, Search, X, CheckCircle } from 'lucide-react'
+import { findMatchingRouteSlug } from '../../data/routesMaster'
+import { getRouteUrl } from '../../data/routes'
 
 const formatTime = (hours) => {
   const h = Math.floor(hours)
@@ -77,77 +80,90 @@ const PopularRoutes = ({ districtName, routes }) => {
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {filteredRoutes.map((route, i) => {
-            // Support both old format (string) and new format (object)
-            const routeName = typeof route === 'string' ? route : route.name
-            const distanceKm = typeof route === 'object' ? route.distanceKm : null
-            const timeHours = typeof route === 'object' ? route.timeHours : null
-            const startingFare = typeof route === 'object' ? route.startingFare : null
+              const routeName = typeof route === 'string' ? route : route.name
+              const distanceKm = typeof route === 'object' ? route.distanceKm : null
+              const timeHours = typeof route === 'object' ? route.timeHours : null
+              const startingFare = typeof route === 'object' ? route.startingFare : null
 
-            return (
-              <motion.a
-                key={routeName}
-                href="#booking-form"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.04 }}
-                className="group relative bg-white rounded-2xl p-5 shadow-sm border border-gray-100 hover:border-accent-500/50 hover:shadow-md transition-all flex flex-col justify-between"
-              >
-                <div>
-                  {/* Top route title */}
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-9 h-9 bg-primary-50 group-hover:bg-accent-500/10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors">
-                        <Car className="w-4.5 h-4.5 text-primary-600 group-hover:text-accent-600 transition-colors" />
+              // Extract destination name from route string e.g. "Trichy to Chennai" -> "Chennai"
+              const destName = routeName.includes(' to ')
+                ? routeName.split(' to ')[1]?.trim()
+                : routeName
+
+              const matchingSlug = findMatchingRouteSlug(districtName, destName)
+              const routeLinkUrl = matchingSlug ? getRouteUrl(matchingSlug) : '#booking-form'
+
+              const CardElement = matchingSlug ? Link : 'a'
+              const cardProps = matchingSlug ? { to: routeLinkUrl } : { href: routeLinkUrl }
+
+              return (
+                <motion.div
+                  key={routeName}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.04 }}
+                >
+                  <CardElement
+                    {...cardProps}
+                    className="group relative bg-white rounded-2xl p-5 shadow-sm border border-gray-100 hover:border-accent-500/50 hover:shadow-md transition-all flex flex-col justify-between h-full"
+                  >
+                    <div>
+                      {/* Top route title */}
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-9 h-9 bg-primary-50 group-hover:bg-accent-500/10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors">
+                            <Car className="w-4.5 h-4.5 text-primary-600 group-hover:text-accent-600 transition-colors" />
+                          </div>
+                          <h3 className="font-bold text-gray-900 group-hover:text-primary-900 transition-colors text-base">
+                            {routeName}
+                          </h3>
+                        </div>
                       </div>
-                      <h3 className="font-bold text-gray-900 group-hover:text-primary-900 transition-colors text-base">
-                        {routeName}
-                      </h3>
+
+                      {/* Route Specs pill tags */}
+                      <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-4 pt-1 border-t border-gray-50">
+                        {distanceKm && (
+                          <span className="inline-flex items-center gap-1 font-medium bg-gray-50 px-2.5 py-1 rounded-md text-gray-600">
+                            <Route className="w-3 h-3 text-gray-400" />
+                            {distanceKm} km
+                          </span>
+                        )}
+                        {timeHours && (
+                          <span className="inline-flex items-center gap-1 font-medium bg-gray-50 px-2.5 py-1 rounded-md text-gray-600">
+                            <Clock className="w-3 h-3 text-gray-400" />
+                            {formatTime(timeHours)}
+                          </span>
+                        )}
+                        {matchingSlug && (
+                          <span className="inline-flex items-center gap-1 font-semibold bg-accent-500/10 text-accent-700 px-2 py-0.5 rounded text-[11px]">
+                            <CheckCircle className="w-3 h-3 text-accent-600" />
+                            Route Guide
+                          </span>
+                        )}
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Route Specs pill tags */}
-                  <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-4 pt-1 border-t border-gray-50">
-                    {distanceKm && (
-                      <span className="inline-flex items-center gap-1 font-medium bg-gray-50 px-2.5 py-1 rounded-md text-gray-600">
-                        <Route className="w-3 h-3 text-gray-400" />
-                        {distanceKm} km
-                      </span>
-                    )}
-                    {timeHours && (
-                      <span className="inline-flex items-center gap-1 font-medium bg-gray-50 px-2.5 py-1 rounded-md text-gray-600">
-                        <Clock className="w-3 h-3 text-gray-400" />
-                        {formatTime(timeHours)}
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                {/* Footer: Starting Fare + Book Now CTA */}
-                <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                  <div>
-                    {startingFare ? (
+                    {/* Bottom CTA & Price row */}
+                    <div className="flex items-center justify-between pt-3 border-t border-gray-100 mt-auto">
                       <div>
-                        <span className="text-[10px] text-gray-400 font-semibold uppercase tracking-wider block">Starting from</span>
-                        <span className="font-extrabold text-primary-900 text-base sm:text-lg flex items-center text-green-700">
-                          ₹{startingFare.toLocaleString('en-IN')}
+                        <span className="text-[11px] text-gray-400 block font-medium">Starting Fare</span>
+                        <span className="text-sm font-extrabold text-primary-700">
+                          {startingFare ? `₹${startingFare.toLocaleString('en-IN')}` : '₹10/km'}
                         </span>
                       </div>
-                    ) : (
-                      <span className="text-xs font-semibold text-green-700 bg-green-50 px-2 py-1 rounded">Best Rates</span>
-                    )}
-                  </div>
 
-                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-primary-900 group-hover:bg-accent-500 group-hover:text-gray-950 text-white text-xs font-bold rounded-lg transition-all shadow-xs">
-                    Book Now
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </span>
-                </div>
-              </motion.a>
-            )
-          })}
-        </div>
-      )}
+                      <span className="inline-flex items-center gap-1 text-xs font-bold text-accent-600 group-hover:translate-x-0.5 transition-transform">
+                        {matchingSlug ? 'View Route Details' : 'Book Cab'}
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
+                    </div>
+                  </CardElement>
+                </motion.div>
+              )
+            })}
+          </div>
+        )}
       </div>
     </section>
   )

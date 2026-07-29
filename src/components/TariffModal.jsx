@@ -1,24 +1,24 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Car, Luggage, ChevronDown, ChevronUp, CircleUserRound } from 'lucide-react'
-import { Link } from 'react-scroll'
-
 const TariffModal = ({ isOpen, onClose }) => {
   const [activeTab, setActiveTab] = useState('one-way')
   const [luggageExpanded, setLuggageExpanded] = useState(false)
 
   const oneWayData = [
-    { type: 'SEDAN', rate: 'Rs.14/KM', bata: 'Rs.400', additional: 'One way Toll' },
-    { type: 'ETIOS', rate: 'Rs.14/KM', bata: 'Rs.400', additional: 'One way Toll' },
-    { type: 'SUV', rate: 'Rs.19/KM', bata: 'Rs.500', additional: 'One way Toll' },
-    { type: 'INNOVA', rate: 'Rs.20/KM', bata: 'Rs.500', additional: 'One way Toll' },
+    { type: 'SEDAN', rate: 'Rs.15/KM', bata: 'Rs.400', additional: 'One way Toll' },
+    { type: 'HATCHBACK', rate: 'Rs.15/KM', bata: 'Rs.400', additional: 'One way Toll' },
+    { type: 'SUV', rate: 'Rs.20/KM', bata: 'Rs.500', additional: 'One way Toll' },
+    { type: 'INNOVA', rate: 'Rs.22/KM', bata: 'Rs.500', additional: 'One way Toll' },
+    { type: 'INNOVA HYCROSS', rate: 'Rs.25/KM', bata: 'Rs.600', additional: 'One way Toll' },
   ]
 
   const roundTripData = [
     { type: 'SEDAN', rate: 'Rs.13/KM', bata: 'Rs.400', additional: 'Up & Down Toll' },
-    { type: 'ETIOS', rate: 'Rs.13/KM', bata: 'Rs.400', additional: 'Up & Down Toll' },
+    { type: 'HATCHBACK', rate: 'Rs.13/KM', bata: 'Rs.400', additional: 'Up & Down Toll' },
     { type: 'SUV', rate: 'Rs.18/KM', bata: 'Rs.500', additional: 'Up & Down Toll' },
     { type: 'INNOVA', rate: 'Rs.18/KM', bata: 'Rs.500', additional: 'Up & Down Toll' },
+    { type: 'INNOVA HYCROSS', rate: 'Rs.21/KM', bata: 'Rs.600', additional: 'Up & Down Toll' },
   ]
 
   const actingDriverLocalData = [
@@ -27,14 +27,14 @@ const TariffModal = ({ isOpen, onClose }) => {
   ]
 
   const actingDriverOutstationData = [
-    { distance: 'Up & Down Maximum 120 km', first6hrs: 'Rs.800 + Food', afterPerHr: 'Rs.90', nightFare: 'Rs.100' },
-    { distance: 'Up & Down Maximum 250 km', first6hrs: 'Rs.900 + Food', afterPerHr: 'Rs.100', nightFare: 'Rs.100' },
-    { distance: 'Up & Down Maximum 600 km', first6hrs: 'Rs.1600 + Food', afterPerHr: 'Rs.120', nightFare: 'Rs.100' },
+    { distance: 'Up & Down Maximum 120 km', first6hrs: 'Rs.900 + Food', afterPerHr: 'Rs.90', nightFare: 'Rs.100' },
+    { distance: 'Up & Down Maximum 250 km', first6hrs: 'Rs.1000 + Food', afterPerHr: 'Rs.100', nightFare: 'Rs.100' },
+    { distance: 'Up & Down Maximum 600 km', first6hrs: 'Rs.1800 + Food', afterPerHr: 'Rs.120', nightFare: 'Rs.100' },
   ]
 
   const actingDriverDayRentData = [
-    { distance: '12 hrs maximum 250 km', rate: 'Rs.1200 + Food + Accommodation', type: 'per day' },
-    { distance: '12 hrs maximum 600 km', rate: 'Rs.1500 + Food + Accommodation', type: 'per day' },
+    { distance: '12 hrs maximum 250 km', rate: 'Rs.1300 + Food + Accommodation', type: 'per day' },
+    { distance: '12 hrs maximum 600 km', rate: 'Rs.1600 + Food + Accommodation', type: 'per day' },
   ]
 
   const currentData = activeTab === 'one-way' ? oneWayData : activeTab === 'round-trip' ? roundTripData : []
@@ -408,22 +408,19 @@ const TariffModal = ({ isOpen, onClose }) => {
                 >
                   Close
                 </button>
-                <Link
-                  to="booking"
-                  smooth={true}
-                  duration={800}
-                  offset={-100}
+                <a
+                  href="#booking"
                   onClick={onClose}
                   className="flex-1 sm:flex-none"
                 >
-                  <motion.button
+                  <motion.span
                     whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(253, 197, 0, 0.4)" }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-full px-6 py-3 bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full shadow-xl hover:shadow-yellow-400/40 transition-all duration-300"
+                    className="block w-full px-6 py-3 bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 text-center"
                   >
                     Book Now
-                  </motion.button>
-                </Link>
+                  </motion.span>
+                </a>
               </div>
             </motion.div>
           </div>

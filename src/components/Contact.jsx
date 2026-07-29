@@ -30,9 +30,9 @@ const Contact = () => {
     },
     {
       icon: Globe,
-      title: 'Country',
-      value: 'India',
-      link: '#',
+      title: 'Service Area',
+      value: 'Chennai, Coimbatore, Madurai, Trichy & all Tamil Nadu',
+      link: '#about',
       color: 'from-amber-500 to-amber-600'
     },
   ]
@@ -86,6 +86,17 @@ const Contact = () => {
                   href={contact.link}
                   target={contact.link.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.link.startsWith('http') ? 'noopener noreferrer' : ''}
+                  onClick={() => {
+                    import('../utils/analytics').then(({ trackEvent, trackAdsConversion }) => {
+                      if (contact.title === 'Phone') {
+                        trackEvent('phone_click')
+                        trackAdsConversion('phone_click')
+                      } else if (contact.title === 'WhatsApp') {
+                        trackEvent('whatsapp_click')
+                        trackAdsConversion('whatsapp_click')
+                      }
+                    })
+                  }}
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
@@ -156,6 +167,7 @@ const Contact = () => {
                     href="https://www.facebook.com/samayas.983477"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Follow SAMAYAS on Facebook"
                     className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors"
                   >
                     <Facebook className="w-5 h-5" />
@@ -166,6 +178,7 @@ const Contact = () => {
                     href="https://www.instagram.com/samayas_travel_junction/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Follow SAMAYAS on Instagram"
                     className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors"
                   >
                     <Instagram className="w-5 h-5" />
@@ -176,6 +189,7 @@ const Contact = () => {
                     href="http://wa.me/+919894809439"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Chat with SAMAYAS on WhatsApp"
                     className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors"
                   >
                     <MessageCircle className="w-5 h-5" />

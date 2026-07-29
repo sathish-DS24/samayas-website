@@ -20,6 +20,7 @@ const Services = () => {
     {
       icon: CarFront,
       title: 'One-Way Taxi',
+      tamilTitle: 'ஒன்-வே டாக்ஸி (கட்டணம் ஒரு வழிக்கு மட்டும்)',
       description: 'Convenient and cost-effective one-way rides to your destination — no return charges.',
       color: 'from-green-500 to-green-600',
       bgColor: 'bg-green-50',
@@ -30,6 +31,7 @@ const Services = () => {
     {
       icon: CircleUserRound,
       title: 'Acting Driver',
+      tamilTitle: 'ஆக்டிங் டிரைவர் (நம்பகமான ஓட்டுநர்கள்)',
       description: 'Hire professional drivers for short or long trips — reliable, punctual, and experienced.',
       color: 'from-blue-500 to-blue-600',
       bgColor: 'bg-blue-50',
@@ -39,6 +41,7 @@ const Services = () => {
     {
       icon: CarWithLuggage,
       title: 'Tours & Travels',
+      tamilTitle: 'சுற்றுலா மற்றும் பயணங்கள்',
       description: 'Plan your holidays or business trips effortlessly with our affordable travel packages.',
       color: 'from-purple-500 to-purple-600',
       bgColor: 'bg-purple-50',
@@ -48,6 +51,7 @@ const Services = () => {
     {
       icon: Wrench,
       title: 'Recovery Services',
+      tamilTitle: '24/7 வாகன மீட்பு சேவை (பிரேக்டவுன்)',
       description: '24x7 vehicle breakdown and recovery assistance whenever you\'re in need.',
       color: 'from-orange-500 to-orange-600',
       bgColor: 'bg-orange-50',
@@ -142,22 +146,26 @@ const Services = () => {
                   </motion.div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-primary-900 mb-3 group-hover:text-white transition-colors">
+                  <h3 className="text-xl font-bold text-primary-900 mb-1 group-hover:text-white transition-colors">
                     {service.title}
                   </h3>
+
+                  {/* Tamil Title */}
+                  <span className="text-xs font-semibold text-primary-600 group-hover:text-yellow-300 block mb-3 transition-colors">
+                    {service.tamilTitle}
+                  </span>
 
                   {/* Description */}
                   <p className="text-gray-600 leading-relaxed flex-grow group-hover:text-white/90 transition-colors">
                     {service.description}
                   </p>
 
-                  {/* Learn More Link */}
-                  <motion.div
-                    initial={{ opacity: 0, x: -10 }}
-                    whileHover={{ opacity: 1, x: 0 }}
+                  {/* Book service */}
+                  <a
+                    href="#booking"
                     className="mt-4 flex items-center space-x-2 text-primary-600 group-hover:text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity"
                   >
-                    <span>Learn more</span>
+                    <span>Book now</span>
                     <motion.svg
                       animate={{ x: [0, 5, 0] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
@@ -168,7 +176,7 @@ const Services = () => {
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </motion.svg>
-                  </motion.div>
+                  </a>
                 </div>
 
                 {/* Decorative Elements */}

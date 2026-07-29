@@ -17,8 +17,9 @@ export default {
           500: '#3b82f6',
           600: '#1e40af',
           700: '#1e3a8a',
-          800: '#1e3a8a',
+          800: '#152b68',
           900: '#0A1D56', // Deep royal blue
+          950: '#050c26', // Ultra deep midnight blue
         },
         accent: {
           500: '#FDC500', // Gold/yellow

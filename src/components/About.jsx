@@ -1,13 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Shield, Clock, Users, Award } from 'lucide-react'
+import { Shield, Clock, Users, Award, Volume2, VolumeX } from 'lucide-react'
 
 const About = () => {
   const ref = useRef(null)
   const videoRef = useRef(null)
+  const [isMuted, setIsMuted] = useState(true)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted
+      setIsMuted(!isMuted)
+    }
+  }
 
   const features = [
     {
@@ -37,7 +46,7 @@ const About = () => {
     const video = videoRef.current
     if (!video) return
 
-    const videoSrc = '/videos/about-journey.mp4'
+    const videoSrc = '/videos/samayas-owner-video.webm'
     
     // Explicitly set video source and load
     video.src = videoSrc
@@ -111,10 +120,10 @@ const About = () => {
                 ref={videoRef}
                 autoPlay
                 loop
-                muted
+                muted={isMuted}
                 playsInline
                 preload="auto"
-                className="absolute inset-0 w-full h-full object-cover z-[1]"
+                className="absolute inset-0 w-full h-full object-cover object-top z-[1]"
                 onError={(e) => {
                   const video = e.target
                   console.error('About video failed to load:', {
@@ -133,8 +142,28 @@ const About = () => {
               {/* Overlay gradient for readability - much lighter to show video clearly */}
               <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-blue-900/25 to-blue-900/35 z-[2]" />
 
-              {/* Centered Content - positioned higher */}
-              <div className="relative z-10 flex flex-col items-center justify-start pt-12 md:pt-16 h-full text-center text-white px-4">
+              {/* Sound Toggle Button */}
+              <button
+                onClick={toggleMute}
+                className="absolute top-4 right-4 z-20 flex items-center gap-2 bg-black/60 hover:bg-black/80 backdrop-blur-md text-white px-3.5 py-2 rounded-full border border-white/20 shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 group"
+                title={isMuted ? "Click to Unmute Audio" : "Click to Mute Audio"}
+                aria-label={isMuted ? "Unmute Audio" : "Mute Audio"}
+              >
+                {isMuted ? (
+                  <>
+                    <VolumeX className="w-4 h-4 text-accent-400 group-hover:scale-110 transition-transform" />
+                    <span className="text-xs font-semibold">Unmute</span>
+                  </>
+                ) : (
+                  <>
+                    <Volume2 className="w-4 h-4 text-green-400 group-hover:scale-110 transition-transform" />
+                    <span className="text-xs font-semibold text-green-400">Playing Sound</span>
+                  </>
+                )}
+              </button>
+
+              {/* Centered Content - positioned at top above video subject */}
+              <div className="relative z-10 flex flex-col items-center justify-start pt-3 md:pt-4 h-full text-center text-white px-4">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -143,7 +172,7 @@ const About = () => {
                 >
                   <motion.svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto mb-4 text-yellow-400"
+                    className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-1 text-yellow-400 drop-shadow-md"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -155,14 +184,14 @@ const About = () => {
                     <path d="M4 19.5V4.5a.5.5 0 01.74-.44L12 8l7.26-3.94A.5.5 0 0120 4.5v15a.5.5 0 01-.74.44L12 16l-7.26 3.94A.5.5 0 014 19.5z" />
                   </motion.svg>
 
-                  <motion.h2
+                  <motion.h3
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.3, duration: 0.6 }}
-                    className="text-2xl sm:text-3xl md:text-4xl font-bold drop-shadow-lg"
+                    className="text-lg sm:text-xl md:text-2xl font-bold drop-shadow-lg"
                   >
                     Your Journey, <span className="text-yellow-400">Our Priority</span>
-                  </motion.h2>
+                  </motion.h3>
                 </motion.div>
               </div>
             </section>
@@ -214,7 +243,7 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.4 }}
-              className="text-lg text-gray-700 mb-6 leading-relaxed"
+              className="text-lg text-gray-700 mb-4 leading-relaxed"
             >
               At <span className="font-semibold text-primary-700">SAMAYAS</span>, we're dedicated to providing dependable and comfortable travel experiences. Whether you need a professional acting driver, an affordable one-way taxi, or a seamless travel package, we ensure safe, punctual, and customer-friendly service every time.
             </motion.p>
@@ -222,10 +251,31 @@ const About = () => {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.45 }}
+              className="text-base text-primary-700 font-semibold mb-6 leading-relaxed"
+            >
+              ஒன் வே டாக்ஸி (ஒரு பக்க கட்டணம் மட்டும்) மற்றும் அனுபவம் வாய்ந்த ஆக்டிங் டிரைவர்கள் தேவையா? சென்னை, கோவை, மதுரை, திருச்சி உட்பட தமிழகம் முழுவதும் 24 மணி நேரமும் சிறந்த சேவையை வழங்குகிறோம்.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5 }}
-              className="text-gray-600 mb-8 leading-relaxed"
+              className="text-gray-600 mb-4 leading-relaxed"
             >
               Our commitment is to make your journey stress-free and enjoyable. With years of experience in the transportation industry, we understand what matters most to our customers – reliability, safety, and comfort.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.55 }}
+              className="text-gray-600 mb-8 leading-relaxed"
+            >
+              From airport pickups and inter-city one-way taxis to outstation acting drivers and emergency vehicle recovery, SAMAYAS serves families, professionals, and businesses across Chennai, Coimbatore, Madurai, Trichy, Salem, and throughout Tamil Nadu with transparent pricing and responsive customer support.{' '}
+              <Link to="/service-areas" className="text-primary-600 hover:text-primary-800 font-medium underline">
+                View all 38 districts →
+              </Link>
             </motion.p>
 
             {/* Feature Grid */}

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-scroll'
-import { Car, Users, Clock, Grid, ChevronDown } from 'lucide-react'
+import { Car, Users, Clock, Grid, ChevronDown, Eye, EyeOff } from 'lucide-react'
 import TariffModal from './TariffModal'
 
 const Hero = () => {
@@ -10,15 +9,24 @@ const Hero = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [activeVideo, setActiveVideo] = useState(0) // 0 or 1 for crossfade
+  const [isOverlayHidden, setIsOverlayHidden] = useState(false)
   const videoRef1 = React.useRef(null)
   const videoRef2 = React.useRef(null)
+  const bgVideoRef1 = React.useRef(null)
+  const bgVideoRef2 = React.useRef(null)
 
-  // Video playlist in sequence
+  // Video playlist in sequence (with WebM fallback)
   const videoPlaylist = [
-    '/videos/taxi-city-drive.mp4.mp4', // First video
-    '/videos/Passenger-pickup.mp4',     // Second video
-    '/videos/taxi video.mp4'            // Third video (space in filename - URL encoded automatically)
+    { mp4: '/videos/madurai-temple.webm', webm: '/videos/madurai-temple.webm' },
+    { mp4: '/videos/trichy-mainguard.webm', webm: '/videos/trichy-mainguard.webm' },
+    { mp4: '/videos/chennai-airport.webm', webm: '/videos/chennai-airport.webm' }
   ]
+
+  const getBestVideoSrc = useCallback((videoObj) => {
+    const v = document.createElement('video')
+    // WebM is preferred if browser supports it
+    return v.canPlayType('video/webm') ? videoObj.webm : videoObj.mp4
+  }, [])
 
   useEffect(() => {
     const checkMobile = () => {
@@ -32,14 +40,21 @@ const Hero = () => {
   // Handle video end - move to next video with smooth transition
   const handleVideoEnd = useCallback(() => {
     const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
-    const nextVideoSrc = videoPlaylist[nextIndex]
+    const nextVideoSrc = getBestVideoSrc(videoPlaylist[nextIndex])
     const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
+    
+    const nextBgVideoRef = activeVideo === 0 ? bgVideoRef2 : bgVideoRef1
     
     if (nextVideoRef.current) {
       // Ensure the next video source is set correctly
-      if (nextVideoRef.current.src !== nextVideoSrc) {
+      if (nextVideoRef.current.src && !nextVideoRef.current.src.includes(encodeURI(nextVideoSrc))) {
         nextVideoRef.current.src = nextVideoSrc
+        nextVideoRef.current.style.objectPosition = videoPlaylist[nextIndex].objectPosition || 'center'
         nextVideoRef.current.load()
+      }
+      if (nextBgVideoRef.current && nextBgVideoRef.current.src && !nextBgVideoRef.current.src.includes(encodeURI(nextVideoSrc))) {
+        nextBgVideoRef.current.src = nextVideoSrc
+        nextBgVideoRef.current.load()
       }
       
       // Start crossfade immediately - next video should already be loaded
@@ -51,6 +66,10 @@ const Hero = () => {
         if (nextVideoRef.current) {
           nextVideoRef.current.currentTime = 0
           nextVideoRef.current.play().catch(console.error)
+        }
+        if (nextBgVideoRef.current) {
+          nextBgVideoRef.current.currentTime = 0
+          nextBgVideoRef.current.play().catch(console.error)
         }
       }
       
@@ -78,14 +97,22 @@ const Hero = () => {
     // When video is 80% complete, start preparing next video
     if (duration && currentTime / duration > 0.8) {
       const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
-      const nextVideoSrc = videoPlaylist[nextIndex]
+      const nextVideoSrc = getBestVideoSrc(videoPlaylist[nextIndex])
       const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
       
-      if (nextVideoRef.current && nextVideoRef.current.src !== nextVideoSrc) {
+      const nextBgVideoRef = activeVideo === 0 ? bgVideoRef2 : bgVideoRef1
+      
+      if (nextVideoRef.current && (!nextVideoRef.current.src || !nextVideoRef.current.src.includes(encodeURI(nextVideoSrc)))) {
         nextVideoRef.current.src = nextVideoSrc
+        nextVideoRef.current.style.objectPosition = videoPlaylist[nextIndex].objectPosition || 'center'
         nextVideoRef.current.load()
         nextVideoRef.current.preload = 'auto'
-        
+      }
+      if (nextBgVideoRef.current && (!nextBgVideoRef.current.src || !nextBgVideoRef.current.src.includes(encodeURI(nextVideoSrc)))) {
+        nextBgVideoRef.current.src = nextVideoSrc
+        nextBgVideoRef.current.load()
+        nextBgVideoRef.current.preload = 'auto'
+      }  
         // When next video is ready, start playing it muted in background
         const handleNextReady = () => {
           if (nextVideoRef.current && nextVideoRef.current.paused) {
@@ -99,7 +126,6 @@ const Hero = () => {
           handleNextReady()
         }
       }
-    }
   }, [currentVideoIndex, activeVideo, videoPlaylist.length])
 
   // Handle video load error
@@ -127,14 +153,22 @@ const Hero = () => {
   useEffect(() => {
     if (videoRef1.current) {
       const video = videoRef1.current
-      const videoSrc = videoPlaylist[0]
+      const videoSrcObj = videoPlaylist[0]
+      const src = getBestVideoSrc(videoSrcObj)
       
-      video.src = videoSrc
+      video.src = src
+      video.style.objectPosition = videoSrcObj.objectPosition || 'center'
       video.load()
+      
+      if (bgVideoRef1.current) {
+        bgVideoRef1.current.src = src
+        bgVideoRef1.current.load()
+      }
       
       const playVideo = async () => {
         try {
           await video.play()
+          if (bgVideoRef1.current) bgVideoRef1.current.play().catch(() => {})
           setVideoError(false)
         } catch (err) {
           console.log('Autoplay prevented:', err)
@@ -146,7 +180,6 @@ const Hero = () => {
       }
       
       video.addEventListener('canplay', handleCanPlay, { once: true })
-      video.addEventListener('ended', handleVideoEnd)
       
       if (video.readyState >= 3) {
         playVideo()
@@ -168,16 +201,17 @@ const Hero = () => {
       
       return () => {
         video.removeEventListener('canplay', handleCanPlay)
-        video.removeEventListener('ended', handleVideoEnd)
       }
     }
-  }, [handleVideoEnd]) // Include handleVideoEnd in dependencies
+  }, []) // Empty dependency array to run only on mount
 
   // Preload next video immediately when current video index changes
   useEffect(() => {
     const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
-    const nextVideoSrc = videoPlaylist[nextIndex]
+    const nextVideoSrc = getBestVideoSrc(videoPlaylist[nextIndex])
     const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
+    
+    const nextBgVideoRef = activeVideo === 0 ? bgVideoRef2 : bgVideoRef1
     
     if (nextVideoRef.current) {
       // Always ensure the source is set correctly for the next video
@@ -190,6 +224,11 @@ const Hero = () => {
         nextVideoRef.current.src = nextVideoSrc
         nextVideoRef.current.load()
         nextVideoRef.current.preload = 'auto'
+        if (nextBgVideoRef.current) {
+          nextBgVideoRef.current.src = nextVideoSrc
+          nextBgVideoRef.current.load()
+          nextBgVideoRef.current.preload = 'auto'
+        }
       }
       
       // Preload and prepare next video
@@ -220,7 +259,7 @@ const Hero = () => {
     <section
       id="home"
       className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
-      style={{ minHeight: '100vh', width: '100vw' }}
+      style={{ minHeight: '115vh', width: '100vw' }}
     >
       {/* Background Video - Taxi City Drive */}
       <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
@@ -233,8 +272,9 @@ const Hero = () => {
             playsInline
             loop={false}
             preload="auto"
+            fetchpriority="high"
             className="absolute inset-0 w-full h-full object-cover z-0"
-            style={{ minHeight: '100vh', width: '100vw' }}
+            style={{ minHeight: '115vh', width: '100vw' }}
             initial={{ opacity: 1 }}
             animate={{ opacity: activeVideo === 0 ? 1 : 0 }}
             transition={{ duration: 0.8, ease: 'easeInOut' }}
@@ -259,8 +299,9 @@ const Hero = () => {
             playsInline
             loop={false}
             preload="auto"
+            fetchpriority="low"
             className="absolute inset-0 w-full h-full object-cover z-0"
-            style={{ minHeight: '100vh', width: '100vw' }}
+            style={{ minHeight: '115vh', width: '100vw' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: activeVideo === 1 ? 1 : 0 }}
             transition={{ duration: 0.8, ease: 'easeInOut' }}
@@ -295,7 +336,12 @@ const Hero = () => {
       </div>
 
       {/* Content - Hero Text Overlay */}
-      <div className="relative z-10 text-center text-white flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-10 w-full pt-20 sm:pt-0">
+      <div 
+        onClick={isOverlayHidden ? () => setIsOverlayHidden(false) : undefined}
+        className={`relative z-10 text-center text-white flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-10 w-full pt-20 sm:pt-0 transition-all duration-500 ${
+          isOverlayHidden ? 'opacity-0 pointer-events-none scale-95 cursor-pointer' : 'opacity-100 scale-100'
+        }`}
+      >
         {/* Main Content */}
         <div className="py-8 sm:py-20 w-full max-w-7xl mx-auto">
           {/* Subtitle */}
@@ -305,7 +351,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-white/90 mb-3 sm:mb-4 font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
           >
-            Your Trusted Travel Partner
+            Your Trusted Travel Partner | Reliable Rides, Anytime, Anywhere
           </motion.p>
 
           {/* Main Title */}
@@ -315,9 +361,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] px-2"
           >
-            Reliable Rides,
+            One-Way Taxi &
             <br />
-            <span className="text-accent-500 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Anytime, Anywhere.</span>
+            <span className="text-accent-500 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Acting Driver in Tamil Nadu</span>
           </motion.h1>
 
           {/* One-Way Taxi CTA Section */}
@@ -327,7 +373,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mb-8 sm:mb-12 max-w-2xl mx-auto w-full px-4"
           >
-            <div className="backdrop-blur-sm bg-black/20 rounded-2xl p-6 sm:p-8 border border-white/10 text-center">
+            <div className="backdrop-blur-md bg-black/25 hover:bg-black/35 rounded-2xl p-6 sm:p-8 border border-white/15 text-center shadow-2xl transition-all duration-300">
               {/* Badge */}
               <motion.div
                 initial={{ scale: 0 }}
@@ -358,17 +404,35 @@ const Hero = () => {
               </motion.div>
 
               {/* Primary CTA Button */}
-              <motion.button
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.9 }}
-                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(253, 197, 0, 0.4)" }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setIsModalOpen(true)}
-                className="bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 w-full sm:w-auto mx-auto"
-              >
-                Tariff Details
-              </motion.button>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <motion.a
+                  href="#booking"
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.85 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-xl transition-all duration-300 w-full sm:w-auto"
+                >
+                  Book Now
+                </motion.a>
+                <motion.button
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.9 }}
+                  whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(253, 197, 0, 0.4)" }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setIsModalOpen(true)}
+                  className="bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 w-full sm:w-auto"
+                >
+                  Tariff Details
+                </motion.button>
+              </div>
+
+              {/* Bilingual SEO Subtext */}
+              <p className="mt-4 text-xs sm:text-sm text-accent-400 font-semibold leading-relaxed">
+                தமிழ்நாடு முழுவதும் 24/7 சிறந்த ஒன்-வே டாக்ஸி மற்றும் ஆக்டிங் டிரைவர் சேவை.
+              </p>
             </div>
           </motion.div>
 
@@ -386,7 +450,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.3 + index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="backdrop-blur-sm bg-black/20 rounded-xl p-4 sm:p-6 border border-white/10"
+                className="backdrop-blur-md bg-black/25 hover:bg-black/35 rounded-xl p-4 sm:p-6 border border-white/15 shadow-xl transition-all duration-300"
               >
                 <motion.div
                   animate={{ 
@@ -414,14 +478,37 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Floating Watch Video / Toggle Overlay Button */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.2, duration: 0.5 }}
+        onClick={() => setIsOverlayHidden(!isOverlayHidden)}
+        className="fixed top-20 right-4 sm:top-28 sm:right-8 z-30 flex items-center gap-2 bg-black/50 hover:bg-black/80 backdrop-blur-md text-white px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-full border border-white/20 shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 group"
+        aria-label={isOverlayHidden ? "Show Overlay Text" : "Watch Full Video"}
+        title={isOverlayHidden ? "Show Overlay Text" : "Watch Full Video"}
+      >
+        {isOverlayHidden ? (
+          <>
+            <Eye className="w-4 h-4 text-accent-400 group-hover:rotate-12 transition-transform" />
+            <span className="text-xs font-semibold tracking-wide">Show Text</span>
+          </>
+        ) : (
+          <>
+            <EyeOff className="w-4 h-4 text-accent-400 group-hover:-rotate-12 transition-transform" />
+            <span className="text-xs font-semibold tracking-wide">Watch Video</span>
+          </>
+        )}
+      </motion.button>
+
       {/* Floating Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+        animate={{ opacity: isOverlayHidden ? 0 : 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10 pointer-events-auto"
       >
-        <Link to="about" smooth={true} duration={800} offset={-100}>
+        <a href="#about" aria-label="Scroll to about section">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -435,7 +522,7 @@ const Hero = () => {
               <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-accent-500" />
             </motion.div>
           </motion.div>
-        </Link>
+        </a>
       </motion.div>
 
       {/* Tariff Modal */}

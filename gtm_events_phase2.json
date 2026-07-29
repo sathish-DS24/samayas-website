@@ -1,0 +1,1067 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-07-26T17:45:52.474Z",
+  "containerVersion": {
+    "path": "accounts/6367974756/containers/259373329/versions/0",
+    "accountId": "6367974756",
+    "containerId": "259373329",
+    "containerVersionId": "0",
+    "name": "Samayas React GA4 Events (Phase 2)",
+    "container": {
+      "path": "accounts/6367974756/containers/259373329",
+      "accountId": "6367974756",
+      "containerId": "259373329",
+      "name": "samayasorg.in",
+      "publicId": "GTM-T554CF73",
+      "usageContext": [
+        "WEB"
+      ],
+      "fingerprint": "1784974316912",
+      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6367974756/containers/259373329/workspaces?apiLink=container",
+      "features": {
+        "supportUserPermissions": true,
+        "supportEnvironments": true,
+        "supportWorkspaces": true,
+        "supportGtagConfigs": false,
+        "supportBuiltInVariables": true,
+        "supportClients": false,
+        "supportFolders": true,
+        "supportTags": true,
+        "supportTemplates": true,
+        "supportTriggers": true,
+        "supportVariables": true,
+        "supportVersions": true,
+        "supportZones": true,
+        "supportTransformations": false
+      },
+      "tagIds": [
+        "GTM-T554CF73"
+      ]
+    },
+    "tag": [
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "400",
+        "name": "GA4 Event - booking_started",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "booking_started"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "300"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "401",
+        "name": "GA4 Event - trip_type_selected",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "trip_type_selected"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "301"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "402",
+        "name": "GA4 Event - fare_calculated",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "fare_calculated"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "302"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "403",
+        "name": "GA4 Event - booking_submit",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "booking_submit"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "303"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "404",
+        "name": "GA4 Event - booking_completed",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "booking_completed"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "304"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "405",
+        "name": "GA4 Event - whatsapp_click",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "whatsapp_click"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "305"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "406",
+        "name": "GA4 Event - phone_click",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "phone_click"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "306"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "407",
+        "name": "GA4 Event - social_click",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "social_click"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "307"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "408",
+        "name": "GA4 Event - cta_clicked",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "cta_clicked"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "308"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "409",
+        "name": "GA4 Event - faq_expand",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "faq_expand"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "309"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "410",
+        "name": "GA4 Event - booking_failed",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "booking_failed"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "310"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "411",
+        "name": "GA4 Event - error",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "error"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "311"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "412",
+        "name": "GA4 Event - virtual_page_view",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "virtual_page_view"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "312"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "413",
+        "name": "GA4 Event - pickup_selected",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "pickup_selected"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "313"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "414",
+        "name": "GA4 Event - destination_selected",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "destination_selected"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "314"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "415",
+        "name": "GA4 Event - vehicle_selected",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "vehicle_selected"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "315"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "416",
+        "name": "GA4 Event - route_search",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "route_search"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "316"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "417",
+        "name": "GA4 Event - travel_date_selected",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "travel_date_selected"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "317"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "418",
+        "name": "GA4 Event - return_date_selected",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "return_date_selected"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "318"
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "tagId": "419",
+        "name": "GA4 Event - booking_abandoned",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "booking_abandoned"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-T35E4KPLTT"
+          }
+        ],
+        "firingTriggerId": [
+          "319"
+        ]
+      }
+    ],
+    "trigger": [
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "300",
+        "name": "CE - booking_started",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "booking_started"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "301",
+        "name": "CE - trip_type_selected",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "trip_type_selected"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "302",
+        "name": "CE - fare_calculated",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "fare_calculated"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "303",
+        "name": "CE - booking_submit",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "booking_submit"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "304",
+        "name": "CE - booking_completed",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "booking_completed"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "305",
+        "name": "CE - whatsapp_click",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "whatsapp_click"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "306",
+        "name": "CE - phone_click",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "phone_click"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "307",
+        "name": "CE - social_click",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "social_click"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "308",
+        "name": "CE - cta_clicked",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "cta_clicked"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "309",
+        "name": "CE - faq_expand",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "faq_expand"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "310",
+        "name": "CE - booking_failed",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "booking_failed"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "311",
+        "name": "CE - error",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "error"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "312",
+        "name": "CE - virtual_page_view",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "virtual_page_view"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "313",
+        "name": "CE - pickup_selected",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "pickup_selected"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "314",
+        "name": "CE - destination_selected",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "destination_selected"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "315",
+        "name": "CE - vehicle_selected",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "vehicle_selected"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "316",
+        "name": "CE - route_search",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "route_search"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "317",
+        "name": "CE - travel_date_selected",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "travel_date_selected"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "318",
+        "name": "CE - return_date_selected",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "return_date_selected"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6367974756",
+        "containerId": "259373329",
+        "triggerId": "319",
+        "name": "CE - booking_abandoned",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "booking_abandoned"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "variable": []
+  }
+}

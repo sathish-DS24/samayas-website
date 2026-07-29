@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Link } from 'react-scroll'
 import { Facebook, Instagram, MessageCircle, Mail, Phone, ArrowUp, Heart } from 'lucide-react'
 
 const Footer = () => {
+  const location = useLocation()
+  const hashBase = location.pathname === '/' ? '' : '/'
   const scrollToTop = () => {
     window.scrollTo({ 
       top: 0, 
@@ -16,6 +18,7 @@ const Footer = () => {
     { name: 'Home', to: 'home' },
     { name: 'About', to: 'about' },
     { name: 'Services', to: 'services' },
+    { name: 'Service Areas', to: '/service-areas', isRoute: true },
     { name: 'Contact', to: 'contact' },
     { name: 'Book Now', to: 'booking' }
   ]
@@ -66,7 +69,7 @@ const Footer = () => {
               className="flex items-center space-x-3 mb-6"
             >
               <img 
-                src="/logo.png" 
+                src="/logo.webp" 
                 alt="SAMAYAS Logo" 
                 className="w-24 h-24 object-contain"
               />
@@ -84,6 +87,17 @@ const Footer = () => {
                   href={social.link}
                   target={social.link.startsWith('http') ? '_blank' : '_self'}
                   rel={social.link.startsWith('http') ? 'noopener noreferrer' : ''}
+                  aria-label={`Follow SAMAYAS on ${social.link.includes('facebook') ? 'Facebook' : social.link.includes('instagram') ? 'Instagram' : 'WhatsApp'}`}
+                  onClick={() => {
+                    import('../utils/analytics').then(({ trackEvent, trackAdsConversion }) => {
+                      if (social.link.includes('facebook') || social.link.includes('instagram')) {
+                        trackEvent('social_click', { platform: social.link.includes('facebook') ? 'facebook' : 'instagram' })
+                      } else {
+                        trackEvent('whatsapp_click')
+                        trackAdsConversion('whatsapp_click')
+                      }
+                    })
+                  }}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
                   className={`w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center transition-colors ${social.color}`}
@@ -104,16 +118,23 @@ const Footer = () => {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Link
-                    to={link.to}
-                    smooth={true}
-                    duration={800}
-                    offset={-100}
-                    className="text-gray-300 hover:text-accent-400 transition-colors cursor-pointer flex items-center space-x-2"
-                  >
-                    <span className="w-1.5 h-1.5 bg-accent-400 rounded-full"></span>
-                    <span>{link.name}</span>
-                  </Link>
+                  {link.isRoute ? (
+                    <Link
+                      to={link.to}
+                      className="text-gray-300 hover:text-accent-400 transition-colors cursor-pointer flex items-center space-x-2"
+                    >
+                      <span className="w-1.5 h-1.5 bg-accent-400 rounded-full"></span>
+                      <span>{link.name}</span>
+                    </Link>
+                  ) : (
+                    <a
+                      href={`${hashBase}#${link.to}`}
+                      className="text-gray-300 hover:text-accent-400 transition-colors cursor-pointer flex items-center space-x-2"
+                    >
+                      <span className="w-1.5 h-1.5 bg-accent-400 rounded-full"></span>
+                      <span>{link.name}</span>
+                    </a>
+                  )}
                 </motion.li>
               ))}
             </ul>
@@ -128,10 +149,14 @@ const Footer = () => {
                   key={index}
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
-                  className="text-gray-300 hover:text-accent-400 transition-colors flex items-center space-x-2"
                 >
-                  <span className="w-1.5 h-1.5 bg-accent-400 rounded-full"></span>
-                  <span>{service}</span>
+                  <a
+                    href={`${hashBase}#services`}
+                    className="text-gray-300 hover:text-accent-400 transition-colors flex items-center space-x-2"
+                  >
+                    <span className="w-1.5 h-1.5 bg-accent-400 rounded-full"></span>
+                    <span>{service}</span>
+                  </a>
                 </motion.li>
               ))}
             </ul>
@@ -144,11 +169,15 @@ const Footer = () => {
               <li className="flex items-start space-x-3 text-gray-300">
                 <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 text-accent-400" />
                 <div>
-                  <a href="tel:+919894809439" className="hover:text-accent-400 transition-colors">
+                  <a href="tel:+919894809439" 
+                    onClick={() => import('../utils/analytics').then(({ trackEvent, trackAdsConversion }) => { trackEvent('phone_click'); trackAdsConversion('phone_click'); })}
+                    className="hover:text-accent-400 transition-colors">
                     +91 98948 09439
                   </a>
                   <br />
-                  <a href="tel:+917010788781" className="hover:text-accent-400 transition-colors">
+                  <a href="tel:+917010788781" 
+                    onClick={() => import('../utils/analytics').then(({ trackEvent, trackAdsConversion }) => { trackEvent('phone_click'); trackAdsConversion('phone_click'); })}
+                    className="hover:text-accent-400 transition-colors">
                     +91 70107 88781
                   </a>
                 </div>
@@ -196,6 +225,7 @@ const Footer = () => {
       {/* Back to Top Button */}
       <motion.button
         onClick={scrollToTop}
+        aria-label="Scroll to top of page"
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-accent-500 to-accent-600 text-white rounded-full shadow-2xl flex items-center justify-center z-50 hover:shadow-accent-500/50 transition-all"

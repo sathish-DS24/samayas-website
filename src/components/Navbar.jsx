@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import { Link } from 'react-scroll'
 
-const Navbar = () => {
+const Navbar = ({ variant = 'home' }) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const location = useLocation()
+  const isHome = location.pathname === '/'
+  const hashBase = isHome ? '' : '/'
 
-  // Handle scroll effect
+  const showSolidBg = variant === 'inner' || isScrolled
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -17,12 +21,21 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false)
+  }, [location.pathname])
+
   const navLinks = [
-    { name: 'Home', to: 'home' },
-    { name: 'About', to: 'about' },
-    { name: 'Services', to: 'services' },
-    { name: 'Contact', to: 'contact' },
+    { name: 'Home', href: isHome ? '#home' : '/' },
+    { name: 'About', href: `${hashBase}#about` },
+    { name: 'Services', href: `${hashBase}#services` },
+    { name: 'Service Areas', href: '/service-areas', isRoute: true },
+    { name: 'Contact', href: `${hashBase}#contact` },
   ]
+
+  const linkClass = `cursor-pointer font-medium transition-colors duration-300 hover:text-accent-500 ${
+    showSolidBg ? 'text-gray-700' : 'text-white'
+  }`
 
   return (
     <motion.nav
@@ -30,27 +43,21 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        showSolidBg
           ? 'bg-white/95 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer"
-          >
+          <Link to="/" className="cursor-pointer">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="flex items-center space-x-3"
             >
-              <img 
-                src="/logo.png" 
-                alt="SAMAYAS Logo" 
+              <img
+                src="/logo.webp"
+                alt="SAMAYAS Logo"
                 className="w-20 h-20 object-contain"
               />
               <span className="text-3xl font-bold" style={{ color: '#D4AF37' }}>
@@ -59,39 +66,35 @@ const Navbar = () => {
             </motion.div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.to}
-                smooth={true}
-                duration={800}
-                spy={true}
-                offset={-100}
-                className={`cursor-pointer font-medium transition-colors duration-300 hover:text-accent-500 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Link to="booking" smooth={true} duration={800} offset={-100}>
+          <div className="hidden lg:flex items-center space-x-6">
+            {navLinks.map((link) =>
+              link.isRoute ? (
+                <Link key={link.name} to={link.href} className={linkClass}>
+                  {link.name}
+                </Link>
+              ) : (
+                <a key={link.name} href={link.href} className={linkClass}>
+                  {link.name}
+                </a>
+              )
+            )}
+            <a href={`${hashBase}#booking`}>
               <motion.button
+                onClick={() => import('../utils/analytics').then(({ trackEvent }) => trackEvent('cta_clicked', { button_name: 'Navbar Book Now' }))}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-shadow"
               >
                 Book Now
               </motion.button>
-            </Link>
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
-              isScrolled ? 'text-gray-700' : 'text-white'
+            aria-label="Toggle navigation menu"
+            className={`lg:hidden p-2 rounded-lg transition-colors ${
+              showSolidBg ? 'text-gray-700' : 'text-white'
             }`}
           >
             {isMobileMenuOpen ? (
@@ -103,41 +106,47 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-200 shadow-lg"
+            className="lg:hidden bg-white border-t border-gray-200 shadow-lg"
           >
             <div className="px-4 py-4 space-y-3">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.to}
-                  smooth={true}
-                  duration={800}
-                  spy={true}
-                  offset={-100}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors cursor-pointer font-medium"
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <Link
-                to="booking"
-                smooth={true}
-                duration={800}
-                offset={-100}
-                onClick={() => setIsMobileMenuOpen(false)}
+              {navLinks.map((link) =>
+                link.isRoute ? (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors cursor-pointer font-medium"
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors cursor-pointer font-medium"
+                  >
+                    {link.name}
+                  </a>
+                )
+              )}
+              <a
+                href={`${hashBase}#booking`}
+                onClick={() => {
+                  setIsMobileMenuOpen(false)
+                  import('../utils/analytics').then(({ trackEvent }) => trackEvent('cta_clicked', { button_name: 'Mobile Navbar Book Now' }))
+                }}
               >
                 <button className="w-full px-6 py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-lg shadow-md">
                   Book Now
                 </button>
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}
@@ -147,4 +156,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-

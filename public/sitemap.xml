@@ -343,6 +343,18 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://samayasorg.in/one-way-taxi/chennai-to-nagapattinam</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/nagapattinam-to-chennai</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://samayasorg.in/one-way-taxi/trichy-to-madurai</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -463,6 +475,18 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://samayasorg.in/one-way-taxi/coimbatore-to-pollachi</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/pollachi-to-coimbatore</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://samayasorg.in/one-way-taxi/salem-to-erode</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -470,54 +494,6 @@
   </url>
   <url>
     <loc>https://samayasorg.in/one-way-taxi/erode-to-salem</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/coimbatore-to-ooty</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/ooty-to-coimbatore</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/madurai-to-rameswaram</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/rameswaram-to-madurai</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/madurai-to-kodaikanal</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/kodaikanal-to-madurai</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/chennai-to-pondicherry</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/pondicherry-to-chennai</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -535,13 +511,109 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://samayasorg.in/one-way-taxi/madurai-to-kanyakumari</loc>
+    <loc>https://samayasorg.in/one-way-taxi/trichy-to-kumbakonam</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://samayasorg.in/one-way-taxi/kanyakumari-to-madurai</loc>
+    <loc>https://samayasorg.in/one-way-taxi/kumbakonam-to-trichy</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/trichy-to-chidambaram</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/chidambaram-to-trichy</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/madurai-to-rameswaram</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/rameswaram-to-madurai</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/madurai-to-tiruchendur</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/tiruchendur-to-madurai</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/chennai-to-kanchipuram</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/kanchipuram-to-chennai</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/chennai-to-chidambaram</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/chidambaram-to-chennai</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/coimbatore-to-ooty</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/ooty-to-coimbatore</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/coimbatore-to-coonoor</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/coonoor-to-coimbatore</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/coimbatore-to-valparai</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/valparai-to-coimbatore</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -559,13 +631,49 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://samayasorg.in/one-way-taxi/tirunelveli-to-kanyakumari</loc>
+    <loc>https://samayasorg.in/one-way-taxi/madurai-to-kodaikanal</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://samayasorg.in/one-way-taxi/kanyakumari-to-tirunelveli</loc>
+    <loc>https://samayasorg.in/one-way-taxi/kodaikanal-to-madurai</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/madurai-to-kanyakumari</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/kanyakumari-to-madurai</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/madurai-to-courtallam</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/courtallam-to-madurai</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/chennai-to-pondicherry</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/pondicherry-to-chennai</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -583,25 +691,13 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://samayasorg.in/one-way-taxi/coimbatore-to-kodaikanal</loc>
+    <loc>https://samayasorg.in/one-way-taxi/tirunelveli-to-kanyakumari</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://samayasorg.in/one-way-taxi/kodaikanal-to-coimbatore</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/madurai-to-courtallam</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/courtallam-to-madurai</loc>
+    <loc>https://samayasorg.in/one-way-taxi/kanyakumari-to-tirunelveli</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -631,6 +727,54 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://samayasorg.in/one-way-taxi/chennai-airport-to-tirupati</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/tirupati-to-chennai-airport</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/chennai-airport-to-mahabalipuram</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/mahabalipuram-to-chennai-airport</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/chennai-airport-to-kanchipuram</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/kanchipuram-to-chennai-airport</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/chennai-airport-to-chittoor</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/chittoor-to-chennai-airport</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://samayasorg.in/one-way-taxi/trichy-airport-to-thanjavur</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -638,6 +782,18 @@
   </url>
   <url>
     <loc>https://samayasorg.in/one-way-taxi/thanjavur-to-trichy-airport</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/trichy-airport-to-karur</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://samayasorg.in/one-way-taxi/karur-to-trichy-airport</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -674,30 +830,6 @@
   </url>
   <url>
     <loc>https://samayasorg.in/one-way-taxi/ooty-to-coimbatore-airport</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/trichy-airport-to-karur</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/karur-to-trichy-airport</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/chennai-airport-to-kanchipuram</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://samayasorg.in/one-way-taxi/kanchipuram-to-chennai-airport</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>

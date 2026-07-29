@@ -11,15 +11,17 @@ const RouteIndexPage = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedFilter, setSelectedFilter] = useState('all')
 
-  // Build merged routes array
-  const allRoutes = routesList.map((r) => {
-    const detail = routeContent[r.slug] || {}
-    return {
-      ...r,
-      ...detail,
-      url: getRouteUrl(r.slug),
-    }
-  })
+  // Build merged routes array sorted by popularity
+  const allRoutes = routesList
+    .map((r) => {
+      const detail = routeContent[r.slug] || {}
+      return {
+        ...r,
+        ...detail,
+        url: getRouteUrl(r.slug),
+      }
+    })
+    .sort((a, b) => (b.popularity || 0) - (a.popularity || 0))
 
   // Filter logic
   const filteredRoutes = allRoutes.filter((r) => {
@@ -31,14 +33,7 @@ const RouteIndexPage = () => {
     if (!matchesSearch) return false
 
     if (selectedFilter === 'all') return true
-    if (selectedFilter === 'chennai') return r.from.toLowerCase().includes('chennai')
-    if (selectedFilter === 'trichy') return r.from.toLowerCase().includes('trichy')
-    if (selectedFilter === 'madurai') return r.from.toLowerCase().includes('madurai')
-    if (selectedFilter === 'coimbatore') return r.from.toLowerCase().includes('coimbatore')
-    if (selectedFilter === 'airports') return r.from.toLowerCase().includes('airport') || r.to.toLowerCase().includes('airport')
-    if (selectedFilter === 'tourist') return ['ooty', 'pondicherry', 'rameswaram', 'kodaikanal'].some(t => r.to.toLowerCase().includes(t))
-
-    return true
+    return r.category === selectedFilter
   })
 
   // SEO Setup
@@ -110,15 +105,14 @@ const RouteIndexPage = () => {
             </div>
 
             {/* Quick Category Filter Pills */}
-            <div className="flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto">
+            <div className="flex flex-wrap items-center justify-center gap-2 max-w-4xl mx-auto">
               {[
                 { id: 'all', label: 'All Routes' },
-                { id: 'chennai', label: 'From Chennai' },
-                { id: 'trichy', label: 'From Trichy' },
-                { id: 'madurai', label: 'From Madurai' },
-                { id: 'coimbatore', label: 'From Coimbatore' },
-                { id: 'airports', label: 'Airport Cabs' },
-                { id: 'tourist', label: 'Tourist & Hill Routes' },
+                { id: 'City', label: 'Major Cities' },
+                { id: 'Airport', label: 'Airport Routes' },
+                { id: 'Tourist', label: 'Tourist Routes' },
+                { id: 'Temple', label: 'Temple & Pilgrimage' },
+                { id: 'Interstate', label: 'Interstate Routes' },
               ].map((tab) => (
                 <button
                   key={tab.id}

@@ -11,6 +11,7 @@ const today = new Date().toISOString().split('T')[0]
 const urls = [
   { loc: `${SITE_URL}/`, priority: '1.0', changefreq: 'weekly' },
   { loc: `${SITE_URL}/service-areas`, priority: '0.9', changefreq: 'weekly' },
+  { loc: `${SITE_URL}/one-way-taxi`, priority: '0.9', changefreq: 'weekly' },
   ...districts.map((d) => ({
     loc: `${SITE_URL}/one-way-taxi-${d.slug}`,
     priority: '0.8',

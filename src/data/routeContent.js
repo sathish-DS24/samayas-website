@@ -1,6 +1,10 @@
 export const routeContent = {
   'trichy-to-chennai': {
     from: 'Trichy',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-to-trichy',
+    popularFor: ["Business Travel","Airport Transfer","Family Trips","Medical Appointments"],
     to: 'Chennai',
     distanceKm: 330,
     timeHours: 5.5,
@@ -95,6 +99,10 @@ export const routeContent = {
 
   'chennai-to-trichy': {
     from: 'Chennai',
+    fromSlug: 'chennai',
+    toSlug: 'tiruchirappalli',
+    returnRouteSlug: 'trichy-to-chennai',
+    popularFor: ["Home & Family Visits","Airport Pickups","Temple Pilgrimage","Corporate Travel"],
     to: 'Trichy',
     distanceKm: 330,
     timeHours: 5.5,
@@ -171,6 +179,10 @@ export const routeContent = {
 
   'coimbatore-to-ooty': {
     from: 'Coimbatore',
+    fromSlug: 'coimbatore',
+    toSlug: 'nilgiris',
+    returnRouteSlug: null,
+    popularFor: ["Hill Station Resort Stay","Tourism & Honeymoon","Tea Garden Tours","Family Vacations"],
     to: 'Ooty',
     distanceKm: 85,
     timeHours: 2.75,
@@ -244,6 +256,10 @@ export const routeContent = {
 
   'madurai-to-rameswaram': {
     from: 'Madurai',
+    fromSlug: 'madurai',
+    toSlug: 'ramanathapuram',
+    returnRouteSlug: null,
+    popularFor: ["Sacred Temple Pilgrimage","Agni Theertham Visit","Dhanushkodi Tour","Family Trips"],
     to: 'Rameshwaram',
     distanceKm: 175,
     timeHours: 3.5,
@@ -316,6 +332,10 @@ export const routeContent = {
 
   'chennai-airport-to-pondicherry': {
     from: 'Chennai Airport',
+    fromSlug: 'chennai',
+    toSlug: 'viluppuram',
+    returnRouteSlug: null,
+    popularFor: ["Auroville Retreat","Airport Pickup Transfer","Beach Weekend","Corporate Getaway"],
     to: 'Puducherry',
     distanceKm: 140,
     timeHours: 2.75,
@@ -388,6 +408,10 @@ export const routeContent = {
 
   'trichy-to-madurai': {
     from: 'Trichy',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'madurai',
+    returnRouteSlug: null,
+    popularFor: ["Airport Connection","Temple Pilgrimage","Business Visits","Family Trips"],
     to: 'Madurai',
     distanceKm: 135,
     timeHours: 2.25,
@@ -459,6 +483,10 @@ export const routeContent = {
 
   'salem-to-bengaluru': {
     from: 'Salem',
+    fromSlug: 'salem',
+    toSlug: 'krishnagiri',
+    returnRouteSlug: null,
+    popularFor: ["IT & Corporate Travel","Interstate Transit","BLR Airport Drops","Business Meetings"],
     to: 'Bengaluru',
     distanceKm: 205,
     timeHours: 3.75,
@@ -531,6 +559,10 @@ export const routeContent = {
 
   'chennai-to-pondicherry': {
     from: 'Chennai',
+    fromSlug: 'chennai',
+    toSlug: 'viluppuram',
+    returnRouteSlug: 'chennai-airport-to-pondicherry',
+    popularFor: ["ECR Scenic Roadtrip","Weekend Getaway","Auroville Retreat","Beach Tourism"],
     to: 'Puducherry',
     distanceKm: 160,
     timeHours: 3.25,
@@ -602,6 +634,10 @@ export const routeContent = {
 
   'tirunelveli-to-kanyakumari': {
     from: 'Tirunelveli',
+    fromSlug: 'tirunelveli',
+    toSlug: 'kanyakumari',
+    returnRouteSlug: null,
+    popularFor: ["Sunset & Sunrise Tour","Vivekananda Rock Visit","Coastal Pilgrimage","Day Trips"],
     to: 'Kanyakumari',
     distanceKm: 85,
     timeHours: 1.75,
@@ -673,6 +709,10 @@ export const routeContent = {
 
   'vellore-to-chennai': {
     from: 'Vellore',
+    fromSlug: 'vellore',
+    toSlug: 'chennai',
+    returnRouteSlug: null,
+    popularFor: ["CMC Medical Transfer","MAA Airport Drop","Golden Temple Trip","Corporate Commute"],
     to: 'Chennai',
     distanceKm: 140,
     timeHours: 2.75,
@@ -744,6 +784,10 @@ export const routeContent = {
 
   'trichy-to-bengaluru': {
     from: 'Trichy',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'krishnagiri',
+    returnRouteSlug: null,
+    popularFor: ["Interstate Travel","BLR Airport Drop","IT Commute","Family Trips"],
     to: 'Bengaluru',
     distanceKm: 345,
     timeHours: 6.25,
@@ -816,6 +860,10 @@ export const routeContent = {
 
   'coimbatore-to-bengaluru': {
     from: 'Coimbatore',
+    fromSlug: 'coimbatore',
+    toSlug: 'krishnagiri',
+    returnRouteSlug: null,
+    popularFor: ["Industrial & IT Travel","BLR Airport Transfer","Interstate Route","Business Visits"],
     to: 'Bengaluru',
     distanceKm: 365,
     timeHours: 6.5,

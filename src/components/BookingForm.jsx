@@ -7,7 +7,7 @@ import MapPickerModal from './MapPickerModal'
 import { getRoadDistance, getRouteInfo, reverseGeocode, getCurrentGPSLocation } from '../utils/googleMaps'
 import { trackEvent, trackBookingEvent, trackAdsConversion, debounceEvent } from '../utils/analytics'
 
-const BookingForm = ({ defaultPickup = '' }) => {
+const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '', initialDrop = '' }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -22,6 +22,9 @@ const BookingForm = ({ defaultPickup = '' }) => {
 
   const [activeTab, setActiveTab] = useState('oneway') // 'oneway', 'roundtrip', or 'other'
   
+  const pickupVal = initialPickup || defaultPickup || ''
+  const dropVal = initialDrop || defaultDrop || ''
+
   // GPS & Map Modal States
   const [isGpsLoading, setIsGpsLoading] = useState({ pickup: false, drop: false })
   const [mapModalConfig, setMapModalConfig] = useState({
@@ -34,8 +37,8 @@ const BookingForm = ({ defaultPickup = '' }) => {
   
   // One-Way Taxi form data
   const [oneWayData, setOneWayData] = useState({
-    pickupLocation: '',
-    dropLocation: '',
+    pickupLocation: pickupVal,
+    dropLocation: dropVal,
     date: '',
     time: '',
     timePeriod: 'AM',
@@ -44,6 +47,17 @@ const BookingForm = ({ defaultPickup = '' }) => {
     phone: '',
     comments: ''
   })
+
+  // Synchronize if props change dynamically
+  useEffect(() => {
+    if (pickupVal || dropVal) {
+      setOneWayData(prev => ({
+        ...prev,
+        pickupLocation: pickupVal || prev.pickupLocation,
+        dropLocation: dropVal || prev.dropLocation,
+      }))
+    }
+  }, [initialPickup, defaultPickup, initialDrop, defaultDrop])
 
   // Round Trip form data
   const [roundTripData, setRoundTripData] = useState({

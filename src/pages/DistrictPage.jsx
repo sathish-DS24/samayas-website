@@ -154,7 +154,7 @@ const DistrictPage = () => {
         {
           '@type': 'ListItem',
           position: 3,
-          name: `One-Way Taxi ${shortName}`,
+          name: `${district.name} Taxi Service`,
           item: `${SITE_URL}${getDistrictUrl(district.slug)}`,
         },
       ],
@@ -219,7 +219,7 @@ const DistrictPage = () => {
   const breadcrumbItems = [
     { label: 'Home', to: '/' },
     { label: 'Service Areas', to: '/service-areas' },
-    { label: `One-Way Taxi ${shortName}`, to: getDistrictUrl(district.slug) },
+    { label: `${district.name} Taxi Service`, to: getDistrictUrl(district.slug) },
   ]
 
   // ─────────── RENDER ───────────

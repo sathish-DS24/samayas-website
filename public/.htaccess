@@ -22,6 +22,10 @@
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+  # 301 Permanent Redirects for legacy district URLs to /service-areas/[districtSlug]
+  RewriteRule ^one-way-taxi-(.*)$ /service-areas/$1 [R=301,L]
+  RewriteRule ^(ariyalur|chengalpattu|chennai|coimbatore|cuddalore|dharmapuri|dindigul|erode|kallakurichi|kanchipuram|kanyakumari|karur|krishnagiri|madurai|mayiladuthurai|nagapattinam|namakkal|nilgiris|perambalur|pudukkottai|ramanathapuram|ranipet|salem|sivaganga|tenkasi|thanjavur|theni|thoothukudi|tiruchirappalli|tirunelveli|tirupattur|tiruppur|tiruvallur|tiruvannamalai|tiruvarur|vellore|viluppuram|virudhunagar)$ /service-areas/$1 [R=301,L]
+
   # Don't rewrite files or directories
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

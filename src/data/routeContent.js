@@ -1,938 +1,7364 @@
 export const routeContent = {
   'trichy-to-chennai': {
     from: 'Trichy',
+    to: 'Chennai',
     fromSlug: 'tiruchirappalli',
     toSlug: 'chennai',
     returnRouteSlug: 'chennai-to-trichy',
-    popularFor: ["Business Travel","Airport Transfer","Family Trips","Medical Appointments"],
-    to: 'Chennai',
     distanceKm: 330,
     timeHours: 5.5,
     distanceDisplay: '330 km',
     durationDisplay: '5.5 Hours',
-    heroTagline: 'Affordable One-Way Taxi from Trichy to Chennai. Doorstep pickup, transparent pricing, and 24/7 service.',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Trichy to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
     seoTitle: 'Trichy to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book Trichy to Chennai one-way taxi with SAMAYAS. Hatchback from ₹3,300, Sedan ₹3,960, SUV ₹5,280. Doorstep pickup across Trichy to Chennai Airport & city drops. 24/7 service.',
-    
+    metaDescription: 'Book one-way taxi from Trichy to Chennai with SAMAYAS. Hatchback from ₹3,300, Sedan ₹3,960, SUV ₹5,280. 24/7 doorstep pickups.',
     fare: {
-      hatchback: 3300,
-      sedan: 3960,
-      suv: 5280,
-      innova: 6270,
-      traveller: 9900,
-    },
-    
-    highways: ['NH38 (Trichy-Ulundurpet)', 'NH45 (GST Road)', 'NH32'],
-    
+      "hatchback": 3300,
+      "sedan": 3960,
+      "suv": 5280,
+      "innova": 6270,
+      "traveller": 9900
+},
+    highways: ["NH38","NH45 GST Road"],
     tolls: {
       costRange: '₹420 - ₹520',
       plazasCount: 4,
       fastagSupported: true,
       cashAccepted: true,
-      note: 'Toll plaza charges extra where applicable.',
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
     },
-    
     pickupLocations: [
-      'Rockfort / Teppakulam',
-      'Srirangam Temple Gate',
-      'Trichy International Airport (TRZ)',
-      'Trichy Railway Junction (TPJ)',
-      'KK Nagar & TVS Tolgate',
-      'Thillai Nagar & Main Guard Gate',
-      'Cantonment & Central Bus Stand',
-      'Woraiyur & Vayalur Road',
+      'Trichy Central City / Main Junction',
+      'Trichy Railway Station & Bus Stand',
+      'Trichy Residential Areas & Hotels',
+      'Trichy Suburbs & Outer Ring Gates',
     ],
-    
     dropLocations: [
-      'T. Nagar & Central Business District',
-      'OMR IT Corridor (Navalur, Sholinganallur)',
-      'Guindy & Kathipara Junction',
-      'Velachery & Perungudi',
-      'Anna Nagar & Koyambedu CMBT',
-      'Porur & Ramachandra Hospital',
-      'Tambaram & Perungalathur',
-      'Chennai International Airport (MAA)',
+      'Chennai City Center & Main Commercial Hub',
+      'Chennai Railway Station & Transit Terminals',
+      'Chennai Hotels, Resorts & Residential Hubs',
+      'Chennai Airport / Highway Junction Drops',
     ],
-    
     placesOnTheWay: [
-      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across all residential & commercial zones.' },
-      { name: 'Perambalur', type: 'Rest Stop', desc: 'Major highway rest stop with clean restrooms and multi-cuisine restaurants.' },
-      { name: 'Ulundurpet', type: 'Junction Stop', desc: 'NH-45 & NH-79 interchange; popular for authentic South Indian breakfast.' },
-      { name: 'Viluppuram', type: 'Fuel & Refreshment', desc: 'Highway fuel stations, tea stalls, and brief relaxation stops.' },
-      { name: 'Tindivanam', type: 'Food Stop', desc: 'Highway food plaza featuring popular dining chains and fresh coffee.' },
-      { name: 'Chengalpattu', type: 'Outer Gateway', desc: 'Gateway to Chennai suburban zone and Mahindra World City.' },
-      { name: 'Chennai', type: 'Destination', desc: 'Final destination — direct drop to any home, office, hotel, or airport.' },
+      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
     ],
-    
     faqs: [
       {
-        q: 'How much is the one-way taxi fare from Trichy to Chennai?',
-        a: 'The one-way taxi fare from Trichy to Chennai starts at ₹3,300 for a Hatchback, ₹3,960 for a Sedan, ₹5,280 for an SUV, and ₹6,270 for Innova Crysta. Per-km billing is clear with zero return charges.',
+        q: 'What is the one-way taxi fare from Trichy to Chennai?',
+        a: 'The one-way taxi fare from Trichy to Chennai starts at ₹3,300 for a Hatchback, ₹3,960 for a Sedan, and ₹5,280 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy to Chennai?',
-        a: 'The road distance is approx 330 km via NH-45. Travel time is typically 5 to 5.5 hours under normal traffic conditions.',
+        a: 'The distance from Trichy to Chennai is approx 330 km via NH38. Travel duration is around 5.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Trichy?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy including railway stations, airports, and hotels.',
       },
     ],
-    
     reviews: [
       {
-        name: 'Karthik Raja',
+        name: 'Suresh Kumar',
         rating: 5,
-        text: 'Booked a one-way Sedan from Srirangam, Trichy to Chennai Airport for an early flight. Driver arrived early, car was spotless, and reached MAA Airport in 5 hours.',
-        route: 'Trichy to Chennai Airport',
+        text: 'Booked a one-way cab from Trichy to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 5.5 hours.',
+        route: 'Trichy to Chennai',
       },
       {
-        name: 'Senthil Kumar V.',
+        name: 'Priya Dharshini',
         rating: 5,
-        text: 'Regularly travel from Trichy Cantonment to OMR Chennai for corporate work. SAMAYAS offers transparent per-km billing without asking for return fares.',
-        route: 'Trichy to Chennai OMR',
+        text: 'Safe and comfortable trip from Trichy to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Trichy to Chennai',
       },
     ],
-    
     nearbyRoutes: [
-      { name: 'Trichy to Madurai', slug: 'trichy-to-madurai', distance: '135 km', fare: '₹1,500' },
-      { name: 'Trichy to Bengaluru', slug: 'trichy-to-bengaluru', distance: '345 km', fare: '₹4,200' },
       { name: 'Chennai to Trichy', slug: 'chennai-to-trichy', distance: '330 km', fare: '₹3,300' },
     ],
   },
 
   'chennai-to-trichy': {
     from: 'Chennai',
+    to: 'Trichy',
     fromSlug: 'chennai',
     toSlug: 'tiruchirappalli',
     returnRouteSlug: 'trichy-to-chennai',
-    popularFor: ["Home & Family Visits","Airport Pickups","Temple Pilgrimage","Corporate Travel"],
-    to: 'Trichy',
     distanceKm: 330,
     timeHours: 5.5,
     distanceDisplay: '330 km',
     durationDisplay: '5.5 Hours',
-    heroTagline: 'Affordable One-Way Taxi from Chennai to Trichy. Pickups from Chennai Airport, Central, and any doorstep.',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
     seoTitle: 'Chennai to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book Chennai to Trichy one-way taxi with SAMAYAS. Hatchback ₹3,300, Sedan ₹3,960, SUV ₹5,280. Pickups from Chennai Airport, Central & OMR to Srirangam & Trichy. 24/7 service.',
-    
+    metaDescription: 'Book one-way taxi from Chennai to Trichy with SAMAYAS. Hatchback from ₹3,300, Sedan ₹3,960, SUV ₹5,280. 24/7 doorstep pickups.',
     fare: {
-      hatchback: 3300,
-      sedan: 3960,
-      suv: 5280,
-      innova: 6270,
-      traveller: 9900,
-    },
-    
-    highways: ['NH45 (GST Road)', 'NH38 (Ulundurpet-Trichy)'],
-    
+      "hatchback": 3300,
+      "sedan": 3960,
+      "suv": 5280,
+      "innova": 6270,
+      "traveller": 9900
+},
+    highways: ["NH45 GST Road","NH38"],
     tolls: {
       costRange: '₹420 - ₹520',
       plazasCount: 4,
       fastagSupported: true,
       cashAccepted: true,
-      note: 'Toll plaza charges extra where applicable.',
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
     },
-    
     pickupLocations: [
-      'Chennai International Airport (MAA)',
-      'Chennai Central Railway Station (MAS)',
-      'T. Nagar & Vadapalani',
-      'OMR (Sholinganallur, Navalur)',
-      'Velachery & Guindy',
-      'Tambaram & Perungalathur',
+      'Chennai Central City / Main Junction',
+      'Chennai Railway Station & Bus Stand',
+      'Chennai Residential Areas & Hotels',
+      'Chennai Suburbs & Outer Ring Gates',
     ],
-    
     dropLocations: [
-      'Srirangam Temple & Car Street',
-      'Trichy Railway Junction (TPJ)',
-      'Trichy International Airport (TRZ)',
-      'Thillai Nagar & Main Guard Gate',
-      'Cantonment & Central Bus Stand',
+      'Trichy City Center & Main Commercial Hub',
+      'Trichy Railway Station & Transit Terminals',
+      'Trichy Hotels, Resorts & Residential Hubs',
+      'Trichy Airport / Highway Junction Drops',
     ],
-    
     placesOnTheWay: [
-      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai city, suburbs & MAA airport.' },
-      { name: 'Chengalpattu', type: 'Outer Ring', desc: 'Exit from Chennai Metropolitan area onto NH-45 GST Expressway.' },
-      { name: 'Tindivanam', type: 'Refreshment', desc: 'Highway food plazas and tea breaks.' },
-      { name: 'Ulundurpet', type: 'Junction Stop', desc: 'Midway food plaza stop along NH-45.' },
-      { name: 'Trichy', type: 'Destination', desc: 'Doorstep drop to Srirangam, TRZ Airport, Junction or home.' },
+      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Trichy', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy.' },
     ],
-    
     faqs: [
       {
-        q: 'What is the one-way fare from Chennai Airport (MAA) to Trichy?',
-        a: 'The one-way taxi fare from Chennai Airport to Trichy starts at ₹3,300 for a Hatchback, ₹3,960 for a Sedan, and ₹5,280 for an SUV.',
+        q: 'What is the one-way taxi fare from Chennai to Trichy?',
+        a: 'The one-way taxi fare from Chennai to Trichy starts at ₹3,300 for a Hatchback, ₹3,960 for a Sedan, and ₹5,280 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai to Trichy?',
+        a: 'The distance from Chennai to Trichy is approx 330 km via NH45 GST Road. Travel duration is around 5.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai including railway stations, airports, and hotels.',
       },
     ],
-    
     reviews: [
       {
-        name: 'Venkatesh S.',
+        name: 'Suresh Kumar',
         rating: 5,
-        text: 'Landed late at Chennai Airport and needed an urgent cab to Srirangam. Driver arrived in 10 minutes.',
-        route: 'Chennai Airport to Srirangam',
+        text: 'Booked a one-way cab from Chennai to Trichy. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 5.5 hours.',
+        route: 'Chennai to Trichy',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai to Trichy. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Trichy',
       },
     ],
-    
     nearbyRoutes: [
       { name: 'Trichy to Chennai', slug: 'trichy-to-chennai', distance: '330 km', fare: '₹3,300' },
-      { name: 'Chennai to Pondicherry', slug: 'chennai-to-pondicherry', distance: '160 km', fare: '₹2,100' },
     ],
   },
 
-  'coimbatore-to-ooty': {
-    from: 'Coimbatore',
-    fromSlug: 'coimbatore',
-    toSlug: 'nilgiris',
-    returnRouteSlug: null,
-    popularFor: ["Hill Station Resort Stay","Tourism & Honeymoon","Tea Garden Tours","Family Vacations"],
-    to: 'Ooty',
-    distanceKm: 85,
-    timeHours: 2.75,
-    distanceDisplay: '85 km',
-    durationDisplay: '2.75 Hours',
-    heroTagline: 'Scenic One-Way Mountain Cab from Coimbatore to Ooty. Expert hill drivers for Mettupalayam hairpin bends.',
-    seoTitle: 'Coimbatore to Ooty One-Way Taxi | Mountain Cab Booking | SAMAYAS',
-    metaDescription: 'Book Coimbatore to Ooty one-way hill taxi with SAMAYAS. Hatchback ₹2,200, Sedan ₹2,600, SUV ₹3,600. Pickups from Coimbatore Airport (CJB) & Junction. Hill experts.',
-    
-    fare: {
-      hatchback: 2200,
-      sedan: 2600,
-      suv: 3600,
-      innova: 4500,
-      traveller: 6800,
-    },
-    
-    highways: ['NH181 (Coimbatore-Mettupalayam-Ooty Road)', '36 Hairpin Bends Route'],
-    
-    tolls: {
-      costRange: '₹60 - ₹100',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Hill entry toll and parking fees extra at actuals.',
-    },
-    
-    pickupLocations: [
-      'Coimbatore International Airport (CJB)',
-      'Coimbatore Junction Railway Station (CBE)',
-      'Gandhipuram Central Bus Stand',
-      'RS Puram & Race Course',
-      'Peelamedu & Hopes College',
-    ],
-    
-    dropLocations: [
-      'Ooty Town & Charing Cross',
-      'Ooty Lake & Boathouse Gate',
-      'Botanical Gardens & Rose Garden',
-      'Doddabetta Peak Viewpoint',
-      'Coonoor Town & Sim\'s Park',
-    ],
-    
-    placesOnTheWay: [
-      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup from CJB Airport or CBE Junction.' },
-      { name: 'Mettupalayam', type: 'Foothills', desc: 'Base of Nilgiris; optional breakfast stop.' },
-      { name: 'Coonoor', type: 'Tea Gardens', desc: 'Beautiful tea plantation town.' },
-      { name: 'Ooty', type: 'Destination', desc: 'Queen of Hill Stations.' },
-    ],
-    
-    faqs: [
-      {
-        q: 'What is the taxi fare from Coimbatore Airport (CJB) to Ooty?',
-        a: 'The one-way taxi fare from Coimbatore Airport to Ooty starts at ₹2,200 for a Hatchback, ₹2,600 for a Sedan, and ₹3,600 for an SUV.',
-      },
-    ],
-    
-    reviews: [
-      {
-        name: 'Deepak & Ananya',
-        rating: 5,
-        text: 'Landed at Coimbatore Airport and booked a SAMAYAS cab to Ooty resort. Driver handled the 36 hairpin bends masterfully.',
-        route: 'Coimbatore Airport to Ooty',
-      },
-    ],
-    
-    nearbyRoutes: [
-      { name: 'Coimbatore to Bengaluru', slug: 'coimbatore-to-bengaluru', distance: '365 km', fare: '₹4,500' },
-    ],
-  },
-
-  'madurai-to-rameswaram': {
-    from: 'Madurai',
-    fromSlug: 'madurai',
-    toSlug: 'ramanathapuram',
-    returnRouteSlug: null,
-    popularFor: ["Sacred Temple Pilgrimage","Agni Theertham Visit","Dhanushkodi Tour","Family Trips"],
-    to: 'Rameshwaram',
-    distanceKm: 175,
-    timeHours: 3.5,
-    distanceDisplay: '175 km',
-    durationDisplay: '3.5 Hours',
-    heroTagline: 'Sacred One-Way Pilgrimage Taxi from Madurai to Rameshwaram. Direct drops to Ramanathaswamy Temple & Dhanushkodi.',
-    seoTitle: 'Madurai to Rameshwaram One-Way Taxi | Temple Cab | SAMAYAS',
-    metaDescription: 'Book Madurai to Rameshwaram one-way taxi with SAMAYAS. Hatchback ₹2,400, Sedan ₹2,800, SUV ₹3,900. Pickups from Madurai Airport (IXM) & Meenakshi Temple. 24/7 service.',
-    
-    fare: {
-      hatchback: 2400,
-      sedan: 2800,
-      suv: 3900,
-      innova: 4800,
-      traveller: 7200,
-    },
-    
-    highways: ['NH87 (Madurai-Rameshwaram Highway)', 'Pamban Sea Bridge Route'],
-    
-    tolls: {
-      costRange: '₹120 - ₹180',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Pamban bridge entry extra at actuals.',
-    },
-    
-    pickupLocations: [
-      'Madurai International Airport (IXM)',
-      'Madurai Junction Railway Station (MDU)',
-      'Meenakshi Amman Temple Gate',
-      'Mattuthavani Bus Stand',
-    ],
-    
-    dropLocations: [
-      'Arulmigu Ramanathaswamy Temple',
-      'Agni Theertham Beach',
-      'Pamban Sea Bridge',
-      'Dhanushkodi Beach',
-    ],
-    
-    placesOnTheWay: [
-      { name: 'Madurai', type: 'Origin', desc: 'Pickup from Airport or Temple.' },
-      { name: 'Paramakudi', type: 'Rest Stop', desc: 'Popular food stop.' },
-      { name: 'Ramanathapuram', type: 'District HQ', desc: 'Sethupathi Palace city.' },
-      { name: 'Pamban Bridge', type: 'Iconic Bridge', desc: 'Ocean sea bridge crossing.' },
-      { name: 'Rameshwaram', type: 'Destination', desc: 'Sacred island temple town.' },
-    ],
-    
-    faqs: [
-      {
-        q: 'What is the taxi fare from Madurai Airport to Rameshwaram?',
-        a: 'The one-way taxi fare from Madurai Airport to Rameshwaram starts at ₹2,400 for a Hatchback, ₹2,800 for a Sedan, and ₹3,900 for an SUV.',
-      },
-    ],
-    
-    reviews: [
-      {
-        name: 'Ramesh Shastri',
-        rating: 5,
-        text: 'Booked a one-way cab from Madurai to Rameshwaram. Smooth drive over Pamban bridge and courteous driver.',
-        route: 'Madurai to Rameshwaram',
-      },
-    ],
-    
-    nearbyRoutes: [
-      { name: 'Trichy to Madurai', slug: 'trichy-to-madurai', distance: '135 km', fare: '₹1,500' },
-    ],
-  },
-
-  'chennai-airport-to-pondicherry': {
-    from: 'Chennai Airport',
+  'chennai-to-madurai': {
+    from: 'Chennai',
+    to: 'Madurai',
     fromSlug: 'chennai',
-    toSlug: 'viluppuram',
-    returnRouteSlug: null,
-    popularFor: ["Auroville Retreat","Airport Pickup Transfer","Beach Weekend","Corporate Getaway"],
-    to: 'Puducherry',
+    toSlug: 'madurai',
+    returnRouteSlug: 'madurai-to-chennai',
+    distanceKm: 460,
+    timeHours: 7.5,
+    distanceDisplay: '460 km',
+    durationDisplay: '7.5 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Madurai with SAMAYAS. Hatchback from ₹4,600, Sedan ₹5,520, SUV ₹7,360. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 4600,
+      "sedan": 5520,
+      "suv": 7360,
+      "innova": 8740,
+      "traveller": 13800
+},
+    highways: ["NH45","NH38"],
+    tolls: {
+      costRange: '₹580 - ₹680',
+      plazasCount: 6,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Chennai Central City / Main Junction',
+      'Chennai Railway Station & Bus Stand',
+      'Chennai Residential Areas & Hotels',
+      'Chennai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Madurai City Center & Main Commercial Hub',
+      'Madurai Railway Station & Transit Terminals',
+      'Madurai Hotels, Resorts & Residential Hubs',
+      'Madurai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Madurai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Chennai to Madurai?',
+        a: 'The one-way taxi fare from Chennai to Madurai starts at ₹4,600 for a Hatchback, ₹5,520 for a Sedan, and ₹7,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai to Madurai?',
+        a: 'The distance from Chennai to Madurai is approx 460 km via NH45. Travel duration is around 7.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Chennai to Madurai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 7.5 hours.',
+        route: 'Chennai to Madurai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai to Madurai. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Madurai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Madurai to Chennai', slug: 'madurai-to-chennai', distance: '460 km', fare: '₹4,600' },
+    ],
+  },
+
+  'madurai-to-chennai': {
+    from: 'Madurai',
+    to: 'Chennai',
+    fromSlug: 'madurai',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-to-madurai',
+    distanceKm: 460,
+    timeHours: 7.5,
+    distanceDisplay: '460 km',
+    durationDisplay: '7.5 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Madurai to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Madurai to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Chennai with SAMAYAS. Hatchback from ₹4,600, Sedan ₹5,520, SUV ₹7,360. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 4600,
+      "sedan": 5520,
+      "suv": 7360,
+      "innova": 8740,
+      "traveller": 13800
+},
+    highways: ["NH38","NH45"],
+    tolls: {
+      costRange: '₹580 - ₹680',
+      plazasCount: 6,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Madurai Central City / Main Junction',
+      'Madurai Railway Station & Bus Stand',
+      'Madurai Residential Areas & Hotels',
+      'Madurai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai City Center & Main Commercial Hub',
+      'Chennai Railway Station & Transit Terminals',
+      'Chennai Hotels, Resorts & Residential Hubs',
+      'Chennai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Madurai', type: 'Origin', desc: 'Doorstep pickup across Madurai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Madurai to Chennai?',
+        a: 'The one-way taxi fare from Madurai to Chennai starts at ₹4,600 for a Hatchback, ₹5,520 for a Sedan, and ₹7,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Madurai to Chennai?',
+        a: 'The distance from Madurai to Chennai is approx 460 km via NH38. Travel duration is around 7.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Madurai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Madurai to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 7.5 hours.',
+        route: 'Madurai to Chennai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Madurai to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Madurai to Chennai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai to Madurai', slug: 'chennai-to-madurai', distance: '460 km', fare: '₹4,600' },
+    ],
+  },
+
+  'chennai-to-coimbatore': {
+    from: 'Chennai',
+    to: 'Coimbatore',
+    fromSlug: 'chennai',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'coimbatore-to-chennai',
+    distanceKm: 500,
+    timeHours: 8.5,
+    distanceDisplay: '500 km',
+    durationDisplay: '8.5 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Coimbatore with SAMAYAS. Hatchback from ₹5,000, Sedan ₹6,000, SUV ₹8,000. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 5000,
+      "sedan": 6000,
+      "suv": 8000,
+      "innova": 9500,
+      "traveller": 15000
+},
+    highways: ["NH48","NH544"],
+    tolls: {
+      costRange: '₹620 - ₹720',
+      plazasCount: 7,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Chennai Central City / Main Junction',
+      'Chennai Railway Station & Bus Stand',
+      'Chennai Residential Areas & Hotels',
+      'Chennai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Coimbatore City Center & Main Commercial Hub',
+      'Coimbatore Railway Station & Transit Terminals',
+      'Coimbatore Hotels, Resorts & Residential Hubs',
+      'Coimbatore Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Coimbatore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Chennai to Coimbatore?',
+        a: 'The one-way taxi fare from Chennai to Coimbatore starts at ₹5,000 for a Hatchback, ₹6,000 for a Sedan, and ₹8,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai to Coimbatore?',
+        a: 'The distance from Chennai to Coimbatore is approx 500 km via NH48. Travel duration is around 8.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Chennai to Coimbatore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 8.5 hours.',
+        route: 'Chennai to Coimbatore',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai to Coimbatore. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Coimbatore',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Coimbatore to Chennai', slug: 'coimbatore-to-chennai', distance: '500 km', fare: '₹5,000' },
+    ],
+  },
+
+  'coimbatore-to-chennai': {
+    from: 'Coimbatore',
+    to: 'Chennai',
+    fromSlug: 'coimbatore',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-to-coimbatore',
+    distanceKm: 500,
+    timeHours: 8.5,
+    distanceDisplay: '500 km',
+    durationDisplay: '8.5 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Coimbatore to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Coimbatore to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Chennai with SAMAYAS. Hatchback from ₹5,000, Sedan ₹6,000, SUV ₹8,000. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 5000,
+      "sedan": 6000,
+      "suv": 8000,
+      "innova": 9500,
+      "traveller": 15000
+},
+    highways: ["NH544","NH48"],
+    tolls: {
+      costRange: '₹620 - ₹720',
+      plazasCount: 7,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Coimbatore Central City / Main Junction',
+      'Coimbatore Railway Station & Bus Stand',
+      'Coimbatore Residential Areas & Hotels',
+      'Coimbatore Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai City Center & Main Commercial Hub',
+      'Chennai Railway Station & Transit Terminals',
+      'Chennai Hotels, Resorts & Residential Hubs',
+      'Chennai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup across Coimbatore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Coimbatore to Chennai?',
+        a: 'The one-way taxi fare from Coimbatore to Chennai starts at ₹5,000 for a Hatchback, ₹6,000 for a Sedan, and ₹8,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Coimbatore to Chennai?',
+        a: 'The distance from Coimbatore to Chennai is approx 500 km via NH544. Travel duration is around 8.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Coimbatore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Coimbatore to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 8.5 hours.',
+        route: 'Coimbatore to Chennai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Coimbatore to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Coimbatore to Chennai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai to Coimbatore', slug: 'chennai-to-coimbatore', distance: '500 km', fare: '₹5,000' },
+    ],
+  },
+
+  'chennai-to-salem': {
+    from: 'Chennai',
+    to: 'Salem',
+    fromSlug: 'chennai',
+    toSlug: 'salem',
+    returnRouteSlug: 'salem-to-chennai',
+    distanceKm: 340,
+    timeHours: 6,
+    distanceDisplay: '340 km',
+    durationDisplay: '6 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Salem. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Salem One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Salem with SAMAYAS. Hatchback from ₹3,400, Sedan ₹4,080, SUV ₹5,440. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 3400,
+      "sedan": 4080,
+      "suv": 5440,
+      "innova": 6460,
+      "traveller": 10200
+},
+    highways: ["NH48","NH79"],
+    tolls: {
+      costRange: '₹410 - ₹490',
+      plazasCount: 4,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Chennai Central City / Main Junction',
+      'Chennai Railway Station & Bus Stand',
+      'Chennai Residential Areas & Hotels',
+      'Chennai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Salem City Center & Main Commercial Hub',
+      'Salem Railway Station & Transit Terminals',
+      'Salem Hotels, Resorts & Residential Hubs',
+      'Salem Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Salem', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Salem.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Chennai to Salem?',
+        a: 'The one-way taxi fare from Chennai to Salem starts at ₹3,400 for a Hatchback, ₹4,080 for a Sedan, and ₹5,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai to Salem?',
+        a: 'The distance from Chennai to Salem is approx 340 km via NH48. Travel duration is around 6 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Chennai to Salem. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6 hours.',
+        route: 'Chennai to Salem',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai to Salem. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Salem',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Salem to Chennai', slug: 'salem-to-chennai', distance: '340 km', fare: '₹3,400' },
+    ],
+  },
+
+  'salem-to-chennai': {
+    from: 'Salem',
+    to: 'Chennai',
+    fromSlug: 'salem',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-to-salem',
+    distanceKm: 340,
+    timeHours: 6,
+    distanceDisplay: '340 km',
+    durationDisplay: '6 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Salem to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Salem to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Salem to Chennai with SAMAYAS. Hatchback from ₹3,400, Sedan ₹4,080, SUV ₹5,440. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 3400,
+      "sedan": 4080,
+      "suv": 5440,
+      "innova": 6460,
+      "traveller": 10200
+},
+    highways: ["NH79","NH48"],
+    tolls: {
+      costRange: '₹410 - ₹490',
+      plazasCount: 4,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Salem Central City / Main Junction',
+      'Salem Railway Station & Bus Stand',
+      'Salem Residential Areas & Hotels',
+      'Salem Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai City Center & Main Commercial Hub',
+      'Chennai Railway Station & Transit Terminals',
+      'Chennai Hotels, Resorts & Residential Hubs',
+      'Chennai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Salem', type: 'Origin', desc: 'Doorstep pickup across Salem.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Salem to Chennai?',
+        a: 'The one-way taxi fare from Salem to Chennai starts at ₹3,400 for a Hatchback, ₹4,080 for a Sedan, and ₹5,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Salem to Chennai?',
+        a: 'The distance from Salem to Chennai is approx 340 km via NH79. Travel duration is around 6 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Salem?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Salem including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Salem to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6 hours.',
+        route: 'Salem to Chennai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Salem to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Salem to Chennai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai to Salem', slug: 'chennai-to-salem', distance: '340 km', fare: '₹3,400' },
+    ],
+  },
+
+  'chennai-to-tirunelveli': {
+    from: 'Chennai',
+    to: 'Tirunelveli',
+    fromSlug: 'chennai',
+    toSlug: 'tirunelveli',
+    returnRouteSlug: 'tirunelveli-to-chennai',
+    distanceKm: 620,
+    timeHours: 10,
+    distanceDisplay: '620 km',
+    durationDisplay: '10 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Tirunelveli. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Tirunelveli One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Tirunelveli with SAMAYAS. Hatchback from ₹6,200, Sedan ₹7,440, SUV ₹9,920. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 6200,
+      "sedan": 7440,
+      "suv": 9920,
+      "innova": 11780,
+      "traveller": 18600
+},
+    highways: ["NH45","NH44"],
+    tolls: {
+      costRange: '₹750 - ₹880',
+      plazasCount: 9,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Chennai Central City / Main Junction',
+      'Chennai Railway Station & Bus Stand',
+      'Chennai Residential Areas & Hotels',
+      'Chennai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Tirunelveli City Center & Main Commercial Hub',
+      'Tirunelveli Railway Station & Transit Terminals',
+      'Tirunelveli Hotels, Resorts & Residential Hubs',
+      'Tirunelveli Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Tirunelveli', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Tirunelveli.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Chennai to Tirunelveli?',
+        a: 'The one-way taxi fare from Chennai to Tirunelveli starts at ₹6,200 for a Hatchback, ₹7,440 for a Sedan, and ₹9,920 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai to Tirunelveli?',
+        a: 'The distance from Chennai to Tirunelveli is approx 620 km via NH45. Travel duration is around 10 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Chennai to Tirunelveli. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 10 hours.',
+        route: 'Chennai to Tirunelveli',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai to Tirunelveli. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Tirunelveli',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Tirunelveli to Chennai', slug: 'tirunelveli-to-chennai', distance: '620 km', fare: '₹6,200' },
+    ],
+  },
+
+  'tirunelveli-to-chennai': {
+    from: 'Tirunelveli',
+    to: 'Chennai',
+    fromSlug: 'tirunelveli',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-to-tirunelveli',
+    distanceKm: 620,
+    timeHours: 10,
+    distanceDisplay: '620 km',
+    durationDisplay: '10 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Tirunelveli to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Tirunelveli to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirunelveli to Chennai with SAMAYAS. Hatchback from ₹6,200, Sedan ₹7,440, SUV ₹9,920. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 6200,
+      "sedan": 7440,
+      "suv": 9920,
+      "innova": 11780,
+      "traveller": 18600
+},
+    highways: ["NH44","NH45"],
+    tolls: {
+      costRange: '₹750 - ₹880',
+      plazasCount: 9,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Tirunelveli Central City / Main Junction',
+      'Tirunelveli Railway Station & Bus Stand',
+      'Tirunelveli Residential Areas & Hotels',
+      'Tirunelveli Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai City Center & Main Commercial Hub',
+      'Chennai Railway Station & Transit Terminals',
+      'Chennai Hotels, Resorts & Residential Hubs',
+      'Chennai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Tirunelveli', type: 'Origin', desc: 'Doorstep pickup across Tirunelveli.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Tirunelveli to Chennai?',
+        a: 'The one-way taxi fare from Tirunelveli to Chennai starts at ₹6,200 for a Hatchback, ₹7,440 for a Sedan, and ₹9,920 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Tirunelveli to Chennai?',
+        a: 'The distance from Tirunelveli to Chennai is approx 620 km via NH44. Travel duration is around 10 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Tirunelveli?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Tirunelveli including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Tirunelveli to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 10 hours.',
+        route: 'Tirunelveli to Chennai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Tirunelveli to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Tirunelveli to Chennai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai to Tirunelveli', slug: 'chennai-to-tirunelveli', distance: '620 km', fare: '₹6,200' },
+    ],
+  },
+
+  'chennai-to-thanjavur': {
+    from: 'Chennai',
+    to: 'Thanjavur',
+    fromSlug: 'chennai',
+    toSlug: 'thanjavur',
+    returnRouteSlug: 'thanjavur-to-chennai',
+    distanceKm: 340,
+    timeHours: 6,
+    distanceDisplay: '340 km',
+    durationDisplay: '6 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Thanjavur. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Thanjavur One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Thanjavur with SAMAYAS. Hatchback from ₹3,400, Sedan ₹4,080, SUV ₹5,440. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 3400,
+      "sedan": 4080,
+      "suv": 5440,
+      "innova": 6460,
+      "traveller": 10200
+},
+    highways: ["NH45","NH36"],
+    tolls: {
+      costRange: '₹420 - ₹500',
+      plazasCount: 4,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Chennai Central City / Main Junction',
+      'Chennai Railway Station & Bus Stand',
+      'Chennai Residential Areas & Hotels',
+      'Chennai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Thanjavur City Center & Main Commercial Hub',
+      'Thanjavur Railway Station & Transit Terminals',
+      'Thanjavur Hotels, Resorts & Residential Hubs',
+      'Thanjavur Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Thanjavur', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Thanjavur.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Chennai to Thanjavur?',
+        a: 'The one-way taxi fare from Chennai to Thanjavur starts at ₹3,400 for a Hatchback, ₹4,080 for a Sedan, and ₹5,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai to Thanjavur?',
+        a: 'The distance from Chennai to Thanjavur is approx 340 km via NH45. Travel duration is around 6 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Chennai to Thanjavur. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6 hours.',
+        route: 'Chennai to Thanjavur',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai to Thanjavur. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Thanjavur',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Thanjavur to Chennai', slug: 'thanjavur-to-chennai', distance: '340 km', fare: '₹3,400' },
+    ],
+  },
+
+  'thanjavur-to-chennai': {
+    from: 'Thanjavur',
+    to: 'Chennai',
+    fromSlug: 'thanjavur',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-to-thanjavur',
+    distanceKm: 340,
+    timeHours: 6,
+    distanceDisplay: '340 km',
+    durationDisplay: '6 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Thanjavur to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Thanjavur to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Thanjavur to Chennai with SAMAYAS. Hatchback from ₹3,400, Sedan ₹4,080, SUV ₹5,440. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 3400,
+      "sedan": 4080,
+      "suv": 5440,
+      "innova": 6460,
+      "traveller": 10200
+},
+    highways: ["NH36","NH45"],
+    tolls: {
+      costRange: '₹420 - ₹500',
+      plazasCount: 4,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Thanjavur Central City / Main Junction',
+      'Thanjavur Railway Station & Bus Stand',
+      'Thanjavur Residential Areas & Hotels',
+      'Thanjavur Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai City Center & Main Commercial Hub',
+      'Chennai Railway Station & Transit Terminals',
+      'Chennai Hotels, Resorts & Residential Hubs',
+      'Chennai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Thanjavur', type: 'Origin', desc: 'Doorstep pickup across Thanjavur.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Thanjavur to Chennai?',
+        a: 'The one-way taxi fare from Thanjavur to Chennai starts at ₹3,400 for a Hatchback, ₹4,080 for a Sedan, and ₹5,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Thanjavur to Chennai?',
+        a: 'The distance from Thanjavur to Chennai is approx 340 km via NH36. Travel duration is around 6 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Thanjavur?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Thanjavur including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Thanjavur to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6 hours.',
+        route: 'Thanjavur to Chennai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Thanjavur to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Thanjavur to Chennai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai to Thanjavur', slug: 'chennai-to-thanjavur', distance: '340 km', fare: '₹3,400' },
+    ],
+  },
+
+  'chennai-to-vellore': {
+    from: 'Chennai',
+    to: 'Vellore',
+    fromSlug: 'chennai',
+    toSlug: 'vellore',
+    returnRouteSlug: 'vellore-to-chennai',
     distanceKm: 140,
     timeHours: 2.75,
     distanceDisplay: '140 km',
     durationDisplay: '2.75 Hours',
-    heroTagline: 'Express One-Way Airport Taxi from Chennai Airport (MAA) to Pondicherry. 24/7 flight tracking and instant pickup.',
-    seoTitle: 'Chennai Airport to Pondicherry Taxi | ₹10/km Cab | SAMAYAS',
-    metaDescription: 'Book Chennai Airport to Pondicherry one-way taxi with SAMAYAS. Hatchback ₹1,900, Sedan ₹2,300, SUV ₹3,300. Direct airport terminal pickups to Auroville & French Quarter.',
-    
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Vellore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Vellore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Vellore with SAMAYAS. Hatchback from ₹1,400, Sedan ₹1,680, SUV ₹2,240. 24/7 doorstep pickups.',
     fare: {
-      hatchback: 1900,
-      sedan: 2300,
-      suv: 3300,
-      innova: 4200,
-      traveller: 6300,
-    },
-    
-    highways: ['ECR (East Coast Road)', 'NH32 (Chennai-Tindivanam-Pondicherry)'],
-    
+      "hatchback": 1400,
+      "sedan": 1680,
+      "suv": 2240,
+      "innova": 2660,
+      "traveller": 4200
+},
+    highways: ["NH48"],
     tolls: {
       costRange: '₹140 - ₹180',
       plazasCount: 2,
       fastagSupported: true,
       cashAccepted: true,
-      note: 'ECR toll plaza charges extra where applicable.',
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
     },
-    
     pickupLocations: [
-      'Chennai Airport Terminal 1 (Domestic)',
-      'Chennai Airport Terminal 2 (International)',
-      'GST Road Airport Gate',
-      'Meenambakkam Metro Station',
+      'Chennai Central City / Main Junction',
+      'Chennai Railway Station & Bus Stand',
+      'Chennai Residential Areas & Hotels',
+      'Chennai Suburbs & Outer Ring Gates',
     ],
-    
     dropLocations: [
-      'White Town (French Quarter)',
-      'Auroville Visitor Centre & Matrimandir',
-      'Promenade Beach Front',
-      'Pondicherry Bus Stand',
-      'Heritage Town & Boulevard',
+      'Vellore City Center & Main Commercial Hub',
+      'Vellore Railway Station & Transit Terminals',
+      'Vellore Hotels, Resorts & Residential Hubs',
+      'Vellore Airport / Highway Junction Drops',
     ],
-    
     placesOnTheWay: [
-      { name: 'Chennai Airport', type: 'Origin', desc: 'Doorstep terminal arrival pickup.' },
-      { name: 'Mahabalipuram', type: 'Coastal Heritage', desc: 'ECR coastal scenic drive.' },
-      { name: 'Marakkanam', type: 'Salt Pans', desc: 'Coastal backwaters & salt pans.' },
-      { name: 'Puducherry', type: 'Destination', desc: 'Direct drop to Auroville, White Town or beach resort.' },
+      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Vellore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Vellore.' },
     ],
-    
     faqs: [
       {
-        q: 'What is the taxi fare from Chennai Airport to Pondicherry?',
-        a: 'The one-way taxi fare from Chennai Airport (MAA) to Pondicherry starts at ₹1,900 for a Hatchback, ₹2,300 for a Sedan, and ₹3,300 for an SUV.',
+        q: 'What is the one-way taxi fare from Chennai to Vellore?',
+        a: 'The one-way taxi fare from Chennai to Vellore starts at ₹1,400 for a Hatchback, ₹1,680 for a Sedan, and ₹2,240 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai to Vellore?',
+        a: 'The distance from Chennai to Vellore is approx 140 km via NH48. Travel duration is around 2.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai including railway stations, airports, and hotels.',
       },
     ],
-    
     reviews: [
       {
-        name: 'Camille L.',
+        name: 'Suresh Kumar',
         rating: 5,
-        text: 'Landed at Chennai International Airport and took SAMAYAS cab directly to Auroville. Flight was delayed by 1 hour but driver waited without extra charges.',
-        route: 'Chennai Airport to Auroville',
+        text: 'Booked a one-way cab from Chennai to Vellore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.75 hours.',
+        route: 'Chennai to Vellore',
       },
-    ],
-    
-    nearbyRoutes: [
-      { name: 'Chennai to Pondicherry', slug: 'chennai-to-pondicherry', distance: '160 km', fare: '₹2,100' },
-    ],
-  },
-
-  'trichy-to-madurai': {
-    from: 'Trichy',
-    fromSlug: 'tiruchirappalli',
-    toSlug: 'madurai',
-    returnRouteSlug: null,
-    popularFor: ["Airport Connection","Temple Pilgrimage","Business Visits","Family Trips"],
-    to: 'Madurai',
-    distanceKm: 135,
-    timeHours: 2.25,
-    distanceDisplay: '135 km',
-    durationDisplay: '2.25 Hours',
-    heroTagline: 'Express One-Way Taxi from Trichy to Madurai. 24/7 pickups from TRZ Airport and Trichy Junction.',
-    seoTitle: 'Trichy to Madurai One-Way Taxi | Cab Booking | SAMAYAS',
-    metaDescription: 'Book Trichy to Madurai one-way taxi with SAMAYAS. Hatchback ₹1,500, Sedan ₹1,800, SUV ₹2,600. Direct drops to Madurai Airport (IXM) & Meenakshi Temple.',
-    
-    fare: {
-      hatchback: 1500,
-      sedan: 1800,
-      suv: 2600,
-      innova: 3400,
-      traveller: 5200,
-    },
-    
-    highways: ['NH38 (Trichy-Madurai Four-Lane Expressway)'],
-    
-    tolls: {
-      costRange: '₹140 - ₹180',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll charges extra where applicable.',
-    },
-    
-    pickupLocations: [
-      'Trichy International Airport (TRZ)',
-      'Trichy Railway Junction (TPJ)',
-      'Srirangam Temple Gate',
-      'Thillai Nagar & Cantonment',
-    ],
-    
-    dropLocations: [
-      'Madurai International Airport (IXM)',
-      'Meenakshi Amman Temple Gate',
-      'Madurai Junction Railway Station (MDU)',
-      'Mattuthavani Central Bus Stand',
-    ],
-    
-    placesOnTheWay: [
-      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
-      { name: 'Viralimalai', type: 'Peacock Sanctuary', desc: 'Famous Murugan temple hill.' },
-      { name: 'Melur', type: 'Suburbs', desc: 'Approach town to Madurai city.' },
-      { name: 'Madurai', type: 'Destination', desc: 'Direct drop to IXM Airport, Meenakshi Temple or hotel.' },
-    ],
-    
-    faqs: [
       {
-        q: 'What is the one-way fare from Trichy to Madurai?',
-        a: 'The one-way taxi fare from Trichy to Madurai starts at ₹1,500 for a Hatchback, ₹1,800 for a Sedan, and ₹2,600 for an SUV.',
-      },
-    ],
-    
-    reviews: [
-      {
-        name: 'Saravanan M.',
+        name: 'Priya Dharshini',
         rating: 5,
-        text: 'Quick 2-hour cab ride from Trichy Junction to Madurai Airport. Clean car and smooth driving.',
-        route: 'Trichy to Madurai Airport',
+        text: 'Safe and comfortable trip from Chennai to Vellore. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Vellore',
       },
     ],
-    
     nearbyRoutes: [
-      { name: 'Trichy to Chennai', slug: 'trichy-to-chennai', distance: '330 km', fare: '₹3,300' },
-    ],
-  },
-
-  'salem-to-bengaluru': {
-    from: 'Salem',
-    fromSlug: 'salem',
-    toSlug: 'krishnagiri',
-    returnRouteSlug: null,
-    popularFor: ["IT & Corporate Travel","Interstate Transit","BLR Airport Drops","Business Meetings"],
-    to: 'Bengaluru',
-    distanceKm: 205,
-    timeHours: 3.75,
-    distanceDisplay: '205 km',
-    durationDisplay: '3.75 Hours',
-    heroTagline: 'Express One-Way Intercity Taxi from Salem to Bengaluru. Direct expressway drops to Hosur, Silk Board & BLR Airport.',
-    seoTitle: 'Salem to Bengaluru One-Way Taxi | Cab Booking | SAMAYAS',
-    metaDescription: 'Book Salem to Bengaluru one-way taxi with SAMAYAS. Hatchback ₹2,600, Sedan ₹3,100, SUV ₹4,200. Direct drops to Silk Board, Electronic City, Indiranagar & BLR Airport.',
-    
-    fare: {
-      hatchback: 2600,
-      sedan: 3100,
-      suv: 4200,
-      innova: 5400,
-      traveller: 8100,
-    },
-    
-    highways: ['NH44 (Salem-Dharmapuri-Hosur-Bengaluru Expressway)'],
-    
-    tolls: {
-      costRange: '₹280 - ₹340',
-      plazasCount: 3,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Interstate permit and toll charges extra at actuals.',
-    },
-    
-    pickupLocations: [
-      'Salem Railway Junction (SA)',
-      'New Bus Stand & Five Roads',
-      'Yercaud Foothills Gate',
-      'Steel Plant & Suramangalam',
-    ],
-    
-    dropLocations: [
-      'Silk Board & Electronic City',
-      'Koramangala & Indiranagar',
-      'Bengaluru City Railway Station (SBC)',
-      'Kempegowda International Airport (BLR)',
-    ],
-    
-    placesOnTheWay: [
-      { name: 'Salem', type: 'Origin', desc: 'Doorstep pickup across Salem city.' },
-      { name: 'Dharmapuri', type: 'Rest Stop', desc: 'Highway food plaza stop.' },
-      { name: 'Krishnagiri', type: 'Mango City', desc: 'NH-44 junction stop.' },
-      { name: 'Hosur', type: 'Border SEZ', desc: 'Tamil Nadu - Karnataka border town.' },
-      { name: 'Bengaluru', type: 'Destination', desc: 'Direct drop to Electronic City, Silk Board, or BLR Airport.' },
-    ],
-    
-    faqs: [
-      {
-        q: 'What is the fare from Salem to Bengaluru?',
-        a: 'The one-way taxi fare from Salem to Bengaluru starts at ₹2,600 for a Hatchback, ₹3,100 for a Sedan, and ₹4,200 for an SUV.',
-      },
-    ],
-    
-    reviews: [
-      {
-        name: 'Pradeep N.',
-        rating: 5,
-        text: 'Comfortable ride from Salem Five Roads to Electronic City Bengaluru. Professional driver with good highway experience.',
-        route: 'Salem to Bengaluru',
-      },
-    ],
-    
-    nearbyRoutes: [
-      { name: 'Coimbatore to Bengaluru', slug: 'coimbatore-to-bengaluru', distance: '365 km', fare: '₹4,500' },
-    ],
-  },
-
-  'chennai-to-pondicherry': {
-    from: 'Chennai',
-    fromSlug: 'chennai',
-    toSlug: 'viluppuram',
-    returnRouteSlug: 'chennai-airport-to-pondicherry',
-    popularFor: ["ECR Scenic Roadtrip","Weekend Getaway","Auroville Retreat","Beach Tourism"],
-    to: 'Puducherry',
-    distanceKm: 160,
-    timeHours: 3.25,
-    distanceDisplay: '160 km',
-    durationDisplay: '3.25 Hours',
-    heroTagline: 'Scenic One-Way Coastal Taxi from Chennai to Pondicherry. Travel via East Coast Road (ECR) with zero return fare.',
-    seoTitle: 'Chennai to Pondicherry One-Way Taxi | ECR Cab | SAMAYAS',
-    metaDescription: 'Book Chennai to Pondicherry one-way taxi with SAMAYAS via ECR. Hatchback ₹2,100, Sedan ₹2,500, SUV ₹3,600. Pickups from Chennai Central, T. Nagar & OMR. 24/7 service.',
-    
-    fare: {
-      hatchback: 2100,
-      sedan: 2500,
-      suv: 3600,
-      innova: 4500,
-      traveller: 6800,
-    },
-    
-    highways: ['ECR (East Coast Road)', 'NH32'],
-    
-    tolls: {
-      costRange: '₹140 - ₹180',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'ECR toll plaza charges extra at actuals.',
-    },
-    
-    pickupLocations: [
-      'Chennai Central Railway Station (MAS)',
-      'T. Nagar & Adyar',
-      'OMR (Sholinganallur, Thoraipakkam)',
-      'Velachery & ECR Kovalam',
-    ],
-    
-    dropLocations: [
-      'White Town (French Quarter)',
-      'Auroville Visitor Centre',
-      'Promenade Beach',
-      'Pondicherry Central Bus Stand',
-    ],
-    
-    placesOnTheWay: [
-      { name: 'Chennai', type: 'Origin', desc: 'Pickup from home, hotel or station.' },
-      { name: 'Mahabalipuram', type: 'UNESCO Heritage', desc: 'Shore Temple & Pancha Rathas view stop.' },
-      { name: 'Marakkanam', type: 'Backwaters', desc: 'Salt pans & coastal views.' },
-      { name: 'Puducherry', type: 'Destination', desc: 'Direct drop to French Quarter or Auroville.' },
-    ],
-    
-    faqs: [
-      {
-        q: 'What is the fare from Chennai to Pondicherry via ECR?',
-        a: 'The one-way taxi fare from Chennai to Pondicherry via ECR starts at ₹2,100 for a Hatchback, ₹2,500 for a Sedan, and ₹3,600 for an SUV.',
-      },
-    ],
-    
-    reviews: [
-      {
-        name: 'Arjun & Neha',
-        rating: 5,
-        text: 'Awesome coastal drive along ECR from Chennai T. Nagar to Pondicherry White Town. Driver stopped briefly at Mahabalipuram for coffee.',
-        route: 'Chennai to Pondicherry',
-      },
-    ],
-    
-    nearbyRoutes: [
-      { name: 'Chennai Airport to Pondicherry', slug: 'chennai-airport-to-pondicherry', distance: '140 km', fare: '₹1,900' },
-    ],
-  },
-
-  'tirunelveli-to-kanyakumari': {
-    from: 'Tirunelveli',
-    fromSlug: 'tirunelveli',
-    toSlug: 'kanyakumari',
-    returnRouteSlug: null,
-    popularFor: ["Sunset & Sunrise Tour","Vivekananda Rock Visit","Coastal Pilgrimage","Day Trips"],
-    to: 'Kanyakumari',
-    distanceKm: 85,
-    timeHours: 1.75,
-    distanceDisplay: '85 km',
-    durationDisplay: '1.75 Hours',
-    heroTagline: 'Express One-Way Taxi from Halwa City Tirunelveli to Kanyakumari. 24/7 doorstep pickup.',
-    seoTitle: 'Tirunelveli to Kanyakumari One-Way Taxi | Cab Booking | SAMAYAS',
-    metaDescription: 'Book Tirunelveli to Kanyakumari one-way taxi with SAMAYAS. Hatchback ₹1,400, Sedan ₹1,700, SUV ₹2,500. Direct drops to Vivekananda Rock & Sunset Point.',
-    
-    fare: {
-      hatchback: 1400,
-      sedan: 1700,
-      suv: 2500,
-      innova: 3200,
-      traveller: 4800,
-    },
-    
-    highways: ['NH44 (Tirunelveli-Kanyakumari Four-Lane Expressway)'],
-    
-    tolls: {
-      costRange: '₹80 - ₹110',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll charges extra where applicable.',
-    },
-    
-    pickupLocations: [
-      'Tirunelveli Junction Railway Station (TEN)',
-      'Palayamkottai & High Ground',
-      'Nellaiappar Temple Gate',
-      'New Bus Stand (Vennarpettai)',
-    ],
-    
-    dropLocations: [
-      'Vivekananda Rock Ferry Counter',
-      'Sunset Point & Beach Road',
-      'Kanyakumari Railway Station (CAPE)',
-      'Bhagavathy Amman Temple Gate',
-    ],
-    
-    placesOnTheWay: [
-      { name: 'Tirunelveli', type: 'Origin', desc: 'Doorstep pickup across Tirunelveli & Palayamkottai.' },
-      { name: 'Nanguneri', type: 'Rest Stop', desc: 'Historic temple town.' },
-      { name: 'Vallioor', type: 'Windmill Zone', desc: 'Famous Aralvaimozhi windmill pass.' },
-      { name: 'Kanyakumari', type: 'Destination', desc: 'Southernmost tip of India.' },
-    ],
-    
-    faqs: [
-      {
-        q: 'What is the fare from Tirunelveli to Kanyakumari?',
-        a: 'The one-way taxi fare from Tirunelveli to Kanyakumari starts at ₹1,400 for a Hatchback, ₹1,700 for a Sedan, and ₹2,500 for an SUV.',
-      },
-    ],
-    
-    reviews: [
-      {
-        name: 'Muruganandam P.',
-        rating: 5,
-        text: 'Fast 1.5 hour ride from Tirunelveli Junction to Kanyakumari sunset point. Very clean car.',
-        route: 'Tirunelveli to Kanyakumari',
-      },
-    ],
-    
-    nearbyRoutes: [
-      { name: 'Madurai to Rameshwaram', slug: 'madurai-to-rameswaram', distance: '175 km', fare: '₹2,400' },
+      { name: 'Vellore to Chennai', slug: 'vellore-to-chennai', distance: '140 km', fare: '₹1,400' },
     ],
   },
 
   'vellore-to-chennai': {
     from: 'Vellore',
+    to: 'Chennai',
     fromSlug: 'vellore',
     toSlug: 'chennai',
-    returnRouteSlug: null,
-    popularFor: ["CMC Medical Transfer","MAA Airport Drop","Golden Temple Trip","Corporate Commute"],
-    to: 'Chennai',
+    returnRouteSlug: 'chennai-to-vellore',
     distanceKm: 140,
     timeHours: 2.75,
     distanceDisplay: '140 km',
     durationDisplay: '2.75 Hours',
-    heroTagline: 'Medical & Outstation One-Way Taxi from Vellore to Chennai. Direct drops from CMC Hospital to MAA Airport.',
-    seoTitle: 'Vellore to Chennai One-Way Taxi | CMC Hospital Cab | SAMAYAS',
-    metaDescription: 'Book Vellore to Chennai one-way taxi with SAMAYAS. Hatchback ₹1,900, Sedan ₹2,200, SUV ₹3,200. Direct pickups from CMC Hospital & Katpadi to Chennai Airport & Central.',
-    
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Vellore to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Vellore to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Vellore to Chennai with SAMAYAS. Hatchback from ₹1,400, Sedan ₹1,680, SUV ₹2,240. 24/7 doorstep pickups.',
     fare: {
-      hatchback: 1900,
-      sedan: 2200,
-      suv: 3200,
-      innova: 4100,
-      traveller: 6200,
-    },
-    
-    highways: ['NH48 (Chennai-Bengaluru Expressway)'],
-    
+      "hatchback": 1400,
+      "sedan": 1680,
+      "suv": 2240,
+      "innova": 2660,
+      "traveller": 4200
+},
+    highways: ["NH48"],
     tolls: {
       costRange: '₹140 - ₹180',
       plazasCount: 2,
       fastagSupported: true,
       cashAccepted: true,
-      note: 'Toll charges extra where applicable.',
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
     },
-    
     pickupLocations: [
-      'CMC Hospital Main Gate & Campus',
-      'Katpadi Junction Railway Station (KPD)',
-      'Sripuram Golden Temple Gate',
-      'Vellore Fort & Bagayam',
+      'Vellore Central City / Main Junction',
+      'Vellore Railway Station & Bus Stand',
+      'Vellore Residential Areas & Hotels',
+      'Vellore Suburbs & Outer Ring Gates',
     ],
-    
     dropLocations: [
-      'Chennai International Airport (MAA)',
-      'Chennai Central Railway Station (MAS)',
-      'T. Nagar & Vadapalani',
-      'OMR IT Corridor',
+      'Chennai City Center & Main Commercial Hub',
+      'Chennai Railway Station & Transit Terminals',
+      'Chennai Hotels, Resorts & Residential Hubs',
+      'Chennai Airport / Highway Junction Drops',
     ],
-    
     placesOnTheWay: [
-      { name: 'Vellore', type: 'Origin', desc: 'Doorstep pickup from CMC Hospital or Katpadi.' },
-      { name: 'Ranipet', type: 'Industrial Zone', desc: 'Leather manufacturing cluster.' },
-      { name: 'Kanchipuram Bypass', type: 'Silk Gateway', desc: 'Sriperumbudur industrial hub approach.' },
-      { name: 'Chennai', type: 'Destination', desc: 'Direct drop to MAA Airport, Central or home.' },
+      { name: 'Vellore', type: 'Origin', desc: 'Doorstep pickup across Vellore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
     ],
-    
     faqs: [
       {
-        q: 'What is the fare from Vellore CMC Hospital to Chennai Airport?',
-        a: 'The one-way taxi fare from Vellore CMC Hospital to Chennai Airport starts at ₹1,900 for a Hatchback, ₹2,200 for a Sedan, and ₹3,200 for an SUV.',
+        q: 'What is the one-way taxi fare from Vellore to Chennai?',
+        a: 'The one-way taxi fare from Vellore to Chennai starts at ₹1,400 for a Hatchback, ₹1,680 for a Sedan, and ₹2,240 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Vellore to Chennai?',
+        a: 'The distance from Vellore to Chennai is approx 140 km via NH48. Travel duration is around 2.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Vellore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Vellore including railway stations, airports, and hotels.',
       },
     ],
-    
     reviews: [
       {
-        name: 'Dr. Banerjee',
+        name: 'Suresh Kumar',
         rating: 5,
-        text: 'Booked SAMAYAS for patient transfer from Vellore CMC to Chennai Airport. Driver was extremely gentle and polite.',
-        route: 'Vellore CMC to Chennai Airport',
+        text: 'Booked a one-way cab from Vellore to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.75 hours.',
+        route: 'Vellore to Chennai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Vellore to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Vellore to Chennai',
       },
     ],
-    
     nearbyRoutes: [
-      { name: 'Trichy to Chennai', slug: 'trichy-to-chennai', distance: '330 km', fare: '₹3,300' },
+      { name: 'Chennai to Vellore', slug: 'chennai-to-vellore', distance: '140 km', fare: '₹1,400' },
     ],
   },
 
-  'trichy-to-bengaluru': {
-    from: 'Trichy',
-    fromSlug: 'tiruchirappalli',
-    toSlug: 'krishnagiri',
-    returnRouteSlug: null,
-    popularFor: ["Interstate Travel","BLR Airport Drop","IT Commute","Family Trips"],
-    to: 'Bengaluru',
-    distanceKm: 345,
-    timeHours: 6.25,
-    distanceDisplay: '345 km',
-    durationDisplay: '6.25 Hours',
-    heroTagline: 'Interstate One-Way Taxi from Trichy to Bengaluru. Direct drops to Electronic City, Silk Board & BLR Airport.',
-    seoTitle: 'Trichy to Bengaluru One-Way Taxi | Intercity Cab | SAMAYAS',
-    metaDescription: 'Book Trichy to Bengaluru one-way taxi with SAMAYAS. Hatchback ₹4,200, Sedan ₹4,900, SUV ₹6,800. Doorstep pickups across Trichy to Electronic City, Koramangala & BLR Airport.',
-    
+  'chennai-to-erode': {
+    from: 'Chennai',
+    to: 'Erode',
+    fromSlug: 'chennai',
+    toSlug: 'erode',
+    returnRouteSlug: 'erode-to-chennai',
+    distanceKm: 420,
+    timeHours: 7,
+    distanceDisplay: '420 km',
+    durationDisplay: '7 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Erode. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Erode One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Erode with SAMAYAS. Hatchback from ₹4,200, Sedan ₹5,040, SUV ₹6,720. 24/7 doorstep pickups.',
     fare: {
-      hatchback: 4200,
-      sedan: 4900,
-      suv: 6800,
-      innova: 8200,
-      traveller: 12500,
-    },
-    
-    highways: ['NH44 / NH81 (Trichy-Namakkal-Salem-Bengaluru Expressway)'],
-    
-    tolls: {
-      costRange: '₹480 - ₹580',
-      plazasCount: 5,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'State permit and toll charges extra at actuals.',
-    },
-    
-    pickupLocations: [
-      'Trichy International Airport (TRZ)',
-      'Trichy Railway Junction (TPJ)',
-      'Srirangam Temple Gate',
-      'Cantonment & Thillai Nagar',
-    ],
-    
-    dropLocations: [
-      'Electronic City & Silk Board',
-      'Koramangala & Indiranagar',
-      'Kempegowda International Airport (BLR)',
-      'Bengaluru City Railway Station (SBC)',
-    ],
-    
-    placesOnTheWay: [
-      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
-      { name: 'Namakkal', type: 'Egg Capital', desc: 'Anjaneyar Temple city.' },
-      { name: 'Salem', type: 'Steel City', desc: 'Major highway interchange.' },
-      { name: 'Hosur', type: 'Border Gate', desc: 'Karnataka state border.' },
-      { name: 'Bengaluru', type: 'Destination', desc: 'Direct drop to Electronic City or BLR Airport.' },
-    ],
-    
-    faqs: [
-      {
-        q: 'What is the fare from Trichy to Bengaluru?',
-        a: 'The one-way taxi fare from Trichy to Bengaluru starts at ₹4,200 for a Hatchback, ₹4,900 for a Sedan, and ₹6,800 for an SUV.',
-      },
-    ],
-    
-    reviews: [
-      {
-        name: 'Vidyasagar M.',
-        rating: 5,
-        text: 'Traveled from Srirangam to Bengaluru Electronic City. Driver was punctual, polite, and drove very safely on the expressway.',
-        route: 'Trichy to Bengaluru',
-      },
-    ],
-    
-    nearbyRoutes: [
-      { name: 'Trichy to Chennai', slug: 'trichy-to-chennai', distance: '330 km', fare: '₹3,300' },
-    ],
-  },
-
-  'coimbatore-to-bengaluru': {
-    from: 'Coimbatore',
-    fromSlug: 'coimbatore',
-    toSlug: 'krishnagiri',
-    returnRouteSlug: null,
-    popularFor: ["Industrial & IT Travel","BLR Airport Transfer","Interstate Route","Business Visits"],
-    to: 'Bengaluru',
-    distanceKm: 365,
-    timeHours: 6.5,
-    distanceDisplay: '365 km',
-    durationDisplay: '6.5 Hours',
-    heroTagline: 'Express One-Way Taxi from Coimbatore to Bengaluru. 24/7 pickups from CJB Airport and Junction.',
-    seoTitle: 'Coimbatore to Bengaluru One-Way Taxi | Cab Booking | SAMAYAS',
-    metaDescription: 'Book Coimbatore to Bengaluru one-way taxi with SAMAYAS. Hatchback ₹4,500, Sedan ₹5,200, SUV ₹7,200. Pickups from CJB Airport to Electronic City & BLR Airport.',
-    
-    fare: {
-      hatchback: 4500,
-      sedan: 5200,
-      suv: 7200,
-      innova: 8800,
-      traveller: 13200,
-    },
-    
-    highways: ['NH544 / NH44 (Coimbatore-Salem-Hosur-Bengaluru Expressway)'],
-    
+      "hatchback": 4200,
+      "sedan": 5040,
+      "suv": 6720,
+      "innova": 7980,
+      "traveller": 12600
+},
+    highways: ["NH48","NH544"],
     tolls: {
       costRange: '₹520 - ₹620',
       plazasCount: 6,
       fastagSupported: true,
       cashAccepted: true,
-      note: 'State permit and toll charges extra at actuals.',
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
     },
-    
     pickupLocations: [
-      'Coimbatore International Airport (CJB)',
-      'Coimbatore Junction Railway Station (CBE)',
-      'Gandhipuram & RS Puram',
-      'Peelamedu & Saravanampatti',
+      'Chennai Central City / Main Junction',
+      'Chennai Railway Station & Bus Stand',
+      'Chennai Residential Areas & Hotels',
+      'Chennai Suburbs & Outer Ring Gates',
     ],
-    
     dropLocations: [
-      'Electronic City & Silk Board',
-      'Koramangala & Indiranagar',
-      'Kempegowda International Airport (BLR)',
-      'Bengaluru City Railway Station (SBC)',
+      'Erode City Center & Main Commercial Hub',
+      'Erode Railway Station & Transit Terminals',
+      'Erode Hotels, Resorts & Residential Hubs',
+      'Erode Airport / Highway Junction Drops',
     ],
-    
     placesOnTheWay: [
-      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup from CJB Airport or home.' },
-      { name: 'Erode Bypass', type: 'Textile Hub', desc: 'NH-544 highway corridor.' },
-      { name: 'Salem', type: 'Interchange', desc: 'NH-44 join towards Bengaluru.' },
-      { name: 'Hosur', type: 'State Border', desc: 'Border toll plaza.' },
-      { name: 'Bengaluru', type: 'Destination', desc: 'Direct drop to Electronic City or BLR Airport.' },
+      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Erode', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Erode.' },
     ],
-    
     faqs: [
       {
-        q: 'What is the fare from Coimbatore to Bengaluru?',
-        a: 'The one-way taxi fare from Coimbatore to Bengaluru starts at ₹4,500 for a Hatchback, ₹5,200 for a Sedan, and ₹7,200 for an SUV.',
+        q: 'What is the one-way taxi fare from Chennai to Erode?',
+        a: 'The one-way taxi fare from Chennai to Erode starts at ₹4,200 for a Hatchback, ₹5,040 for a Sedan, and ₹6,720 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai to Erode?',
+        a: 'The distance from Chennai to Erode is approx 420 km via NH48. Travel duration is around 7 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai including railway stations, airports, and hotels.',
       },
     ],
-    
     reviews: [
       {
-        name: 'Gowri Shankar',
+        name: 'Suresh Kumar',
         rating: 5,
-        text: 'Booked a one-way cab from Peelamedu Coimbatore to Koramangala Bengaluru. Excellent vehicle condition and hassle-free journey.',
+        text: 'Booked a one-way cab from Chennai to Erode. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 7 hours.',
+        route: 'Chennai to Erode',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai to Erode. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Erode',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Erode to Chennai', slug: 'erode-to-chennai', distance: '420 km', fare: '₹4,200' },
+    ],
+  },
+
+  'erode-to-chennai': {
+    from: 'Erode',
+    to: 'Chennai',
+    fromSlug: 'erode',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-to-erode',
+    distanceKm: 420,
+    timeHours: 7,
+    distanceDisplay: '420 km',
+    durationDisplay: '7 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Erode to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Erode to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Erode to Chennai with SAMAYAS. Hatchback from ₹4,200, Sedan ₹5,040, SUV ₹6,720. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 4200,
+      "sedan": 5040,
+      "suv": 6720,
+      "innova": 7980,
+      "traveller": 12600
+},
+    highways: ["NH544","NH48"],
+    tolls: {
+      costRange: '₹520 - ₹620',
+      plazasCount: 6,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Erode Central City / Main Junction',
+      'Erode Railway Station & Bus Stand',
+      'Erode Residential Areas & Hotels',
+      'Erode Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai City Center & Main Commercial Hub',
+      'Chennai Railway Station & Transit Terminals',
+      'Chennai Hotels, Resorts & Residential Hubs',
+      'Chennai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Erode', type: 'Origin', desc: 'Doorstep pickup across Erode.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Erode to Chennai?',
+        a: 'The one-way taxi fare from Erode to Chennai starts at ₹4,200 for a Hatchback, ₹5,040 for a Sedan, and ₹6,720 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Erode to Chennai?',
+        a: 'The distance from Erode to Chennai is approx 420 km via NH544. Travel duration is around 7 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Erode?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Erode including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Erode to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 7 hours.',
+        route: 'Erode to Chennai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Erode to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Erode to Chennai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai to Erode', slug: 'chennai-to-erode', distance: '420 km', fare: '₹4,200' },
+    ],
+  },
+
+  'trichy-to-madurai': {
+    from: 'Trichy',
+    to: 'Madurai',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'madurai',
+    returnRouteSlug: 'madurai-to-trichy',
+    distanceKm: 135,
+    timeHours: 2.25,
+    distanceDisplay: '135 km',
+    durationDisplay: '2.25 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Trichy to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Trichy to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Madurai with SAMAYAS. Hatchback from ₹1,350, Sedan ₹1,620, SUV ₹2,160. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1350,
+      "sedan": 1620,
+      "suv": 2160,
+      "innova": 2565,
+      "traveller": 4050
+},
+    highways: ["NH38"],
+    tolls: {
+      costRange: '₹140 - ₹180',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Trichy Central City / Main Junction',
+      'Trichy Railway Station & Bus Stand',
+      'Trichy Residential Areas & Hotels',
+      'Trichy Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Madurai City Center & Main Commercial Hub',
+      'Madurai Railway Station & Transit Terminals',
+      'Madurai Hotels, Resorts & Residential Hubs',
+      'Madurai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Madurai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Trichy to Madurai?',
+        a: 'The one-way taxi fare from Trichy to Madurai starts at ₹1,350 for a Hatchback, ₹1,620 for a Sedan, and ₹2,160 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Trichy to Madurai?',
+        a: 'The distance from Trichy to Madurai is approx 135 km via NH38. Travel duration is around 2.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Trichy?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Trichy to Madurai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.25 hours.',
+        route: 'Trichy to Madurai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Trichy to Madurai. Zero return charges and transparent per-km bill.',
+        route: 'Trichy to Madurai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Madurai to Trichy', slug: 'madurai-to-trichy', distance: '135 km', fare: '₹1,350' },
+    ],
+  },
+
+  'madurai-to-trichy': {
+    from: 'Madurai',
+    to: 'Trichy',
+    fromSlug: 'madurai',
+    toSlug: 'tiruchirappalli',
+    returnRouteSlug: 'trichy-to-madurai',
+    distanceKm: 135,
+    timeHours: 2.25,
+    distanceDisplay: '135 km',
+    durationDisplay: '2.25 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Madurai to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Madurai to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Trichy with SAMAYAS. Hatchback from ₹1,350, Sedan ₹1,620, SUV ₹2,160. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1350,
+      "sedan": 1620,
+      "suv": 2160,
+      "innova": 2565,
+      "traveller": 4050
+},
+    highways: ["NH38"],
+    tolls: {
+      costRange: '₹140 - ₹180',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Madurai Central City / Main Junction',
+      'Madurai Railway Station & Bus Stand',
+      'Madurai Residential Areas & Hotels',
+      'Madurai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Trichy City Center & Main Commercial Hub',
+      'Trichy Railway Station & Transit Terminals',
+      'Trichy Hotels, Resorts & Residential Hubs',
+      'Trichy Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Madurai', type: 'Origin', desc: 'Doorstep pickup across Madurai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Trichy', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Madurai to Trichy?',
+        a: 'The one-way taxi fare from Madurai to Trichy starts at ₹1,350 for a Hatchback, ₹1,620 for a Sedan, and ₹2,160 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Madurai to Trichy?',
+        a: 'The distance from Madurai to Trichy is approx 135 km via NH38. Travel duration is around 2.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Madurai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Madurai to Trichy. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.25 hours.',
+        route: 'Madurai to Trichy',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Madurai to Trichy. Zero return charges and transparent per-km bill.',
+        route: 'Madurai to Trichy',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Trichy to Madurai', slug: 'trichy-to-madurai', distance: '135 km', fare: '₹1,350' },
+    ],
+  },
+
+  'trichy-to-coimbatore': {
+    from: 'Trichy',
+    to: 'Coimbatore',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'coimbatore-to-trichy',
+    distanceKm: 215,
+    timeHours: 4.25,
+    distanceDisplay: '215 km',
+    durationDisplay: '4.25 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Trichy to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Trichy to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Coimbatore with SAMAYAS. Hatchback from ₹2,150, Sedan ₹2,580, SUV ₹3,440. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 2150,
+      "sedan": 2580,
+      "suv": 3440,
+      "innova": 4085,
+      "traveller": 6450
+},
+    highways: ["NH81"],
+    tolls: {
+      costRange: '₹180 - ₹240',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Trichy Central City / Main Junction',
+      'Trichy Railway Station & Bus Stand',
+      'Trichy Residential Areas & Hotels',
+      'Trichy Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Coimbatore City Center & Main Commercial Hub',
+      'Coimbatore Railway Station & Transit Terminals',
+      'Coimbatore Hotels, Resorts & Residential Hubs',
+      'Coimbatore Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Coimbatore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Trichy to Coimbatore?',
+        a: 'The one-way taxi fare from Trichy to Coimbatore starts at ₹2,150 for a Hatchback, ₹2,580 for a Sedan, and ₹3,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Trichy to Coimbatore?',
+        a: 'The distance from Trichy to Coimbatore is approx 215 km via NH81. Travel duration is around 4.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Trichy?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Trichy to Coimbatore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.25 hours.',
+        route: 'Trichy to Coimbatore',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Trichy to Coimbatore. Zero return charges and transparent per-km bill.',
+        route: 'Trichy to Coimbatore',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Coimbatore to Trichy', slug: 'coimbatore-to-trichy', distance: '215 km', fare: '₹2,150' },
+    ],
+  },
+
+  'coimbatore-to-trichy': {
+    from: 'Coimbatore',
+    to: 'Trichy',
+    fromSlug: 'coimbatore',
+    toSlug: 'tiruchirappalli',
+    returnRouteSlug: 'trichy-to-coimbatore',
+    distanceKm: 215,
+    timeHours: 4.25,
+    distanceDisplay: '215 km',
+    durationDisplay: '4.25 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Coimbatore to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Coimbatore to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Trichy with SAMAYAS. Hatchback from ₹2,150, Sedan ₹2,580, SUV ₹3,440. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 2150,
+      "sedan": 2580,
+      "suv": 3440,
+      "innova": 4085,
+      "traveller": 6450
+},
+    highways: ["NH81"],
+    tolls: {
+      costRange: '₹180 - ₹240',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Coimbatore Central City / Main Junction',
+      'Coimbatore Railway Station & Bus Stand',
+      'Coimbatore Residential Areas & Hotels',
+      'Coimbatore Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Trichy City Center & Main Commercial Hub',
+      'Trichy Railway Station & Transit Terminals',
+      'Trichy Hotels, Resorts & Residential Hubs',
+      'Trichy Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup across Coimbatore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Trichy', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Coimbatore to Trichy?',
+        a: 'The one-way taxi fare from Coimbatore to Trichy starts at ₹2,150 for a Hatchback, ₹2,580 for a Sedan, and ₹3,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Coimbatore to Trichy?',
+        a: 'The distance from Coimbatore to Trichy is approx 215 km via NH81. Travel duration is around 4.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Coimbatore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Coimbatore to Trichy. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.25 hours.',
+        route: 'Coimbatore to Trichy',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Coimbatore to Trichy. Zero return charges and transparent per-km bill.',
+        route: 'Coimbatore to Trichy',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Trichy to Coimbatore', slug: 'trichy-to-coimbatore', distance: '215 km', fare: '₹2,150' },
+    ],
+  },
+
+  'trichy-to-salem': {
+    from: 'Trichy',
+    to: 'Salem',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'salem',
+    returnRouteSlug: 'salem-to-trichy',
+    distanceKm: 140,
+    timeHours: 2.75,
+    distanceDisplay: '140 km',
+    durationDisplay: '2.75 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Trichy to Salem. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Trichy to Salem One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Salem with SAMAYAS. Hatchback from ₹1,400, Sedan ₹1,680, SUV ₹2,240. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1400,
+      "sedan": 1680,
+      "suv": 2240,
+      "innova": 2660,
+      "traveller": 4200
+},
+    highways: ["NH81","NH44"],
+    tolls: {
+      costRange: '₹120 - ₹160',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Trichy Central City / Main Junction',
+      'Trichy Railway Station & Bus Stand',
+      'Trichy Residential Areas & Hotels',
+      'Trichy Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Salem City Center & Main Commercial Hub',
+      'Salem Railway Station & Transit Terminals',
+      'Salem Hotels, Resorts & Residential Hubs',
+      'Salem Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Salem', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Salem.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Trichy to Salem?',
+        a: 'The one-way taxi fare from Trichy to Salem starts at ₹1,400 for a Hatchback, ₹1,680 for a Sedan, and ₹2,240 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Trichy to Salem?',
+        a: 'The distance from Trichy to Salem is approx 140 km via NH81. Travel duration is around 2.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Trichy?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Trichy to Salem. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.75 hours.',
+        route: 'Trichy to Salem',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Trichy to Salem. Zero return charges and transparent per-km bill.',
+        route: 'Trichy to Salem',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Salem to Trichy', slug: 'salem-to-trichy', distance: '140 km', fare: '₹1,400' },
+    ],
+  },
+
+  'salem-to-trichy': {
+    from: 'Salem',
+    to: 'Trichy',
+    fromSlug: 'salem',
+    toSlug: 'tiruchirappalli',
+    returnRouteSlug: 'trichy-to-salem',
+    distanceKm: 140,
+    timeHours: 2.75,
+    distanceDisplay: '140 km',
+    durationDisplay: '2.75 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Salem to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Salem to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Salem to Trichy with SAMAYAS. Hatchback from ₹1,400, Sedan ₹1,680, SUV ₹2,240. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1400,
+      "sedan": 1680,
+      "suv": 2240,
+      "innova": 2660,
+      "traveller": 4200
+},
+    highways: ["NH44","NH81"],
+    tolls: {
+      costRange: '₹120 - ₹160',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Salem Central City / Main Junction',
+      'Salem Railway Station & Bus Stand',
+      'Salem Residential Areas & Hotels',
+      'Salem Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Trichy City Center & Main Commercial Hub',
+      'Trichy Railway Station & Transit Terminals',
+      'Trichy Hotels, Resorts & Residential Hubs',
+      'Trichy Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Salem', type: 'Origin', desc: 'Doorstep pickup across Salem.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Trichy', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Salem to Trichy?',
+        a: 'The one-way taxi fare from Salem to Trichy starts at ₹1,400 for a Hatchback, ₹1,680 for a Sedan, and ₹2,240 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Salem to Trichy?',
+        a: 'The distance from Salem to Trichy is approx 140 km via NH44. Travel duration is around 2.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Salem?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Salem including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Salem to Trichy. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.75 hours.',
+        route: 'Salem to Trichy',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Salem to Trichy. Zero return charges and transparent per-km bill.',
+        route: 'Salem to Trichy',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Trichy to Salem', slug: 'trichy-to-salem', distance: '140 km', fare: '₹1,400' },
+    ],
+  },
+
+  'trichy-to-thanjavur': {
+    from: 'Trichy',
+    to: 'Thanjavur',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'thanjavur',
+    returnRouteSlug: 'thanjavur-to-trichy',
+    distanceKm: 55,
+    timeHours: 1,
+    distanceDisplay: '55 km',
+    durationDisplay: '1 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Trichy to Thanjavur. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Trichy to Thanjavur One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Thanjavur with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 550,
+      "sedan": 660,
+      "suv": 880,
+      "innova": 1045,
+      "traveller": 1650
+},
+    highways: ["NH83"],
+    tolls: {
+      costRange: '₹40 - ₹70',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Trichy Central City / Main Junction',
+      'Trichy Railway Station & Bus Stand',
+      'Trichy Residential Areas & Hotels',
+      'Trichy Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Thanjavur City Center & Main Commercial Hub',
+      'Thanjavur Railway Station & Transit Terminals',
+      'Thanjavur Hotels, Resorts & Residential Hubs',
+      'Thanjavur Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Thanjavur', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Thanjavur.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Trichy to Thanjavur?',
+        a: 'The one-way taxi fare from Trichy to Thanjavur starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Trichy to Thanjavur?',
+        a: 'The distance from Trichy to Thanjavur is approx 55 km via NH83. Travel duration is around 1 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Trichy?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Trichy to Thanjavur. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1 hours.',
+        route: 'Trichy to Thanjavur',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Trichy to Thanjavur. Zero return charges and transparent per-km bill.',
+        route: 'Trichy to Thanjavur',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Thanjavur to Trichy', slug: 'thanjavur-to-trichy', distance: '55 km', fare: '₹550' },
+    ],
+  },
+
+  'thanjavur-to-trichy': {
+    from: 'Thanjavur',
+    to: 'Trichy',
+    fromSlug: 'thanjavur',
+    toSlug: 'tiruchirappalli',
+    returnRouteSlug: 'trichy-to-thanjavur',
+    distanceKm: 55,
+    timeHours: 1,
+    distanceDisplay: '55 km',
+    durationDisplay: '1 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Thanjavur to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Thanjavur to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Thanjavur to Trichy with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 550,
+      "sedan": 660,
+      "suv": 880,
+      "innova": 1045,
+      "traveller": 1650
+},
+    highways: ["NH83"],
+    tolls: {
+      costRange: '₹40 - ₹70',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Thanjavur Central City / Main Junction',
+      'Thanjavur Railway Station & Bus Stand',
+      'Thanjavur Residential Areas & Hotels',
+      'Thanjavur Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Trichy City Center & Main Commercial Hub',
+      'Trichy Railway Station & Transit Terminals',
+      'Trichy Hotels, Resorts & Residential Hubs',
+      'Trichy Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Thanjavur', type: 'Origin', desc: 'Doorstep pickup across Thanjavur.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Trichy', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Thanjavur to Trichy?',
+        a: 'The one-way taxi fare from Thanjavur to Trichy starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Thanjavur to Trichy?',
+        a: 'The distance from Thanjavur to Trichy is approx 55 km via NH83. Travel duration is around 1 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Thanjavur?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Thanjavur including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Thanjavur to Trichy. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1 hours.',
+        route: 'Thanjavur to Trichy',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Thanjavur to Trichy. Zero return charges and transparent per-km bill.',
+        route: 'Thanjavur to Trichy',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Trichy to Thanjavur', slug: 'trichy-to-thanjavur', distance: '55 km', fare: '₹550' },
+    ],
+  },
+
+  'trichy-to-tirunelveli': {
+    from: 'Trichy',
+    to: 'Tirunelveli',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'tirunelveli',
+    returnRouteSlug: 'tirunelveli-to-trichy',
+    distanceKm: 290,
+    timeHours: 4.75,
+    distanceDisplay: '290 km',
+    durationDisplay: '4.75 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Trichy to Tirunelveli. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Trichy to Tirunelveli One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Tirunelveli with SAMAYAS. Hatchback from ₹2,900, Sedan ₹3,480, SUV ₹4,640. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 2900,
+      "sedan": 3480,
+      "suv": 4640,
+      "innova": 5510,
+      "traveller": 8700
+},
+    highways: ["NH38","NH44"],
+    tolls: {
+      costRange: '₹340 - ₹420',
+      plazasCount: 4,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Trichy Central City / Main Junction',
+      'Trichy Railway Station & Bus Stand',
+      'Trichy Residential Areas & Hotels',
+      'Trichy Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Tirunelveli City Center & Main Commercial Hub',
+      'Tirunelveli Railway Station & Transit Terminals',
+      'Tirunelveli Hotels, Resorts & Residential Hubs',
+      'Tirunelveli Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Tirunelveli', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Tirunelveli.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Trichy to Tirunelveli?',
+        a: 'The one-way taxi fare from Trichy to Tirunelveli starts at ₹2,900 for a Hatchback, ₹3,480 for a Sedan, and ₹4,640 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Trichy to Tirunelveli?',
+        a: 'The distance from Trichy to Tirunelveli is approx 290 km via NH38. Travel duration is around 4.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Trichy?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Trichy to Tirunelveli. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.75 hours.',
+        route: 'Trichy to Tirunelveli',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Trichy to Tirunelveli. Zero return charges and transparent per-km bill.',
+        route: 'Trichy to Tirunelveli',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Tirunelveli to Trichy', slug: 'tirunelveli-to-trichy', distance: '290 km', fare: '₹2,900' },
+    ],
+  },
+
+  'tirunelveli-to-trichy': {
+    from: 'Tirunelveli',
+    to: 'Trichy',
+    fromSlug: 'tirunelveli',
+    toSlug: 'tiruchirappalli',
+    returnRouteSlug: 'trichy-to-tirunelveli',
+    distanceKm: 290,
+    timeHours: 4.75,
+    distanceDisplay: '290 km',
+    durationDisplay: '4.75 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Tirunelveli to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Tirunelveli to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirunelveli to Trichy with SAMAYAS. Hatchback from ₹2,900, Sedan ₹3,480, SUV ₹4,640. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 2900,
+      "sedan": 3480,
+      "suv": 4640,
+      "innova": 5510,
+      "traveller": 8700
+},
+    highways: ["NH44","NH38"],
+    tolls: {
+      costRange: '₹340 - ₹420',
+      plazasCount: 4,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Tirunelveli Central City / Main Junction',
+      'Tirunelveli Railway Station & Bus Stand',
+      'Tirunelveli Residential Areas & Hotels',
+      'Tirunelveli Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Trichy City Center & Main Commercial Hub',
+      'Trichy Railway Station & Transit Terminals',
+      'Trichy Hotels, Resorts & Residential Hubs',
+      'Trichy Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Tirunelveli', type: 'Origin', desc: 'Doorstep pickup across Tirunelveli.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Trichy', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Tirunelveli to Trichy?',
+        a: 'The one-way taxi fare from Tirunelveli to Trichy starts at ₹2,900 for a Hatchback, ₹3,480 for a Sedan, and ₹4,640 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Tirunelveli to Trichy?',
+        a: 'The distance from Tirunelveli to Trichy is approx 290 km via NH44. Travel duration is around 4.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Tirunelveli?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Tirunelveli including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Tirunelveli to Trichy. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.75 hours.',
+        route: 'Tirunelveli to Trichy',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Tirunelveli to Trichy. Zero return charges and transparent per-km bill.',
+        route: 'Tirunelveli to Trichy',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Trichy to Tirunelveli', slug: 'trichy-to-tirunelveli', distance: '290 km', fare: '₹2,900' },
+    ],
+  },
+
+  'trichy-to-erode': {
+    from: 'Trichy',
+    to: 'Erode',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'erode',
+    returnRouteSlug: 'erode-to-trichy',
+    distanceKm: 155,
+    timeHours: 3.25,
+    distanceDisplay: '155 km',
+    durationDisplay: '3.25 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Trichy to Erode. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Trichy to Erode One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Erode with SAMAYAS. Hatchback from ₹1,550, Sedan ₹1,860, SUV ₹2,480. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1550,
+      "sedan": 1860,
+      "suv": 2480,
+      "innova": 2945,
+      "traveller": 4650
+},
+    highways: ["NH81"],
+    tolls: {
+      costRange: '₹110 - ₹150',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Trichy Central City / Main Junction',
+      'Trichy Railway Station & Bus Stand',
+      'Trichy Residential Areas & Hotels',
+      'Trichy Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Erode City Center & Main Commercial Hub',
+      'Erode Railway Station & Transit Terminals',
+      'Erode Hotels, Resorts & Residential Hubs',
+      'Erode Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Erode', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Erode.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Trichy to Erode?',
+        a: 'The one-way taxi fare from Trichy to Erode starts at ₹1,550 for a Hatchback, ₹1,860 for a Sedan, and ₹2,480 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Trichy to Erode?',
+        a: 'The distance from Trichy to Erode is approx 155 km via NH81. Travel duration is around 3.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Trichy?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Trichy to Erode. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
+        route: 'Trichy to Erode',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Trichy to Erode. Zero return charges and transparent per-km bill.',
+        route: 'Trichy to Erode',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Erode to Trichy', slug: 'erode-to-trichy', distance: '155 km', fare: '₹1,550' },
+    ],
+  },
+
+  'erode-to-trichy': {
+    from: 'Erode',
+    to: 'Trichy',
+    fromSlug: 'erode',
+    toSlug: 'tiruchirappalli',
+    returnRouteSlug: 'trichy-to-erode',
+    distanceKm: 155,
+    timeHours: 3.25,
+    distanceDisplay: '155 km',
+    durationDisplay: '3.25 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Erode to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Erode to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Erode to Trichy with SAMAYAS. Hatchback from ₹1,550, Sedan ₹1,860, SUV ₹2,480. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1550,
+      "sedan": 1860,
+      "suv": 2480,
+      "innova": 2945,
+      "traveller": 4650
+},
+    highways: ["NH81"],
+    tolls: {
+      costRange: '₹110 - ₹150',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Erode Central City / Main Junction',
+      'Erode Railway Station & Bus Stand',
+      'Erode Residential Areas & Hotels',
+      'Erode Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Trichy City Center & Main Commercial Hub',
+      'Trichy Railway Station & Transit Terminals',
+      'Trichy Hotels, Resorts & Residential Hubs',
+      'Trichy Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Erode', type: 'Origin', desc: 'Doorstep pickup across Erode.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Trichy', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Erode to Trichy?',
+        a: 'The one-way taxi fare from Erode to Trichy starts at ₹1,550 for a Hatchback, ₹1,860 for a Sedan, and ₹2,480 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Erode to Trichy?',
+        a: 'The distance from Erode to Trichy is approx 155 km via NH81. Travel duration is around 3.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Erode?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Erode including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Erode to Trichy. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
+        route: 'Erode to Trichy',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Erode to Trichy. Zero return charges and transparent per-km bill.',
+        route: 'Erode to Trichy',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Trichy to Erode', slug: 'trichy-to-erode', distance: '155 km', fare: '₹1,550' },
+    ],
+  },
+
+  'madurai-to-coimbatore': {
+    from: 'Madurai',
+    to: 'Coimbatore',
+    fromSlug: 'madurai',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'coimbatore-to-madurai',
+    distanceKm: 210,
+    timeHours: 4.25,
+    distanceDisplay: '210 km',
+    durationDisplay: '4.25 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Madurai to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Madurai to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Coimbatore with SAMAYAS. Hatchback from ₹2,100, Sedan ₹2,520, SUV ₹3,360. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 2100,
+      "sedan": 2520,
+      "suv": 3360,
+      "innova": 3990,
+      "traveller": 6300
+},
+    highways: ["NH83"],
+    tolls: {
+      costRange: '₹160 - ₹220',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Madurai Central City / Main Junction',
+      'Madurai Railway Station & Bus Stand',
+      'Madurai Residential Areas & Hotels',
+      'Madurai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Coimbatore City Center & Main Commercial Hub',
+      'Coimbatore Railway Station & Transit Terminals',
+      'Coimbatore Hotels, Resorts & Residential Hubs',
+      'Coimbatore Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Madurai', type: 'Origin', desc: 'Doorstep pickup across Madurai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Coimbatore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Madurai to Coimbatore?',
+        a: 'The one-way taxi fare from Madurai to Coimbatore starts at ₹2,100 for a Hatchback, ₹2,520 for a Sedan, and ₹3,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Madurai to Coimbatore?',
+        a: 'The distance from Madurai to Coimbatore is approx 210 km via NH83. Travel duration is around 4.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Madurai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Madurai to Coimbatore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.25 hours.',
+        route: 'Madurai to Coimbatore',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Madurai to Coimbatore. Zero return charges and transparent per-km bill.',
+        route: 'Madurai to Coimbatore',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Coimbatore to Madurai', slug: 'coimbatore-to-madurai', distance: '210 km', fare: '₹2,100' },
+    ],
+  },
+
+  'coimbatore-to-madurai': {
+    from: 'Coimbatore',
+    to: 'Madurai',
+    fromSlug: 'coimbatore',
+    toSlug: 'madurai',
+    returnRouteSlug: 'madurai-to-coimbatore',
+    distanceKm: 210,
+    timeHours: 4.25,
+    distanceDisplay: '210 km',
+    durationDisplay: '4.25 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Coimbatore to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Coimbatore to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Madurai with SAMAYAS. Hatchback from ₹2,100, Sedan ₹2,520, SUV ₹3,360. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 2100,
+      "sedan": 2520,
+      "suv": 3360,
+      "innova": 3990,
+      "traveller": 6300
+},
+    highways: ["NH83"],
+    tolls: {
+      costRange: '₹160 - ₹220',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Coimbatore Central City / Main Junction',
+      'Coimbatore Railway Station & Bus Stand',
+      'Coimbatore Residential Areas & Hotels',
+      'Coimbatore Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Madurai City Center & Main Commercial Hub',
+      'Madurai Railway Station & Transit Terminals',
+      'Madurai Hotels, Resorts & Residential Hubs',
+      'Madurai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup across Coimbatore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Madurai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Coimbatore to Madurai?',
+        a: 'The one-way taxi fare from Coimbatore to Madurai starts at ₹2,100 for a Hatchback, ₹2,520 for a Sedan, and ₹3,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Coimbatore to Madurai?',
+        a: 'The distance from Coimbatore to Madurai is approx 210 km via NH83. Travel duration is around 4.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Coimbatore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Coimbatore to Madurai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.25 hours.',
+        route: 'Coimbatore to Madurai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Coimbatore to Madurai. Zero return charges and transparent per-km bill.',
+        route: 'Coimbatore to Madurai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Madurai to Coimbatore', slug: 'madurai-to-coimbatore', distance: '210 km', fare: '₹2,100' },
+    ],
+  },
+
+  'madurai-to-tirunelveli': {
+    from: 'Madurai',
+    to: 'Tirunelveli',
+    fromSlug: 'madurai',
+    toSlug: 'tirunelveli',
+    returnRouteSlug: 'tirunelveli-to-madurai',
+    distanceKm: 160,
+    timeHours: 2.75,
+    distanceDisplay: '160 km',
+    durationDisplay: '2.75 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Madurai to Tirunelveli. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Madurai to Tirunelveli One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Tirunelveli with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1600,
+      "sedan": 1920,
+      "suv": 2560,
+      "innova": 3040,
+      "traveller": 4800
+},
+    highways: ["NH44"],
+    tolls: {
+      costRange: '₹180 - ₹230',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Madurai Central City / Main Junction',
+      'Madurai Railway Station & Bus Stand',
+      'Madurai Residential Areas & Hotels',
+      'Madurai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Tirunelveli City Center & Main Commercial Hub',
+      'Tirunelveli Railway Station & Transit Terminals',
+      'Tirunelveli Hotels, Resorts & Residential Hubs',
+      'Tirunelveli Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Madurai', type: 'Origin', desc: 'Doorstep pickup across Madurai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Tirunelveli', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Tirunelveli.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Madurai to Tirunelveli?',
+        a: 'The one-way taxi fare from Madurai to Tirunelveli starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Madurai to Tirunelveli?',
+        a: 'The distance from Madurai to Tirunelveli is approx 160 km via NH44. Travel duration is around 2.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Madurai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Madurai to Tirunelveli. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.75 hours.',
+        route: 'Madurai to Tirunelveli',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Madurai to Tirunelveli. Zero return charges and transparent per-km bill.',
+        route: 'Madurai to Tirunelveli',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Tirunelveli to Madurai', slug: 'tirunelveli-to-madurai', distance: '160 km', fare: '₹1,600' },
+    ],
+  },
+
+  'tirunelveli-to-madurai': {
+    from: 'Tirunelveli',
+    to: 'Madurai',
+    fromSlug: 'tirunelveli',
+    toSlug: 'madurai',
+    returnRouteSlug: 'madurai-to-tirunelveli',
+    distanceKm: 160,
+    timeHours: 2.75,
+    distanceDisplay: '160 km',
+    durationDisplay: '2.75 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Tirunelveli to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Tirunelveli to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirunelveli to Madurai with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1600,
+      "sedan": 1920,
+      "suv": 2560,
+      "innova": 3040,
+      "traveller": 4800
+},
+    highways: ["NH44"],
+    tolls: {
+      costRange: '₹180 - ₹230',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Tirunelveli Central City / Main Junction',
+      'Tirunelveli Railway Station & Bus Stand',
+      'Tirunelveli Residential Areas & Hotels',
+      'Tirunelveli Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Madurai City Center & Main Commercial Hub',
+      'Madurai Railway Station & Transit Terminals',
+      'Madurai Hotels, Resorts & Residential Hubs',
+      'Madurai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Tirunelveli', type: 'Origin', desc: 'Doorstep pickup across Tirunelveli.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Madurai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Tirunelveli to Madurai?',
+        a: 'The one-way taxi fare from Tirunelveli to Madurai starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Tirunelveli to Madurai?',
+        a: 'The distance from Tirunelveli to Madurai is approx 160 km via NH44. Travel duration is around 2.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Tirunelveli?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Tirunelveli including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Tirunelveli to Madurai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.75 hours.',
+        route: 'Tirunelveli to Madurai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Tirunelveli to Madurai. Zero return charges and transparent per-km bill.',
+        route: 'Tirunelveli to Madurai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Madurai to Tirunelveli', slug: 'madurai-to-tirunelveli', distance: '160 km', fare: '₹1,600' },
+    ],
+  },
+
+  'coimbatore-to-salem': {
+    from: 'Coimbatore',
+    to: 'Salem',
+    fromSlug: 'coimbatore',
+    toSlug: 'salem',
+    returnRouteSlug: 'salem-to-coimbatore',
+    distanceKm: 165,
+    timeHours: 3,
+    distanceDisplay: '165 km',
+    durationDisplay: '3 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Coimbatore to Salem. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Coimbatore to Salem One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Salem with SAMAYAS. Hatchback from ₹1,650, Sedan ₹1,980, SUV ₹2,640. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1650,
+      "sedan": 1980,
+      "suv": 2640,
+      "innova": 3135,
+      "traveller": 4950
+},
+    highways: ["NH544"],
+    tolls: {
+      costRange: '₹180 - ₹240',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Coimbatore Central City / Main Junction',
+      'Coimbatore Railway Station & Bus Stand',
+      'Coimbatore Residential Areas & Hotels',
+      'Coimbatore Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Salem City Center & Main Commercial Hub',
+      'Salem Railway Station & Transit Terminals',
+      'Salem Hotels, Resorts & Residential Hubs',
+      'Salem Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup across Coimbatore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Salem', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Salem.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Coimbatore to Salem?',
+        a: 'The one-way taxi fare from Coimbatore to Salem starts at ₹1,650 for a Hatchback, ₹1,980 for a Sedan, and ₹2,640 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Coimbatore to Salem?',
+        a: 'The distance from Coimbatore to Salem is approx 165 km via NH544. Travel duration is around 3 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Coimbatore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Coimbatore to Salem. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3 hours.',
+        route: 'Coimbatore to Salem',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Coimbatore to Salem. Zero return charges and transparent per-km bill.',
+        route: 'Coimbatore to Salem',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Salem to Coimbatore', slug: 'salem-to-coimbatore', distance: '165 km', fare: '₹1,650' },
+    ],
+  },
+
+  'salem-to-coimbatore': {
+    from: 'Salem',
+    to: 'Coimbatore',
+    fromSlug: 'salem',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'coimbatore-to-salem',
+    distanceKm: 165,
+    timeHours: 3,
+    distanceDisplay: '165 km',
+    durationDisplay: '3 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Salem to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Salem to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Salem to Coimbatore with SAMAYAS. Hatchback from ₹1,650, Sedan ₹1,980, SUV ₹2,640. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1650,
+      "sedan": 1980,
+      "suv": 2640,
+      "innova": 3135,
+      "traveller": 4950
+},
+    highways: ["NH544"],
+    tolls: {
+      costRange: '₹180 - ₹240',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Salem Central City / Main Junction',
+      'Salem Railway Station & Bus Stand',
+      'Salem Residential Areas & Hotels',
+      'Salem Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Coimbatore City Center & Main Commercial Hub',
+      'Coimbatore Railway Station & Transit Terminals',
+      'Coimbatore Hotels, Resorts & Residential Hubs',
+      'Coimbatore Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Salem', type: 'Origin', desc: 'Doorstep pickup across Salem.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Coimbatore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Salem to Coimbatore?',
+        a: 'The one-way taxi fare from Salem to Coimbatore starts at ₹1,650 for a Hatchback, ₹1,980 for a Sedan, and ₹2,640 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Salem to Coimbatore?',
+        a: 'The distance from Salem to Coimbatore is approx 165 km via NH544. Travel duration is around 3 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Salem?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Salem including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Salem to Coimbatore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3 hours.',
+        route: 'Salem to Coimbatore',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Salem to Coimbatore. Zero return charges and transparent per-km bill.',
+        route: 'Salem to Coimbatore',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Coimbatore to Salem', slug: 'coimbatore-to-salem', distance: '165 km', fare: '₹1,650' },
+    ],
+  },
+
+  'coimbatore-to-erode': {
+    from: 'Coimbatore',
+    to: 'Erode',
+    fromSlug: 'coimbatore',
+    toSlug: 'erode',
+    returnRouteSlug: 'erode-to-coimbatore',
+    distanceKm: 100,
+    timeHours: 2,
+    distanceDisplay: '100 km',
+    durationDisplay: '2 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Coimbatore to Erode. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Coimbatore to Erode One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Erode with SAMAYAS. Hatchback from ₹1,000, Sedan ₹1,200, SUV ₹1,600. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1000,
+      "sedan": 1200,
+      "suv": 1600,
+      "innova": 1900,
+      "traveller": 3000
+},
+    highways: ["NH544"],
+    tolls: {
+      costRange: '₹90 - ₹130',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Coimbatore Central City / Main Junction',
+      'Coimbatore Railway Station & Bus Stand',
+      'Coimbatore Residential Areas & Hotels',
+      'Coimbatore Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Erode City Center & Main Commercial Hub',
+      'Erode Railway Station & Transit Terminals',
+      'Erode Hotels, Resorts & Residential Hubs',
+      'Erode Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup across Coimbatore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Erode', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Erode.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Coimbatore to Erode?',
+        a: 'The one-way taxi fare from Coimbatore to Erode starts at ₹1,000 for a Hatchback, ₹1,200 for a Sedan, and ₹1,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Coimbatore to Erode?',
+        a: 'The distance from Coimbatore to Erode is approx 100 km via NH544. Travel duration is around 2 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Coimbatore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Coimbatore to Erode. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2 hours.',
+        route: 'Coimbatore to Erode',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Coimbatore to Erode. Zero return charges and transparent per-km bill.',
+        route: 'Coimbatore to Erode',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Erode to Coimbatore', slug: 'erode-to-coimbatore', distance: '100 km', fare: '₹1,000' },
+    ],
+  },
+
+  'erode-to-coimbatore': {
+    from: 'Erode',
+    to: 'Coimbatore',
+    fromSlug: 'erode',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'coimbatore-to-erode',
+    distanceKm: 100,
+    timeHours: 2,
+    distanceDisplay: '100 km',
+    durationDisplay: '2 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Erode to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Erode to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Erode to Coimbatore with SAMAYAS. Hatchback from ₹1,000, Sedan ₹1,200, SUV ₹1,600. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1000,
+      "sedan": 1200,
+      "suv": 1600,
+      "innova": 1900,
+      "traveller": 3000
+},
+    highways: ["NH544"],
+    tolls: {
+      costRange: '₹90 - ₹130',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Erode Central City / Main Junction',
+      'Erode Railway Station & Bus Stand',
+      'Erode Residential Areas & Hotels',
+      'Erode Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Coimbatore City Center & Main Commercial Hub',
+      'Coimbatore Railway Station & Transit Terminals',
+      'Coimbatore Hotels, Resorts & Residential Hubs',
+      'Coimbatore Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Erode', type: 'Origin', desc: 'Doorstep pickup across Erode.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Coimbatore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Erode to Coimbatore?',
+        a: 'The one-way taxi fare from Erode to Coimbatore starts at ₹1,000 for a Hatchback, ₹1,200 for a Sedan, and ₹1,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Erode to Coimbatore?',
+        a: 'The distance from Erode to Coimbatore is approx 100 km via NH544. Travel duration is around 2 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Erode?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Erode including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Erode to Coimbatore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2 hours.',
+        route: 'Erode to Coimbatore',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Erode to Coimbatore. Zero return charges and transparent per-km bill.',
+        route: 'Erode to Coimbatore',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Coimbatore to Erode', slug: 'coimbatore-to-erode', distance: '100 km', fare: '₹1,000' },
+    ],
+  },
+
+  'salem-to-erode': {
+    from: 'Salem',
+    to: 'Erode',
+    fromSlug: 'salem',
+    toSlug: 'erode',
+    returnRouteSlug: 'erode-to-salem',
+    distanceKm: 65,
+    timeHours: 1.25,
+    distanceDisplay: '65 km',
+    durationDisplay: '1.25 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Salem to Erode. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Salem to Erode One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Salem to Erode with SAMAYAS. Hatchback from ₹650, Sedan ₹780, SUV ₹1,040. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 650,
+      "sedan": 780,
+      "suv": 1040,
+      "innova": 1235,
+      "traveller": 1950
+},
+    highways: ["NH544"],
+    tolls: {
+      costRange: '₹50 - ₹80',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Salem Central City / Main Junction',
+      'Salem Railway Station & Bus Stand',
+      'Salem Residential Areas & Hotels',
+      'Salem Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Erode City Center & Main Commercial Hub',
+      'Erode Railway Station & Transit Terminals',
+      'Erode Hotels, Resorts & Residential Hubs',
+      'Erode Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Salem', type: 'Origin', desc: 'Doorstep pickup across Salem.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Erode', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Erode.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Salem to Erode?',
+        a: 'The one-way taxi fare from Salem to Erode starts at ₹650 for a Hatchback, ₹780 for a Sedan, and ₹1,040 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Salem to Erode?',
+        a: 'The distance from Salem to Erode is approx 65 km via NH544. Travel duration is around 1.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Salem?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Salem including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Salem to Erode. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.25 hours.',
+        route: 'Salem to Erode',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Salem to Erode. Zero return charges and transparent per-km bill.',
+        route: 'Salem to Erode',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Erode to Salem', slug: 'erode-to-salem', distance: '65 km', fare: '₹650' },
+    ],
+  },
+
+  'erode-to-salem': {
+    from: 'Erode',
+    to: 'Salem',
+    fromSlug: 'erode',
+    toSlug: 'salem',
+    returnRouteSlug: 'salem-to-erode',
+    distanceKm: 65,
+    timeHours: 1.25,
+    distanceDisplay: '65 km',
+    durationDisplay: '1.25 Hours',
+    category: 'City',
+    popularFor: ['City Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Erode to Salem. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Erode to Salem One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Erode to Salem with SAMAYAS. Hatchback from ₹650, Sedan ₹780, SUV ₹1,040. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 650,
+      "sedan": 780,
+      "suv": 1040,
+      "innova": 1235,
+      "traveller": 1950
+},
+    highways: ["NH544"],
+    tolls: {
+      costRange: '₹50 - ₹80',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Erode Central City / Main Junction',
+      'Erode Railway Station & Bus Stand',
+      'Erode Residential Areas & Hotels',
+      'Erode Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Salem City Center & Main Commercial Hub',
+      'Salem Railway Station & Transit Terminals',
+      'Salem Hotels, Resorts & Residential Hubs',
+      'Salem Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Erode', type: 'Origin', desc: 'Doorstep pickup across Erode.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Salem', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Salem.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Erode to Salem?',
+        a: 'The one-way taxi fare from Erode to Salem starts at ₹650 for a Hatchback, ₹780 for a Sedan, and ₹1,040 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Erode to Salem?',
+        a: 'The distance from Erode to Salem is approx 65 km via NH544. Travel duration is around 1.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Erode?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Erode including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Erode to Salem. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.25 hours.',
+        route: 'Erode to Salem',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Erode to Salem. Zero return charges and transparent per-km bill.',
+        route: 'Erode to Salem',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Salem to Erode', slug: 'salem-to-erode', distance: '65 km', fare: '₹650' },
+    ],
+  },
+
+  'coimbatore-to-ooty': {
+    from: 'Coimbatore',
+    to: 'Ooty',
+    fromSlug: 'coimbatore',
+    toSlug: 'nilgiris',
+    returnRouteSlug: 'ooty-to-coimbatore',
+    distanceKm: 85,
+    timeHours: 2.75,
+    distanceDisplay: '85 km',
+    durationDisplay: '2.75 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Coimbatore to Ooty. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Coimbatore to Ooty One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Ooty with SAMAYAS. Hatchback from ₹850, Sedan ₹1,020, SUV ₹1,360. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 850,
+      "sedan": 1020,
+      "suv": 1360,
+      "innova": 1615,
+      "traveller": 2550
+},
+    highways: ["NH181","Hairpin Bends Route"],
+    tolls: {
+      costRange: '₹60 - ₹100',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Coimbatore Central City / Main Junction',
+      'Coimbatore Railway Station & Bus Stand',
+      'Coimbatore Residential Areas & Hotels',
+      'Coimbatore Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Ooty City Center & Main Commercial Hub',
+      'Ooty Railway Station & Transit Terminals',
+      'Ooty Hotels, Resorts & Residential Hubs',
+      'Ooty Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup across Coimbatore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Ooty', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Ooty.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Coimbatore to Ooty?',
+        a: 'The one-way taxi fare from Coimbatore to Ooty starts at ₹850 for a Hatchback, ₹1,020 for a Sedan, and ₹1,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Coimbatore to Ooty?',
+        a: 'The distance from Coimbatore to Ooty is approx 85 km via NH181. Travel duration is around 2.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Coimbatore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Coimbatore to Ooty. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.75 hours.',
+        route: 'Coimbatore to Ooty',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Coimbatore to Ooty. Zero return charges and transparent per-km bill.',
+        route: 'Coimbatore to Ooty',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Ooty to Coimbatore', slug: 'ooty-to-coimbatore', distance: '85 km', fare: '₹850' },
+    ],
+  },
+
+  'ooty-to-coimbatore': {
+    from: 'Ooty',
+    to: 'Coimbatore',
+    fromSlug: 'nilgiris',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'coimbatore-to-ooty',
+    distanceKm: 85,
+    timeHours: 2.75,
+    distanceDisplay: '85 km',
+    durationDisplay: '2.75 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Ooty to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Ooty to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Ooty to Coimbatore with SAMAYAS. Hatchback from ₹850, Sedan ₹1,020, SUV ₹1,360. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 850,
+      "sedan": 1020,
+      "suv": 1360,
+      "innova": 1615,
+      "traveller": 2550
+},
+    highways: ["NH181","Mettupalayam Road"],
+    tolls: {
+      costRange: '₹60 - ₹100',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Ooty Central City / Main Junction',
+      'Ooty Railway Station & Bus Stand',
+      'Ooty Residential Areas & Hotels',
+      'Ooty Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Coimbatore City Center & Main Commercial Hub',
+      'Coimbatore Railway Station & Transit Terminals',
+      'Coimbatore Hotels, Resorts & Residential Hubs',
+      'Coimbatore Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Ooty', type: 'Origin', desc: 'Doorstep pickup across Ooty.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Coimbatore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Ooty to Coimbatore?',
+        a: 'The one-way taxi fare from Ooty to Coimbatore starts at ₹850 for a Hatchback, ₹1,020 for a Sedan, and ₹1,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Ooty to Coimbatore?',
+        a: 'The distance from Ooty to Coimbatore is approx 85 km via NH181. Travel duration is around 2.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Ooty?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Ooty including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Ooty to Coimbatore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.75 hours.',
+        route: 'Ooty to Coimbatore',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Ooty to Coimbatore. Zero return charges and transparent per-km bill.',
+        route: 'Ooty to Coimbatore',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Coimbatore to Ooty', slug: 'coimbatore-to-ooty', distance: '85 km', fare: '₹850' },
+    ],
+  },
+
+  'madurai-to-rameswaram': {
+    from: 'Madurai',
+    to: 'Rameshwaram',
+    fromSlug: 'madurai',
+    toSlug: 'ramanathapuram',
+    returnRouteSlug: 'rameswaram-to-madurai',
+    distanceKm: 175,
+    timeHours: 3.5,
+    distanceDisplay: '175 km',
+    durationDisplay: '3.5 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Madurai to Rameshwaram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Madurai to Rameshwaram One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Rameshwaram with SAMAYAS. Hatchback from ₹1,750, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1750,
+      "sedan": 2100,
+      "suv": 2800,
+      "innova": 3325,
+      "traveller": 5250
+},
+    highways: ["NH87","Pamban Sea Bridge"],
+    tolls: {
+      costRange: '₹120 - ₹180',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Madurai Central City / Main Junction',
+      'Madurai Railway Station & Bus Stand',
+      'Madurai Residential Areas & Hotels',
+      'Madurai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Rameshwaram City Center & Main Commercial Hub',
+      'Rameshwaram Railway Station & Transit Terminals',
+      'Rameshwaram Hotels, Resorts & Residential Hubs',
+      'Rameshwaram Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Madurai', type: 'Origin', desc: 'Doorstep pickup across Madurai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Rameshwaram', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Rameshwaram.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Madurai to Rameshwaram?',
+        a: 'The one-way taxi fare from Madurai to Rameshwaram starts at ₹1,750 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Madurai to Rameshwaram?',
+        a: 'The distance from Madurai to Rameshwaram is approx 175 km via NH87. Travel duration is around 3.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Madurai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Madurai to Rameshwaram. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
+        route: 'Madurai to Rameshwaram',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Madurai to Rameshwaram. Zero return charges and transparent per-km bill.',
+        route: 'Madurai to Rameshwaram',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Rameshwaram to Madurai', slug: 'rameswaram-to-madurai', distance: '175 km', fare: '₹1,750' },
+    ],
+  },
+
+  'rameswaram-to-madurai': {
+    from: 'Rameshwaram',
+    to: 'Madurai',
+    fromSlug: 'ramanathapuram',
+    toSlug: 'madurai',
+    returnRouteSlug: 'madurai-to-rameswaram',
+    distanceKm: 175,
+    timeHours: 3.5,
+    distanceDisplay: '175 km',
+    durationDisplay: '3.5 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Rameshwaram to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Rameshwaram to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Rameshwaram to Madurai with SAMAYAS. Hatchback from ₹1,750, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1750,
+      "sedan": 2100,
+      "suv": 2800,
+      "innova": 3325,
+      "traveller": 5250
+},
+    highways: ["NH87"],
+    tolls: {
+      costRange: '₹120 - ₹180',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Rameshwaram Central City / Main Junction',
+      'Rameshwaram Railway Station & Bus Stand',
+      'Rameshwaram Residential Areas & Hotels',
+      'Rameshwaram Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Madurai City Center & Main Commercial Hub',
+      'Madurai Railway Station & Transit Terminals',
+      'Madurai Hotels, Resorts & Residential Hubs',
+      'Madurai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Rameshwaram', type: 'Origin', desc: 'Doorstep pickup across Rameshwaram.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Madurai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Rameshwaram to Madurai?',
+        a: 'The one-way taxi fare from Rameshwaram to Madurai starts at ₹1,750 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Rameshwaram to Madurai?',
+        a: 'The distance from Rameshwaram to Madurai is approx 175 km via NH87. Travel duration is around 3.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Rameshwaram?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Rameshwaram including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Rameshwaram to Madurai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
+        route: 'Rameshwaram to Madurai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Rameshwaram to Madurai. Zero return charges and transparent per-km bill.',
+        route: 'Rameshwaram to Madurai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Madurai to Rameshwaram', slug: 'madurai-to-rameswaram', distance: '175 km', fare: '₹1,750' },
+    ],
+  },
+
+  'madurai-to-kodaikanal': {
+    from: 'Madurai',
+    to: 'Kodaikanal',
+    fromSlug: 'madurai',
+    toSlug: 'dindigul',
+    returnRouteSlug: 'kodaikanal-to-madurai',
+    distanceKm: 115,
+    timeHours: 3,
+    distanceDisplay: '115 km',
+    durationDisplay: '3 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Madurai to Kodaikanal. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Madurai to Kodaikanal One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Kodaikanal with SAMAYAS. Hatchback from ₹1,150, Sedan ₹1,380, SUV ₹1,840. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1150,
+      "sedan": 1380,
+      "suv": 1840,
+      "innova": 2185,
+      "traveller": 3450
+},
+    highways: ["SH156 Ghat Road"],
+    tolls: {
+      costRange: '₹80 - ₹120',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Madurai Central City / Main Junction',
+      'Madurai Railway Station & Bus Stand',
+      'Madurai Residential Areas & Hotels',
+      'Madurai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Kodaikanal City Center & Main Commercial Hub',
+      'Kodaikanal Railway Station & Transit Terminals',
+      'Kodaikanal Hotels, Resorts & Residential Hubs',
+      'Kodaikanal Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Madurai', type: 'Origin', desc: 'Doorstep pickup across Madurai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Kodaikanal', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Kodaikanal.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Madurai to Kodaikanal?',
+        a: 'The one-way taxi fare from Madurai to Kodaikanal starts at ₹1,150 for a Hatchback, ₹1,380 for a Sedan, and ₹1,840 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Madurai to Kodaikanal?',
+        a: 'The distance from Madurai to Kodaikanal is approx 115 km via SH156 Ghat Road. Travel duration is around 3 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Madurai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Madurai to Kodaikanal. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3 hours.',
+        route: 'Madurai to Kodaikanal',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Madurai to Kodaikanal. Zero return charges and transparent per-km bill.',
+        route: 'Madurai to Kodaikanal',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Kodaikanal to Madurai', slug: 'kodaikanal-to-madurai', distance: '115 km', fare: '₹1,150' },
+    ],
+  },
+
+  'kodaikanal-to-madurai': {
+    from: 'Kodaikanal',
+    to: 'Madurai',
+    fromSlug: 'dindigul',
+    toSlug: 'madurai',
+    returnRouteSlug: 'madurai-to-kodaikanal',
+    distanceKm: 115,
+    timeHours: 3,
+    distanceDisplay: '115 km',
+    durationDisplay: '3 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Kodaikanal to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Kodaikanal to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kodaikanal to Madurai with SAMAYAS. Hatchback from ₹1,150, Sedan ₹1,380, SUV ₹1,840. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1150,
+      "sedan": 1380,
+      "suv": 1840,
+      "innova": 2185,
+      "traveller": 3450
+},
+    highways: ["SH156 Ghat Road"],
+    tolls: {
+      costRange: '₹80 - ₹120',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Kodaikanal Central City / Main Junction',
+      'Kodaikanal Railway Station & Bus Stand',
+      'Kodaikanal Residential Areas & Hotels',
+      'Kodaikanal Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Madurai City Center & Main Commercial Hub',
+      'Madurai Railway Station & Transit Terminals',
+      'Madurai Hotels, Resorts & Residential Hubs',
+      'Madurai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Kodaikanal', type: 'Origin', desc: 'Doorstep pickup across Kodaikanal.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Madurai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Kodaikanal to Madurai?',
+        a: 'The one-way taxi fare from Kodaikanal to Madurai starts at ₹1,150 for a Hatchback, ₹1,380 for a Sedan, and ₹1,840 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Kodaikanal to Madurai?',
+        a: 'The distance from Kodaikanal to Madurai is approx 115 km via SH156 Ghat Road. Travel duration is around 3 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Kodaikanal?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Kodaikanal including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Kodaikanal to Madurai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3 hours.',
+        route: 'Kodaikanal to Madurai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Kodaikanal to Madurai. Zero return charges and transparent per-km bill.',
+        route: 'Kodaikanal to Madurai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Madurai to Kodaikanal', slug: 'madurai-to-kodaikanal', distance: '115 km', fare: '₹1,150' },
+    ],
+  },
+
+  'chennai-to-pondicherry': {
+    from: 'Chennai',
+    to: 'Puducherry',
+    fromSlug: 'chennai',
+    toSlug: 'viluppuram',
+    returnRouteSlug: 'pondicherry-to-chennai',
+    distanceKm: 160,
+    timeHours: 3.25,
+    distanceDisplay: '160 km',
+    durationDisplay: '3.25 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Puducherry. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Puducherry One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Puducherry with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1600,
+      "sedan": 1920,
+      "suv": 2560,
+      "innova": 3040,
+      "traveller": 4800
+},
+    highways: ["ECR","NH32"],
+    tolls: {
+      costRange: '₹140 - ₹180',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Chennai Central City / Main Junction',
+      'Chennai Railway Station & Bus Stand',
+      'Chennai Residential Areas & Hotels',
+      'Chennai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Puducherry City Center & Main Commercial Hub',
+      'Puducherry Railway Station & Transit Terminals',
+      'Puducherry Hotels, Resorts & Residential Hubs',
+      'Puducherry Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Puducherry', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Puducherry.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Chennai to Puducherry?',
+        a: 'The one-way taxi fare from Chennai to Puducherry starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai to Puducherry?',
+        a: 'The distance from Chennai to Puducherry is approx 160 km via ECR. Travel duration is around 3.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Chennai to Puducherry. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
+        route: 'Chennai to Puducherry',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai to Puducherry. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Puducherry',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Puducherry to Chennai', slug: 'pondicherry-to-chennai', distance: '160 km', fare: '₹1,600' },
+    ],
+  },
+
+  'pondicherry-to-chennai': {
+    from: 'Puducherry',
+    to: 'Chennai',
+    fromSlug: 'viluppuram',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-to-pondicherry',
+    distanceKm: 160,
+    timeHours: 3.25,
+    distanceDisplay: '160 km',
+    durationDisplay: '3.25 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Puducherry to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Puducherry to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Puducherry to Chennai with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1600,
+      "sedan": 1920,
+      "suv": 2560,
+      "innova": 3040,
+      "traveller": 4800
+},
+    highways: ["ECR","NH32"],
+    tolls: {
+      costRange: '₹140 - ₹180',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Puducherry Central City / Main Junction',
+      'Puducherry Railway Station & Bus Stand',
+      'Puducherry Residential Areas & Hotels',
+      'Puducherry Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai City Center & Main Commercial Hub',
+      'Chennai Railway Station & Transit Terminals',
+      'Chennai Hotels, Resorts & Residential Hubs',
+      'Chennai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Puducherry', type: 'Origin', desc: 'Doorstep pickup across Puducherry.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Puducherry to Chennai?',
+        a: 'The one-way taxi fare from Puducherry to Chennai starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Puducherry to Chennai?',
+        a: 'The distance from Puducherry to Chennai is approx 160 km via ECR. Travel duration is around 3.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Puducherry?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Puducherry including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Puducherry to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
+        route: 'Puducherry to Chennai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Puducherry to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Puducherry to Chennai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai to Puducherry', slug: 'chennai-to-pondicherry', distance: '160 km', fare: '₹1,600' },
+    ],
+  },
+
+  'trichy-to-velankanni': {
+    from: 'Trichy',
+    to: 'Velankanni',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'nagapattinam',
+    returnRouteSlug: 'velankanni-to-trichy',
+    distanceKm: 155,
+    timeHours: 3.5,
+    distanceDisplay: '155 km',
+    durationDisplay: '3.5 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Trichy to Velankanni. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Trichy to Velankanni One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Velankanni with SAMAYAS. Hatchback from ₹1,550, Sedan ₹1,860, SUV ₹2,480. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1550,
+      "sedan": 1860,
+      "suv": 2480,
+      "innova": 2945,
+      "traveller": 4650
+},
+    highways: ["NH83","SH22"],
+    tolls: {
+      costRange: '₹90 - ₹140',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Trichy Central City / Main Junction',
+      'Trichy Railway Station & Bus Stand',
+      'Trichy Residential Areas & Hotels',
+      'Trichy Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Velankanni City Center & Main Commercial Hub',
+      'Velankanni Railway Station & Transit Terminals',
+      'Velankanni Hotels, Resorts & Residential Hubs',
+      'Velankanni Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Velankanni', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Velankanni.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Trichy to Velankanni?',
+        a: 'The one-way taxi fare from Trichy to Velankanni starts at ₹1,550 for a Hatchback, ₹1,860 for a Sedan, and ₹2,480 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Trichy to Velankanni?',
+        a: 'The distance from Trichy to Velankanni is approx 155 km via NH83. Travel duration is around 3.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Trichy?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Trichy to Velankanni. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
+        route: 'Trichy to Velankanni',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Trichy to Velankanni. Zero return charges and transparent per-km bill.',
+        route: 'Trichy to Velankanni',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Velankanni to Trichy', slug: 'velankanni-to-trichy', distance: '155 km', fare: '₹1,550' },
+    ],
+  },
+
+  'velankanni-to-trichy': {
+    from: 'Velankanni',
+    to: 'Trichy',
+    fromSlug: 'nagapattinam',
+    toSlug: 'tiruchirappalli',
+    returnRouteSlug: 'trichy-to-velankanni',
+    distanceKm: 155,
+    timeHours: 3.5,
+    distanceDisplay: '155 km',
+    durationDisplay: '3.5 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Velankanni to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Velankanni to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Velankanni to Trichy with SAMAYAS. Hatchback from ₹1,550, Sedan ₹1,860, SUV ₹2,480. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1550,
+      "sedan": 1860,
+      "suv": 2480,
+      "innova": 2945,
+      "traveller": 4650
+},
+    highways: ["SH22","NH83"],
+    tolls: {
+      costRange: '₹90 - ₹140',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Velankanni Central City / Main Junction',
+      'Velankanni Railway Station & Bus Stand',
+      'Velankanni Residential Areas & Hotels',
+      'Velankanni Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Trichy City Center & Main Commercial Hub',
+      'Trichy Railway Station & Transit Terminals',
+      'Trichy Hotels, Resorts & Residential Hubs',
+      'Trichy Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Velankanni', type: 'Origin', desc: 'Doorstep pickup across Velankanni.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Trichy', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Velankanni to Trichy?',
+        a: 'The one-way taxi fare from Velankanni to Trichy starts at ₹1,550 for a Hatchback, ₹1,860 for a Sedan, and ₹2,480 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Velankanni to Trichy?',
+        a: 'The distance from Velankanni to Trichy is approx 155 km via SH22. Travel duration is around 3.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Velankanni?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Velankanni including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Velankanni to Trichy. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
+        route: 'Velankanni to Trichy',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Velankanni to Trichy. Zero return charges and transparent per-km bill.',
+        route: 'Velankanni to Trichy',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Trichy to Velankanni', slug: 'trichy-to-velankanni', distance: '155 km', fare: '₹1,550' },
+    ],
+  },
+
+  'madurai-to-kanyakumari': {
+    from: 'Madurai',
+    to: 'Kanyakumari',
+    fromSlug: 'madurai',
+    toSlug: 'kanyakumari',
+    returnRouteSlug: 'kanyakumari-to-madurai',
+    distanceKm: 245,
+    timeHours: 4.25,
+    distanceDisplay: '245 km',
+    durationDisplay: '4.25 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Madurai to Kanyakumari. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Madurai to Kanyakumari One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Kanyakumari with SAMAYAS. Hatchback from ₹2,450, Sedan ₹2,940, SUV ₹3,920. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 2450,
+      "sedan": 2940,
+      "suv": 3920,
+      "innova": 4655,
+      "traveller": 7350
+},
+    highways: ["NH44"],
+    tolls: {
+      costRange: '₹280 - ₹360',
+      plazasCount: 3,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Madurai Central City / Main Junction',
+      'Madurai Railway Station & Bus Stand',
+      'Madurai Residential Areas & Hotels',
+      'Madurai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Kanyakumari City Center & Main Commercial Hub',
+      'Kanyakumari Railway Station & Transit Terminals',
+      'Kanyakumari Hotels, Resorts & Residential Hubs',
+      'Kanyakumari Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Madurai', type: 'Origin', desc: 'Doorstep pickup across Madurai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Kanyakumari', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Kanyakumari.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Madurai to Kanyakumari?',
+        a: 'The one-way taxi fare from Madurai to Kanyakumari starts at ₹2,450 for a Hatchback, ₹2,940 for a Sedan, and ₹3,920 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Madurai to Kanyakumari?',
+        a: 'The distance from Madurai to Kanyakumari is approx 245 km via NH44. Travel duration is around 4.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Madurai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Madurai to Kanyakumari. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.25 hours.',
+        route: 'Madurai to Kanyakumari',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Madurai to Kanyakumari. Zero return charges and transparent per-km bill.',
+        route: 'Madurai to Kanyakumari',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Kanyakumari to Madurai', slug: 'kanyakumari-to-madurai', distance: '245 km', fare: '₹2,450' },
+    ],
+  },
+
+  'kanyakumari-to-madurai': {
+    from: 'Kanyakumari',
+    to: 'Madurai',
+    fromSlug: 'kanyakumari',
+    toSlug: 'madurai',
+    returnRouteSlug: 'madurai-to-kanyakumari',
+    distanceKm: 245,
+    timeHours: 4.25,
+    distanceDisplay: '245 km',
+    durationDisplay: '4.25 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Kanyakumari to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Kanyakumari to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kanyakumari to Madurai with SAMAYAS. Hatchback from ₹2,450, Sedan ₹2,940, SUV ₹3,920. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 2450,
+      "sedan": 2940,
+      "suv": 3920,
+      "innova": 4655,
+      "traveller": 7350
+},
+    highways: ["NH44"],
+    tolls: {
+      costRange: '₹280 - ₹360',
+      plazasCount: 3,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Kanyakumari Central City / Main Junction',
+      'Kanyakumari Railway Station & Bus Stand',
+      'Kanyakumari Residential Areas & Hotels',
+      'Kanyakumari Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Madurai City Center & Main Commercial Hub',
+      'Madurai Railway Station & Transit Terminals',
+      'Madurai Hotels, Resorts & Residential Hubs',
+      'Madurai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Kanyakumari', type: 'Origin', desc: 'Doorstep pickup across Kanyakumari.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Madurai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Kanyakumari to Madurai?',
+        a: 'The one-way taxi fare from Kanyakumari to Madurai starts at ₹2,450 for a Hatchback, ₹2,940 for a Sedan, and ₹3,920 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Kanyakumari to Madurai?',
+        a: 'The distance from Kanyakumari to Madurai is approx 245 km via NH44. Travel duration is around 4.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Kanyakumari?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Kanyakumari including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Kanyakumari to Madurai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.25 hours.',
+        route: 'Kanyakumari to Madurai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Kanyakumari to Madurai. Zero return charges and transparent per-km bill.',
+        route: 'Kanyakumari to Madurai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Madurai to Kanyakumari', slug: 'madurai-to-kanyakumari', distance: '245 km', fare: '₹2,450' },
+    ],
+  },
+
+  'coimbatore-to-munnar': {
+    from: 'Coimbatore',
+    to: 'Munnar',
+    fromSlug: 'coimbatore',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'munnar-to-coimbatore',
+    distanceKm: 160,
+    timeHours: 4.5,
+    distanceDisplay: '160 km',
+    durationDisplay: '4.5 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Coimbatore to Munnar. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Coimbatore to Munnar One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Munnar with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1600,
+      "sedan": 1920,
+      "suv": 2560,
+      "innova": 3040,
+      "traveller": 4800
+},
+    highways: ["SH17","Udumalpet Ghat Road"],
+    tolls: {
+      costRange: '₹90 - ₹140',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Coimbatore Central City / Main Junction',
+      'Coimbatore Railway Station & Bus Stand',
+      'Coimbatore Residential Areas & Hotels',
+      'Coimbatore Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Munnar City Center & Main Commercial Hub',
+      'Munnar Railway Station & Transit Terminals',
+      'Munnar Hotels, Resorts & Residential Hubs',
+      'Munnar Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup across Coimbatore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Munnar', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Munnar.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Coimbatore to Munnar?',
+        a: 'The one-way taxi fare from Coimbatore to Munnar starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Coimbatore to Munnar?',
+        a: 'The distance from Coimbatore to Munnar is approx 160 km via SH17. Travel duration is around 4.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Coimbatore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Coimbatore to Munnar. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.5 hours.',
+        route: 'Coimbatore to Munnar',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Coimbatore to Munnar. Zero return charges and transparent per-km bill.',
+        route: 'Coimbatore to Munnar',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Munnar to Coimbatore', slug: 'munnar-to-coimbatore', distance: '160 km', fare: '₹1,600' },
+    ],
+  },
+
+  'munnar-to-coimbatore': {
+    from: 'Munnar',
+    to: 'Coimbatore',
+    fromSlug: 'coimbatore',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'coimbatore-to-munnar',
+    distanceKm: 160,
+    timeHours: 4.5,
+    distanceDisplay: '160 km',
+    durationDisplay: '4.5 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Munnar to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Munnar to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Munnar to Coimbatore with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1600,
+      "sedan": 1920,
+      "suv": 2560,
+      "innova": 3040,
+      "traveller": 4800
+},
+    highways: ["Udumalpet Ghat Road","SH17"],
+    tolls: {
+      costRange: '₹90 - ₹140',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Munnar Central City / Main Junction',
+      'Munnar Railway Station & Bus Stand',
+      'Munnar Residential Areas & Hotels',
+      'Munnar Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Coimbatore City Center & Main Commercial Hub',
+      'Coimbatore Railway Station & Transit Terminals',
+      'Coimbatore Hotels, Resorts & Residential Hubs',
+      'Coimbatore Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Munnar', type: 'Origin', desc: 'Doorstep pickup across Munnar.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Coimbatore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Munnar to Coimbatore?',
+        a: 'The one-way taxi fare from Munnar to Coimbatore starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Munnar to Coimbatore?',
+        a: 'The distance from Munnar to Coimbatore is approx 160 km via Udumalpet Ghat Road. Travel duration is around 4.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Munnar?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Munnar including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Munnar to Coimbatore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.5 hours.',
+        route: 'Munnar to Coimbatore',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Munnar to Coimbatore. Zero return charges and transparent per-km bill.',
+        route: 'Munnar to Coimbatore',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Coimbatore to Munnar', slug: 'coimbatore-to-munnar', distance: '160 km', fare: '₹1,600' },
+    ],
+  },
+
+  'tirunelveli-to-kanyakumari': {
+    from: 'Tirunelveli',
+    to: 'Kanyakumari',
+    fromSlug: 'tirunelveli',
+    toSlug: 'kanyakumari',
+    returnRouteSlug: 'kanyakumari-to-tirunelveli',
+    distanceKm: 85,
+    timeHours: 1.75,
+    distanceDisplay: '85 km',
+    durationDisplay: '1.75 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Tirunelveli to Kanyakumari. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Tirunelveli to Kanyakumari One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirunelveli to Kanyakumari with SAMAYAS. Hatchback from ₹850, Sedan ₹1,020, SUV ₹1,360. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 850,
+      "sedan": 1020,
+      "suv": 1360,
+      "innova": 1615,
+      "traveller": 2550
+},
+    highways: ["NH44"],
+    tolls: {
+      costRange: '₹80 - ₹110',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Tirunelveli Central City / Main Junction',
+      'Tirunelveli Railway Station & Bus Stand',
+      'Tirunelveli Residential Areas & Hotels',
+      'Tirunelveli Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Kanyakumari City Center & Main Commercial Hub',
+      'Kanyakumari Railway Station & Transit Terminals',
+      'Kanyakumari Hotels, Resorts & Residential Hubs',
+      'Kanyakumari Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Tirunelveli', type: 'Origin', desc: 'Doorstep pickup across Tirunelveli.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Kanyakumari', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Kanyakumari.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Tirunelveli to Kanyakumari?',
+        a: 'The one-way taxi fare from Tirunelveli to Kanyakumari starts at ₹850 for a Hatchback, ₹1,020 for a Sedan, and ₹1,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Tirunelveli to Kanyakumari?',
+        a: 'The distance from Tirunelveli to Kanyakumari is approx 85 km via NH44. Travel duration is around 1.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Tirunelveli?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Tirunelveli including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Tirunelveli to Kanyakumari. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.75 hours.',
+        route: 'Tirunelveli to Kanyakumari',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Tirunelveli to Kanyakumari. Zero return charges and transparent per-km bill.',
+        route: 'Tirunelveli to Kanyakumari',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Kanyakumari to Tirunelveli', slug: 'kanyakumari-to-tirunelveli', distance: '85 km', fare: '₹850' },
+    ],
+  },
+
+  'kanyakumari-to-tirunelveli': {
+    from: 'Kanyakumari',
+    to: 'Tirunelveli',
+    fromSlug: 'kanyakumari',
+    toSlug: 'tirunelveli',
+    returnRouteSlug: 'tirunelveli-to-kanyakumari',
+    distanceKm: 85,
+    timeHours: 1.75,
+    distanceDisplay: '85 km',
+    durationDisplay: '1.75 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Kanyakumari to Tirunelveli. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Kanyakumari to Tirunelveli One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kanyakumari to Tirunelveli with SAMAYAS. Hatchback from ₹850, Sedan ₹1,020, SUV ₹1,360. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 850,
+      "sedan": 1020,
+      "suv": 1360,
+      "innova": 1615,
+      "traveller": 2550
+},
+    highways: ["NH44"],
+    tolls: {
+      costRange: '₹80 - ₹110',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Kanyakumari Central City / Main Junction',
+      'Kanyakumari Railway Station & Bus Stand',
+      'Kanyakumari Residential Areas & Hotels',
+      'Kanyakumari Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Tirunelveli City Center & Main Commercial Hub',
+      'Tirunelveli Railway Station & Transit Terminals',
+      'Tirunelveli Hotels, Resorts & Residential Hubs',
+      'Tirunelveli Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Kanyakumari', type: 'Origin', desc: 'Doorstep pickup across Kanyakumari.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Tirunelveli', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Tirunelveli.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Kanyakumari to Tirunelveli?',
+        a: 'The one-way taxi fare from Kanyakumari to Tirunelveli starts at ₹850 for a Hatchback, ₹1,020 for a Sedan, and ₹1,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Kanyakumari to Tirunelveli?',
+        a: 'The distance from Kanyakumari to Tirunelveli is approx 85 km via NH44. Travel duration is around 1.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Kanyakumari?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Kanyakumari including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Kanyakumari to Tirunelveli. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.75 hours.',
+        route: 'Kanyakumari to Tirunelveli',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Kanyakumari to Tirunelveli. Zero return charges and transparent per-km bill.',
+        route: 'Kanyakumari to Tirunelveli',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Tirunelveli to Kanyakumari', slug: 'tirunelveli-to-kanyakumari', distance: '85 km', fare: '₹850' },
+    ],
+  },
+
+  'chennai-to-mahabalipuram': {
+    from: 'Chennai',
+    to: 'Mahabalipuram',
+    fromSlug: 'chennai',
+    toSlug: 'chengalpattu',
+    returnRouteSlug: 'mahabalipuram-to-chennai',
+    distanceKm: 55,
+    timeHours: 1.25,
+    distanceDisplay: '55 km',
+    durationDisplay: '1.25 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Mahabalipuram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Mahabalipuram One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Mahabalipuram with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 550,
+      "sedan": 660,
+      "suv": 880,
+      "innova": 1045,
+      "traveller": 1650
+},
+    highways: ["ECR Scenic Road"],
+    tolls: {
+      costRange: '₹50 - ₹80',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Chennai Central City / Main Junction',
+      'Chennai Railway Station & Bus Stand',
+      'Chennai Residential Areas & Hotels',
+      'Chennai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Mahabalipuram City Center & Main Commercial Hub',
+      'Mahabalipuram Railway Station & Transit Terminals',
+      'Mahabalipuram Hotels, Resorts & Residential Hubs',
+      'Mahabalipuram Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Mahabalipuram', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Mahabalipuram.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Chennai to Mahabalipuram?',
+        a: 'The one-way taxi fare from Chennai to Mahabalipuram starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai to Mahabalipuram?',
+        a: 'The distance from Chennai to Mahabalipuram is approx 55 km via ECR Scenic Road. Travel duration is around 1.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Chennai to Mahabalipuram. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.25 hours.',
+        route: 'Chennai to Mahabalipuram',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai to Mahabalipuram. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Mahabalipuram',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Mahabalipuram to Chennai', slug: 'mahabalipuram-to-chennai', distance: '55 km', fare: '₹550' },
+    ],
+  },
+
+  'mahabalipuram-to-chennai': {
+    from: 'Mahabalipuram',
+    to: 'Chennai',
+    fromSlug: 'chengalpattu',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-to-mahabalipuram',
+    distanceKm: 55,
+    timeHours: 1.25,
+    distanceDisplay: '55 km',
+    durationDisplay: '1.25 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Mahabalipuram to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Mahabalipuram to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Mahabalipuram to Chennai with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 550,
+      "sedan": 660,
+      "suv": 880,
+      "innova": 1045,
+      "traveller": 1650
+},
+    highways: ["ECR Scenic Road"],
+    tolls: {
+      costRange: '₹50 - ₹80',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Mahabalipuram Central City / Main Junction',
+      'Mahabalipuram Railway Station & Bus Stand',
+      'Mahabalipuram Residential Areas & Hotels',
+      'Mahabalipuram Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai City Center & Main Commercial Hub',
+      'Chennai Railway Station & Transit Terminals',
+      'Chennai Hotels, Resorts & Residential Hubs',
+      'Chennai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Mahabalipuram', type: 'Origin', desc: 'Doorstep pickup across Mahabalipuram.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Mahabalipuram to Chennai?',
+        a: 'The one-way taxi fare from Mahabalipuram to Chennai starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Mahabalipuram to Chennai?',
+        a: 'The distance from Mahabalipuram to Chennai is approx 55 km via ECR Scenic Road. Travel duration is around 1.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Mahabalipuram?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Mahabalipuram including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Mahabalipuram to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.25 hours.',
+        route: 'Mahabalipuram to Chennai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Mahabalipuram to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Mahabalipuram to Chennai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai to Mahabalipuram', slug: 'chennai-to-mahabalipuram', distance: '55 km', fare: '₹550' },
+    ],
+  },
+
+  'coimbatore-to-kodaikanal': {
+    from: 'Coimbatore',
+    to: 'Kodaikanal',
+    fromSlug: 'coimbatore',
+    toSlug: 'dindigul',
+    returnRouteSlug: 'kodaikanal-to-coimbatore',
+    distanceKm: 175,
+    timeHours: 4.5,
+    distanceDisplay: '175 km',
+    durationDisplay: '4.5 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Coimbatore to Kodaikanal. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Coimbatore to Kodaikanal One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Kodaikanal with SAMAYAS. Hatchback from ₹1,750, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1750,
+      "sedan": 2100,
+      "suv": 2800,
+      "innova": 3325,
+      "traveller": 5250
+},
+    highways: ["SH156 Ghat Road"],
+    tolls: {
+      costRange: '₹120 - ₹160',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Coimbatore Central City / Main Junction',
+      'Coimbatore Railway Station & Bus Stand',
+      'Coimbatore Residential Areas & Hotels',
+      'Coimbatore Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Kodaikanal City Center & Main Commercial Hub',
+      'Kodaikanal Railway Station & Transit Terminals',
+      'Kodaikanal Hotels, Resorts & Residential Hubs',
+      'Kodaikanal Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup across Coimbatore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Kodaikanal', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Kodaikanal.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Coimbatore to Kodaikanal?',
+        a: 'The one-way taxi fare from Coimbatore to Kodaikanal starts at ₹1,750 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Coimbatore to Kodaikanal?',
+        a: 'The distance from Coimbatore to Kodaikanal is approx 175 km via SH156 Ghat Road. Travel duration is around 4.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Coimbatore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Coimbatore to Kodaikanal. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.5 hours.',
+        route: 'Coimbatore to Kodaikanal',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Coimbatore to Kodaikanal. Zero return charges and transparent per-km bill.',
+        route: 'Coimbatore to Kodaikanal',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Kodaikanal to Coimbatore', slug: 'kodaikanal-to-coimbatore', distance: '175 km', fare: '₹1,750' },
+    ],
+  },
+
+  'kodaikanal-to-coimbatore': {
+    from: 'Kodaikanal',
+    to: 'Coimbatore',
+    fromSlug: 'dindigul',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'coimbatore-to-kodaikanal',
+    distanceKm: 175,
+    timeHours: 4.5,
+    distanceDisplay: '175 km',
+    durationDisplay: '4.5 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Kodaikanal to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Kodaikanal to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kodaikanal to Coimbatore with SAMAYAS. Hatchback from ₹1,750, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1750,
+      "sedan": 2100,
+      "suv": 2800,
+      "innova": 3325,
+      "traveller": 5250
+},
+    highways: ["SH156 Ghat Road"],
+    tolls: {
+      costRange: '₹120 - ₹160',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Kodaikanal Central City / Main Junction',
+      'Kodaikanal Railway Station & Bus Stand',
+      'Kodaikanal Residential Areas & Hotels',
+      'Kodaikanal Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Coimbatore City Center & Main Commercial Hub',
+      'Coimbatore Railway Station & Transit Terminals',
+      'Coimbatore Hotels, Resorts & Residential Hubs',
+      'Coimbatore Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Kodaikanal', type: 'Origin', desc: 'Doorstep pickup across Kodaikanal.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Coimbatore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Kodaikanal to Coimbatore?',
+        a: 'The one-way taxi fare from Kodaikanal to Coimbatore starts at ₹1,750 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Kodaikanal to Coimbatore?',
+        a: 'The distance from Kodaikanal to Coimbatore is approx 175 km via SH156 Ghat Road. Travel duration is around 4.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Kodaikanal?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Kodaikanal including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Kodaikanal to Coimbatore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.5 hours.',
+        route: 'Kodaikanal to Coimbatore',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Kodaikanal to Coimbatore. Zero return charges and transparent per-km bill.',
+        route: 'Kodaikanal to Coimbatore',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Coimbatore to Kodaikanal', slug: 'coimbatore-to-kodaikanal', distance: '175 km', fare: '₹1,750' },
+    ],
+  },
+
+  'madurai-to-courtallam': {
+    from: 'Madurai',
+    to: 'Courtallam',
+    fromSlug: 'madurai',
+    toSlug: 'tenkasi',
+    returnRouteSlug: 'courtallam-to-madurai',
+    distanceKm: 160,
+    timeHours: 3.5,
+    distanceDisplay: '160 km',
+    durationDisplay: '3.5 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Madurai to Courtallam. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Madurai to Courtallam One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Courtallam with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1600,
+      "sedan": 1920,
+      "suv": 2560,
+      "innova": 3040,
+      "traveller": 4800
+},
+    highways: ["NH744"],
+    tolls: {
+      costRange: '₹110 - ₹160',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Madurai Central City / Main Junction',
+      'Madurai Railway Station & Bus Stand',
+      'Madurai Residential Areas & Hotels',
+      'Madurai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Courtallam City Center & Main Commercial Hub',
+      'Courtallam Railway Station & Transit Terminals',
+      'Courtallam Hotels, Resorts & Residential Hubs',
+      'Courtallam Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Madurai', type: 'Origin', desc: 'Doorstep pickup across Madurai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Courtallam', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Courtallam.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Madurai to Courtallam?',
+        a: 'The one-way taxi fare from Madurai to Courtallam starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Madurai to Courtallam?',
+        a: 'The distance from Madurai to Courtallam is approx 160 km via NH744. Travel duration is around 3.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Madurai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Madurai to Courtallam. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
+        route: 'Madurai to Courtallam',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Madurai to Courtallam. Zero return charges and transparent per-km bill.',
+        route: 'Madurai to Courtallam',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Courtallam to Madurai', slug: 'courtallam-to-madurai', distance: '160 km', fare: '₹1,600' },
+    ],
+  },
+
+  'courtallam-to-madurai': {
+    from: 'Courtallam',
+    to: 'Madurai',
+    fromSlug: 'tenkasi',
+    toSlug: 'madurai',
+    returnRouteSlug: 'madurai-to-courtallam',
+    distanceKm: 160,
+    timeHours: 3.5,
+    distanceDisplay: '160 km',
+    durationDisplay: '3.5 Hours',
+    category: 'Tourist',
+    popularFor: ['Tourist Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Courtallam to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Courtallam to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Courtallam to Madurai with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1600,
+      "sedan": 1920,
+      "suv": 2560,
+      "innova": 3040,
+      "traveller": 4800
+},
+    highways: ["NH744"],
+    tolls: {
+      costRange: '₹110 - ₹160',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Courtallam Central City / Main Junction',
+      'Courtallam Railway Station & Bus Stand',
+      'Courtallam Residential Areas & Hotels',
+      'Courtallam Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Madurai City Center & Main Commercial Hub',
+      'Madurai Railway Station & Transit Terminals',
+      'Madurai Hotels, Resorts & Residential Hubs',
+      'Madurai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Courtallam', type: 'Origin', desc: 'Doorstep pickup across Courtallam.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Madurai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Courtallam to Madurai?',
+        a: 'The one-way taxi fare from Courtallam to Madurai starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Courtallam to Madurai?',
+        a: 'The distance from Courtallam to Madurai is approx 160 km via NH744. Travel duration is around 3.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Courtallam?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Courtallam including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Courtallam to Madurai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
+        route: 'Courtallam to Madurai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Courtallam to Madurai. Zero return charges and transparent per-km bill.',
+        route: 'Courtallam to Madurai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Madurai to Courtallam', slug: 'madurai-to-courtallam', distance: '160 km', fare: '₹1,600' },
+    ],
+  },
+
+  'chennai-airport-to-pondicherry': {
+    from: 'Chennai Airport',
+    to: 'Puducherry',
+    fromSlug: 'chennai',
+    toSlug: 'viluppuram',
+    returnRouteSlug: 'pondicherry-to-chennai-airport',
+    distanceKm: 140,
+    timeHours: 2.75,
+    distanceDisplay: '140 km',
+    durationDisplay: '2.75 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Puducherry. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai Airport to Puducherry One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai Airport to Puducherry with SAMAYAS. Hatchback from ₹1,400, Sedan ₹1,680, SUV ₹2,240. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1400,
+      "sedan": 1680,
+      "suv": 2240,
+      "innova": 2660,
+      "traveller": 4200
+},
+    highways: ["ECR","NH32"],
+    tolls: {
+      costRange: '₹140 - ₹180',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Chennai Airport Central City / Main Junction',
+      'Chennai Airport Railway Station & Bus Stand',
+      'Chennai Airport Residential Areas & Hotels',
+      'Chennai Airport Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Puducherry City Center & Main Commercial Hub',
+      'Puducherry Railway Station & Transit Terminals',
+      'Puducherry Hotels, Resorts & Residential Hubs',
+      'Puducherry Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Chennai Airport', type: 'Origin', desc: 'Doorstep pickup across Chennai Airport.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Puducherry', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Puducherry.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Chennai Airport to Puducherry?',
+        a: 'The one-way taxi fare from Chennai Airport to Puducherry starts at ₹1,400 for a Hatchback, ₹1,680 for a Sedan, and ₹2,240 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai Airport to Puducherry?',
+        a: 'The distance from Chennai Airport to Puducherry is approx 140 km via ECR. Travel duration is around 2.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai Airport?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai Airport including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Chennai Airport to Puducherry. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.75 hours.',
+        route: 'Chennai Airport to Puducherry',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai Airport to Puducherry. Zero return charges and transparent per-km bill.',
+        route: 'Chennai Airport to Puducherry',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Puducherry to Chennai Airport', slug: 'pondicherry-to-chennai-airport', distance: '140 km', fare: '₹1,400' },
+    ],
+  },
+
+  'pondicherry-to-chennai-airport': {
+    from: 'Puducherry',
+    to: 'Chennai Airport',
+    fromSlug: 'viluppuram',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-airport-to-pondicherry',
+    distanceKm: 140,
+    timeHours: 2.75,
+    distanceDisplay: '140 km',
+    durationDisplay: '2.75 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Puducherry to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Puducherry to Chennai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Puducherry to Chennai Airport with SAMAYAS. Hatchback from ₹1,400, Sedan ₹1,680, SUV ₹2,240. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1400,
+      "sedan": 1680,
+      "suv": 2240,
+      "innova": 2660,
+      "traveller": 4200
+},
+    highways: ["NH32","ECR"],
+    tolls: {
+      costRange: '₹140 - ₹180',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Puducherry Central City / Main Junction',
+      'Puducherry Railway Station & Bus Stand',
+      'Puducherry Residential Areas & Hotels',
+      'Puducherry Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai Airport City Center & Main Commercial Hub',
+      'Chennai Airport Railway Station & Transit Terminals',
+      'Chennai Airport Hotels, Resorts & Residential Hubs',
+      'Chennai Airport Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Puducherry', type: 'Origin', desc: 'Doorstep pickup across Puducherry.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai Airport.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Puducherry to Chennai Airport?',
+        a: 'The one-way taxi fare from Puducherry to Chennai Airport starts at ₹1,400 for a Hatchback, ₹1,680 for a Sedan, and ₹2,240 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Puducherry to Chennai Airport?',
+        a: 'The distance from Puducherry to Chennai Airport is approx 140 km via NH32. Travel duration is around 2.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Puducherry?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Puducherry including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Puducherry to Chennai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.75 hours.',
+        route: 'Puducherry to Chennai Airport',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Puducherry to Chennai Airport. Zero return charges and transparent per-km bill.',
+        route: 'Puducherry to Chennai Airport',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai Airport to Puducherry', slug: 'chennai-airport-to-pondicherry', distance: '140 km', fare: '₹1,400' },
+    ],
+  },
+
+  'chennai-airport-to-vellore': {
+    from: 'Chennai Airport',
+    to: 'Vellore',
+    fromSlug: 'chennai',
+    toSlug: 'vellore',
+    returnRouteSlug: 'vellore-to-chennai-airport',
+    distanceKm: 125,
+    timeHours: 2.5,
+    distanceDisplay: '125 km',
+    durationDisplay: '2.5 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Vellore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai Airport to Vellore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai Airport to Vellore with SAMAYAS. Hatchback from ₹1,250, Sedan ₹1,500, SUV ₹2,000. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1250,
+      "sedan": 1500,
+      "suv": 2000,
+      "innova": 2375,
+      "traveller": 3750
+},
+    highways: ["NH48"],
+    tolls: {
+      costRange: '₹140 - ₹180',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Chennai Airport Central City / Main Junction',
+      'Chennai Airport Railway Station & Bus Stand',
+      'Chennai Airport Residential Areas & Hotels',
+      'Chennai Airport Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Vellore City Center & Main Commercial Hub',
+      'Vellore Railway Station & Transit Terminals',
+      'Vellore Hotels, Resorts & Residential Hubs',
+      'Vellore Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Chennai Airport', type: 'Origin', desc: 'Doorstep pickup across Chennai Airport.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Vellore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Vellore.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Chennai Airport to Vellore?',
+        a: 'The one-way taxi fare from Chennai Airport to Vellore starts at ₹1,250 for a Hatchback, ₹1,500 for a Sedan, and ₹2,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai Airport to Vellore?',
+        a: 'The distance from Chennai Airport to Vellore is approx 125 km via NH48. Travel duration is around 2.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai Airport?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai Airport including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Chennai Airport to Vellore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.5 hours.',
+        route: 'Chennai Airport to Vellore',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai Airport to Vellore. Zero return charges and transparent per-km bill.',
+        route: 'Chennai Airport to Vellore',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Vellore to Chennai Airport', slug: 'vellore-to-chennai-airport', distance: '125 km', fare: '₹1,250' },
+    ],
+  },
+
+  'vellore-to-chennai-airport': {
+    from: 'Vellore',
+    to: 'Chennai Airport',
+    fromSlug: 'vellore',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-airport-to-vellore',
+    distanceKm: 125,
+    timeHours: 2.5,
+    distanceDisplay: '125 km',
+    durationDisplay: '2.5 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Vellore to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Vellore to Chennai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Vellore to Chennai Airport with SAMAYAS. Hatchback from ₹1,250, Sedan ₹1,500, SUV ₹2,000. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1250,
+      "sedan": 1500,
+      "suv": 2000,
+      "innova": 2375,
+      "traveller": 3750
+},
+    highways: ["NH48"],
+    tolls: {
+      costRange: '₹140 - ₹180',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Vellore Central City / Main Junction',
+      'Vellore Railway Station & Bus Stand',
+      'Vellore Residential Areas & Hotels',
+      'Vellore Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai Airport City Center & Main Commercial Hub',
+      'Chennai Airport Railway Station & Transit Terminals',
+      'Chennai Airport Hotels, Resorts & Residential Hubs',
+      'Chennai Airport Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Vellore', type: 'Origin', desc: 'Doorstep pickup across Vellore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai Airport.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Vellore to Chennai Airport?',
+        a: 'The one-way taxi fare from Vellore to Chennai Airport starts at ₹1,250 for a Hatchback, ₹1,500 for a Sedan, and ₹2,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Vellore to Chennai Airport?',
+        a: 'The distance from Vellore to Chennai Airport is approx 125 km via NH48. Travel duration is around 2.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Vellore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Vellore including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Vellore to Chennai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.5 hours.',
+        route: 'Vellore to Chennai Airport',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Vellore to Chennai Airport. Zero return charges and transparent per-km bill.',
+        route: 'Vellore to Chennai Airport',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai Airport to Vellore', slug: 'chennai-airport-to-vellore', distance: '125 km', fare: '₹1,250' },
+    ],
+  },
+
+  'trichy-airport-to-thanjavur': {
+    from: 'Trichy Airport',
+    to: 'Thanjavur',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'thanjavur',
+    returnRouteSlug: 'thanjavur-to-trichy-airport',
+    distanceKm: 55,
+    timeHours: 1,
+    distanceDisplay: '55 km',
+    durationDisplay: '1 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Trichy Airport to Thanjavur. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Trichy Airport to Thanjavur One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy Airport to Thanjavur with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 550,
+      "sedan": 660,
+      "suv": 880,
+      "innova": 1045,
+      "traveller": 1650
+},
+    highways: ["NH83"],
+    tolls: {
+      costRange: '₹40 - ₹70',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Trichy Airport Central City / Main Junction',
+      'Trichy Airport Railway Station & Bus Stand',
+      'Trichy Airport Residential Areas & Hotels',
+      'Trichy Airport Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Thanjavur City Center & Main Commercial Hub',
+      'Thanjavur Railway Station & Transit Terminals',
+      'Thanjavur Hotels, Resorts & Residential Hubs',
+      'Thanjavur Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Trichy Airport', type: 'Origin', desc: 'Doorstep pickup across Trichy Airport.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Thanjavur', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Thanjavur.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Trichy Airport to Thanjavur?',
+        a: 'The one-way taxi fare from Trichy Airport to Thanjavur starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Trichy Airport to Thanjavur?',
+        a: 'The distance from Trichy Airport to Thanjavur is approx 55 km via NH83. Travel duration is around 1 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Trichy Airport?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy Airport including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Trichy Airport to Thanjavur. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1 hours.',
+        route: 'Trichy Airport to Thanjavur',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Trichy Airport to Thanjavur. Zero return charges and transparent per-km bill.',
+        route: 'Trichy Airport to Thanjavur',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Thanjavur to Trichy Airport', slug: 'thanjavur-to-trichy-airport', distance: '55 km', fare: '₹550' },
+    ],
+  },
+
+  'thanjavur-to-trichy-airport': {
+    from: 'Thanjavur',
+    to: 'Trichy Airport',
+    fromSlug: 'thanjavur',
+    toSlug: 'tiruchirappalli',
+    returnRouteSlug: 'trichy-airport-to-thanjavur',
+    distanceKm: 55,
+    timeHours: 1,
+    distanceDisplay: '55 km',
+    durationDisplay: '1 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Thanjavur to Trichy Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Thanjavur to Trichy Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Thanjavur to Trichy Airport with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 550,
+      "sedan": 660,
+      "suv": 880,
+      "innova": 1045,
+      "traveller": 1650
+},
+    highways: ["NH83"],
+    tolls: {
+      costRange: '₹40 - ₹70',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Thanjavur Central City / Main Junction',
+      'Thanjavur Railway Station & Bus Stand',
+      'Thanjavur Residential Areas & Hotels',
+      'Thanjavur Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Trichy Airport City Center & Main Commercial Hub',
+      'Trichy Airport Railway Station & Transit Terminals',
+      'Trichy Airport Hotels, Resorts & Residential Hubs',
+      'Trichy Airport Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Thanjavur', type: 'Origin', desc: 'Doorstep pickup across Thanjavur.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Trichy Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy Airport.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Thanjavur to Trichy Airport?',
+        a: 'The one-way taxi fare from Thanjavur to Trichy Airport starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Thanjavur to Trichy Airport?',
+        a: 'The distance from Thanjavur to Trichy Airport is approx 55 km via NH83. Travel duration is around 1 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Thanjavur?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Thanjavur including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Thanjavur to Trichy Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1 hours.',
+        route: 'Thanjavur to Trichy Airport',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Thanjavur to Trichy Airport. Zero return charges and transparent per-km bill.',
+        route: 'Thanjavur to Trichy Airport',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Trichy Airport to Thanjavur', slug: 'trichy-airport-to-thanjavur', distance: '55 km', fare: '₹550' },
+    ],
+  },
+
+  'madurai-airport-to-rameswaram': {
+    from: 'Madurai Airport',
+    to: 'Rameshwaram',
+    fromSlug: 'madurai',
+    toSlug: 'ramanathapuram',
+    returnRouteSlug: 'rameswaram-to-madurai-airport',
+    distanceKm: 170,
+    timeHours: 3.25,
+    distanceDisplay: '170 km',
+    durationDisplay: '3.25 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Madurai Airport to Rameshwaram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Madurai Airport to Rameshwaram One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai Airport to Rameshwaram with SAMAYAS. Hatchback from ₹1,700, Sedan ₹2,040, SUV ₹2,720. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1700,
+      "sedan": 2040,
+      "suv": 2720,
+      "innova": 3230,
+      "traveller": 5100
+},
+    highways: ["NH87"],
+    tolls: {
+      costRange: '₹120 - ₹180',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Madurai Airport Central City / Main Junction',
+      'Madurai Airport Railway Station & Bus Stand',
+      'Madurai Airport Residential Areas & Hotels',
+      'Madurai Airport Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Rameshwaram City Center & Main Commercial Hub',
+      'Rameshwaram Railway Station & Transit Terminals',
+      'Rameshwaram Hotels, Resorts & Residential Hubs',
+      'Rameshwaram Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Madurai Airport', type: 'Origin', desc: 'Doorstep pickup across Madurai Airport.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Rameshwaram', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Rameshwaram.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Madurai Airport to Rameshwaram?',
+        a: 'The one-way taxi fare from Madurai Airport to Rameshwaram starts at ₹1,700 for a Hatchback, ₹2,040 for a Sedan, and ₹2,720 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Madurai Airport to Rameshwaram?',
+        a: 'The distance from Madurai Airport to Rameshwaram is approx 170 km via NH87. Travel duration is around 3.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Madurai Airport?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai Airport including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Madurai Airport to Rameshwaram. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
+        route: 'Madurai Airport to Rameshwaram',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Madurai Airport to Rameshwaram. Zero return charges and transparent per-km bill.',
+        route: 'Madurai Airport to Rameshwaram',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Rameshwaram to Madurai Airport', slug: 'rameswaram-to-madurai-airport', distance: '170 km', fare: '₹1,700' },
+    ],
+  },
+
+  'rameswaram-to-madurai-airport': {
+    from: 'Rameshwaram',
+    to: 'Madurai Airport',
+    fromSlug: 'ramanathapuram',
+    toSlug: 'madurai',
+    returnRouteSlug: 'madurai-airport-to-rameswaram',
+    distanceKm: 170,
+    timeHours: 3.25,
+    distanceDisplay: '170 km',
+    durationDisplay: '3.25 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Rameshwaram to Madurai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Rameshwaram to Madurai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Rameshwaram to Madurai Airport with SAMAYAS. Hatchback from ₹1,700, Sedan ₹2,040, SUV ₹2,720. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1700,
+      "sedan": 2040,
+      "suv": 2720,
+      "innova": 3230,
+      "traveller": 5100
+},
+    highways: ["NH87"],
+    tolls: {
+      costRange: '₹120 - ₹180',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Rameshwaram Central City / Main Junction',
+      'Rameshwaram Railway Station & Bus Stand',
+      'Rameshwaram Residential Areas & Hotels',
+      'Rameshwaram Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Madurai Airport City Center & Main Commercial Hub',
+      'Madurai Airport Railway Station & Transit Terminals',
+      'Madurai Airport Hotels, Resorts & Residential Hubs',
+      'Madurai Airport Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Rameshwaram', type: 'Origin', desc: 'Doorstep pickup across Rameshwaram.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Madurai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai Airport.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Rameshwaram to Madurai Airport?',
+        a: 'The one-way taxi fare from Rameshwaram to Madurai Airport starts at ₹1,700 for a Hatchback, ₹2,040 for a Sedan, and ₹2,720 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Rameshwaram to Madurai Airport?',
+        a: 'The distance from Rameshwaram to Madurai Airport is approx 170 km via NH87. Travel duration is around 3.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Rameshwaram?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Rameshwaram including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Rameshwaram to Madurai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
+        route: 'Rameshwaram to Madurai Airport',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Rameshwaram to Madurai Airport. Zero return charges and transparent per-km bill.',
+        route: 'Rameshwaram to Madurai Airport',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Madurai Airport to Rameshwaram', slug: 'madurai-airport-to-rameswaram', distance: '170 km', fare: '₹1,700' },
+    ],
+  },
+
+  'madurai-airport-to-kodaikanal': {
+    from: 'Madurai Airport',
+    to: 'Kodaikanal',
+    fromSlug: 'madurai',
+    toSlug: 'dindigul',
+    returnRouteSlug: 'kodaikanal-to-madurai-airport',
+    distanceKm: 135,
+    timeHours: 3.5,
+    distanceDisplay: '135 km',
+    durationDisplay: '3.5 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Madurai Airport to Kodaikanal. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Madurai Airport to Kodaikanal One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai Airport to Kodaikanal with SAMAYAS. Hatchback from ₹1,350, Sedan ₹1,620, SUV ₹2,160. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1350,
+      "sedan": 1620,
+      "suv": 2160,
+      "innova": 2565,
+      "traveller": 4050
+},
+    highways: ["SH156 Ghat Road"],
+    tolls: {
+      costRange: '₹90 - ₹130',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Madurai Airport Central City / Main Junction',
+      'Madurai Airport Railway Station & Bus Stand',
+      'Madurai Airport Residential Areas & Hotels',
+      'Madurai Airport Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Kodaikanal City Center & Main Commercial Hub',
+      'Kodaikanal Railway Station & Transit Terminals',
+      'Kodaikanal Hotels, Resorts & Residential Hubs',
+      'Kodaikanal Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Madurai Airport', type: 'Origin', desc: 'Doorstep pickup across Madurai Airport.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Kodaikanal', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Kodaikanal.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Madurai Airport to Kodaikanal?',
+        a: 'The one-way taxi fare from Madurai Airport to Kodaikanal starts at ₹1,350 for a Hatchback, ₹1,620 for a Sedan, and ₹2,160 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Madurai Airport to Kodaikanal?',
+        a: 'The distance from Madurai Airport to Kodaikanal is approx 135 km via SH156 Ghat Road. Travel duration is around 3.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Madurai Airport?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai Airport including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Madurai Airport to Kodaikanal. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
+        route: 'Madurai Airport to Kodaikanal',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Madurai Airport to Kodaikanal. Zero return charges and transparent per-km bill.',
+        route: 'Madurai Airport to Kodaikanal',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Kodaikanal to Madurai Airport', slug: 'kodaikanal-to-madurai-airport', distance: '135 km', fare: '₹1,350' },
+    ],
+  },
+
+  'kodaikanal-to-madurai-airport': {
+    from: 'Kodaikanal',
+    to: 'Madurai Airport',
+    fromSlug: 'dindigul',
+    toSlug: 'madurai',
+    returnRouteSlug: 'madurai-airport-to-kodaikanal',
+    distanceKm: 135,
+    timeHours: 3.5,
+    distanceDisplay: '135 km',
+    durationDisplay: '3.5 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Kodaikanal to Madurai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Kodaikanal to Madurai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kodaikanal to Madurai Airport with SAMAYAS. Hatchback from ₹1,350, Sedan ₹1,620, SUV ₹2,160. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1350,
+      "sedan": 1620,
+      "suv": 2160,
+      "innova": 2565,
+      "traveller": 4050
+},
+    highways: ["SH156 Ghat Road"],
+    tolls: {
+      costRange: '₹90 - ₹130',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Kodaikanal Central City / Main Junction',
+      'Kodaikanal Railway Station & Bus Stand',
+      'Kodaikanal Residential Areas & Hotels',
+      'Kodaikanal Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Madurai Airport City Center & Main Commercial Hub',
+      'Madurai Airport Railway Station & Transit Terminals',
+      'Madurai Airport Hotels, Resorts & Residential Hubs',
+      'Madurai Airport Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Kodaikanal', type: 'Origin', desc: 'Doorstep pickup across Kodaikanal.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Madurai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai Airport.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Kodaikanal to Madurai Airport?',
+        a: 'The one-way taxi fare from Kodaikanal to Madurai Airport starts at ₹1,350 for a Hatchback, ₹1,620 for a Sedan, and ₹2,160 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Kodaikanal to Madurai Airport?',
+        a: 'The distance from Kodaikanal to Madurai Airport is approx 135 km via SH156 Ghat Road. Travel duration is around 3.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Kodaikanal?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Kodaikanal including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Kodaikanal to Madurai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
+        route: 'Kodaikanal to Madurai Airport',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Kodaikanal to Madurai Airport. Zero return charges and transparent per-km bill.',
+        route: 'Kodaikanal to Madurai Airport',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Madurai Airport to Kodaikanal', slug: 'madurai-airport-to-kodaikanal', distance: '135 km', fare: '₹1,350' },
+    ],
+  },
+
+  'coimbatore-airport-to-ooty': {
+    from: 'Coimbatore Airport',
+    to: 'Ooty',
+    fromSlug: 'coimbatore',
+    toSlug: 'nilgiris',
+    returnRouteSlug: 'ooty-to-coimbatore-airport',
+    distanceKm: 90,
+    timeHours: 3,
+    distanceDisplay: '90 km',
+    durationDisplay: '3 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Coimbatore Airport to Ooty. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Coimbatore Airport to Ooty One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore Airport to Ooty with SAMAYAS. Hatchback from ₹900, Sedan ₹1,080, SUV ₹1,440. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 900,
+      "sedan": 1080,
+      "suv": 1440,
+      "innova": 1710,
+      "traveller": 2700
+},
+    highways: ["NH181 Hairpin Route"],
+    tolls: {
+      costRange: '₹70 - ₹110',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Coimbatore Airport Central City / Main Junction',
+      'Coimbatore Airport Railway Station & Bus Stand',
+      'Coimbatore Airport Residential Areas & Hotels',
+      'Coimbatore Airport Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Ooty City Center & Main Commercial Hub',
+      'Ooty Railway Station & Transit Terminals',
+      'Ooty Hotels, Resorts & Residential Hubs',
+      'Ooty Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Coimbatore Airport', type: 'Origin', desc: 'Doorstep pickup across Coimbatore Airport.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Ooty', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Ooty.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Coimbatore Airport to Ooty?',
+        a: 'The one-way taxi fare from Coimbatore Airport to Ooty starts at ₹900 for a Hatchback, ₹1,080 for a Sedan, and ₹1,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Coimbatore Airport to Ooty?',
+        a: 'The distance from Coimbatore Airport to Ooty is approx 90 km via NH181 Hairpin Route. Travel duration is around 3 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Coimbatore Airport?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore Airport including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Coimbatore Airport to Ooty. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3 hours.',
+        route: 'Coimbatore Airport to Ooty',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Coimbatore Airport to Ooty. Zero return charges and transparent per-km bill.',
+        route: 'Coimbatore Airport to Ooty',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Ooty to Coimbatore Airport', slug: 'ooty-to-coimbatore-airport', distance: '90 km', fare: '₹900' },
+    ],
+  },
+
+  'ooty-to-coimbatore-airport': {
+    from: 'Ooty',
+    to: 'Coimbatore Airport',
+    fromSlug: 'nilgiris',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'coimbatore-airport-to-ooty',
+    distanceKm: 90,
+    timeHours: 3,
+    distanceDisplay: '90 km',
+    durationDisplay: '3 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Ooty to Coimbatore Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Ooty to Coimbatore Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Ooty to Coimbatore Airport with SAMAYAS. Hatchback from ₹900, Sedan ₹1,080, SUV ₹1,440. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 900,
+      "sedan": 1080,
+      "suv": 1440,
+      "innova": 1710,
+      "traveller": 2700
+},
+    highways: ["NH181"],
+    tolls: {
+      costRange: '₹70 - ₹110',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Ooty Central City / Main Junction',
+      'Ooty Railway Station & Bus Stand',
+      'Ooty Residential Areas & Hotels',
+      'Ooty Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Coimbatore Airport City Center & Main Commercial Hub',
+      'Coimbatore Airport Railway Station & Transit Terminals',
+      'Coimbatore Airport Hotels, Resorts & Residential Hubs',
+      'Coimbatore Airport Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Ooty', type: 'Origin', desc: 'Doorstep pickup across Ooty.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Coimbatore Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore Airport.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Ooty to Coimbatore Airport?',
+        a: 'The one-way taxi fare from Ooty to Coimbatore Airport starts at ₹900 for a Hatchback, ₹1,080 for a Sedan, and ₹1,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Ooty to Coimbatore Airport?',
+        a: 'The distance from Ooty to Coimbatore Airport is approx 90 km via NH181. Travel duration is around 3 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Ooty?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Ooty including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Ooty to Coimbatore Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3 hours.',
+        route: 'Ooty to Coimbatore Airport',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Ooty to Coimbatore Airport. Zero return charges and transparent per-km bill.',
+        route: 'Ooty to Coimbatore Airport',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Coimbatore Airport to Ooty', slug: 'coimbatore-airport-to-ooty', distance: '90 km', fare: '₹900' },
+    ],
+  },
+
+  'trichy-airport-to-karur': {
+    from: 'Trichy Airport',
+    to: 'Karur',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'karur',
+    returnRouteSlug: 'karur-to-trichy-airport',
+    distanceKm: 85,
+    timeHours: 1.75,
+    distanceDisplay: '85 km',
+    durationDisplay: '1.75 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Trichy Airport to Karur. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Trichy Airport to Karur One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy Airport to Karur with SAMAYAS. Hatchback from ₹850, Sedan ₹1,020, SUV ₹1,360. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 850,
+      "sedan": 1020,
+      "suv": 1360,
+      "innova": 1615,
+      "traveller": 2550
+},
+    highways: ["NH81"],
+    tolls: {
+      costRange: '₹60 - ₹90',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Trichy Airport Central City / Main Junction',
+      'Trichy Airport Railway Station & Bus Stand',
+      'Trichy Airport Residential Areas & Hotels',
+      'Trichy Airport Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Karur City Center & Main Commercial Hub',
+      'Karur Railway Station & Transit Terminals',
+      'Karur Hotels, Resorts & Residential Hubs',
+      'Karur Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Trichy Airport', type: 'Origin', desc: 'Doorstep pickup across Trichy Airport.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Karur', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Karur.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Trichy Airport to Karur?',
+        a: 'The one-way taxi fare from Trichy Airport to Karur starts at ₹850 for a Hatchback, ₹1,020 for a Sedan, and ₹1,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Trichy Airport to Karur?',
+        a: 'The distance from Trichy Airport to Karur is approx 85 km via NH81. Travel duration is around 1.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Trichy Airport?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy Airport including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Trichy Airport to Karur. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.75 hours.',
+        route: 'Trichy Airport to Karur',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Trichy Airport to Karur. Zero return charges and transparent per-km bill.',
+        route: 'Trichy Airport to Karur',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Karur to Trichy Airport', slug: 'karur-to-trichy-airport', distance: '85 km', fare: '₹850' },
+    ],
+  },
+
+  'karur-to-trichy-airport': {
+    from: 'Karur',
+    to: 'Trichy Airport',
+    fromSlug: 'karur',
+    toSlug: 'tiruchirappalli',
+    returnRouteSlug: 'trichy-airport-to-karur',
+    distanceKm: 85,
+    timeHours: 1.75,
+    distanceDisplay: '85 km',
+    durationDisplay: '1.75 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Karur to Trichy Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Karur to Trichy Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Karur to Trichy Airport with SAMAYAS. Hatchback from ₹850, Sedan ₹1,020, SUV ₹1,360. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 850,
+      "sedan": 1020,
+      "suv": 1360,
+      "innova": 1615,
+      "traveller": 2550
+},
+    highways: ["NH81"],
+    tolls: {
+      costRange: '₹60 - ₹90',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Karur Central City / Main Junction',
+      'Karur Railway Station & Bus Stand',
+      'Karur Residential Areas & Hotels',
+      'Karur Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Trichy Airport City Center & Main Commercial Hub',
+      'Trichy Airport Railway Station & Transit Terminals',
+      'Trichy Airport Hotels, Resorts & Residential Hubs',
+      'Trichy Airport Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Karur', type: 'Origin', desc: 'Doorstep pickup across Karur.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Trichy Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy Airport.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Karur to Trichy Airport?',
+        a: 'The one-way taxi fare from Karur to Trichy Airport starts at ₹850 for a Hatchback, ₹1,020 for a Sedan, and ₹1,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Karur to Trichy Airport?',
+        a: 'The distance from Karur to Trichy Airport is approx 85 km via NH81. Travel duration is around 1.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Karur?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Karur including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Karur to Trichy Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.75 hours.',
+        route: 'Karur to Trichy Airport',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Karur to Trichy Airport. Zero return charges and transparent per-km bill.',
+        route: 'Karur to Trichy Airport',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Trichy Airport to Karur', slug: 'trichy-airport-to-karur', distance: '85 km', fare: '₹850' },
+    ],
+  },
+
+  'chennai-airport-to-kanchipuram': {
+    from: 'Chennai Airport',
+    to: 'Kanchipuram',
+    fromSlug: 'chennai',
+    toSlug: 'kanchipuram',
+    returnRouteSlug: 'kanchipuram-to-chennai-airport',
+    distanceKm: 65,
+    timeHours: 1.5,
+    distanceDisplay: '65 km',
+    durationDisplay: '1.5 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Kanchipuram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai Airport to Kanchipuram One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai Airport to Kanchipuram with SAMAYAS. Hatchback from ₹650, Sedan ₹780, SUV ₹1,040. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 650,
+      "sedan": 780,
+      "suv": 1040,
+      "innova": 1235,
+      "traveller": 1950
+},
+    highways: ["NH48"],
+    tolls: {
+      costRange: '₹60 - ₹90',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Chennai Airport Central City / Main Junction',
+      'Chennai Airport Railway Station & Bus Stand',
+      'Chennai Airport Residential Areas & Hotels',
+      'Chennai Airport Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Kanchipuram City Center & Main Commercial Hub',
+      'Kanchipuram Railway Station & Transit Terminals',
+      'Kanchipuram Hotels, Resorts & Residential Hubs',
+      'Kanchipuram Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Chennai Airport', type: 'Origin', desc: 'Doorstep pickup across Chennai Airport.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Kanchipuram', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Kanchipuram.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Chennai Airport to Kanchipuram?',
+        a: 'The one-way taxi fare from Chennai Airport to Kanchipuram starts at ₹650 for a Hatchback, ₹780 for a Sedan, and ₹1,040 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai Airport to Kanchipuram?',
+        a: 'The distance from Chennai Airport to Kanchipuram is approx 65 km via NH48. Travel duration is around 1.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai Airport?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai Airport including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Chennai Airport to Kanchipuram. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.5 hours.',
+        route: 'Chennai Airport to Kanchipuram',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai Airport to Kanchipuram. Zero return charges and transparent per-km bill.',
+        route: 'Chennai Airport to Kanchipuram',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Kanchipuram to Chennai Airport', slug: 'kanchipuram-to-chennai-airport', distance: '65 km', fare: '₹650' },
+    ],
+  },
+
+  'kanchipuram-to-chennai-airport': {
+    from: 'Kanchipuram',
+    to: 'Chennai Airport',
+    fromSlug: 'kanchipuram',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-airport-to-kanchipuram',
+    distanceKm: 65,
+    timeHours: 1.5,
+    distanceDisplay: '65 km',
+    durationDisplay: '1.5 Hours',
+    category: 'Airport',
+    popularFor: ['Airport Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Kanchipuram to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Kanchipuram to Chennai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kanchipuram to Chennai Airport with SAMAYAS. Hatchback from ₹650, Sedan ₹780, SUV ₹1,040. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 650,
+      "sedan": 780,
+      "suv": 1040,
+      "innova": 1235,
+      "traveller": 1950
+},
+    highways: ["NH48"],
+    tolls: {
+      costRange: '₹60 - ₹90',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Kanchipuram Central City / Main Junction',
+      'Kanchipuram Railway Station & Bus Stand',
+      'Kanchipuram Residential Areas & Hotels',
+      'Kanchipuram Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai Airport City Center & Main Commercial Hub',
+      'Chennai Airport Railway Station & Transit Terminals',
+      'Chennai Airport Hotels, Resorts & Residential Hubs',
+      'Chennai Airport Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Kanchipuram', type: 'Origin', desc: 'Doorstep pickup across Kanchipuram.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai Airport.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Kanchipuram to Chennai Airport?',
+        a: 'The one-way taxi fare from Kanchipuram to Chennai Airport starts at ₹650 for a Hatchback, ₹780 for a Sedan, and ₹1,040 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Kanchipuram to Chennai Airport?',
+        a: 'The distance from Kanchipuram to Chennai Airport is approx 65 km via NH48. Travel duration is around 1.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Kanchipuram?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Kanchipuram including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Kanchipuram to Chennai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.5 hours.',
+        route: 'Kanchipuram to Chennai Airport',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Kanchipuram to Chennai Airport. Zero return charges and transparent per-km bill.',
+        route: 'Kanchipuram to Chennai Airport',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai Airport to Kanchipuram', slug: 'chennai-airport-to-kanchipuram', distance: '65 km', fare: '₹650' },
+    ],
+  },
+
+  'chennai-to-bengaluru': {
+    from: 'Chennai',
+    to: 'Bengaluru',
+    fromSlug: 'chennai',
+    toSlug: 'krishnagiri',
+    returnRouteSlug: 'bengaluru-to-chennai',
+    distanceKm: 350,
+    timeHours: 6.25,
+    distanceDisplay: '350 km',
+    durationDisplay: '6.25 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Bengaluru. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Bengaluru One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Bengaluru with SAMAYAS. Hatchback from ₹3,500, Sedan ₹4,200, SUV ₹5,600. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 3500,
+      "sedan": 4200,
+      "suv": 5600,
+      "innova": 6650,
+      "traveller": 10500
+},
+    highways: ["NH48 Expressway"],
+    tolls: {
+      costRange: '₹450 - ₹550',
+      plazasCount: 5,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Chennai Central City / Main Junction',
+      'Chennai Railway Station & Bus Stand',
+      'Chennai Residential Areas & Hotels',
+      'Chennai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Bengaluru City Center & Main Commercial Hub',
+      'Bengaluru Railway Station & Transit Terminals',
+      'Bengaluru Hotels, Resorts & Residential Hubs',
+      'Bengaluru Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Bengaluru', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Bengaluru.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Chennai to Bengaluru?',
+        a: 'The one-way taxi fare from Chennai to Bengaluru starts at ₹3,500 for a Hatchback, ₹4,200 for a Sedan, and ₹5,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai to Bengaluru?',
+        a: 'The distance from Chennai to Bengaluru is approx 350 km via NH48 Expressway. Travel duration is around 6.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Chennai to Bengaluru. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6.25 hours.',
+        route: 'Chennai to Bengaluru',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai to Bengaluru. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Bengaluru',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Bengaluru to Chennai', slug: 'bengaluru-to-chennai', distance: '350 km', fare: '₹3,500' },
+    ],
+  },
+
+  'bengaluru-to-chennai': {
+    from: 'Bengaluru',
+    to: 'Chennai',
+    fromSlug: 'krishnagiri',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-to-bengaluru',
+    distanceKm: 350,
+    timeHours: 6.25,
+    distanceDisplay: '350 km',
+    durationDisplay: '6.25 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Bengaluru to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Bengaluru to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Bengaluru to Chennai with SAMAYAS. Hatchback from ₹3,500, Sedan ₹4,200, SUV ₹5,600. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 3500,
+      "sedan": 4200,
+      "suv": 5600,
+      "innova": 6650,
+      "traveller": 10500
+},
+    highways: ["NH48 Expressway"],
+    tolls: {
+      costRange: '₹450 - ₹550',
+      plazasCount: 5,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Bengaluru Central City / Main Junction',
+      'Bengaluru Railway Station & Bus Stand',
+      'Bengaluru Residential Areas & Hotels',
+      'Bengaluru Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai City Center & Main Commercial Hub',
+      'Chennai Railway Station & Transit Terminals',
+      'Chennai Hotels, Resorts & Residential Hubs',
+      'Chennai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Bengaluru', type: 'Origin', desc: 'Doorstep pickup across Bengaluru.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Bengaluru to Chennai?',
+        a: 'The one-way taxi fare from Bengaluru to Chennai starts at ₹3,500 for a Hatchback, ₹4,200 for a Sedan, and ₹5,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Bengaluru to Chennai?',
+        a: 'The distance from Bengaluru to Chennai is approx 350 km via NH48 Expressway. Travel duration is around 6.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Bengaluru?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Bengaluru including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Bengaluru to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6.25 hours.',
+        route: 'Bengaluru to Chennai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Bengaluru to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Bengaluru to Chennai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai to Bengaluru', slug: 'chennai-to-bengaluru', distance: '350 km', fare: '₹3,500' },
+    ],
+  },
+
+  'trichy-to-bengaluru': {
+    from: 'Trichy',
+    to: 'Bengaluru',
+    fromSlug: 'tiruchirappalli',
+    toSlug: 'krishnagiri',
+    returnRouteSlug: 'bengaluru-to-trichy',
+    distanceKm: 345,
+    timeHours: 6.25,
+    distanceDisplay: '345 km',
+    durationDisplay: '6.25 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Trichy to Bengaluru. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Trichy to Bengaluru One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Bengaluru with SAMAYAS. Hatchback from ₹3,450, Sedan ₹4,140, SUV ₹5,520. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 3450,
+      "sedan": 4140,
+      "suv": 5520,
+      "innova": 6555,
+      "traveller": 10350
+},
+    highways: ["NH44"],
+    tolls: {
+      costRange: '₹480 - ₹580',
+      plazasCount: 5,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Trichy Central City / Main Junction',
+      'Trichy Railway Station & Bus Stand',
+      'Trichy Residential Areas & Hotels',
+      'Trichy Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Bengaluru City Center & Main Commercial Hub',
+      'Bengaluru Railway Station & Transit Terminals',
+      'Bengaluru Hotels, Resorts & Residential Hubs',
+      'Bengaluru Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Bengaluru', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Bengaluru.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Trichy to Bengaluru?',
+        a: 'The one-way taxi fare from Trichy to Bengaluru starts at ₹3,450 for a Hatchback, ₹4,140 for a Sedan, and ₹5,520 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Trichy to Bengaluru?',
+        a: 'The distance from Trichy to Bengaluru is approx 345 km via NH44. Travel duration is around 6.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Trichy?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Trichy to Bengaluru. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6.25 hours.',
+        route: 'Trichy to Bengaluru',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Trichy to Bengaluru. Zero return charges and transparent per-km bill.',
+        route: 'Trichy to Bengaluru',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Bengaluru to Trichy', slug: 'bengaluru-to-trichy', distance: '345 km', fare: '₹3,450' },
+    ],
+  },
+
+  'bengaluru-to-trichy': {
+    from: 'Bengaluru',
+    to: 'Trichy',
+    fromSlug: 'krishnagiri',
+    toSlug: 'tiruchirappalli',
+    returnRouteSlug: 'trichy-to-bengaluru',
+    distanceKm: 345,
+    timeHours: 6.25,
+    distanceDisplay: '345 km',
+    durationDisplay: '6.25 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Bengaluru to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Bengaluru to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Bengaluru to Trichy with SAMAYAS. Hatchback from ₹3,450, Sedan ₹4,140, SUV ₹5,520. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 3450,
+      "sedan": 4140,
+      "suv": 5520,
+      "innova": 6555,
+      "traveller": 10350
+},
+    highways: ["NH44"],
+    tolls: {
+      costRange: '₹480 - ₹580',
+      plazasCount: 5,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Bengaluru Central City / Main Junction',
+      'Bengaluru Railway Station & Bus Stand',
+      'Bengaluru Residential Areas & Hotels',
+      'Bengaluru Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Trichy City Center & Main Commercial Hub',
+      'Trichy Railway Station & Transit Terminals',
+      'Trichy Hotels, Resorts & Residential Hubs',
+      'Trichy Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Bengaluru', type: 'Origin', desc: 'Doorstep pickup across Bengaluru.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Trichy', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Bengaluru to Trichy?',
+        a: 'The one-way taxi fare from Bengaluru to Trichy starts at ₹3,450 for a Hatchback, ₹4,140 for a Sedan, and ₹5,520 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Bengaluru to Trichy?',
+        a: 'The distance from Bengaluru to Trichy is approx 345 km via NH44. Travel duration is around 6.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Bengaluru?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Bengaluru including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Bengaluru to Trichy. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6.25 hours.',
+        route: 'Bengaluru to Trichy',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Bengaluru to Trichy. Zero return charges and transparent per-km bill.',
+        route: 'Bengaluru to Trichy',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Trichy to Bengaluru', slug: 'trichy-to-bengaluru', distance: '345 km', fare: '₹3,450' },
+    ],
+  },
+
+  'salem-to-bengaluru': {
+    from: 'Salem',
+    to: 'Bengaluru',
+    fromSlug: 'salem',
+    toSlug: 'krishnagiri',
+    returnRouteSlug: 'bengaluru-to-salem',
+    distanceKm: 205,
+    timeHours: 3.75,
+    distanceDisplay: '205 km',
+    durationDisplay: '3.75 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Salem to Bengaluru. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Salem to Bengaluru One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Salem to Bengaluru with SAMAYAS. Hatchback from ₹2,050, Sedan ₹2,460, SUV ₹3,280. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 2050,
+      "sedan": 2460,
+      "suv": 3280,
+      "innova": 3895,
+      "traveller": 6150
+},
+    highways: ["NH44 Expressway"],
+    tolls: {
+      costRange: '₹280 - ₹340',
+      plazasCount: 3,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Salem Central City / Main Junction',
+      'Salem Railway Station & Bus Stand',
+      'Salem Residential Areas & Hotels',
+      'Salem Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Bengaluru City Center & Main Commercial Hub',
+      'Bengaluru Railway Station & Transit Terminals',
+      'Bengaluru Hotels, Resorts & Residential Hubs',
+      'Bengaluru Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Salem', type: 'Origin', desc: 'Doorstep pickup across Salem.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Bengaluru', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Bengaluru.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Salem to Bengaluru?',
+        a: 'The one-way taxi fare from Salem to Bengaluru starts at ₹2,050 for a Hatchback, ₹2,460 for a Sedan, and ₹3,280 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Salem to Bengaluru?',
+        a: 'The distance from Salem to Bengaluru is approx 205 km via NH44 Expressway. Travel duration is around 3.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Salem?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Salem including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Salem to Bengaluru. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.75 hours.',
+        route: 'Salem to Bengaluru',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Salem to Bengaluru. Zero return charges and transparent per-km bill.',
+        route: 'Salem to Bengaluru',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Bengaluru to Salem', slug: 'bengaluru-to-salem', distance: '205 km', fare: '₹2,050' },
+    ],
+  },
+
+  'bengaluru-to-salem': {
+    from: 'Bengaluru',
+    to: 'Salem',
+    fromSlug: 'krishnagiri',
+    toSlug: 'salem',
+    returnRouteSlug: 'salem-to-bengaluru',
+    distanceKm: 205,
+    timeHours: 3.75,
+    distanceDisplay: '205 km',
+    durationDisplay: '3.75 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Bengaluru to Salem. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Bengaluru to Salem One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Bengaluru to Salem with SAMAYAS. Hatchback from ₹2,050, Sedan ₹2,460, SUV ₹3,280. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 2050,
+      "sedan": 2460,
+      "suv": 3280,
+      "innova": 3895,
+      "traveller": 6150
+},
+    highways: ["NH44 Expressway"],
+    tolls: {
+      costRange: '₹280 - ₹340',
+      plazasCount: 3,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Bengaluru Central City / Main Junction',
+      'Bengaluru Railway Station & Bus Stand',
+      'Bengaluru Residential Areas & Hotels',
+      'Bengaluru Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Salem City Center & Main Commercial Hub',
+      'Salem Railway Station & Transit Terminals',
+      'Salem Hotels, Resorts & Residential Hubs',
+      'Salem Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Bengaluru', type: 'Origin', desc: 'Doorstep pickup across Bengaluru.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Salem', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Salem.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Bengaluru to Salem?',
+        a: 'The one-way taxi fare from Bengaluru to Salem starts at ₹2,050 for a Hatchback, ₹2,460 for a Sedan, and ₹3,280 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Bengaluru to Salem?',
+        a: 'The distance from Bengaluru to Salem is approx 205 km via NH44 Expressway. Travel duration is around 3.75 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Bengaluru?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Bengaluru including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Bengaluru to Salem. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.75 hours.',
+        route: 'Bengaluru to Salem',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Bengaluru to Salem. Zero return charges and transparent per-km bill.',
+        route: 'Bengaluru to Salem',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Salem to Bengaluru', slug: 'salem-to-bengaluru', distance: '205 km', fare: '₹2,050' },
+    ],
+  },
+
+  'coimbatore-to-bengaluru': {
+    from: 'Coimbatore',
+    to: 'Bengaluru',
+    fromSlug: 'coimbatore',
+    toSlug: 'krishnagiri',
+    returnRouteSlug: 'bengaluru-to-coimbatore',
+    distanceKm: 365,
+    timeHours: 6.5,
+    distanceDisplay: '365 km',
+    durationDisplay: '6.5 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Coimbatore to Bengaluru. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Coimbatore to Bengaluru One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Bengaluru with SAMAYAS. Hatchback from ₹3,650, Sedan ₹4,380, SUV ₹5,840. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 3650,
+      "sedan": 4380,
+      "suv": 5840,
+      "innova": 6935,
+      "traveller": 10950
+},
+    highways: ["NH544","NH44"],
+    tolls: {
+      costRange: '₹520 - ₹620',
+      plazasCount: 6,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Coimbatore Central City / Main Junction',
+      'Coimbatore Railway Station & Bus Stand',
+      'Coimbatore Residential Areas & Hotels',
+      'Coimbatore Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Bengaluru City Center & Main Commercial Hub',
+      'Bengaluru Railway Station & Transit Terminals',
+      'Bengaluru Hotels, Resorts & Residential Hubs',
+      'Bengaluru Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup across Coimbatore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Bengaluru', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Bengaluru.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Coimbatore to Bengaluru?',
+        a: 'The one-way taxi fare from Coimbatore to Bengaluru starts at ₹3,650 for a Hatchback, ₹4,380 for a Sedan, and ₹5,840 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Coimbatore to Bengaluru?',
+        a: 'The distance from Coimbatore to Bengaluru is approx 365 km via NH544. Travel duration is around 6.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Coimbatore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Coimbatore to Bengaluru. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6.5 hours.',
+        route: 'Coimbatore to Bengaluru',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Coimbatore to Bengaluru. Zero return charges and transparent per-km bill.',
         route: 'Coimbatore to Bengaluru',
       },
     ],
-    
     nearbyRoutes: [
-      { name: 'Coimbatore to Ooty', slug: 'coimbatore-to-ooty', distance: '85 km', fare: '₹2,200' },
+      { name: 'Bengaluru to Coimbatore', slug: 'bengaluru-to-coimbatore', distance: '365 km', fare: '₹3,650' },
     ],
   },
+
+  'bengaluru-to-coimbatore': {
+    from: 'Bengaluru',
+    to: 'Coimbatore',
+    fromSlug: 'krishnagiri',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'coimbatore-to-bengaluru',
+    distanceKm: 365,
+    timeHours: 6.5,
+    distanceDisplay: '365 km',
+    durationDisplay: '6.5 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Bengaluru to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Bengaluru to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Bengaluru to Coimbatore with SAMAYAS. Hatchback from ₹3,650, Sedan ₹4,380, SUV ₹5,840. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 3650,
+      "sedan": 4380,
+      "suv": 5840,
+      "innova": 6935,
+      "traveller": 10950
+},
+    highways: ["NH44","NH544"],
+    tolls: {
+      costRange: '₹520 - ₹620',
+      plazasCount: 6,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Bengaluru Central City / Main Junction',
+      'Bengaluru Railway Station & Bus Stand',
+      'Bengaluru Residential Areas & Hotels',
+      'Bengaluru Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Coimbatore City Center & Main Commercial Hub',
+      'Coimbatore Railway Station & Transit Terminals',
+      'Coimbatore Hotels, Resorts & Residential Hubs',
+      'Coimbatore Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Bengaluru', type: 'Origin', desc: 'Doorstep pickup across Bengaluru.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Coimbatore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Bengaluru to Coimbatore?',
+        a: 'The one-way taxi fare from Bengaluru to Coimbatore starts at ₹3,650 for a Hatchback, ₹4,380 for a Sedan, and ₹5,840 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Bengaluru to Coimbatore?',
+        a: 'The distance from Bengaluru to Coimbatore is approx 365 km via NH44. Travel duration is around 6.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Bengaluru?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Bengaluru including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Bengaluru to Coimbatore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6.5 hours.',
+        route: 'Bengaluru to Coimbatore',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Bengaluru to Coimbatore. Zero return charges and transparent per-km bill.',
+        route: 'Bengaluru to Coimbatore',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Coimbatore to Bengaluru', slug: 'coimbatore-to-bengaluru', distance: '365 km', fare: '₹3,650' },
+    ],
+  },
+
+  'chennai-to-tirupati': {
+    from: 'Chennai',
+    to: 'Tirupati',
+    fromSlug: 'chennai',
+    toSlug: 'vellore',
+    returnRouteSlug: 'tirupati-to-chennai',
+    distanceKm: 135,
+    timeHours: 3.25,
+    distanceDisplay: '135 km',
+    durationDisplay: '3.25 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Tirupati. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Tirupati One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Tirupati with SAMAYAS. Hatchback from ₹1,350, Sedan ₹1,620, SUV ₹2,160. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1350,
+      "sedan": 1620,
+      "suv": 2160,
+      "innova": 2565,
+      "traveller": 4050
+},
+    highways: ["NH716"],
+    tolls: {
+      costRange: '₹140 - ₹190',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Chennai Central City / Main Junction',
+      'Chennai Railway Station & Bus Stand',
+      'Chennai Residential Areas & Hotels',
+      'Chennai Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Tirupati City Center & Main Commercial Hub',
+      'Tirupati Railway Station & Transit Terminals',
+      'Tirupati Hotels, Resorts & Residential Hubs',
+      'Tirupati Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Tirupati', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Tirupati.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Chennai to Tirupati?',
+        a: 'The one-way taxi fare from Chennai to Tirupati starts at ₹1,350 for a Hatchback, ₹1,620 for a Sedan, and ₹2,160 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Chennai to Tirupati?',
+        a: 'The distance from Chennai to Tirupati is approx 135 km via NH716. Travel duration is around 3.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Chennai?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Chennai to Tirupati. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
+        route: 'Chennai to Tirupati',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Chennai to Tirupati. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Tirupati',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Tirupati to Chennai', slug: 'tirupati-to-chennai', distance: '135 km', fare: '₹1,350' },
+    ],
+  },
+
+  'tirupati-to-chennai': {
+    from: 'Tirupati',
+    to: 'Chennai',
+    fromSlug: 'vellore',
+    toSlug: 'chennai',
+    returnRouteSlug: 'chennai-to-tirupati',
+    distanceKm: 135,
+    timeHours: 3.25,
+    distanceDisplay: '135 km',
+    durationDisplay: '3.25 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Tirupati to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Tirupati to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirupati to Chennai with SAMAYAS. Hatchback from ₹1,350, Sedan ₹1,620, SUV ₹2,160. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1350,
+      "sedan": 1620,
+      "suv": 2160,
+      "innova": 2565,
+      "traveller": 4050
+},
+    highways: ["NH716"],
+    tolls: {
+      costRange: '₹140 - ₹190',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Tirupati Central City / Main Junction',
+      'Tirupati Railway Station & Bus Stand',
+      'Tirupati Residential Areas & Hotels',
+      'Tirupati Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Chennai City Center & Main Commercial Hub',
+      'Chennai Railway Station & Transit Terminals',
+      'Chennai Hotels, Resorts & Residential Hubs',
+      'Chennai Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Tirupati', type: 'Origin', desc: 'Doorstep pickup across Tirupati.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Tirupati to Chennai?',
+        a: 'The one-way taxi fare from Tirupati to Chennai starts at ₹1,350 for a Hatchback, ₹1,620 for a Sedan, and ₹2,160 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Tirupati to Chennai?',
+        a: 'The distance from Tirupati to Chennai is approx 135 km via NH716. Travel duration is around 3.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Tirupati?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Tirupati including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Tirupati to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
+        route: 'Tirupati to Chennai',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Tirupati to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Tirupati to Chennai',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Chennai to Tirupati', slug: 'chennai-to-tirupati', distance: '135 km', fare: '₹1,350' },
+    ],
+  },
+
+  'vellore-to-tirupati': {
+    from: 'Vellore',
+    to: 'Tirupati',
+    fromSlug: 'vellore',
+    toSlug: 'vellore',
+    returnRouteSlug: 'tirupati-to-vellore',
+    distanceKm: 110,
+    timeHours: 2.5,
+    distanceDisplay: '110 km',
+    durationDisplay: '2.5 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Vellore to Tirupati. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Vellore to Tirupati One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Vellore to Tirupati with SAMAYAS. Hatchback from ₹1,100, Sedan ₹1,320, SUV ₹1,760. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1100,
+      "sedan": 1320,
+      "suv": 1760,
+      "innova": 2090,
+      "traveller": 3300
+},
+    highways: ["NH716"],
+    tolls: {
+      costRange: '₹110 - ₹150',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Vellore Central City / Main Junction',
+      'Vellore Railway Station & Bus Stand',
+      'Vellore Residential Areas & Hotels',
+      'Vellore Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Tirupati City Center & Main Commercial Hub',
+      'Tirupati Railway Station & Transit Terminals',
+      'Tirupati Hotels, Resorts & Residential Hubs',
+      'Tirupati Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Vellore', type: 'Origin', desc: 'Doorstep pickup across Vellore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Tirupati', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Tirupati.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Vellore to Tirupati?',
+        a: 'The one-way taxi fare from Vellore to Tirupati starts at ₹1,100 for a Hatchback, ₹1,320 for a Sedan, and ₹1,760 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Vellore to Tirupati?',
+        a: 'The distance from Vellore to Tirupati is approx 110 km via NH716. Travel duration is around 2.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Vellore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Vellore including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Vellore to Tirupati. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.5 hours.',
+        route: 'Vellore to Tirupati',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Vellore to Tirupati. Zero return charges and transparent per-km bill.',
+        route: 'Vellore to Tirupati',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Tirupati to Vellore', slug: 'tirupati-to-vellore', distance: '110 km', fare: '₹1,100' },
+    ],
+  },
+
+  'tirupati-to-vellore': {
+    from: 'Tirupati',
+    to: 'Vellore',
+    fromSlug: 'vellore',
+    toSlug: 'vellore',
+    returnRouteSlug: 'vellore-to-tirupati',
+    distanceKm: 110,
+    timeHours: 2.5,
+    distanceDisplay: '110 km',
+    durationDisplay: '2.5 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Tirupati to Vellore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Tirupati to Vellore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirupati to Vellore with SAMAYAS. Hatchback from ₹1,100, Sedan ₹1,320, SUV ₹1,760. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 1100,
+      "sedan": 1320,
+      "suv": 1760,
+      "innova": 2090,
+      "traveller": 3300
+},
+    highways: ["NH716"],
+    tolls: {
+      costRange: '₹110 - ₹150',
+      plazasCount: 2,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Tirupati Central City / Main Junction',
+      'Tirupati Railway Station & Bus Stand',
+      'Tirupati Residential Areas & Hotels',
+      'Tirupati Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Vellore City Center & Main Commercial Hub',
+      'Vellore Railway Station & Transit Terminals',
+      'Vellore Hotels, Resorts & Residential Hubs',
+      'Vellore Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Tirupati', type: 'Origin', desc: 'Doorstep pickup across Tirupati.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Vellore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Vellore.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Tirupati to Vellore?',
+        a: 'The one-way taxi fare from Tirupati to Vellore starts at ₹1,100 for a Hatchback, ₹1,320 for a Sedan, and ₹1,760 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Tirupati to Vellore?',
+        a: 'The distance from Tirupati to Vellore is approx 110 km via NH716. Travel duration is around 2.5 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Tirupati?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Tirupati including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Tirupati to Vellore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.5 hours.',
+        route: 'Tirupati to Vellore',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Tirupati to Vellore. Zero return charges and transparent per-km bill.',
+        route: 'Tirupati to Vellore',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Vellore to Tirupati', slug: 'vellore-to-tirupati', distance: '110 km', fare: '₹1,100' },
+    ],
+  },
+
+  'coimbatore-to-palakkad': {
+    from: 'Coimbatore',
+    to: 'Palakkad',
+    fromSlug: 'coimbatore',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'palakkad-to-coimbatore',
+    distanceKm: 55,
+    timeHours: 1.25,
+    distanceDisplay: '55 km',
+    durationDisplay: '1.25 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Coimbatore to Palakkad. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Coimbatore to Palakkad One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Palakkad with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 550,
+      "sedan": 660,
+      "suv": 880,
+      "innova": 1045,
+      "traveller": 1650
+},
+    highways: ["NH544"],
+    tolls: {
+      costRange: '₹60 - ₹90',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Coimbatore Central City / Main Junction',
+      'Coimbatore Railway Station & Bus Stand',
+      'Coimbatore Residential Areas & Hotels',
+      'Coimbatore Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Palakkad City Center & Main Commercial Hub',
+      'Palakkad Railway Station & Transit Terminals',
+      'Palakkad Hotels, Resorts & Residential Hubs',
+      'Palakkad Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup across Coimbatore.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Palakkad', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Palakkad.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Coimbatore to Palakkad?',
+        a: 'The one-way taxi fare from Coimbatore to Palakkad starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Coimbatore to Palakkad?',
+        a: 'The distance from Coimbatore to Palakkad is approx 55 km via NH544. Travel duration is around 1.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Coimbatore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Coimbatore to Palakkad. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.25 hours.',
+        route: 'Coimbatore to Palakkad',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Coimbatore to Palakkad. Zero return charges and transparent per-km bill.',
+        route: 'Coimbatore to Palakkad',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Palakkad to Coimbatore', slug: 'palakkad-to-coimbatore', distance: '55 km', fare: '₹550' },
+    ],
+  },
+
+  'palakkad-to-coimbatore': {
+    from: 'Palakkad',
+    to: 'Coimbatore',
+    fromSlug: 'coimbatore',
+    toSlug: 'coimbatore',
+    returnRouteSlug: 'coimbatore-to-palakkad',
+    distanceKm: 55,
+    timeHours: 1.25,
+    distanceDisplay: '55 km',
+    durationDisplay: '1.25 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Palakkad to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Palakkad to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Palakkad to Coimbatore with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 550,
+      "sedan": 660,
+      "suv": 880,
+      "innova": 1045,
+      "traveller": 1650
+},
+    highways: ["NH544"],
+    tolls: {
+      costRange: '₹60 - ₹90',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Palakkad Central City / Main Junction',
+      'Palakkad Railway Station & Bus Stand',
+      'Palakkad Residential Areas & Hotels',
+      'Palakkad Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Coimbatore City Center & Main Commercial Hub',
+      'Coimbatore Railway Station & Transit Terminals',
+      'Coimbatore Hotels, Resorts & Residential Hubs',
+      'Coimbatore Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Palakkad', type: 'Origin', desc: 'Doorstep pickup across Palakkad.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Coimbatore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Palakkad to Coimbatore?',
+        a: 'The one-way taxi fare from Palakkad to Coimbatore starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Palakkad to Coimbatore?',
+        a: 'The distance from Palakkad to Coimbatore is approx 55 km via NH544. Travel duration is around 1.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Palakkad?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Palakkad including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Palakkad to Coimbatore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.25 hours.',
+        route: 'Palakkad to Coimbatore',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Palakkad to Coimbatore. Zero return charges and transparent per-km bill.',
+        route: 'Palakkad to Coimbatore',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Coimbatore to Palakkad', slug: 'coimbatore-to-palakkad', distance: '55 km', fare: '₹550' },
+    ],
+  },
+
+  'kanyakumari-to-trivandrum': {
+    from: 'Kanyakumari',
+    to: 'Trivandrum',
+    fromSlug: 'kanyakumari',
+    toSlug: 'kanyakumari',
+    returnRouteSlug: 'trivandrum-to-kanyakumari',
+    distanceKm: 90,
+    timeHours: 2.25,
+    distanceDisplay: '90 km',
+    durationDisplay: '2.25 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Kanyakumari to Trivandrum. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Kanyakumari to Trivandrum One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kanyakumari to Trivandrum with SAMAYAS. Hatchback from ₹900, Sedan ₹1,080, SUV ₹1,440. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 900,
+      "sedan": 1080,
+      "suv": 1440,
+      "innova": 1710,
+      "traveller": 2700
+},
+    highways: ["NH66"],
+    tolls: {
+      costRange: '₹80 - ₹120',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Kanyakumari Central City / Main Junction',
+      'Kanyakumari Railway Station & Bus Stand',
+      'Kanyakumari Residential Areas & Hotels',
+      'Kanyakumari Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Trivandrum City Center & Main Commercial Hub',
+      'Trivandrum Railway Station & Transit Terminals',
+      'Trivandrum Hotels, Resorts & Residential Hubs',
+      'Trivandrum Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Kanyakumari', type: 'Origin', desc: 'Doorstep pickup across Kanyakumari.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Trivandrum', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trivandrum.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Kanyakumari to Trivandrum?',
+        a: 'The one-way taxi fare from Kanyakumari to Trivandrum starts at ₹900 for a Hatchback, ₹1,080 for a Sedan, and ₹1,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Kanyakumari to Trivandrum?',
+        a: 'The distance from Kanyakumari to Trivandrum is approx 90 km via NH66. Travel duration is around 2.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Kanyakumari?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Kanyakumari including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Kanyakumari to Trivandrum. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.25 hours.',
+        route: 'Kanyakumari to Trivandrum',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Kanyakumari to Trivandrum. Zero return charges and transparent per-km bill.',
+        route: 'Kanyakumari to Trivandrum',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Trivandrum to Kanyakumari', slug: 'trivandrum-to-kanyakumari', distance: '90 km', fare: '₹900' },
+    ],
+  },
+
+  'trivandrum-to-kanyakumari': {
+    from: 'Trivandrum',
+    to: 'Kanyakumari',
+    fromSlug: 'kanyakumari',
+    toSlug: 'kanyakumari',
+    returnRouteSlug: 'kanyakumari-to-trivandrum',
+    distanceKm: 90,
+    timeHours: 2.25,
+    distanceDisplay: '90 km',
+    durationDisplay: '2.25 Hours',
+    category: 'Interstate',
+    popularFor: ['Interstate Travel', 'Outstation Cab', 'Doorstep Pickup', '24/7 Service'],
+    heroTagline: 'Affordable One-Way Taxi from Trivandrum to Kanyakumari. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Trivandrum to Kanyakumari One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trivandrum to Kanyakumari with SAMAYAS. Hatchback from ₹900, Sedan ₹1,080, SUV ₹1,440. 24/7 doorstep pickups.',
+    fare: {
+      "hatchback": 900,
+      "sedan": 1080,
+      "suv": 1440,
+      "innova": 1710,
+      "traveller": 2700
+},
+    highways: ["NH66"],
+    tolls: {
+      costRange: '₹80 - ₹120',
+      plazasCount: 1,
+      fastagSupported: true,
+      cashAccepted: true,
+      note: 'Toll plaza charges and state permit fees extra where applicable.',
+    },
+    pickupLocations: [
+      'Trivandrum Central City / Main Junction',
+      'Trivandrum Railway Station & Bus Stand',
+      'Trivandrum Residential Areas & Hotels',
+      'Trivandrum Suburbs & Outer Ring Gates',
+    ],
+    dropLocations: [
+      'Kanyakumari City Center & Main Commercial Hub',
+      'Kanyakumari Railway Station & Transit Terminals',
+      'Kanyakumari Hotels, Resorts & Residential Hubs',
+      'Kanyakumari Airport / Highway Junction Drops',
+    ],
+    placesOnTheWay: [
+      { name: 'Trivandrum', type: 'Origin', desc: 'Doorstep pickup across Trivandrum.' },
+      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
+      { name: 'Kanyakumari', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Kanyakumari.' },
+    ],
+    faqs: [
+      {
+        q: 'What is the one-way taxi fare from Trivandrum to Kanyakumari?',
+        a: 'The one-way taxi fare from Trivandrum to Kanyakumari starts at ₹900 for a Hatchback, ₹1,080 for a Sedan, and ₹1,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+      },
+      {
+        q: 'How long does a cab take from Trivandrum to Kanyakumari?',
+        a: 'The distance from Trivandrum to Kanyakumari is approx 90 km via NH66. Travel duration is around 2.25 hours.',
+      },
+      {
+        q: 'Is 24/7 doorstep pickup available in Trivandrum?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trivandrum including railway stations, airports, and hotels.',
+      },
+    ],
+    reviews: [
+      {
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'Booked a one-way cab from Trivandrum to Kanyakumari. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.25 hours.',
+        route: 'Trivandrum to Kanyakumari',
+      },
+      {
+        name: 'Priya Dharshini',
+        rating: 5,
+        text: 'Safe and comfortable trip from Trivandrum to Kanyakumari. Zero return charges and transparent per-km bill.',
+        route: 'Trivandrum to Kanyakumari',
+      },
+    ],
+    nearbyRoutes: [
+      { name: 'Kanyakumari to Trivandrum', slug: 'kanyakumari-to-trivandrum', distance: '90 km', fare: '₹900' },
+    ],
+  },
+
 };
 
 export function getRouteContent(slug) {

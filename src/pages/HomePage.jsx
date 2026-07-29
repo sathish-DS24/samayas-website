@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Services from '../components/Services'
+import PopularRoutesSection from '../components/home/PopularRoutesSection'
 import Contact from '../components/Contact'
 import BookingForm from '../components/BookingForm'
 import Footer from '../components/Footer'
@@ -25,6 +26,7 @@ const HomePage = () => {
         <Hero />
         <About />
         <Services />
+        <PopularRoutesSection />
         <Contact />
         <BookingForm />
       </main>

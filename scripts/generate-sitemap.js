@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { districts } from '../src/data/districts.js'
+import { routesList } from '../src/data/routes.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const SITE_URL = 'https://samayasorg.in'
@@ -14,6 +15,11 @@ const urls = [
     loc: `${SITE_URL}/one-way-taxi-${d.slug}`,
     priority: '0.8',
     changefreq: 'monthly',
+  })),
+  ...routesList.map((r) => ({
+    loc: `${SITE_URL}/one-way-taxi/${r.slug}`,
+    priority: '0.85',
+    changefreq: 'weekly',
   })),
 ]
 

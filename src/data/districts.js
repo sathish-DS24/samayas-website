@@ -241,4 +241,4 @@ export const districts = [
 export const getDistrictBySlug = (slug) =>
   districts.find((d) => d.slug === slug)
 
-export const getDistrictUrl = (slug) => `/one-way-taxi-${slug}`
+export const getDistrictUrl = (slug) => `/service-areas/${slug}`

@@ -16,8 +16,10 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/service-areas" element={<ServiceAreasPage />} />
+        <Route path="/service-areas/:districtSlug" element={<DistrictPage />} />
         <Route path="/one-way-taxi" element={<RouteIndexPage />} />
         <Route path="/one-way-taxi/:routeSlug" element={<RoutePage />} />
+        <Route path="/one-way-taxi-:pageSlug" element={<DistrictPage />} />
         <Route path="/:pageSlug" element={<DistrictPage />} />
       </Routes>
       <WhatsAppFloatingButton />

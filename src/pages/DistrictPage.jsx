@@ -27,12 +27,14 @@ import RelatedServices from '../components/district/RelatedServices'
 const DISTRICT_PREFIX = 'one-way-taxi-'
 
 const DistrictPage = () => {
-  const { pageSlug } = useParams()
+  const { districtSlug, pageSlug } = useParams()
 
   // Extract district slug from URL
-  const slug = pageSlug?.startsWith(DISTRICT_PREFIX)
+  const slug = districtSlug
+    ? districtSlug
+    : pageSlug?.startsWith(DISTRICT_PREFIX)
     ? pageSlug.slice(DISTRICT_PREFIX.length)
-    : null
+    : pageSlug
   const district = slug ? getDistrictBySlug(slug) : null
 
   // Get enhanced content (may be null for districts not yet enhanced)

@@ -10,7 +10,7 @@ let failedCount = 0;
 
 districts.forEach((d, idx) => {
   const slug = d.slug;
-  const url = `/one-way-taxi-${slug}`;
+  const url = `/service-areas/${slug}`;
   const registeredDistrict = getDistrictBySlug(slug);
   const content = getDistrictContent(slug);
 

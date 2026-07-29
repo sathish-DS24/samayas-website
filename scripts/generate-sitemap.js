@@ -13,7 +13,7 @@ const urls = [
   { loc: `${SITE_URL}/service-areas`, priority: '0.9', changefreq: 'weekly' },
   { loc: `${SITE_URL}/one-way-taxi`, priority: '0.9', changefreq: 'weekly' },
   ...districts.map((d) => ({
-    loc: `${SITE_URL}/one-way-taxi-${d.slug}`,
+    loc: `${SITE_URL}/service-areas/${d.slug}`,
     priority: '0.8',
     changefreq: 'monthly',
   })),

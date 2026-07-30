@@ -862,12 +862,22 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
       const finalAmount = baseFare + bata
       return { distance: roundTripTotalDistance, baseFare, bata, finalAmount, minKm, actualDistance }
     } else {
-      // One-way calculation - base fare based on actual distance (with min limit)
+      // One-way calculation - minimum 130 km billing limit rule
       const minKm = 130
-      const actualDistance = Math.max(distance, minKm)
-      const baseFare = actualDistance * ratePerKm
+      const actualDistance = Math.round(distance)
+      const billableDistance = Math.max(actualDistance, minKm)
+      const baseFare = billableDistance * ratePerKm
       const finalAmount = baseFare + bata
-      return { distance, baseFare, bata, finalAmount, minKm, actualDistance }
+      return { 
+        distance: actualDistance, // Real distance from Google Maps e.g. 43 km
+        billableDistance,          // Minimum billable distance e.g. 130 km
+        baseFare, 
+        bata, 
+        finalAmount, 
+        minKm, 
+        isMinKmApplied: actualDistance < minKm,
+        actualDistance 
+      }
     }
   }
 

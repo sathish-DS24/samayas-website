@@ -179,8 +179,12 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                     ) : bookingData.tripType === 'one-way' ? (
                       <>
                         <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                          <span className="text-gray-600 font-medium">Route Distance (Google Maps):</span>
+                          <span className="text-gray-800 font-semibold">{bookingData.distance} km</span>
+                        </div>
+                        <div className="flex justify-between items-center py-2 border-b border-gray-200">
                           <span className="text-gray-600 font-medium">
-                            Base Fare ({bookingData.actualDistance || bookingData.minKm}km):
+                            Base Fare ({bookingData.isMinKmApplied ? 'Min 130 km Limit' : `${bookingData.billableDistance || bookingData.distance} km`}):
                           </span>
                           <span className="text-gray-800 font-semibold">
                             {formatCurrency(bookingData.baseFare)}
@@ -192,6 +196,11 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                             {formatCurrency(bookingData.bata)}
                           </span>
                         </div>
+                        {bookingData.isMinKmApplied && (
+                          <div className="mt-2 p-2.5 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-900 font-medium">
+                            ℹ️ Standard minimum billing limit of 130 km applies for one-way trips under 130 km.
+                          </div>
+                        )}
                       </>
                     ) : (
                       <>

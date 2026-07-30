@@ -83,7 +83,7 @@ const PopularRoutes = ({ districtName, routes }) => {
               const routeName = typeof route === 'string' ? route : route.name
               const distanceKm = typeof route === 'object' ? route.distanceKm : null
               const timeHours = typeof route === 'object' ? route.timeHours : null
-              const startingFare = typeof route === 'object' ? route.startingFare : null
+              const startingFare = distanceKm ? Math.round(Math.max(distanceKm, 130) * 15) : (typeof route === 'object' && route.startingFare ? Math.max(route.startingFare, 1950) : 1950)
 
               // Extract destination name from route string e.g. "Trichy to Chennai" -> "Chennai"
               const destName = routeName.includes(' to ')

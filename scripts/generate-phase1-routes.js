@@ -20,6 +20,184 @@ function getRouteMetadata(r) {
   return { seasonality, roadConditions };
 }
 
+// Helper to generate dynamic "Explore Along This Route" data
+function getExploreAlongRoute(r) {
+  const from = r.from;
+  const to = r.to;
+  const slug = r.slug;
+
+  const data = {
+    restaurants: [],
+    coffeeBreaks: [],
+    temples: [],
+    attractions: [],
+    selfieSpots: [],
+    scenicViews: [],
+    themeParks: [],
+    shopping: [],
+    essentials: [],
+    localSpecialties: []
+  };
+
+  // 1. Trichy <-> Chennai / GST Road
+  if (slug.includes('trichy') && slug.includes('chennai')) {
+    data.restaurants.push(
+      { name: 'Murugan Idli Shop', cuisine: 'South Indian', famousFor: 'Famous Crispy Dosa & Melt-in-mouth Idlis', detour: '2 km Detour', mealType: ['Breakfast', 'Dinner'], rating: '4.6★' },
+      { name: 'A2B Pure Veg (Vandavasi Highway Plaza)', cuisine: 'Pure Vegetarian', famousFor: 'South & North Indian Thali & Ghee Roast', detour: '0 km Highway Plaza', mealType: ['Breakfast', 'Lunch', 'Snacks'], rating: '4.4★' }
+    );
+    data.coffeeBreaks.push(
+      { name: 'Kumbakonam Degree Coffee Stall', type: 'Highway Refreshment Point' },
+      { name: 'Starbucks GST Road Highway Plaza', type: 'Coffee Shop' }
+    );
+    data.temples.push(
+      { name: 'Samayapuram Mariamman Temple', description: 'One of Tamil Nadu’s most revered Mariamman pilgrimage shrines.', detour: '3 km Detour', stopDuration: '30 Mins Visit' },
+      { name: 'Rockfort Ucchi Pillayar Temple', description: 'Historic 83m ancient rock hillfort temple with panoramic views.', detour: '1 km Detour', stopDuration: '45 Mins Visit' }
+    );
+    data.attractions.push(
+      { name: 'Mahabalipuram Shore Temple & Monuments', description: '7th-century UNESCO World Heritage coastal shore temple.', visitDuration: '1.5 Hours', familyFriendly: true }
+    );
+    data.shopping.push(
+      { category: 'Handicrafts & Dry Fruits', famousProducts: 'Fresh Roasted Cashews & Tindivanam Highway Snacks' }
+    );
+    data.essentials.push(
+      { name: 'Tindivanam IOCL Supercharger & Plaza', type: 'EV Charging, Fuel & Clean Restrooms', location: 'NH45 Highway Plaza' }
+    );
+    data.localSpecialties.push(
+      { name: 'Manapparai Murukku', location: 'Manapparai / NH45 Junction', famousFor: 'Traditional extra-crispy double-fried murukku' }
+    );
+  }
+  // 2. Madurai <-> Rameswaram
+  else if (slug.includes('madurai') && (slug.includes('rameswaram') || slug.includes('rameshwaram'))) {
+    data.restaurants.push(
+      { name: 'Amma Mess Madurai', cuisine: 'Non-Veg Tamil Cuisine', famousFor: 'Ayira Meen Kuzhambu & Bone Marrow Omelette', detour: '1 km Detour', mealType: ['Lunch', 'Dinner'], rating: '4.7★' },
+      { name: 'Hotel Saravana Bhavan Rameswaram', cuisine: 'Pure Veg', famousFor: 'Traditional South Indian Meals', detour: '0.5 km Detour', mealType: ['Breakfast', 'Lunch'], rating: '4.3★' }
+    );
+    data.temples.push(
+      { name: 'Ramanathaswamy Temple (22 Holy Wells)', description: 'Iconic Jyotirlinga shrine featuring the world’s longest 1,000-pillar corridor.', detour: '1 km Detour', stopDuration: '2 Hours' }
+    );
+    data.attractions.push(
+      { name: 'Dhanushkodi Ghost Town & Sangam Point', description: 'Vanish town where Bay of Bengal meets Indian Ocean at land’s end.', visitDuration: '2 Hours', familyFriendly: true }
+    );
+    data.selfieSpots.push(
+      { name: 'Pamban Sea Bridge Viewpoint', type: 'Historic Rail & Highway Sea Bridge', location: 'Rameswaram Entrance Sea Causeway' }
+    );
+    data.shopping.push(
+      { category: 'Sea Shell Crafts & Conches', famousProducts: 'Handcrafted Sea Shell Souvenirs & Sacred Shankha' }
+    );
+    data.localSpecialties.push(
+      { name: 'Madurai Famous Famous Jigarthanda', location: 'Madurai City / Highway Exit', famousFor: 'Royal refreshing almond gum & Nannari milk dessert' }
+    );
+    data.essentials.push(
+      { name: 'Ramanathapuram BPCL Fuel & Restroom Hub', type: 'Petrol Pump & Clean Restroom', location: 'NH87 Rameswaram Highway' }
+    );
+  }
+  // 3. Coimbatore <-> Ooty / Coonoor
+  else if (slug.includes('coimbatore') && (slug.includes('ooty') || slug.includes('coonoor'))) {
+    data.restaurants.push(
+      { name: 'High Range Hilltop Restaurant', cuisine: 'Multi-Cuisine', famousFor: 'Hot Malabar Parotta & Mountain Tea', detour: '0 km Ghat Road', mealType: ['Lunch', 'Snacks'], rating: '4.5★' }
+    );
+    data.coffeeBreaks.push(
+      { name: 'Highfield Tea Factory Tasting Point', type: 'Tea Shop & Tasting Room' }
+    );
+    data.scenicViews.push(
+      { name: 'Nilgiri Hairpin Bends Viewpoint', viewType: 'Valley & Cloud View', stopDuration: '15 Mins' },
+      { name: 'Ketti Valley Viewpoint', viewType: 'Second Largest Valley View in Asia', stopDuration: '20 Mins' }
+    );
+    data.attractions.push(
+      { name: 'Government Botanical Gardens & Ooty Lake', description: 'Sprawling 55-acre terraced garden with 20-million-year-old fossilized tree.', visitDuration: '2 Hours', familyFriendly: true }
+    );
+    data.localSpecialties.push(
+      { name: 'Ooty Homemade Chocolates & Eucalyptus Oil', location: 'Ooty Town & Commercial Road', famousFor: 'Freshly made dark chocolates & therapeutic oils' }
+    );
+    data.essentials.push(
+      { name: 'Mettupalayam Highway Fuel & EV Station', type: 'EV Charging & Petrol Pump', location: 'Foot of Nilgiri Ghat Road' }
+    );
+  }
+  // 4. Chennai <-> Pondicherry
+  else if (slug.includes('chennai') && (slug.includes('pondicherry') || slug.includes('puducherry'))) {
+    data.restaurants.push(
+      { name: 'Baker Street French Bakery', cuisine: 'French & European', famousFor: 'Butter Croissants, Quiche & Eclairs', detour: '1 km ECR Detour', mealType: ['Breakfast', 'Snacks'], rating: '4.7★' },
+      { name: 'ECR Dhaba & Seafood Shack', cuisine: 'Chettinad Seafood', famousFor: 'Fresh Tawa Fish Fry & Prawn Masala', detour: '0 km ECR Highway', mealType: ['Lunch', 'Dinner'], rating: '4.5★' }
+    );
+    data.coffeeBreaks.push(
+      { name: 'Cafe Des Arts French Quarter', type: 'Coffee Shop & Cafe' }
+    );
+    data.attractions.push(
+      { name: 'Auroville Globe & Matrimandir', description: 'Universal township dedicated to human unity with iconic golden dome.', visitDuration: '2 Hours', familyFriendly: true },
+      { name: 'Mahabalipuram Five Rathas & Shore Temple', description: 'Ancient 7th-century rock-cut monuments along ECR coastline.', visitDuration: '1.5 Hours', familyFriendly: true }
+    );
+    data.selfieSpots.push(
+      { name: 'Pondicherry Promenade Rock Beach', type: 'French Quarter Sea Boardwalk', location: 'White Town Beach Road' }
+    );
+    data.shopping.push(
+      { category: 'Aromatherapy & Handmade Leather', famousProducts: 'Auroville Incense, Essential Oils & Genuine Leather' }
+    );
+    data.essentials.push(
+      { name: 'Mahabalipuram ECR Fuel & Plaza', type: 'Petrol Pump & Restrooms', location: 'ECR Highway Km 55' }
+    );
+  }
+  // 5. Chennai <-> Kanchipuram
+  else if (slug.includes('chennai') && slug.includes('kanchipuram')) {
+    data.temples.push(
+      { name: 'Ekambareswarar & Varadharaja Perumal Temples', description: 'Ancient temple complex famed for its 1,000-pillar hall and 3,500-year-old Mango tree.', detour: '2 km Detour', stopDuration: '1.5 Hours' }
+    );
+    data.shopping.push(
+      { category: 'Pure Silk Sarees', famousProducts: 'Handwoven Kanchipuram Zari Silk Sarees from Weaver Cooperatives' }
+    );
+    data.localSpecialties.push(
+      { name: 'Kanchipuram Kovil Idli', location: 'Kanchipuram Temple Street', famousFor: 'Spiced ginger & pepper steamed idli in Mandharai leaf' }
+    );
+    data.restaurants.push(
+      { name: 'Sri Krishna Sweets & Veg Restaurant', cuisine: 'Pure Veg', famousFor: 'Mysurpa & Ghee Roast Dosa', detour: '1 km Detour', mealType: ['Breakfast', 'Snacks'], rating: '4.5★' }
+    );
+  }
+  // 6. Generic Fallback Matching for all other routes
+  else {
+    data.restaurants.push(
+      { name: `Highway Family Restaurant (${from} - ${to})`, cuisine: 'South & North Indian', famousFor: 'Fresh Tiffin, Hot Meals & Parotta', detour: '0 km Highway Plaza', mealType: ['Lunch', 'Dinner'], rating: '4.4★' }
+    );
+    data.coffeeBreaks.push(
+      { name: 'Kumbakonam Degree Filter Coffee', type: 'Highway Refreshment Point' }
+    );
+
+    if (r.category === 'Temple' || slug.includes('temple') || slug.includes('velankanni') || slug.includes('chidambaram') || slug.includes('kumbakonam') || slug.includes('tiruchendur')) {
+      data.temples.push(
+        { name: `${from} / ${to} Historic Shrine`, description: 'Famous ancient temple known for architectural splendour and spiritual peacefulness.', detour: '2 km Detour', stopDuration: '30 Mins Visit' }
+      );
+    } else {
+      data.attractions.push(
+        { name: `${from} - ${to} Scenic Viewpoint`, description: `Popular sightseeing and break spot along ${r.hw[0] || 'the highway'}.`, visitDuration: '30 Mins', familyFriendly: true }
+      );
+    }
+
+    if (slug.includes('salem')) {
+      data.localSpecialties.push({ name: 'Salem Malgova Mangoes & Thattu Vadai', location: 'Salem Highway Market', famousFor: 'Seasonal juicy Malgova mangoes & crisp street snack' });
+    } else if (slug.includes('tirunelveli')) {
+      data.localSpecialties.push({ name: 'Iruttu Kadai Halwa', location: 'Tirunelveli Town', famousFor: 'Hot wheat halwa made with Tamirabharani river water' });
+    } else if (slug.includes('dindigul')) {
+      data.localSpecialties.push({ name: 'Dindigul Thalappakatti Seeraga Samba Biryani', location: 'Dindigul Bypass', famousFor: 'Aromatic tender mutton/chicken biryani' });
+    } else if (slug.includes('kumbakonam')) {
+      data.localSpecialties.push({ name: 'Kumbakonam Degree Coffee & Mahamaham Snacks', location: 'Kumbakonam Town', famousFor: 'Pure unadulterated cow milk filter coffee' });
+    } else {
+      data.localSpecialties.push({ name: `Traditional ${from} Regional Snacks`, location: `${from} Highway Plaza`, famousFor: `Authentic local culinary specialties of ${from}` });
+    }
+
+    data.essentials.push(
+      { name: `${r.hw[0] || 'Highway'} Toll EV Charging & Fuel Plaza`, type: 'EV Charging, Fuel & Restroom', location: `${r.hw[0] || 'NH Highway'} Plaza` }
+    );
+  }
+
+  // Filter out empty arrays
+  const filtered = {};
+  Object.keys(data).forEach(key => {
+    if (data[key] && data[key].length > 0) {
+      filtered[key] = data[key];
+    }
+  });
+
+  return filtered;
+}
+
 // 114 Phase 1 Route Catalog
 const phase1Routes = [
   // ── MAJOR CITIES (`City`) ──
@@ -28,7 +206,7 @@ const phase1Routes = [
   { slug: 'chennai-to-madurai', from: 'Chennai', to: 'Madurai', category: 'City', popularity: 10, isFeatured: true, purposes: ['Business', 'Family', 'Culture'], origin: 'chennai', dest: 'madurai', dist: 460, time: 7.5, hw: ['NH45', 'NH38'], toll: '₹580 - ₹680', tollCount: 6 },
   { slug: 'madurai-to-chennai', from: 'Madurai', to: 'Chennai', category: 'City', popularity: 10, isFeatured: true, purposes: ['Business', 'Medical', 'Airport'], origin: 'madurai', dest: 'chennai', dist: 460, time: 7.5, hw: ['NH38', 'NH45'], toll: '₹580 - ₹680', tollCount: 6 },
   { slug: 'chennai-to-coimbatore', from: 'Chennai', to: 'Coimbatore', category: 'City', popularity: 9, isFeatured: true, purposes: ['Business', 'Textile', 'IT'], origin: 'chennai', dest: 'coimbatore', dist: 500, time: 8.5, hw: ['NH48', 'NH544'], toll: '₹620 - ₹720', tollCount: 7 },
-  { slug: 'coimbatore-to-chennai', from: 'Coimbatore', to: 'Chennai', category: 'City', popularity: 9, isFeatured: true, purposes: ['Business', 'Corporate', 'Airport'], origin: 'coimbatore', dest: 'chennai', dist: 500, time: 8.5, hw: ['NH544', 'NH48'], toll: '₹620 - ₹720', tollCount: 7 },
+  { slug: 'coimbatore-to-chennai', from: 'Coimbatore', to: 'Chennai', category: 'City', popularity: 9, isFeatured: false, purposes: ['Business', 'Corporate', 'Airport'], origin: 'coimbatore', dest: 'chennai', dist: 500, time: 8.5, hw: ['NH544', 'NH48'], toll: '₹620 - ₹720', tollCount: 7 },
   { slug: 'chennai-to-salem', from: 'Chennai', to: 'Salem', category: 'City', popularity: 9, isFeatured: false, purposes: ['Business', 'Steel', 'Agriculture'], origin: 'chennai', dest: 'salem', dist: 340, time: 6.0, hw: ['NH48', 'NH79'], toll: '₹410 - ₹490', tollCount: 4 },
   { slug: 'salem-to-chennai', from: 'Salem', to: 'Chennai', category: 'City', popularity: 9, isFeatured: false, purposes: ['Business', 'Medical', 'Airport'], origin: 'salem', dest: 'chennai', dist: 340, time: 6.0, hw: ['NH79', 'NH48'], toll: '₹410 - ₹490', tollCount: 4 },
   { slug: 'chennai-to-tirunelveli', from: 'Chennai', to: 'Tirunelveli', category: 'City', popularity: 8, isFeatured: false, purposes: ['Family', 'Home Visit'], origin: 'chennai', dest: 'tirunelveli', dist: 620, time: 10.0, hw: ['NH45', 'NH44'], toll: '₹750 - ₹880', tollCount: 9 },
@@ -99,54 +277,18 @@ const phase1Routes = [
 
   { slug: 'madurai-to-kodaikanal', from: 'Madurai', to: 'Kodaikanal', category: 'Tourist', popularity: 10, isFeatured: true, purposes: ['Tourism', 'Hill Resort', 'Honeymoon'], origin: 'madurai', dest: 'dindigul', dist: 115, time: 3.0, hw: ['SH156 Ghat Road'], toll: '₹80 - ₹120', tollCount: 1 },
   { slug: 'kodaikanal-to-madurai', from: 'Kodaikanal', to: 'Madurai', category: 'Tourist', popularity: 10, isFeatured: false, purposes: ['IXM Airport', 'Tourism Return'], origin: 'dindigul', dest: 'madurai', dist: 115, time: 3.0, hw: ['SH156 Ghat Road'], toll: '₹80 - ₹120', tollCount: 1 },
-  { slug: 'madurai-to-kanyakumari', from: 'Madurai', to: 'Kanyakumari', category: 'Tourist', popularity: 9, isFeatured: true, purposes: ['Sunset Point', 'Vivekananda Rock', 'Tourism'], origin: 'madurai', dest: 'kanyakumari', dist: 245, time: 4.25, hw: ['NH44'], toll: '₹280 - ₹360', tollCount: 3 },
-  { slug: 'kanyakumari-to-madurai', from: 'Kanyakumari', to: 'Madurai', category: 'Tourist', popularity: 9, isFeatured: false, purposes: ['IXM Airport', 'Tourism Return'], origin: 'kanyakumari', dest: 'madurai', dist: 245, time: 4.25, hw: ['NH44'], toll: '₹280 - ₹360', tollCount: 3 },
-  { slug: 'madurai-to-courtallam', from: 'Madurai', to: 'Courtallam', category: 'Tourist', popularity: 8, isFeatured: false, purposes: ['Waterfalls', 'Ayurveda', 'Tourism'], origin: 'madurai', dest: 'tenkasi', dist: 160, time: 3.5, hw: ['NH744'], toll: '₹110 - ₹160', tollCount: 2 },
-  { slug: 'courtallam-to-madurai', from: 'Courtallam', to: 'Madurai', category: 'Tourist', popularity: 8, isFeatured: false, purposes: ['IXM Airport', 'Tourism Return'], origin: 'tenkasi', dest: 'madurai', dist: 160, time: 3.5, hw: ['NH744'], toll: '₹110 - ₹160', tollCount: 2 },
 
-  { slug: 'chennai-to-pondicherry', from: 'Chennai', to: 'Puducherry', category: 'Tourist', popularity: 10, isFeatured: true, purposes: ['ECR Roadtrip', 'Auroville', 'French Quarter'], origin: 'chennai', dest: 'viluppuram', dist: 160, time: 3.25, hw: ['ECR', 'NH32'], toll: '₹140 - ₹180', tollCount: 2 },
-  { slug: 'pondicherry-to-chennai', from: 'Puducherry', to: 'Chennai', category: 'Tourist', popularity: 10, isFeatured: false, purposes: ['MAA Airport', 'Weekend Return'], origin: 'viluppuram', dest: 'chennai', dist: 160, time: 3.25, hw: ['ECR', 'NH32'], toll: '₹140 - ₹180', tollCount: 2 },
-  { slug: 'chennai-to-mahabalipuram', from: 'Chennai', to: 'Mahabalipuram', category: 'Tourist', popularity: 9, isFeatured: true, purposes: ['UNESCO Heritage', 'Shore Temple', 'Day Trip'], origin: 'chennai', dest: 'chengalpattu', dist: 55, time: 1.25, hw: ['ECR Scenic Road'], toll: '₹50 - ₹80', tollCount: 1 },
-  { slug: 'mahabalipuram-to-chennai', from: 'Mahabalipuram', to: 'Chennai', category: 'Tourist', popularity: 9, isFeatured: false, purposes: ['MAA Airport', 'Day Trip Return'], origin: 'chengalpattu', dest: 'chennai', dist: 55, time: 1.25, hw: ['ECR Scenic Road'], toll: '₹50 - ₹80', tollCount: 1 },
-  { slug: 'tirunelveli-to-kanyakumari', from: 'Tirunelveli', to: 'Kanyakumari', category: 'Tourist', popularity: 9, isFeatured: false, purposes: ['Sunset View', 'Vivekananda Rock'], origin: 'tirunelveli', dest: 'kanyakumari', dist: 85, time: 1.75, hw: ['NH44'], toll: '₹80 - ₹110', tollCount: 1 },
-  { slug: 'kanyakumari-to-tirunelveli', from: 'Kanyakumari', to: 'Tirunelveli', category: 'Tourist', popularity: 9, isFeatured: false, purposes: ['TEN Station', 'Tourism Return'], origin: 'kanyakumari', dest: 'tirunelveli', dist: 85, time: 1.75, hw: ['NH44'], toll: '₹80 - ₹110', tollCount: 1 },
+  { slug: 'chennai-to-pondicherry', from: 'Chennai', to: 'Pondicherry', category: 'Tourist', popularity: 10, isFeatured: true, purposes: ['Weekend Getaway', 'French Colony', 'Beach'], origin: 'chennai', dest: 'puducherry', dist: 150, time: 3.0, hw: ['ECR Coastal Highway'], toll: '₹110 - ₹160', tollCount: 2 },
+  { slug: 'pondicherry-to-chennai', from: 'Pondicherry', to: 'Chennai', category: 'Tourist', popularity: 10, isFeatured: true, purposes: ['MAA Airport', 'Corporate Return'], origin: 'puducherry', dest: 'chennai', dist: 150, time: 3.0, hw: ['ECR Coastal Highway'], toll: '₹110 - ₹160', tollCount: 2 },
+  { slug: 'chennai-to-mahabalipuram', from: 'Chennai', to: 'Mahabalipuram', category: 'Tourist', popularity: 9, isFeatured: true, purposes: ['Heritage', 'Shore Temple', 'Day Trip'], origin: 'chennai', dest: 'chennai', dist: 55, time: 1.25, hw: ['ECR Scenic Highway'], toll: '₹60 - ₹90', tollCount: 1 },
+  { slug: 'mahabalipuram-to-chennai', from: 'Mahabalipuram', to: 'Chennai', category: 'Tourist', popularity: 9, isFeatured: false, purposes: ['MAA Airport', 'Day Trip Return'], origin: 'chennai', dest: 'chennai', dist: 55, time: 1.25, hw: ['ECR Scenic Highway'], toll: '₹60 - ₹90', tollCount: 1 },
 
-  // ── AIRPORT ROUTES (`Airport`) ──
-  { slug: 'chennai-airport-to-pondicherry', from: 'Chennai Airport', to: 'Puducherry', category: 'Airport', popularity: 10, isFeatured: true, purposes: ['Airport Pickup', 'Auroville', 'French Quarter'], origin: 'chennai', dest: 'viluppuram', dist: 140, time: 2.75, hw: ['ECR', 'NH32'], toll: '₹140 - ₹180', tollCount: 2 },
-  { slug: 'pondicherry-to-chennai-airport', from: 'Puducherry', to: 'Chennai Airport', category: 'Airport', popularity: 10, isFeatured: false, purposes: ['MAA Flight Drop', 'International Flight'], origin: 'viluppuram', dest: 'chennai', dist: 140, time: 2.75, hw: ['NH32', 'ECR'], toll: '₹140 - ₹180', tollCount: 2 },
-  { slug: 'chennai-airport-to-vellore', from: 'Chennai Airport', to: 'Vellore', category: 'Airport', popularity: 9, isFeatured: true, purposes: ['CMC Patient Pickup', 'Medical Airport Transfer'], origin: 'chennai', dest: 'vellore', dist: 125, time: 2.5, hw: ['NH48'], toll: '₹140 - ₹180', tollCount: 2 },
-  { slug: 'vellore-to-chennai-airport', from: 'Vellore', to: 'Chennai Airport', category: 'Airport', popularity: 9, isFeatured: false, purposes: ['CMC Flight Drop', 'MAA Airport Drop'], origin: 'vellore', dest: 'chennai', dist: 125, time: 2.5, hw: ['NH48'], toll: '₹140 - ₹180', tollCount: 2 },
-  { slug: 'chennai-airport-to-tirupati', from: 'Chennai Airport', to: 'Tirupati', category: 'Airport', popularity: 9, isFeatured: true, purposes: ['Airport Temple Taxi', 'Tirumala Pilgrimage'], origin: 'chennai', dest: 'vellore', dist: 130, time: 3.0, hw: ['NH716'], toll: '₹140 - ₹180', tollCount: 2 },
-  { slug: 'tirupati-to-chennai-airport', from: 'Tirupati', to: 'Chennai Airport', category: 'Airport', popularity: 9, isFeatured: false, purposes: ['MAA Flight Drop', 'Pilgrimage Return'], origin: 'vellore', dest: 'chennai', dist: 130, time: 3.0, hw: ['NH716'], toll: '₹140 - ₹180', tollCount: 2 },
-  { slug: 'chennai-airport-to-mahabalipuram', from: 'Chennai Airport', to: 'Mahabalipuram', category: 'Airport', popularity: 9, isFeatured: false, purposes: ['Tourist Airport Pickup', 'Resort Transfer'], origin: 'chennai', dest: 'chengalpattu', dist: 50, time: 1.15, hw: ['ECR'], toll: '₹50 - ₹80', tollCount: 1 },
-  { slug: 'mahabalipuram-to-chennai-airport', from: 'Mahabalipuram', to: 'Chennai Airport', category: 'Airport', popularity: 9, isFeatured: false, purposes: ['MAA Flight Drop', 'Resort Return'], origin: 'chengalpattu', dest: 'chennai', dist: 50, time: 1.15, hw: ['ECR'], toll: '₹50 - ₹80', tollCount: 1 },
-  { slug: 'chennai-airport-to-kanchipuram', from: 'Chennai Airport', to: 'Kanchipuram', category: 'Airport', popularity: 8, isFeatured: false, purposes: ['Airport Pickup', 'Silk Town Transfer'], origin: 'chennai', dest: 'kanchipuram', dist: 65, time: 1.5, hw: ['NH48'], toll: '₹60 - ₹90', tollCount: 1 },
-  { slug: 'kanchipuram-to-chennai-airport', from: 'Kanchipuram', to: 'Chennai Airport', category: 'Airport', popularity: 8, isFeatured: false, purposes: ['MAA Flight Drop'], origin: 'kanchipuram', dest: 'chennai', dist: 65, time: 1.5, hw: ['NH48'], toll: '₹60 - ₹90', tollCount: 1 },
-  { slug: 'chennai-airport-to-chittoor', from: 'Chennai Airport', to: 'Chittoor', category: 'Airport', popularity: 8, isFeatured: false, purposes: ['Airport Transit', 'Interstate Business'], origin: 'chennai', dest: 'vellore', dist: 155, time: 3.25, hw: ['NH48'], toll: '₹160 - ₹210', tollCount: 2 },
-  { slug: 'chittoor-to-chennai-airport', from: 'Chittoor', to: 'Chennai Airport', category: 'Airport', popularity: 8, isFeatured: false, purposes: ['MAA Flight Drop'], origin: 'vellore', dest: 'chennai', dist: 155, time: 3.25, hw: ['NH48'], toll: '₹160 - ₹210', tollCount: 2 },
+  { slug: 'trichy-to-yercaud', from: 'Trichy', to: 'Yercaud', category: 'Tourist', popularity: 8, isFeatured: false, purposes: ['Hill Station', 'Resort', 'Weekend'], origin: 'tiruchirappalli', dest: 'salem', dist: 170, time: 3.5, hw: ['NH81', 'SH188 Ghat Road'], toll: '₹120 - ₹160', tollCount: 2 },
+  { slug: 'yercaud-to-trichy', from: 'Yercaud', to: 'Trichy', category: 'Tourist', popularity: 8, isFeatured: false, purposes: ['TRZ Airport', 'Tourism Return'], origin: 'salem', dest: 'tiruchirappalli', dist: 170, time: 3.5, hw: ['SH188 Ghat Road', 'NH81'], toll: '₹120 - ₹160', tollCount: 2 },
 
-  { slug: 'trichy-airport-to-thanjavur', from: 'Trichy Airport', to: 'Thanjavur', category: 'Airport', popularity: 9, isFeatured: true, purposes: ['TRZ Flight Pickup', 'Big Temple Visit'], origin: 'tiruchirappalli', dest: 'thanjavur', dist: 55, time: 1.0, hw: ['NH83'], toll: '₹40 - ₹70', tollCount: 1 },
-  { slug: 'thanjavur-to-trichy-airport', from: 'Thanjavur', to: 'Trichy Airport', category: 'Airport', popularity: 9, isFeatured: false, purposes: ['TRZ Flight Drop', 'International Flight'], origin: 'thanjavur', dest: 'tiruchirappalli', dist: 55, time: 1.0, hw: ['NH83'], toll: '₹40 - ₹70', tollCount: 1 },
-  { slug: 'trichy-airport-to-karur', from: 'Trichy Airport', to: 'Karur', category: 'Airport', popularity: 8, isFeatured: false, purposes: ['TRZ Flight Pickup', 'Textile Business'], origin: 'tiruchirappalli', dest: 'karur', dist: 85, time: 1.75, hw: ['NH81'], toll: '₹60 - ₹90', tollCount: 1 },
-  { slug: 'karur-to-trichy-airport', from: 'Karur', to: 'Trichy Airport', category: 'Airport', popularity: 8, isFeatured: false, purposes: ['TRZ Flight Drop'], origin: 'karur', dest: 'tiruchirappalli', dist: 85, time: 1.75, hw: ['NH81'], toll: '₹60 - ₹90', tollCount: 1 },
-
-  { slug: 'madurai-airport-to-rameswaram', from: 'Madurai Airport', to: 'Rameshwaram', category: 'Airport', popularity: 9, isFeatured: true, purposes: ['IXM Flight Pickup', 'Pilgrimage Transfer'], origin: 'madurai', dest: 'ramanathapuram', dist: 170, time: 3.25, hw: ['NH87'], toll: '₹120 - ₹180', tollCount: 2 },
-  { slug: 'rameswaram-to-madurai-airport', from: 'Rameshwaram', to: 'Madurai Airport', category: 'Airport', popularity: 9, isFeatured: false, purposes: ['IXM Flight Drop'], origin: 'ramanathapuram', dest: 'madurai', dist: 170, time: 3.25, hw: ['NH87'], toll: '₹120 - ₹180', tollCount: 2 },
-  { slug: 'madurai-airport-to-kodaikanal', from: 'Madurai Airport', to: 'Kodaikanal', category: 'Airport', popularity: 9, isFeatured: true, purposes: ['IXM Flight Pickup', 'Hill Resort Transfer'], origin: 'madurai', dest: 'dindigul', dist: 135, time: 3.5, hw: ['SH156 Ghat Road'], toll: '₹90 - ₹130', tollCount: 1 },
-  { slug: 'kodaikanal-to-madurai-airport', from: 'Kodaikanal', to: 'Madurai Airport', category: 'Airport', popularity: 9, isFeatured: false, purposes: ['IXM Flight Drop'], origin: 'dindigul', dest: 'madurai', dist: 135, time: 3.5, hw: ['SH156 Ghat Road'], toll: '₹90 - ₹130', tollCount: 1 },
-
-  { slug: 'coimbatore-airport-to-ooty', from: 'Coimbatore Airport', to: 'Ooty', category: 'Airport', popularity: 9, isFeatured: true, purposes: ['CJB Flight Pickup', 'Nilgiris Transfer'], origin: 'coimbatore', dest: 'nilgiris', dist: 90, time: 3.0, hw: ['NH181 Hairpin Route'], toll: '₹70 - ₹110', tollCount: 1 },
-  { slug: 'ooty-to-coimbatore-airport', from: 'Ooty', to: 'Coimbatore Airport', category: 'Airport', popularity: 9, isFeatured: false, purposes: ['CJB Flight Drop'], origin: 'nilgiris', dest: 'coimbatore', dist: 90, time: 3.0, hw: ['NH181'], toll: '₹70 - ₹110', tollCount: 1 },
-
-  // ── INTERSTATE ROUTES (`Interstate`) ──
-  { slug: 'chennai-to-bengaluru', from: 'Chennai', to: 'Bengaluru', category: 'Interstate', popularity: 10, isFeatured: true, purposes: ['IT', 'Corporate', 'Interstate Business'], origin: 'chennai', dest: 'krishnagiri', dist: 350, time: 6.25, hw: ['NH48 Expressway'], toll: '₹450 - ₹550', tollCount: 5 },
-  { slug: 'bengaluru-to-chennai', from: 'Bengaluru', to: 'Chennai', category: 'Interstate', popularity: 10, isFeatured: true, purposes: ['IT Return', 'Corporate', 'MAA Airport'], origin: 'krishnagiri', dest: 'chennai', dist: 350, time: 6.25, hw: ['NH48 Expressway'], toll: '₹450 - ₹550', tollCount: 5 },
-  { slug: 'trichy-to-bengaluru', from: 'Trichy', to: 'Bengaluru', category: 'Interstate', popularity: 9, isFeatured: true, purposes: ['IT', 'Family', 'Interstate Transit'], origin: 'tiruchirappalli', dest: 'krishnagiri', dist: 345, time: 6.25, hw: ['NH44'], toll: '₹480 - ₹580', tollCount: 5 },
-  { slug: 'bengaluru-to-trichy', from: 'Bengaluru', to: 'Trichy', category: 'Interstate', popularity: 9, isFeatured: false, purposes: ['Home Visit', 'Festival', 'Family'], origin: 'krishnagiri', dest: 'tiruchirappalli', dist: 345, time: 6.25, hw: ['NH44'], toll: '₹480 - ₹580', tollCount: 5 },
-  { slug: 'salem-to-bengaluru', from: 'Salem', to: 'Bengaluru', category: 'Interstate', popularity: 9, isFeatured: true, purposes: ['Business', 'IT Commute'], origin: 'salem', dest: 'krishnagiri', dist: 205, time: 3.75, hw: ['NH44 Expressway'], toll: '₹280 - ₹340', tollCount: 3 },
-  { slug: 'bengaluru-to-salem', from: 'Bengaluru', to: 'Salem', category: 'Interstate', popularity: 9, isFeatured: false, purposes: ['Home Visit', 'Business'], origin: 'krishnagiri', dest: 'salem', dist: 205, time: 3.75, hw: ['NH44 Expressway'], toll: '₹280 - ₹340', tollCount: 3 },
-  { slug: 'coimbatore-to-bengaluru', from: 'Coimbatore', to: 'Bengaluru', category: 'Interstate', popularity: 9, isFeatured: true, purposes: ['IT Corridor', 'Corporate', 'Industrial'], origin: 'coimbatore', dest: 'krishnagiri', dist: 365, time: 6.5, hw: ['NH544', 'NH44'], toll: '₹520 - ₹620', tollCount: 6 },
-  { slug: 'bengaluru-to-coimbatore', from: 'Bengaluru', to: 'Coimbatore', category: 'Interstate', popularity: 9, isFeatured: false, purposes: ['Textile Business', 'Family Return'], origin: 'krishnagiri', dest: 'coimbatore', dist: 365, time: 6.5, hw: ['NH44', 'NH544'], toll: '₹520 - ₹620', tollCount: 6 },
+  // ── INTERSTATE / AIRPORT / SPECIALTY ──
+  { slug: 'chennai-to-bangalore', from: 'Chennai', to: 'Bangalore', category: 'Interstate', popularity: 10, isFeatured: true, purposes: ['IT Hub', 'Business', 'Interstate'], origin: 'chennai', dest: 'chennai', dist: 350, time: 6.0, hw: ['NH48 Expressway'], toll: '₹480 - ₹580', tollCount: 5 },
+  { slug: 'bangalore-to-chennai', from: 'Bangalore', to: 'Chennai', category: 'Interstate', popularity: 10, isFeatured: true, purposes: ['Corporate', 'Medical', 'MAA Airport'], origin: 'chennai', dest: 'chennai', dist: 350, time: 6.0, hw: ['NH48 Expressway'], toll: '₹480 - ₹580', tollCount: 5 },
   { slug: 'chennai-to-tirupati', from: 'Chennai', to: 'Tirupati', category: 'Interstate', popularity: 10, isFeatured: true, purposes: ['Tirumala Temple', 'Pilgrimage'], origin: 'chennai', dest: 'vellore', dist: 135, time: 3.25, hw: ['NH716'], toll: '₹140 - ₹190', tollCount: 2 },
   { slug: 'tirupati-to-chennai', from: 'Tirupati', to: 'Chennai', category: 'Interstate', popularity: 10, isFeatured: false, purposes: ['Pilgrimage Return', 'MAA Airport'], origin: 'vellore', dest: 'chennai', dist: 135, time: 3.25, hw: ['NH716'], toll: '₹140 - ₹190', tollCount: 2 },
   { slug: 'vellore-to-tirupati', from: 'Vellore', to: 'Tirupati', category: 'Interstate', popularity: 9, isFeatured: false, purposes: ['CMC Patient Pilgrimage', 'Tirumala'], origin: 'vellore', dest: 'vellore', dist: 110, time: 2.5, hw: ['NH716'], toll: '₹110 - ₹150', tollCount: 2 },
@@ -174,6 +316,8 @@ function computeFare(distanceKm) {
 let masterJs = `export const routesMasterDataset = [\n`;
 phase1Routes.forEach((r) => {
   const meta = getRouteMetadata(r);
+  const explore = getExploreAlongRoute(r);
+
   masterJs += `  {\n`;
   masterJs += `    slug: '${r.slug}',\n`;
   masterJs += `    from: '${r.from}',\n`;
@@ -192,6 +336,7 @@ phase1Routes.forEach((r) => {
   masterJs += `    url: '/one-way-taxi/${r.slug}',\n`;
   masterJs += `    estDistance: '${r.dist} km',\n`;
   masterJs += `    fare: ${JSON.stringify(computeFare(r.dist))},\n`;
+  masterJs += `    exploreAlongRoute: ${JSON.stringify(explore, null, 6)},\n`;
   masterJs += `  },\n`;
 });
 
@@ -242,7 +387,7 @@ masterJs += `  return match ? match.slug : null;\n`;
 masterJs += `}\n`;
 
 fs.writeFileSync('./src/data/routesMaster.js', masterJs, 'utf-8');
-console.log('✅ routesMaster.js updated with ₹15/km base rate!');
+console.log('✅ routesMaster.js updated with exploreAlongRoute dataset!');
 
 // Generate routeContent.js
 let contentJs = `export const routeContent = {\n`;
@@ -250,6 +395,7 @@ let contentJs = `export const routeContent = {\n`;
 phase1Routes.forEach((r) => {
   const fare = computeFare(r.dist);
   const meta = getRouteMetadata(r);
+  const explore = getExploreAlongRoute(r);
   const returnSlug = phase1Routes.find((pr) => pr.from === r.to && pr.to === r.from)?.slug || null;
 
   contentJs += `  '${r.slug}': {\n`;
@@ -272,6 +418,7 @@ phase1Routes.forEach((r) => {
   contentJs += `    seoTitle: '${r.from} to ${r.to} One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',\n`;
   contentJs += `    metaDescription: 'Book one-way taxi from ${r.from} to ${r.to} with SAMAYAS. Hatchback from ₹${fare.hatchback.toLocaleString('en-IN')}, Sedan ₹${fare.sedan.toLocaleString('en-IN')}, SUV ₹${fare.suv.toLocaleString('en-IN')}. 24/7 doorstep pickups.',\n`;
   contentJs += `    fare: ${JSON.stringify(fare, null, 6)},\n`;
+  contentJs += `    exploreAlongRoute: ${JSON.stringify(explore, null, 6)},\n`;
   contentJs += `    highways: ${JSON.stringify(r.hw)},\n`;
   contentJs += `    tolls: {\n`;
   contentJs += `      costRange: '${r.toll}',\n`;
@@ -340,4 +487,4 @@ contentJs += `  return routeContent[slug.toLowerCase()] || null;\n`;
 contentJs += `}\n`;
 
 fs.writeFileSync('./src/data/routeContent.js', contentJs, 'utf-8');
-console.log('✅ routeContent.js updated with isFeatured, seasonality & roadConditions!');
+console.log('✅ routeContent.js updated with exploreAlongRoute dataset!');

@@ -26,6 +26,85 @@ export const routeContent = {
       "hycross": 8250,
       "traveller": 9900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Murugan Idli Shop",
+                  "cuisine": "South Indian",
+                  "famousFor": "Famous Crispy Dosa & Melt-in-mouth Idlis",
+                  "detour": "2 km Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Dinner"
+                  ],
+                  "rating": "4.6★"
+            },
+            {
+                  "name": "A2B Pure Veg (Vandavasi Highway Plaza)",
+                  "cuisine": "Pure Vegetarian",
+                  "famousFor": "South & North Indian Thali & Ghee Roast",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Breakfast",
+                        "Lunch",
+                        "Snacks"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Coffee Stall",
+                  "type": "Highway Refreshment Point"
+            },
+            {
+                  "name": "Starbucks GST Road Highway Plaza",
+                  "type": "Coffee Shop"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Samayapuram Mariamman Temple",
+                  "description": "One of Tamil Nadu’s most revered Mariamman pilgrimage shrines.",
+                  "detour": "3 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            },
+            {
+                  "name": "Rockfort Ucchi Pillayar Temple",
+                  "description": "Historic 83m ancient rock hillfort temple with panoramic views.",
+                  "detour": "1 km Detour",
+                  "stopDuration": "45 Mins Visit"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Mahabalipuram Shore Temple & Monuments",
+                  "description": "7th-century UNESCO World Heritage coastal shore temple.",
+                  "visitDuration": "1.5 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Handicrafts & Dry Fruits",
+                  "famousProducts": "Fresh Roasted Cashews & Tindivanam Highway Snacks"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Tindivanam IOCL Supercharger & Plaza",
+                  "type": "EV Charging, Fuel & Clean Restrooms",
+                  "location": "NH45 Highway Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Manapparai Murukku",
+                  "location": "Manapparai / NH45 Junction",
+                  "famousFor": "Traditional extra-crispy double-fried murukku"
+            }
+      ]
+},
     highways: ["NH38","NH45 GST Road"],
     tolls: {
       costRange: '₹420 - ₹520',
@@ -110,6 +189,85 @@ export const routeContent = {
       "innova": 7260,
       "hycross": 8250,
       "traveller": 9900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Murugan Idli Shop",
+                  "cuisine": "South Indian",
+                  "famousFor": "Famous Crispy Dosa & Melt-in-mouth Idlis",
+                  "detour": "2 km Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Dinner"
+                  ],
+                  "rating": "4.6★"
+            },
+            {
+                  "name": "A2B Pure Veg (Vandavasi Highway Plaza)",
+                  "cuisine": "Pure Vegetarian",
+                  "famousFor": "South & North Indian Thali & Ghee Roast",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Breakfast",
+                        "Lunch",
+                        "Snacks"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Coffee Stall",
+                  "type": "Highway Refreshment Point"
+            },
+            {
+                  "name": "Starbucks GST Road Highway Plaza",
+                  "type": "Coffee Shop"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Samayapuram Mariamman Temple",
+                  "description": "One of Tamil Nadu’s most revered Mariamman pilgrimage shrines.",
+                  "detour": "3 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            },
+            {
+                  "name": "Rockfort Ucchi Pillayar Temple",
+                  "description": "Historic 83m ancient rock hillfort temple with panoramic views.",
+                  "detour": "1 km Detour",
+                  "stopDuration": "45 Mins Visit"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Mahabalipuram Shore Temple & Monuments",
+                  "description": "7th-century UNESCO World Heritage coastal shore temple.",
+                  "visitDuration": "1.5 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Handicrafts & Dry Fruits",
+                  "famousProducts": "Fresh Roasted Cashews & Tindivanam Highway Snacks"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Tindivanam IOCL Supercharger & Plaza",
+                  "type": "EV Charging, Fuel & Clean Restrooms",
+                  "location": "NH45 Highway Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Manapparai Murukku",
+                  "location": "Manapparai / NH45 Junction",
+                  "famousFor": "Traditional extra-crispy double-fried murukku"
+            }
+      ]
 },
     highways: ["NH45 GST Road","NH38"],
     tolls: {
@@ -196,6 +354,49 @@ export const routeContent = {
       "hycross": 11500,
       "traveller": 13800
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Madurai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Madurai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH45.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH45 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH45 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
     highways: ["NH45","NH38"],
     tolls: {
       costRange: '₹580 - ₹680',
@@ -280,6 +481,49 @@ export const routeContent = {
       "innova": 10120,
       "hycross": 11500,
       "traveller": 13800
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Madurai - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Madurai - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH38.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH38 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH38 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Madurai Regional Snacks",
+                  "location": "Madurai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Madurai"
+            }
+      ]
 },
     highways: ["NH38","NH45"],
     tolls: {
@@ -366,6 +610,49 @@ export const routeContent = {
       "hycross": 12500,
       "traveller": 15000
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
     highways: ["NH48","NH544"],
     tolls: {
       costRange: '₹620 - ₹720',
@@ -436,7 +723,7 @@ export const routeContent = {
     durationDisplay: '8.5 Hours',
     category: 'City',
     popularity: 9,
-    isFeatured: true,
+    isFeatured: false,
     seasonality: ["All Season"],
     popularFor: ["Business","Corporate","Airport"],
     roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
@@ -450,6 +737,49 @@ export const routeContent = {
       "innova": 11000,
       "hycross": 12500,
       "traveller": 15000
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
 },
     highways: ["NH544","NH48"],
     tolls: {
@@ -536,6 +866,49 @@ export const routeContent = {
       "hycross": 8500,
       "traveller": 10200
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Salem)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Salem Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
+},
     highways: ["NH48","NH79"],
     tolls: {
       costRange: '₹410 - ₹490',
@@ -620,6 +993,49 @@ export const routeContent = {
       "innova": 7480,
       "hycross": 8500,
       "traveller": 10200
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Salem - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Salem - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH79.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH79 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH79 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
 },
     highways: ["NH79","NH48"],
     tolls: {
@@ -706,6 +1122,49 @@ export const routeContent = {
       "hycross": 15500,
       "traveller": 18600
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Tirunelveli)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Tirunelveli Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH45.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH45 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH45 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Iruttu Kadai Halwa",
+                  "location": "Tirunelveli Town",
+                  "famousFor": "Hot wheat halwa made with Tamirabharani river water"
+            }
+      ]
+},
     highways: ["NH45","NH44"],
     tolls: {
       costRange: '₹750 - ₹880',
@@ -790,6 +1249,49 @@ export const routeContent = {
       "innova": 13640,
       "hycross": 15500,
       "traveller": 18600
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Tirunelveli - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Tirunelveli - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH44.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH44 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH44 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Iruttu Kadai Halwa",
+                  "location": "Tirunelveli Town",
+                  "famousFor": "Hot wheat halwa made with Tamirabharani river water"
+            }
+      ]
 },
     highways: ["NH44","NH45"],
     tolls: {
@@ -876,6 +1378,49 @@ export const routeContent = {
       "hycross": 8500,
       "traveller": 10200
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Thanjavur)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Thanjavur Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH45.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH45 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH45 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
     highways: ["NH45","NH36"],
     tolls: {
       costRange: '₹420 - ₹500',
@@ -960,6 +1505,49 @@ export const routeContent = {
       "innova": 7480,
       "hycross": 8500,
       "traveller": 10200
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Thanjavur - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Thanjavur - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH36.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH36 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH36 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Thanjavur Regional Snacks",
+                  "location": "Thanjavur Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Thanjavur"
+            }
+      ]
 },
     highways: ["NH36","NH45"],
     tolls: {
@@ -1046,6 +1634,49 @@ export const routeContent = {
       "hycross": 3500,
       "traveller": 4200
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Vellore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Vellore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
     highways: ["NH48"],
     tolls: {
       costRange: '₹140 - ₹180',
@@ -1130,6 +1761,49 @@ export const routeContent = {
       "innova": 3080,
       "hycross": 3500,
       "traveller": 4200
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Vellore - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Vellore - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Vellore Regional Snacks",
+                  "location": "Vellore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Vellore"
+            }
+      ]
 },
     highways: ["NH48"],
     tolls: {
@@ -1216,6 +1890,49 @@ export const routeContent = {
       "hycross": 10500,
       "traveller": 12600
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Erode)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Erode Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
     highways: ["NH48","NH544"],
     tolls: {
       costRange: '₹520 - ₹620',
@@ -1300,6 +2017,49 @@ export const routeContent = {
       "innova": 9240,
       "hycross": 10500,
       "traveller": 12600
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Erode - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Erode - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Erode Regional Snacks",
+                  "location": "Erode Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Erode"
+            }
+      ]
 },
     highways: ["NH544","NH48"],
     tolls: {
@@ -1386,6 +2146,49 @@ export const routeContent = {
       "hycross": 7750,
       "traveller": 9300
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Nagapattinam)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Nagapattinam Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along ECR.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "ECR Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "ECR Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
     highways: ["ECR","NH32"],
     tolls: {
       costRange: '₹320 - ₹410',
@@ -1470,6 +2273,49 @@ export const routeContent = {
       "innova": 6820,
       "hycross": 7750,
       "traveller": 9300
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Nagapattinam - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Nagapattinam - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH32.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH32 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH32 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Nagapattinam Regional Snacks",
+                  "location": "Nagapattinam Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Nagapattinam"
+            }
+      ]
 },
     highways: ["NH32","ECR"],
     tolls: {
@@ -1556,6 +2402,49 @@ export const routeContent = {
       "hycross": 3375,
       "traveller": 4050
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Madurai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Madurai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH38.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH38 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH38 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
     highways: ["NH38"],
     tolls: {
       costRange: '₹140 - ₹180',
@@ -1640,6 +2529,49 @@ export const routeContent = {
       "innova": 2970,
       "hycross": 3375,
       "traveller": 4050
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Madurai - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Madurai - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH38.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH38 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH38 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Madurai Regional Snacks",
+                  "location": "Madurai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Madurai"
+            }
+      ]
 },
     highways: ["NH38"],
     tolls: {
@@ -1726,6 +2658,49 @@ export const routeContent = {
       "hycross": 5375,
       "traveller": 6450
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH81.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH81 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH81 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
     highways: ["NH81"],
     tolls: {
       costRange: '₹180 - ₹240',
@@ -1810,6 +2785,49 @@ export const routeContent = {
       "innova": 4730,
       "hycross": 5375,
       "traveller": 6450
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH81.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH81 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH81 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
 },
     highways: ["NH81"],
     tolls: {
@@ -1896,6 +2914,49 @@ export const routeContent = {
       "hycross": 3500,
       "traveller": 4200
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Salem)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Salem Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH81.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH81 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH81 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
+},
     highways: ["NH81","NH44"],
     tolls: {
       costRange: '₹120 - ₹160',
@@ -1980,6 +3041,49 @@ export const routeContent = {
       "innova": 3080,
       "hycross": 3500,
       "traveller": 4200
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Salem - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Salem - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH44.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH44 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH44 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
 },
     highways: ["NH44","NH81"],
     tolls: {
@@ -2066,6 +3170,49 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Thanjavur)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Thanjavur Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH83.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
     highways: ["NH83"],
     tolls: {
       costRange: '₹40 - ₹70',
@@ -2150,6 +3297,49 @@ export const routeContent = {
       "innova": 2860,
       "hycross": 3250,
       "traveller": 3900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Thanjavur - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Thanjavur - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH83.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Thanjavur Regional Snacks",
+                  "location": "Thanjavur Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Thanjavur"
+            }
+      ]
 },
     highways: ["NH83"],
     tolls: {
@@ -2236,6 +3426,49 @@ export const routeContent = {
       "hycross": 7250,
       "traveller": 8700
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Tirunelveli)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Tirunelveli Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH38.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH38 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH38 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Iruttu Kadai Halwa",
+                  "location": "Tirunelveli Town",
+                  "famousFor": "Hot wheat halwa made with Tamirabharani river water"
+            }
+      ]
+},
     highways: ["NH38","NH44"],
     tolls: {
       costRange: '₹340 - ₹420',
@@ -2320,6 +3553,49 @@ export const routeContent = {
       "innova": 6380,
       "hycross": 7250,
       "traveller": 8700
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Tirunelveli - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Tirunelveli - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH44.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH44 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH44 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Iruttu Kadai Halwa",
+                  "location": "Tirunelveli Town",
+                  "famousFor": "Hot wheat halwa made with Tamirabharani river water"
+            }
+      ]
 },
     highways: ["NH44","NH38"],
     tolls: {
@@ -2406,6 +3682,49 @@ export const routeContent = {
       "hycross": 3875,
       "traveller": 4650
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Erode)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Erode Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH81.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH81 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH81 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
     highways: ["NH81"],
     tolls: {
       costRange: '₹110 - ₹150',
@@ -2490,6 +3809,49 @@ export const routeContent = {
       "innova": 3410,
       "hycross": 3875,
       "traveller": 4650
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Erode - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Erode - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH81.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH81 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH81 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Erode Regional Snacks",
+                  "location": "Erode Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Erode"
+            }
+      ]
 },
     highways: ["NH81"],
     tolls: {
@@ -2576,6 +3938,49 @@ export const routeContent = {
       "hycross": 5250,
       "traveller": 6300
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Madurai - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Madurai - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH83.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Madurai Regional Snacks",
+                  "location": "Madurai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Madurai"
+            }
+      ]
+},
     highways: ["NH83"],
     tolls: {
       costRange: '₹160 - ₹220',
@@ -2660,6 +4065,49 @@ export const routeContent = {
       "innova": 4620,
       "hycross": 5250,
       "traveller": 6300
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Madurai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Madurai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH83.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
 },
     highways: ["NH83"],
     tolls: {
@@ -2746,6 +4194,49 @@ export const routeContent = {
       "hycross": 4000,
       "traveller": 4800
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Madurai - Tirunelveli)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Madurai - Tirunelveli Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH44.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH44 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH44 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Iruttu Kadai Halwa",
+                  "location": "Tirunelveli Town",
+                  "famousFor": "Hot wheat halwa made with Tamirabharani river water"
+            }
+      ]
+},
     highways: ["NH44"],
     tolls: {
       costRange: '₹180 - ₹230',
@@ -2830,6 +4321,49 @@ export const routeContent = {
       "innova": 3520,
       "hycross": 4000,
       "traveller": 4800
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Tirunelveli - Madurai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Tirunelveli - Madurai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH44.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH44 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH44 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Iruttu Kadai Halwa",
+                  "location": "Tirunelveli Town",
+                  "famousFor": "Hot wheat halwa made with Tamirabharani river water"
+            }
+      ]
 },
     highways: ["NH44"],
     tolls: {
@@ -2916,6 +4450,49 @@ export const routeContent = {
       "hycross": 4125,
       "traveller": 4950
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Salem)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Salem Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
+},
     highways: ["NH544"],
     tolls: {
       costRange: '₹180 - ₹240',
@@ -3000,6 +4577,49 @@ export const routeContent = {
       "innova": 3630,
       "hycross": 4125,
       "traveller": 4950
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Salem - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Salem - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
 },
     highways: ["NH544"],
     tolls: {
@@ -3086,6 +4706,49 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Erode)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Erode Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
+},
     highways: ["NH544"],
     tolls: {
       costRange: '₹90 - ₹130',
@@ -3170,6 +4833,49 @@ export const routeContent = {
       "innova": 2860,
       "hycross": 3250,
       "traveller": 3900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Erode - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Erode - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Erode Regional Snacks",
+                  "location": "Erode Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Erode"
+            }
+      ]
 },
     highways: ["NH544"],
     tolls: {
@@ -3256,6 +4962,49 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Pollachi)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Pollachi Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH83.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
+},
     highways: ["NH83"],
     tolls: {
       costRange: '₹40 - ₹60',
@@ -3340,6 +5089,49 @@ export const routeContent = {
       "innova": 2860,
       "hycross": 3250,
       "traveller": 3900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Pollachi - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Pollachi - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH83.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Pollachi Regional Snacks",
+                  "location": "Pollachi Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Pollachi"
+            }
+      ]
 },
     highways: ["NH83"],
     tolls: {
@@ -3426,6 +5218,49 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Salem - Erode)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Salem - Erode Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
+},
     highways: ["NH544"],
     tolls: {
       costRange: '₹50 - ₹80',
@@ -3510,6 +5345,49 @@ export const routeContent = {
       "innova": 2860,
       "hycross": 3250,
       "traveller": 3900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Erode - Salem)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Erode - Salem Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
 },
     highways: ["NH544"],
     tolls: {
@@ -3596,6 +5474,49 @@ export const routeContent = {
       "hycross": 3875,
       "traveller": 4650
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Velankanni)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Trichy / Velankanni Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
     highways: ["NH83","SH22"],
     tolls: {
       costRange: '₹90 - ₹140',
@@ -3680,6 +5601,49 @@ export const routeContent = {
       "innova": 3410,
       "hycross": 3875,
       "traveller": 4650
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Velankanni - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Velankanni / Trichy Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH22 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH22 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Velankanni Regional Snacks",
+                  "location": "Velankanni Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Velankanni"
+            }
+      ]
 },
     highways: ["SH22","NH83"],
     tolls: {
@@ -3766,6 +5730,49 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Kumbakonam)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Trichy / Kumbakonam Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH36 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH36 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Kumbakonam Degree Coffee & Mahamaham Snacks",
+                  "location": "Kumbakonam Town",
+                  "famousFor": "Pure unadulterated cow milk filter coffee"
+            }
+      ]
+},
     highways: ["NH36"],
     tolls: {
       costRange: '₹60 - ₹90',
@@ -3850,6 +5857,49 @@ export const routeContent = {
       "innova": 2860,
       "hycross": 3250,
       "traveller": 3900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Kumbakonam - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Kumbakonam / Trichy Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH36 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH36 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Kumbakonam Degree Coffee & Mahamaham Snacks",
+                  "location": "Kumbakonam Town",
+                  "famousFor": "Pure unadulterated cow milk filter coffee"
+            }
+      ]
 },
     highways: ["NH36"],
     tolls: {
@@ -3936,6 +5986,49 @@ export const routeContent = {
       "hycross": 4250,
       "traveller": 5100
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Chidambaram)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Trichy / Chidambaram Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH36 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH36 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
     highways: ["NH36"],
     tolls: {
       costRange: '₹120 - ₹170',
@@ -4020,6 +6113,49 @@ export const routeContent = {
       "innova": 3740,
       "hycross": 4250,
       "traveller": 5100
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chidambaram - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Chidambaram / Trichy Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH36 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH36 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chidambaram Regional Snacks",
+                  "location": "Chidambaram Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chidambaram"
+            }
+      ]
 },
     highways: ["NH36"],
     tolls: {
@@ -4106,6 +6242,75 @@ export const routeContent = {
       "hycross": 4375,
       "traveller": 5250
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Amma Mess Madurai",
+                  "cuisine": "Non-Veg Tamil Cuisine",
+                  "famousFor": "Ayira Meen Kuzhambu & Bone Marrow Omelette",
+                  "detour": "1 km Detour",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.7★"
+            },
+            {
+                  "name": "Hotel Saravana Bhavan Rameswaram",
+                  "cuisine": "Pure Veg",
+                  "famousFor": "Traditional South Indian Meals",
+                  "detour": "0.5 km Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Lunch"
+                  ],
+                  "rating": "4.3★"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Ramanathaswamy Temple (22 Holy Wells)",
+                  "description": "Iconic Jyotirlinga shrine featuring the world’s longest 1,000-pillar corridor.",
+                  "detour": "1 km Detour",
+                  "stopDuration": "2 Hours"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Dhanushkodi Ghost Town & Sangam Point",
+                  "description": "Vanish town where Bay of Bengal meets Indian Ocean at land’s end.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "selfieSpots": [
+            {
+                  "name": "Pamban Sea Bridge Viewpoint",
+                  "type": "Historic Rail & Highway Sea Bridge",
+                  "location": "Rameswaram Entrance Sea Causeway"
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Sea Shell Crafts & Conches",
+                  "famousProducts": "Handcrafted Sea Shell Souvenirs & Sacred Shankha"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Ramanathapuram BPCL Fuel & Restroom Hub",
+                  "type": "Petrol Pump & Clean Restroom",
+                  "location": "NH87 Rameswaram Highway"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Madurai Famous Famous Jigarthanda",
+                  "location": "Madurai City / Highway Exit",
+                  "famousFor": "Royal refreshing almond gum & Nannari milk dessert"
+            }
+      ]
+},
     highways: ["NH87","Pamban Sea Bridge"],
     tolls: {
       costRange: '₹120 - ₹180',
@@ -4190,6 +6395,75 @@ export const routeContent = {
       "innova": 3850,
       "hycross": 4375,
       "traveller": 5250
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Amma Mess Madurai",
+                  "cuisine": "Non-Veg Tamil Cuisine",
+                  "famousFor": "Ayira Meen Kuzhambu & Bone Marrow Omelette",
+                  "detour": "1 km Detour",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.7★"
+            },
+            {
+                  "name": "Hotel Saravana Bhavan Rameswaram",
+                  "cuisine": "Pure Veg",
+                  "famousFor": "Traditional South Indian Meals",
+                  "detour": "0.5 km Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Lunch"
+                  ],
+                  "rating": "4.3★"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Ramanathaswamy Temple (22 Holy Wells)",
+                  "description": "Iconic Jyotirlinga shrine featuring the world’s longest 1,000-pillar corridor.",
+                  "detour": "1 km Detour",
+                  "stopDuration": "2 Hours"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Dhanushkodi Ghost Town & Sangam Point",
+                  "description": "Vanish town where Bay of Bengal meets Indian Ocean at land’s end.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "selfieSpots": [
+            {
+                  "name": "Pamban Sea Bridge Viewpoint",
+                  "type": "Historic Rail & Highway Sea Bridge",
+                  "location": "Rameswaram Entrance Sea Causeway"
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Sea Shell Crafts & Conches",
+                  "famousProducts": "Handcrafted Sea Shell Souvenirs & Sacred Shankha"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Ramanathapuram BPCL Fuel & Restroom Hub",
+                  "type": "Petrol Pump & Clean Restroom",
+                  "location": "NH87 Rameswaram Highway"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Madurai Famous Famous Jigarthanda",
+                  "location": "Madurai City / Highway Exit",
+                  "famousFor": "Royal refreshing almond gum & Nannari milk dessert"
+            }
+      ]
 },
     highways: ["NH87"],
     tolls: {
@@ -4276,6 +6550,49 @@ export const routeContent = {
       "hycross": 4500,
       "traveller": 5400
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Madurai - Tiruchendur)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Madurai / Tiruchendur Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH38 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH38 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Madurai Regional Snacks",
+                  "location": "Madurai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Madurai"
+            }
+      ]
+},
     highways: ["NH38"],
     tolls: {
       costRange: '₹140 - ₹190',
@@ -4360,6 +6677,49 @@ export const routeContent = {
       "innova": 3960,
       "hycross": 4500,
       "traveller": 5400
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Tiruchendur - Madurai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Tiruchendur / Madurai Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH38 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH38 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Tiruchendur Regional Snacks",
+                  "location": "Tiruchendur Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Tiruchendur"
+            }
+      ]
 },
     highways: ["NH38"],
     tolls: {
@@ -4446,6 +6806,42 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Sri Krishna Sweets & Veg Restaurant",
+                  "cuisine": "Pure Veg",
+                  "famousFor": "Mysurpa & Ghee Roast Dosa",
+                  "detour": "1 km Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Snacks"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Ekambareswarar & Varadharaja Perumal Temples",
+                  "description": "Ancient temple complex famed for its 1,000-pillar hall and 3,500-year-old Mango tree.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "1.5 Hours"
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Pure Silk Sarees",
+                  "famousProducts": "Handwoven Kanchipuram Zari Silk Sarees from Weaver Cooperatives"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Kanchipuram Kovil Idli",
+                  "location": "Kanchipuram Temple Street",
+                  "famousFor": "Spiced ginger & pepper steamed idli in Mandharai leaf"
+            }
+      ]
+},
     highways: ["NH48"],
     tolls: {
       costRange: '₹70 - ₹100',
@@ -4530,6 +6926,42 @@ export const routeContent = {
       "innova": 2860,
       "hycross": 3250,
       "traveller": 3900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Sri Krishna Sweets & Veg Restaurant",
+                  "cuisine": "Pure Veg",
+                  "famousFor": "Mysurpa & Ghee Roast Dosa",
+                  "detour": "1 km Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Snacks"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Ekambareswarar & Varadharaja Perumal Temples",
+                  "description": "Ancient temple complex famed for its 1,000-pillar hall and 3,500-year-old Mango tree.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "1.5 Hours"
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Pure Silk Sarees",
+                  "famousProducts": "Handwoven Kanchipuram Zari Silk Sarees from Weaver Cooperatives"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Kanchipuram Kovil Idli",
+                  "location": "Kanchipuram Temple Street",
+                  "famousFor": "Spiced ginger & pepper steamed idli in Mandharai leaf"
+            }
+      ]
 },
     highways: ["NH48"],
     tolls: {
@@ -4616,6 +7048,49 @@ export const routeContent = {
       "hycross": 5750,
       "traveller": 6900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Chidambaram)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Chennai / Chidambaram Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "ECR Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "ECR Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
     highways: ["ECR","NH32"],
     tolls: {
       costRange: '₹220 - ₹290',
@@ -4700,6 +7175,49 @@ export const routeContent = {
       "innova": 5060,
       "hycross": 5750,
       "traveller": 6900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chidambaram - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Chidambaram / Chennai Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH32 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH32 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chidambaram Regional Snacks",
+                  "location": "Chidambaram Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chidambaram"
+            }
+      ]
 },
     highways: ["NH32","ECR"],
     tolls: {
@@ -4786,6 +7304,61 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "High Range Hilltop Restaurant",
+                  "cuisine": "Multi-Cuisine",
+                  "famousFor": "Hot Malabar Parotta & Mountain Tea",
+                  "detour": "0 km Ghat Road",
+                  "mealType": [
+                        "Lunch",
+                        "Snacks"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Highfield Tea Factory Tasting Point",
+                  "type": "Tea Shop & Tasting Room"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Government Botanical Gardens & Ooty Lake",
+                  "description": "Sprawling 55-acre terraced garden with 20-million-year-old fossilized tree.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "scenicViews": [
+            {
+                  "name": "Nilgiri Hairpin Bends Viewpoint",
+                  "viewType": "Valley & Cloud View",
+                  "stopDuration": "15 Mins"
+            },
+            {
+                  "name": "Ketti Valley Viewpoint",
+                  "viewType": "Second Largest Valley View in Asia",
+                  "stopDuration": "20 Mins"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Mettupalayam Highway Fuel & EV Station",
+                  "type": "EV Charging & Petrol Pump",
+                  "location": "Foot of Nilgiri Ghat Road"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Ooty Homemade Chocolates & Eucalyptus Oil",
+                  "location": "Ooty Town & Commercial Road",
+                  "famousFor": "Freshly made dark chocolates & therapeutic oils"
+            }
+      ]
+},
     highways: ["NH181","Hairpin Bends Route"],
     tolls: {
       costRange: '₹60 - ₹100',
@@ -4870,6 +7443,61 @@ export const routeContent = {
       "innova": 2860,
       "hycross": 3250,
       "traveller": 3900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "High Range Hilltop Restaurant",
+                  "cuisine": "Multi-Cuisine",
+                  "famousFor": "Hot Malabar Parotta & Mountain Tea",
+                  "detour": "0 km Ghat Road",
+                  "mealType": [
+                        "Lunch",
+                        "Snacks"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Highfield Tea Factory Tasting Point",
+                  "type": "Tea Shop & Tasting Room"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Government Botanical Gardens & Ooty Lake",
+                  "description": "Sprawling 55-acre terraced garden with 20-million-year-old fossilized tree.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "scenicViews": [
+            {
+                  "name": "Nilgiri Hairpin Bends Viewpoint",
+                  "viewType": "Valley & Cloud View",
+                  "stopDuration": "15 Mins"
+            },
+            {
+                  "name": "Ketti Valley Viewpoint",
+                  "viewType": "Second Largest Valley View in Asia",
+                  "stopDuration": "20 Mins"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Mettupalayam Highway Fuel & EV Station",
+                  "type": "EV Charging & Petrol Pump",
+                  "location": "Foot of Nilgiri Ghat Road"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Ooty Homemade Chocolates & Eucalyptus Oil",
+                  "location": "Ooty Town & Commercial Road",
+                  "famousFor": "Freshly made dark chocolates & therapeutic oils"
+            }
+      ]
 },
     highways: ["NH181","Mettupalayam Road"],
     tolls: {
@@ -4956,6 +7584,61 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "High Range Hilltop Restaurant",
+                  "cuisine": "Multi-Cuisine",
+                  "famousFor": "Hot Malabar Parotta & Mountain Tea",
+                  "detour": "0 km Ghat Road",
+                  "mealType": [
+                        "Lunch",
+                        "Snacks"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Highfield Tea Factory Tasting Point",
+                  "type": "Tea Shop & Tasting Room"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Government Botanical Gardens & Ooty Lake",
+                  "description": "Sprawling 55-acre terraced garden with 20-million-year-old fossilized tree.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "scenicViews": [
+            {
+                  "name": "Nilgiri Hairpin Bends Viewpoint",
+                  "viewType": "Valley & Cloud View",
+                  "stopDuration": "15 Mins"
+            },
+            {
+                  "name": "Ketti Valley Viewpoint",
+                  "viewType": "Second Largest Valley View in Asia",
+                  "stopDuration": "20 Mins"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Mettupalayam Highway Fuel & EV Station",
+                  "type": "EV Charging & Petrol Pump",
+                  "location": "Foot of Nilgiri Ghat Road"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Ooty Homemade Chocolates & Eucalyptus Oil",
+                  "location": "Ooty Town & Commercial Road",
+                  "famousFor": "Freshly made dark chocolates & therapeutic oils"
+            }
+      ]
+},
     highways: ["NH181"],
     tolls: {
       costRange: '₹60 - ₹90',
@@ -5040,6 +7723,61 @@ export const routeContent = {
       "innova": 2860,
       "hycross": 3250,
       "traveller": 3900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "High Range Hilltop Restaurant",
+                  "cuisine": "Multi-Cuisine",
+                  "famousFor": "Hot Malabar Parotta & Mountain Tea",
+                  "detour": "0 km Ghat Road",
+                  "mealType": [
+                        "Lunch",
+                        "Snacks"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Highfield Tea Factory Tasting Point",
+                  "type": "Tea Shop & Tasting Room"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Government Botanical Gardens & Ooty Lake",
+                  "description": "Sprawling 55-acre terraced garden with 20-million-year-old fossilized tree.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "scenicViews": [
+            {
+                  "name": "Nilgiri Hairpin Bends Viewpoint",
+                  "viewType": "Valley & Cloud View",
+                  "stopDuration": "15 Mins"
+            },
+            {
+                  "name": "Ketti Valley Viewpoint",
+                  "viewType": "Second Largest Valley View in Asia",
+                  "stopDuration": "20 Mins"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Mettupalayam Highway Fuel & EV Station",
+                  "type": "EV Charging & Petrol Pump",
+                  "location": "Foot of Nilgiri Ghat Road"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Ooty Homemade Chocolates & Eucalyptus Oil",
+                  "location": "Ooty Town & Commercial Road",
+                  "famousFor": "Freshly made dark chocolates & therapeutic oils"
+            }
+      ]
 },
     highways: ["NH181"],
     tolls: {
@@ -5126,6 +7864,49 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Valparai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Valparai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along SH78 Ghat Road.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH78 Ghat Road Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH78 Ghat Road Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
+},
     highways: ["SH78 Ghat Road"],
     tolls: {
       costRange: '₹50 - ₹80',
@@ -5210,6 +7991,49 @@ export const routeContent = {
       "innova": 2860,
       "hycross": 3250,
       "traveller": 3900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Valparai - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Valparai - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along SH78 Ghat Road.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH78 Ghat Road Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH78 Ghat Road Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Valparai Regional Snacks",
+                  "location": "Valparai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Valparai"
+            }
+      ]
 },
     highways: ["SH78 Ghat Road"],
     tolls: {
@@ -5296,6 +8120,49 @@ export const routeContent = {
       "hycross": 4000,
       "traveller": 4800
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Munnar)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Munnar Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along SH17.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH17 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH17 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
+},
     highways: ["SH17","Udumalpet Ghat Road"],
     tolls: {
       costRange: '₹90 - ₹140',
@@ -5380,6 +8247,49 @@ export const routeContent = {
       "innova": 3520,
       "hycross": 4000,
       "traveller": 4800
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Munnar - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Munnar - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along Udumalpet Ghat Road.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Udumalpet Ghat Road Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "Udumalpet Ghat Road Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Munnar Regional Snacks",
+                  "location": "Munnar Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Munnar"
+            }
+      ]
 },
     highways: ["Udumalpet Ghat Road","SH17"],
     tolls: {
@@ -5466,6 +8376,49 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Madurai - Kodaikanal)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Madurai - Kodaikanal Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along SH156 Ghat Road.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH156 Ghat Road Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH156 Ghat Road Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Madurai Regional Snacks",
+                  "location": "Madurai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Madurai"
+            }
+      ]
+},
     highways: ["SH156 Ghat Road"],
     tolls: {
       costRange: '₹80 - ₹120',
@@ -5551,6 +8504,49 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Kodaikanal - Madurai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Kodaikanal - Madurai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along SH156 Ghat Road.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH156 Ghat Road Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH156 Ghat Road Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Kodaikanal Regional Snacks",
+                  "location": "Kodaikanal Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Kodaikanal"
+            }
+      ]
+},
     highways: ["SH156 Ghat Road"],
     tolls: {
       costRange: '₹80 - ₹120',
@@ -5609,376 +8605,102 @@ export const routeContent = {
     ],
   },
 
-  'madurai-to-kanyakumari': {
-    from: 'Madurai',
-    to: 'Kanyakumari',
-    fromSlug: 'madurai',
-    toSlug: 'kanyakumari',
-    returnRouteSlug: 'kanyakumari-to-madurai',
-    distanceKm: 245,
-    timeHours: 4.25,
-    distanceDisplay: '245 km',
-    durationDisplay: '4.25 Hours',
-    category: 'Tourist',
-    popularity: 9,
-    isFeatured: true,
-    seasonality: ["All Season"],
-    popularFor: ["Sunset Point","Vivekananda Rock","Tourism"],
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Madurai to Kanyakumari. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai to Kanyakumari One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai to Kanyakumari with SAMAYAS. Hatchback from ₹3,675, Sedan ₹3,675, SUV ₹4,900. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 3675,
-      "sedan": 3675,
-      "suv": 4900,
-      "innova": 5390,
-      "hycross": 6125,
-      "traveller": 7350
-},
-    highways: ["NH44"],
-    tolls: {
-      costRange: '₹280 - ₹360',
-      plazasCount: 3,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Madurai Central City / Main Junction',
-      'Madurai Railway Station & Bus Stand',
-      'Madurai Residential Areas & Hotels',
-      'Madurai Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Kanyakumari City Center & Main Commercial Hub',
-      'Kanyakumari Railway Station & Transit Terminals',
-      'Kanyakumari Hotels, Resorts & Residential Hubs',
-      'Kanyakumari Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Madurai', type: 'Origin', desc: 'Doorstep pickup across Madurai.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Kanyakumari', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Kanyakumari.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Madurai to Kanyakumari?',
-        a: 'The one-way taxi fare from Madurai to Kanyakumari starts at ₹3,675 for a Hatchback, ₹3,675 for a Sedan, and ₹4,900 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Madurai to Kanyakumari?',
-        a: 'The distance from Madurai to Kanyakumari is approx 245 km via NH44. Travel duration is around 4.25 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Madurai?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Madurai to Kanyakumari. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.25 hours.',
-        route: 'Madurai to Kanyakumari',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Madurai to Kanyakumari. Zero return charges and transparent per-km bill.',
-        route: 'Madurai to Kanyakumari',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Kanyakumari to Madurai', slug: 'kanyakumari-to-madurai', distance: '245 km', fare: '₹3,675' },
-    ],
-  },
-
-  'kanyakumari-to-madurai': {
-    from: 'Kanyakumari',
-    to: 'Madurai',
-    fromSlug: 'kanyakumari',
-    toSlug: 'madurai',
-    returnRouteSlug: 'madurai-to-kanyakumari',
-    distanceKm: 245,
-    timeHours: 4.25,
-    distanceDisplay: '245 km',
-    durationDisplay: '4.25 Hours',
-    category: 'Tourist',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["IXM Airport","Tourism Return"],
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Kanyakumari to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Kanyakumari to Madurai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Kanyakumari to Madurai with SAMAYAS. Hatchback from ₹3,675, Sedan ₹3,675, SUV ₹4,900. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 3675,
-      "sedan": 3675,
-      "suv": 4900,
-      "innova": 5390,
-      "hycross": 6125,
-      "traveller": 7350
-},
-    highways: ["NH44"],
-    tolls: {
-      costRange: '₹280 - ₹360',
-      plazasCount: 3,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Kanyakumari Central City / Main Junction',
-      'Kanyakumari Railway Station & Bus Stand',
-      'Kanyakumari Residential Areas & Hotels',
-      'Kanyakumari Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Madurai City Center & Main Commercial Hub',
-      'Madurai Railway Station & Transit Terminals',
-      'Madurai Hotels, Resorts & Residential Hubs',
-      'Madurai Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Kanyakumari', type: 'Origin', desc: 'Doorstep pickup across Kanyakumari.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Madurai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Kanyakumari to Madurai?',
-        a: 'The one-way taxi fare from Kanyakumari to Madurai starts at ₹3,675 for a Hatchback, ₹3,675 for a Sedan, and ₹4,900 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Kanyakumari to Madurai?',
-        a: 'The distance from Kanyakumari to Madurai is approx 245 km via NH44. Travel duration is around 4.25 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Kanyakumari?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Kanyakumari including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Kanyakumari to Madurai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 4.25 hours.',
-        route: 'Kanyakumari to Madurai',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Kanyakumari to Madurai. Zero return charges and transparent per-km bill.',
-        route: 'Kanyakumari to Madurai',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Madurai to Kanyakumari', slug: 'madurai-to-kanyakumari', distance: '245 km', fare: '₹3,675' },
-    ],
-  },
-
-  'madurai-to-courtallam': {
-    from: 'Madurai',
-    to: 'Courtallam',
-    fromSlug: 'madurai',
-    toSlug: 'tenkasi',
-    returnRouteSlug: 'courtallam-to-madurai',
-    distanceKm: 160,
-    timeHours: 3.5,
-    distanceDisplay: '160 km',
-    durationDisplay: '3.5 Hours',
-    category: 'Tourist',
-    popularity: 8,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["Waterfalls","Ayurveda","Tourism"],
-    roadConditions: 'Access-controlled NH744 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Madurai to Courtallam. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai to Courtallam One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai to Courtallam with SAMAYAS. Hatchback from ₹2,400, Sedan ₹2,400, SUV ₹3,200. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 2400,
-      "sedan": 2400,
-      "suv": 3200,
-      "innova": 3520,
-      "hycross": 4000,
-      "traveller": 4800
-},
-    highways: ["NH744"],
-    tolls: {
-      costRange: '₹110 - ₹160',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Madurai Central City / Main Junction',
-      'Madurai Railway Station & Bus Stand',
-      'Madurai Residential Areas & Hotels',
-      'Madurai Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Courtallam City Center & Main Commercial Hub',
-      'Courtallam Railway Station & Transit Terminals',
-      'Courtallam Hotels, Resorts & Residential Hubs',
-      'Courtallam Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Madurai', type: 'Origin', desc: 'Doorstep pickup across Madurai.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Courtallam', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Courtallam.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Madurai to Courtallam?',
-        a: 'The one-way taxi fare from Madurai to Courtallam starts at ₹2,400 for a Hatchback, ₹2,400 for a Sedan, and ₹3,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Madurai to Courtallam?',
-        a: 'The distance from Madurai to Courtallam is approx 160 km via NH744. Travel duration is around 3.5 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Madurai?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Madurai to Courtallam. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
-        route: 'Madurai to Courtallam',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Madurai to Courtallam. Zero return charges and transparent per-km bill.',
-        route: 'Madurai to Courtallam',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Courtallam to Madurai', slug: 'courtallam-to-madurai', distance: '160 km', fare: '₹2,400' },
-    ],
-  },
-
-  'courtallam-to-madurai': {
-    from: 'Courtallam',
-    to: 'Madurai',
-    fromSlug: 'tenkasi',
-    toSlug: 'madurai',
-    returnRouteSlug: 'madurai-to-courtallam',
-    distanceKm: 160,
-    timeHours: 3.5,
-    distanceDisplay: '160 km',
-    durationDisplay: '3.5 Hours',
-    category: 'Tourist',
-    popularity: 8,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["IXM Airport","Tourism Return"],
-    roadConditions: 'Access-controlled NH744 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Courtallam to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Courtallam to Madurai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Courtallam to Madurai with SAMAYAS. Hatchback from ₹2,400, Sedan ₹2,400, SUV ₹3,200. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 2400,
-      "sedan": 2400,
-      "suv": 3200,
-      "innova": 3520,
-      "hycross": 4000,
-      "traveller": 4800
-},
-    highways: ["NH744"],
-    tolls: {
-      costRange: '₹110 - ₹160',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Courtallam Central City / Main Junction',
-      'Courtallam Railway Station & Bus Stand',
-      'Courtallam Residential Areas & Hotels',
-      'Courtallam Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Madurai City Center & Main Commercial Hub',
-      'Madurai Railway Station & Transit Terminals',
-      'Madurai Hotels, Resorts & Residential Hubs',
-      'Madurai Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Courtallam', type: 'Origin', desc: 'Doorstep pickup across Courtallam.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Madurai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Courtallam to Madurai?',
-        a: 'The one-way taxi fare from Courtallam to Madurai starts at ₹2,400 for a Hatchback, ₹2,400 for a Sedan, and ₹3,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Courtallam to Madurai?',
-        a: 'The distance from Courtallam to Madurai is approx 160 km via NH744. Travel duration is around 3.5 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Courtallam?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Courtallam including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Courtallam to Madurai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
-        route: 'Courtallam to Madurai',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Courtallam to Madurai. Zero return charges and transparent per-km bill.',
-        route: 'Courtallam to Madurai',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Madurai to Courtallam', slug: 'madurai-to-courtallam', distance: '160 km', fare: '₹2,400' },
-    ],
-  },
-
   'chennai-to-pondicherry': {
     from: 'Chennai',
-    to: 'Puducherry',
+    to: 'Pondicherry',
     fromSlug: 'chennai',
-    toSlug: 'viluppuram',
+    toSlug: 'puducherry',
     returnRouteSlug: 'pondicherry-to-chennai',
-    distanceKm: 160,
-    timeHours: 3.25,
-    distanceDisplay: '160 km',
-    durationDisplay: '3.25 Hours',
+    distanceKm: 150,
+    timeHours: 3,
+    distanceDisplay: '150 km',
+    durationDisplay: '3 Hours',
     category: 'Tourist',
     popularity: 10,
     isFeatured: true,
     seasonality: ["All Season"],
-    popularFor: ["ECR Roadtrip","Auroville","French Quarter"],
+    popularFor: ["Weekend Getaway","French Colony","Beach"],
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
-    heroTagline: 'Affordable One-Way Taxi from Chennai to Puducherry. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Puducherry One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Puducherry with SAMAYAS. Hatchback from ₹2,400, Sedan ₹2,400, SUV ₹3,200. 24/7 doorstep pickups.',
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Pondicherry. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Pondicherry One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Pondicherry with SAMAYAS. Hatchback from ₹2,250, Sedan ₹2,250, SUV ₹3,000. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2400,
-      "sedan": 2400,
-      "suv": 3200,
-      "innova": 3520,
-      "hycross": 4000,
-      "traveller": 4800
+      "hatchback": 2250,
+      "sedan": 2250,
+      "suv": 3000,
+      "innova": 3300,
+      "hycross": 3750,
+      "traveller": 4500
 },
-    highways: ["ECR","NH32"],
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Baker Street French Bakery",
+                  "cuisine": "French & European",
+                  "famousFor": "Butter Croissants, Quiche & Eclairs",
+                  "detour": "1 km ECR Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Snacks"
+                  ],
+                  "rating": "4.7★"
+            },
+            {
+                  "name": "ECR Dhaba & Seafood Shack",
+                  "cuisine": "Chettinad Seafood",
+                  "famousFor": "Fresh Tawa Fish Fry & Prawn Masala",
+                  "detour": "0 km ECR Highway",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Cafe Des Arts French Quarter",
+                  "type": "Coffee Shop & Cafe"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Auroville Globe & Matrimandir",
+                  "description": "Universal township dedicated to human unity with iconic golden dome.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            },
+            {
+                  "name": "Mahabalipuram Five Rathas & Shore Temple",
+                  "description": "Ancient 7th-century rock-cut monuments along ECR coastline.",
+                  "visitDuration": "1.5 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "selfieSpots": [
+            {
+                  "name": "Pondicherry Promenade Rock Beach",
+                  "type": "French Quarter Sea Boardwalk",
+                  "location": "White Town Beach Road"
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Aromatherapy & Handmade Leather",
+                  "famousProducts": "Auroville Incense, Essential Oils & Genuine Leather"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Mahabalipuram ECR Fuel & Plaza",
+                  "type": "Petrol Pump & Restrooms",
+                  "location": "ECR Highway Km 55"
+            }
+      ]
+},
+    highways: ["ECR Coastal Highway"],
     tolls: {
-      costRange: '₹140 - ₹180',
+      costRange: '₹110 - ₹160',
       plazasCount: 2,
       fastagSupported: true,
       cashAccepted: true,
@@ -5991,24 +8713,24 @@ export const routeContent = {
       'Chennai Suburbs & Outer Ring Gates',
     ],
     dropLocations: [
-      'Puducherry City Center & Main Commercial Hub',
-      'Puducherry Railway Station & Transit Terminals',
-      'Puducherry Hotels, Resorts & Residential Hubs',
-      'Puducherry Airport / Highway Junction Drops',
+      'Pondicherry City Center & Main Commercial Hub',
+      'Pondicherry Railway Station & Transit Terminals',
+      'Pondicherry Hotels, Resorts & Residential Hubs',
+      'Pondicherry Airport / Highway Junction Drops',
     ],
     placesOnTheWay: [
       { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
       { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Puducherry', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Puducherry.' },
+      { name: 'Pondicherry', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Pondicherry.' },
     ],
     faqs: [
       {
-        q: 'What is the one-way taxi fare from Chennai to Puducherry?',
-        a: 'The one-way taxi fare from Chennai to Puducherry starts at ₹2,400 for a Hatchback, ₹2,400 for a Sedan, and ₹3,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        q: 'What is the one-way taxi fare from Chennai to Pondicherry?',
+        a: 'The one-way taxi fare from Chennai to Pondicherry starts at ₹2,250 for a Hatchback, ₹2,250 for a Sedan, and ₹3,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
-        q: 'How long does a cab take from Chennai to Puducherry?',
-        a: 'The distance from Chennai to Puducherry is approx 160 km via ECR. Travel duration is around 3.25 hours.',
+        q: 'How long does a cab take from Chennai to Pondicherry?',
+        a: 'The distance from Chennai to Pondicherry is approx 150 km via ECR Coastal Highway. Travel duration is around 3 hours.',
       },
       {
         q: 'Is 24/7 doorstep pickup available in Chennai?',
@@ -6019,61 +8741,127 @@ export const routeContent = {
       {
         name: 'Suresh Kumar',
         rating: 5,
-        text: 'Booked a one-way cab from Chennai to Puducherry. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
-        route: 'Chennai to Puducherry',
+        text: 'Booked a one-way cab from Chennai to Pondicherry. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3 hours.',
+        route: 'Chennai to Pondicherry',
       },
       {
         name: 'Priya Dharshini',
         rating: 5,
-        text: 'Safe and comfortable trip from Chennai to Puducherry. Zero return charges and transparent per-km bill.',
-        route: 'Chennai to Puducherry',
+        text: 'Safe and comfortable trip from Chennai to Pondicherry. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Pondicherry',
       },
     ],
     nearbyRoutes: [
-      { name: 'Puducherry to Chennai', slug: 'pondicherry-to-chennai', distance: '160 km', fare: '₹2,400' },
+      { name: 'Pondicherry to Chennai', slug: 'pondicherry-to-chennai', distance: '150 km', fare: '₹2,250' },
     ],
   },
 
   'pondicherry-to-chennai': {
-    from: 'Puducherry',
+    from: 'Pondicherry',
     to: 'Chennai',
-    fromSlug: 'viluppuram',
+    fromSlug: 'puducherry',
     toSlug: 'chennai',
     returnRouteSlug: 'chennai-to-pondicherry',
-    distanceKm: 160,
-    timeHours: 3.25,
-    distanceDisplay: '160 km',
-    durationDisplay: '3.25 Hours',
+    distanceKm: 150,
+    timeHours: 3,
+    distanceDisplay: '150 km',
+    durationDisplay: '3 Hours',
     category: 'Tourist',
     popularity: 10,
-    isFeatured: false,
+    isFeatured: true,
     seasonality: ["All Season"],
-    popularFor: ["MAA Airport","Weekend Return"],
+    popularFor: ["MAA Airport","Corporate Return"],
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
-    heroTagline: 'Affordable One-Way Taxi from Puducherry to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Puducherry to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Puducherry to Chennai with SAMAYAS. Hatchback from ₹2,400, Sedan ₹2,400, SUV ₹3,200. 24/7 doorstep pickups.',
+    heroTagline: 'Affordable One-Way Taxi from Pondicherry to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Pondicherry to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Pondicherry to Chennai with SAMAYAS. Hatchback from ₹2,250, Sedan ₹2,250, SUV ₹3,000. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2400,
-      "sedan": 2400,
-      "suv": 3200,
-      "innova": 3520,
-      "hycross": 4000,
-      "traveller": 4800
+      "hatchback": 2250,
+      "sedan": 2250,
+      "suv": 3000,
+      "innova": 3300,
+      "hycross": 3750,
+      "traveller": 4500
 },
-    highways: ["ECR","NH32"],
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Baker Street French Bakery",
+                  "cuisine": "French & European",
+                  "famousFor": "Butter Croissants, Quiche & Eclairs",
+                  "detour": "1 km ECR Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Snacks"
+                  ],
+                  "rating": "4.7★"
+            },
+            {
+                  "name": "ECR Dhaba & Seafood Shack",
+                  "cuisine": "Chettinad Seafood",
+                  "famousFor": "Fresh Tawa Fish Fry & Prawn Masala",
+                  "detour": "0 km ECR Highway",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Cafe Des Arts French Quarter",
+                  "type": "Coffee Shop & Cafe"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Auroville Globe & Matrimandir",
+                  "description": "Universal township dedicated to human unity with iconic golden dome.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            },
+            {
+                  "name": "Mahabalipuram Five Rathas & Shore Temple",
+                  "description": "Ancient 7th-century rock-cut monuments along ECR coastline.",
+                  "visitDuration": "1.5 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "selfieSpots": [
+            {
+                  "name": "Pondicherry Promenade Rock Beach",
+                  "type": "French Quarter Sea Boardwalk",
+                  "location": "White Town Beach Road"
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Aromatherapy & Handmade Leather",
+                  "famousProducts": "Auroville Incense, Essential Oils & Genuine Leather"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Mahabalipuram ECR Fuel & Plaza",
+                  "type": "Petrol Pump & Restrooms",
+                  "location": "ECR Highway Km 55"
+            }
+      ]
+},
+    highways: ["ECR Coastal Highway"],
     tolls: {
-      costRange: '₹140 - ₹180',
+      costRange: '₹110 - ₹160',
       plazasCount: 2,
       fastagSupported: true,
       cashAccepted: true,
       note: 'Toll plaza charges and state permit fees extra where applicable.',
     },
     pickupLocations: [
-      'Puducherry Central City / Main Junction',
-      'Puducherry Railway Station & Bus Stand',
-      'Puducherry Residential Areas & Hotels',
-      'Puducherry Suburbs & Outer Ring Gates',
+      'Pondicherry Central City / Main Junction',
+      'Pondicherry Railway Station & Bus Stand',
+      'Pondicherry Residential Areas & Hotels',
+      'Pondicherry Suburbs & Outer Ring Gates',
     ],
     dropLocations: [
       'Chennai City Center & Main Commercial Hub',
@@ -6082,40 +8870,40 @@ export const routeContent = {
       'Chennai Airport / Highway Junction Drops',
     ],
     placesOnTheWay: [
-      { name: 'Puducherry', type: 'Origin', desc: 'Doorstep pickup across Puducherry.' },
+      { name: 'Pondicherry', type: 'Origin', desc: 'Doorstep pickup across Pondicherry.' },
       { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
       { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
     ],
     faqs: [
       {
-        q: 'What is the one-way taxi fare from Puducherry to Chennai?',
-        a: 'The one-way taxi fare from Puducherry to Chennai starts at ₹2,400 for a Hatchback, ₹2,400 for a Sedan, and ₹3,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        q: 'What is the one-way taxi fare from Pondicherry to Chennai?',
+        a: 'The one-way taxi fare from Pondicherry to Chennai starts at ₹2,250 for a Hatchback, ₹2,250 for a Sedan, and ₹3,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
-        q: 'How long does a cab take from Puducherry to Chennai?',
-        a: 'The distance from Puducherry to Chennai is approx 160 km via ECR. Travel duration is around 3.25 hours.',
+        q: 'How long does a cab take from Pondicherry to Chennai?',
+        a: 'The distance from Pondicherry to Chennai is approx 150 km via ECR Coastal Highway. Travel duration is around 3 hours.',
       },
       {
-        q: 'Is 24/7 doorstep pickup available in Puducherry?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Puducherry including railway stations, airports, and hotels.',
+        q: 'Is 24/7 doorstep pickup available in Pondicherry?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Pondicherry including railway stations, airports, and hotels.',
       },
     ],
     reviews: [
       {
         name: 'Suresh Kumar',
         rating: 5,
-        text: 'Booked a one-way cab from Puducherry to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
-        route: 'Puducherry to Chennai',
+        text: 'Booked a one-way cab from Pondicherry to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3 hours.',
+        route: 'Pondicherry to Chennai',
       },
       {
         name: 'Priya Dharshini',
         rating: 5,
-        text: 'Safe and comfortable trip from Puducherry to Chennai. Zero return charges and transparent per-km bill.',
-        route: 'Puducherry to Chennai',
+        text: 'Safe and comfortable trip from Pondicherry to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Pondicherry to Chennai',
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Puducherry', slug: 'chennai-to-pondicherry', distance: '160 km', fare: '₹2,400' },
+      { name: 'Chennai to Pondicherry', slug: 'chennai-to-pondicherry', distance: '150 km', fare: '₹2,250' },
     ],
   },
 
@@ -6123,7 +8911,7 @@ export const routeContent = {
     from: 'Chennai',
     to: 'Mahabalipuram',
     fromSlug: 'chennai',
-    toSlug: 'chengalpattu',
+    toSlug: 'chennai',
     returnRouteSlug: 'mahabalipuram-to-chennai',
     distanceKm: 55,
     timeHours: 1.25,
@@ -6133,7 +8921,7 @@ export const routeContent = {
     popularity: 9,
     isFeatured: true,
     seasonality: ["Festival","Winter","All Season"],
-    popularFor: ["UNESCO Heritage","Shore Temple","Day Trip"],
+    popularFor: ["Heritage","Shore Temple","Day Trip"],
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Mahabalipuram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
     seoTitle: 'Chennai to Mahabalipuram One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
@@ -6146,9 +8934,52 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
-    highways: ["ECR Scenic Road"],
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Mahabalipuram)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Mahabalipuram Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along ECR Scenic Highway.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "ECR Scenic Highway Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "ECR Scenic Highway Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
+    highways: ["ECR Scenic Highway"],
     tolls: {
-      costRange: '₹50 - ₹80',
+      costRange: '₹60 - ₹90',
       plazasCount: 1,
       fastagSupported: true,
       cashAccepted: true,
@@ -6178,7 +9009,7 @@ export const routeContent = {
       },
       {
         q: 'How long does a cab take from Chennai to Mahabalipuram?',
-        a: 'The distance from Chennai to Mahabalipuram is approx 55 km via ECR Scenic Road. Travel duration is around 1.25 hours.',
+        a: 'The distance from Chennai to Mahabalipuram is approx 55 km via ECR Scenic Highway. Travel duration is around 1.25 hours.',
       },
       {
         q: 'Is 24/7 doorstep pickup available in Chennai?',
@@ -6207,7 +9038,7 @@ export const routeContent = {
   'mahabalipuram-to-chennai': {
     from: 'Mahabalipuram',
     to: 'Chennai',
-    fromSlug: 'chengalpattu',
+    fromSlug: 'chennai',
     toSlug: 'chennai',
     returnRouteSlug: 'chennai-to-mahabalipuram',
     distanceKm: 55,
@@ -6231,9 +9062,52 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
-    highways: ["ECR Scenic Road"],
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Mahabalipuram - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Mahabalipuram - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along ECR Scenic Highway.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "ECR Scenic Highway Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "ECR Scenic Highway Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Mahabalipuram Regional Snacks",
+                  "location": "Mahabalipuram Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Mahabalipuram"
+            }
+      ]
+},
+    highways: ["ECR Scenic Highway"],
     tolls: {
-      costRange: '₹50 - ₹80',
+      costRange: '₹60 - ₹90',
       plazasCount: 1,
       fastagSupported: true,
       cashAccepted: true,
@@ -6263,7 +9137,7 @@ export const routeContent = {
       },
       {
         q: 'How long does a cab take from Mahabalipuram to Chennai?',
-        a: 'The distance from Mahabalipuram to Chennai is approx 55 km via ECR Scenic Road. Travel duration is around 1.25 hours.',
+        a: 'The distance from Mahabalipuram to Chennai is approx 55 km via ECR Scenic Highway. Travel duration is around 1.25 hours.',
       },
       {
         q: 'Is 24/7 doorstep pickup available in Mahabalipuram?',
@@ -6289,1555 +9163,25 @@ export const routeContent = {
     ],
   },
 
-  'tirunelveli-to-kanyakumari': {
-    from: 'Tirunelveli',
-    to: 'Kanyakumari',
-    fromSlug: 'tirunelveli',
-    toSlug: 'kanyakumari',
-    returnRouteSlug: 'kanyakumari-to-tirunelveli',
-    distanceKm: 85,
-    timeHours: 1.75,
-    distanceDisplay: '85 km',
-    durationDisplay: '1.75 Hours',
-    category: 'Tourist',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["Sunset View","Vivekananda Rock"],
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Tirunelveli to Kanyakumari. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Tirunelveli to Kanyakumari One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Tirunelveli to Kanyakumari with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH44"],
-    tolls: {
-      costRange: '₹80 - ₹110',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Tirunelveli Central City / Main Junction',
-      'Tirunelveli Railway Station & Bus Stand',
-      'Tirunelveli Residential Areas & Hotels',
-      'Tirunelveli Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Kanyakumari City Center & Main Commercial Hub',
-      'Kanyakumari Railway Station & Transit Terminals',
-      'Kanyakumari Hotels, Resorts & Residential Hubs',
-      'Kanyakumari Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Tirunelveli', type: 'Origin', desc: 'Doorstep pickup across Tirunelveli.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Kanyakumari', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Kanyakumari.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Tirunelveli to Kanyakumari?',
-        a: 'The one-way taxi fare from Tirunelveli to Kanyakumari starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Tirunelveli to Kanyakumari?',
-        a: 'The distance from Tirunelveli to Kanyakumari is approx 85 km via NH44. Travel duration is around 1.75 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Tirunelveli?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Tirunelveli including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Tirunelveli to Kanyakumari. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.75 hours.',
-        route: 'Tirunelveli to Kanyakumari',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Tirunelveli to Kanyakumari. Zero return charges and transparent per-km bill.',
-        route: 'Tirunelveli to Kanyakumari',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Kanyakumari to Tirunelveli', slug: 'kanyakumari-to-tirunelveli', distance: '85 km', fare: '₹1,950' },
-    ],
-  },
-
-  'kanyakumari-to-tirunelveli': {
-    from: 'Kanyakumari',
-    to: 'Tirunelveli',
-    fromSlug: 'kanyakumari',
-    toSlug: 'tirunelveli',
-    returnRouteSlug: 'tirunelveli-to-kanyakumari',
-    distanceKm: 85,
-    timeHours: 1.75,
-    distanceDisplay: '85 km',
-    durationDisplay: '1.75 Hours',
-    category: 'Tourist',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["TEN Station","Tourism Return"],
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Kanyakumari to Tirunelveli. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Kanyakumari to Tirunelveli One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Kanyakumari to Tirunelveli with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH44"],
-    tolls: {
-      costRange: '₹80 - ₹110',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Kanyakumari Central City / Main Junction',
-      'Kanyakumari Railway Station & Bus Stand',
-      'Kanyakumari Residential Areas & Hotels',
-      'Kanyakumari Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Tirunelveli City Center & Main Commercial Hub',
-      'Tirunelveli Railway Station & Transit Terminals',
-      'Tirunelveli Hotels, Resorts & Residential Hubs',
-      'Tirunelveli Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Kanyakumari', type: 'Origin', desc: 'Doorstep pickup across Kanyakumari.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Tirunelveli', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Tirunelveli.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Kanyakumari to Tirunelveli?',
-        a: 'The one-way taxi fare from Kanyakumari to Tirunelveli starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Kanyakumari to Tirunelveli?',
-        a: 'The distance from Kanyakumari to Tirunelveli is approx 85 km via NH44. Travel duration is around 1.75 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Kanyakumari?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Kanyakumari including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Kanyakumari to Tirunelveli. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.75 hours.',
-        route: 'Kanyakumari to Tirunelveli',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Kanyakumari to Tirunelveli. Zero return charges and transparent per-km bill.',
-        route: 'Kanyakumari to Tirunelveli',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Tirunelveli to Kanyakumari', slug: 'tirunelveli-to-kanyakumari', distance: '85 km', fare: '₹1,950' },
-    ],
-  },
-
-  'chennai-airport-to-pondicherry': {
-    from: 'Chennai Airport',
-    to: 'Puducherry',
-    fromSlug: 'chennai',
-    toSlug: 'viluppuram',
-    returnRouteSlug: 'pondicherry-to-chennai-airport',
-    distanceKm: 140,
-    timeHours: 2.75,
-    distanceDisplay: '140 km',
-    durationDisplay: '2.75 Hours',
-    category: 'Airport',
-    popularity: 10,
-    isFeatured: true,
-    seasonality: ["All Season"],
-    popularFor: ["Airport Pickup","Auroville","French Quarter"],
-    roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
-    heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Puducherry. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai Airport to Puducherry One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai Airport to Puducherry with SAMAYAS. Hatchback from ₹2,100, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 2100,
-      "sedan": 2100,
-      "suv": 2800,
-      "innova": 3080,
-      "hycross": 3500,
-      "traveller": 4200
-},
-    highways: ["ECR","NH32"],
-    tolls: {
-      costRange: '₹140 - ₹180',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Chennai Airport Central City / Main Junction',
-      'Chennai Airport Railway Station & Bus Stand',
-      'Chennai Airport Residential Areas & Hotels',
-      'Chennai Airport Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Puducherry City Center & Main Commercial Hub',
-      'Puducherry Railway Station & Transit Terminals',
-      'Puducherry Hotels, Resorts & Residential Hubs',
-      'Puducherry Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Chennai Airport', type: 'Origin', desc: 'Doorstep pickup across Chennai Airport.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Puducherry', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Puducherry.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Chennai Airport to Puducherry?',
-        a: 'The one-way taxi fare from Chennai Airport to Puducherry starts at ₹2,100 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Chennai Airport to Puducherry?',
-        a: 'The distance from Chennai Airport to Puducherry is approx 140 km via ECR. Travel duration is around 2.75 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Chennai Airport?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai Airport including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Chennai Airport to Puducherry. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.75 hours.',
-        route: 'Chennai Airport to Puducherry',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Chennai Airport to Puducherry. Zero return charges and transparent per-km bill.',
-        route: 'Chennai Airport to Puducherry',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Puducherry to Chennai Airport', slug: 'pondicherry-to-chennai-airport', distance: '140 km', fare: '₹2,100' },
-    ],
-  },
-
-  'pondicherry-to-chennai-airport': {
-    from: 'Puducherry',
-    to: 'Chennai Airport',
-    fromSlug: 'viluppuram',
-    toSlug: 'chennai',
-    returnRouteSlug: 'chennai-airport-to-pondicherry',
-    distanceKm: 140,
-    timeHours: 2.75,
-    distanceDisplay: '140 km',
-    durationDisplay: '2.75 Hours',
-    category: 'Airport',
-    popularity: 10,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["MAA Flight Drop","International Flight"],
-    roadConditions: 'Access-controlled NH32 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Puducherry to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Puducherry to Chennai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Puducherry to Chennai Airport with SAMAYAS. Hatchback from ₹2,100, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 2100,
-      "sedan": 2100,
-      "suv": 2800,
-      "innova": 3080,
-      "hycross": 3500,
-      "traveller": 4200
-},
-    highways: ["NH32","ECR"],
-    tolls: {
-      costRange: '₹140 - ₹180',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Puducherry Central City / Main Junction',
-      'Puducherry Railway Station & Bus Stand',
-      'Puducherry Residential Areas & Hotels',
-      'Puducherry Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Chennai Airport City Center & Main Commercial Hub',
-      'Chennai Airport Railway Station & Transit Terminals',
-      'Chennai Airport Hotels, Resorts & Residential Hubs',
-      'Chennai Airport Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Puducherry', type: 'Origin', desc: 'Doorstep pickup across Puducherry.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Chennai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai Airport.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Puducherry to Chennai Airport?',
-        a: 'The one-way taxi fare from Puducherry to Chennai Airport starts at ₹2,100 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Puducherry to Chennai Airport?',
-        a: 'The distance from Puducherry to Chennai Airport is approx 140 km via NH32. Travel duration is around 2.75 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Puducherry?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Puducherry including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Puducherry to Chennai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.75 hours.',
-        route: 'Puducherry to Chennai Airport',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Puducherry to Chennai Airport. Zero return charges and transparent per-km bill.',
-        route: 'Puducherry to Chennai Airport',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Chennai Airport to Puducherry', slug: 'chennai-airport-to-pondicherry', distance: '140 km', fare: '₹2,100' },
-    ],
-  },
-
-  'chennai-airport-to-vellore': {
-    from: 'Chennai Airport',
-    to: 'Vellore',
-    fromSlug: 'chennai',
-    toSlug: 'vellore',
-    returnRouteSlug: 'vellore-to-chennai-airport',
-    distanceKm: 125,
-    timeHours: 2.5,
-    distanceDisplay: '125 km',
-    durationDisplay: '2.5 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: true,
-    seasonality: ["All Season"],
-    popularFor: ["CMC Patient Pickup","Medical Airport Transfer"],
-    roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Vellore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai Airport to Vellore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai Airport to Vellore with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH48"],
-    tolls: {
-      costRange: '₹140 - ₹180',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Chennai Airport Central City / Main Junction',
-      'Chennai Airport Railway Station & Bus Stand',
-      'Chennai Airport Residential Areas & Hotels',
-      'Chennai Airport Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Vellore City Center & Main Commercial Hub',
-      'Vellore Railway Station & Transit Terminals',
-      'Vellore Hotels, Resorts & Residential Hubs',
-      'Vellore Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Chennai Airport', type: 'Origin', desc: 'Doorstep pickup across Chennai Airport.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Vellore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Vellore.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Chennai Airport to Vellore?',
-        a: 'The one-way taxi fare from Chennai Airport to Vellore starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Chennai Airport to Vellore?',
-        a: 'The distance from Chennai Airport to Vellore is approx 125 km via NH48. Travel duration is around 2.5 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Chennai Airport?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai Airport including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Chennai Airport to Vellore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.5 hours.',
-        route: 'Chennai Airport to Vellore',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Chennai Airport to Vellore. Zero return charges and transparent per-km bill.',
-        route: 'Chennai Airport to Vellore',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Vellore to Chennai Airport', slug: 'vellore-to-chennai-airport', distance: '125 km', fare: '₹1,950' },
-    ],
-  },
-
-  'vellore-to-chennai-airport': {
-    from: 'Vellore',
-    to: 'Chennai Airport',
-    fromSlug: 'vellore',
-    toSlug: 'chennai',
-    returnRouteSlug: 'chennai-airport-to-vellore',
-    distanceKm: 125,
-    timeHours: 2.5,
-    distanceDisplay: '125 km',
-    durationDisplay: '2.5 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["CMC Flight Drop","MAA Airport Drop"],
-    roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Vellore to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Vellore to Chennai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Vellore to Chennai Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH48"],
-    tolls: {
-      costRange: '₹140 - ₹180',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Vellore Central City / Main Junction',
-      'Vellore Railway Station & Bus Stand',
-      'Vellore Residential Areas & Hotels',
-      'Vellore Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Chennai Airport City Center & Main Commercial Hub',
-      'Chennai Airport Railway Station & Transit Terminals',
-      'Chennai Airport Hotels, Resorts & Residential Hubs',
-      'Chennai Airport Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Vellore', type: 'Origin', desc: 'Doorstep pickup across Vellore.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Chennai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai Airport.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Vellore to Chennai Airport?',
-        a: 'The one-way taxi fare from Vellore to Chennai Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Vellore to Chennai Airport?',
-        a: 'The distance from Vellore to Chennai Airport is approx 125 km via NH48. Travel duration is around 2.5 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Vellore?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Vellore including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Vellore to Chennai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 2.5 hours.',
-        route: 'Vellore to Chennai Airport',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Vellore to Chennai Airport. Zero return charges and transparent per-km bill.',
-        route: 'Vellore to Chennai Airport',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Chennai Airport to Vellore', slug: 'chennai-airport-to-vellore', distance: '125 km', fare: '₹1,950' },
-    ],
-  },
-
-  'chennai-airport-to-tirupati': {
-    from: 'Chennai Airport',
-    to: 'Tirupati',
-    fromSlug: 'chennai',
-    toSlug: 'vellore',
-    returnRouteSlug: 'tirupati-to-chennai-airport',
-    distanceKm: 130,
-    timeHours: 3,
-    distanceDisplay: '130 km',
-    durationDisplay: '3 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: true,
-    seasonality: ["Festival","Winter","All Season"],
-    popularFor: ["Airport Temple Taxi","Tirumala Pilgrimage"],
-    roadConditions: 'Access-controlled NH716 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Tirupati. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai Airport to Tirupati One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai Airport to Tirupati with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH716"],
-    tolls: {
-      costRange: '₹140 - ₹180',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Chennai Airport Central City / Main Junction',
-      'Chennai Airport Railway Station & Bus Stand',
-      'Chennai Airport Residential Areas & Hotels',
-      'Chennai Airport Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Tirupati City Center & Main Commercial Hub',
-      'Tirupati Railway Station & Transit Terminals',
-      'Tirupati Hotels, Resorts & Residential Hubs',
-      'Tirupati Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Chennai Airport', type: 'Origin', desc: 'Doorstep pickup across Chennai Airport.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Tirupati', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Tirupati.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Chennai Airport to Tirupati?',
-        a: 'The one-way taxi fare from Chennai Airport to Tirupati starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Chennai Airport to Tirupati?',
-        a: 'The distance from Chennai Airport to Tirupati is approx 130 km via NH716. Travel duration is around 3 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Chennai Airport?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai Airport including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Chennai Airport to Tirupati. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3 hours.',
-        route: 'Chennai Airport to Tirupati',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Chennai Airport to Tirupati. Zero return charges and transparent per-km bill.',
-        route: 'Chennai Airport to Tirupati',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Tirupati to Chennai Airport', slug: 'tirupati-to-chennai-airport', distance: '130 km', fare: '₹1,950' },
-    ],
-  },
-
-  'tirupati-to-chennai-airport': {
-    from: 'Tirupati',
-    to: 'Chennai Airport',
-    fromSlug: 'vellore',
-    toSlug: 'chennai',
-    returnRouteSlug: 'chennai-airport-to-tirupati',
-    distanceKm: 130,
-    timeHours: 3,
-    distanceDisplay: '130 km',
-    durationDisplay: '3 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["Festival","Winter","All Season"],
-    popularFor: ["MAA Flight Drop","Pilgrimage Return"],
-    roadConditions: 'Access-controlled NH716 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Tirupati to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Tirupati to Chennai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Tirupati to Chennai Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH716"],
-    tolls: {
-      costRange: '₹140 - ₹180',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Tirupati Central City / Main Junction',
-      'Tirupati Railway Station & Bus Stand',
-      'Tirupati Residential Areas & Hotels',
-      'Tirupati Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Chennai Airport City Center & Main Commercial Hub',
-      'Chennai Airport Railway Station & Transit Terminals',
-      'Chennai Airport Hotels, Resorts & Residential Hubs',
-      'Chennai Airport Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Tirupati', type: 'Origin', desc: 'Doorstep pickup across Tirupati.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Chennai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai Airport.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Tirupati to Chennai Airport?',
-        a: 'The one-way taxi fare from Tirupati to Chennai Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Tirupati to Chennai Airport?',
-        a: 'The distance from Tirupati to Chennai Airport is approx 130 km via NH716. Travel duration is around 3 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Tirupati?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Tirupati including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Tirupati to Chennai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3 hours.',
-        route: 'Tirupati to Chennai Airport',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Tirupati to Chennai Airport. Zero return charges and transparent per-km bill.',
-        route: 'Tirupati to Chennai Airport',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Chennai Airport to Tirupati', slug: 'chennai-airport-to-tirupati', distance: '130 km', fare: '₹1,950' },
-    ],
-  },
-
-  'chennai-airport-to-mahabalipuram': {
-    from: 'Chennai Airport',
-    to: 'Mahabalipuram',
-    fromSlug: 'chennai',
-    toSlug: 'chengalpattu',
-    returnRouteSlug: 'mahabalipuram-to-chennai-airport',
-    distanceKm: 50,
-    timeHours: 1.15,
-    distanceDisplay: '50 km',
-    durationDisplay: '1.15 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["Festival","Winter","All Season"],
-    popularFor: ["Tourist Airport Pickup","Resort Transfer"],
-    roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
-    heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Mahabalipuram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai Airport to Mahabalipuram One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai Airport to Mahabalipuram with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["ECR"],
-    tolls: {
-      costRange: '₹50 - ₹80',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Chennai Airport Central City / Main Junction',
-      'Chennai Airport Railway Station & Bus Stand',
-      'Chennai Airport Residential Areas & Hotels',
-      'Chennai Airport Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Mahabalipuram City Center & Main Commercial Hub',
-      'Mahabalipuram Railway Station & Transit Terminals',
-      'Mahabalipuram Hotels, Resorts & Residential Hubs',
-      'Mahabalipuram Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Chennai Airport', type: 'Origin', desc: 'Doorstep pickup across Chennai Airport.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Mahabalipuram', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Mahabalipuram.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Chennai Airport to Mahabalipuram?',
-        a: 'The one-way taxi fare from Chennai Airport to Mahabalipuram starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Chennai Airport to Mahabalipuram?',
-        a: 'The distance from Chennai Airport to Mahabalipuram is approx 50 km via ECR. Travel duration is around 1.15 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Chennai Airport?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai Airport including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Chennai Airport to Mahabalipuram. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.15 hours.',
-        route: 'Chennai Airport to Mahabalipuram',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Chennai Airport to Mahabalipuram. Zero return charges and transparent per-km bill.',
-        route: 'Chennai Airport to Mahabalipuram',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Mahabalipuram to Chennai Airport', slug: 'mahabalipuram-to-chennai-airport', distance: '50 km', fare: '₹1,950' },
-    ],
-  },
-
-  'mahabalipuram-to-chennai-airport': {
-    from: 'Mahabalipuram',
-    to: 'Chennai Airport',
-    fromSlug: 'chengalpattu',
-    toSlug: 'chennai',
-    returnRouteSlug: 'chennai-airport-to-mahabalipuram',
-    distanceKm: 50,
-    timeHours: 1.15,
-    distanceDisplay: '50 km',
-    durationDisplay: '1.15 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["Festival","Winter","All Season"],
-    popularFor: ["MAA Flight Drop","Resort Return"],
-    roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
-    heroTagline: 'Affordable One-Way Taxi from Mahabalipuram to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Mahabalipuram to Chennai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Mahabalipuram to Chennai Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["ECR"],
-    tolls: {
-      costRange: '₹50 - ₹80',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Mahabalipuram Central City / Main Junction',
-      'Mahabalipuram Railway Station & Bus Stand',
-      'Mahabalipuram Residential Areas & Hotels',
-      'Mahabalipuram Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Chennai Airport City Center & Main Commercial Hub',
-      'Chennai Airport Railway Station & Transit Terminals',
-      'Chennai Airport Hotels, Resorts & Residential Hubs',
-      'Chennai Airport Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Mahabalipuram', type: 'Origin', desc: 'Doorstep pickup across Mahabalipuram.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Chennai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai Airport.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Mahabalipuram to Chennai Airport?',
-        a: 'The one-way taxi fare from Mahabalipuram to Chennai Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Mahabalipuram to Chennai Airport?',
-        a: 'The distance from Mahabalipuram to Chennai Airport is approx 50 km via ECR. Travel duration is around 1.15 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Mahabalipuram?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Mahabalipuram including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Mahabalipuram to Chennai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.15 hours.',
-        route: 'Mahabalipuram to Chennai Airport',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Mahabalipuram to Chennai Airport. Zero return charges and transparent per-km bill.',
-        route: 'Mahabalipuram to Chennai Airport',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Chennai Airport to Mahabalipuram', slug: 'chennai-airport-to-mahabalipuram', distance: '50 km', fare: '₹1,950' },
-    ],
-  },
-
-  'chennai-airport-to-kanchipuram': {
-    from: 'Chennai Airport',
-    to: 'Kanchipuram',
-    fromSlug: 'chennai',
-    toSlug: 'kanchipuram',
-    returnRouteSlug: 'kanchipuram-to-chennai-airport',
-    distanceKm: 65,
-    timeHours: 1.5,
-    distanceDisplay: '65 km',
-    durationDisplay: '1.5 Hours',
-    category: 'Airport',
-    popularity: 8,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["Airport Pickup","Silk Town Transfer"],
-    roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Kanchipuram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai Airport to Kanchipuram One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai Airport to Kanchipuram with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH48"],
-    tolls: {
-      costRange: '₹60 - ₹90',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Chennai Airport Central City / Main Junction',
-      'Chennai Airport Railway Station & Bus Stand',
-      'Chennai Airport Residential Areas & Hotels',
-      'Chennai Airport Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Kanchipuram City Center & Main Commercial Hub',
-      'Kanchipuram Railway Station & Transit Terminals',
-      'Kanchipuram Hotels, Resorts & Residential Hubs',
-      'Kanchipuram Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Chennai Airport', type: 'Origin', desc: 'Doorstep pickup across Chennai Airport.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Kanchipuram', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Kanchipuram.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Chennai Airport to Kanchipuram?',
-        a: 'The one-way taxi fare from Chennai Airport to Kanchipuram starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Chennai Airport to Kanchipuram?',
-        a: 'The distance from Chennai Airport to Kanchipuram is approx 65 km via NH48. Travel duration is around 1.5 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Chennai Airport?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai Airport including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Chennai Airport to Kanchipuram. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.5 hours.',
-        route: 'Chennai Airport to Kanchipuram',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Chennai Airport to Kanchipuram. Zero return charges and transparent per-km bill.',
-        route: 'Chennai Airport to Kanchipuram',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Kanchipuram to Chennai Airport', slug: 'kanchipuram-to-chennai-airport', distance: '65 km', fare: '₹1,950' },
-    ],
-  },
-
-  'kanchipuram-to-chennai-airport': {
-    from: 'Kanchipuram',
-    to: 'Chennai Airport',
-    fromSlug: 'kanchipuram',
-    toSlug: 'chennai',
-    returnRouteSlug: 'chennai-airport-to-kanchipuram',
-    distanceKm: 65,
-    timeHours: 1.5,
-    distanceDisplay: '65 km',
-    durationDisplay: '1.5 Hours',
-    category: 'Airport',
-    popularity: 8,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["MAA Flight Drop"],
-    roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Kanchipuram to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Kanchipuram to Chennai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Kanchipuram to Chennai Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH48"],
-    tolls: {
-      costRange: '₹60 - ₹90',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Kanchipuram Central City / Main Junction',
-      'Kanchipuram Railway Station & Bus Stand',
-      'Kanchipuram Residential Areas & Hotels',
-      'Kanchipuram Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Chennai Airport City Center & Main Commercial Hub',
-      'Chennai Airport Railway Station & Transit Terminals',
-      'Chennai Airport Hotels, Resorts & Residential Hubs',
-      'Chennai Airport Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Kanchipuram', type: 'Origin', desc: 'Doorstep pickup across Kanchipuram.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Chennai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai Airport.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Kanchipuram to Chennai Airport?',
-        a: 'The one-way taxi fare from Kanchipuram to Chennai Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Kanchipuram to Chennai Airport?',
-        a: 'The distance from Kanchipuram to Chennai Airport is approx 65 km via NH48. Travel duration is around 1.5 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Kanchipuram?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Kanchipuram including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Kanchipuram to Chennai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.5 hours.',
-        route: 'Kanchipuram to Chennai Airport',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Kanchipuram to Chennai Airport. Zero return charges and transparent per-km bill.',
-        route: 'Kanchipuram to Chennai Airport',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Chennai Airport to Kanchipuram', slug: 'chennai-airport-to-kanchipuram', distance: '65 km', fare: '₹1,950' },
-    ],
-  },
-
-  'chennai-airport-to-chittoor': {
-    from: 'Chennai Airport',
-    to: 'Chittoor',
-    fromSlug: 'chennai',
-    toSlug: 'vellore',
-    returnRouteSlug: 'chittoor-to-chennai-airport',
-    distanceKm: 155,
-    timeHours: 3.25,
-    distanceDisplay: '155 km',
-    durationDisplay: '3.25 Hours',
-    category: 'Airport',
-    popularity: 8,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["Airport Transit","Interstate Business"],
-    roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Chittoor. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai Airport to Chittoor One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai Airport to Chittoor with SAMAYAS. Hatchback from ₹2,325, Sedan ₹2,325, SUV ₹3,100. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 2325,
-      "sedan": 2325,
-      "suv": 3100,
-      "innova": 3410,
-      "hycross": 3875,
-      "traveller": 4650
-},
-    highways: ["NH48"],
-    tolls: {
-      costRange: '₹160 - ₹210',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Chennai Airport Central City / Main Junction',
-      'Chennai Airport Railway Station & Bus Stand',
-      'Chennai Airport Residential Areas & Hotels',
-      'Chennai Airport Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Chittoor City Center & Main Commercial Hub',
-      'Chittoor Railway Station & Transit Terminals',
-      'Chittoor Hotels, Resorts & Residential Hubs',
-      'Chittoor Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Chennai Airport', type: 'Origin', desc: 'Doorstep pickup across Chennai Airport.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Chittoor', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chittoor.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Chennai Airport to Chittoor?',
-        a: 'The one-way taxi fare from Chennai Airport to Chittoor starts at ₹2,325 for a Hatchback, ₹2,325 for a Sedan, and ₹3,100 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Chennai Airport to Chittoor?',
-        a: 'The distance from Chennai Airport to Chittoor is approx 155 km via NH48. Travel duration is around 3.25 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Chennai Airport?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chennai Airport including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Chennai Airport to Chittoor. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
-        route: 'Chennai Airport to Chittoor',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Chennai Airport to Chittoor. Zero return charges and transparent per-km bill.',
-        route: 'Chennai Airport to Chittoor',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Chittoor to Chennai Airport', slug: 'chittoor-to-chennai-airport', distance: '155 km', fare: '₹2,325' },
-    ],
-  },
-
-  'chittoor-to-chennai-airport': {
-    from: 'Chittoor',
-    to: 'Chennai Airport',
-    fromSlug: 'vellore',
-    toSlug: 'chennai',
-    returnRouteSlug: 'chennai-airport-to-chittoor',
-    distanceKm: 155,
-    timeHours: 3.25,
-    distanceDisplay: '155 km',
-    durationDisplay: '3.25 Hours',
-    category: 'Airport',
-    popularity: 8,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["MAA Flight Drop"],
-    roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Chittoor to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chittoor to Chennai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chittoor to Chennai Airport with SAMAYAS. Hatchback from ₹2,325, Sedan ₹2,325, SUV ₹3,100. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 2325,
-      "sedan": 2325,
-      "suv": 3100,
-      "innova": 3410,
-      "hycross": 3875,
-      "traveller": 4650
-},
-    highways: ["NH48"],
-    tolls: {
-      costRange: '₹160 - ₹210',
-      plazasCount: 2,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Chittoor Central City / Main Junction',
-      'Chittoor Railway Station & Bus Stand',
-      'Chittoor Residential Areas & Hotels',
-      'Chittoor Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Chennai Airport City Center & Main Commercial Hub',
-      'Chennai Airport Railway Station & Transit Terminals',
-      'Chennai Airport Hotels, Resorts & Residential Hubs',
-      'Chennai Airport Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Chittoor', type: 'Origin', desc: 'Doorstep pickup across Chittoor.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Chennai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai Airport.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Chittoor to Chennai Airport?',
-        a: 'The one-way taxi fare from Chittoor to Chennai Airport starts at ₹2,325 for a Hatchback, ₹2,325 for a Sedan, and ₹3,100 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Chittoor to Chennai Airport?',
-        a: 'The distance from Chittoor to Chennai Airport is approx 155 km via NH48. Travel duration is around 3.25 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Chittoor?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Chittoor including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Chittoor to Chennai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
-        route: 'Chittoor to Chennai Airport',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Chittoor to Chennai Airport. Zero return charges and transparent per-km bill.',
-        route: 'Chittoor to Chennai Airport',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Chennai Airport to Chittoor', slug: 'chennai-airport-to-chittoor', distance: '155 km', fare: '₹2,325' },
-    ],
-  },
-
-  'trichy-airport-to-thanjavur': {
-    from: 'Trichy Airport',
-    to: 'Thanjavur',
+  'trichy-to-yercaud': {
+    from: 'Trichy',
+    to: 'Yercaud',
     fromSlug: 'tiruchirappalli',
-    toSlug: 'thanjavur',
-    returnRouteSlug: 'thanjavur-to-trichy-airport',
-    distanceKm: 55,
-    timeHours: 1,
-    distanceDisplay: '55 km',
-    durationDisplay: '1 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: true,
-    seasonality: ["All Season"],
-    popularFor: ["TRZ Flight Pickup","Big Temple Visit"],
-    roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Trichy Airport to Thanjavur. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy Airport to Thanjavur One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy Airport to Thanjavur with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH83"],
-    tolls: {
-      costRange: '₹40 - ₹70',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Trichy Airport Central City / Main Junction',
-      'Trichy Airport Railway Station & Bus Stand',
-      'Trichy Airport Residential Areas & Hotels',
-      'Trichy Airport Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Thanjavur City Center & Main Commercial Hub',
-      'Thanjavur Railway Station & Transit Terminals',
-      'Thanjavur Hotels, Resorts & Residential Hubs',
-      'Thanjavur Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Trichy Airport', type: 'Origin', desc: 'Doorstep pickup across Trichy Airport.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Thanjavur', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Thanjavur.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Trichy Airport to Thanjavur?',
-        a: 'The one-way taxi fare from Trichy Airport to Thanjavur starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Trichy Airport to Thanjavur?',
-        a: 'The distance from Trichy Airport to Thanjavur is approx 55 km via NH83. Travel duration is around 1 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Trichy Airport?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy Airport including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Trichy Airport to Thanjavur. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1 hours.',
-        route: 'Trichy Airport to Thanjavur',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Trichy Airport to Thanjavur. Zero return charges and transparent per-km bill.',
-        route: 'Trichy Airport to Thanjavur',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Thanjavur to Trichy Airport', slug: 'thanjavur-to-trichy-airport', distance: '55 km', fare: '₹1,950' },
-    ],
-  },
-
-  'thanjavur-to-trichy-airport': {
-    from: 'Thanjavur',
-    to: 'Trichy Airport',
-    fromSlug: 'thanjavur',
-    toSlug: 'tiruchirappalli',
-    returnRouteSlug: 'trichy-airport-to-thanjavur',
-    distanceKm: 55,
-    timeHours: 1,
-    distanceDisplay: '55 km',
-    durationDisplay: '1 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["TRZ Flight Drop","International Flight"],
-    roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Thanjavur to Trichy Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Thanjavur to Trichy Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Thanjavur to Trichy Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH83"],
-    tolls: {
-      costRange: '₹40 - ₹70',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Thanjavur Central City / Main Junction',
-      'Thanjavur Railway Station & Bus Stand',
-      'Thanjavur Residential Areas & Hotels',
-      'Thanjavur Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Trichy Airport City Center & Main Commercial Hub',
-      'Trichy Airport Railway Station & Transit Terminals',
-      'Trichy Airport Hotels, Resorts & Residential Hubs',
-      'Trichy Airport Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Thanjavur', type: 'Origin', desc: 'Doorstep pickup across Thanjavur.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Trichy Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy Airport.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Thanjavur to Trichy Airport?',
-        a: 'The one-way taxi fare from Thanjavur to Trichy Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Thanjavur to Trichy Airport?',
-        a: 'The distance from Thanjavur to Trichy Airport is approx 55 km via NH83. Travel duration is around 1 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Thanjavur?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Thanjavur including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Thanjavur to Trichy Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1 hours.',
-        route: 'Thanjavur to Trichy Airport',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Thanjavur to Trichy Airport. Zero return charges and transparent per-km bill.',
-        route: 'Thanjavur to Trichy Airport',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Trichy Airport to Thanjavur', slug: 'trichy-airport-to-thanjavur', distance: '55 km', fare: '₹1,950' },
-    ],
-  },
-
-  'trichy-airport-to-karur': {
-    from: 'Trichy Airport',
-    to: 'Karur',
-    fromSlug: 'tiruchirappalli',
-    toSlug: 'karur',
-    returnRouteSlug: 'karur-to-trichy-airport',
-    distanceKm: 85,
-    timeHours: 1.75,
-    distanceDisplay: '85 km',
-    durationDisplay: '1.75 Hours',
-    category: 'Airport',
-    popularity: 8,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["TRZ Flight Pickup","Textile Business"],
-    roadConditions: 'Access-controlled NH81 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Trichy Airport to Karur. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy Airport to Karur One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy Airport to Karur with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH81"],
-    tolls: {
-      costRange: '₹60 - ₹90',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Trichy Airport Central City / Main Junction',
-      'Trichy Airport Railway Station & Bus Stand',
-      'Trichy Airport Residential Areas & Hotels',
-      'Trichy Airport Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Karur City Center & Main Commercial Hub',
-      'Karur Railway Station & Transit Terminals',
-      'Karur Hotels, Resorts & Residential Hubs',
-      'Karur Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Trichy Airport', type: 'Origin', desc: 'Doorstep pickup across Trichy Airport.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Karur', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Karur.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Trichy Airport to Karur?',
-        a: 'The one-way taxi fare from Trichy Airport to Karur starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Trichy Airport to Karur?',
-        a: 'The distance from Trichy Airport to Karur is approx 85 km via NH81. Travel duration is around 1.75 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Trichy Airport?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy Airport including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Trichy Airport to Karur. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.75 hours.',
-        route: 'Trichy Airport to Karur',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Trichy Airport to Karur. Zero return charges and transparent per-km bill.',
-        route: 'Trichy Airport to Karur',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Karur to Trichy Airport', slug: 'karur-to-trichy-airport', distance: '85 km', fare: '₹1,950' },
-    ],
-  },
-
-  'karur-to-trichy-airport': {
-    from: 'Karur',
-    to: 'Trichy Airport',
-    fromSlug: 'karur',
-    toSlug: 'tiruchirappalli',
-    returnRouteSlug: 'trichy-airport-to-karur',
-    distanceKm: 85,
-    timeHours: 1.75,
-    distanceDisplay: '85 km',
-    durationDisplay: '1.75 Hours',
-    category: 'Airport',
-    popularity: 8,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["TRZ Flight Drop"],
-    roadConditions: 'Access-controlled NH81 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Karur to Trichy Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Karur to Trichy Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Karur to Trichy Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH81"],
-    tolls: {
-      costRange: '₹60 - ₹90',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Karur Central City / Main Junction',
-      'Karur Railway Station & Bus Stand',
-      'Karur Residential Areas & Hotels',
-      'Karur Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Trichy Airport City Center & Main Commercial Hub',
-      'Trichy Airport Railway Station & Transit Terminals',
-      'Trichy Airport Hotels, Resorts & Residential Hubs',
-      'Trichy Airport Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Karur', type: 'Origin', desc: 'Doorstep pickup across Karur.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Trichy Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy Airport.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Karur to Trichy Airport?',
-        a: 'The one-way taxi fare from Karur to Trichy Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Karur to Trichy Airport?',
-        a: 'The distance from Karur to Trichy Airport is approx 85 km via NH81. Travel duration is around 1.75 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Karur?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Karur including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Karur to Trichy Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 1.75 hours.',
-        route: 'Karur to Trichy Airport',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Karur to Trichy Airport. Zero return charges and transparent per-km bill.',
-        route: 'Karur to Trichy Airport',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Trichy Airport to Karur', slug: 'trichy-airport-to-karur', distance: '85 km', fare: '₹1,950' },
-    ],
-  },
-
-  'madurai-airport-to-rameswaram': {
-    from: 'Madurai Airport',
-    to: 'Rameshwaram',
-    fromSlug: 'madurai',
-    toSlug: 'ramanathapuram',
-    returnRouteSlug: 'rameswaram-to-madurai-airport',
+    toSlug: 'salem',
+    returnRouteSlug: 'yercaud-to-trichy',
     distanceKm: 170,
-    timeHours: 3.25,
+    timeHours: 3.5,
     distanceDisplay: '170 km',
-    durationDisplay: '3.25 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: true,
-    seasonality: ["Festival","Winter","All Season"],
-    popularFor: ["IXM Flight Pickup","Pilgrimage Transfer"],
-    roadConditions: 'Access-controlled NH87 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Madurai Airport to Rameshwaram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai Airport to Rameshwaram One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai Airport to Rameshwaram with SAMAYAS. Hatchback from ₹2,550, Sedan ₹2,550, SUV ₹3,400. 24/7 doorstep pickups.',
+    durationDisplay: '3.5 Hours',
+    category: 'Tourist',
+    popularity: 8,
+    isFeatured: false,
+    seasonality: ["All Season"],
+    popularFor: ["Hill Station","Resort","Weekend"],
+    roadConditions: 'Access-controlled NH81 multi-lane toll expressway with high-speed bypasses around towns.',
+    heroTagline: 'Affordable One-Way Taxi from Trichy to Yercaud. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Trichy to Yercaud One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Yercaud with SAMAYAS. Hatchback from ₹2,550, Sedan ₹2,550, SUV ₹3,400. 24/7 doorstep pickups.',
     fare: {
       "hatchback": 2550,
       "sedan": 2550,
@@ -7846,83 +9190,126 @@ export const routeContent = {
       "hycross": 4250,
       "traveller": 5100
 },
-    highways: ["NH87"],
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Yercaud)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Yercaud Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH81.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH81 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH81 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
+    highways: ["NH81","SH188 Ghat Road"],
     tolls: {
-      costRange: '₹120 - ₹180',
+      costRange: '₹120 - ₹160',
       plazasCount: 2,
       fastagSupported: true,
       cashAccepted: true,
       note: 'Toll plaza charges and state permit fees extra where applicable.',
     },
     pickupLocations: [
-      'Madurai Airport Central City / Main Junction',
-      'Madurai Airport Railway Station & Bus Stand',
-      'Madurai Airport Residential Areas & Hotels',
-      'Madurai Airport Suburbs & Outer Ring Gates',
+      'Trichy Central City / Main Junction',
+      'Trichy Railway Station & Bus Stand',
+      'Trichy Residential Areas & Hotels',
+      'Trichy Suburbs & Outer Ring Gates',
     ],
     dropLocations: [
-      'Rameshwaram City Center & Main Commercial Hub',
-      'Rameshwaram Railway Station & Transit Terminals',
-      'Rameshwaram Hotels, Resorts & Residential Hubs',
-      'Rameshwaram Airport / Highway Junction Drops',
+      'Yercaud City Center & Main Commercial Hub',
+      'Yercaud Railway Station & Transit Terminals',
+      'Yercaud Hotels, Resorts & Residential Hubs',
+      'Yercaud Airport / Highway Junction Drops',
     ],
     placesOnTheWay: [
-      { name: 'Madurai Airport', type: 'Origin', desc: 'Doorstep pickup across Madurai Airport.' },
+      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
       { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Rameshwaram', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Rameshwaram.' },
+      { name: 'Yercaud', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Yercaud.' },
     ],
     faqs: [
       {
-        q: 'What is the one-way taxi fare from Madurai Airport to Rameshwaram?',
-        a: 'The one-way taxi fare from Madurai Airport to Rameshwaram starts at ₹2,550 for a Hatchback, ₹2,550 for a Sedan, and ₹3,400 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        q: 'What is the one-way taxi fare from Trichy to Yercaud?',
+        a: 'The one-way taxi fare from Trichy to Yercaud starts at ₹2,550 for a Hatchback, ₹2,550 for a Sedan, and ₹3,400 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
-        q: 'How long does a cab take from Madurai Airport to Rameshwaram?',
-        a: 'The distance from Madurai Airport to Rameshwaram is approx 170 km via NH87. Travel duration is around 3.25 hours.',
+        q: 'How long does a cab take from Trichy to Yercaud?',
+        a: 'The distance from Trichy to Yercaud is approx 170 km via NH81. Travel duration is around 3.5 hours.',
       },
       {
-        q: 'Is 24/7 doorstep pickup available in Madurai Airport?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai Airport including railway stations, airports, and hotels.',
+        q: 'Is 24/7 doorstep pickup available in Trichy?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy including railway stations, airports, and hotels.',
       },
     ],
     reviews: [
       {
         name: 'Suresh Kumar',
         rating: 5,
-        text: 'Booked a one-way cab from Madurai Airport to Rameshwaram. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
-        route: 'Madurai Airport to Rameshwaram',
+        text: 'Booked a one-way cab from Trichy to Yercaud. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
+        route: 'Trichy to Yercaud',
       },
       {
         name: 'Priya Dharshini',
         rating: 5,
-        text: 'Safe and comfortable trip from Madurai Airport to Rameshwaram. Zero return charges and transparent per-km bill.',
-        route: 'Madurai Airport to Rameshwaram',
+        text: 'Safe and comfortable trip from Trichy to Yercaud. Zero return charges and transparent per-km bill.',
+        route: 'Trichy to Yercaud',
       },
     ],
     nearbyRoutes: [
-      { name: 'Rameshwaram to Madurai Airport', slug: 'rameswaram-to-madurai-airport', distance: '170 km', fare: '₹2,550' },
+      { name: 'Yercaud to Trichy', slug: 'yercaud-to-trichy', distance: '170 km', fare: '₹2,550' },
     ],
   },
 
-  'rameswaram-to-madurai-airport': {
-    from: 'Rameshwaram',
-    to: 'Madurai Airport',
-    fromSlug: 'ramanathapuram',
-    toSlug: 'madurai',
-    returnRouteSlug: 'madurai-airport-to-rameswaram',
+  'yercaud-to-trichy': {
+    from: 'Yercaud',
+    to: 'Trichy',
+    fromSlug: 'salem',
+    toSlug: 'tiruchirappalli',
+    returnRouteSlug: 'trichy-to-yercaud',
     distanceKm: 170,
-    timeHours: 3.25,
+    timeHours: 3.5,
     distanceDisplay: '170 km',
-    durationDisplay: '3.25 Hours',
-    category: 'Airport',
-    popularity: 9,
+    durationDisplay: '3.5 Hours',
+    category: 'Tourist',
+    popularity: 8,
     isFeatured: false,
-    seasonality: ["Festival","Winter","All Season"],
-    popularFor: ["IXM Flight Drop"],
-    roadConditions: 'Access-controlled NH87 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Rameshwaram to Madurai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Rameshwaram to Madurai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Rameshwaram to Madurai Airport with SAMAYAS. Hatchback from ₹2,550, Sedan ₹2,550, SUV ₹3,400. 24/7 doorstep pickups.',
+    seasonality: ["All Season"],
+    popularFor: ["TRZ Airport","Tourism Return"],
+    roadConditions: 'Access-controlled SH188 Ghat Road multi-lane toll expressway with high-speed bypasses around towns.',
+    heroTagline: 'Affordable One-Way Taxi from Yercaud to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Yercaud to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Yercaud to Trichy with SAMAYAS. Hatchback from ₹2,550, Sedan ₹2,550, SUV ₹3,400. 24/7 doorstep pickups.',
     fare: {
       "hatchback": 2550,
       "sedan": 2550,
@@ -7931,423 +9318,126 @@ export const routeContent = {
       "hycross": 4250,
       "traveller": 5100
 },
-    highways: ["NH87"],
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Yercaud - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Yercaud - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along SH188 Ghat Road.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH188 Ghat Road Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH188 Ghat Road Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Yercaud Regional Snacks",
+                  "location": "Yercaud Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Yercaud"
+            }
+      ]
+},
+    highways: ["SH188 Ghat Road","NH81"],
     tolls: {
-      costRange: '₹120 - ₹180',
+      costRange: '₹120 - ₹160',
       plazasCount: 2,
       fastagSupported: true,
       cashAccepted: true,
       note: 'Toll plaza charges and state permit fees extra where applicable.',
     },
     pickupLocations: [
-      'Rameshwaram Central City / Main Junction',
-      'Rameshwaram Railway Station & Bus Stand',
-      'Rameshwaram Residential Areas & Hotels',
-      'Rameshwaram Suburbs & Outer Ring Gates',
+      'Yercaud Central City / Main Junction',
+      'Yercaud Railway Station & Bus Stand',
+      'Yercaud Residential Areas & Hotels',
+      'Yercaud Suburbs & Outer Ring Gates',
     ],
     dropLocations: [
-      'Madurai Airport City Center & Main Commercial Hub',
-      'Madurai Airport Railway Station & Transit Terminals',
-      'Madurai Airport Hotels, Resorts & Residential Hubs',
-      'Madurai Airport Airport / Highway Junction Drops',
+      'Trichy City Center & Main Commercial Hub',
+      'Trichy Railway Station & Transit Terminals',
+      'Trichy Hotels, Resorts & Residential Hubs',
+      'Trichy Airport / Highway Junction Drops',
     ],
     placesOnTheWay: [
-      { name: 'Rameshwaram', type: 'Origin', desc: 'Doorstep pickup across Rameshwaram.' },
+      { name: 'Yercaud', type: 'Origin', desc: 'Doorstep pickup across Yercaud.' },
       { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Madurai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai Airport.' },
+      { name: 'Trichy', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy.' },
     ],
     faqs: [
       {
-        q: 'What is the one-way taxi fare from Rameshwaram to Madurai Airport?',
-        a: 'The one-way taxi fare from Rameshwaram to Madurai Airport starts at ₹2,550 for a Hatchback, ₹2,550 for a Sedan, and ₹3,400 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        q: 'What is the one-way taxi fare from Yercaud to Trichy?',
+        a: 'The one-way taxi fare from Yercaud to Trichy starts at ₹2,550 for a Hatchback, ₹2,550 for a Sedan, and ₹3,400 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
-        q: 'How long does a cab take from Rameshwaram to Madurai Airport?',
-        a: 'The distance from Rameshwaram to Madurai Airport is approx 170 km via NH87. Travel duration is around 3.25 hours.',
+        q: 'How long does a cab take from Yercaud to Trichy?',
+        a: 'The distance from Yercaud to Trichy is approx 170 km via SH188 Ghat Road. Travel duration is around 3.5 hours.',
       },
       {
-        q: 'Is 24/7 doorstep pickup available in Rameshwaram?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Rameshwaram including railway stations, airports, and hotels.',
+        q: 'Is 24/7 doorstep pickup available in Yercaud?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Yercaud including railway stations, airports, and hotels.',
       },
     ],
     reviews: [
       {
         name: 'Suresh Kumar',
         rating: 5,
-        text: 'Booked a one-way cab from Rameshwaram to Madurai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.25 hours.',
-        route: 'Rameshwaram to Madurai Airport',
+        text: 'Booked a one-way cab from Yercaud to Trichy. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
+        route: 'Yercaud to Trichy',
       },
       {
         name: 'Priya Dharshini',
         rating: 5,
-        text: 'Safe and comfortable trip from Rameshwaram to Madurai Airport. Zero return charges and transparent per-km bill.',
-        route: 'Rameshwaram to Madurai Airport',
+        text: 'Safe and comfortable trip from Yercaud to Trichy. Zero return charges and transparent per-km bill.',
+        route: 'Yercaud to Trichy',
       },
     ],
     nearbyRoutes: [
-      { name: 'Madurai Airport to Rameshwaram', slug: 'madurai-airport-to-rameswaram', distance: '170 km', fare: '₹2,550' },
+      { name: 'Trichy to Yercaud', slug: 'trichy-to-yercaud', distance: '170 km', fare: '₹2,550' },
     ],
   },
 
-  'madurai-airport-to-kodaikanal': {
-    from: 'Madurai Airport',
-    to: 'Kodaikanal',
-    fromSlug: 'madurai',
-    toSlug: 'dindigul',
-    returnRouteSlug: 'kodaikanal-to-madurai-airport',
-    distanceKm: 135,
-    timeHours: 3.5,
-    distanceDisplay: '135 km',
-    durationDisplay: '3.5 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: true,
-    seasonality: ["Summer","Winter"],
-    popularFor: ["IXM Flight Pickup","Hill Resort Transfer"],
-    roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
-    heroTagline: 'Affordable One-Way Taxi from Madurai Airport to Kodaikanal. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai Airport to Kodaikanal One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai Airport to Kodaikanal with SAMAYAS. Hatchback from ₹2,025, Sedan ₹2,025, SUV ₹2,700. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 2025,
-      "sedan": 2025,
-      "suv": 2700,
-      "innova": 2970,
-      "hycross": 3375,
-      "traveller": 4050
-},
-    highways: ["SH156 Ghat Road"],
-    tolls: {
-      costRange: '₹90 - ₹130',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Madurai Airport Central City / Main Junction',
-      'Madurai Airport Railway Station & Bus Stand',
-      'Madurai Airport Residential Areas & Hotels',
-      'Madurai Airport Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Kodaikanal City Center & Main Commercial Hub',
-      'Kodaikanal Railway Station & Transit Terminals',
-      'Kodaikanal Hotels, Resorts & Residential Hubs',
-      'Kodaikanal Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Madurai Airport', type: 'Origin', desc: 'Doorstep pickup across Madurai Airport.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Kodaikanal', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Kodaikanal.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Madurai Airport to Kodaikanal?',
-        a: 'The one-way taxi fare from Madurai Airport to Kodaikanal starts at ₹2,025 for a Hatchback, ₹2,025 for a Sedan, and ₹2,700 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Madurai Airport to Kodaikanal?',
-        a: 'The distance from Madurai Airport to Kodaikanal is approx 135 km via SH156 Ghat Road. Travel duration is around 3.5 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Madurai Airport?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Madurai Airport including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Madurai Airport to Kodaikanal. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
-        route: 'Madurai Airport to Kodaikanal',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Madurai Airport to Kodaikanal. Zero return charges and transparent per-km bill.',
-        route: 'Madurai Airport to Kodaikanal',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Kodaikanal to Madurai Airport', slug: 'kodaikanal-to-madurai-airport', distance: '135 km', fare: '₹2,025' },
-    ],
-  },
-
-  'kodaikanal-to-madurai-airport': {
-    from: 'Kodaikanal',
-    to: 'Madurai Airport',
-    fromSlug: 'dindigul',
-    toSlug: 'madurai',
-    returnRouteSlug: 'madurai-airport-to-kodaikanal',
-    distanceKm: 135,
-    timeHours: 3.5,
-    distanceDisplay: '135 km',
-    durationDisplay: '3.5 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["Summer","Winter"],
-    popularFor: ["IXM Flight Drop"],
-    roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
-    heroTagline: 'Affordable One-Way Taxi from Kodaikanal to Madurai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Kodaikanal to Madurai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Kodaikanal to Madurai Airport with SAMAYAS. Hatchback from ₹2,025, Sedan ₹2,025, SUV ₹2,700. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 2025,
-      "sedan": 2025,
-      "suv": 2700,
-      "innova": 2970,
-      "hycross": 3375,
-      "traveller": 4050
-},
-    highways: ["SH156 Ghat Road"],
-    tolls: {
-      costRange: '₹90 - ₹130',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Kodaikanal Central City / Main Junction',
-      'Kodaikanal Railway Station & Bus Stand',
-      'Kodaikanal Residential Areas & Hotels',
-      'Kodaikanal Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Madurai Airport City Center & Main Commercial Hub',
-      'Madurai Airport Railway Station & Transit Terminals',
-      'Madurai Airport Hotels, Resorts & Residential Hubs',
-      'Madurai Airport Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Kodaikanal', type: 'Origin', desc: 'Doorstep pickup across Kodaikanal.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Madurai Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Madurai Airport.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Kodaikanal to Madurai Airport?',
-        a: 'The one-way taxi fare from Kodaikanal to Madurai Airport starts at ₹2,025 for a Hatchback, ₹2,025 for a Sedan, and ₹2,700 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Kodaikanal to Madurai Airport?',
-        a: 'The distance from Kodaikanal to Madurai Airport is approx 135 km via SH156 Ghat Road. Travel duration is around 3.5 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Kodaikanal?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Kodaikanal including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Kodaikanal to Madurai Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.5 hours.',
-        route: 'Kodaikanal to Madurai Airport',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Kodaikanal to Madurai Airport. Zero return charges and transparent per-km bill.',
-        route: 'Kodaikanal to Madurai Airport',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Madurai Airport to Kodaikanal', slug: 'madurai-airport-to-kodaikanal', distance: '135 km', fare: '₹2,025' },
-    ],
-  },
-
-  'coimbatore-airport-to-ooty': {
-    from: 'Coimbatore Airport',
-    to: 'Ooty',
-    fromSlug: 'coimbatore',
-    toSlug: 'nilgiris',
-    returnRouteSlug: 'ooty-to-coimbatore-airport',
-    distanceKm: 90,
-    timeHours: 3,
-    distanceDisplay: '90 km',
-    durationDisplay: '3 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: true,
-    seasonality: ["Summer","Winter"],
-    popularFor: ["CJB Flight Pickup","Nilgiris Transfer"],
-    roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
-    heroTagline: 'Affordable One-Way Taxi from Coimbatore Airport to Ooty. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore Airport to Ooty One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore Airport to Ooty with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH181 Hairpin Route"],
-    tolls: {
-      costRange: '₹70 - ₹110',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Coimbatore Airport Central City / Main Junction',
-      'Coimbatore Airport Railway Station & Bus Stand',
-      'Coimbatore Airport Residential Areas & Hotels',
-      'Coimbatore Airport Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Ooty City Center & Main Commercial Hub',
-      'Ooty Railway Station & Transit Terminals',
-      'Ooty Hotels, Resorts & Residential Hubs',
-      'Ooty Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Coimbatore Airport', type: 'Origin', desc: 'Doorstep pickup across Coimbatore Airport.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Ooty', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Ooty.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Coimbatore Airport to Ooty?',
-        a: 'The one-way taxi fare from Coimbatore Airport to Ooty starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Coimbatore Airport to Ooty?',
-        a: 'The distance from Coimbatore Airport to Ooty is approx 90 km via NH181 Hairpin Route. Travel duration is around 3 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Coimbatore Airport?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore Airport including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Coimbatore Airport to Ooty. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3 hours.',
-        route: 'Coimbatore Airport to Ooty',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Coimbatore Airport to Ooty. Zero return charges and transparent per-km bill.',
-        route: 'Coimbatore Airport to Ooty',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Ooty to Coimbatore Airport', slug: 'ooty-to-coimbatore-airport', distance: '90 km', fare: '₹1,950' },
-    ],
-  },
-
-  'ooty-to-coimbatore-airport': {
-    from: 'Ooty',
-    to: 'Coimbatore Airport',
-    fromSlug: 'nilgiris',
-    toSlug: 'coimbatore',
-    returnRouteSlug: 'coimbatore-airport-to-ooty',
-    distanceKm: 90,
-    timeHours: 3,
-    distanceDisplay: '90 km',
-    durationDisplay: '3 Hours',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["Summer","Winter"],
-    popularFor: ["CJB Flight Drop"],
-    roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
-    heroTagline: 'Affordable One-Way Taxi from Ooty to Coimbatore Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Ooty to Coimbatore Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Ooty to Coimbatore Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 1950,
-      "sedan": 1950,
-      "suv": 2600,
-      "innova": 2860,
-      "hycross": 3250,
-      "traveller": 3900
-},
-    highways: ["NH181"],
-    tolls: {
-      costRange: '₹70 - ₹110',
-      plazasCount: 1,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Ooty Central City / Main Junction',
-      'Ooty Railway Station & Bus Stand',
-      'Ooty Residential Areas & Hotels',
-      'Ooty Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Coimbatore Airport City Center & Main Commercial Hub',
-      'Coimbatore Airport Railway Station & Transit Terminals',
-      'Coimbatore Airport Hotels, Resorts & Residential Hubs',
-      'Coimbatore Airport Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Ooty', type: 'Origin', desc: 'Doorstep pickup across Ooty.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Coimbatore Airport', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore Airport.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Ooty to Coimbatore Airport?',
-        a: 'The one-way taxi fare from Ooty to Coimbatore Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Ooty to Coimbatore Airport?',
-        a: 'The distance from Ooty to Coimbatore Airport is approx 90 km via NH181. Travel duration is around 3 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Ooty?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Ooty including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Ooty to Coimbatore Airport. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3 hours.',
-        route: 'Ooty to Coimbatore Airport',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Ooty to Coimbatore Airport. Zero return charges and transparent per-km bill.',
-        route: 'Ooty to Coimbatore Airport',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Coimbatore Airport to Ooty', slug: 'coimbatore-airport-to-ooty', distance: '90 km', fare: '₹1,950' },
-    ],
-  },
-
-  'chennai-to-bengaluru': {
+  'chennai-to-bangalore': {
     from: 'Chennai',
-    to: 'Bengaluru',
+    to: 'Bangalore',
     fromSlug: 'chennai',
-    toSlug: 'krishnagiri',
-    returnRouteSlug: 'bengaluru-to-chennai',
+    toSlug: 'chennai',
+    returnRouteSlug: 'bangalore-to-chennai',
     distanceKm: 350,
-    timeHours: 6.25,
+    timeHours: 6,
     distanceDisplay: '350 km',
-    durationDisplay: '6.25 Hours',
+    durationDisplay: '6 Hours',
     category: 'Interstate',
     popularity: 10,
     isFeatured: true,
     seasonality: ["All Season"],
-    popularFor: ["IT","Corporate","Interstate Business"],
+    popularFor: ["IT Hub","Business","Interstate"],
     roadConditions: 'Access-controlled NH48 Expressway multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Chennai to Bengaluru. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Bengaluru One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Bengaluru with SAMAYAS. Hatchback from ₹5,250, Sedan ₹5,250, SUV ₹7,000. 24/7 doorstep pickups.',
+    heroTagline: 'Affordable One-Way Taxi from Chennai to Bangalore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Chennai to Bangalore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Bangalore with SAMAYAS. Hatchback from ₹5,250, Sedan ₹5,250, SUV ₹7,000. 24/7 doorstep pickups.',
     fare: {
       "hatchback": 5250,
       "sedan": 5250,
@@ -8356,9 +9446,52 @@ export const routeContent = {
       "hycross": 8750,
       "traveller": 10500
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Bangalore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Bangalore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48 Expressway.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Expressway Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Expressway Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
     highways: ["NH48 Expressway"],
     tolls: {
-      costRange: '₹450 - ₹550',
+      costRange: '₹480 - ₹580',
       plazasCount: 5,
       fastagSupported: true,
       cashAccepted: true,
@@ -8371,24 +9504,24 @@ export const routeContent = {
       'Chennai Suburbs & Outer Ring Gates',
     ],
     dropLocations: [
-      'Bengaluru City Center & Main Commercial Hub',
-      'Bengaluru Railway Station & Transit Terminals',
-      'Bengaluru Hotels, Resorts & Residential Hubs',
-      'Bengaluru Airport / Highway Junction Drops',
+      'Bangalore City Center & Main Commercial Hub',
+      'Bangalore Railway Station & Transit Terminals',
+      'Bangalore Hotels, Resorts & Residential Hubs',
+      'Bangalore Airport / Highway Junction Drops',
     ],
     placesOnTheWay: [
       { name: 'Chennai', type: 'Origin', desc: 'Doorstep pickup across Chennai.' },
       { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Bengaluru', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Bengaluru.' },
+      { name: 'Bangalore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Bangalore.' },
     ],
     faqs: [
       {
-        q: 'What is the one-way taxi fare from Chennai to Bengaluru?',
-        a: 'The one-way taxi fare from Chennai to Bengaluru starts at ₹5,250 for a Hatchback, ₹5,250 for a Sedan, and ₹7,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        q: 'What is the one-way taxi fare from Chennai to Bangalore?',
+        a: 'The one-way taxi fare from Chennai to Bangalore starts at ₹5,250 for a Hatchback, ₹5,250 for a Sedan, and ₹7,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
-        q: 'How long does a cab take from Chennai to Bengaluru?',
-        a: 'The distance from Chennai to Bengaluru is approx 350 km via NH48 Expressway. Travel duration is around 6.25 hours.',
+        q: 'How long does a cab take from Chennai to Bangalore?',
+        a: 'The distance from Chennai to Bangalore is approx 350 km via NH48 Expressway. Travel duration is around 6 hours.',
       },
       {
         q: 'Is 24/7 doorstep pickup available in Chennai?',
@@ -8399,40 +9532,40 @@ export const routeContent = {
       {
         name: 'Suresh Kumar',
         rating: 5,
-        text: 'Booked a one-way cab from Chennai to Bengaluru. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6.25 hours.',
-        route: 'Chennai to Bengaluru',
+        text: 'Booked a one-way cab from Chennai to Bangalore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6 hours.',
+        route: 'Chennai to Bangalore',
       },
       {
         name: 'Priya Dharshini',
         rating: 5,
-        text: 'Safe and comfortable trip from Chennai to Bengaluru. Zero return charges and transparent per-km bill.',
-        route: 'Chennai to Bengaluru',
+        text: 'Safe and comfortable trip from Chennai to Bangalore. Zero return charges and transparent per-km bill.',
+        route: 'Chennai to Bangalore',
       },
     ],
     nearbyRoutes: [
-      { name: 'Bengaluru to Chennai', slug: 'bengaluru-to-chennai', distance: '350 km', fare: '₹5,250' },
+      { name: 'Bangalore to Chennai', slug: 'bangalore-to-chennai', distance: '350 km', fare: '₹5,250' },
     ],
   },
 
-  'bengaluru-to-chennai': {
-    from: 'Bengaluru',
+  'bangalore-to-chennai': {
+    from: 'Bangalore',
     to: 'Chennai',
-    fromSlug: 'krishnagiri',
+    fromSlug: 'chennai',
     toSlug: 'chennai',
-    returnRouteSlug: 'chennai-to-bengaluru',
+    returnRouteSlug: 'chennai-to-bangalore',
     distanceKm: 350,
-    timeHours: 6.25,
+    timeHours: 6,
     distanceDisplay: '350 km',
-    durationDisplay: '6.25 Hours',
+    durationDisplay: '6 Hours',
     category: 'Interstate',
     popularity: 10,
     isFeatured: true,
     seasonality: ["All Season"],
-    popularFor: ["IT Return","Corporate","MAA Airport"],
+    popularFor: ["Corporate","Medical","MAA Airport"],
     roadConditions: 'Access-controlled NH48 Expressway multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Bengaluru to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Bengaluru to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Bengaluru to Chennai with SAMAYAS. Hatchback from ₹5,250, Sedan ₹5,250, SUV ₹7,000. 24/7 doorstep pickups.',
+    heroTagline: 'Affordable One-Way Taxi from Bangalore to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
+    seoTitle: 'Bangalore to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Bangalore to Chennai with SAMAYAS. Hatchback from ₹5,250, Sedan ₹5,250, SUV ₹7,000. 24/7 doorstep pickups.',
     fare: {
       "hatchback": 5250,
       "sedan": 5250,
@@ -8441,19 +9574,62 @@ export const routeContent = {
       "hycross": 8750,
       "traveller": 10500
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Bangalore - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Bangalore - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48 Expressway.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Expressway Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Expressway Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Bangalore Regional Snacks",
+                  "location": "Bangalore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Bangalore"
+            }
+      ]
+},
     highways: ["NH48 Expressway"],
     tolls: {
-      costRange: '₹450 - ₹550',
+      costRange: '₹480 - ₹580',
       plazasCount: 5,
       fastagSupported: true,
       cashAccepted: true,
       note: 'Toll plaza charges and state permit fees extra where applicable.',
     },
     pickupLocations: [
-      'Bengaluru Central City / Main Junction',
-      'Bengaluru Railway Station & Bus Stand',
-      'Bengaluru Residential Areas & Hotels',
-      'Bengaluru Suburbs & Outer Ring Gates',
+      'Bangalore Central City / Main Junction',
+      'Bangalore Railway Station & Bus Stand',
+      'Bangalore Residential Areas & Hotels',
+      'Bangalore Suburbs & Outer Ring Gates',
     ],
     dropLocations: [
       'Chennai City Center & Main Commercial Hub',
@@ -8462,550 +9638,40 @@ export const routeContent = {
       'Chennai Airport / Highway Junction Drops',
     ],
     placesOnTheWay: [
-      { name: 'Bengaluru', type: 'Origin', desc: 'Doorstep pickup across Bengaluru.' },
+      { name: 'Bangalore', type: 'Origin', desc: 'Doorstep pickup across Bangalore.' },
       { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
       { name: 'Chennai', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Chennai.' },
     ],
     faqs: [
       {
-        q: 'What is the one-way taxi fare from Bengaluru to Chennai?',
-        a: 'The one-way taxi fare from Bengaluru to Chennai starts at ₹5,250 for a Hatchback, ₹5,250 for a Sedan, and ₹7,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        q: 'What is the one-way taxi fare from Bangalore to Chennai?',
+        a: 'The one-way taxi fare from Bangalore to Chennai starts at ₹5,250 for a Hatchback, ₹5,250 for a Sedan, and ₹7,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
-        q: 'How long does a cab take from Bengaluru to Chennai?',
-        a: 'The distance from Bengaluru to Chennai is approx 350 km via NH48 Expressway. Travel duration is around 6.25 hours.',
+        q: 'How long does a cab take from Bangalore to Chennai?',
+        a: 'The distance from Bangalore to Chennai is approx 350 km via NH48 Expressway. Travel duration is around 6 hours.',
       },
       {
-        q: 'Is 24/7 doorstep pickup available in Bengaluru?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Bengaluru including railway stations, airports, and hotels.',
+        q: 'Is 24/7 doorstep pickup available in Bangalore?',
+        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Bangalore including railway stations, airports, and hotels.',
       },
     ],
     reviews: [
       {
         name: 'Suresh Kumar',
         rating: 5,
-        text: 'Booked a one-way cab from Bengaluru to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6.25 hours.',
-        route: 'Bengaluru to Chennai',
+        text: 'Booked a one-way cab from Bangalore to Chennai. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6 hours.',
+        route: 'Bangalore to Chennai',
       },
       {
         name: 'Priya Dharshini',
         rating: 5,
-        text: 'Safe and comfortable trip from Bengaluru to Chennai. Zero return charges and transparent per-km bill.',
-        route: 'Bengaluru to Chennai',
+        text: 'Safe and comfortable trip from Bangalore to Chennai. Zero return charges and transparent per-km bill.',
+        route: 'Bangalore to Chennai',
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Bengaluru', slug: 'chennai-to-bengaluru', distance: '350 km', fare: '₹5,250' },
-    ],
-  },
-
-  'trichy-to-bengaluru': {
-    from: 'Trichy',
-    to: 'Bengaluru',
-    fromSlug: 'tiruchirappalli',
-    toSlug: 'krishnagiri',
-    returnRouteSlug: 'bengaluru-to-trichy',
-    distanceKm: 345,
-    timeHours: 6.25,
-    distanceDisplay: '345 km',
-    durationDisplay: '6.25 Hours',
-    category: 'Interstate',
-    popularity: 9,
-    isFeatured: true,
-    seasonality: ["All Season"],
-    popularFor: ["IT","Family","Interstate Transit"],
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Trichy to Bengaluru. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy to Bengaluru One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy to Bengaluru with SAMAYAS. Hatchback from ₹5,175, Sedan ₹5,175, SUV ₹6,900. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 5175,
-      "sedan": 5175,
-      "suv": 6900,
-      "innova": 7590,
-      "hycross": 8625,
-      "traveller": 10350
-},
-    highways: ["NH44"],
-    tolls: {
-      costRange: '₹480 - ₹580',
-      plazasCount: 5,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Trichy Central City / Main Junction',
-      'Trichy Railway Station & Bus Stand',
-      'Trichy Residential Areas & Hotels',
-      'Trichy Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Bengaluru City Center & Main Commercial Hub',
-      'Bengaluru Railway Station & Transit Terminals',
-      'Bengaluru Hotels, Resorts & Residential Hubs',
-      'Bengaluru Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Trichy', type: 'Origin', desc: 'Doorstep pickup across Trichy.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Bengaluru', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Bengaluru.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Trichy to Bengaluru?',
-        a: 'The one-way taxi fare from Trichy to Bengaluru starts at ₹5,175 for a Hatchback, ₹5,175 for a Sedan, and ₹6,900 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Trichy to Bengaluru?',
-        a: 'The distance from Trichy to Bengaluru is approx 345 km via NH44. Travel duration is around 6.25 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Trichy?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Trichy including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Trichy to Bengaluru. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6.25 hours.',
-        route: 'Trichy to Bengaluru',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Trichy to Bengaluru. Zero return charges and transparent per-km bill.',
-        route: 'Trichy to Bengaluru',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Bengaluru to Trichy', slug: 'bengaluru-to-trichy', distance: '345 km', fare: '₹5,175' },
-    ],
-  },
-
-  'bengaluru-to-trichy': {
-    from: 'Bengaluru',
-    to: 'Trichy',
-    fromSlug: 'krishnagiri',
-    toSlug: 'tiruchirappalli',
-    returnRouteSlug: 'trichy-to-bengaluru',
-    distanceKm: 345,
-    timeHours: 6.25,
-    distanceDisplay: '345 km',
-    durationDisplay: '6.25 Hours',
-    category: 'Interstate',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["Home Visit","Festival","Family"],
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Bengaluru to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Bengaluru to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Bengaluru to Trichy with SAMAYAS. Hatchback from ₹5,175, Sedan ₹5,175, SUV ₹6,900. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 5175,
-      "sedan": 5175,
-      "suv": 6900,
-      "innova": 7590,
-      "hycross": 8625,
-      "traveller": 10350
-},
-    highways: ["NH44"],
-    tolls: {
-      costRange: '₹480 - ₹580',
-      plazasCount: 5,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Bengaluru Central City / Main Junction',
-      'Bengaluru Railway Station & Bus Stand',
-      'Bengaluru Residential Areas & Hotels',
-      'Bengaluru Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Trichy City Center & Main Commercial Hub',
-      'Trichy Railway Station & Transit Terminals',
-      'Trichy Hotels, Resorts & Residential Hubs',
-      'Trichy Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Bengaluru', type: 'Origin', desc: 'Doorstep pickup across Bengaluru.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Trichy', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Trichy.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Bengaluru to Trichy?',
-        a: 'The one-way taxi fare from Bengaluru to Trichy starts at ₹5,175 for a Hatchback, ₹5,175 for a Sedan, and ₹6,900 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Bengaluru to Trichy?',
-        a: 'The distance from Bengaluru to Trichy is approx 345 km via NH44. Travel duration is around 6.25 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Bengaluru?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Bengaluru including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Bengaluru to Trichy. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6.25 hours.',
-        route: 'Bengaluru to Trichy',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Bengaluru to Trichy. Zero return charges and transparent per-km bill.',
-        route: 'Bengaluru to Trichy',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Trichy to Bengaluru', slug: 'trichy-to-bengaluru', distance: '345 km', fare: '₹5,175' },
-    ],
-  },
-
-  'salem-to-bengaluru': {
-    from: 'Salem',
-    to: 'Bengaluru',
-    fromSlug: 'salem',
-    toSlug: 'krishnagiri',
-    returnRouteSlug: 'bengaluru-to-salem',
-    distanceKm: 205,
-    timeHours: 3.75,
-    distanceDisplay: '205 km',
-    durationDisplay: '3.75 Hours',
-    category: 'Interstate',
-    popularity: 9,
-    isFeatured: true,
-    seasonality: ["All Season"],
-    popularFor: ["Business","IT Commute"],
-    roadConditions: 'Access-controlled NH44 Expressway multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Salem to Bengaluru. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Salem to Bengaluru One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Salem to Bengaluru with SAMAYAS. Hatchback from ₹3,075, Sedan ₹3,075, SUV ₹4,100. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 3075,
-      "sedan": 3075,
-      "suv": 4100,
-      "innova": 4510,
-      "hycross": 5125,
-      "traveller": 6150
-},
-    highways: ["NH44 Expressway"],
-    tolls: {
-      costRange: '₹280 - ₹340',
-      plazasCount: 3,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Salem Central City / Main Junction',
-      'Salem Railway Station & Bus Stand',
-      'Salem Residential Areas & Hotels',
-      'Salem Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Bengaluru City Center & Main Commercial Hub',
-      'Bengaluru Railway Station & Transit Terminals',
-      'Bengaluru Hotels, Resorts & Residential Hubs',
-      'Bengaluru Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Salem', type: 'Origin', desc: 'Doorstep pickup across Salem.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Bengaluru', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Bengaluru.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Salem to Bengaluru?',
-        a: 'The one-way taxi fare from Salem to Bengaluru starts at ₹3,075 for a Hatchback, ₹3,075 for a Sedan, and ₹4,100 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Salem to Bengaluru?',
-        a: 'The distance from Salem to Bengaluru is approx 205 km via NH44 Expressway. Travel duration is around 3.75 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Salem?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Salem including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Salem to Bengaluru. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.75 hours.',
-        route: 'Salem to Bengaluru',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Salem to Bengaluru. Zero return charges and transparent per-km bill.',
-        route: 'Salem to Bengaluru',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Bengaluru to Salem', slug: 'bengaluru-to-salem', distance: '205 km', fare: '₹3,075' },
-    ],
-  },
-
-  'bengaluru-to-salem': {
-    from: 'Bengaluru',
-    to: 'Salem',
-    fromSlug: 'krishnagiri',
-    toSlug: 'salem',
-    returnRouteSlug: 'salem-to-bengaluru',
-    distanceKm: 205,
-    timeHours: 3.75,
-    distanceDisplay: '205 km',
-    durationDisplay: '3.75 Hours',
-    category: 'Interstate',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["Home Visit","Business"],
-    roadConditions: 'Access-controlled NH44 Expressway multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Bengaluru to Salem. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Bengaluru to Salem One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Bengaluru to Salem with SAMAYAS. Hatchback from ₹3,075, Sedan ₹3,075, SUV ₹4,100. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 3075,
-      "sedan": 3075,
-      "suv": 4100,
-      "innova": 4510,
-      "hycross": 5125,
-      "traveller": 6150
-},
-    highways: ["NH44 Expressway"],
-    tolls: {
-      costRange: '₹280 - ₹340',
-      plazasCount: 3,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Bengaluru Central City / Main Junction',
-      'Bengaluru Railway Station & Bus Stand',
-      'Bengaluru Residential Areas & Hotels',
-      'Bengaluru Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Salem City Center & Main Commercial Hub',
-      'Salem Railway Station & Transit Terminals',
-      'Salem Hotels, Resorts & Residential Hubs',
-      'Salem Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Bengaluru', type: 'Origin', desc: 'Doorstep pickup across Bengaluru.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Salem', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Salem.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Bengaluru to Salem?',
-        a: 'The one-way taxi fare from Bengaluru to Salem starts at ₹3,075 for a Hatchback, ₹3,075 for a Sedan, and ₹4,100 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Bengaluru to Salem?',
-        a: 'The distance from Bengaluru to Salem is approx 205 km via NH44 Expressway. Travel duration is around 3.75 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Bengaluru?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Bengaluru including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Bengaluru to Salem. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 3.75 hours.',
-        route: 'Bengaluru to Salem',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Bengaluru to Salem. Zero return charges and transparent per-km bill.',
-        route: 'Bengaluru to Salem',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Salem to Bengaluru', slug: 'salem-to-bengaluru', distance: '205 km', fare: '₹3,075' },
-    ],
-  },
-
-  'coimbatore-to-bengaluru': {
-    from: 'Coimbatore',
-    to: 'Bengaluru',
-    fromSlug: 'coimbatore',
-    toSlug: 'krishnagiri',
-    returnRouteSlug: 'bengaluru-to-coimbatore',
-    distanceKm: 365,
-    timeHours: 6.5,
-    distanceDisplay: '365 km',
-    durationDisplay: '6.5 Hours',
-    category: 'Interstate',
-    popularity: 9,
-    isFeatured: true,
-    seasonality: ["All Season"],
-    popularFor: ["IT Corridor","Corporate","Industrial"],
-    roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Coimbatore to Bengaluru. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Bengaluru One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Bengaluru with SAMAYAS. Hatchback from ₹5,475, Sedan ₹5,475, SUV ₹7,300. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 5475,
-      "sedan": 5475,
-      "suv": 7300,
-      "innova": 8030,
-      "hycross": 9125,
-      "traveller": 10950
-},
-    highways: ["NH544","NH44"],
-    tolls: {
-      costRange: '₹520 - ₹620',
-      plazasCount: 6,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Coimbatore Central City / Main Junction',
-      'Coimbatore Railway Station & Bus Stand',
-      'Coimbatore Residential Areas & Hotels',
-      'Coimbatore Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Bengaluru City Center & Main Commercial Hub',
-      'Bengaluru Railway Station & Transit Terminals',
-      'Bengaluru Hotels, Resorts & Residential Hubs',
-      'Bengaluru Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Coimbatore', type: 'Origin', desc: 'Doorstep pickup across Coimbatore.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Bengaluru', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Bengaluru.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Coimbatore to Bengaluru?',
-        a: 'The one-way taxi fare from Coimbatore to Bengaluru starts at ₹5,475 for a Hatchback, ₹5,475 for a Sedan, and ₹7,300 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Coimbatore to Bengaluru?',
-        a: 'The distance from Coimbatore to Bengaluru is approx 365 km via NH544. Travel duration is around 6.5 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Coimbatore?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Coimbatore including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Coimbatore to Bengaluru. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6.5 hours.',
-        route: 'Coimbatore to Bengaluru',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Coimbatore to Bengaluru. Zero return charges and transparent per-km bill.',
-        route: 'Coimbatore to Bengaluru',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Bengaluru to Coimbatore', slug: 'bengaluru-to-coimbatore', distance: '365 km', fare: '₹5,475' },
-    ],
-  },
-
-  'bengaluru-to-coimbatore': {
-    from: 'Bengaluru',
-    to: 'Coimbatore',
-    fromSlug: 'krishnagiri',
-    toSlug: 'coimbatore',
-    returnRouteSlug: 'coimbatore-to-bengaluru',
-    distanceKm: 365,
-    timeHours: 6.5,
-    distanceDisplay: '365 km',
-    durationDisplay: '6.5 Hours',
-    category: 'Interstate',
-    popularity: 9,
-    isFeatured: false,
-    seasonality: ["All Season"],
-    popularFor: ["Textile Business","Family Return"],
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    heroTagline: 'Affordable One-Way Taxi from Bengaluru to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Bengaluru to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Bengaluru to Coimbatore with SAMAYAS. Hatchback from ₹5,475, Sedan ₹5,475, SUV ₹7,300. 24/7 doorstep pickups.',
-    fare: {
-      "hatchback": 5475,
-      "sedan": 5475,
-      "suv": 7300,
-      "innova": 8030,
-      "hycross": 9125,
-      "traveller": 10950
-},
-    highways: ["NH44","NH544"],
-    tolls: {
-      costRange: '₹520 - ₹620',
-      plazasCount: 6,
-      fastagSupported: true,
-      cashAccepted: true,
-      note: 'Toll plaza charges and state permit fees extra where applicable.',
-    },
-    pickupLocations: [
-      'Bengaluru Central City / Main Junction',
-      'Bengaluru Railway Station & Bus Stand',
-      'Bengaluru Residential Areas & Hotels',
-      'Bengaluru Suburbs & Outer Ring Gates',
-    ],
-    dropLocations: [
-      'Coimbatore City Center & Main Commercial Hub',
-      'Coimbatore Railway Station & Transit Terminals',
-      'Coimbatore Hotels, Resorts & Residential Hubs',
-      'Coimbatore Airport / Highway Junction Drops',
-    ],
-    placesOnTheWay: [
-      { name: 'Bengaluru', type: 'Origin', desc: 'Doorstep pickup across Bengaluru.' },
-      { name: 'Midway Highway Stop', type: 'Food Plaza', desc: 'Clean rest stop, tea break & multi-cuisine restaurants.' },
-      { name: 'Coimbatore', type: 'Destination', desc: 'Direct doorstep drop at any home, hotel or station in Coimbatore.' },
-    ],
-    faqs: [
-      {
-        q: 'What is the one-way taxi fare from Bengaluru to Coimbatore?',
-        a: 'The one-way taxi fare from Bengaluru to Coimbatore starts at ₹5,475 for a Hatchback, ₹5,475 for a Sedan, and ₹7,300 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
-      },
-      {
-        q: 'How long does a cab take from Bengaluru to Coimbatore?',
-        a: 'The distance from Bengaluru to Coimbatore is approx 365 km via NH44. Travel duration is around 6.5 hours.',
-      },
-      {
-        q: 'Is 24/7 doorstep pickup available in Bengaluru?',
-        a: 'Yes, SAMAYAS provides 24/7 doorstep pickup anywhere in Bengaluru including railway stations, airports, and hotels.',
-      },
-    ],
-    reviews: [
-      {
-        name: 'Suresh Kumar',
-        rating: 5,
-        text: 'Booked a one-way cab from Bengaluru to Coimbatore. Driver arrived 10 minutes early, vehicle was spotless, and reached smoothly in 6.5 hours.',
-        route: 'Bengaluru to Coimbatore',
-      },
-      {
-        name: 'Priya Dharshini',
-        rating: 5,
-        text: 'Safe and comfortable trip from Bengaluru to Coimbatore. Zero return charges and transparent per-km bill.',
-        route: 'Bengaluru to Coimbatore',
-      },
-    ],
-    nearbyRoutes: [
-      { name: 'Coimbatore to Bengaluru', slug: 'coimbatore-to-bengaluru', distance: '365 km', fare: '₹5,475' },
+      { name: 'Chennai to Bangalore', slug: 'chennai-to-bangalore', distance: '350 km', fare: '₹5,250' },
     ],
   },
 
@@ -9035,6 +9701,49 @@ export const routeContent = {
       "innova": 2970,
       "hycross": 3375,
       "traveller": 4050
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Tirupati)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Tirupati Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH716.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH716 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH716 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
 },
     highways: ["NH716"],
     tolls: {
@@ -9121,6 +9830,49 @@ export const routeContent = {
       "hycross": 3375,
       "traveller": 4050
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Tirupati - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Tirupati - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH716.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH716 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH716 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Tirupati Regional Snacks",
+                  "location": "Tirupati Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Tirupati"
+            }
+      ]
+},
     highways: ["NH716"],
     tolls: {
       costRange: '₹140 - ₹190',
@@ -9205,6 +9957,49 @@ export const routeContent = {
       "innova": 2860,
       "hycross": 3250,
       "traveller": 3900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Vellore - Tirupati)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Vellore - Tirupati Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH716.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH716 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH716 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Vellore Regional Snacks",
+                  "location": "Vellore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Vellore"
+            }
+      ]
 },
     highways: ["NH716"],
     tolls: {
@@ -9291,6 +10086,49 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Tirupati - Vellore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Tirupati - Vellore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH716.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH716 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH716 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Tirupati Regional Snacks",
+                  "location": "Tirupati Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Tirupati"
+            }
+      ]
+},
     highways: ["NH716"],
     tolls: {
       costRange: '₹110 - ₹150',
@@ -9375,6 +10213,49 @@ export const routeContent = {
       "innova": 2860,
       "hycross": 3250,
       "traveller": 3900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Palakkad)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Palakkad Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
 },
     highways: ["NH544"],
     tolls: {
@@ -9461,6 +10342,49 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Palakkad - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Palakkad - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Palakkad Regional Snacks",
+                  "location": "Palakkad Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Palakkad"
+            }
+      ]
+},
     highways: ["NH544"],
     tolls: {
       costRange: '₹60 - ₹90',
@@ -9546,6 +10470,49 @@ export const routeContent = {
       "hycross": 3250,
       "traveller": 3900
 },
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Kanyakumari - Trivandrum)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Kanyakumari - Trivandrum Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH66.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH66 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH66 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Kanyakumari Regional Snacks",
+                  "location": "Kanyakumari Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Kanyakumari"
+            }
+      ]
+},
     highways: ["NH66"],
     tolls: {
       costRange: '₹80 - ₹120',
@@ -9630,6 +10597,49 @@ export const routeContent = {
       "innova": 2860,
       "hycross": 3250,
       "traveller": 3900
+},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trivandrum - Kanyakumari)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trivandrum - Kanyakumari Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH66.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH66 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH66 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trivandrum Regional Snacks",
+                  "location": "Trivandrum Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trivandrum"
+            }
+      ]
 },
     highways: ["NH66"],
     tolls: {

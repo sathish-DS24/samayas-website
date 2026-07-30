@@ -14,6 +14,7 @@ import TaxiFareTable from '../components/route/TaxiFareTable'
 import RouteMapSection from '../components/route/RouteMapSection'
 import PickupDropSection from '../components/route/PickupDropSection'
 import RoutePlacesOnWay from '../components/route/RoutePlacesOnWay'
+import ExploreAlongRoute from '../components/route/ExploreAlongRoute'
 import TollInfoSection from '../components/route/TollInfoSection'
 import NearbyRoutesSection from '../components/route/NearbyRoutesSection'
 
@@ -154,6 +155,9 @@ const RoutePage = () => {
 
         {/* Section 8: Places on the Way */}
         <RoutePlacesOnWay content={content} />
+
+        {/* Dynamic Explore Along This Route Section */}
+        <ExploreAlongRoute content={content} />
 
         {/* Section 9: Toll Information */}
         <TollInfoSection content={content} />

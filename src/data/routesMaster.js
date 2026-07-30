@@ -17,6 +17,85 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/trichy-to-chennai',
     estDistance: '330 km',
     fare: {"hatchback":4950,"sedan":4950,"suv":6600,"innova":7260,"hycross":8250,"traveller":9900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Murugan Idli Shop",
+                  "cuisine": "South Indian",
+                  "famousFor": "Famous Crispy Dosa & Melt-in-mouth Idlis",
+                  "detour": "2 km Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Dinner"
+                  ],
+                  "rating": "4.6★"
+            },
+            {
+                  "name": "A2B Pure Veg (Vandavasi Highway Plaza)",
+                  "cuisine": "Pure Vegetarian",
+                  "famousFor": "South & North Indian Thali & Ghee Roast",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Breakfast",
+                        "Lunch",
+                        "Snacks"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Coffee Stall",
+                  "type": "Highway Refreshment Point"
+            },
+            {
+                  "name": "Starbucks GST Road Highway Plaza",
+                  "type": "Coffee Shop"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Samayapuram Mariamman Temple",
+                  "description": "One of Tamil Nadu’s most revered Mariamman pilgrimage shrines.",
+                  "detour": "3 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            },
+            {
+                  "name": "Rockfort Ucchi Pillayar Temple",
+                  "description": "Historic 83m ancient rock hillfort temple with panoramic views.",
+                  "detour": "1 km Detour",
+                  "stopDuration": "45 Mins Visit"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Mahabalipuram Shore Temple & Monuments",
+                  "description": "7th-century UNESCO World Heritage coastal shore temple.",
+                  "visitDuration": "1.5 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Handicrafts & Dry Fruits",
+                  "famousProducts": "Fresh Roasted Cashews & Tindivanam Highway Snacks"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Tindivanam IOCL Supercharger & Plaza",
+                  "type": "EV Charging, Fuel & Clean Restrooms",
+                  "location": "NH45 Highway Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Manapparai Murukku",
+                  "location": "Manapparai / NH45 Junction",
+                  "famousFor": "Traditional extra-crispy double-fried murukku"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-trichy',
@@ -36,6 +115,85 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chennai-to-trichy',
     estDistance: '330 km',
     fare: {"hatchback":4950,"sedan":4950,"suv":6600,"innova":7260,"hycross":8250,"traveller":9900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Murugan Idli Shop",
+                  "cuisine": "South Indian",
+                  "famousFor": "Famous Crispy Dosa & Melt-in-mouth Idlis",
+                  "detour": "2 km Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Dinner"
+                  ],
+                  "rating": "4.6★"
+            },
+            {
+                  "name": "A2B Pure Veg (Vandavasi Highway Plaza)",
+                  "cuisine": "Pure Vegetarian",
+                  "famousFor": "South & North Indian Thali & Ghee Roast",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Breakfast",
+                        "Lunch",
+                        "Snacks"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Coffee Stall",
+                  "type": "Highway Refreshment Point"
+            },
+            {
+                  "name": "Starbucks GST Road Highway Plaza",
+                  "type": "Coffee Shop"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Samayapuram Mariamman Temple",
+                  "description": "One of Tamil Nadu’s most revered Mariamman pilgrimage shrines.",
+                  "detour": "3 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            },
+            {
+                  "name": "Rockfort Ucchi Pillayar Temple",
+                  "description": "Historic 83m ancient rock hillfort temple with panoramic views.",
+                  "detour": "1 km Detour",
+                  "stopDuration": "45 Mins Visit"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Mahabalipuram Shore Temple & Monuments",
+                  "description": "7th-century UNESCO World Heritage coastal shore temple.",
+                  "visitDuration": "1.5 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Handicrafts & Dry Fruits",
+                  "famousProducts": "Fresh Roasted Cashews & Tindivanam Highway Snacks"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Tindivanam IOCL Supercharger & Plaza",
+                  "type": "EV Charging, Fuel & Clean Restrooms",
+                  "location": "NH45 Highway Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Manapparai Murukku",
+                  "location": "Manapparai / NH45 Junction",
+                  "famousFor": "Traditional extra-crispy double-fried murukku"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-madurai',
@@ -55,6 +213,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chennai-to-madurai',
     estDistance: '460 km',
     fare: {"hatchback":6900,"sedan":6900,"suv":9200,"innova":10120,"hycross":11500,"traveller":13800},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Madurai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Madurai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH45.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH45 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH45 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
   },
   {
     slug: 'madurai-to-chennai',
@@ -74,6 +275,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/madurai-to-chennai',
     estDistance: '460 km',
     fare: {"hatchback":6900,"sedan":6900,"suv":9200,"innova":10120,"hycross":11500,"traveller":13800},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Madurai - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Madurai - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH38.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH38 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH38 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Madurai Regional Snacks",
+                  "location": "Madurai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Madurai"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-coimbatore',
@@ -93,6 +337,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chennai-to-coimbatore',
     estDistance: '500 km',
     fare: {"hatchback":7500,"sedan":7500,"suv":10000,"innova":11000,"hycross":12500,"traveller":15000},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
   },
   {
     slug: 'coimbatore-to-chennai',
@@ -100,7 +387,7 @@ export const routesMasterDataset = [
     to: 'Chennai',
     category: 'City',
     popularity: 9,
-    isFeatured: true,
+    isFeatured: false,
     purposes: ["Business","Corporate","Airport"],
     seasonality: ["All Season"],
     distanceKm: 500,
@@ -112,6 +399,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/coimbatore-to-chennai',
     estDistance: '500 km',
     fare: {"hatchback":7500,"sedan":7500,"suv":10000,"innova":11000,"hycross":12500,"traveller":15000},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-salem',
@@ -131,6 +461,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chennai-to-salem',
     estDistance: '340 km',
     fare: {"hatchback":5100,"sedan":5100,"suv":6800,"innova":7480,"hycross":8500,"traveller":10200},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Salem)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Salem Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
+},
   },
   {
     slug: 'salem-to-chennai',
@@ -150,6 +523,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/salem-to-chennai',
     estDistance: '340 km',
     fare: {"hatchback":5100,"sedan":5100,"suv":6800,"innova":7480,"hycross":8500,"traveller":10200},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Salem - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Salem - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH79.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH79 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH79 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-tirunelveli',
@@ -169,6 +585,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chennai-to-tirunelveli',
     estDistance: '620 km',
     fare: {"hatchback":9300,"sedan":9300,"suv":12400,"innova":13640,"hycross":15500,"traveller":18600},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Tirunelveli)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Tirunelveli Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH45.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH45 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH45 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Iruttu Kadai Halwa",
+                  "location": "Tirunelveli Town",
+                  "famousFor": "Hot wheat halwa made with Tamirabharani river water"
+            }
+      ]
+},
   },
   {
     slug: 'tirunelveli-to-chennai',
@@ -188,6 +647,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/tirunelveli-to-chennai',
     estDistance: '620 km',
     fare: {"hatchback":9300,"sedan":9300,"suv":12400,"innova":13640,"hycross":15500,"traveller":18600},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Tirunelveli - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Tirunelveli - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH44.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH44 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH44 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Iruttu Kadai Halwa",
+                  "location": "Tirunelveli Town",
+                  "famousFor": "Hot wheat halwa made with Tamirabharani river water"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-thanjavur',
@@ -207,6 +709,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chennai-to-thanjavur',
     estDistance: '340 km',
     fare: {"hatchback":5100,"sedan":5100,"suv":6800,"innova":7480,"hycross":8500,"traveller":10200},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Thanjavur)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Thanjavur Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH45.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH45 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH45 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
   },
   {
     slug: 'thanjavur-to-chennai',
@@ -226,6 +771,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/thanjavur-to-chennai',
     estDistance: '340 km',
     fare: {"hatchback":5100,"sedan":5100,"suv":6800,"innova":7480,"hycross":8500,"traveller":10200},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Thanjavur - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Thanjavur - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH36.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH36 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH36 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Thanjavur Regional Snacks",
+                  "location": "Thanjavur Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Thanjavur"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-vellore',
@@ -245,6 +833,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chennai-to-vellore',
     estDistance: '140 km',
     fare: {"hatchback":2100,"sedan":2100,"suv":2800,"innova":3080,"hycross":3500,"traveller":4200},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Vellore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Vellore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
   },
   {
     slug: 'vellore-to-chennai',
@@ -264,6 +895,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/vellore-to-chennai',
     estDistance: '140 km',
     fare: {"hatchback":2100,"sedan":2100,"suv":2800,"innova":3080,"hycross":3500,"traveller":4200},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Vellore - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Vellore - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Vellore Regional Snacks",
+                  "location": "Vellore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Vellore"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-erode',
@@ -283,6 +957,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chennai-to-erode',
     estDistance: '420 km',
     fare: {"hatchback":6300,"sedan":6300,"suv":8400,"innova":9240,"hycross":10500,"traveller":12600},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Erode)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Erode Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
   },
   {
     slug: 'erode-to-chennai',
@@ -302,6 +1019,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/erode-to-chennai',
     estDistance: '420 km',
     fare: {"hatchback":6300,"sedan":6300,"suv":8400,"innova":9240,"hycross":10500,"traveller":12600},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Erode - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Erode - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Erode Regional Snacks",
+                  "location": "Erode Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Erode"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-nagapattinam',
@@ -321,6 +1081,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chennai-to-nagapattinam',
     estDistance: '310 km',
     fare: {"hatchback":4650,"sedan":4650,"suv":6200,"innova":6820,"hycross":7750,"traveller":9300},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Nagapattinam)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Nagapattinam Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along ECR.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "ECR Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "ECR Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
   },
   {
     slug: 'nagapattinam-to-chennai',
@@ -340,6 +1143,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/nagapattinam-to-chennai',
     estDistance: '310 km',
     fare: {"hatchback":4650,"sedan":4650,"suv":6200,"innova":6820,"hycross":7750,"traveller":9300},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Nagapattinam - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Nagapattinam - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH32.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH32 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH32 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Nagapattinam Regional Snacks",
+                  "location": "Nagapattinam Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Nagapattinam"
+            }
+      ]
+},
   },
   {
     slug: 'trichy-to-madurai',
@@ -359,6 +1205,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/trichy-to-madurai',
     estDistance: '135 km',
     fare: {"hatchback":2025,"sedan":2025,"suv":2700,"innova":2970,"hycross":3375,"traveller":4050},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Madurai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Madurai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH38.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH38 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH38 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
   },
   {
     slug: 'madurai-to-trichy',
@@ -378,6 +1267,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/madurai-to-trichy',
     estDistance: '135 km',
     fare: {"hatchback":2025,"sedan":2025,"suv":2700,"innova":2970,"hycross":3375,"traveller":4050},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Madurai - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Madurai - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH38.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH38 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH38 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Madurai Regional Snacks",
+                  "location": "Madurai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Madurai"
+            }
+      ]
+},
   },
   {
     slug: 'trichy-to-coimbatore',
@@ -397,6 +1329,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/trichy-to-coimbatore',
     estDistance: '215 km',
     fare: {"hatchback":3225,"sedan":3225,"suv":4300,"innova":4730,"hycross":5375,"traveller":6450},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH81.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH81 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH81 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
   },
   {
     slug: 'coimbatore-to-trichy',
@@ -416,6 +1391,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/coimbatore-to-trichy',
     estDistance: '215 km',
     fare: {"hatchback":3225,"sedan":3225,"suv":4300,"innova":4730,"hycross":5375,"traveller":6450},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH81.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH81 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH81 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
+},
   },
   {
     slug: 'trichy-to-salem',
@@ -435,6 +1453,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/trichy-to-salem',
     estDistance: '140 km',
     fare: {"hatchback":2100,"sedan":2100,"suv":2800,"innova":3080,"hycross":3500,"traveller":4200},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Salem)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Salem Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH81.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH81 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH81 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
+},
   },
   {
     slug: 'salem-to-trichy',
@@ -454,6 +1515,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/salem-to-trichy',
     estDistance: '140 km',
     fare: {"hatchback":2100,"sedan":2100,"suv":2800,"innova":3080,"hycross":3500,"traveller":4200},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Salem - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Salem - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH44.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH44 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH44 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
+},
   },
   {
     slug: 'trichy-to-thanjavur',
@@ -473,6 +1577,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/trichy-to-thanjavur',
     estDistance: '55 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Thanjavur)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Thanjavur Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH83.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
   },
   {
     slug: 'thanjavur-to-trichy',
@@ -492,6 +1639,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/thanjavur-to-trichy',
     estDistance: '55 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Thanjavur - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Thanjavur - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH83.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Thanjavur Regional Snacks",
+                  "location": "Thanjavur Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Thanjavur"
+            }
+      ]
+},
   },
   {
     slug: 'trichy-to-tirunelveli',
@@ -511,6 +1701,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/trichy-to-tirunelveli',
     estDistance: '290 km',
     fare: {"hatchback":4350,"sedan":4350,"suv":5800,"innova":6380,"hycross":7250,"traveller":8700},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Tirunelveli)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Tirunelveli Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH38.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH38 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH38 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Iruttu Kadai Halwa",
+                  "location": "Tirunelveli Town",
+                  "famousFor": "Hot wheat halwa made with Tamirabharani river water"
+            }
+      ]
+},
   },
   {
     slug: 'tirunelveli-to-trichy',
@@ -530,6 +1763,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/tirunelveli-to-trichy',
     estDistance: '290 km',
     fare: {"hatchback":4350,"sedan":4350,"suv":5800,"innova":6380,"hycross":7250,"traveller":8700},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Tirunelveli - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Tirunelveli - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH44.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH44 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH44 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Iruttu Kadai Halwa",
+                  "location": "Tirunelveli Town",
+                  "famousFor": "Hot wheat halwa made with Tamirabharani river water"
+            }
+      ]
+},
   },
   {
     slug: 'trichy-to-erode',
@@ -549,6 +1825,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/trichy-to-erode',
     estDistance: '155 km',
     fare: {"hatchback":2325,"sedan":2325,"suv":3100,"innova":3410,"hycross":3875,"traveller":4650},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Erode)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Erode Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH81.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH81 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH81 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
   },
   {
     slug: 'erode-to-trichy',
@@ -568,6 +1887,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/erode-to-trichy',
     estDistance: '155 km',
     fare: {"hatchback":2325,"sedan":2325,"suv":3100,"innova":3410,"hycross":3875,"traveller":4650},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Erode - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Erode - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH81.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH81 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH81 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Erode Regional Snacks",
+                  "location": "Erode Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Erode"
+            }
+      ]
+},
   },
   {
     slug: 'madurai-to-coimbatore',
@@ -587,6 +1949,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/madurai-to-coimbatore',
     estDistance: '210 km',
     fare: {"hatchback":3150,"sedan":3150,"suv":4200,"innova":4620,"hycross":5250,"traveller":6300},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Madurai - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Madurai - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH83.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Madurai Regional Snacks",
+                  "location": "Madurai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Madurai"
+            }
+      ]
+},
   },
   {
     slug: 'coimbatore-to-madurai',
@@ -606,6 +2011,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/coimbatore-to-madurai',
     estDistance: '210 km',
     fare: {"hatchback":3150,"sedan":3150,"suv":4200,"innova":4620,"hycross":5250,"traveller":6300},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Madurai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Madurai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH83.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
+},
   },
   {
     slug: 'madurai-to-tirunelveli',
@@ -625,6 +2073,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/madurai-to-tirunelveli',
     estDistance: '160 km',
     fare: {"hatchback":2400,"sedan":2400,"suv":3200,"innova":3520,"hycross":4000,"traveller":4800},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Madurai - Tirunelveli)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Madurai - Tirunelveli Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH44.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH44 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH44 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Iruttu Kadai Halwa",
+                  "location": "Tirunelveli Town",
+                  "famousFor": "Hot wheat halwa made with Tamirabharani river water"
+            }
+      ]
+},
   },
   {
     slug: 'tirunelveli-to-madurai',
@@ -644,6 +2135,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/tirunelveli-to-madurai',
     estDistance: '160 km',
     fare: {"hatchback":2400,"sedan":2400,"suv":3200,"innova":3520,"hycross":4000,"traveller":4800},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Tirunelveli - Madurai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Tirunelveli - Madurai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH44.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH44 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH44 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Iruttu Kadai Halwa",
+                  "location": "Tirunelveli Town",
+                  "famousFor": "Hot wheat halwa made with Tamirabharani river water"
+            }
+      ]
+},
   },
   {
     slug: 'coimbatore-to-salem',
@@ -663,6 +2197,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/coimbatore-to-salem',
     estDistance: '165 km',
     fare: {"hatchback":2475,"sedan":2475,"suv":3300,"innova":3630,"hycross":4125,"traveller":4950},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Salem)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Salem Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
+},
   },
   {
     slug: 'salem-to-coimbatore',
@@ -682,6 +2259,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/salem-to-coimbatore',
     estDistance: '165 km',
     fare: {"hatchback":2475,"sedan":2475,"suv":3300,"innova":3630,"hycross":4125,"traveller":4950},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Salem - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Salem - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
+},
   },
   {
     slug: 'coimbatore-to-erode',
@@ -701,6 +2321,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/coimbatore-to-erode',
     estDistance: '100 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Erode)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Erode Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
+},
   },
   {
     slug: 'erode-to-coimbatore',
@@ -720,6 +2383,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/erode-to-coimbatore',
     estDistance: '100 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Erode - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Erode - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Erode Regional Snacks",
+                  "location": "Erode Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Erode"
+            }
+      ]
+},
   },
   {
     slug: 'coimbatore-to-pollachi',
@@ -739,6 +2445,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/coimbatore-to-pollachi',
     estDistance: '45 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Pollachi)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Pollachi Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH83.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
+},
   },
   {
     slug: 'pollachi-to-coimbatore',
@@ -758,6 +2507,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/pollachi-to-coimbatore',
     estDistance: '45 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Pollachi - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Pollachi - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH83.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Pollachi Regional Snacks",
+                  "location": "Pollachi Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Pollachi"
+            }
+      ]
+},
   },
   {
     slug: 'salem-to-erode',
@@ -777,6 +2569,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/salem-to-erode',
     estDistance: '65 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Salem - Erode)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Salem - Erode Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
+},
   },
   {
     slug: 'erode-to-salem',
@@ -796,6 +2631,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/erode-to-salem',
     estDistance: '65 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Erode - Salem)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Erode - Salem Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Salem Malgova Mangoes & Thattu Vadai",
+                  "location": "Salem Highway Market",
+                  "famousFor": "Seasonal juicy Malgova mangoes & crisp street snack"
+            }
+      ]
+},
   },
   {
     slug: 'trichy-to-velankanni',
@@ -815,6 +2693,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/trichy-to-velankanni',
     estDistance: '155 km',
     fare: {"hatchback":2325,"sedan":2325,"suv":3100,"innova":3410,"hycross":3875,"traveller":4650},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Velankanni)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Trichy / Velankanni Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH83 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH83 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
   },
   {
     slug: 'velankanni-to-trichy',
@@ -834,6 +2755,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/velankanni-to-trichy',
     estDistance: '155 km',
     fare: {"hatchback":2325,"sedan":2325,"suv":3100,"innova":3410,"hycross":3875,"traveller":4650},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Velankanni - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Velankanni / Trichy Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH22 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH22 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Velankanni Regional Snacks",
+                  "location": "Velankanni Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Velankanni"
+            }
+      ]
+},
   },
   {
     slug: 'trichy-to-kumbakonam',
@@ -853,6 +2817,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/trichy-to-kumbakonam',
     estDistance: '90 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Kumbakonam)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Trichy / Kumbakonam Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH36 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH36 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Kumbakonam Degree Coffee & Mahamaham Snacks",
+                  "location": "Kumbakonam Town",
+                  "famousFor": "Pure unadulterated cow milk filter coffee"
+            }
+      ]
+},
   },
   {
     slug: 'kumbakonam-to-trichy',
@@ -872,6 +2879,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/kumbakonam-to-trichy',
     estDistance: '90 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Kumbakonam - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Kumbakonam / Trichy Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH36 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH36 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Kumbakonam Degree Coffee & Mahamaham Snacks",
+                  "location": "Kumbakonam Town",
+                  "famousFor": "Pure unadulterated cow milk filter coffee"
+            }
+      ]
+},
   },
   {
     slug: 'trichy-to-chidambaram',
@@ -891,6 +2941,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/trichy-to-chidambaram',
     estDistance: '170 km',
     fare: {"hatchback":2550,"sedan":2550,"suv":3400,"innova":3740,"hycross":4250,"traveller":5100},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Chidambaram)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Trichy / Chidambaram Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH36 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH36 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
   },
   {
     slug: 'chidambaram-to-trichy',
@@ -910,6 +3003,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chidambaram-to-trichy',
     estDistance: '170 km',
     fare: {"hatchback":2550,"sedan":2550,"suv":3400,"innova":3740,"hycross":4250,"traveller":5100},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chidambaram - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Chidambaram / Trichy Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH36 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH36 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chidambaram Regional Snacks",
+                  "location": "Chidambaram Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chidambaram"
+            }
+      ]
+},
   },
   {
     slug: 'madurai-to-rameswaram',
@@ -929,6 +3065,75 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/madurai-to-rameswaram',
     estDistance: '175 km',
     fare: {"hatchback":2625,"sedan":2625,"suv":3500,"innova":3850,"hycross":4375,"traveller":5250},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Amma Mess Madurai",
+                  "cuisine": "Non-Veg Tamil Cuisine",
+                  "famousFor": "Ayira Meen Kuzhambu & Bone Marrow Omelette",
+                  "detour": "1 km Detour",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.7★"
+            },
+            {
+                  "name": "Hotel Saravana Bhavan Rameswaram",
+                  "cuisine": "Pure Veg",
+                  "famousFor": "Traditional South Indian Meals",
+                  "detour": "0.5 km Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Lunch"
+                  ],
+                  "rating": "4.3★"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Ramanathaswamy Temple (22 Holy Wells)",
+                  "description": "Iconic Jyotirlinga shrine featuring the world’s longest 1,000-pillar corridor.",
+                  "detour": "1 km Detour",
+                  "stopDuration": "2 Hours"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Dhanushkodi Ghost Town & Sangam Point",
+                  "description": "Vanish town where Bay of Bengal meets Indian Ocean at land’s end.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "selfieSpots": [
+            {
+                  "name": "Pamban Sea Bridge Viewpoint",
+                  "type": "Historic Rail & Highway Sea Bridge",
+                  "location": "Rameswaram Entrance Sea Causeway"
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Sea Shell Crafts & Conches",
+                  "famousProducts": "Handcrafted Sea Shell Souvenirs & Sacred Shankha"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Ramanathapuram BPCL Fuel & Restroom Hub",
+                  "type": "Petrol Pump & Clean Restroom",
+                  "location": "NH87 Rameswaram Highway"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Madurai Famous Famous Jigarthanda",
+                  "location": "Madurai City / Highway Exit",
+                  "famousFor": "Royal refreshing almond gum & Nannari milk dessert"
+            }
+      ]
+},
   },
   {
     slug: 'rameswaram-to-madurai',
@@ -948,6 +3153,75 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/rameswaram-to-madurai',
     estDistance: '175 km',
     fare: {"hatchback":2625,"sedan":2625,"suv":3500,"innova":3850,"hycross":4375,"traveller":5250},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Amma Mess Madurai",
+                  "cuisine": "Non-Veg Tamil Cuisine",
+                  "famousFor": "Ayira Meen Kuzhambu & Bone Marrow Omelette",
+                  "detour": "1 km Detour",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.7★"
+            },
+            {
+                  "name": "Hotel Saravana Bhavan Rameswaram",
+                  "cuisine": "Pure Veg",
+                  "famousFor": "Traditional South Indian Meals",
+                  "detour": "0.5 km Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Lunch"
+                  ],
+                  "rating": "4.3★"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Ramanathaswamy Temple (22 Holy Wells)",
+                  "description": "Iconic Jyotirlinga shrine featuring the world’s longest 1,000-pillar corridor.",
+                  "detour": "1 km Detour",
+                  "stopDuration": "2 Hours"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Dhanushkodi Ghost Town & Sangam Point",
+                  "description": "Vanish town where Bay of Bengal meets Indian Ocean at land’s end.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "selfieSpots": [
+            {
+                  "name": "Pamban Sea Bridge Viewpoint",
+                  "type": "Historic Rail & Highway Sea Bridge",
+                  "location": "Rameswaram Entrance Sea Causeway"
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Sea Shell Crafts & Conches",
+                  "famousProducts": "Handcrafted Sea Shell Souvenirs & Sacred Shankha"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Ramanathapuram BPCL Fuel & Restroom Hub",
+                  "type": "Petrol Pump & Clean Restroom",
+                  "location": "NH87 Rameswaram Highway"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Madurai Famous Famous Jigarthanda",
+                  "location": "Madurai City / Highway Exit",
+                  "famousFor": "Royal refreshing almond gum & Nannari milk dessert"
+            }
+      ]
+},
   },
   {
     slug: 'madurai-to-tiruchendur',
@@ -967,6 +3241,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/madurai-to-tiruchendur',
     estDistance: '180 km',
     fare: {"hatchback":2700,"sedan":2700,"suv":3600,"innova":3960,"hycross":4500,"traveller":5400},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Madurai - Tiruchendur)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Madurai / Tiruchendur Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH38 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH38 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Madurai Regional Snacks",
+                  "location": "Madurai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Madurai"
+            }
+      ]
+},
   },
   {
     slug: 'tiruchendur-to-madurai',
@@ -986,6 +3303,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/tiruchendur-to-madurai',
     estDistance: '180 km',
     fare: {"hatchback":2700,"sedan":2700,"suv":3600,"innova":3960,"hycross":4500,"traveller":5400},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Tiruchendur - Madurai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Tiruchendur / Madurai Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH38 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH38 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Tiruchendur Regional Snacks",
+                  "location": "Tiruchendur Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Tiruchendur"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-kanchipuram',
@@ -1005,6 +3365,42 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chennai-to-kanchipuram',
     estDistance: '75 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Sri Krishna Sweets & Veg Restaurant",
+                  "cuisine": "Pure Veg",
+                  "famousFor": "Mysurpa & Ghee Roast Dosa",
+                  "detour": "1 km Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Snacks"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Ekambareswarar & Varadharaja Perumal Temples",
+                  "description": "Ancient temple complex famed for its 1,000-pillar hall and 3,500-year-old Mango tree.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "1.5 Hours"
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Pure Silk Sarees",
+                  "famousProducts": "Handwoven Kanchipuram Zari Silk Sarees from Weaver Cooperatives"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Kanchipuram Kovil Idli",
+                  "location": "Kanchipuram Temple Street",
+                  "famousFor": "Spiced ginger & pepper steamed idli in Mandharai leaf"
+            }
+      ]
+},
   },
   {
     slug: 'kanchipuram-to-chennai',
@@ -1024,6 +3420,42 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/kanchipuram-to-chennai',
     estDistance: '75 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Sri Krishna Sweets & Veg Restaurant",
+                  "cuisine": "Pure Veg",
+                  "famousFor": "Mysurpa & Ghee Roast Dosa",
+                  "detour": "1 km Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Snacks"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Ekambareswarar & Varadharaja Perumal Temples",
+                  "description": "Ancient temple complex famed for its 1,000-pillar hall and 3,500-year-old Mango tree.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "1.5 Hours"
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Pure Silk Sarees",
+                  "famousProducts": "Handwoven Kanchipuram Zari Silk Sarees from Weaver Cooperatives"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Kanchipuram Kovil Idli",
+                  "location": "Kanchipuram Temple Street",
+                  "famousFor": "Spiced ginger & pepper steamed idli in Mandharai leaf"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-chidambaram',
@@ -1043,6 +3475,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chennai-to-chidambaram',
     estDistance: '230 km',
     fare: {"hatchback":3450,"sedan":3450,"suv":4600,"innova":5060,"hycross":5750,"traveller":6900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Chidambaram)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Chennai / Chidambaram Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "ECR Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "ECR Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
   },
   {
     slug: 'chidambaram-to-chennai',
@@ -1062,6 +3537,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chidambaram-to-chennai',
     estDistance: '230 km',
     fare: {"hatchback":3450,"sedan":3450,"suv":4600,"innova":5060,"hycross":5750,"traveller":6900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chidambaram - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "temples": [
+            {
+                  "name": "Chidambaram / Chennai Historic Shrine",
+                  "description": "Famous ancient temple known for architectural splendour and spiritual peacefulness.",
+                  "detour": "2 km Detour",
+                  "stopDuration": "30 Mins Visit"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH32 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH32 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chidambaram Regional Snacks",
+                  "location": "Chidambaram Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chidambaram"
+            }
+      ]
+},
   },
   {
     slug: 'coimbatore-to-ooty',
@@ -1081,6 +3599,61 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/coimbatore-to-ooty',
     estDistance: '85 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "High Range Hilltop Restaurant",
+                  "cuisine": "Multi-Cuisine",
+                  "famousFor": "Hot Malabar Parotta & Mountain Tea",
+                  "detour": "0 km Ghat Road",
+                  "mealType": [
+                        "Lunch",
+                        "Snacks"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Highfield Tea Factory Tasting Point",
+                  "type": "Tea Shop & Tasting Room"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Government Botanical Gardens & Ooty Lake",
+                  "description": "Sprawling 55-acre terraced garden with 20-million-year-old fossilized tree.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "scenicViews": [
+            {
+                  "name": "Nilgiri Hairpin Bends Viewpoint",
+                  "viewType": "Valley & Cloud View",
+                  "stopDuration": "15 Mins"
+            },
+            {
+                  "name": "Ketti Valley Viewpoint",
+                  "viewType": "Second Largest Valley View in Asia",
+                  "stopDuration": "20 Mins"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Mettupalayam Highway Fuel & EV Station",
+                  "type": "EV Charging & Petrol Pump",
+                  "location": "Foot of Nilgiri Ghat Road"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Ooty Homemade Chocolates & Eucalyptus Oil",
+                  "location": "Ooty Town & Commercial Road",
+                  "famousFor": "Freshly made dark chocolates & therapeutic oils"
+            }
+      ]
+},
   },
   {
     slug: 'ooty-to-coimbatore',
@@ -1100,6 +3673,61 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/ooty-to-coimbatore',
     estDistance: '85 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "High Range Hilltop Restaurant",
+                  "cuisine": "Multi-Cuisine",
+                  "famousFor": "Hot Malabar Parotta & Mountain Tea",
+                  "detour": "0 km Ghat Road",
+                  "mealType": [
+                        "Lunch",
+                        "Snacks"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Highfield Tea Factory Tasting Point",
+                  "type": "Tea Shop & Tasting Room"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Government Botanical Gardens & Ooty Lake",
+                  "description": "Sprawling 55-acre terraced garden with 20-million-year-old fossilized tree.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "scenicViews": [
+            {
+                  "name": "Nilgiri Hairpin Bends Viewpoint",
+                  "viewType": "Valley & Cloud View",
+                  "stopDuration": "15 Mins"
+            },
+            {
+                  "name": "Ketti Valley Viewpoint",
+                  "viewType": "Second Largest Valley View in Asia",
+                  "stopDuration": "20 Mins"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Mettupalayam Highway Fuel & EV Station",
+                  "type": "EV Charging & Petrol Pump",
+                  "location": "Foot of Nilgiri Ghat Road"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Ooty Homemade Chocolates & Eucalyptus Oil",
+                  "location": "Ooty Town & Commercial Road",
+                  "famousFor": "Freshly made dark chocolates & therapeutic oils"
+            }
+      ]
+},
   },
   {
     slug: 'coimbatore-to-coonoor',
@@ -1119,6 +3747,61 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/coimbatore-to-coonoor',
     estDistance: '70 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "High Range Hilltop Restaurant",
+                  "cuisine": "Multi-Cuisine",
+                  "famousFor": "Hot Malabar Parotta & Mountain Tea",
+                  "detour": "0 km Ghat Road",
+                  "mealType": [
+                        "Lunch",
+                        "Snacks"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Highfield Tea Factory Tasting Point",
+                  "type": "Tea Shop & Tasting Room"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Government Botanical Gardens & Ooty Lake",
+                  "description": "Sprawling 55-acre terraced garden with 20-million-year-old fossilized tree.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "scenicViews": [
+            {
+                  "name": "Nilgiri Hairpin Bends Viewpoint",
+                  "viewType": "Valley & Cloud View",
+                  "stopDuration": "15 Mins"
+            },
+            {
+                  "name": "Ketti Valley Viewpoint",
+                  "viewType": "Second Largest Valley View in Asia",
+                  "stopDuration": "20 Mins"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Mettupalayam Highway Fuel & EV Station",
+                  "type": "EV Charging & Petrol Pump",
+                  "location": "Foot of Nilgiri Ghat Road"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Ooty Homemade Chocolates & Eucalyptus Oil",
+                  "location": "Ooty Town & Commercial Road",
+                  "famousFor": "Freshly made dark chocolates & therapeutic oils"
+            }
+      ]
+},
   },
   {
     slug: 'coonoor-to-coimbatore',
@@ -1138,6 +3821,61 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/coonoor-to-coimbatore',
     estDistance: '70 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "High Range Hilltop Restaurant",
+                  "cuisine": "Multi-Cuisine",
+                  "famousFor": "Hot Malabar Parotta & Mountain Tea",
+                  "detour": "0 km Ghat Road",
+                  "mealType": [
+                        "Lunch",
+                        "Snacks"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Highfield Tea Factory Tasting Point",
+                  "type": "Tea Shop & Tasting Room"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Government Botanical Gardens & Ooty Lake",
+                  "description": "Sprawling 55-acre terraced garden with 20-million-year-old fossilized tree.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "scenicViews": [
+            {
+                  "name": "Nilgiri Hairpin Bends Viewpoint",
+                  "viewType": "Valley & Cloud View",
+                  "stopDuration": "15 Mins"
+            },
+            {
+                  "name": "Ketti Valley Viewpoint",
+                  "viewType": "Second Largest Valley View in Asia",
+                  "stopDuration": "20 Mins"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Mettupalayam Highway Fuel & EV Station",
+                  "type": "EV Charging & Petrol Pump",
+                  "location": "Foot of Nilgiri Ghat Road"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Ooty Homemade Chocolates & Eucalyptus Oil",
+                  "location": "Ooty Town & Commercial Road",
+                  "famousFor": "Freshly made dark chocolates & therapeutic oils"
+            }
+      ]
+},
   },
   {
     slug: 'coimbatore-to-valparai',
@@ -1157,6 +3895,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/coimbatore-to-valparai',
     estDistance: '105 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Valparai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Valparai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along SH78 Ghat Road.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH78 Ghat Road Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH78 Ghat Road Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
+},
   },
   {
     slug: 'valparai-to-coimbatore',
@@ -1176,6 +3957,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/valparai-to-coimbatore',
     estDistance: '105 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Valparai - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Valparai - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along SH78 Ghat Road.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH78 Ghat Road Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH78 Ghat Road Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Valparai Regional Snacks",
+                  "location": "Valparai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Valparai"
+            }
+      ]
+},
   },
   {
     slug: 'coimbatore-to-munnar',
@@ -1195,6 +4019,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/coimbatore-to-munnar',
     estDistance: '160 km',
     fare: {"hatchback":2400,"sedan":2400,"suv":3200,"innova":3520,"hycross":4000,"traveller":4800},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Munnar)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Munnar Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along SH17.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH17 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH17 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
+},
   },
   {
     slug: 'munnar-to-coimbatore',
@@ -1214,6 +4081,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/munnar-to-coimbatore',
     estDistance: '160 km',
     fare: {"hatchback":2400,"sedan":2400,"suv":3200,"innova":3520,"hycross":4000,"traveller":4800},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Munnar - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Munnar - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along Udumalpet Ghat Road.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Udumalpet Ghat Road Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "Udumalpet Ghat Road Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Munnar Regional Snacks",
+                  "location": "Munnar Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Munnar"
+            }
+      ]
+},
   },
   {
     slug: 'madurai-to-kodaikanal',
@@ -1233,6 +4143,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/madurai-to-kodaikanal',
     estDistance: '115 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Madurai - Kodaikanal)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Madurai - Kodaikanal Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along SH156 Ghat Road.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH156 Ghat Road Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH156 Ghat Road Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Madurai Regional Snacks",
+                  "location": "Madurai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Madurai"
+            }
+      ]
+},
   },
   {
     slug: 'kodaikanal-to-madurai',
@@ -1252,120 +4205,219 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/kodaikanal-to-madurai',
     estDistance: '115 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'madurai-to-kanyakumari',
-    from: 'Madurai',
-    to: 'Kanyakumari',
-    category: 'Tourist',
-    popularity: 9,
-    isFeatured: true,
-    purposes: ["Sunset Point","Vivekananda Rock","Tourism"],
-    seasonality: ["All Season"],
-    distanceKm: 245,
-    estimatedTime: '4.25 Hours',
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'madurai',
-    districtDestination: 'kanyakumari',
-    name: 'Madurai to Kanyakumari One-Way Taxi',
-    url: '/one-way-taxi/madurai-to-kanyakumari',
-    estDistance: '245 km',
-    fare: {"hatchback":3675,"sedan":3675,"suv":4900,"innova":5390,"hycross":6125,"traveller":7350},
-  },
-  {
-    slug: 'kanyakumari-to-madurai',
-    from: 'Kanyakumari',
-    to: 'Madurai',
-    category: 'Tourist',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["IXM Airport","Tourism Return"],
-    seasonality: ["All Season"],
-    distanceKm: 245,
-    estimatedTime: '4.25 Hours',
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'kanyakumari',
-    districtDestination: 'madurai',
-    name: 'Kanyakumari to Madurai One-Way Taxi',
-    url: '/one-way-taxi/kanyakumari-to-madurai',
-    estDistance: '245 km',
-    fare: {"hatchback":3675,"sedan":3675,"suv":4900,"innova":5390,"hycross":6125,"traveller":7350},
-  },
-  {
-    slug: 'madurai-to-courtallam',
-    from: 'Madurai',
-    to: 'Courtallam',
-    category: 'Tourist',
-    popularity: 8,
-    isFeatured: false,
-    purposes: ["Waterfalls","Ayurveda","Tourism"],
-    seasonality: ["All Season"],
-    distanceKm: 160,
-    estimatedTime: '3.5 Hours',
-    roadConditions: 'Access-controlled NH744 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'madurai',
-    districtDestination: 'tenkasi',
-    name: 'Madurai to Courtallam One-Way Taxi',
-    url: '/one-way-taxi/madurai-to-courtallam',
-    estDistance: '160 km',
-    fare: {"hatchback":2400,"sedan":2400,"suv":3200,"innova":3520,"hycross":4000,"traveller":4800},
-  },
-  {
-    slug: 'courtallam-to-madurai',
-    from: 'Courtallam',
-    to: 'Madurai',
-    category: 'Tourist',
-    popularity: 8,
-    isFeatured: false,
-    purposes: ["IXM Airport","Tourism Return"],
-    seasonality: ["All Season"],
-    distanceKm: 160,
-    estimatedTime: '3.5 Hours',
-    roadConditions: 'Access-controlled NH744 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'tenkasi',
-    districtDestination: 'madurai',
-    name: 'Courtallam to Madurai One-Way Taxi',
-    url: '/one-way-taxi/courtallam-to-madurai',
-    estDistance: '160 km',
-    fare: {"hatchback":2400,"sedan":2400,"suv":3200,"innova":3520,"hycross":4000,"traveller":4800},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Kodaikanal - Madurai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Kodaikanal - Madurai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along SH156 Ghat Road.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH156 Ghat Road Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH156 Ghat Road Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Kodaikanal Regional Snacks",
+                  "location": "Kodaikanal Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Kodaikanal"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-pondicherry',
     from: 'Chennai',
-    to: 'Puducherry',
+    to: 'Pondicherry',
     category: 'Tourist',
     popularity: 10,
     isFeatured: true,
-    purposes: ["ECR Roadtrip","Auroville","French Quarter"],
+    purposes: ["Weekend Getaway","French Colony","Beach"],
     seasonality: ["All Season"],
-    distanceKm: 160,
-    estimatedTime: '3.25 Hours',
+    distanceKm: 150,
+    estimatedTime: '3 Hours',
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
     districtOrigin: 'chennai',
-    districtDestination: 'viluppuram',
-    name: 'Chennai to Puducherry One-Way Taxi',
+    districtDestination: 'puducherry',
+    name: 'Chennai to Pondicherry One-Way Taxi',
     url: '/one-way-taxi/chennai-to-pondicherry',
-    estDistance: '160 km',
-    fare: {"hatchback":2400,"sedan":2400,"suv":3200,"innova":3520,"hycross":4000,"traveller":4800},
+    estDistance: '150 km',
+    fare: {"hatchback":2250,"sedan":2250,"suv":3000,"innova":3300,"hycross":3750,"traveller":4500},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Baker Street French Bakery",
+                  "cuisine": "French & European",
+                  "famousFor": "Butter Croissants, Quiche & Eclairs",
+                  "detour": "1 km ECR Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Snacks"
+                  ],
+                  "rating": "4.7★"
+            },
+            {
+                  "name": "ECR Dhaba & Seafood Shack",
+                  "cuisine": "Chettinad Seafood",
+                  "famousFor": "Fresh Tawa Fish Fry & Prawn Masala",
+                  "detour": "0 km ECR Highway",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Cafe Des Arts French Quarter",
+                  "type": "Coffee Shop & Cafe"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Auroville Globe & Matrimandir",
+                  "description": "Universal township dedicated to human unity with iconic golden dome.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            },
+            {
+                  "name": "Mahabalipuram Five Rathas & Shore Temple",
+                  "description": "Ancient 7th-century rock-cut monuments along ECR coastline.",
+                  "visitDuration": "1.5 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "selfieSpots": [
+            {
+                  "name": "Pondicherry Promenade Rock Beach",
+                  "type": "French Quarter Sea Boardwalk",
+                  "location": "White Town Beach Road"
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Aromatherapy & Handmade Leather",
+                  "famousProducts": "Auroville Incense, Essential Oils & Genuine Leather"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Mahabalipuram ECR Fuel & Plaza",
+                  "type": "Petrol Pump & Restrooms",
+                  "location": "ECR Highway Km 55"
+            }
+      ]
+},
   },
   {
     slug: 'pondicherry-to-chennai',
-    from: 'Puducherry',
+    from: 'Pondicherry',
     to: 'Chennai',
     category: 'Tourist',
     popularity: 10,
-    isFeatured: false,
-    purposes: ["MAA Airport","Weekend Return"],
+    isFeatured: true,
+    purposes: ["MAA Airport","Corporate Return"],
     seasonality: ["All Season"],
-    distanceKm: 160,
-    estimatedTime: '3.25 Hours',
+    distanceKm: 150,
+    estimatedTime: '3 Hours',
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
-    districtOrigin: 'viluppuram',
+    districtOrigin: 'puducherry',
     districtDestination: 'chennai',
-    name: 'Puducherry to Chennai One-Way Taxi',
+    name: 'Pondicherry to Chennai One-Way Taxi',
     url: '/one-way-taxi/pondicherry-to-chennai',
-    estDistance: '160 km',
-    fare: {"hatchback":2400,"sedan":2400,"suv":3200,"innova":3520,"hycross":4000,"traveller":4800},
+    estDistance: '150 km',
+    fare: {"hatchback":2250,"sedan":2250,"suv":3000,"innova":3300,"hycross":3750,"traveller":4500},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Baker Street French Bakery",
+                  "cuisine": "French & European",
+                  "famousFor": "Butter Croissants, Quiche & Eclairs",
+                  "detour": "1 km ECR Detour",
+                  "mealType": [
+                        "Breakfast",
+                        "Snacks"
+                  ],
+                  "rating": "4.7★"
+            },
+            {
+                  "name": "ECR Dhaba & Seafood Shack",
+                  "cuisine": "Chettinad Seafood",
+                  "famousFor": "Fresh Tawa Fish Fry & Prawn Masala",
+                  "detour": "0 km ECR Highway",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.5★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Cafe Des Arts French Quarter",
+                  "type": "Coffee Shop & Cafe"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Auroville Globe & Matrimandir",
+                  "description": "Universal township dedicated to human unity with iconic golden dome.",
+                  "visitDuration": "2 Hours",
+                  "familyFriendly": true
+            },
+            {
+                  "name": "Mahabalipuram Five Rathas & Shore Temple",
+                  "description": "Ancient 7th-century rock-cut monuments along ECR coastline.",
+                  "visitDuration": "1.5 Hours",
+                  "familyFriendly": true
+            }
+      ],
+      "selfieSpots": [
+            {
+                  "name": "Pondicherry Promenade Rock Beach",
+                  "type": "French Quarter Sea Boardwalk",
+                  "location": "White Town Beach Road"
+            }
+      ],
+      "shopping": [
+            {
+                  "category": "Aromatherapy & Handmade Leather",
+                  "famousProducts": "Auroville Incense, Essential Oils & Genuine Leather"
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "Mahabalipuram ECR Fuel & Plaza",
+                  "type": "Petrol Pump & Restrooms",
+                  "location": "ECR Highway Km 55"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-mahabalipuram',
@@ -1374,17 +4426,60 @@ export const routesMasterDataset = [
     category: 'Tourist',
     popularity: 9,
     isFeatured: true,
-    purposes: ["UNESCO Heritage","Shore Temple","Day Trip"],
+    purposes: ["Heritage","Shore Temple","Day Trip"],
     seasonality: ["Festival","Winter","All Season"],
     distanceKm: 55,
     estimatedTime: '1.25 Hours',
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
     districtOrigin: 'chennai',
-    districtDestination: 'chengalpattu',
+    districtDestination: 'chennai',
     name: 'Chennai to Mahabalipuram One-Way Taxi',
     url: '/one-way-taxi/chennai-to-mahabalipuram',
     estDistance: '55 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Mahabalipuram)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Mahabalipuram Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along ECR Scenic Highway.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "ECR Scenic Highway Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "ECR Scenic Highway Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
   },
   {
     slug: 'mahabalipuram-to-chennai',
@@ -1398,620 +4493,303 @@ export const routesMasterDataset = [
     distanceKm: 55,
     estimatedTime: '1.25 Hours',
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
-    districtOrigin: 'chengalpattu',
+    districtOrigin: 'chennai',
     districtDestination: 'chennai',
     name: 'Mahabalipuram to Chennai One-Way Taxi',
     url: '/one-way-taxi/mahabalipuram-to-chennai',
     estDistance: '55 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Mahabalipuram - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Mahabalipuram - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along ECR Scenic Highway.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "ECR Scenic Highway Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "ECR Scenic Highway Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Mahabalipuram Regional Snacks",
+                  "location": "Mahabalipuram Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Mahabalipuram"
+            }
+      ]
+},
   },
   {
-    slug: 'tirunelveli-to-kanyakumari',
-    from: 'Tirunelveli',
-    to: 'Kanyakumari',
+    slug: 'trichy-to-yercaud',
+    from: 'Trichy',
+    to: 'Yercaud',
     category: 'Tourist',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["Sunset View","Vivekananda Rock"],
-    seasonality: ["All Season"],
-    distanceKm: 85,
-    estimatedTime: '1.75 Hours',
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'tirunelveli',
-    districtDestination: 'kanyakumari',
-    name: 'Tirunelveli to Kanyakumari One-Way Taxi',
-    url: '/one-way-taxi/tirunelveli-to-kanyakumari',
-    estDistance: '85 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'kanyakumari-to-tirunelveli',
-    from: 'Kanyakumari',
-    to: 'Tirunelveli',
-    category: 'Tourist',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["TEN Station","Tourism Return"],
-    seasonality: ["All Season"],
-    distanceKm: 85,
-    estimatedTime: '1.75 Hours',
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'kanyakumari',
-    districtDestination: 'tirunelveli',
-    name: 'Kanyakumari to Tirunelveli One-Way Taxi',
-    url: '/one-way-taxi/kanyakumari-to-tirunelveli',
-    estDistance: '85 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'chennai-airport-to-pondicherry',
-    from: 'Chennai Airport',
-    to: 'Puducherry',
-    category: 'Airport',
-    popularity: 10,
-    isFeatured: true,
-    purposes: ["Airport Pickup","Auroville","French Quarter"],
-    seasonality: ["All Season"],
-    distanceKm: 140,
-    estimatedTime: '2.75 Hours',
-    roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
-    districtOrigin: 'chennai',
-    districtDestination: 'viluppuram',
-    name: 'Chennai Airport to Puducherry One-Way Taxi',
-    url: '/one-way-taxi/chennai-airport-to-pondicherry',
-    estDistance: '140 km',
-    fare: {"hatchback":2100,"sedan":2100,"suv":2800,"innova":3080,"hycross":3500,"traveller":4200},
-  },
-  {
-    slug: 'pondicherry-to-chennai-airport',
-    from: 'Puducherry',
-    to: 'Chennai Airport',
-    category: 'Airport',
-    popularity: 10,
-    isFeatured: false,
-    purposes: ["MAA Flight Drop","International Flight"],
-    seasonality: ["All Season"],
-    distanceKm: 140,
-    estimatedTime: '2.75 Hours',
-    roadConditions: 'Access-controlled NH32 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'viluppuram',
-    districtDestination: 'chennai',
-    name: 'Puducherry to Chennai Airport One-Way Taxi',
-    url: '/one-way-taxi/pondicherry-to-chennai-airport',
-    estDistance: '140 km',
-    fare: {"hatchback":2100,"sedan":2100,"suv":2800,"innova":3080,"hycross":3500,"traveller":4200},
-  },
-  {
-    slug: 'chennai-airport-to-vellore',
-    from: 'Chennai Airport',
-    to: 'Vellore',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: true,
-    purposes: ["CMC Patient Pickup","Medical Airport Transfer"],
-    seasonality: ["All Season"],
-    distanceKm: 125,
-    estimatedTime: '2.5 Hours',
-    roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'chennai',
-    districtDestination: 'vellore',
-    name: 'Chennai Airport to Vellore One-Way Taxi',
-    url: '/one-way-taxi/chennai-airport-to-vellore',
-    estDistance: '125 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'vellore-to-chennai-airport',
-    from: 'Vellore',
-    to: 'Chennai Airport',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["CMC Flight Drop","MAA Airport Drop"],
-    seasonality: ["All Season"],
-    distanceKm: 125,
-    estimatedTime: '2.5 Hours',
-    roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'vellore',
-    districtDestination: 'chennai',
-    name: 'Vellore to Chennai Airport One-Way Taxi',
-    url: '/one-way-taxi/vellore-to-chennai-airport',
-    estDistance: '125 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'chennai-airport-to-tirupati',
-    from: 'Chennai Airport',
-    to: 'Tirupati',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: true,
-    purposes: ["Airport Temple Taxi","Tirumala Pilgrimage"],
-    seasonality: ["Festival","Winter","All Season"],
-    distanceKm: 130,
-    estimatedTime: '3 Hours',
-    roadConditions: 'Access-controlled NH716 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'chennai',
-    districtDestination: 'vellore',
-    name: 'Chennai Airport to Tirupati One-Way Taxi',
-    url: '/one-way-taxi/chennai-airport-to-tirupati',
-    estDistance: '130 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'tirupati-to-chennai-airport',
-    from: 'Tirupati',
-    to: 'Chennai Airport',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["MAA Flight Drop","Pilgrimage Return"],
-    seasonality: ["Festival","Winter","All Season"],
-    distanceKm: 130,
-    estimatedTime: '3 Hours',
-    roadConditions: 'Access-controlled NH716 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'vellore',
-    districtDestination: 'chennai',
-    name: 'Tirupati to Chennai Airport One-Way Taxi',
-    url: '/one-way-taxi/tirupati-to-chennai-airport',
-    estDistance: '130 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'chennai-airport-to-mahabalipuram',
-    from: 'Chennai Airport',
-    to: 'Mahabalipuram',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["Tourist Airport Pickup","Resort Transfer"],
-    seasonality: ["Festival","Winter","All Season"],
-    distanceKm: 50,
-    estimatedTime: '1.15 Hours',
-    roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
-    districtOrigin: 'chennai',
-    districtDestination: 'chengalpattu',
-    name: 'Chennai Airport to Mahabalipuram One-Way Taxi',
-    url: '/one-way-taxi/chennai-airport-to-mahabalipuram',
-    estDistance: '50 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'mahabalipuram-to-chennai-airport',
-    from: 'Mahabalipuram',
-    to: 'Chennai Airport',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["MAA Flight Drop","Resort Return"],
-    seasonality: ["Festival","Winter","All Season"],
-    distanceKm: 50,
-    estimatedTime: '1.15 Hours',
-    roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
-    districtOrigin: 'chengalpattu',
-    districtDestination: 'chennai',
-    name: 'Mahabalipuram to Chennai Airport One-Way Taxi',
-    url: '/one-way-taxi/mahabalipuram-to-chennai-airport',
-    estDistance: '50 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'chennai-airport-to-kanchipuram',
-    from: 'Chennai Airport',
-    to: 'Kanchipuram',
-    category: 'Airport',
     popularity: 8,
     isFeatured: false,
-    purposes: ["Airport Pickup","Silk Town Transfer"],
+    purposes: ["Hill Station","Resort","Weekend"],
     seasonality: ["All Season"],
-    distanceKm: 65,
-    estimatedTime: '1.5 Hours',
-    roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'chennai',
-    districtDestination: 'kanchipuram',
-    name: 'Chennai Airport to Kanchipuram One-Way Taxi',
-    url: '/one-way-taxi/chennai-airport-to-kanchipuram',
-    estDistance: '65 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'kanchipuram-to-chennai-airport',
-    from: 'Kanchipuram',
-    to: 'Chennai Airport',
-    category: 'Airport',
-    popularity: 8,
-    isFeatured: false,
-    purposes: ["MAA Flight Drop"],
-    seasonality: ["All Season"],
-    distanceKm: 65,
-    estimatedTime: '1.5 Hours',
-    roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'kanchipuram',
-    districtDestination: 'chennai',
-    name: 'Kanchipuram to Chennai Airport One-Way Taxi',
-    url: '/one-way-taxi/kanchipuram-to-chennai-airport',
-    estDistance: '65 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'chennai-airport-to-chittoor',
-    from: 'Chennai Airport',
-    to: 'Chittoor',
-    category: 'Airport',
-    popularity: 8,
-    isFeatured: false,
-    purposes: ["Airport Transit","Interstate Business"],
-    seasonality: ["All Season"],
-    distanceKm: 155,
-    estimatedTime: '3.25 Hours',
-    roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'chennai',
-    districtDestination: 'vellore',
-    name: 'Chennai Airport to Chittoor One-Way Taxi',
-    url: '/one-way-taxi/chennai-airport-to-chittoor',
-    estDistance: '155 km',
-    fare: {"hatchback":2325,"sedan":2325,"suv":3100,"innova":3410,"hycross":3875,"traveller":4650},
-  },
-  {
-    slug: 'chittoor-to-chennai-airport',
-    from: 'Chittoor',
-    to: 'Chennai Airport',
-    category: 'Airport',
-    popularity: 8,
-    isFeatured: false,
-    purposes: ["MAA Flight Drop"],
-    seasonality: ["All Season"],
-    distanceKm: 155,
-    estimatedTime: '3.25 Hours',
-    roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'vellore',
-    districtDestination: 'chennai',
-    name: 'Chittoor to Chennai Airport One-Way Taxi',
-    url: '/one-way-taxi/chittoor-to-chennai-airport',
-    estDistance: '155 km',
-    fare: {"hatchback":2325,"sedan":2325,"suv":3100,"innova":3410,"hycross":3875,"traveller":4650},
-  },
-  {
-    slug: 'trichy-airport-to-thanjavur',
-    from: 'Trichy Airport',
-    to: 'Thanjavur',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: true,
-    purposes: ["TRZ Flight Pickup","Big Temple Visit"],
-    seasonality: ["All Season"],
-    distanceKm: 55,
-    estimatedTime: '1 Hours',
-    roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'tiruchirappalli',
-    districtDestination: 'thanjavur',
-    name: 'Trichy Airport to Thanjavur One-Way Taxi',
-    url: '/one-way-taxi/trichy-airport-to-thanjavur',
-    estDistance: '55 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'thanjavur-to-trichy-airport',
-    from: 'Thanjavur',
-    to: 'Trichy Airport',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["TRZ Flight Drop","International Flight"],
-    seasonality: ["All Season"],
-    distanceKm: 55,
-    estimatedTime: '1 Hours',
-    roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'thanjavur',
-    districtDestination: 'tiruchirappalli',
-    name: 'Thanjavur to Trichy Airport One-Way Taxi',
-    url: '/one-way-taxi/thanjavur-to-trichy-airport',
-    estDistance: '55 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'trichy-airport-to-karur',
-    from: 'Trichy Airport',
-    to: 'Karur',
-    category: 'Airport',
-    popularity: 8,
-    isFeatured: false,
-    purposes: ["TRZ Flight Pickup","Textile Business"],
-    seasonality: ["All Season"],
-    distanceKm: 85,
-    estimatedTime: '1.75 Hours',
+    distanceKm: 170,
+    estimatedTime: '3.5 Hours',
     roadConditions: 'Access-controlled NH81 multi-lane toll expressway with high-speed bypasses around towns.',
     districtOrigin: 'tiruchirappalli',
-    districtDestination: 'karur',
-    name: 'Trichy Airport to Karur One-Way Taxi',
-    url: '/one-way-taxi/trichy-airport-to-karur',
-    estDistance: '85 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    districtDestination: 'salem',
+    name: 'Trichy to Yercaud One-Way Taxi',
+    url: '/one-way-taxi/trichy-to-yercaud',
+    estDistance: '170 km',
+    fare: {"hatchback":2550,"sedan":2550,"suv":3400,"innova":3740,"hycross":4250,"traveller":5100},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trichy - Yercaud)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trichy - Yercaud Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH81.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH81 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH81 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trichy Regional Snacks",
+                  "location": "Trichy Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trichy"
+            }
+      ]
+},
   },
   {
-    slug: 'karur-to-trichy-airport',
-    from: 'Karur',
-    to: 'Trichy Airport',
-    category: 'Airport',
+    slug: 'yercaud-to-trichy',
+    from: 'Yercaud',
+    to: 'Trichy',
+    category: 'Tourist',
     popularity: 8,
     isFeatured: false,
-    purposes: ["TRZ Flight Drop"],
+    purposes: ["TRZ Airport","Tourism Return"],
     seasonality: ["All Season"],
-    distanceKm: 85,
-    estimatedTime: '1.75 Hours',
-    roadConditions: 'Access-controlled NH81 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'karur',
+    distanceKm: 170,
+    estimatedTime: '3.5 Hours',
+    roadConditions: 'Access-controlled SH188 Ghat Road multi-lane toll expressway with high-speed bypasses around towns.',
+    districtOrigin: 'salem',
     districtDestination: 'tiruchirappalli',
-    name: 'Karur to Trichy Airport One-Way Taxi',
-    url: '/one-way-taxi/karur-to-trichy-airport',
-    estDistance: '85 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'madurai-airport-to-rameswaram',
-    from: 'Madurai Airport',
-    to: 'Rameshwaram',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: true,
-    purposes: ["IXM Flight Pickup","Pilgrimage Transfer"],
-    seasonality: ["Festival","Winter","All Season"],
-    distanceKm: 170,
-    estimatedTime: '3.25 Hours',
-    roadConditions: 'Access-controlled NH87 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'madurai',
-    districtDestination: 'ramanathapuram',
-    name: 'Madurai Airport to Rameshwaram One-Way Taxi',
-    url: '/one-way-taxi/madurai-airport-to-rameswaram',
+    name: 'Yercaud to Trichy One-Way Taxi',
+    url: '/one-way-taxi/yercaud-to-trichy',
     estDistance: '170 km',
     fare: {"hatchback":2550,"sedan":2550,"suv":3400,"innova":3740,"hycross":4250,"traveller":5100},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Yercaud - Trichy)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Yercaud - Trichy Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along SH188 Ghat Road.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "SH188 Ghat Road Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "SH188 Ghat Road Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Yercaud Regional Snacks",
+                  "location": "Yercaud Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Yercaud"
+            }
+      ]
+},
   },
   {
-    slug: 'rameswaram-to-madurai-airport',
-    from: 'Rameshwaram',
-    to: 'Madurai Airport',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["IXM Flight Drop"],
-    seasonality: ["Festival","Winter","All Season"],
-    distanceKm: 170,
-    estimatedTime: '3.25 Hours',
-    roadConditions: 'Access-controlled NH87 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'ramanathapuram',
-    districtDestination: 'madurai',
-    name: 'Rameshwaram to Madurai Airport One-Way Taxi',
-    url: '/one-way-taxi/rameswaram-to-madurai-airport',
-    estDistance: '170 km',
-    fare: {"hatchback":2550,"sedan":2550,"suv":3400,"innova":3740,"hycross":4250,"traveller":5100},
-  },
-  {
-    slug: 'madurai-airport-to-kodaikanal',
-    from: 'Madurai Airport',
-    to: 'Kodaikanal',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: true,
-    purposes: ["IXM Flight Pickup","Hill Resort Transfer"],
-    seasonality: ["Summer","Winter"],
-    distanceKm: 135,
-    estimatedTime: '3.5 Hours',
-    roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
-    districtOrigin: 'madurai',
-    districtDestination: 'dindigul',
-    name: 'Madurai Airport to Kodaikanal One-Way Taxi',
-    url: '/one-way-taxi/madurai-airport-to-kodaikanal',
-    estDistance: '135 km',
-    fare: {"hatchback":2025,"sedan":2025,"suv":2700,"innova":2970,"hycross":3375,"traveller":4050},
-  },
-  {
-    slug: 'kodaikanal-to-madurai-airport',
-    from: 'Kodaikanal',
-    to: 'Madurai Airport',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["IXM Flight Drop"],
-    seasonality: ["Summer","Winter"],
-    distanceKm: 135,
-    estimatedTime: '3.5 Hours',
-    roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
-    districtOrigin: 'dindigul',
-    districtDestination: 'madurai',
-    name: 'Kodaikanal to Madurai Airport One-Way Taxi',
-    url: '/one-way-taxi/kodaikanal-to-madurai-airport',
-    estDistance: '135 km',
-    fare: {"hatchback":2025,"sedan":2025,"suv":2700,"innova":2970,"hycross":3375,"traveller":4050},
-  },
-  {
-    slug: 'coimbatore-airport-to-ooty',
-    from: 'Coimbatore Airport',
-    to: 'Ooty',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: true,
-    purposes: ["CJB Flight Pickup","Nilgiris Transfer"],
-    seasonality: ["Summer","Winter"],
-    distanceKm: 90,
-    estimatedTime: '3 Hours',
-    roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
-    districtOrigin: 'coimbatore',
-    districtDestination: 'nilgiris',
-    name: 'Coimbatore Airport to Ooty One-Way Taxi',
-    url: '/one-way-taxi/coimbatore-airport-to-ooty',
-    estDistance: '90 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'ooty-to-coimbatore-airport',
-    from: 'Ooty',
-    to: 'Coimbatore Airport',
-    category: 'Airport',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["CJB Flight Drop"],
-    seasonality: ["Summer","Winter"],
-    distanceKm: 90,
-    estimatedTime: '3 Hours',
-    roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
-    districtOrigin: 'nilgiris',
-    districtDestination: 'coimbatore',
-    name: 'Ooty to Coimbatore Airport One-Way Taxi',
-    url: '/one-way-taxi/ooty-to-coimbatore-airport',
-    estDistance: '90 km',
-    fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
-  },
-  {
-    slug: 'chennai-to-bengaluru',
+    slug: 'chennai-to-bangalore',
     from: 'Chennai',
-    to: 'Bengaluru',
+    to: 'Bangalore',
     category: 'Interstate',
     popularity: 10,
     isFeatured: true,
-    purposes: ["IT","Corporate","Interstate Business"],
+    purposes: ["IT Hub","Business","Interstate"],
     seasonality: ["All Season"],
     distanceKm: 350,
-    estimatedTime: '6.25 Hours',
+    estimatedTime: '6 Hours',
     roadConditions: 'Access-controlled NH48 Expressway multi-lane toll expressway with high-speed bypasses around towns.',
     districtOrigin: 'chennai',
-    districtDestination: 'krishnagiri',
-    name: 'Chennai to Bengaluru One-Way Taxi',
-    url: '/one-way-taxi/chennai-to-bengaluru',
+    districtDestination: 'chennai',
+    name: 'Chennai to Bangalore One-Way Taxi',
+    url: '/one-way-taxi/chennai-to-bangalore',
     estDistance: '350 km',
     fare: {"hatchback":5250,"sedan":5250,"suv":7000,"innova":7700,"hycross":8750,"traveller":10500},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Bangalore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Bangalore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48 Expressway.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Expressway Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Expressway Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
   },
   {
-    slug: 'bengaluru-to-chennai',
-    from: 'Bengaluru',
+    slug: 'bangalore-to-chennai',
+    from: 'Bangalore',
     to: 'Chennai',
     category: 'Interstate',
     popularity: 10,
     isFeatured: true,
-    purposes: ["IT Return","Corporate","MAA Airport"],
+    purposes: ["Corporate","Medical","MAA Airport"],
     seasonality: ["All Season"],
     distanceKm: 350,
-    estimatedTime: '6.25 Hours',
+    estimatedTime: '6 Hours',
     roadConditions: 'Access-controlled NH48 Expressway multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'krishnagiri',
+    districtOrigin: 'chennai',
     districtDestination: 'chennai',
-    name: 'Bengaluru to Chennai One-Way Taxi',
-    url: '/one-way-taxi/bengaluru-to-chennai',
+    name: 'Bangalore to Chennai One-Way Taxi',
+    url: '/one-way-taxi/bangalore-to-chennai',
     estDistance: '350 km',
     fare: {"hatchback":5250,"sedan":5250,"suv":7000,"innova":7700,"hycross":8750,"traveller":10500},
-  },
-  {
-    slug: 'trichy-to-bengaluru',
-    from: 'Trichy',
-    to: 'Bengaluru',
-    category: 'Interstate',
-    popularity: 9,
-    isFeatured: true,
-    purposes: ["IT","Family","Interstate Transit"],
-    seasonality: ["All Season"],
-    distanceKm: 345,
-    estimatedTime: '6.25 Hours',
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'tiruchirappalli',
-    districtDestination: 'krishnagiri',
-    name: 'Trichy to Bengaluru One-Way Taxi',
-    url: '/one-way-taxi/trichy-to-bengaluru',
-    estDistance: '345 km',
-    fare: {"hatchback":5175,"sedan":5175,"suv":6900,"innova":7590,"hycross":8625,"traveller":10350},
-  },
-  {
-    slug: 'bengaluru-to-trichy',
-    from: 'Bengaluru',
-    to: 'Trichy',
-    category: 'Interstate',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["Home Visit","Festival","Family"],
-    seasonality: ["All Season"],
-    distanceKm: 345,
-    estimatedTime: '6.25 Hours',
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'krishnagiri',
-    districtDestination: 'tiruchirappalli',
-    name: 'Bengaluru to Trichy One-Way Taxi',
-    url: '/one-way-taxi/bengaluru-to-trichy',
-    estDistance: '345 km',
-    fare: {"hatchback":5175,"sedan":5175,"suv":6900,"innova":7590,"hycross":8625,"traveller":10350},
-  },
-  {
-    slug: 'salem-to-bengaluru',
-    from: 'Salem',
-    to: 'Bengaluru',
-    category: 'Interstate',
-    popularity: 9,
-    isFeatured: true,
-    purposes: ["Business","IT Commute"],
-    seasonality: ["All Season"],
-    distanceKm: 205,
-    estimatedTime: '3.75 Hours',
-    roadConditions: 'Access-controlled NH44 Expressway multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'salem',
-    districtDestination: 'krishnagiri',
-    name: 'Salem to Bengaluru One-Way Taxi',
-    url: '/one-way-taxi/salem-to-bengaluru',
-    estDistance: '205 km',
-    fare: {"hatchback":3075,"sedan":3075,"suv":4100,"innova":4510,"hycross":5125,"traveller":6150},
-  },
-  {
-    slug: 'bengaluru-to-salem',
-    from: 'Bengaluru',
-    to: 'Salem',
-    category: 'Interstate',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["Home Visit","Business"],
-    seasonality: ["All Season"],
-    distanceKm: 205,
-    estimatedTime: '3.75 Hours',
-    roadConditions: 'Access-controlled NH44 Expressway multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'krishnagiri',
-    districtDestination: 'salem',
-    name: 'Bengaluru to Salem One-Way Taxi',
-    url: '/one-way-taxi/bengaluru-to-salem',
-    estDistance: '205 km',
-    fare: {"hatchback":3075,"sedan":3075,"suv":4100,"innova":4510,"hycross":5125,"traveller":6150},
-  },
-  {
-    slug: 'coimbatore-to-bengaluru',
-    from: 'Coimbatore',
-    to: 'Bengaluru',
-    category: 'Interstate',
-    popularity: 9,
-    isFeatured: true,
-    purposes: ["IT Corridor","Corporate","Industrial"],
-    seasonality: ["All Season"],
-    distanceKm: 365,
-    estimatedTime: '6.5 Hours',
-    roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'coimbatore',
-    districtDestination: 'krishnagiri',
-    name: 'Coimbatore to Bengaluru One-Way Taxi',
-    url: '/one-way-taxi/coimbatore-to-bengaluru',
-    estDistance: '365 km',
-    fare: {"hatchback":5475,"sedan":5475,"suv":7300,"innova":8030,"hycross":9125,"traveller":10950},
-  },
-  {
-    slug: 'bengaluru-to-coimbatore',
-    from: 'Bengaluru',
-    to: 'Coimbatore',
-    category: 'Interstate',
-    popularity: 9,
-    isFeatured: false,
-    purposes: ["Textile Business","Family Return"],
-    seasonality: ["All Season"],
-    distanceKm: 365,
-    estimatedTime: '6.5 Hours',
-    roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
-    districtOrigin: 'krishnagiri',
-    districtDestination: 'coimbatore',
-    name: 'Bengaluru to Coimbatore One-Way Taxi',
-    url: '/one-way-taxi/bengaluru-to-coimbatore',
-    estDistance: '365 km',
-    fare: {"hatchback":5475,"sedan":5475,"suv":7300,"innova":8030,"hycross":9125,"traveller":10950},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Bangalore - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Bangalore - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH48 Expressway.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH48 Expressway Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH48 Expressway Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Bangalore Regional Snacks",
+                  "location": "Bangalore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Bangalore"
+            }
+      ]
+},
   },
   {
     slug: 'chennai-to-tirupati',
@@ -2031,6 +4809,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/chennai-to-tirupati',
     estDistance: '135 km',
     fare: {"hatchback":2025,"sedan":2025,"suv":2700,"innova":2970,"hycross":3375,"traveller":4050},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Chennai - Tirupati)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Chennai - Tirupati Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH716.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH716 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH716 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Chennai Regional Snacks",
+                  "location": "Chennai Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Chennai"
+            }
+      ]
+},
   },
   {
     slug: 'tirupati-to-chennai',
@@ -2050,6 +4871,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/tirupati-to-chennai',
     estDistance: '135 km',
     fare: {"hatchback":2025,"sedan":2025,"suv":2700,"innova":2970,"hycross":3375,"traveller":4050},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Tirupati - Chennai)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Tirupati - Chennai Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH716.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH716 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH716 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Tirupati Regional Snacks",
+                  "location": "Tirupati Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Tirupati"
+            }
+      ]
+},
   },
   {
     slug: 'vellore-to-tirupati',
@@ -2069,6 +4933,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/vellore-to-tirupati',
     estDistance: '110 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Vellore - Tirupati)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Vellore - Tirupati Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH716.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH716 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH716 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Vellore Regional Snacks",
+                  "location": "Vellore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Vellore"
+            }
+      ]
+},
   },
   {
     slug: 'tirupati-to-vellore',
@@ -2088,6 +4995,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/tirupati-to-vellore',
     estDistance: '110 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Tirupati - Vellore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Tirupati - Vellore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH716.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH716 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH716 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Tirupati Regional Snacks",
+                  "location": "Tirupati Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Tirupati"
+            }
+      ]
+},
   },
   {
     slug: 'coimbatore-to-palakkad',
@@ -2107,6 +5057,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/coimbatore-to-palakkad',
     estDistance: '55 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Coimbatore - Palakkad)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Coimbatore - Palakkad Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Coimbatore Regional Snacks",
+                  "location": "Coimbatore Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Coimbatore"
+            }
+      ]
+},
   },
   {
     slug: 'palakkad-to-coimbatore',
@@ -2126,6 +5119,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/palakkad-to-coimbatore',
     estDistance: '55 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Palakkad - Coimbatore)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Palakkad - Coimbatore Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH544.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH544 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH544 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Palakkad Regional Snacks",
+                  "location": "Palakkad Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Palakkad"
+            }
+      ]
+},
   },
   {
     slug: 'kanyakumari-to-trivandrum',
@@ -2145,6 +5181,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/kanyakumari-to-trivandrum',
     estDistance: '90 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Kanyakumari - Trivandrum)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Kanyakumari - Trivandrum Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH66.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH66 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH66 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Kanyakumari Regional Snacks",
+                  "location": "Kanyakumari Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Kanyakumari"
+            }
+      ]
+},
   },
   {
     slug: 'trivandrum-to-kanyakumari',
@@ -2164,6 +5243,49 @@ export const routesMasterDataset = [
     url: '/one-way-taxi/trivandrum-to-kanyakumari',
     estDistance: '90 km',
     fare: {"hatchback":1950,"sedan":1950,"suv":2600,"innova":2860,"hycross":3250,"traveller":3900},
+    exploreAlongRoute: {
+      "restaurants": [
+            {
+                  "name": "Highway Family Restaurant (Trivandrum - Kanyakumari)",
+                  "cuisine": "South & North Indian",
+                  "famousFor": "Fresh Tiffin, Hot Meals & Parotta",
+                  "detour": "0 km Highway Plaza",
+                  "mealType": [
+                        "Lunch",
+                        "Dinner"
+                  ],
+                  "rating": "4.4★"
+            }
+      ],
+      "coffeeBreaks": [
+            {
+                  "name": "Kumbakonam Degree Filter Coffee",
+                  "type": "Highway Refreshment Point"
+            }
+      ],
+      "attractions": [
+            {
+                  "name": "Trivandrum - Kanyakumari Scenic Viewpoint",
+                  "description": "Popular sightseeing and break spot along NH66.",
+                  "visitDuration": "30 Mins",
+                  "familyFriendly": true
+            }
+      ],
+      "essentials": [
+            {
+                  "name": "NH66 Toll EV Charging & Fuel Plaza",
+                  "type": "EV Charging, Fuel & Restroom",
+                  "location": "NH66 Plaza"
+            }
+      ],
+      "localSpecialties": [
+            {
+                  "name": "Traditional Trivandrum Regional Snacks",
+                  "location": "Trivandrum Highway Plaza",
+                  "famousFor": "Authentic local culinary specialties of Trivandrum"
+            }
+      ]
+},
   },
 ];
 

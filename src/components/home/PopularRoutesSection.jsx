@@ -66,7 +66,7 @@ const PopularRoutesSection = () => {
                       <Navigation className="w-3.5 h-3.5 text-gray-500" />
                       <span>{r.estDistance}</span>
                     </span>
-                    <span className="font-semibold text-amber-400">₹10/km Base</span>
+                    <span className="font-semibold text-amber-400">₹15/km Base</span>
                   </div>
                 </div>
 

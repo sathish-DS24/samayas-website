@@ -8,7 +8,7 @@ const TaxiFareTable = ({ content }) => {
       models: 'WagonR, Swift, Indica',
       seats: 4,
       fare: content.fare?.hatchback,
-      perKm: '₹10 / km',
+      perKm: '₹15 / km',
       idealFor: 'Solo travelers, couples & quick budget trips',
     },
     {
@@ -16,7 +16,7 @@ const TaxiFareTable = ({ content }) => {
       models: 'Swift Dzire, Hyundai Aura, Etios',
       seats: 4,
       fare: content.fare?.sedan,
-      perKm: '₹12 / km',
+      perKm: '₹15 / km',
       idealFor: 'Small families, business trips & luggage space',
     },
     {
@@ -24,23 +24,31 @@ const TaxiFareTable = ({ content }) => {
       models: 'Ertiga, Lodgy, Triber',
       seats: 6,
       fare: content.fare?.suv,
-      perKm: '₹16 / km',
+      perKm: '₹20 / km',
       idealFor: 'Family vacations & extra luggage capacity',
     },
     {
-      vehicle: 'Premium SUV',
-      models: 'Innova Crysta, Innova Hycross',
+      vehicle: 'Innova (7-Seater)',
+      models: 'Innova Crysta, Marazzo',
       seats: 7,
       fare: content.fare?.innova,
-      perKm: '₹19 / km',
+      perKm: '₹22 / km',
       idealFor: 'Executive corporate trips & VIP luxury comfort',
+    },
+    {
+      vehicle: 'Innova Hycross',
+      models: 'Innova Hycross Hybrid',
+      seats: 7,
+      fare: content.fare?.hycross,
+      perKm: '₹25 / km',
+      idealFor: 'Ultra luxury premium family & VIP travel',
     },
     {
       vehicle: 'Tempo Traveller',
       models: '12-Seater Force Traveller',
       seats: 12,
       fare: content.fare?.traveller,
-      perKm: '₹28 / km',
+      perKm: '₹30 / km',
       idealFor: 'Large group pilgrimages, wedding trips & team travel',
     },
   ]
@@ -67,6 +75,7 @@ const TaxiFareTable = ({ content }) => {
                   <th className="py-4 px-6">Vehicle Type</th>
                   <th className="py-4 px-6">Popular Models</th>
                   <th className="py-4 px-6 text-center">Seats</th>
+                  <th className="py-4 px-6 text-center">Rate / KM</th>
                   <th className="py-4 px-6 text-right">One-Way Fare</th>
                   <th className="py-4 px-6">Ideal For</th>
                 </tr>
@@ -85,6 +94,9 @@ const TaxiFareTable = ({ content }) => {
                         {row.seats}
                       </span>
                     </td>
+                    <td className="py-4 px-6 text-center font-bold text-amber-400 text-xs">
+                      {row.perKm}
+                    </td>
                     <td className="py-4 px-6 text-right font-extrabold text-green-400 text-base">
                       {row.fare ? `₹${row.fare.toLocaleString('en-IN')}` : 'Contact Us'}
                     </td>
@@ -99,7 +111,7 @@ const TaxiFareTable = ({ content }) => {
           <div className="bg-dark-900/80 p-4 border-t border-dark-700 flex items-start space-x-3 text-xs text-gray-400">
             <Info className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
             <p>
-              <strong className="text-gray-300">Note:</strong> Toll plaza charges (approx {content.tolls?.costRange || 'at actuals'}), interstate permit fees, and parking extra where applicable. Zero hidden charges guarantee.
+              <strong className="text-gray-300">Note:</strong> Toll plaza charges (approx {content.tolls?.costRange || 'at actuals'}), interstate permit fees, and parking extra where applicable. Standard minimum 130 km billing applies for one-way trips under 130 km.
             </p>
           </div>
         </div>

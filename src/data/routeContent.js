@@ -16,13 +16,14 @@ export const routeContent = {
     popularFor: ["Business","Medical","Airport"],
     roadConditions: 'Access-controlled NH38 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy to Chennai with SAMAYAS. Hatchback from ₹3,300, Sedan ₹3,960, SUV ₹5,280. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Chennai with SAMAYAS. Hatchback from ₹4,950, Sedan ₹4,950, SUV ₹6,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3300,
-      "sedan": 3960,
-      "suv": 5280,
-      "innova": 6270,
+      "hatchback": 4950,
+      "sedan": 4950,
+      "suv": 6600,
+      "innova": 7260,
+      "hycross": 8250,
       "traveller": 9900
 },
     highways: ["NH38","NH45 GST Road"],
@@ -53,7 +54,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy to Chennai?',
-        a: 'The one-way taxi fare from Trichy to Chennai starts at ₹3,300 for a Hatchback, ₹3,960 for a Sedan, and ₹5,280 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy to Chennai starts at ₹4,950 for a Hatchback, ₹4,950 for a Sedan, and ₹6,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy to Chennai?',
@@ -79,7 +80,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Trichy', slug: 'chennai-to-trichy', distance: '330 km', fare: '₹3,300' },
+      { name: 'Chennai to Trichy', slug: 'chennai-to-trichy', distance: '330 km', fare: '₹4,950' },
     ],
   },
 
@@ -100,13 +101,14 @@ export const routeContent = {
     popularFor: ["Home Visit","Business","Temple"],
     roadConditions: 'Access-controlled NH45 GST Road multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Trichy with SAMAYAS. Hatchback from ₹3,300, Sedan ₹3,960, SUV ₹5,280. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Trichy with SAMAYAS. Hatchback from ₹4,950, Sedan ₹4,950, SUV ₹6,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3300,
-      "sedan": 3960,
-      "suv": 5280,
-      "innova": 6270,
+      "hatchback": 4950,
+      "sedan": 4950,
+      "suv": 6600,
+      "innova": 7260,
+      "hycross": 8250,
       "traveller": 9900
 },
     highways: ["NH45 GST Road","NH38"],
@@ -137,7 +139,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Trichy?',
-        a: 'The one-way taxi fare from Chennai to Trichy starts at ₹3,300 for a Hatchback, ₹3,960 for a Sedan, and ₹5,280 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Trichy starts at ₹4,950 for a Hatchback, ₹4,950 for a Sedan, and ₹6,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Trichy?',
@@ -163,7 +165,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy to Chennai', slug: 'trichy-to-chennai', distance: '330 km', fare: '₹3,300' },
+      { name: 'Trichy to Chennai', slug: 'trichy-to-chennai', distance: '330 km', fare: '₹4,950' },
     ],
   },
 
@@ -184,13 +186,14 @@ export const routeContent = {
     popularFor: ["Business","Family","Culture"],
     roadConditions: 'Access-controlled NH45 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Madurai with SAMAYAS. Hatchback from ₹4,600, Sedan ₹5,520, SUV ₹7,360. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Madurai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Madurai with SAMAYAS. Hatchback from ₹6,900, Sedan ₹6,900, SUV ₹9,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 4600,
-      "sedan": 5520,
-      "suv": 7360,
-      "innova": 8740,
+      "hatchback": 6900,
+      "sedan": 6900,
+      "suv": 9200,
+      "innova": 10120,
+      "hycross": 11500,
       "traveller": 13800
 },
     highways: ["NH45","NH38"],
@@ -221,7 +224,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Madurai?',
-        a: 'The one-way taxi fare from Chennai to Madurai starts at ₹4,600 for a Hatchback, ₹5,520 for a Sedan, and ₹7,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Madurai starts at ₹6,900 for a Hatchback, ₹6,900 for a Sedan, and ₹9,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Madurai?',
@@ -247,7 +250,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Madurai to Chennai', slug: 'madurai-to-chennai', distance: '460 km', fare: '₹4,600' },
+      { name: 'Madurai to Chennai', slug: 'madurai-to-chennai', distance: '460 km', fare: '₹6,900' },
     ],
   },
 
@@ -268,13 +271,14 @@ export const routeContent = {
     popularFor: ["Business","Medical","Airport"],
     roadConditions: 'Access-controlled NH38 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Madurai to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai to Chennai with SAMAYAS. Hatchback from ₹4,600, Sedan ₹5,520, SUV ₹7,360. 24/7 doorstep pickups.',
+    seoTitle: 'Madurai to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Chennai with SAMAYAS. Hatchback from ₹6,900, Sedan ₹6,900, SUV ₹9,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 4600,
-      "sedan": 5520,
-      "suv": 7360,
-      "innova": 8740,
+      "hatchback": 6900,
+      "sedan": 6900,
+      "suv": 9200,
+      "innova": 10120,
+      "hycross": 11500,
       "traveller": 13800
 },
     highways: ["NH38","NH45"],
@@ -305,7 +309,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Madurai to Chennai?',
-        a: 'The one-way taxi fare from Madurai to Chennai starts at ₹4,600 for a Hatchback, ₹5,520 for a Sedan, and ₹7,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Madurai to Chennai starts at ₹6,900 for a Hatchback, ₹6,900 for a Sedan, and ₹9,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Madurai to Chennai?',
@@ -331,7 +335,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Madurai', slug: 'chennai-to-madurai', distance: '460 km', fare: '₹4,600' },
+      { name: 'Chennai to Madurai', slug: 'chennai-to-madurai', distance: '460 km', fare: '₹6,900' },
     ],
   },
 
@@ -352,13 +356,14 @@ export const routeContent = {
     popularFor: ["Business","Textile","IT"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Coimbatore with SAMAYAS. Hatchback from ₹5,000, Sedan ₹6,000, SUV ₹8,000. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Coimbatore with SAMAYAS. Hatchback from ₹7,500, Sedan ₹7,500, SUV ₹10,000. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 5000,
-      "sedan": 6000,
-      "suv": 8000,
-      "innova": 9500,
+      "hatchback": 7500,
+      "sedan": 7500,
+      "suv": 10000,
+      "innova": 11000,
+      "hycross": 12500,
       "traveller": 15000
 },
     highways: ["NH48","NH544"],
@@ -389,7 +394,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Coimbatore?',
-        a: 'The one-way taxi fare from Chennai to Coimbatore starts at ₹5,000 for a Hatchback, ₹6,000 for a Sedan, and ₹8,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Coimbatore starts at ₹7,500 for a Hatchback, ₹7,500 for a Sedan, and ₹10,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Coimbatore?',
@@ -415,7 +420,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore to Chennai', slug: 'coimbatore-to-chennai', distance: '500 km', fare: '₹5,000' },
+      { name: 'Coimbatore to Chennai', slug: 'coimbatore-to-chennai', distance: '500 km', fare: '₹7,500' },
     ],
   },
 
@@ -436,13 +441,14 @@ export const routeContent = {
     popularFor: ["Business","Corporate","Airport"],
     roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Chennai with SAMAYAS. Hatchback from ₹5,000, Sedan ₹6,000, SUV ₹8,000. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Chennai with SAMAYAS. Hatchback from ₹7,500, Sedan ₹7,500, SUV ₹10,000. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 5000,
-      "sedan": 6000,
-      "suv": 8000,
-      "innova": 9500,
+      "hatchback": 7500,
+      "sedan": 7500,
+      "suv": 10000,
+      "innova": 11000,
+      "hycross": 12500,
       "traveller": 15000
 },
     highways: ["NH544","NH48"],
@@ -473,7 +479,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore to Chennai?',
-        a: 'The one-way taxi fare from Coimbatore to Chennai starts at ₹5,000 for a Hatchback, ₹6,000 for a Sedan, and ₹8,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore to Chennai starts at ₹7,500 for a Hatchback, ₹7,500 for a Sedan, and ₹10,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore to Chennai?',
@@ -499,7 +505,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Coimbatore', slug: 'chennai-to-coimbatore', distance: '500 km', fare: '₹5,000' },
+      { name: 'Chennai to Coimbatore', slug: 'chennai-to-coimbatore', distance: '500 km', fare: '₹7,500' },
     ],
   },
 
@@ -520,13 +526,14 @@ export const routeContent = {
     popularFor: ["Business","Steel","Agriculture"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Salem. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Salem One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Salem with SAMAYAS. Hatchback from ₹3,400, Sedan ₹4,080, SUV ₹5,440. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Salem One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Salem with SAMAYAS. Hatchback from ₹5,100, Sedan ₹5,100, SUV ₹6,800. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3400,
-      "sedan": 4080,
-      "suv": 5440,
-      "innova": 6460,
+      "hatchback": 5100,
+      "sedan": 5100,
+      "suv": 6800,
+      "innova": 7480,
+      "hycross": 8500,
       "traveller": 10200
 },
     highways: ["NH48","NH79"],
@@ -557,7 +564,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Salem?',
-        a: 'The one-way taxi fare from Chennai to Salem starts at ₹3,400 for a Hatchback, ₹4,080 for a Sedan, and ₹5,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Salem starts at ₹5,100 for a Hatchback, ₹5,100 for a Sedan, and ₹6,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Salem?',
@@ -583,7 +590,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Salem to Chennai', slug: 'salem-to-chennai', distance: '340 km', fare: '₹3,400' },
+      { name: 'Salem to Chennai', slug: 'salem-to-chennai', distance: '340 km', fare: '₹5,100' },
     ],
   },
 
@@ -604,13 +611,14 @@ export const routeContent = {
     popularFor: ["Business","Medical","Airport"],
     roadConditions: 'Access-controlled NH79 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Salem to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Salem to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Salem to Chennai with SAMAYAS. Hatchback from ₹3,400, Sedan ₹4,080, SUV ₹5,440. 24/7 doorstep pickups.',
+    seoTitle: 'Salem to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Salem to Chennai with SAMAYAS. Hatchback from ₹5,100, Sedan ₹5,100, SUV ₹6,800. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3400,
-      "sedan": 4080,
-      "suv": 5440,
-      "innova": 6460,
+      "hatchback": 5100,
+      "sedan": 5100,
+      "suv": 6800,
+      "innova": 7480,
+      "hycross": 8500,
       "traveller": 10200
 },
     highways: ["NH79","NH48"],
@@ -641,7 +649,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Salem to Chennai?',
-        a: 'The one-way taxi fare from Salem to Chennai starts at ₹3,400 for a Hatchback, ₹4,080 for a Sedan, and ₹5,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Salem to Chennai starts at ₹5,100 for a Hatchback, ₹5,100 for a Sedan, and ₹6,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Salem to Chennai?',
@@ -667,7 +675,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Salem', slug: 'chennai-to-salem', distance: '340 km', fare: '₹3,400' },
+      { name: 'Chennai to Salem', slug: 'chennai-to-salem', distance: '340 km', fare: '₹5,100' },
     ],
   },
 
@@ -688,13 +696,14 @@ export const routeContent = {
     popularFor: ["Family","Home Visit"],
     roadConditions: 'Access-controlled NH45 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Tirunelveli. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Tirunelveli One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Tirunelveli with SAMAYAS. Hatchback from ₹6,200, Sedan ₹7,440, SUV ₹9,920. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Tirunelveli One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Tirunelveli with SAMAYAS. Hatchback from ₹9,300, Sedan ₹9,300, SUV ₹12,400. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 6200,
-      "sedan": 7440,
-      "suv": 9920,
-      "innova": 11780,
+      "hatchback": 9300,
+      "sedan": 9300,
+      "suv": 12400,
+      "innova": 13640,
+      "hycross": 15500,
       "traveller": 18600
 },
     highways: ["NH45","NH44"],
@@ -725,7 +734,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Tirunelveli?',
-        a: 'The one-way taxi fare from Chennai to Tirunelveli starts at ₹6,200 for a Hatchback, ₹7,440 for a Sedan, and ₹9,920 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Tirunelveli starts at ₹9,300 for a Hatchback, ₹9,300 for a Sedan, and ₹12,400 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Tirunelveli?',
@@ -751,7 +760,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Tirunelveli to Chennai', slug: 'tirunelveli-to-chennai', distance: '620 km', fare: '₹6,200' },
+      { name: 'Tirunelveli to Chennai', slug: 'tirunelveli-to-chennai', distance: '620 km', fare: '₹9,300' },
     ],
   },
 
@@ -772,13 +781,14 @@ export const routeContent = {
     popularFor: ["Business","Education","Airport"],
     roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Tirunelveli to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Tirunelveli to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Tirunelveli to Chennai with SAMAYAS. Hatchback from ₹6,200, Sedan ₹7,440, SUV ₹9,920. 24/7 doorstep pickups.',
+    seoTitle: 'Tirunelveli to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirunelveli to Chennai with SAMAYAS. Hatchback from ₹9,300, Sedan ₹9,300, SUV ₹12,400. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 6200,
-      "sedan": 7440,
-      "suv": 9920,
-      "innova": 11780,
+      "hatchback": 9300,
+      "sedan": 9300,
+      "suv": 12400,
+      "innova": 13640,
+      "hycross": 15500,
       "traveller": 18600
 },
     highways: ["NH44","NH45"],
@@ -809,7 +819,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Tirunelveli to Chennai?',
-        a: 'The one-way taxi fare from Tirunelveli to Chennai starts at ₹6,200 for a Hatchback, ₹7,440 for a Sedan, and ₹9,920 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Tirunelveli to Chennai starts at ₹9,300 for a Hatchback, ₹9,300 for a Sedan, and ₹12,400 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Tirunelveli to Chennai?',
@@ -835,7 +845,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Tirunelveli', slug: 'chennai-to-tirunelveli', distance: '620 km', fare: '₹6,200' },
+      { name: 'Chennai to Tirunelveli', slug: 'chennai-to-tirunelveli', distance: '620 km', fare: '₹9,300' },
     ],
   },
 
@@ -856,13 +866,14 @@ export const routeContent = {
     popularFor: ["Heritage","Pilgrimage","Family"],
     roadConditions: 'Access-controlled NH45 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Thanjavur. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Thanjavur One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Thanjavur with SAMAYAS. Hatchback from ₹3,400, Sedan ₹4,080, SUV ₹5,440. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Thanjavur One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Thanjavur with SAMAYAS. Hatchback from ₹5,100, Sedan ₹5,100, SUV ₹6,800. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3400,
-      "sedan": 4080,
-      "suv": 5440,
-      "innova": 6460,
+      "hatchback": 5100,
+      "sedan": 5100,
+      "suv": 6800,
+      "innova": 7480,
+      "hycross": 8500,
       "traveller": 10200
 },
     highways: ["NH45","NH36"],
@@ -893,7 +904,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Thanjavur?',
-        a: 'The one-way taxi fare from Chennai to Thanjavur starts at ₹3,400 for a Hatchback, ₹4,080 for a Sedan, and ₹5,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Thanjavur starts at ₹5,100 for a Hatchback, ₹5,100 for a Sedan, and ₹6,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Thanjavur?',
@@ -919,7 +930,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Thanjavur to Chennai', slug: 'thanjavur-to-chennai', distance: '340 km', fare: '₹3,400' },
+      { name: 'Thanjavur to Chennai', slug: 'thanjavur-to-chennai', distance: '340 km', fare: '₹5,100' },
     ],
   },
 
@@ -940,13 +951,14 @@ export const routeContent = {
     popularFor: ["Medical","Business","Airport"],
     roadConditions: 'Access-controlled NH36 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Thanjavur to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Thanjavur to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Thanjavur to Chennai with SAMAYAS. Hatchback from ₹3,400, Sedan ₹4,080, SUV ₹5,440. 24/7 doorstep pickups.',
+    seoTitle: 'Thanjavur to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Thanjavur to Chennai with SAMAYAS. Hatchback from ₹5,100, Sedan ₹5,100, SUV ₹6,800. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3400,
-      "sedan": 4080,
-      "suv": 5440,
-      "innova": 6460,
+      "hatchback": 5100,
+      "sedan": 5100,
+      "suv": 6800,
+      "innova": 7480,
+      "hycross": 8500,
       "traveller": 10200
 },
     highways: ["NH36","NH45"],
@@ -977,7 +989,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Thanjavur to Chennai?',
-        a: 'The one-way taxi fare from Thanjavur to Chennai starts at ₹3,400 for a Hatchback, ₹4,080 for a Sedan, and ₹5,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Thanjavur to Chennai starts at ₹5,100 for a Hatchback, ₹5,100 for a Sedan, and ₹6,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Thanjavur to Chennai?',
@@ -1003,7 +1015,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Thanjavur', slug: 'chennai-to-thanjavur', distance: '340 km', fare: '₹3,400' },
+      { name: 'Chennai to Thanjavur', slug: 'chennai-to-thanjavur', distance: '340 km', fare: '₹5,100' },
     ],
   },
 
@@ -1024,13 +1036,14 @@ export const routeContent = {
     popularFor: ["Medical","CMC Hospital","Education"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Vellore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Vellore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Vellore with SAMAYAS. Hatchback from ₹1,400, Sedan ₹1,680, SUV ₹2,240. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Vellore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Vellore with SAMAYAS. Hatchback from ₹2,100, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1400,
-      "sedan": 1680,
-      "suv": 2240,
-      "innova": 2660,
+      "hatchback": 2100,
+      "sedan": 2100,
+      "suv": 2800,
+      "innova": 3080,
+      "hycross": 3500,
       "traveller": 4200
 },
     highways: ["NH48"],
@@ -1061,7 +1074,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Vellore?',
-        a: 'The one-way taxi fare from Chennai to Vellore starts at ₹1,400 for a Hatchback, ₹1,680 for a Sedan, and ₹2,240 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Vellore starts at ₹2,100 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Vellore?',
@@ -1087,7 +1100,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Vellore to Chennai', slug: 'vellore-to-chennai', distance: '140 km', fare: '₹1,400' },
+      { name: 'Vellore to Chennai', slug: 'vellore-to-chennai', distance: '140 km', fare: '₹2,100' },
     ],
   },
 
@@ -1108,13 +1121,14 @@ export const routeContent = {
     popularFor: ["Medical","Airport","Business"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Vellore to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Vellore to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Vellore to Chennai with SAMAYAS. Hatchback from ₹1,400, Sedan ₹1,680, SUV ₹2,240. 24/7 doorstep pickups.',
+    seoTitle: 'Vellore to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Vellore to Chennai with SAMAYAS. Hatchback from ₹2,100, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1400,
-      "sedan": 1680,
-      "suv": 2240,
-      "innova": 2660,
+      "hatchback": 2100,
+      "sedan": 2100,
+      "suv": 2800,
+      "innova": 3080,
+      "hycross": 3500,
       "traveller": 4200
 },
     highways: ["NH48"],
@@ -1145,7 +1159,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Vellore to Chennai?',
-        a: 'The one-way taxi fare from Vellore to Chennai starts at ₹1,400 for a Hatchback, ₹1,680 for a Sedan, and ₹2,240 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Vellore to Chennai starts at ₹2,100 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Vellore to Chennai?',
@@ -1171,7 +1185,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Vellore', slug: 'chennai-to-vellore', distance: '140 km', fare: '₹1,400' },
+      { name: 'Chennai to Vellore', slug: 'chennai-to-vellore', distance: '140 km', fare: '₹2,100' },
     ],
   },
 
@@ -1192,13 +1206,14 @@ export const routeContent = {
     popularFor: ["Textile","Business"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Erode. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Erode One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Erode with SAMAYAS. Hatchback from ₹4,200, Sedan ₹5,040, SUV ₹6,720. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Erode One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Erode with SAMAYAS. Hatchback from ₹6,300, Sedan ₹6,300, SUV ₹8,400. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 4200,
-      "sedan": 5040,
-      "suv": 6720,
-      "innova": 7980,
+      "hatchback": 6300,
+      "sedan": 6300,
+      "suv": 8400,
+      "innova": 9240,
+      "hycross": 10500,
       "traveller": 12600
 },
     highways: ["NH48","NH544"],
@@ -1229,7 +1244,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Erode?',
-        a: 'The one-way taxi fare from Chennai to Erode starts at ₹4,200 for a Hatchback, ₹5,040 for a Sedan, and ₹6,720 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Erode starts at ₹6,300 for a Hatchback, ₹6,300 for a Sedan, and ₹8,400 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Erode?',
@@ -1255,7 +1270,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Erode to Chennai', slug: 'erode-to-chennai', distance: '420 km', fare: '₹4,200' },
+      { name: 'Erode to Chennai', slug: 'erode-to-chennai', distance: '420 km', fare: '₹6,300' },
     ],
   },
 
@@ -1276,13 +1291,14 @@ export const routeContent = {
     popularFor: ["Business","Medical","Airport"],
     roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Erode to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Erode to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Erode to Chennai with SAMAYAS. Hatchback from ₹4,200, Sedan ₹5,040, SUV ₹6,720. 24/7 doorstep pickups.',
+    seoTitle: 'Erode to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Erode to Chennai with SAMAYAS. Hatchback from ₹6,300, Sedan ₹6,300, SUV ₹8,400. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 4200,
-      "sedan": 5040,
-      "suv": 6720,
-      "innova": 7980,
+      "hatchback": 6300,
+      "sedan": 6300,
+      "suv": 8400,
+      "innova": 9240,
+      "hycross": 10500,
       "traveller": 12600
 },
     highways: ["NH544","NH48"],
@@ -1313,7 +1329,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Erode to Chennai?',
-        a: 'The one-way taxi fare from Erode to Chennai starts at ₹4,200 for a Hatchback, ₹5,040 for a Sedan, and ₹6,720 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Erode to Chennai starts at ₹6,300 for a Hatchback, ₹6,300 for a Sedan, and ₹8,400 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Erode to Chennai?',
@@ -1339,7 +1355,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Erode', slug: 'chennai-to-erode', distance: '420 km', fare: '₹4,200' },
+      { name: 'Chennai to Erode', slug: 'chennai-to-erode', distance: '420 km', fare: '₹6,300' },
     ],
   },
 
@@ -1360,13 +1376,14 @@ export const routeContent = {
     popularFor: ["Coastal","Port","Pilgrimage"],
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Nagapattinam. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Nagapattinam One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Nagapattinam with SAMAYAS. Hatchback from ₹3,100, Sedan ₹3,720, SUV ₹4,960. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Nagapattinam One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Nagapattinam with SAMAYAS. Hatchback from ₹4,650, Sedan ₹4,650, SUV ₹6,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3100,
-      "sedan": 3720,
-      "suv": 4960,
-      "innova": 5890,
+      "hatchback": 4650,
+      "sedan": 4650,
+      "suv": 6200,
+      "innova": 6820,
+      "hycross": 7750,
       "traveller": 9300
 },
     highways: ["ECR","NH32"],
@@ -1397,7 +1414,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Nagapattinam?',
-        a: 'The one-way taxi fare from Chennai to Nagapattinam starts at ₹3,100 for a Hatchback, ₹3,720 for a Sedan, and ₹4,960 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Nagapattinam starts at ₹4,650 for a Hatchback, ₹4,650 for a Sedan, and ₹6,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Nagapattinam?',
@@ -1423,7 +1440,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Nagapattinam to Chennai', slug: 'nagapattinam-to-chennai', distance: '310 km', fare: '₹3,100' },
+      { name: 'Nagapattinam to Chennai', slug: 'nagapattinam-to-chennai', distance: '310 km', fare: '₹4,650' },
     ],
   },
 
@@ -1444,13 +1461,14 @@ export const routeContent = {
     popularFor: ["Business","Medical","Airport"],
     roadConditions: 'Access-controlled NH32 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Nagapattinam to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Nagapattinam to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Nagapattinam to Chennai with SAMAYAS. Hatchback from ₹3,100, Sedan ₹3,720, SUV ₹4,960. 24/7 doorstep pickups.',
+    seoTitle: 'Nagapattinam to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Nagapattinam to Chennai with SAMAYAS. Hatchback from ₹4,650, Sedan ₹4,650, SUV ₹6,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3100,
-      "sedan": 3720,
-      "suv": 4960,
-      "innova": 5890,
+      "hatchback": 4650,
+      "sedan": 4650,
+      "suv": 6200,
+      "innova": 6820,
+      "hycross": 7750,
       "traveller": 9300
 },
     highways: ["NH32","ECR"],
@@ -1481,7 +1499,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Nagapattinam to Chennai?',
-        a: 'The one-way taxi fare from Nagapattinam to Chennai starts at ₹3,100 for a Hatchback, ₹3,720 for a Sedan, and ₹4,960 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Nagapattinam to Chennai starts at ₹4,650 for a Hatchback, ₹4,650 for a Sedan, and ₹6,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Nagapattinam to Chennai?',
@@ -1507,7 +1525,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Nagapattinam', slug: 'chennai-to-nagapattinam', distance: '310 km', fare: '₹3,100' },
+      { name: 'Chennai to Nagapattinam', slug: 'chennai-to-nagapattinam', distance: '310 km', fare: '₹4,650' },
     ],
   },
 
@@ -1528,13 +1546,14 @@ export const routeContent = {
     popularFor: ["Business","Temple","Airport"],
     roadConditions: 'Access-controlled NH38 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy to Madurai with SAMAYAS. Hatchback from ₹1,350, Sedan ₹1,620, SUV ₹2,160. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy to Madurai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Madurai with SAMAYAS. Hatchback from ₹2,025, Sedan ₹2,025, SUV ₹2,700. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1350,
-      "sedan": 1620,
-      "suv": 2160,
-      "innova": 2565,
+      "hatchback": 2025,
+      "sedan": 2025,
+      "suv": 2700,
+      "innova": 2970,
+      "hycross": 3375,
       "traveller": 4050
 },
     highways: ["NH38"],
@@ -1565,7 +1584,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy to Madurai?',
-        a: 'The one-way taxi fare from Trichy to Madurai starts at ₹1,350 for a Hatchback, ₹1,620 for a Sedan, and ₹2,160 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy to Madurai starts at ₹2,025 for a Hatchback, ₹2,025 for a Sedan, and ₹2,700 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy to Madurai?',
@@ -1591,7 +1610,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Madurai to Trichy', slug: 'madurai-to-trichy', distance: '135 km', fare: '₹1,350' },
+      { name: 'Madurai to Trichy', slug: 'madurai-to-trichy', distance: '135 km', fare: '₹2,025' },
     ],
   },
 
@@ -1612,13 +1631,14 @@ export const routeContent = {
     popularFor: ["Business","TRZ Airport","Temple"],
     roadConditions: 'Access-controlled NH38 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Madurai to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai to Trichy with SAMAYAS. Hatchback from ₹1,350, Sedan ₹1,620, SUV ₹2,160. 24/7 doorstep pickups.',
+    seoTitle: 'Madurai to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Trichy with SAMAYAS. Hatchback from ₹2,025, Sedan ₹2,025, SUV ₹2,700. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1350,
-      "sedan": 1620,
-      "suv": 2160,
-      "innova": 2565,
+      "hatchback": 2025,
+      "sedan": 2025,
+      "suv": 2700,
+      "innova": 2970,
+      "hycross": 3375,
       "traveller": 4050
 },
     highways: ["NH38"],
@@ -1649,7 +1669,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Madurai to Trichy?',
-        a: 'The one-way taxi fare from Madurai to Trichy starts at ₹1,350 for a Hatchback, ₹1,620 for a Sedan, and ₹2,160 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Madurai to Trichy starts at ₹2,025 for a Hatchback, ₹2,025 for a Sedan, and ₹2,700 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Madurai to Trichy?',
@@ -1675,7 +1695,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy to Madurai', slug: 'trichy-to-madurai', distance: '135 km', fare: '₹1,350' },
+      { name: 'Trichy to Madurai', slug: 'trichy-to-madurai', distance: '135 km', fare: '₹2,025' },
     ],
   },
 
@@ -1696,13 +1716,14 @@ export const routeContent = {
     popularFor: ["Business","Industrial","Textile"],
     roadConditions: 'Access-controlled NH81 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy to Coimbatore with SAMAYAS. Hatchback from ₹2,150, Sedan ₹2,580, SUV ₹3,440. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Coimbatore with SAMAYAS. Hatchback from ₹3,225, Sedan ₹3,225, SUV ₹4,300. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2150,
-      "sedan": 2580,
-      "suv": 3440,
-      "innova": 4085,
+      "hatchback": 3225,
+      "sedan": 3225,
+      "suv": 4300,
+      "innova": 4730,
+      "hycross": 5375,
       "traveller": 6450
 },
     highways: ["NH81"],
@@ -1733,7 +1754,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy to Coimbatore?',
-        a: 'The one-way taxi fare from Trichy to Coimbatore starts at ₹2,150 for a Hatchback, ₹2,580 for a Sedan, and ₹3,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy to Coimbatore starts at ₹3,225 for a Hatchback, ₹3,225 for a Sedan, and ₹4,300 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy to Coimbatore?',
@@ -1759,7 +1780,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore to Trichy', slug: 'coimbatore-to-trichy', distance: '215 km', fare: '₹2,150' },
+      { name: 'Coimbatore to Trichy', slug: 'coimbatore-to-trichy', distance: '215 km', fare: '₹3,225' },
     ],
   },
 
@@ -1780,13 +1801,14 @@ export const routeContent = {
     popularFor: ["Business","TRZ Airport","Education"],
     roadConditions: 'Access-controlled NH81 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Trichy with SAMAYAS. Hatchback from ₹2,150, Sedan ₹2,580, SUV ₹3,440. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Trichy with SAMAYAS. Hatchback from ₹3,225, Sedan ₹3,225, SUV ₹4,300. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2150,
-      "sedan": 2580,
-      "suv": 3440,
-      "innova": 4085,
+      "hatchback": 3225,
+      "sedan": 3225,
+      "suv": 4300,
+      "innova": 4730,
+      "hycross": 5375,
       "traveller": 6450
 },
     highways: ["NH81"],
@@ -1817,7 +1839,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore to Trichy?',
-        a: 'The one-way taxi fare from Coimbatore to Trichy starts at ₹2,150 for a Hatchback, ₹2,580 for a Sedan, and ₹3,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore to Trichy starts at ₹3,225 for a Hatchback, ₹3,225 for a Sedan, and ₹4,300 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore to Trichy?',
@@ -1843,7 +1865,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy to Coimbatore', slug: 'trichy-to-coimbatore', distance: '215 km', fare: '₹2,150' },
+      { name: 'Trichy to Coimbatore', slug: 'trichy-to-coimbatore', distance: '215 km', fare: '₹3,225' },
     ],
   },
 
@@ -1864,13 +1886,14 @@ export const routeContent = {
     popularFor: ["Business","Transit"],
     roadConditions: 'Access-controlled NH81 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy to Salem. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy to Salem One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy to Salem with SAMAYAS. Hatchback from ₹1,400, Sedan ₹1,680, SUV ₹2,240. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy to Salem One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Salem with SAMAYAS. Hatchback from ₹2,100, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1400,
-      "sedan": 1680,
-      "suv": 2240,
-      "innova": 2660,
+      "hatchback": 2100,
+      "sedan": 2100,
+      "suv": 2800,
+      "innova": 3080,
+      "hycross": 3500,
       "traveller": 4200
 },
     highways: ["NH81","NH44"],
@@ -1901,7 +1924,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy to Salem?',
-        a: 'The one-way taxi fare from Trichy to Salem starts at ₹1,400 for a Hatchback, ₹1,680 for a Sedan, and ₹2,240 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy to Salem starts at ₹2,100 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy to Salem?',
@@ -1927,7 +1950,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Salem to Trichy', slug: 'salem-to-trichy', distance: '140 km', fare: '₹1,400' },
+      { name: 'Salem to Trichy', slug: 'salem-to-trichy', distance: '140 km', fare: '₹2,100' },
     ],
   },
 
@@ -1948,13 +1971,14 @@ export const routeContent = {
     popularFor: ["Business","TRZ Airport"],
     roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Salem to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Salem to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Salem to Trichy with SAMAYAS. Hatchback from ₹1,400, Sedan ₹1,680, SUV ₹2,240. 24/7 doorstep pickups.',
+    seoTitle: 'Salem to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Salem to Trichy with SAMAYAS. Hatchback from ₹2,100, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1400,
-      "sedan": 1680,
-      "suv": 2240,
-      "innova": 2660,
+      "hatchback": 2100,
+      "sedan": 2100,
+      "suv": 2800,
+      "innova": 3080,
+      "hycross": 3500,
       "traveller": 4200
 },
     highways: ["NH44","NH81"],
@@ -1985,7 +2009,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Salem to Trichy?',
-        a: 'The one-way taxi fare from Salem to Trichy starts at ₹1,400 for a Hatchback, ₹1,680 for a Sedan, and ₹2,240 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Salem to Trichy starts at ₹2,100 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Salem to Trichy?',
@@ -2011,7 +2035,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy to Salem', slug: 'trichy-to-salem', distance: '140 km', fare: '₹1,400' },
+      { name: 'Trichy to Salem', slug: 'trichy-to-salem', distance: '140 km', fare: '₹2,100' },
     ],
   },
 
@@ -2032,14 +2056,15 @@ export const routeContent = {
     popularFor: ["Commute","Tourism","Heritage"],
     roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy to Thanjavur. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy to Thanjavur One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy to Thanjavur with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy to Thanjavur One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Thanjavur with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 550,
-      "sedan": 660,
-      "suv": 880,
-      "innova": 1045,
-      "traveller": 1650
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH83"],
     tolls: {
@@ -2069,7 +2094,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy to Thanjavur?',
-        a: 'The one-way taxi fare from Trichy to Thanjavur starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy to Thanjavur starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy to Thanjavur?',
@@ -2095,7 +2120,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Thanjavur to Trichy', slug: 'thanjavur-to-trichy', distance: '55 km', fare: '₹550' },
+      { name: 'Thanjavur to Trichy', slug: 'thanjavur-to-trichy', distance: '55 km', fare: '₹1,950' },
     ],
   },
 
@@ -2116,14 +2141,15 @@ export const routeContent = {
     popularFor: ["TRZ Airport","Medical","Shopping"],
     roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Thanjavur to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Thanjavur to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Thanjavur to Trichy with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    seoTitle: 'Thanjavur to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Thanjavur to Trichy with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 550,
-      "sedan": 660,
-      "suv": 880,
-      "innova": 1045,
-      "traveller": 1650
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH83"],
     tolls: {
@@ -2153,7 +2179,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Thanjavur to Trichy?',
-        a: 'The one-way taxi fare from Thanjavur to Trichy starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Thanjavur to Trichy starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Thanjavur to Trichy?',
@@ -2179,7 +2205,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy to Thanjavur', slug: 'trichy-to-thanjavur', distance: '55 km', fare: '₹550' },
+      { name: 'Trichy to Thanjavur', slug: 'trichy-to-thanjavur', distance: '55 km', fare: '₹1,950' },
     ],
   },
 
@@ -2200,13 +2226,14 @@ export const routeContent = {
     popularFor: ["Family","Business"],
     roadConditions: 'Access-controlled NH38 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy to Tirunelveli. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy to Tirunelveli One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy to Tirunelveli with SAMAYAS. Hatchback from ₹2,900, Sedan ₹3,480, SUV ₹4,640. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy to Tirunelveli One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Tirunelveli with SAMAYAS. Hatchback from ₹4,350, Sedan ₹4,350, SUV ₹5,800. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2900,
-      "sedan": 3480,
-      "suv": 4640,
-      "innova": 5510,
+      "hatchback": 4350,
+      "sedan": 4350,
+      "suv": 5800,
+      "innova": 6380,
+      "hycross": 7250,
       "traveller": 8700
 },
     highways: ["NH38","NH44"],
@@ -2237,7 +2264,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy to Tirunelveli?',
-        a: 'The one-way taxi fare from Trichy to Tirunelveli starts at ₹2,900 for a Hatchback, ₹3,480 for a Sedan, and ₹4,640 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy to Tirunelveli starts at ₹4,350 for a Hatchback, ₹4,350 for a Sedan, and ₹5,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy to Tirunelveli?',
@@ -2263,7 +2290,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Tirunelveli to Trichy', slug: 'tirunelveli-to-trichy', distance: '290 km', fare: '₹2,900' },
+      { name: 'Tirunelveli to Trichy', slug: 'tirunelveli-to-trichy', distance: '290 km', fare: '₹4,350' },
     ],
   },
 
@@ -2284,13 +2311,14 @@ export const routeContent = {
     popularFor: ["TRZ Airport","Education"],
     roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Tirunelveli to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Tirunelveli to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Tirunelveli to Trichy with SAMAYAS. Hatchback from ₹2,900, Sedan ₹3,480, SUV ₹4,640. 24/7 doorstep pickups.',
+    seoTitle: 'Tirunelveli to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirunelveli to Trichy with SAMAYAS. Hatchback from ₹4,350, Sedan ₹4,350, SUV ₹5,800. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2900,
-      "sedan": 3480,
-      "suv": 4640,
-      "innova": 5510,
+      "hatchback": 4350,
+      "sedan": 4350,
+      "suv": 5800,
+      "innova": 6380,
+      "hycross": 7250,
       "traveller": 8700
 },
     highways: ["NH44","NH38"],
@@ -2321,7 +2349,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Tirunelveli to Trichy?',
-        a: 'The one-way taxi fare from Tirunelveli to Trichy starts at ₹2,900 for a Hatchback, ₹3,480 for a Sedan, and ₹4,640 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Tirunelveli to Trichy starts at ₹4,350 for a Hatchback, ₹4,350 for a Sedan, and ₹5,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Tirunelveli to Trichy?',
@@ -2347,7 +2375,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy to Tirunelveli', slug: 'trichy-to-tirunelveli', distance: '290 km', fare: '₹2,900' },
+      { name: 'Trichy to Tirunelveli', slug: 'trichy-to-tirunelveli', distance: '290 km', fare: '₹4,350' },
     ],
   },
 
@@ -2368,13 +2396,14 @@ export const routeContent = {
     popularFor: ["Business","Textile"],
     roadConditions: 'Access-controlled NH81 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy to Erode. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy to Erode One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy to Erode with SAMAYAS. Hatchback from ₹1,550, Sedan ₹1,860, SUV ₹2,480. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy to Erode One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Erode with SAMAYAS. Hatchback from ₹2,325, Sedan ₹2,325, SUV ₹3,100. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1550,
-      "sedan": 1860,
-      "suv": 2480,
-      "innova": 2945,
+      "hatchback": 2325,
+      "sedan": 2325,
+      "suv": 3100,
+      "innova": 3410,
+      "hycross": 3875,
       "traveller": 4650
 },
     highways: ["NH81"],
@@ -2405,7 +2434,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy to Erode?',
-        a: 'The one-way taxi fare from Trichy to Erode starts at ₹1,550 for a Hatchback, ₹1,860 for a Sedan, and ₹2,480 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy to Erode starts at ₹2,325 for a Hatchback, ₹2,325 for a Sedan, and ₹3,100 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy to Erode?',
@@ -2431,7 +2460,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Erode to Trichy', slug: 'erode-to-trichy', distance: '155 km', fare: '₹1,550' },
+      { name: 'Erode to Trichy', slug: 'erode-to-trichy', distance: '155 km', fare: '₹2,325' },
     ],
   },
 
@@ -2452,13 +2481,14 @@ export const routeContent = {
     popularFor: ["TRZ Airport","Medical"],
     roadConditions: 'Access-controlled NH81 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Erode to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Erode to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Erode to Trichy with SAMAYAS. Hatchback from ₹1,550, Sedan ₹1,860, SUV ₹2,480. 24/7 doorstep pickups.',
+    seoTitle: 'Erode to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Erode to Trichy with SAMAYAS. Hatchback from ₹2,325, Sedan ₹2,325, SUV ₹3,100. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1550,
-      "sedan": 1860,
-      "suv": 2480,
-      "innova": 2945,
+      "hatchback": 2325,
+      "sedan": 2325,
+      "suv": 3100,
+      "innova": 3410,
+      "hycross": 3875,
       "traveller": 4650
 },
     highways: ["NH81"],
@@ -2489,7 +2519,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Erode to Trichy?',
-        a: 'The one-way taxi fare from Erode to Trichy starts at ₹1,550 for a Hatchback, ₹1,860 for a Sedan, and ₹2,480 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Erode to Trichy starts at ₹2,325 for a Hatchback, ₹2,325 for a Sedan, and ₹3,100 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Erode to Trichy?',
@@ -2515,7 +2545,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy to Erode', slug: 'trichy-to-erode', distance: '155 km', fare: '₹1,550' },
+      { name: 'Trichy to Erode', slug: 'trichy-to-erode', distance: '155 km', fare: '₹2,325' },
     ],
   },
 
@@ -2536,13 +2566,14 @@ export const routeContent = {
     popularFor: ["Business","Industrial","Medical"],
     roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Madurai to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai to Coimbatore with SAMAYAS. Hatchback from ₹2,100, Sedan ₹2,520, SUV ₹3,360. 24/7 doorstep pickups.',
+    seoTitle: 'Madurai to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Coimbatore with SAMAYAS. Hatchback from ₹3,150, Sedan ₹3,150, SUV ₹4,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2100,
-      "sedan": 2520,
-      "suv": 3360,
-      "innova": 3990,
+      "hatchback": 3150,
+      "sedan": 3150,
+      "suv": 4200,
+      "innova": 4620,
+      "hycross": 5250,
       "traveller": 6300
 },
     highways: ["NH83"],
@@ -2573,7 +2604,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Madurai to Coimbatore?',
-        a: 'The one-way taxi fare from Madurai to Coimbatore starts at ₹2,100 for a Hatchback, ₹2,520 for a Sedan, and ₹3,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Madurai to Coimbatore starts at ₹3,150 for a Hatchback, ₹3,150 for a Sedan, and ₹4,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Madurai to Coimbatore?',
@@ -2599,7 +2630,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore to Madurai', slug: 'coimbatore-to-madurai', distance: '210 km', fare: '₹2,100' },
+      { name: 'Coimbatore to Madurai', slug: 'coimbatore-to-madurai', distance: '210 km', fare: '₹3,150' },
     ],
   },
 
@@ -2620,13 +2651,14 @@ export const routeContent = {
     popularFor: ["Business","Temple","IXM Airport"],
     roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Madurai with SAMAYAS. Hatchback from ₹2,100, Sedan ₹2,520, SUV ₹3,360. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore to Madurai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Madurai with SAMAYAS. Hatchback from ₹3,150, Sedan ₹3,150, SUV ₹4,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2100,
-      "sedan": 2520,
-      "suv": 3360,
-      "innova": 3990,
+      "hatchback": 3150,
+      "sedan": 3150,
+      "suv": 4200,
+      "innova": 4620,
+      "hycross": 5250,
       "traveller": 6300
 },
     highways: ["NH83"],
@@ -2657,7 +2689,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore to Madurai?',
-        a: 'The one-way taxi fare from Coimbatore to Madurai starts at ₹2,100 for a Hatchback, ₹2,520 for a Sedan, and ₹3,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore to Madurai starts at ₹3,150 for a Hatchback, ₹3,150 for a Sedan, and ₹4,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore to Madurai?',
@@ -2683,7 +2715,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Madurai to Coimbatore', slug: 'madurai-to-coimbatore', distance: '210 km', fare: '₹2,100' },
+      { name: 'Madurai to Coimbatore', slug: 'madurai-to-coimbatore', distance: '210 km', fare: '₹3,150' },
     ],
   },
 
@@ -2704,13 +2736,14 @@ export const routeContent = {
     popularFor: ["Business","Halwa City","Family"],
     roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Madurai to Tirunelveli. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai to Tirunelveli One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai to Tirunelveli with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    seoTitle: 'Madurai to Tirunelveli One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Tirunelveli with SAMAYAS. Hatchback from ₹2,400, Sedan ₹2,400, SUV ₹3,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1600,
-      "sedan": 1920,
-      "suv": 2560,
-      "innova": 3040,
+      "hatchback": 2400,
+      "sedan": 2400,
+      "suv": 3200,
+      "innova": 3520,
+      "hycross": 4000,
       "traveller": 4800
 },
     highways: ["NH44"],
@@ -2741,7 +2774,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Madurai to Tirunelveli?',
-        a: 'The one-way taxi fare from Madurai to Tirunelveli starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Madurai to Tirunelveli starts at ₹2,400 for a Hatchback, ₹2,400 for a Sedan, and ₹3,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Madurai to Tirunelveli?',
@@ -2767,7 +2800,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Tirunelveli to Madurai', slug: 'tirunelveli-to-madurai', distance: '160 km', fare: '₹1,600' },
+      { name: 'Tirunelveli to Madurai', slug: 'tirunelveli-to-madurai', distance: '160 km', fare: '₹2,400' },
     ],
   },
 
@@ -2788,13 +2821,14 @@ export const routeContent = {
     popularFor: ["IXM Airport","Medical","Temple"],
     roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Tirunelveli to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Tirunelveli to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Tirunelveli to Madurai with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    seoTitle: 'Tirunelveli to Madurai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirunelveli to Madurai with SAMAYAS. Hatchback from ₹2,400, Sedan ₹2,400, SUV ₹3,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1600,
-      "sedan": 1920,
-      "suv": 2560,
-      "innova": 3040,
+      "hatchback": 2400,
+      "sedan": 2400,
+      "suv": 3200,
+      "innova": 3520,
+      "hycross": 4000,
       "traveller": 4800
 },
     highways: ["NH44"],
@@ -2825,7 +2859,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Tirunelveli to Madurai?',
-        a: 'The one-way taxi fare from Tirunelveli to Madurai starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Tirunelveli to Madurai starts at ₹2,400 for a Hatchback, ₹2,400 for a Sedan, and ₹3,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Tirunelveli to Madurai?',
@@ -2851,7 +2885,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Madurai to Tirunelveli', slug: 'madurai-to-tirunelveli', distance: '160 km', fare: '₹1,600' },
+      { name: 'Madurai to Tirunelveli', slug: 'madurai-to-tirunelveli', distance: '160 km', fare: '₹2,400' },
     ],
   },
 
@@ -2872,13 +2906,14 @@ export const routeContent = {
     popularFor: ["Business","Textile","Steel"],
     roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore to Salem. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Salem One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Salem with SAMAYAS. Hatchback from ₹1,650, Sedan ₹1,980, SUV ₹2,640. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore to Salem One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Salem with SAMAYAS. Hatchback from ₹2,475, Sedan ₹2,475, SUV ₹3,300. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1650,
-      "sedan": 1980,
-      "suv": 2640,
-      "innova": 3135,
+      "hatchback": 2475,
+      "sedan": 2475,
+      "suv": 3300,
+      "innova": 3630,
+      "hycross": 4125,
       "traveller": 4950
 },
     highways: ["NH544"],
@@ -2909,7 +2944,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore to Salem?',
-        a: 'The one-way taxi fare from Coimbatore to Salem starts at ₹1,650 for a Hatchback, ₹1,980 for a Sedan, and ₹2,640 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore to Salem starts at ₹2,475 for a Hatchback, ₹2,475 for a Sedan, and ₹3,300 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore to Salem?',
@@ -2935,7 +2970,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Salem to Coimbatore', slug: 'salem-to-coimbatore', distance: '165 km', fare: '₹1,650' },
+      { name: 'Salem to Coimbatore', slug: 'salem-to-coimbatore', distance: '165 km', fare: '₹2,475' },
     ],
   },
 
@@ -2956,13 +2991,14 @@ export const routeContent = {
     popularFor: ["Business","CJB Airport","Medical"],
     roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Salem to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Salem to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Salem to Coimbatore with SAMAYAS. Hatchback from ₹1,650, Sedan ₹1,980, SUV ₹2,640. 24/7 doorstep pickups.',
+    seoTitle: 'Salem to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Salem to Coimbatore with SAMAYAS. Hatchback from ₹2,475, Sedan ₹2,475, SUV ₹3,300. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1650,
-      "sedan": 1980,
-      "suv": 2640,
-      "innova": 3135,
+      "hatchback": 2475,
+      "sedan": 2475,
+      "suv": 3300,
+      "innova": 3630,
+      "hycross": 4125,
       "traveller": 4950
 },
     highways: ["NH544"],
@@ -2993,7 +3029,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Salem to Coimbatore?',
-        a: 'The one-way taxi fare from Salem to Coimbatore starts at ₹1,650 for a Hatchback, ₹1,980 for a Sedan, and ₹2,640 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Salem to Coimbatore starts at ₹2,475 for a Hatchback, ₹2,475 for a Sedan, and ₹3,300 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Salem to Coimbatore?',
@@ -3019,7 +3055,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore to Salem', slug: 'coimbatore-to-salem', distance: '165 km', fare: '₹1,650' },
+      { name: 'Coimbatore to Salem', slug: 'coimbatore-to-salem', distance: '165 km', fare: '₹2,475' },
     ],
   },
 
@@ -3040,14 +3076,15 @@ export const routeContent = {
     popularFor: ["Textile","Business"],
     roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore to Erode. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Erode One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Erode with SAMAYAS. Hatchback from ₹1,000, Sedan ₹1,200, SUV ₹1,600. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore to Erode One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Erode with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1000,
-      "sedan": 1200,
-      "suv": 1600,
-      "innova": 1900,
-      "traveller": 3000
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH544"],
     tolls: {
@@ -3077,7 +3114,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore to Erode?',
-        a: 'The one-way taxi fare from Coimbatore to Erode starts at ₹1,000 for a Hatchback, ₹1,200 for a Sedan, and ₹1,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore to Erode starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore to Erode?',
@@ -3103,7 +3140,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Erode to Coimbatore', slug: 'erode-to-coimbatore', distance: '100 km', fare: '₹1,000' },
+      { name: 'Erode to Coimbatore', slug: 'erode-to-coimbatore', distance: '100 km', fare: '₹1,950' },
     ],
   },
 
@@ -3124,14 +3161,15 @@ export const routeContent = {
     popularFor: ["CJB Airport","Medical","Corporate"],
     roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Erode to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Erode to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Erode to Coimbatore with SAMAYAS. Hatchback from ₹1,000, Sedan ₹1,200, SUV ₹1,600. 24/7 doorstep pickups.',
+    seoTitle: 'Erode to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Erode to Coimbatore with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1000,
-      "sedan": 1200,
-      "suv": 1600,
-      "innova": 1900,
-      "traveller": 3000
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH544"],
     tolls: {
@@ -3161,7 +3199,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Erode to Coimbatore?',
-        a: 'The one-way taxi fare from Erode to Coimbatore starts at ₹1,000 for a Hatchback, ₹1,200 for a Sedan, and ₹1,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Erode to Coimbatore starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Erode to Coimbatore?',
@@ -3187,7 +3225,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore to Erode', slug: 'coimbatore-to-erode', distance: '100 km', fare: '₹1,000' },
+      { name: 'Coimbatore to Erode', slug: 'coimbatore-to-erode', distance: '100 km', fare: '₹1,950' },
     ],
   },
 
@@ -3208,14 +3246,15 @@ export const routeContent = {
     popularFor: ["Business","Agriculture","Film Location"],
     roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore to Pollachi. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Pollachi One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Pollachi with SAMAYAS. Hatchback from ₹450, Sedan ₹540, SUV ₹720. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore to Pollachi One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Pollachi with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 450,
-      "sedan": 540,
-      "suv": 720,
-      "innova": 855,
-      "traveller": 1350
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH83"],
     tolls: {
@@ -3245,7 +3284,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore to Pollachi?',
-        a: 'The one-way taxi fare from Coimbatore to Pollachi starts at ₹450 for a Hatchback, ₹540 for a Sedan, and ₹720 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore to Pollachi starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore to Pollachi?',
@@ -3271,7 +3310,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Pollachi to Coimbatore', slug: 'pollachi-to-coimbatore', distance: '45 km', fare: '₹450' },
+      { name: 'Pollachi to Coimbatore', slug: 'pollachi-to-coimbatore', distance: '45 km', fare: '₹1,950' },
     ],
   },
 
@@ -3292,14 +3331,15 @@ export const routeContent = {
     popularFor: ["CJB Airport","Medical","Education"],
     roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Pollachi to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Pollachi to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Pollachi to Coimbatore with SAMAYAS. Hatchback from ₹450, Sedan ₹540, SUV ₹720. 24/7 doorstep pickups.',
+    seoTitle: 'Pollachi to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Pollachi to Coimbatore with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 450,
-      "sedan": 540,
-      "suv": 720,
-      "innova": 855,
-      "traveller": 1350
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH83"],
     tolls: {
@@ -3329,7 +3369,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Pollachi to Coimbatore?',
-        a: 'The one-way taxi fare from Pollachi to Coimbatore starts at ₹450 for a Hatchback, ₹540 for a Sedan, and ₹720 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Pollachi to Coimbatore starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Pollachi to Coimbatore?',
@@ -3355,7 +3395,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore to Pollachi', slug: 'coimbatore-to-pollachi', distance: '45 km', fare: '₹450' },
+      { name: 'Coimbatore to Pollachi', slug: 'coimbatore-to-pollachi', distance: '45 km', fare: '₹1,950' },
     ],
   },
 
@@ -3376,14 +3416,15 @@ export const routeContent = {
     popularFor: ["Textile","Business"],
     roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Salem to Erode. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Salem to Erode One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Salem to Erode with SAMAYAS. Hatchback from ₹650, Sedan ₹780, SUV ₹1,040. 24/7 doorstep pickups.',
+    seoTitle: 'Salem to Erode One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Salem to Erode with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 650,
-      "sedan": 780,
-      "suv": 1040,
-      "innova": 1235,
-      "traveller": 1950
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH544"],
     tolls: {
@@ -3413,7 +3454,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Salem to Erode?',
-        a: 'The one-way taxi fare from Salem to Erode starts at ₹650 for a Hatchback, ₹780 for a Sedan, and ₹1,040 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Salem to Erode starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Salem to Erode?',
@@ -3439,7 +3480,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Erode to Salem', slug: 'erode-to-salem', distance: '65 km', fare: '₹650' },
+      { name: 'Erode to Salem', slug: 'erode-to-salem', distance: '65 km', fare: '₹1,950' },
     ],
   },
 
@@ -3460,14 +3501,15 @@ export const routeContent = {
     popularFor: ["Business","Transit"],
     roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Erode to Salem. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Erode to Salem One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Erode to Salem with SAMAYAS. Hatchback from ₹650, Sedan ₹780, SUV ₹1,040. 24/7 doorstep pickups.',
+    seoTitle: 'Erode to Salem One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Erode to Salem with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 650,
-      "sedan": 780,
-      "suv": 1040,
-      "innova": 1235,
-      "traveller": 1950
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH544"],
     tolls: {
@@ -3497,7 +3539,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Erode to Salem?',
-        a: 'The one-way taxi fare from Erode to Salem starts at ₹650 for a Hatchback, ₹780 for a Sedan, and ₹1,040 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Erode to Salem starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Erode to Salem?',
@@ -3523,7 +3565,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Salem to Erode', slug: 'salem-to-erode', distance: '65 km', fare: '₹650' },
+      { name: 'Salem to Erode', slug: 'salem-to-erode', distance: '65 km', fare: '₹1,950' },
     ],
   },
 
@@ -3544,13 +3586,14 @@ export const routeContent = {
     popularFor: ["Pilgrimage","Basilica","Tourism"],
     roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy to Velankanni. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy to Velankanni One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy to Velankanni with SAMAYAS. Hatchback from ₹1,550, Sedan ₹1,860, SUV ₹2,480. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy to Velankanni One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Velankanni with SAMAYAS. Hatchback from ₹2,325, Sedan ₹2,325, SUV ₹3,100. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1550,
-      "sedan": 1860,
-      "suv": 2480,
-      "innova": 2945,
+      "hatchback": 2325,
+      "sedan": 2325,
+      "suv": 3100,
+      "innova": 3410,
+      "hycross": 3875,
       "traveller": 4650
 },
     highways: ["NH83","SH22"],
@@ -3581,7 +3624,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy to Velankanni?',
-        a: 'The one-way taxi fare from Trichy to Velankanni starts at ₹1,550 for a Hatchback, ₹1,860 for a Sedan, and ₹2,480 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy to Velankanni starts at ₹2,325 for a Hatchback, ₹2,325 for a Sedan, and ₹3,100 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy to Velankanni?',
@@ -3607,7 +3650,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Velankanni to Trichy', slug: 'velankanni-to-trichy', distance: '155 km', fare: '₹1,550' },
+      { name: 'Velankanni to Trichy', slug: 'velankanni-to-trichy', distance: '155 km', fare: '₹2,325' },
     ],
   },
 
@@ -3628,13 +3671,14 @@ export const routeContent = {
     popularFor: ["TRZ Airport","Pilgrimage Return"],
     roadConditions: 'Access-controlled SH22 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Velankanni to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Velankanni to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Velankanni to Trichy with SAMAYAS. Hatchback from ₹1,550, Sedan ₹1,860, SUV ₹2,480. 24/7 doorstep pickups.',
+    seoTitle: 'Velankanni to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Velankanni to Trichy with SAMAYAS. Hatchback from ₹2,325, Sedan ₹2,325, SUV ₹3,100. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1550,
-      "sedan": 1860,
-      "suv": 2480,
-      "innova": 2945,
+      "hatchback": 2325,
+      "sedan": 2325,
+      "suv": 3100,
+      "innova": 3410,
+      "hycross": 3875,
       "traveller": 4650
 },
     highways: ["SH22","NH83"],
@@ -3665,7 +3709,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Velankanni to Trichy?',
-        a: 'The one-way taxi fare from Velankanni to Trichy starts at ₹1,550 for a Hatchback, ₹1,860 for a Sedan, and ₹2,480 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Velankanni to Trichy starts at ₹2,325 for a Hatchback, ₹2,325 for a Sedan, and ₹3,100 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Velankanni to Trichy?',
@@ -3691,7 +3735,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy to Velankanni', slug: 'trichy-to-velankanni', distance: '155 km', fare: '₹1,550' },
+      { name: 'Trichy to Velankanni', slug: 'trichy-to-velankanni', distance: '155 km', fare: '₹2,325' },
     ],
   },
 
@@ -3712,14 +3756,15 @@ export const routeContent = {
     popularFor: ["Navagraha Pilgrimage","Temples"],
     roadConditions: 'Access-controlled NH36 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy to Kumbakonam. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy to Kumbakonam One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy to Kumbakonam with SAMAYAS. Hatchback from ₹900, Sedan ₹1,080, SUV ₹1,440. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy to Kumbakonam One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Kumbakonam with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 900,
-      "sedan": 1080,
-      "suv": 1440,
-      "innova": 1710,
-      "traveller": 2700
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH36"],
     tolls: {
@@ -3749,7 +3794,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy to Kumbakonam?',
-        a: 'The one-way taxi fare from Trichy to Kumbakonam starts at ₹900 for a Hatchback, ₹1,080 for a Sedan, and ₹1,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy to Kumbakonam starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy to Kumbakonam?',
@@ -3775,7 +3820,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Kumbakonam to Trichy', slug: 'kumbakonam-to-trichy', distance: '90 km', fare: '₹900' },
+      { name: 'Kumbakonam to Trichy', slug: 'kumbakonam-to-trichy', distance: '90 km', fare: '₹1,950' },
     ],
   },
 
@@ -3796,14 +3841,15 @@ export const routeContent = {
     popularFor: ["TRZ Airport","Pilgrimage Return"],
     roadConditions: 'Access-controlled NH36 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Kumbakonam to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Kumbakonam to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Kumbakonam to Trichy with SAMAYAS. Hatchback from ₹900, Sedan ₹1,080, SUV ₹1,440. 24/7 doorstep pickups.',
+    seoTitle: 'Kumbakonam to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kumbakonam to Trichy with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 900,
-      "sedan": 1080,
-      "suv": 1440,
-      "innova": 1710,
-      "traveller": 2700
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH36"],
     tolls: {
@@ -3833,7 +3879,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Kumbakonam to Trichy?',
-        a: 'The one-way taxi fare from Kumbakonam to Trichy starts at ₹900 for a Hatchback, ₹1,080 for a Sedan, and ₹1,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Kumbakonam to Trichy starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Kumbakonam to Trichy?',
@@ -3859,7 +3905,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy to Kumbakonam', slug: 'trichy-to-kumbakonam', distance: '90 km', fare: '₹900' },
+      { name: 'Trichy to Kumbakonam', slug: 'trichy-to-kumbakonam', distance: '90 km', fare: '₹1,950' },
     ],
   },
 
@@ -3880,13 +3926,14 @@ export const routeContent = {
     popularFor: ["Nataraja Temple","Pilgrimage","Annamalai Univ"],
     roadConditions: 'Access-controlled NH36 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy to Chidambaram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy to Chidambaram One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy to Chidambaram with SAMAYAS. Hatchback from ₹1,700, Sedan ₹2,040, SUV ₹2,720. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy to Chidambaram One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Chidambaram with SAMAYAS. Hatchback from ₹2,550, Sedan ₹2,550, SUV ₹3,400. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1700,
-      "sedan": 2040,
-      "suv": 2720,
-      "innova": 3230,
+      "hatchback": 2550,
+      "sedan": 2550,
+      "suv": 3400,
+      "innova": 3740,
+      "hycross": 4250,
       "traveller": 5100
 },
     highways: ["NH36"],
@@ -3917,7 +3964,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy to Chidambaram?',
-        a: 'The one-way taxi fare from Trichy to Chidambaram starts at ₹1,700 for a Hatchback, ₹2,040 for a Sedan, and ₹2,720 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy to Chidambaram starts at ₹2,550 for a Hatchback, ₹2,550 for a Sedan, and ₹3,400 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy to Chidambaram?',
@@ -3943,7 +3990,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chidambaram to Trichy', slug: 'chidambaram-to-trichy', distance: '170 km', fare: '₹1,700' },
+      { name: 'Chidambaram to Trichy', slug: 'chidambaram-to-trichy', distance: '170 km', fare: '₹2,550' },
     ],
   },
 
@@ -3964,13 +4011,14 @@ export const routeContent = {
     popularFor: ["TRZ Airport","Pilgrimage Return"],
     roadConditions: 'Access-controlled NH36 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chidambaram to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chidambaram to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chidambaram to Trichy with SAMAYAS. Hatchback from ₹1,700, Sedan ₹2,040, SUV ₹2,720. 24/7 doorstep pickups.',
+    seoTitle: 'Chidambaram to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chidambaram to Trichy with SAMAYAS. Hatchback from ₹2,550, Sedan ₹2,550, SUV ₹3,400. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1700,
-      "sedan": 2040,
-      "suv": 2720,
-      "innova": 3230,
+      "hatchback": 2550,
+      "sedan": 2550,
+      "suv": 3400,
+      "innova": 3740,
+      "hycross": 4250,
       "traveller": 5100
 },
     highways: ["NH36"],
@@ -4001,7 +4049,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chidambaram to Trichy?',
-        a: 'The one-way taxi fare from Chidambaram to Trichy starts at ₹1,700 for a Hatchback, ₹2,040 for a Sedan, and ₹2,720 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chidambaram to Trichy starts at ₹2,550 for a Hatchback, ₹2,550 for a Sedan, and ₹3,400 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chidambaram to Trichy?',
@@ -4027,7 +4075,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy to Chidambaram', slug: 'trichy-to-chidambaram', distance: '170 km', fare: '₹1,700' },
+      { name: 'Trichy to Chidambaram', slug: 'trichy-to-chidambaram', distance: '170 km', fare: '₹2,550' },
     ],
   },
 
@@ -4048,13 +4096,14 @@ export const routeContent = {
     popularFor: ["Pilgrimage","Dhanushkodi","Pamban Bridge"],
     roadConditions: 'Access-controlled NH87 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Madurai to Rameshwaram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai to Rameshwaram One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai to Rameshwaram with SAMAYAS. Hatchback from ₹1,750, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
+    seoTitle: 'Madurai to Rameshwaram One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Rameshwaram with SAMAYAS. Hatchback from ₹2,625, Sedan ₹2,625, SUV ₹3,500. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1750,
-      "sedan": 2100,
-      "suv": 2800,
-      "innova": 3325,
+      "hatchback": 2625,
+      "sedan": 2625,
+      "suv": 3500,
+      "innova": 3850,
+      "hycross": 4375,
       "traveller": 5250
 },
     highways: ["NH87","Pamban Sea Bridge"],
@@ -4085,7 +4134,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Madurai to Rameshwaram?',
-        a: 'The one-way taxi fare from Madurai to Rameshwaram starts at ₹1,750 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Madurai to Rameshwaram starts at ₹2,625 for a Hatchback, ₹2,625 for a Sedan, and ₹3,500 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Madurai to Rameshwaram?',
@@ -4111,7 +4160,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Rameshwaram to Madurai', slug: 'rameswaram-to-madurai', distance: '175 km', fare: '₹1,750' },
+      { name: 'Rameshwaram to Madurai', slug: 'rameswaram-to-madurai', distance: '175 km', fare: '₹2,625' },
     ],
   },
 
@@ -4132,13 +4181,14 @@ export const routeContent = {
     popularFor: ["IXM Airport","Pilgrimage Return"],
     roadConditions: 'Access-controlled NH87 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Rameshwaram to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Rameshwaram to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Rameshwaram to Madurai with SAMAYAS. Hatchback from ₹1,750, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
+    seoTitle: 'Rameshwaram to Madurai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Rameshwaram to Madurai with SAMAYAS. Hatchback from ₹2,625, Sedan ₹2,625, SUV ₹3,500. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1750,
-      "sedan": 2100,
-      "suv": 2800,
-      "innova": 3325,
+      "hatchback": 2625,
+      "sedan": 2625,
+      "suv": 3500,
+      "innova": 3850,
+      "hycross": 4375,
       "traveller": 5250
 },
     highways: ["NH87"],
@@ -4169,7 +4219,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Rameshwaram to Madurai?',
-        a: 'The one-way taxi fare from Rameshwaram to Madurai starts at ₹1,750 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Rameshwaram to Madurai starts at ₹2,625 for a Hatchback, ₹2,625 for a Sedan, and ₹3,500 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Rameshwaram to Madurai?',
@@ -4195,7 +4245,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Madurai to Rameshwaram', slug: 'madurai-to-rameswaram', distance: '175 km', fare: '₹1,750' },
+      { name: 'Madurai to Rameshwaram', slug: 'madurai-to-rameswaram', distance: '175 km', fare: '₹2,625' },
     ],
   },
 
@@ -4216,13 +4266,14 @@ export const routeContent = {
     popularFor: ["Subramanya Swamy Temple","Pilgrimage"],
     roadConditions: 'Access-controlled NH38 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Madurai to Tiruchendur. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai to Tiruchendur One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai to Tiruchendur with SAMAYAS. Hatchback from ₹1,800, Sedan ₹2,160, SUV ₹2,880. 24/7 doorstep pickups.',
+    seoTitle: 'Madurai to Tiruchendur One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Tiruchendur with SAMAYAS. Hatchback from ₹2,700, Sedan ₹2,700, SUV ₹3,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1800,
-      "sedan": 2160,
-      "suv": 2880,
-      "innova": 3420,
+      "hatchback": 2700,
+      "sedan": 2700,
+      "suv": 3600,
+      "innova": 3960,
+      "hycross": 4500,
       "traveller": 5400
 },
     highways: ["NH38"],
@@ -4253,7 +4304,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Madurai to Tiruchendur?',
-        a: 'The one-way taxi fare from Madurai to Tiruchendur starts at ₹1,800 for a Hatchback, ₹2,160 for a Sedan, and ₹2,880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Madurai to Tiruchendur starts at ₹2,700 for a Hatchback, ₹2,700 for a Sedan, and ₹3,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Madurai to Tiruchendur?',
@@ -4279,7 +4330,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Tiruchendur to Madurai', slug: 'tiruchendur-to-madurai', distance: '180 km', fare: '₹1,800' },
+      { name: 'Tiruchendur to Madurai', slug: 'tiruchendur-to-madurai', distance: '180 km', fare: '₹2,700' },
     ],
   },
 
@@ -4300,13 +4351,14 @@ export const routeContent = {
     popularFor: ["IXM Airport","Pilgrimage Return"],
     roadConditions: 'Access-controlled NH38 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Tiruchendur to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Tiruchendur to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Tiruchendur to Madurai with SAMAYAS. Hatchback from ₹1,800, Sedan ₹2,160, SUV ₹2,880. 24/7 doorstep pickups.',
+    seoTitle: 'Tiruchendur to Madurai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tiruchendur to Madurai with SAMAYAS. Hatchback from ₹2,700, Sedan ₹2,700, SUV ₹3,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1800,
-      "sedan": 2160,
-      "suv": 2880,
-      "innova": 3420,
+      "hatchback": 2700,
+      "sedan": 2700,
+      "suv": 3600,
+      "innova": 3960,
+      "hycross": 4500,
       "traveller": 5400
 },
     highways: ["NH38"],
@@ -4337,7 +4389,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Tiruchendur to Madurai?',
-        a: 'The one-way taxi fare from Tiruchendur to Madurai starts at ₹1,800 for a Hatchback, ₹2,160 for a Sedan, and ₹2,880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Tiruchendur to Madurai starts at ₹2,700 for a Hatchback, ₹2,700 for a Sedan, and ₹3,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Tiruchendur to Madurai?',
@@ -4363,7 +4415,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Madurai to Tiruchendur', slug: 'madurai-to-tiruchendur', distance: '180 km', fare: '₹1,800' },
+      { name: 'Madurai to Tiruchendur', slug: 'madurai-to-tiruchendur', distance: '180 km', fare: '₹2,700' },
     ],
   },
 
@@ -4384,14 +4436,15 @@ export const routeContent = {
     popularFor: ["Silk Sarees","Pilgrimage","Heritage"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Kanchipuram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Kanchipuram One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Kanchipuram with SAMAYAS. Hatchback from ₹750, Sedan ₹900, SUV ₹1,200. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Kanchipuram One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Kanchipuram with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 750,
-      "sedan": 900,
-      "suv": 1200,
-      "innova": 1425,
-      "traveller": 2250
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH48"],
     tolls: {
@@ -4421,7 +4474,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Kanchipuram?',
-        a: 'The one-way taxi fare from Chennai to Kanchipuram starts at ₹750 for a Hatchback, ₹900 for a Sedan, and ₹1,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Kanchipuram starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Kanchipuram?',
@@ -4447,7 +4500,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Kanchipuram to Chennai', slug: 'kanchipuram-to-chennai', distance: '75 km', fare: '₹750' },
+      { name: 'Kanchipuram to Chennai', slug: 'kanchipuram-to-chennai', distance: '75 km', fare: '₹1,950' },
     ],
   },
 
@@ -4468,14 +4521,15 @@ export const routeContent = {
     popularFor: ["MAA Airport","Shopping Return"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Kanchipuram to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Kanchipuram to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Kanchipuram to Chennai with SAMAYAS. Hatchback from ₹750, Sedan ₹900, SUV ₹1,200. 24/7 doorstep pickups.',
+    seoTitle: 'Kanchipuram to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kanchipuram to Chennai with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 750,
-      "sedan": 900,
-      "suv": 1200,
-      "innova": 1425,
-      "traveller": 2250
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH48"],
     tolls: {
@@ -4505,7 +4559,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Kanchipuram to Chennai?',
-        a: 'The one-way taxi fare from Kanchipuram to Chennai starts at ₹750 for a Hatchback, ₹900 for a Sedan, and ₹1,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Kanchipuram to Chennai starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Kanchipuram to Chennai?',
@@ -4531,7 +4585,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Kanchipuram', slug: 'chennai-to-kanchipuram', distance: '75 km', fare: '₹750' },
+      { name: 'Chennai to Kanchipuram', slug: 'chennai-to-kanchipuram', distance: '75 km', fare: '₹1,950' },
     ],
   },
 
@@ -4552,13 +4606,14 @@ export const routeContent = {
     popularFor: ["Pilgrimage","Temple","University"],
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Chidambaram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Chidambaram One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Chidambaram with SAMAYAS. Hatchback from ₹2,300, Sedan ₹2,760, SUV ₹3,680. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Chidambaram One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Chidambaram with SAMAYAS. Hatchback from ₹3,450, Sedan ₹3,450, SUV ₹4,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2300,
-      "sedan": 2760,
-      "suv": 3680,
-      "innova": 4370,
+      "hatchback": 3450,
+      "sedan": 3450,
+      "suv": 4600,
+      "innova": 5060,
+      "hycross": 5750,
       "traveller": 6900
 },
     highways: ["ECR","NH32"],
@@ -4589,7 +4644,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Chidambaram?',
-        a: 'The one-way taxi fare from Chennai to Chidambaram starts at ₹2,300 for a Hatchback, ₹2,760 for a Sedan, and ₹3,680 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Chidambaram starts at ₹3,450 for a Hatchback, ₹3,450 for a Sedan, and ₹4,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Chidambaram?',
@@ -4615,7 +4670,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chidambaram to Chennai', slug: 'chidambaram-to-chennai', distance: '230 km', fare: '₹2,300' },
+      { name: 'Chidambaram to Chennai', slug: 'chidambaram-to-chennai', distance: '230 km', fare: '₹3,450' },
     ],
   },
 
@@ -4636,13 +4691,14 @@ export const routeContent = {
     popularFor: ["MAA Airport","Medical"],
     roadConditions: 'Access-controlled NH32 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chidambaram to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chidambaram to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chidambaram to Chennai with SAMAYAS. Hatchback from ₹2,300, Sedan ₹2,760, SUV ₹3,680. 24/7 doorstep pickups.',
+    seoTitle: 'Chidambaram to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chidambaram to Chennai with SAMAYAS. Hatchback from ₹3,450, Sedan ₹3,450, SUV ₹4,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2300,
-      "sedan": 2760,
-      "suv": 3680,
-      "innova": 4370,
+      "hatchback": 3450,
+      "sedan": 3450,
+      "suv": 4600,
+      "innova": 5060,
+      "hycross": 5750,
       "traveller": 6900
 },
     highways: ["NH32","ECR"],
@@ -4673,7 +4729,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chidambaram to Chennai?',
-        a: 'The one-way taxi fare from Chidambaram to Chennai starts at ₹2,300 for a Hatchback, ₹2,760 for a Sedan, and ₹3,680 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chidambaram to Chennai starts at ₹3,450 for a Hatchback, ₹3,450 for a Sedan, and ₹4,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chidambaram to Chennai?',
@@ -4699,7 +4755,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Chidambaram', slug: 'chennai-to-chidambaram', distance: '230 km', fare: '₹2,300' },
+      { name: 'Chennai to Chidambaram', slug: 'chennai-to-chidambaram', distance: '230 km', fare: '₹3,450' },
     ],
   },
 
@@ -4720,14 +4776,15 @@ export const routeContent = {
     popularFor: ["Tourism","Resort","Honeymoon"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore to Ooty. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Ooty One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Ooty with SAMAYAS. Hatchback from ₹850, Sedan ₹1,020, SUV ₹1,360. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore to Ooty One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Ooty with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 850,
-      "sedan": 1020,
-      "suv": 1360,
-      "innova": 1615,
-      "traveller": 2550
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH181","Hairpin Bends Route"],
     tolls: {
@@ -4757,7 +4814,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore to Ooty?',
-        a: 'The one-way taxi fare from Coimbatore to Ooty starts at ₹850 for a Hatchback, ₹1,020 for a Sedan, and ₹1,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore to Ooty starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore to Ooty?',
@@ -4783,7 +4840,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Ooty to Coimbatore', slug: 'ooty-to-coimbatore', distance: '85 km', fare: '₹850' },
+      { name: 'Ooty to Coimbatore', slug: 'ooty-to-coimbatore', distance: '85 km', fare: '₹1,950' },
     ],
   },
 
@@ -4804,14 +4861,15 @@ export const routeContent = {
     popularFor: ["CJB Airport","Railway Return"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Ooty to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Ooty to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Ooty to Coimbatore with SAMAYAS. Hatchback from ₹850, Sedan ₹1,020, SUV ₹1,360. 24/7 doorstep pickups.',
+    seoTitle: 'Ooty to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Ooty to Coimbatore with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 850,
-      "sedan": 1020,
-      "suv": 1360,
-      "innova": 1615,
-      "traveller": 2550
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH181","Mettupalayam Road"],
     tolls: {
@@ -4841,7 +4899,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Ooty to Coimbatore?',
-        a: 'The one-way taxi fare from Ooty to Coimbatore starts at ₹850 for a Hatchback, ₹1,020 for a Sedan, and ₹1,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Ooty to Coimbatore starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Ooty to Coimbatore?',
@@ -4867,7 +4925,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore to Ooty', slug: 'coimbatore-to-ooty', distance: '85 km', fare: '₹850' },
+      { name: 'Coimbatore to Ooty', slug: 'coimbatore-to-ooty', distance: '85 km', fare: '₹1,950' },
     ],
   },
 
@@ -4888,14 +4946,15 @@ export const routeContent = {
     popularFor: ["Tea Gardens","Sims Park","Tourism"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore to Coonoor. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Coonoor One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Coonoor with SAMAYAS. Hatchback from ₹700, Sedan ₹840, SUV ₹1,120. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore to Coonoor One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Coonoor with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 700,
-      "sedan": 840,
-      "suv": 1120,
-      "innova": 1330,
-      "traveller": 2100
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH181"],
     tolls: {
@@ -4925,7 +4984,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore to Coonoor?',
-        a: 'The one-way taxi fare from Coimbatore to Coonoor starts at ₹700 for a Hatchback, ₹840 for a Sedan, and ₹1,120 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore to Coonoor starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore to Coonoor?',
@@ -4951,7 +5010,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coonoor to Coimbatore', slug: 'coonoor-to-coimbatore', distance: '70 km', fare: '₹700' },
+      { name: 'Coonoor to Coimbatore', slug: 'coonoor-to-coimbatore', distance: '70 km', fare: '₹1,950' },
     ],
   },
 
@@ -4972,14 +5031,15 @@ export const routeContent = {
     popularFor: ["CJB Airport","Tourism Return"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Coonoor to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coonoor to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coonoor to Coimbatore with SAMAYAS. Hatchback from ₹700, Sedan ₹840, SUV ₹1,120. 24/7 doorstep pickups.',
+    seoTitle: 'Coonoor to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coonoor to Coimbatore with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 700,
-      "sedan": 840,
-      "suv": 1120,
-      "innova": 1330,
-      "traveller": 2100
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH181"],
     tolls: {
@@ -5009,7 +5069,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coonoor to Coimbatore?',
-        a: 'The one-way taxi fare from Coonoor to Coimbatore starts at ₹700 for a Hatchback, ₹840 for a Sedan, and ₹1,120 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coonoor to Coimbatore starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coonoor to Coimbatore?',
@@ -5035,7 +5095,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore to Coonoor', slug: 'coimbatore-to-coonoor', distance: '70 km', fare: '₹700' },
+      { name: 'Coimbatore to Coonoor', slug: 'coimbatore-to-coonoor', distance: '70 km', fare: '₹1,950' },
     ],
   },
 
@@ -5056,14 +5116,15 @@ export const routeContent = {
     popularFor: ["Tea Plantations","Wildlife","Hairpin Bends"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore to Valparai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Valparai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Valparai with SAMAYAS. Hatchback from ₹1,050, Sedan ₹1,260, SUV ₹1,680. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore to Valparai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Valparai with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1050,
-      "sedan": 1260,
-      "suv": 1680,
-      "innova": 1995,
-      "traveller": 3150
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["SH78 Ghat Road"],
     tolls: {
@@ -5093,7 +5154,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore to Valparai?',
-        a: 'The one-way taxi fare from Coimbatore to Valparai starts at ₹1,050 for a Hatchback, ₹1,260 for a Sedan, and ₹1,680 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore to Valparai starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore to Valparai?',
@@ -5119,7 +5180,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Valparai to Coimbatore', slug: 'valparai-to-coimbatore', distance: '105 km', fare: '₹1,050' },
+      { name: 'Valparai to Coimbatore', slug: 'valparai-to-coimbatore', distance: '105 km', fare: '₹1,950' },
     ],
   },
 
@@ -5140,14 +5201,15 @@ export const routeContent = {
     popularFor: ["CJB Airport","Tourism Return"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Valparai to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Valparai to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Valparai to Coimbatore with SAMAYAS. Hatchback from ₹1,050, Sedan ₹1,260, SUV ₹1,680. 24/7 doorstep pickups.',
+    seoTitle: 'Valparai to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Valparai to Coimbatore with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1050,
-      "sedan": 1260,
-      "suv": 1680,
-      "innova": 1995,
-      "traveller": 3150
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["SH78 Ghat Road"],
     tolls: {
@@ -5177,7 +5239,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Valparai to Coimbatore?',
-        a: 'The one-way taxi fare from Valparai to Coimbatore starts at ₹1,050 for a Hatchback, ₹1,260 for a Sedan, and ₹1,680 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Valparai to Coimbatore starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Valparai to Coimbatore?',
@@ -5203,7 +5265,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore to Valparai', slug: 'coimbatore-to-valparai', distance: '105 km', fare: '₹1,050' },
+      { name: 'Coimbatore to Valparai', slug: 'coimbatore-to-valparai', distance: '105 km', fare: '₹1,950' },
     ],
   },
 
@@ -5224,13 +5286,14 @@ export const routeContent = {
     popularFor: ["Tourism","Tea Hills","Resort Stay"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore to Munnar. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Munnar One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Munnar with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore to Munnar One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Munnar with SAMAYAS. Hatchback from ₹2,400, Sedan ₹2,400, SUV ₹3,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1600,
-      "sedan": 1920,
-      "suv": 2560,
-      "innova": 3040,
+      "hatchback": 2400,
+      "sedan": 2400,
+      "suv": 3200,
+      "innova": 3520,
+      "hycross": 4000,
       "traveller": 4800
 },
     highways: ["SH17","Udumalpet Ghat Road"],
@@ -5261,7 +5324,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore to Munnar?',
-        a: 'The one-way taxi fare from Coimbatore to Munnar starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore to Munnar starts at ₹2,400 for a Hatchback, ₹2,400 for a Sedan, and ₹3,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore to Munnar?',
@@ -5287,7 +5350,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Munnar to Coimbatore', slug: 'munnar-to-coimbatore', distance: '160 km', fare: '₹1,600' },
+      { name: 'Munnar to Coimbatore', slug: 'munnar-to-coimbatore', distance: '160 km', fare: '₹2,400' },
     ],
   },
 
@@ -5308,13 +5371,14 @@ export const routeContent = {
     popularFor: ["CJB Airport","Tourism Return"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Munnar to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Munnar to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Munnar to Coimbatore with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    seoTitle: 'Munnar to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Munnar to Coimbatore with SAMAYAS. Hatchback from ₹2,400, Sedan ₹2,400, SUV ₹3,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1600,
-      "sedan": 1920,
-      "suv": 2560,
-      "innova": 3040,
+      "hatchback": 2400,
+      "sedan": 2400,
+      "suv": 3200,
+      "innova": 3520,
+      "hycross": 4000,
       "traveller": 4800
 },
     highways: ["Udumalpet Ghat Road","SH17"],
@@ -5345,7 +5409,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Munnar to Coimbatore?',
-        a: 'The one-way taxi fare from Munnar to Coimbatore starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Munnar to Coimbatore starts at ₹2,400 for a Hatchback, ₹2,400 for a Sedan, and ₹3,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Munnar to Coimbatore?',
@@ -5371,7 +5435,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore to Munnar', slug: 'coimbatore-to-munnar', distance: '160 km', fare: '₹1,600' },
+      { name: 'Coimbatore to Munnar', slug: 'coimbatore-to-munnar', distance: '160 km', fare: '₹2,400' },
     ],
   },
 
@@ -5392,14 +5456,15 @@ export const routeContent = {
     popularFor: ["Tourism","Hill Resort","Honeymoon"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Madurai to Kodaikanal. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai to Kodaikanal One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai to Kodaikanal with SAMAYAS. Hatchback from ₹1,150, Sedan ₹1,380, SUV ₹1,840. 24/7 doorstep pickups.',
+    seoTitle: 'Madurai to Kodaikanal One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Kodaikanal with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1150,
-      "sedan": 1380,
-      "suv": 1840,
-      "innova": 2185,
-      "traveller": 3450
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["SH156 Ghat Road"],
     tolls: {
@@ -5429,7 +5494,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Madurai to Kodaikanal?',
-        a: 'The one-way taxi fare from Madurai to Kodaikanal starts at ₹1,150 for a Hatchback, ₹1,380 for a Sedan, and ₹1,840 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Madurai to Kodaikanal starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Madurai to Kodaikanal?',
@@ -5455,7 +5520,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Kodaikanal to Madurai', slug: 'kodaikanal-to-madurai', distance: '115 km', fare: '₹1,150' },
+      { name: 'Kodaikanal to Madurai', slug: 'kodaikanal-to-madurai', distance: '115 km', fare: '₹1,950' },
     ],
   },
 
@@ -5476,14 +5541,15 @@ export const routeContent = {
     popularFor: ["IXM Airport","Tourism Return"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Kodaikanal to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Kodaikanal to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Kodaikanal to Madurai with SAMAYAS. Hatchback from ₹1,150, Sedan ₹1,380, SUV ₹1,840. 24/7 doorstep pickups.',
+    seoTitle: 'Kodaikanal to Madurai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kodaikanal to Madurai with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1150,
-      "sedan": 1380,
-      "suv": 1840,
-      "innova": 2185,
-      "traveller": 3450
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["SH156 Ghat Road"],
     tolls: {
@@ -5513,7 +5579,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Kodaikanal to Madurai?',
-        a: 'The one-way taxi fare from Kodaikanal to Madurai starts at ₹1,150 for a Hatchback, ₹1,380 for a Sedan, and ₹1,840 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Kodaikanal to Madurai starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Kodaikanal to Madurai?',
@@ -5539,7 +5605,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Madurai to Kodaikanal', slug: 'madurai-to-kodaikanal', distance: '115 km', fare: '₹1,150' },
+      { name: 'Madurai to Kodaikanal', slug: 'madurai-to-kodaikanal', distance: '115 km', fare: '₹1,950' },
     ],
   },
 
@@ -5560,13 +5626,14 @@ export const routeContent = {
     popularFor: ["Sunset Point","Vivekananda Rock","Tourism"],
     roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Madurai to Kanyakumari. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai to Kanyakumari One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai to Kanyakumari with SAMAYAS. Hatchback from ₹2,450, Sedan ₹2,940, SUV ₹3,920. 24/7 doorstep pickups.',
+    seoTitle: 'Madurai to Kanyakumari One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Kanyakumari with SAMAYAS. Hatchback from ₹3,675, Sedan ₹3,675, SUV ₹4,900. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2450,
-      "sedan": 2940,
-      "suv": 3920,
-      "innova": 4655,
+      "hatchback": 3675,
+      "sedan": 3675,
+      "suv": 4900,
+      "innova": 5390,
+      "hycross": 6125,
       "traveller": 7350
 },
     highways: ["NH44"],
@@ -5597,7 +5664,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Madurai to Kanyakumari?',
-        a: 'The one-way taxi fare from Madurai to Kanyakumari starts at ₹2,450 for a Hatchback, ₹2,940 for a Sedan, and ₹3,920 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Madurai to Kanyakumari starts at ₹3,675 for a Hatchback, ₹3,675 for a Sedan, and ₹4,900 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Madurai to Kanyakumari?',
@@ -5623,7 +5690,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Kanyakumari to Madurai', slug: 'kanyakumari-to-madurai', distance: '245 km', fare: '₹2,450' },
+      { name: 'Kanyakumari to Madurai', slug: 'kanyakumari-to-madurai', distance: '245 km', fare: '₹3,675' },
     ],
   },
 
@@ -5644,13 +5711,14 @@ export const routeContent = {
     popularFor: ["IXM Airport","Tourism Return"],
     roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Kanyakumari to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Kanyakumari to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Kanyakumari to Madurai with SAMAYAS. Hatchback from ₹2,450, Sedan ₹2,940, SUV ₹3,920. 24/7 doorstep pickups.',
+    seoTitle: 'Kanyakumari to Madurai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kanyakumari to Madurai with SAMAYAS. Hatchback from ₹3,675, Sedan ₹3,675, SUV ₹4,900. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2450,
-      "sedan": 2940,
-      "suv": 3920,
-      "innova": 4655,
+      "hatchback": 3675,
+      "sedan": 3675,
+      "suv": 4900,
+      "innova": 5390,
+      "hycross": 6125,
       "traveller": 7350
 },
     highways: ["NH44"],
@@ -5681,7 +5749,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Kanyakumari to Madurai?',
-        a: 'The one-way taxi fare from Kanyakumari to Madurai starts at ₹2,450 for a Hatchback, ₹2,940 for a Sedan, and ₹3,920 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Kanyakumari to Madurai starts at ₹3,675 for a Hatchback, ₹3,675 for a Sedan, and ₹4,900 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Kanyakumari to Madurai?',
@@ -5707,7 +5775,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Madurai to Kanyakumari', slug: 'madurai-to-kanyakumari', distance: '245 km', fare: '₹2,450' },
+      { name: 'Madurai to Kanyakumari', slug: 'madurai-to-kanyakumari', distance: '245 km', fare: '₹3,675' },
     ],
   },
 
@@ -5728,13 +5796,14 @@ export const routeContent = {
     popularFor: ["Waterfalls","Ayurveda","Tourism"],
     roadConditions: 'Access-controlled NH744 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Madurai to Courtallam. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai to Courtallam One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai to Courtallam with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    seoTitle: 'Madurai to Courtallam One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai to Courtallam with SAMAYAS. Hatchback from ₹2,400, Sedan ₹2,400, SUV ₹3,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1600,
-      "sedan": 1920,
-      "suv": 2560,
-      "innova": 3040,
+      "hatchback": 2400,
+      "sedan": 2400,
+      "suv": 3200,
+      "innova": 3520,
+      "hycross": 4000,
       "traveller": 4800
 },
     highways: ["NH744"],
@@ -5765,7 +5834,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Madurai to Courtallam?',
-        a: 'The one-way taxi fare from Madurai to Courtallam starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Madurai to Courtallam starts at ₹2,400 for a Hatchback, ₹2,400 for a Sedan, and ₹3,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Madurai to Courtallam?',
@@ -5791,7 +5860,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Courtallam to Madurai', slug: 'courtallam-to-madurai', distance: '160 km', fare: '₹1,600' },
+      { name: 'Courtallam to Madurai', slug: 'courtallam-to-madurai', distance: '160 km', fare: '₹2,400' },
     ],
   },
 
@@ -5812,13 +5881,14 @@ export const routeContent = {
     popularFor: ["IXM Airport","Tourism Return"],
     roadConditions: 'Access-controlled NH744 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Courtallam to Madurai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Courtallam to Madurai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Courtallam to Madurai with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    seoTitle: 'Courtallam to Madurai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Courtallam to Madurai with SAMAYAS. Hatchback from ₹2,400, Sedan ₹2,400, SUV ₹3,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1600,
-      "sedan": 1920,
-      "suv": 2560,
-      "innova": 3040,
+      "hatchback": 2400,
+      "sedan": 2400,
+      "suv": 3200,
+      "innova": 3520,
+      "hycross": 4000,
       "traveller": 4800
 },
     highways: ["NH744"],
@@ -5849,7 +5919,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Courtallam to Madurai?',
-        a: 'The one-way taxi fare from Courtallam to Madurai starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Courtallam to Madurai starts at ₹2,400 for a Hatchback, ₹2,400 for a Sedan, and ₹3,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Courtallam to Madurai?',
@@ -5875,7 +5945,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Madurai to Courtallam', slug: 'madurai-to-courtallam', distance: '160 km', fare: '₹1,600' },
+      { name: 'Madurai to Courtallam', slug: 'madurai-to-courtallam', distance: '160 km', fare: '₹2,400' },
     ],
   },
 
@@ -5896,13 +5966,14 @@ export const routeContent = {
     popularFor: ["ECR Roadtrip","Auroville","French Quarter"],
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Puducherry. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Puducherry One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Puducherry with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Puducherry One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Puducherry with SAMAYAS. Hatchback from ₹2,400, Sedan ₹2,400, SUV ₹3,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1600,
-      "sedan": 1920,
-      "suv": 2560,
-      "innova": 3040,
+      "hatchback": 2400,
+      "sedan": 2400,
+      "suv": 3200,
+      "innova": 3520,
+      "hycross": 4000,
       "traveller": 4800
 },
     highways: ["ECR","NH32"],
@@ -5933,7 +6004,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Puducherry?',
-        a: 'The one-way taxi fare from Chennai to Puducherry starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Puducherry starts at ₹2,400 for a Hatchback, ₹2,400 for a Sedan, and ₹3,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Puducherry?',
@@ -5959,7 +6030,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Puducherry to Chennai', slug: 'pondicherry-to-chennai', distance: '160 km', fare: '₹1,600' },
+      { name: 'Puducherry to Chennai', slug: 'pondicherry-to-chennai', distance: '160 km', fare: '₹2,400' },
     ],
   },
 
@@ -5980,13 +6051,14 @@ export const routeContent = {
     popularFor: ["MAA Airport","Weekend Return"],
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
     heroTagline: 'Affordable One-Way Taxi from Puducherry to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Puducherry to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Puducherry to Chennai with SAMAYAS. Hatchback from ₹1,600, Sedan ₹1,920, SUV ₹2,560. 24/7 doorstep pickups.',
+    seoTitle: 'Puducherry to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Puducherry to Chennai with SAMAYAS. Hatchback from ₹2,400, Sedan ₹2,400, SUV ₹3,200. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1600,
-      "sedan": 1920,
-      "suv": 2560,
-      "innova": 3040,
+      "hatchback": 2400,
+      "sedan": 2400,
+      "suv": 3200,
+      "innova": 3520,
+      "hycross": 4000,
       "traveller": 4800
 },
     highways: ["ECR","NH32"],
@@ -6017,7 +6089,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Puducherry to Chennai?',
-        a: 'The one-way taxi fare from Puducherry to Chennai starts at ₹1,600 for a Hatchback, ₹1,920 for a Sedan, and ₹2,560 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Puducherry to Chennai starts at ₹2,400 for a Hatchback, ₹2,400 for a Sedan, and ₹3,200 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Puducherry to Chennai?',
@@ -6043,7 +6115,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Puducherry', slug: 'chennai-to-pondicherry', distance: '160 km', fare: '₹1,600' },
+      { name: 'Chennai to Puducherry', slug: 'chennai-to-pondicherry', distance: '160 km', fare: '₹2,400' },
     ],
   },
 
@@ -6064,14 +6136,15 @@ export const routeContent = {
     popularFor: ["UNESCO Heritage","Shore Temple","Day Trip"],
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Mahabalipuram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Mahabalipuram One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Mahabalipuram with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Mahabalipuram One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Mahabalipuram with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 550,
-      "sedan": 660,
-      "suv": 880,
-      "innova": 1045,
-      "traveller": 1650
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["ECR Scenic Road"],
     tolls: {
@@ -6101,7 +6174,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Mahabalipuram?',
-        a: 'The one-way taxi fare from Chennai to Mahabalipuram starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Mahabalipuram starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Mahabalipuram?',
@@ -6127,7 +6200,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Mahabalipuram to Chennai', slug: 'mahabalipuram-to-chennai', distance: '55 km', fare: '₹550' },
+      { name: 'Mahabalipuram to Chennai', slug: 'mahabalipuram-to-chennai', distance: '55 km', fare: '₹1,950' },
     ],
   },
 
@@ -6148,14 +6221,15 @@ export const routeContent = {
     popularFor: ["MAA Airport","Day Trip Return"],
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
     heroTagline: 'Affordable One-Way Taxi from Mahabalipuram to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Mahabalipuram to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Mahabalipuram to Chennai with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    seoTitle: 'Mahabalipuram to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Mahabalipuram to Chennai with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 550,
-      "sedan": 660,
-      "suv": 880,
-      "innova": 1045,
-      "traveller": 1650
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["ECR Scenic Road"],
     tolls: {
@@ -6185,7 +6259,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Mahabalipuram to Chennai?',
-        a: 'The one-way taxi fare from Mahabalipuram to Chennai starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Mahabalipuram to Chennai starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Mahabalipuram to Chennai?',
@@ -6211,7 +6285,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Mahabalipuram', slug: 'chennai-to-mahabalipuram', distance: '55 km', fare: '₹550' },
+      { name: 'Chennai to Mahabalipuram', slug: 'chennai-to-mahabalipuram', distance: '55 km', fare: '₹1,950' },
     ],
   },
 
@@ -6232,14 +6306,15 @@ export const routeContent = {
     popularFor: ["Sunset View","Vivekananda Rock"],
     roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Tirunelveli to Kanyakumari. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Tirunelveli to Kanyakumari One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Tirunelveli to Kanyakumari with SAMAYAS. Hatchback from ₹850, Sedan ₹1,020, SUV ₹1,360. 24/7 doorstep pickups.',
+    seoTitle: 'Tirunelveli to Kanyakumari One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirunelveli to Kanyakumari with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 850,
-      "sedan": 1020,
-      "suv": 1360,
-      "innova": 1615,
-      "traveller": 2550
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH44"],
     tolls: {
@@ -6269,7 +6344,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Tirunelveli to Kanyakumari?',
-        a: 'The one-way taxi fare from Tirunelveli to Kanyakumari starts at ₹850 for a Hatchback, ₹1,020 for a Sedan, and ₹1,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Tirunelveli to Kanyakumari starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Tirunelveli to Kanyakumari?',
@@ -6295,7 +6370,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Kanyakumari to Tirunelveli', slug: 'kanyakumari-to-tirunelveli', distance: '85 km', fare: '₹850' },
+      { name: 'Kanyakumari to Tirunelveli', slug: 'kanyakumari-to-tirunelveli', distance: '85 km', fare: '₹1,950' },
     ],
   },
 
@@ -6316,14 +6391,15 @@ export const routeContent = {
     popularFor: ["TEN Station","Tourism Return"],
     roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Kanyakumari to Tirunelveli. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Kanyakumari to Tirunelveli One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Kanyakumari to Tirunelveli with SAMAYAS. Hatchback from ₹850, Sedan ₹1,020, SUV ₹1,360. 24/7 doorstep pickups.',
+    seoTitle: 'Kanyakumari to Tirunelveli One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kanyakumari to Tirunelveli with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 850,
-      "sedan": 1020,
-      "suv": 1360,
-      "innova": 1615,
-      "traveller": 2550
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH44"],
     tolls: {
@@ -6353,7 +6429,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Kanyakumari to Tirunelveli?',
-        a: 'The one-way taxi fare from Kanyakumari to Tirunelveli starts at ₹850 for a Hatchback, ₹1,020 for a Sedan, and ₹1,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Kanyakumari to Tirunelveli starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Kanyakumari to Tirunelveli?',
@@ -6379,7 +6455,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Tirunelveli to Kanyakumari', slug: 'tirunelveli-to-kanyakumari', distance: '85 km', fare: '₹850' },
+      { name: 'Tirunelveli to Kanyakumari', slug: 'tirunelveli-to-kanyakumari', distance: '85 km', fare: '₹1,950' },
     ],
   },
 
@@ -6400,13 +6476,14 @@ export const routeContent = {
     popularFor: ["Airport Pickup","Auroville","French Quarter"],
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
     heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Puducherry. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai Airport to Puducherry One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai Airport to Puducherry with SAMAYAS. Hatchback from ₹1,400, Sedan ₹1,680, SUV ₹2,240. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai Airport to Puducherry One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai Airport to Puducherry with SAMAYAS. Hatchback from ₹2,100, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1400,
-      "sedan": 1680,
-      "suv": 2240,
-      "innova": 2660,
+      "hatchback": 2100,
+      "sedan": 2100,
+      "suv": 2800,
+      "innova": 3080,
+      "hycross": 3500,
       "traveller": 4200
 },
     highways: ["ECR","NH32"],
@@ -6437,7 +6514,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai Airport to Puducherry?',
-        a: 'The one-way taxi fare from Chennai Airport to Puducherry starts at ₹1,400 for a Hatchback, ₹1,680 for a Sedan, and ₹2,240 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai Airport to Puducherry starts at ₹2,100 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai Airport to Puducherry?',
@@ -6463,7 +6540,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Puducherry to Chennai Airport', slug: 'pondicherry-to-chennai-airport', distance: '140 km', fare: '₹1,400' },
+      { name: 'Puducherry to Chennai Airport', slug: 'pondicherry-to-chennai-airport', distance: '140 km', fare: '₹2,100' },
     ],
   },
 
@@ -6484,13 +6561,14 @@ export const routeContent = {
     popularFor: ["MAA Flight Drop","International Flight"],
     roadConditions: 'Access-controlled NH32 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Puducherry to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Puducherry to Chennai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Puducherry to Chennai Airport with SAMAYAS. Hatchback from ₹1,400, Sedan ₹1,680, SUV ₹2,240. 24/7 doorstep pickups.',
+    seoTitle: 'Puducherry to Chennai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Puducherry to Chennai Airport with SAMAYAS. Hatchback from ₹2,100, Sedan ₹2,100, SUV ₹2,800. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1400,
-      "sedan": 1680,
-      "suv": 2240,
-      "innova": 2660,
+      "hatchback": 2100,
+      "sedan": 2100,
+      "suv": 2800,
+      "innova": 3080,
+      "hycross": 3500,
       "traveller": 4200
 },
     highways: ["NH32","ECR"],
@@ -6521,7 +6599,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Puducherry to Chennai Airport?',
-        a: 'The one-way taxi fare from Puducherry to Chennai Airport starts at ₹1,400 for a Hatchback, ₹1,680 for a Sedan, and ₹2,240 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Puducherry to Chennai Airport starts at ₹2,100 for a Hatchback, ₹2,100 for a Sedan, and ₹2,800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Puducherry to Chennai Airport?',
@@ -6547,7 +6625,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai Airport to Puducherry', slug: 'chennai-airport-to-pondicherry', distance: '140 km', fare: '₹1,400' },
+      { name: 'Chennai Airport to Puducherry', slug: 'chennai-airport-to-pondicherry', distance: '140 km', fare: '₹2,100' },
     ],
   },
 
@@ -6568,14 +6646,15 @@ export const routeContent = {
     popularFor: ["CMC Patient Pickup","Medical Airport Transfer"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Vellore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai Airport to Vellore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai Airport to Vellore with SAMAYAS. Hatchback from ₹1,250, Sedan ₹1,500, SUV ₹2,000. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai Airport to Vellore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai Airport to Vellore with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1250,
-      "sedan": 1500,
-      "suv": 2000,
-      "innova": 2375,
-      "traveller": 3750
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH48"],
     tolls: {
@@ -6605,7 +6684,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai Airport to Vellore?',
-        a: 'The one-way taxi fare from Chennai Airport to Vellore starts at ₹1,250 for a Hatchback, ₹1,500 for a Sedan, and ₹2,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai Airport to Vellore starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai Airport to Vellore?',
@@ -6631,7 +6710,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Vellore to Chennai Airport', slug: 'vellore-to-chennai-airport', distance: '125 km', fare: '₹1,250' },
+      { name: 'Vellore to Chennai Airport', slug: 'vellore-to-chennai-airport', distance: '125 km', fare: '₹1,950' },
     ],
   },
 
@@ -6652,14 +6731,15 @@ export const routeContent = {
     popularFor: ["CMC Flight Drop","MAA Airport Drop"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Vellore to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Vellore to Chennai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Vellore to Chennai Airport with SAMAYAS. Hatchback from ₹1,250, Sedan ₹1,500, SUV ₹2,000. 24/7 doorstep pickups.',
+    seoTitle: 'Vellore to Chennai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Vellore to Chennai Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1250,
-      "sedan": 1500,
-      "suv": 2000,
-      "innova": 2375,
-      "traveller": 3750
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH48"],
     tolls: {
@@ -6689,7 +6769,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Vellore to Chennai Airport?',
-        a: 'The one-way taxi fare from Vellore to Chennai Airport starts at ₹1,250 for a Hatchback, ₹1,500 for a Sedan, and ₹2,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Vellore to Chennai Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Vellore to Chennai Airport?',
@@ -6715,7 +6795,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai Airport to Vellore', slug: 'chennai-airport-to-vellore', distance: '125 km', fare: '₹1,250' },
+      { name: 'Chennai Airport to Vellore', slug: 'chennai-airport-to-vellore', distance: '125 km', fare: '₹1,950' },
     ],
   },
 
@@ -6736,13 +6816,14 @@ export const routeContent = {
     popularFor: ["Airport Temple Taxi","Tirumala Pilgrimage"],
     roadConditions: 'Access-controlled NH716 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Tirupati. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai Airport to Tirupati One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai Airport to Tirupati with SAMAYAS. Hatchback from ₹1,300, Sedan ₹1,560, SUV ₹2,080. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai Airport to Tirupati One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai Airport to Tirupati with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1300,
-      "sedan": 1560,
-      "suv": 2080,
-      "innova": 2470,
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
       "traveller": 3900
 },
     highways: ["NH716"],
@@ -6773,7 +6854,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai Airport to Tirupati?',
-        a: 'The one-way taxi fare from Chennai Airport to Tirupati starts at ₹1,300 for a Hatchback, ₹1,560 for a Sedan, and ₹2,080 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai Airport to Tirupati starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai Airport to Tirupati?',
@@ -6799,7 +6880,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Tirupati to Chennai Airport', slug: 'tirupati-to-chennai-airport', distance: '130 km', fare: '₹1,300' },
+      { name: 'Tirupati to Chennai Airport', slug: 'tirupati-to-chennai-airport', distance: '130 km', fare: '₹1,950' },
     ],
   },
 
@@ -6820,13 +6901,14 @@ export const routeContent = {
     popularFor: ["MAA Flight Drop","Pilgrimage Return"],
     roadConditions: 'Access-controlled NH716 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Tirupati to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Tirupati to Chennai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Tirupati to Chennai Airport with SAMAYAS. Hatchback from ₹1,300, Sedan ₹1,560, SUV ₹2,080. 24/7 doorstep pickups.',
+    seoTitle: 'Tirupati to Chennai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirupati to Chennai Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1300,
-      "sedan": 1560,
-      "suv": 2080,
-      "innova": 2470,
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
       "traveller": 3900
 },
     highways: ["NH716"],
@@ -6857,7 +6939,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Tirupati to Chennai Airport?',
-        a: 'The one-way taxi fare from Tirupati to Chennai Airport starts at ₹1,300 for a Hatchback, ₹1,560 for a Sedan, and ₹2,080 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Tirupati to Chennai Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Tirupati to Chennai Airport?',
@@ -6883,7 +6965,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai Airport to Tirupati', slug: 'chennai-airport-to-tirupati', distance: '130 km', fare: '₹1,300' },
+      { name: 'Chennai Airport to Tirupati', slug: 'chennai-airport-to-tirupati', distance: '130 km', fare: '₹1,950' },
     ],
   },
 
@@ -6904,14 +6986,15 @@ export const routeContent = {
     popularFor: ["Tourist Airport Pickup","Resort Transfer"],
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
     heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Mahabalipuram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai Airport to Mahabalipuram One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai Airport to Mahabalipuram with SAMAYAS. Hatchback from ₹500, Sedan ₹600, SUV ₹800. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai Airport to Mahabalipuram One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai Airport to Mahabalipuram with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 500,
-      "sedan": 600,
-      "suv": 800,
-      "innova": 950,
-      "traveller": 1500
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["ECR"],
     tolls: {
@@ -6941,7 +7024,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai Airport to Mahabalipuram?',
-        a: 'The one-way taxi fare from Chennai Airport to Mahabalipuram starts at ₹500 for a Hatchback, ₹600 for a Sedan, and ₹800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai Airport to Mahabalipuram starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai Airport to Mahabalipuram?',
@@ -6967,7 +7050,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Mahabalipuram to Chennai Airport', slug: 'mahabalipuram-to-chennai-airport', distance: '50 km', fare: '₹500' },
+      { name: 'Mahabalipuram to Chennai Airport', slug: 'mahabalipuram-to-chennai-airport', distance: '50 km', fare: '₹1,950' },
     ],
   },
 
@@ -6988,14 +7071,15 @@ export const routeContent = {
     popularFor: ["MAA Flight Drop","Resort Return"],
     roadConditions: 'Coastal 2-lane ECR highway featuring scenic Bay of Bengal views and smooth road surface.',
     heroTagline: 'Affordable One-Way Taxi from Mahabalipuram to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Mahabalipuram to Chennai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Mahabalipuram to Chennai Airport with SAMAYAS. Hatchback from ₹500, Sedan ₹600, SUV ₹800. 24/7 doorstep pickups.',
+    seoTitle: 'Mahabalipuram to Chennai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Mahabalipuram to Chennai Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 500,
-      "sedan": 600,
-      "suv": 800,
-      "innova": 950,
-      "traveller": 1500
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["ECR"],
     tolls: {
@@ -7025,7 +7109,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Mahabalipuram to Chennai Airport?',
-        a: 'The one-way taxi fare from Mahabalipuram to Chennai Airport starts at ₹500 for a Hatchback, ₹600 for a Sedan, and ₹800 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Mahabalipuram to Chennai Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Mahabalipuram to Chennai Airport?',
@@ -7051,7 +7135,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai Airport to Mahabalipuram', slug: 'chennai-airport-to-mahabalipuram', distance: '50 km', fare: '₹500' },
+      { name: 'Chennai Airport to Mahabalipuram', slug: 'chennai-airport-to-mahabalipuram', distance: '50 km', fare: '₹1,950' },
     ],
   },
 
@@ -7072,14 +7156,15 @@ export const routeContent = {
     popularFor: ["Airport Pickup","Silk Town Transfer"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Kanchipuram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai Airport to Kanchipuram One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai Airport to Kanchipuram with SAMAYAS. Hatchback from ₹650, Sedan ₹780, SUV ₹1,040. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai Airport to Kanchipuram One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai Airport to Kanchipuram with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 650,
-      "sedan": 780,
-      "suv": 1040,
-      "innova": 1235,
-      "traveller": 1950
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH48"],
     tolls: {
@@ -7109,7 +7194,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai Airport to Kanchipuram?',
-        a: 'The one-way taxi fare from Chennai Airport to Kanchipuram starts at ₹650 for a Hatchback, ₹780 for a Sedan, and ₹1,040 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai Airport to Kanchipuram starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai Airport to Kanchipuram?',
@@ -7135,7 +7220,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Kanchipuram to Chennai Airport', slug: 'kanchipuram-to-chennai-airport', distance: '65 km', fare: '₹650' },
+      { name: 'Kanchipuram to Chennai Airport', slug: 'kanchipuram-to-chennai-airport', distance: '65 km', fare: '₹1,950' },
     ],
   },
 
@@ -7156,14 +7241,15 @@ export const routeContent = {
     popularFor: ["MAA Flight Drop"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Kanchipuram to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Kanchipuram to Chennai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Kanchipuram to Chennai Airport with SAMAYAS. Hatchback from ₹650, Sedan ₹780, SUV ₹1,040. 24/7 doorstep pickups.',
+    seoTitle: 'Kanchipuram to Chennai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kanchipuram to Chennai Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 650,
-      "sedan": 780,
-      "suv": 1040,
-      "innova": 1235,
-      "traveller": 1950
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH48"],
     tolls: {
@@ -7193,7 +7279,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Kanchipuram to Chennai Airport?',
-        a: 'The one-way taxi fare from Kanchipuram to Chennai Airport starts at ₹650 for a Hatchback, ₹780 for a Sedan, and ₹1,040 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Kanchipuram to Chennai Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Kanchipuram to Chennai Airport?',
@@ -7219,7 +7305,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai Airport to Kanchipuram', slug: 'chennai-airport-to-kanchipuram', distance: '65 km', fare: '₹650' },
+      { name: 'Chennai Airport to Kanchipuram', slug: 'chennai-airport-to-kanchipuram', distance: '65 km', fare: '₹1,950' },
     ],
   },
 
@@ -7240,13 +7326,14 @@ export const routeContent = {
     popularFor: ["Airport Transit","Interstate Business"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai Airport to Chittoor. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai Airport to Chittoor One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai Airport to Chittoor with SAMAYAS. Hatchback from ₹1,550, Sedan ₹1,860, SUV ₹2,480. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai Airport to Chittoor One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai Airport to Chittoor with SAMAYAS. Hatchback from ₹2,325, Sedan ₹2,325, SUV ₹3,100. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1550,
-      "sedan": 1860,
-      "suv": 2480,
-      "innova": 2945,
+      "hatchback": 2325,
+      "sedan": 2325,
+      "suv": 3100,
+      "innova": 3410,
+      "hycross": 3875,
       "traveller": 4650
 },
     highways: ["NH48"],
@@ -7277,7 +7364,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai Airport to Chittoor?',
-        a: 'The one-way taxi fare from Chennai Airport to Chittoor starts at ₹1,550 for a Hatchback, ₹1,860 for a Sedan, and ₹2,480 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai Airport to Chittoor starts at ₹2,325 for a Hatchback, ₹2,325 for a Sedan, and ₹3,100 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai Airport to Chittoor?',
@@ -7303,7 +7390,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chittoor to Chennai Airport', slug: 'chittoor-to-chennai-airport', distance: '155 km', fare: '₹1,550' },
+      { name: 'Chittoor to Chennai Airport', slug: 'chittoor-to-chennai-airport', distance: '155 km', fare: '₹2,325' },
     ],
   },
 
@@ -7324,13 +7411,14 @@ export const routeContent = {
     popularFor: ["MAA Flight Drop"],
     roadConditions: 'Access-controlled NH48 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chittoor to Chennai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chittoor to Chennai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chittoor to Chennai Airport with SAMAYAS. Hatchback from ₹1,550, Sedan ₹1,860, SUV ₹2,480. 24/7 doorstep pickups.',
+    seoTitle: 'Chittoor to Chennai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chittoor to Chennai Airport with SAMAYAS. Hatchback from ₹2,325, Sedan ₹2,325, SUV ₹3,100. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1550,
-      "sedan": 1860,
-      "suv": 2480,
-      "innova": 2945,
+      "hatchback": 2325,
+      "sedan": 2325,
+      "suv": 3100,
+      "innova": 3410,
+      "hycross": 3875,
       "traveller": 4650
 },
     highways: ["NH48"],
@@ -7361,7 +7449,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chittoor to Chennai Airport?',
-        a: 'The one-way taxi fare from Chittoor to Chennai Airport starts at ₹1,550 for a Hatchback, ₹1,860 for a Sedan, and ₹2,480 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chittoor to Chennai Airport starts at ₹2,325 for a Hatchback, ₹2,325 for a Sedan, and ₹3,100 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chittoor to Chennai Airport?',
@@ -7387,7 +7475,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai Airport to Chittoor', slug: 'chennai-airport-to-chittoor', distance: '155 km', fare: '₹1,550' },
+      { name: 'Chennai Airport to Chittoor', slug: 'chennai-airport-to-chittoor', distance: '155 km', fare: '₹2,325' },
     ],
   },
 
@@ -7408,14 +7496,15 @@ export const routeContent = {
     popularFor: ["TRZ Flight Pickup","Big Temple Visit"],
     roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy Airport to Thanjavur. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy Airport to Thanjavur One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy Airport to Thanjavur with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy Airport to Thanjavur One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy Airport to Thanjavur with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 550,
-      "sedan": 660,
-      "suv": 880,
-      "innova": 1045,
-      "traveller": 1650
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH83"],
     tolls: {
@@ -7445,7 +7534,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy Airport to Thanjavur?',
-        a: 'The one-way taxi fare from Trichy Airport to Thanjavur starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy Airport to Thanjavur starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy Airport to Thanjavur?',
@@ -7471,7 +7560,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Thanjavur to Trichy Airport', slug: 'thanjavur-to-trichy-airport', distance: '55 km', fare: '₹550' },
+      { name: 'Thanjavur to Trichy Airport', slug: 'thanjavur-to-trichy-airport', distance: '55 km', fare: '₹1,950' },
     ],
   },
 
@@ -7492,14 +7581,15 @@ export const routeContent = {
     popularFor: ["TRZ Flight Drop","International Flight"],
     roadConditions: 'Access-controlled NH83 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Thanjavur to Trichy Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Thanjavur to Trichy Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Thanjavur to Trichy Airport with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    seoTitle: 'Thanjavur to Trichy Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Thanjavur to Trichy Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 550,
-      "sedan": 660,
-      "suv": 880,
-      "innova": 1045,
-      "traveller": 1650
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH83"],
     tolls: {
@@ -7529,7 +7619,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Thanjavur to Trichy Airport?',
-        a: 'The one-way taxi fare from Thanjavur to Trichy Airport starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Thanjavur to Trichy Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Thanjavur to Trichy Airport?',
@@ -7555,7 +7645,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy Airport to Thanjavur', slug: 'trichy-airport-to-thanjavur', distance: '55 km', fare: '₹550' },
+      { name: 'Trichy Airport to Thanjavur', slug: 'trichy-airport-to-thanjavur', distance: '55 km', fare: '₹1,950' },
     ],
   },
 
@@ -7576,14 +7666,15 @@ export const routeContent = {
     popularFor: ["TRZ Flight Pickup","Textile Business"],
     roadConditions: 'Access-controlled NH81 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy Airport to Karur. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy Airport to Karur One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy Airport to Karur with SAMAYAS. Hatchback from ₹850, Sedan ₹1,020, SUV ₹1,360. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy Airport to Karur One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy Airport to Karur with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 850,
-      "sedan": 1020,
-      "suv": 1360,
-      "innova": 1615,
-      "traveller": 2550
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH81"],
     tolls: {
@@ -7613,7 +7704,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy Airport to Karur?',
-        a: 'The one-way taxi fare from Trichy Airport to Karur starts at ₹850 for a Hatchback, ₹1,020 for a Sedan, and ₹1,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy Airport to Karur starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy Airport to Karur?',
@@ -7639,7 +7730,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Karur to Trichy Airport', slug: 'karur-to-trichy-airport', distance: '85 km', fare: '₹850' },
+      { name: 'Karur to Trichy Airport', slug: 'karur-to-trichy-airport', distance: '85 km', fare: '₹1,950' },
     ],
   },
 
@@ -7660,14 +7751,15 @@ export const routeContent = {
     popularFor: ["TRZ Flight Drop"],
     roadConditions: 'Access-controlled NH81 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Karur to Trichy Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Karur to Trichy Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Karur to Trichy Airport with SAMAYAS. Hatchback from ₹850, Sedan ₹1,020, SUV ₹1,360. 24/7 doorstep pickups.',
+    seoTitle: 'Karur to Trichy Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Karur to Trichy Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 850,
-      "sedan": 1020,
-      "suv": 1360,
-      "innova": 1615,
-      "traveller": 2550
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH81"],
     tolls: {
@@ -7697,7 +7789,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Karur to Trichy Airport?',
-        a: 'The one-way taxi fare from Karur to Trichy Airport starts at ₹850 for a Hatchback, ₹1,020 for a Sedan, and ₹1,360 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Karur to Trichy Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Karur to Trichy Airport?',
@@ -7723,7 +7815,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy Airport to Karur', slug: 'trichy-airport-to-karur', distance: '85 km', fare: '₹850' },
+      { name: 'Trichy Airport to Karur', slug: 'trichy-airport-to-karur', distance: '85 km', fare: '₹1,950' },
     ],
   },
 
@@ -7744,13 +7836,14 @@ export const routeContent = {
     popularFor: ["IXM Flight Pickup","Pilgrimage Transfer"],
     roadConditions: 'Access-controlled NH87 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Madurai Airport to Rameshwaram. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai Airport to Rameshwaram One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai Airport to Rameshwaram with SAMAYAS. Hatchback from ₹1,700, Sedan ₹2,040, SUV ₹2,720. 24/7 doorstep pickups.',
+    seoTitle: 'Madurai Airport to Rameshwaram One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai Airport to Rameshwaram with SAMAYAS. Hatchback from ₹2,550, Sedan ₹2,550, SUV ₹3,400. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1700,
-      "sedan": 2040,
-      "suv": 2720,
-      "innova": 3230,
+      "hatchback": 2550,
+      "sedan": 2550,
+      "suv": 3400,
+      "innova": 3740,
+      "hycross": 4250,
       "traveller": 5100
 },
     highways: ["NH87"],
@@ -7781,7 +7874,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Madurai Airport to Rameshwaram?',
-        a: 'The one-way taxi fare from Madurai Airport to Rameshwaram starts at ₹1,700 for a Hatchback, ₹2,040 for a Sedan, and ₹2,720 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Madurai Airport to Rameshwaram starts at ₹2,550 for a Hatchback, ₹2,550 for a Sedan, and ₹3,400 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Madurai Airport to Rameshwaram?',
@@ -7807,7 +7900,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Rameshwaram to Madurai Airport', slug: 'rameswaram-to-madurai-airport', distance: '170 km', fare: '₹1,700' },
+      { name: 'Rameshwaram to Madurai Airport', slug: 'rameswaram-to-madurai-airport', distance: '170 km', fare: '₹2,550' },
     ],
   },
 
@@ -7828,13 +7921,14 @@ export const routeContent = {
     popularFor: ["IXM Flight Drop"],
     roadConditions: 'Access-controlled NH87 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Rameshwaram to Madurai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Rameshwaram to Madurai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Rameshwaram to Madurai Airport with SAMAYAS. Hatchback from ₹1,700, Sedan ₹2,040, SUV ₹2,720. 24/7 doorstep pickups.',
+    seoTitle: 'Rameshwaram to Madurai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Rameshwaram to Madurai Airport with SAMAYAS. Hatchback from ₹2,550, Sedan ₹2,550, SUV ₹3,400. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1700,
-      "sedan": 2040,
-      "suv": 2720,
-      "innova": 3230,
+      "hatchback": 2550,
+      "sedan": 2550,
+      "suv": 3400,
+      "innova": 3740,
+      "hycross": 4250,
       "traveller": 5100
 },
     highways: ["NH87"],
@@ -7865,7 +7959,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Rameshwaram to Madurai Airport?',
-        a: 'The one-way taxi fare from Rameshwaram to Madurai Airport starts at ₹1,700 for a Hatchback, ₹2,040 for a Sedan, and ₹2,720 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Rameshwaram to Madurai Airport starts at ₹2,550 for a Hatchback, ₹2,550 for a Sedan, and ₹3,400 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Rameshwaram to Madurai Airport?',
@@ -7891,7 +7985,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Madurai Airport to Rameshwaram', slug: 'madurai-airport-to-rameswaram', distance: '170 km', fare: '₹1,700' },
+      { name: 'Madurai Airport to Rameshwaram', slug: 'madurai-airport-to-rameswaram', distance: '170 km', fare: '₹2,550' },
     ],
   },
 
@@ -7912,13 +8006,14 @@ export const routeContent = {
     popularFor: ["IXM Flight Pickup","Hill Resort Transfer"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Madurai Airport to Kodaikanal. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Madurai Airport to Kodaikanal One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Madurai Airport to Kodaikanal with SAMAYAS. Hatchback from ₹1,350, Sedan ₹1,620, SUV ₹2,160. 24/7 doorstep pickups.',
+    seoTitle: 'Madurai Airport to Kodaikanal One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Madurai Airport to Kodaikanal with SAMAYAS. Hatchback from ₹2,025, Sedan ₹2,025, SUV ₹2,700. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1350,
-      "sedan": 1620,
-      "suv": 2160,
-      "innova": 2565,
+      "hatchback": 2025,
+      "sedan": 2025,
+      "suv": 2700,
+      "innova": 2970,
+      "hycross": 3375,
       "traveller": 4050
 },
     highways: ["SH156 Ghat Road"],
@@ -7949,7 +8044,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Madurai Airport to Kodaikanal?',
-        a: 'The one-way taxi fare from Madurai Airport to Kodaikanal starts at ₹1,350 for a Hatchback, ₹1,620 for a Sedan, and ₹2,160 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Madurai Airport to Kodaikanal starts at ₹2,025 for a Hatchback, ₹2,025 for a Sedan, and ₹2,700 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Madurai Airport to Kodaikanal?',
@@ -7975,7 +8070,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Kodaikanal to Madurai Airport', slug: 'kodaikanal-to-madurai-airport', distance: '135 km', fare: '₹1,350' },
+      { name: 'Kodaikanal to Madurai Airport', slug: 'kodaikanal-to-madurai-airport', distance: '135 km', fare: '₹2,025' },
     ],
   },
 
@@ -7996,13 +8091,14 @@ export const routeContent = {
     popularFor: ["IXM Flight Drop"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Kodaikanal to Madurai Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Kodaikanal to Madurai Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Kodaikanal to Madurai Airport with SAMAYAS. Hatchback from ₹1,350, Sedan ₹1,620, SUV ₹2,160. 24/7 doorstep pickups.',
+    seoTitle: 'Kodaikanal to Madurai Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kodaikanal to Madurai Airport with SAMAYAS. Hatchback from ₹2,025, Sedan ₹2,025, SUV ₹2,700. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1350,
-      "sedan": 1620,
-      "suv": 2160,
-      "innova": 2565,
+      "hatchback": 2025,
+      "sedan": 2025,
+      "suv": 2700,
+      "innova": 2970,
+      "hycross": 3375,
       "traveller": 4050
 },
     highways: ["SH156 Ghat Road"],
@@ -8033,7 +8129,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Kodaikanal to Madurai Airport?',
-        a: 'The one-way taxi fare from Kodaikanal to Madurai Airport starts at ₹1,350 for a Hatchback, ₹1,620 for a Sedan, and ₹2,160 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Kodaikanal to Madurai Airport starts at ₹2,025 for a Hatchback, ₹2,025 for a Sedan, and ₹2,700 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Kodaikanal to Madurai Airport?',
@@ -8059,7 +8155,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Madurai Airport to Kodaikanal', slug: 'madurai-airport-to-kodaikanal', distance: '135 km', fare: '₹1,350' },
+      { name: 'Madurai Airport to Kodaikanal', slug: 'madurai-airport-to-kodaikanal', distance: '135 km', fare: '₹2,025' },
     ],
   },
 
@@ -8080,14 +8176,15 @@ export const routeContent = {
     popularFor: ["CJB Flight Pickup","Nilgiris Transfer"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore Airport to Ooty. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore Airport to Ooty One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore Airport to Ooty with SAMAYAS. Hatchback from ₹900, Sedan ₹1,080, SUV ₹1,440. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore Airport to Ooty One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore Airport to Ooty with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 900,
-      "sedan": 1080,
-      "suv": 1440,
-      "innova": 1710,
-      "traveller": 2700
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH181 Hairpin Route"],
     tolls: {
@@ -8117,7 +8214,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore Airport to Ooty?',
-        a: 'The one-way taxi fare from Coimbatore Airport to Ooty starts at ₹900 for a Hatchback, ₹1,080 for a Sedan, and ₹1,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore Airport to Ooty starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore Airport to Ooty?',
@@ -8143,7 +8240,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Ooty to Coimbatore Airport', slug: 'ooty-to-coimbatore-airport', distance: '90 km', fare: '₹900' },
+      { name: 'Ooty to Coimbatore Airport', slug: 'ooty-to-coimbatore-airport', distance: '90 km', fare: '₹1,950' },
     ],
   },
 
@@ -8164,14 +8261,15 @@ export const routeContent = {
     popularFor: ["CJB Flight Drop"],
     roadConditions: 'Scenic mountain ghat road with hairpin bends. Driver certified in hill gear control.',
     heroTagline: 'Affordable One-Way Taxi from Ooty to Coimbatore Airport. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Ooty to Coimbatore Airport One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Ooty to Coimbatore Airport with SAMAYAS. Hatchback from ₹900, Sedan ₹1,080, SUV ₹1,440. 24/7 doorstep pickups.',
+    seoTitle: 'Ooty to Coimbatore Airport One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Ooty to Coimbatore Airport with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 900,
-      "sedan": 1080,
-      "suv": 1440,
-      "innova": 1710,
-      "traveller": 2700
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH181"],
     tolls: {
@@ -8201,7 +8299,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Ooty to Coimbatore Airport?',
-        a: 'The one-way taxi fare from Ooty to Coimbatore Airport starts at ₹900 for a Hatchback, ₹1,080 for a Sedan, and ₹1,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Ooty to Coimbatore Airport starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Ooty to Coimbatore Airport?',
@@ -8227,7 +8325,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore Airport to Ooty', slug: 'coimbatore-airport-to-ooty', distance: '90 km', fare: '₹900' },
+      { name: 'Coimbatore Airport to Ooty', slug: 'coimbatore-airport-to-ooty', distance: '90 km', fare: '₹1,950' },
     ],
   },
 
@@ -8248,13 +8346,14 @@ export const routeContent = {
     popularFor: ["IT","Corporate","Interstate Business"],
     roadConditions: 'Access-controlled NH48 Expressway multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Bengaluru. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Bengaluru One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Bengaluru with SAMAYAS. Hatchback from ₹3,500, Sedan ₹4,200, SUV ₹5,600. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Bengaluru One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Bengaluru with SAMAYAS. Hatchback from ₹5,250, Sedan ₹5,250, SUV ₹7,000. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3500,
-      "sedan": 4200,
-      "suv": 5600,
-      "innova": 6650,
+      "hatchback": 5250,
+      "sedan": 5250,
+      "suv": 7000,
+      "innova": 7700,
+      "hycross": 8750,
       "traveller": 10500
 },
     highways: ["NH48 Expressway"],
@@ -8285,7 +8384,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Bengaluru?',
-        a: 'The one-way taxi fare from Chennai to Bengaluru starts at ₹3,500 for a Hatchback, ₹4,200 for a Sedan, and ₹5,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Bengaluru starts at ₹5,250 for a Hatchback, ₹5,250 for a Sedan, and ₹7,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Bengaluru?',
@@ -8311,7 +8410,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Bengaluru to Chennai', slug: 'bengaluru-to-chennai', distance: '350 km', fare: '₹3,500' },
+      { name: 'Bengaluru to Chennai', slug: 'bengaluru-to-chennai', distance: '350 km', fare: '₹5,250' },
     ],
   },
 
@@ -8332,13 +8431,14 @@ export const routeContent = {
     popularFor: ["IT Return","Corporate","MAA Airport"],
     roadConditions: 'Access-controlled NH48 Expressway multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Bengaluru to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Bengaluru to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Bengaluru to Chennai with SAMAYAS. Hatchback from ₹3,500, Sedan ₹4,200, SUV ₹5,600. 24/7 doorstep pickups.',
+    seoTitle: 'Bengaluru to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Bengaluru to Chennai with SAMAYAS. Hatchback from ₹5,250, Sedan ₹5,250, SUV ₹7,000. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3500,
-      "sedan": 4200,
-      "suv": 5600,
-      "innova": 6650,
+      "hatchback": 5250,
+      "sedan": 5250,
+      "suv": 7000,
+      "innova": 7700,
+      "hycross": 8750,
       "traveller": 10500
 },
     highways: ["NH48 Expressway"],
@@ -8369,7 +8469,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Bengaluru to Chennai?',
-        a: 'The one-way taxi fare from Bengaluru to Chennai starts at ₹3,500 for a Hatchback, ₹4,200 for a Sedan, and ₹5,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Bengaluru to Chennai starts at ₹5,250 for a Hatchback, ₹5,250 for a Sedan, and ₹7,000 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Bengaluru to Chennai?',
@@ -8395,7 +8495,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Bengaluru', slug: 'chennai-to-bengaluru', distance: '350 km', fare: '₹3,500' },
+      { name: 'Chennai to Bengaluru', slug: 'chennai-to-bengaluru', distance: '350 km', fare: '₹5,250' },
     ],
   },
 
@@ -8416,13 +8516,14 @@ export const routeContent = {
     popularFor: ["IT","Family","Interstate Transit"],
     roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trichy to Bengaluru. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trichy to Bengaluru One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trichy to Bengaluru with SAMAYAS. Hatchback from ₹3,450, Sedan ₹4,140, SUV ₹5,520. 24/7 doorstep pickups.',
+    seoTitle: 'Trichy to Bengaluru One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trichy to Bengaluru with SAMAYAS. Hatchback from ₹5,175, Sedan ₹5,175, SUV ₹6,900. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3450,
-      "sedan": 4140,
-      "suv": 5520,
-      "innova": 6555,
+      "hatchback": 5175,
+      "sedan": 5175,
+      "suv": 6900,
+      "innova": 7590,
+      "hycross": 8625,
       "traveller": 10350
 },
     highways: ["NH44"],
@@ -8453,7 +8554,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trichy to Bengaluru?',
-        a: 'The one-way taxi fare from Trichy to Bengaluru starts at ₹3,450 for a Hatchback, ₹4,140 for a Sedan, and ₹5,520 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trichy to Bengaluru starts at ₹5,175 for a Hatchback, ₹5,175 for a Sedan, and ₹6,900 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trichy to Bengaluru?',
@@ -8479,7 +8580,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Bengaluru to Trichy', slug: 'bengaluru-to-trichy', distance: '345 km', fare: '₹3,450' },
+      { name: 'Bengaluru to Trichy', slug: 'bengaluru-to-trichy', distance: '345 km', fare: '₹5,175' },
     ],
   },
 
@@ -8500,13 +8601,14 @@ export const routeContent = {
     popularFor: ["Home Visit","Festival","Family"],
     roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Bengaluru to Trichy. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Bengaluru to Trichy One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Bengaluru to Trichy with SAMAYAS. Hatchback from ₹3,450, Sedan ₹4,140, SUV ₹5,520. 24/7 doorstep pickups.',
+    seoTitle: 'Bengaluru to Trichy One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Bengaluru to Trichy with SAMAYAS. Hatchback from ₹5,175, Sedan ₹5,175, SUV ₹6,900. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3450,
-      "sedan": 4140,
-      "suv": 5520,
-      "innova": 6555,
+      "hatchback": 5175,
+      "sedan": 5175,
+      "suv": 6900,
+      "innova": 7590,
+      "hycross": 8625,
       "traveller": 10350
 },
     highways: ["NH44"],
@@ -8537,7 +8639,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Bengaluru to Trichy?',
-        a: 'The one-way taxi fare from Bengaluru to Trichy starts at ₹3,450 for a Hatchback, ₹4,140 for a Sedan, and ₹5,520 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Bengaluru to Trichy starts at ₹5,175 for a Hatchback, ₹5,175 for a Sedan, and ₹6,900 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Bengaluru to Trichy?',
@@ -8563,7 +8665,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trichy to Bengaluru', slug: 'trichy-to-bengaluru', distance: '345 km', fare: '₹3,450' },
+      { name: 'Trichy to Bengaluru', slug: 'trichy-to-bengaluru', distance: '345 km', fare: '₹5,175' },
     ],
   },
 
@@ -8584,13 +8686,14 @@ export const routeContent = {
     popularFor: ["Business","IT Commute"],
     roadConditions: 'Access-controlled NH44 Expressway multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Salem to Bengaluru. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Salem to Bengaluru One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Salem to Bengaluru with SAMAYAS. Hatchback from ₹2,050, Sedan ₹2,460, SUV ₹3,280. 24/7 doorstep pickups.',
+    seoTitle: 'Salem to Bengaluru One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Salem to Bengaluru with SAMAYAS. Hatchback from ₹3,075, Sedan ₹3,075, SUV ₹4,100. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2050,
-      "sedan": 2460,
-      "suv": 3280,
-      "innova": 3895,
+      "hatchback": 3075,
+      "sedan": 3075,
+      "suv": 4100,
+      "innova": 4510,
+      "hycross": 5125,
       "traveller": 6150
 },
     highways: ["NH44 Expressway"],
@@ -8621,7 +8724,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Salem to Bengaluru?',
-        a: 'The one-way taxi fare from Salem to Bengaluru starts at ₹2,050 for a Hatchback, ₹2,460 for a Sedan, and ₹3,280 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Salem to Bengaluru starts at ₹3,075 for a Hatchback, ₹3,075 for a Sedan, and ₹4,100 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Salem to Bengaluru?',
@@ -8647,7 +8750,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Bengaluru to Salem', slug: 'bengaluru-to-salem', distance: '205 km', fare: '₹2,050' },
+      { name: 'Bengaluru to Salem', slug: 'bengaluru-to-salem', distance: '205 km', fare: '₹3,075' },
     ],
   },
 
@@ -8668,13 +8771,14 @@ export const routeContent = {
     popularFor: ["Home Visit","Business"],
     roadConditions: 'Access-controlled NH44 Expressway multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Bengaluru to Salem. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Bengaluru to Salem One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Bengaluru to Salem with SAMAYAS. Hatchback from ₹2,050, Sedan ₹2,460, SUV ₹3,280. 24/7 doorstep pickups.',
+    seoTitle: 'Bengaluru to Salem One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Bengaluru to Salem with SAMAYAS. Hatchback from ₹3,075, Sedan ₹3,075, SUV ₹4,100. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 2050,
-      "sedan": 2460,
-      "suv": 3280,
-      "innova": 3895,
+      "hatchback": 3075,
+      "sedan": 3075,
+      "suv": 4100,
+      "innova": 4510,
+      "hycross": 5125,
       "traveller": 6150
 },
     highways: ["NH44 Expressway"],
@@ -8705,7 +8809,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Bengaluru to Salem?',
-        a: 'The one-way taxi fare from Bengaluru to Salem starts at ₹2,050 for a Hatchback, ₹2,460 for a Sedan, and ₹3,280 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Bengaluru to Salem starts at ₹3,075 for a Hatchback, ₹3,075 for a Sedan, and ₹4,100 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Bengaluru to Salem?',
@@ -8731,7 +8835,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Salem to Bengaluru', slug: 'salem-to-bengaluru', distance: '205 km', fare: '₹2,050' },
+      { name: 'Salem to Bengaluru', slug: 'salem-to-bengaluru', distance: '205 km', fare: '₹3,075' },
     ],
   },
 
@@ -8752,13 +8856,14 @@ export const routeContent = {
     popularFor: ["IT Corridor","Corporate","Industrial"],
     roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore to Bengaluru. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Bengaluru One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Bengaluru with SAMAYAS. Hatchback from ₹3,650, Sedan ₹4,380, SUV ₹5,840. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore to Bengaluru One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Bengaluru with SAMAYAS. Hatchback from ₹5,475, Sedan ₹5,475, SUV ₹7,300. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3650,
-      "sedan": 4380,
-      "suv": 5840,
-      "innova": 6935,
+      "hatchback": 5475,
+      "sedan": 5475,
+      "suv": 7300,
+      "innova": 8030,
+      "hycross": 9125,
       "traveller": 10950
 },
     highways: ["NH544","NH44"],
@@ -8789,7 +8894,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore to Bengaluru?',
-        a: 'The one-way taxi fare from Coimbatore to Bengaluru starts at ₹3,650 for a Hatchback, ₹4,380 for a Sedan, and ₹5,840 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore to Bengaluru starts at ₹5,475 for a Hatchback, ₹5,475 for a Sedan, and ₹7,300 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore to Bengaluru?',
@@ -8815,7 +8920,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Bengaluru to Coimbatore', slug: 'bengaluru-to-coimbatore', distance: '365 km', fare: '₹3,650' },
+      { name: 'Bengaluru to Coimbatore', slug: 'bengaluru-to-coimbatore', distance: '365 km', fare: '₹5,475' },
     ],
   },
 
@@ -8836,13 +8941,14 @@ export const routeContent = {
     popularFor: ["Textile Business","Family Return"],
     roadConditions: 'Access-controlled NH44 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Bengaluru to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Bengaluru to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Bengaluru to Coimbatore with SAMAYAS. Hatchback from ₹3,650, Sedan ₹4,380, SUV ₹5,840. 24/7 doorstep pickups.',
+    seoTitle: 'Bengaluru to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Bengaluru to Coimbatore with SAMAYAS. Hatchback from ₹5,475, Sedan ₹5,475, SUV ₹7,300. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 3650,
-      "sedan": 4380,
-      "suv": 5840,
-      "innova": 6935,
+      "hatchback": 5475,
+      "sedan": 5475,
+      "suv": 7300,
+      "innova": 8030,
+      "hycross": 9125,
       "traveller": 10950
 },
     highways: ["NH44","NH544"],
@@ -8873,7 +8979,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Bengaluru to Coimbatore?',
-        a: 'The one-way taxi fare from Bengaluru to Coimbatore starts at ₹3,650 for a Hatchback, ₹4,380 for a Sedan, and ₹5,840 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Bengaluru to Coimbatore starts at ₹5,475 for a Hatchback, ₹5,475 for a Sedan, and ₹7,300 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Bengaluru to Coimbatore?',
@@ -8899,7 +9005,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore to Bengaluru', slug: 'coimbatore-to-bengaluru', distance: '365 km', fare: '₹3,650' },
+      { name: 'Coimbatore to Bengaluru', slug: 'coimbatore-to-bengaluru', distance: '365 km', fare: '₹5,475' },
     ],
   },
 
@@ -8920,13 +9026,14 @@ export const routeContent = {
     popularFor: ["Tirumala Temple","Pilgrimage"],
     roadConditions: 'Access-controlled NH716 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Chennai to Tirupati. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Chennai to Tirupati One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Chennai to Tirupati with SAMAYAS. Hatchback from ₹1,350, Sedan ₹1,620, SUV ₹2,160. 24/7 doorstep pickups.',
+    seoTitle: 'Chennai to Tirupati One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Chennai to Tirupati with SAMAYAS. Hatchback from ₹2,025, Sedan ₹2,025, SUV ₹2,700. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1350,
-      "sedan": 1620,
-      "suv": 2160,
-      "innova": 2565,
+      "hatchback": 2025,
+      "sedan": 2025,
+      "suv": 2700,
+      "innova": 2970,
+      "hycross": 3375,
       "traveller": 4050
 },
     highways: ["NH716"],
@@ -8957,7 +9064,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Chennai to Tirupati?',
-        a: 'The one-way taxi fare from Chennai to Tirupati starts at ₹1,350 for a Hatchback, ₹1,620 for a Sedan, and ₹2,160 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Chennai to Tirupati starts at ₹2,025 for a Hatchback, ₹2,025 for a Sedan, and ₹2,700 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Chennai to Tirupati?',
@@ -8983,7 +9090,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Tirupati to Chennai', slug: 'tirupati-to-chennai', distance: '135 km', fare: '₹1,350' },
+      { name: 'Tirupati to Chennai', slug: 'tirupati-to-chennai', distance: '135 km', fare: '₹2,025' },
     ],
   },
 
@@ -9004,13 +9111,14 @@ export const routeContent = {
     popularFor: ["Pilgrimage Return","MAA Airport"],
     roadConditions: 'Access-controlled NH716 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Tirupati to Chennai. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Tirupati to Chennai One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Tirupati to Chennai with SAMAYAS. Hatchback from ₹1,350, Sedan ₹1,620, SUV ₹2,160. 24/7 doorstep pickups.',
+    seoTitle: 'Tirupati to Chennai One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirupati to Chennai with SAMAYAS. Hatchback from ₹2,025, Sedan ₹2,025, SUV ₹2,700. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1350,
-      "sedan": 1620,
-      "suv": 2160,
-      "innova": 2565,
+      "hatchback": 2025,
+      "sedan": 2025,
+      "suv": 2700,
+      "innova": 2970,
+      "hycross": 3375,
       "traveller": 4050
 },
     highways: ["NH716"],
@@ -9041,7 +9149,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Tirupati to Chennai?',
-        a: 'The one-way taxi fare from Tirupati to Chennai starts at ₹1,350 for a Hatchback, ₹1,620 for a Sedan, and ₹2,160 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Tirupati to Chennai starts at ₹2,025 for a Hatchback, ₹2,025 for a Sedan, and ₹2,700 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Tirupati to Chennai?',
@@ -9067,7 +9175,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Chennai to Tirupati', slug: 'chennai-to-tirupati', distance: '135 km', fare: '₹1,350' },
+      { name: 'Chennai to Tirupati', slug: 'chennai-to-tirupati', distance: '135 km', fare: '₹2,025' },
     ],
   },
 
@@ -9088,14 +9196,15 @@ export const routeContent = {
     popularFor: ["CMC Patient Pilgrimage","Tirumala"],
     roadConditions: 'Access-controlled NH716 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Vellore to Tirupati. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Vellore to Tirupati One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Vellore to Tirupati with SAMAYAS. Hatchback from ₹1,100, Sedan ₹1,320, SUV ₹1,760. 24/7 doorstep pickups.',
+    seoTitle: 'Vellore to Tirupati One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Vellore to Tirupati with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1100,
-      "sedan": 1320,
-      "suv": 1760,
-      "innova": 2090,
-      "traveller": 3300
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH716"],
     tolls: {
@@ -9125,7 +9234,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Vellore to Tirupati?',
-        a: 'The one-way taxi fare from Vellore to Tirupati starts at ₹1,100 for a Hatchback, ₹1,320 for a Sedan, and ₹1,760 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Vellore to Tirupati starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Vellore to Tirupati?',
@@ -9151,7 +9260,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Tirupati to Vellore', slug: 'tirupati-to-vellore', distance: '110 km', fare: '₹1,100' },
+      { name: 'Tirupati to Vellore', slug: 'tirupati-to-vellore', distance: '110 km', fare: '₹1,950' },
     ],
   },
 
@@ -9172,14 +9281,15 @@ export const routeContent = {
     popularFor: ["CMC Hospital Transfer"],
     roadConditions: 'Access-controlled NH716 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Tirupati to Vellore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Tirupati to Vellore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Tirupati to Vellore with SAMAYAS. Hatchback from ₹1,100, Sedan ₹1,320, SUV ₹1,760. 24/7 doorstep pickups.',
+    seoTitle: 'Tirupati to Vellore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Tirupati to Vellore with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 1100,
-      "sedan": 1320,
-      "suv": 1760,
-      "innova": 2090,
-      "traveller": 3300
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH716"],
     tolls: {
@@ -9209,7 +9319,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Tirupati to Vellore?',
-        a: 'The one-way taxi fare from Tirupati to Vellore starts at ₹1,100 for a Hatchback, ₹1,320 for a Sedan, and ₹1,760 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Tirupati to Vellore starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Tirupati to Vellore?',
@@ -9235,7 +9345,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Vellore to Tirupati', slug: 'vellore-to-tirupati', distance: '110 km', fare: '₹1,100' },
+      { name: 'Vellore to Tirupati', slug: 'vellore-to-tirupati', distance: '110 km', fare: '₹1,950' },
     ],
   },
 
@@ -9256,14 +9366,15 @@ export const routeContent = {
     popularFor: ["Border Commute","Business"],
     roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Coimbatore to Palakkad. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Coimbatore to Palakkad One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Coimbatore to Palakkad with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    seoTitle: 'Coimbatore to Palakkad One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Coimbatore to Palakkad with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 550,
-      "sedan": 660,
-      "suv": 880,
-      "innova": 1045,
-      "traveller": 1650
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH544"],
     tolls: {
@@ -9293,7 +9404,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Coimbatore to Palakkad?',
-        a: 'The one-way taxi fare from Coimbatore to Palakkad starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Coimbatore to Palakkad starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Coimbatore to Palakkad?',
@@ -9319,7 +9430,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Palakkad to Coimbatore', slug: 'palakkad-to-coimbatore', distance: '55 km', fare: '₹550' },
+      { name: 'Palakkad to Coimbatore', slug: 'palakkad-to-coimbatore', distance: '55 km', fare: '₹1,950' },
     ],
   },
 
@@ -9340,14 +9451,15 @@ export const routeContent = {
     popularFor: ["CJB Airport","Medical"],
     roadConditions: 'Access-controlled NH544 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Palakkad to Coimbatore. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Palakkad to Coimbatore One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Palakkad to Coimbatore with SAMAYAS. Hatchback from ₹550, Sedan ₹660, SUV ₹880. 24/7 doorstep pickups.',
+    seoTitle: 'Palakkad to Coimbatore One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Palakkad to Coimbatore with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 550,
-      "sedan": 660,
-      "suv": 880,
-      "innova": 1045,
-      "traveller": 1650
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH544"],
     tolls: {
@@ -9377,7 +9489,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Palakkad to Coimbatore?',
-        a: 'The one-way taxi fare from Palakkad to Coimbatore starts at ₹550 for a Hatchback, ₹660 for a Sedan, and ₹880 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Palakkad to Coimbatore starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Palakkad to Coimbatore?',
@@ -9403,7 +9515,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Coimbatore to Palakkad', slug: 'coimbatore-to-palakkad', distance: '55 km', fare: '₹550' },
+      { name: 'Coimbatore to Palakkad', slug: 'coimbatore-to-palakkad', distance: '55 km', fare: '₹1,950' },
     ],
   },
 
@@ -9424,14 +9536,15 @@ export const routeContent = {
     popularFor: ["TRV Airport","Kerala Transit"],
     roadConditions: 'Access-controlled NH66 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Kanyakumari to Trivandrum. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Kanyakumari to Trivandrum One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Kanyakumari to Trivandrum with SAMAYAS. Hatchback from ₹900, Sedan ₹1,080, SUV ₹1,440. 24/7 doorstep pickups.',
+    seoTitle: 'Kanyakumari to Trivandrum One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Kanyakumari to Trivandrum with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 900,
-      "sedan": 1080,
-      "suv": 1440,
-      "innova": 1710,
-      "traveller": 2700
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH66"],
     tolls: {
@@ -9461,7 +9574,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Kanyakumari to Trivandrum?',
-        a: 'The one-way taxi fare from Kanyakumari to Trivandrum starts at ₹900 for a Hatchback, ₹1,080 for a Sedan, and ₹1,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Kanyakumari to Trivandrum starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Kanyakumari to Trivandrum?',
@@ -9487,7 +9600,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Trivandrum to Kanyakumari', slug: 'trivandrum-to-kanyakumari', distance: '90 km', fare: '₹900' },
+      { name: 'Trivandrum to Kanyakumari', slug: 'trivandrum-to-kanyakumari', distance: '90 km', fare: '₹1,950' },
     ],
   },
 
@@ -9508,14 +9621,15 @@ export const routeContent = {
     popularFor: ["Sunset View","Vivekananda Rock"],
     roadConditions: 'Access-controlled NH66 multi-lane toll expressway with high-speed bypasses around towns.',
     heroTagline: 'Affordable One-Way Taxi from Trivandrum to Kanyakumari. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',
-    seoTitle: 'Trivandrum to Kanyakumari One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',
-    metaDescription: 'Book one-way taxi from Trivandrum to Kanyakumari with SAMAYAS. Hatchback from ₹900, Sedan ₹1,080, SUV ₹1,440. 24/7 doorstep pickups.',
+    seoTitle: 'Trivandrum to Kanyakumari One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',
+    metaDescription: 'Book one-way taxi from Trivandrum to Kanyakumari with SAMAYAS. Hatchback from ₹1,950, Sedan ₹1,950, SUV ₹2,600. 24/7 doorstep pickups.',
     fare: {
-      "hatchback": 900,
-      "sedan": 1080,
-      "suv": 1440,
-      "innova": 1710,
-      "traveller": 2700
+      "hatchback": 1950,
+      "sedan": 1950,
+      "suv": 2600,
+      "innova": 2860,
+      "hycross": 3250,
+      "traveller": 3900
 },
     highways: ["NH66"],
     tolls: {
@@ -9545,7 +9659,7 @@ export const routeContent = {
     faqs: [
       {
         q: 'What is the one-way taxi fare from Trivandrum to Kanyakumari?',
-        a: 'The one-way taxi fare from Trivandrum to Kanyakumari starts at ₹900 for a Hatchback, ₹1,080 for a Sedan, and ₹1,440 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
+        a: 'The one-way taxi fare from Trivandrum to Kanyakumari starts at ₹1,950 for a Hatchback, ₹1,950 for a Sedan, and ₹2,600 for a 6-seater SUV. Per-km billing is clear with zero return charges.',
       },
       {
         q: 'How long does a cab take from Trivandrum to Kanyakumari?',
@@ -9571,7 +9685,7 @@ export const routeContent = {
       },
     ],
     nearbyRoutes: [
-      { name: 'Kanyakumari to Trivandrum', slug: 'kanyakumari-to-trivandrum', distance: '90 km', fare: '₹900' },
+      { name: 'Kanyakumari to Trivandrum', slug: 'kanyakumari-to-trivandrum', distance: '90 km', fare: '₹1,950' },
     ],
   },
 

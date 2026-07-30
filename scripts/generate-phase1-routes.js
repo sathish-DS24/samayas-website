@@ -160,12 +160,14 @@ const phase1Routes = [
 console.log(`Generated enriched definitions for ${phase1Routes.length} Phase 1 Routes!`);
 
 function computeFare(distanceKm) {
-  const hatchback = Math.round(distanceKm * 10);
-  const sedan = Math.round(distanceKm * 12);
-  const suv = Math.round(distanceKm * 16);
-  const innova = Math.round(distanceKm * 19);
-  const traveller = Math.round(distanceKm * 30);
-  return { hatchback, sedan, suv, innova, traveller };
+  const billableKm = Math.max(distanceKm, 130);
+  const hatchback = Math.round(billableKm * 15);
+  const sedan = Math.round(billableKm * 15);
+  const suv = Math.round(billableKm * 20);
+  const innova = Math.round(billableKm * 22);
+  const hycross = Math.round(billableKm * 25);
+  const traveller = Math.round(billableKm * 30);
+  return { hatchback, sedan, suv, innova, hycross, traveller };
 }
 
 // Generate routesMaster.js
@@ -179,34 +181,48 @@ phase1Routes.forEach((r) => {
   masterJs += `    category: '${r.category}',\n`;
   masterJs += `    popularity: ${r.popularity},\n`;
   masterJs += `    isFeatured: ${r.isFeatured},\n`;
-  masterJs += `    distance: ${r.dist},\n`;
-  masterJs += `    estimatedTime: '${r.time} Hours',\n`;
-  masterJs += `    seasonality: ${JSON.stringify(meta.seasonality)},\n`;
   masterJs += `    purposes: ${JSON.stringify(r.purposes)},\n`;
-  masterJs += `    published: true,\n`;
-  masterJs += `    status: 'Published',\n`;
+  masterJs += `    seasonality: ${JSON.stringify(meta.seasonality)},\n`;
+  masterJs += `    distanceKm: ${r.dist},\n`;
+  masterJs += `    estimatedTime: '${r.time} Hours',\n`;
+  masterJs += `    roadConditions: '${meta.roadConditions}',\n`;
   masterJs += `    districtOrigin: '${r.origin}',\n`;
   masterJs += `    districtDestination: '${r.dest}',\n`;
+  masterJs += `    name: '${r.from} to ${r.to} One-Way Taxi',\n`;
+  masterJs += `    url: '/one-way-taxi/${r.slug}',\n`;
   masterJs += `    estDistance: '${r.dist} km',\n`;
-  masterJs += `    highway: '${r.hw[0]}',\n`;
+  masterJs += `    fare: ${JSON.stringify(computeFare(r.dist))},\n`;
   masterJs += `  },\n`;
 });
+
 masterJs += `];\n\n`;
-masterJs += `export const publishedRoutes = routesMasterDataset.filter((r) => r.published);\n`;
-masterJs += `export const featuredRoutes = publishedRoutes.filter((r) => r.isFeatured);\n`;
-masterJs += `export const routesList = publishedRoutes.map((r) => ({\n`;
-masterJs += `  ...r,\n`;
+masterJs += `export const publishedRoutes = routesMasterDataset;\n`;
+masterJs += `export const routesList = routesMasterDataset;\n`;
+masterJs += `export const featuredRoutes = routesMasterDataset.filter((r) => r.isFeatured);\n\n`;
+
+masterJs += `export const popularRoutes = routesMasterDataset.map((r) => ({\n`;
+masterJs += `  name: r.name,\n`;
+masterJs += `  slug: r.slug,\n`;
+masterJs += `  from: r.from,\n`;
+masterJs += `  to: r.to,\n`;
+masterJs += `  distance: r.estDistance,\n`;
+masterJs += `  url: r.url,\n`;
+masterJs += `  category: r.category,\n`;
+masterJs += `  popularity: r.popularity,\n`;
+masterJs += `  isFeatured: r.isFeatured,\n`;
 masterJs += `  fromSlug: r.districtOrigin,\n`;
 masterJs += `  toSlug: r.districtDestination,\n`;
-masterJs += `  name: \`\${r.from} to \${r.to} One-Way Taxi\`,\n`;
 masterJs += `}));\n\n`;
+
 masterJs += `export function getRouteBySlug(slug) {\n`;
 masterJs += `  if (!slug) return null;\n`;
 masterJs += `  return routesMasterDataset.find((r) => r.slug.toLowerCase() === slug.toLowerCase()) || null;\n`;
 masterJs += `}\n\n`;
+
 masterJs += `export function getRouteUrl(slug) {\n`;
 masterJs += `  return \`/one-way-taxi/\${slug}\`;\n`;
 masterJs += `}\n\n`;
+
 masterJs += `export function getRoutesFromOrigin(originName) {\n`;
 masterJs += `  if (!originName) return [];\n`;
 masterJs += `  const normalized = originName.toLowerCase();\n`;
@@ -214,11 +230,11 @@ masterJs += `  return routesMasterDataset.filter(\n`;
 masterJs += `    (r) => r.from.toLowerCase().includes(normalized) || normalized.includes(r.from.toLowerCase())\n`;
 masterJs += `  );\n`;
 masterJs += `}\n\n`;
+
 masterJs += `export function findMatchingRouteSlug(fromName, toName) {\n`;
 masterJs += `  if (!fromName || !toName) return null;\n`;
 masterJs += `  const match = routesMasterDataset.find(\n`;
 masterJs += `    (r) =>\n`;
-masterJs += `      r.published &&\n`;
 masterJs += `      r.from.toLowerCase().includes(fromName.toLowerCase()) &&\n`;
 masterJs += `      r.to.toLowerCase().includes(toName.toLowerCase())\n`;
 masterJs += `  );\n`;
@@ -226,7 +242,7 @@ masterJs += `  return match ? match.slug : null;\n`;
 masterJs += `}\n`;
 
 fs.writeFileSync('./src/data/routesMaster.js', masterJs, 'utf-8');
-console.log('✅ routesMaster.js updated with isFeatured, seasonality, distance & estimatedTime!');
+console.log('✅ routesMaster.js updated with ₹15/km base rate!');
 
 // Generate routeContent.js
 let contentJs = `export const routeContent = {\n`;
@@ -253,7 +269,7 @@ phase1Routes.forEach((r) => {
   contentJs += `    popularFor: ${JSON.stringify(r.purposes)},\n`;
   contentJs += `    roadConditions: '${meta.roadConditions}',\n`;
   contentJs += `    heroTagline: 'Affordable One-Way Taxi from ${r.from} to ${r.to}. Doorstep pickup, transparent per-km rates, and 24/7 service with zero return fees.',\n`;
-  contentJs += `    seoTitle: '${r.from} to ${r.to} One-Way Taxi | ₹10/km Cab Booking | SAMAYAS',\n`;
+  contentJs += `    seoTitle: '${r.from} to ${r.to} One-Way Taxi | ₹15/km Cab Booking | SAMAYAS',\n`;
   contentJs += `    metaDescription: 'Book one-way taxi from ${r.from} to ${r.to} with SAMAYAS. Hatchback from ₹${fare.hatchback.toLocaleString('en-IN')}, Sedan ₹${fare.sedan.toLocaleString('en-IN')}, SUV ₹${fare.suv.toLocaleString('en-IN')}. 24/7 doorstep pickups.',\n`;
   contentJs += `    fare: ${JSON.stringify(fare, null, 6)},\n`;
   contentJs += `    highways: ${JSON.stringify(r.hw)},\n`;

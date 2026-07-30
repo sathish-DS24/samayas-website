@@ -7,7 +7,7 @@ import MapPickerModal from './MapPickerModal'
 import { getRoadDistance, getRouteInfo, reverseGeocode, getCurrentGPSLocation } from '../utils/googleMaps'
 import { trackEvent, trackBookingEvent, trackAdsConversion, debounceEvent } from '../utils/analytics'
 
-const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '', initialDrop = '' }) => {
+const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '', initialDrop = '', isSidebar = false }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -1441,7 +1441,9 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 bg-primary-800/50 rounded-xl p-1.5 mb-6 backdrop-blur-sm border border-white/10"
+              className={`grid gap-1.5 bg-primary-800/50 rounded-xl p-1.5 mb-6 backdrop-blur-sm border border-white/10 ${
+                isSidebar ? 'grid-cols-2 sm:grid-cols-3' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5'
+              }`}
             >
               <button
                 type="button"
@@ -1451,7 +1453,9 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                   trackEvent('trip_type_selected', { trip_type: 'one-way' })
                   trackEvent('booking_started', { trip_type: 'one-way' })
                 }}
-                className={`px-3 py-3 rounded-lg font-semibold transition-all duration-300 text-xs sm:text-sm md:text-base text-center ${
+                className={`rounded-lg font-semibold transition-all duration-300 text-center ${
+                  isSidebar ? 'px-2 py-2 text-[11px] font-bold leading-snug' : 'px-3 py-3 text-xs sm:text-sm md:text-base'
+                } ${
                   activeTab === 'oneway'
                     ? 'bg-accent-500 text-black shadow-lg'
                     : 'text-white/70 hover:text-white hover:bg-white/5'
@@ -1467,7 +1471,9 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                   trackEvent('trip_type_selected', { trip_type: 'round-trip' })
                   trackEvent('booking_started', { trip_type: 'round-trip' })
                 }}
-                className={`px-3 py-3 rounded-lg font-semibold transition-all duration-300 text-xs sm:text-sm md:text-base text-center ${
+                className={`rounded-lg font-semibold transition-all duration-300 text-center ${
+                  isSidebar ? 'px-2 py-2 text-[11px] font-bold leading-snug' : 'px-3 py-3 text-xs sm:text-sm md:text-base'
+                } ${
                   activeTab === 'roundtrip'
                     ? 'bg-accent-500 text-black shadow-lg'
                     : 'text-white/70 hover:text-white hover:bg-white/5'
@@ -1484,7 +1490,9 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                   trackEvent('trip_type_selected', { trip_type: 'acting_driver' })
                   trackEvent('booking_started', { trip_type: 'acting_driver' })
                 }}
-                className={`px-3 py-3 rounded-lg font-semibold transition-all duration-300 text-xs sm:text-sm md:text-base text-center ${
+                className={`rounded-lg font-semibold transition-all duration-300 text-center ${
+                  isSidebar ? 'px-2 py-2 text-[11px] font-bold leading-snug' : 'px-3 py-3 text-xs sm:text-sm md:text-base'
+                } ${
                   activeTab === 'acting_driver'
                     ? 'bg-accent-500 text-black shadow-lg'
                     : 'text-white/70 hover:text-white hover:bg-white/5'
@@ -1501,7 +1509,9 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                   trackEvent('trip_type_selected', { trip_type: 'tours_travels' })
                   trackEvent('booking_started', { trip_type: 'tours_travels' })
                 }}
-                className={`px-3 py-3 rounded-lg font-semibold transition-all duration-300 text-xs sm:text-sm md:text-base text-center ${
+                className={`rounded-lg font-semibold transition-all duration-300 text-center ${
+                  isSidebar ? 'px-2 py-2 text-[11px] font-bold leading-snug' : 'px-3 py-3 text-xs sm:text-sm md:text-base'
+                } ${
                   activeTab === 'tours_travels'
                     ? 'bg-accent-500 text-black shadow-lg'
                     : 'text-white/70 hover:text-white hover:bg-white/5'
@@ -1518,7 +1528,9 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                   trackEvent('trip_type_selected', { trip_type: 'recovery_services' })
                   trackEvent('booking_started', { trip_type: 'recovery_services' })
                 }}
-                className={`px-3 py-3 rounded-lg font-semibold transition-all duration-300 text-xs sm:text-sm md:text-base text-center ${
+                className={`rounded-lg font-semibold transition-all duration-300 text-center ${
+                  isSidebar ? 'px-2 py-2 text-[11px] font-bold leading-snug' : 'px-3 py-3 text-xs sm:text-sm md:text-base'
+                } ${
                   activeTab === 'recovery_services'
                     ? 'bg-accent-500 text-black shadow-lg'
                     : 'text-white/70 hover:text-white hover:bg-white/5'
@@ -1541,7 +1553,7 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                 >
                   <form onSubmit={handleOneWaySubmit} className="space-y-6">
                     {/* Location Fields */}
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className={isSidebar ? 'grid grid-cols-1 gap-3.5' : 'grid md:grid-cols-2 gap-4'}>
                       <div>
                         <label className="block text-sm font-semibold text-white/90 mb-2">
                           <MapPin className="w-4 h-4 inline mr-2 text-accent-500" />
@@ -1640,7 +1652,7 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                     </div>
 
                     {/* Date and Time */}
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className={isSidebar ? 'grid grid-cols-1 gap-3.5' : 'grid md:grid-cols-2 gap-4'}>
                       <div>
                         <label className="block text-sm font-semibold text-white/90 mb-2">
                           <Calendar className="w-4 h-4 inline mr-2 text-accent-500" />
@@ -1781,7 +1793,7 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                     </div>
 
                     {/* Name and Phone */}
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className={isSidebar ? 'grid grid-cols-1 gap-3.5' : 'grid md:grid-cols-2 gap-4'}>
                       <div>
                         <label className="block text-sm font-semibold text-white/90 mb-2">
                           <User className="w-4 h-4 inline mr-2 text-accent-500" />
@@ -1869,7 +1881,7 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                 >
                   <form onSubmit={handleRoundTripSubmit} className="space-y-6">
                     {/* Location Fields */}
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className={isSidebar ? 'grid grid-cols-1 gap-3.5' : 'grid md:grid-cols-2 gap-4'}>
                       <div>
                         <label className="block text-sm font-semibold text-white/90 mb-2">
                           <MapPin className="w-4 h-4 inline mr-2 text-accent-500" />
@@ -1968,7 +1980,7 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                     </div>
 
                     {/* Date and Return Date */}
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className={isSidebar ? 'grid grid-cols-1 gap-3.5' : 'grid md:grid-cols-2 gap-4'}>
                       <div>
                         <label className="block text-sm font-semibold text-white/90 mb-2">
                           <Calendar className="w-4 h-4 inline mr-2 text-accent-500" />
@@ -2130,7 +2142,7 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                     </div>
 
                     {/* Name and Phone */}
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className={isSidebar ? 'grid grid-cols-1 gap-3.5' : 'grid md:grid-cols-2 gap-4'}>
                       <div>
                         <label className="block text-sm font-semibold text-white/90 mb-2">
                           <User className="w-4 h-4 inline mr-2 text-accent-500" />

@@ -95,7 +95,7 @@ const RouteHero = ({ content }) => {
               <h2 className="text-xl font-bold text-white mb-4 text-center">
                 Book Your <span className="text-amber-400">{content.from} to {content.to}</span> Cab
               </h2>
-              <BookingForm initialPickup={content.from} initialDrop={content.to} />
+              <BookingForm initialPickup={content.from} initialDrop={content.to} isSidebar={true} />
             </div>
           </div>
 

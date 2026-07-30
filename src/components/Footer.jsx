@@ -17,6 +17,7 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Home', to: 'home' },
     { name: 'Taxi Routes Directory', to: '/one-way-taxi', isRoute: true },
+    { name: 'Airport Taxi Directory', to: '/airport-taxi', isRoute: true },
     { name: 'Service Areas', to: '/service-areas', isRoute: true },
     { name: 'Services', to: 'services' },
     { name: 'About', to: 'about' },

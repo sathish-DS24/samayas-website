@@ -7,7 +7,16 @@ import MapPickerModal from './MapPickerModal'
 import { getRoadDistance, getRouteInfo, reverseGeocode, getCurrentGPSLocation } from '../utils/googleMaps'
 import { trackEvent, trackBookingEvent, trackAdsConversion, debounceEvent } from '../utils/analytics'
 
-const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '', initialDrop = '', isSidebar = false }) => {
+const BookingForm = ({
+  defaultPickup = '',
+  defaultDrop = '',
+  initialPickup = '',
+  initialDrop = '',
+  isSidebar = false,
+  isAirport = false,
+  defaultFlightNumber = '',
+  defaultAirline = ''
+}) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -45,7 +54,11 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
     vehicleType: '',
     name: '',
     phone: '',
-    comments: ''
+    comments: '',
+    flightNumber: defaultFlightNumber,
+    airline: defaultAirline,
+    passengerCount: '1-4 Passengers',
+    meetAndGreet: true
   })
 
   // Synchronize if props change dynamically
@@ -1720,6 +1733,61 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                         )}
                       </div>
                     </div>
+
+                    {/* Flight Details (Shown for Airport Bookings or Optional) */}
+                    {isAirport && (
+                      <div className="bg-primary-900/40 p-4 rounded-xl border border-accent-500/20 space-y-3">
+                        <div className="flex items-center space-x-2 text-accent-500 font-bold text-xs uppercase tracking-wider">
+                          <Briefcase className="w-4 h-4" />
+                          <span>Flight & Arrival Details (For Delay Tracking)</span>
+                        </div>
+                        <div className={isSidebar ? 'grid grid-cols-1 gap-3' : 'grid md:grid-cols-3 gap-3'}>
+                          <div>
+                            <label className="block text-xs font-semibold text-white/90 mb-1">
+                              Flight Number (Optional)
+                            </label>
+                            <input
+                              type="text"
+                              name="flightNumber"
+                              value={oneWayData.flightNumber || ''}
+                              onChange={handleOneWayChange}
+                              placeholder="e.g. TR602, MH182"
+                              className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-xs font-semibold text-white/90 mb-1">
+                              Airline Name
+                            </label>
+                            <input
+                              type="text"
+                              name="airline"
+                              value={oneWayData.airline || ''}
+                              onChange={handleOneWayChange}
+                              placeholder="e.g. Scoot, AirAsia, Indigo"
+                              className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-xs font-semibold text-white/90 mb-1">
+                              Passenger Count
+                            </label>
+                            <select
+                              name="passengerCount"
+                              value={oneWayData.passengerCount || '1-4 Passengers'}
+                              onChange={handleOneWayChange}
+                              className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none"
+                            >
+                              <option value="1 Passenger">1 Passenger</option>
+                              <option value="2 Passengers">2 Passengers</option>
+                              <option value="3-4 Passengers">3-4 Passengers</option>
+                              <option value="5-6 Passengers (SUV)">5-6 Passengers (SUV)</option>
+                              <option value="7+ Passengers (Traveller)">7+ Passengers (Traveller)</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    )}
 
                     {/* Vehicle Type Selection */}
                     <div>

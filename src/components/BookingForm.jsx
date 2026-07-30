@@ -1666,14 +1666,14 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                               errors.time ? 'border-red-500' : 'border-gray-300'
                             } focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900`}
                           />
-                          <div className="flex gap-1 bg-primary-700/50 rounded-lg p-1">
+                          <div className="flex gap-1 bg-primary-700/50 rounded-lg p-1 items-center">
                             <button
                               type="button"
                               onClick={() => handleTimePeriodChange('AM')}
                               aria-label="Select AM time period"
-                              className={`px-4 py-3 rounded-md font-semibold transition-all ${
+                              className={`px-3 py-2 rounded-md font-bold text-xs transition-all ${
                                 oneWayData.timePeriod === 'AM'
-                                  ? 'bg-accent-500 text-black'
+                                  ? 'bg-accent-500 text-black shadow-sm'
                                   : 'text-white/70 hover:text-white'
                               }`}
                             >
@@ -1683,9 +1683,9 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
                               type="button"
                               onClick={() => handleTimePeriodChange('PM')}
                               aria-label="Select PM time period"
-                              className={`px-4 py-3 rounded-md font-semibold transition-all ${
+                              className={`px-3 py-2 rounded-md font-bold text-xs transition-all ${
                                 oneWayData.timePeriod === 'PM'
-                                  ? 'bg-accent-500 text-black'
+                                  ? 'bg-accent-500 text-black shadow-sm'
                                   : 'text-white/70 hover:text-white'
                               }`}
                             >
@@ -1701,10 +1701,10 @@ const BookingForm = ({ defaultPickup = '', defaultDrop = '', initialPickup = '',
 
                     {/* Vehicle Type Selection */}
                     <div>
-                      <label className="block text-sm font-semibold text-white/90 mb-4">
+                      <label className="block text-sm font-semibold text-white/90 mb-3">
                         Select Vehicle Type *
                       </label>
-                      <div className="grid grid-cols-2 sm:grid-cols-3 min-[1100px]:grid-cols-5 gap-3">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                         {getVehicleTypes().map((vehicle, index) => {
                           const isSelected = oneWayData.vehicleType === vehicle.type
                           return (

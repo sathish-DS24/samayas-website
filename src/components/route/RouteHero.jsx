@@ -4,7 +4,7 @@ import BookingForm from '../BookingForm'
 
 const RouteHero = ({ content }) => {
   return (
-    <section className="relative pt-24 pb-12 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-950 overflow-hidden">
+    <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-950 overflow-hidden">
       {/* Background Subtle Grid & Glow */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />

@@ -19,6 +19,7 @@ const Footer = () => {
     { name: 'Taxi Routes Directory', to: '/one-way-taxi', isRoute: true },
     { name: 'Airport Taxi Directory', to: '/airport-taxi', isRoute: true },
     { name: 'Acting Driver Directory', to: '/acting-driver', isRoute: true },
+    { name: 'Vehicle Recovery Directory', to: '/vehicle-recovery', isRoute: true },
     { name: 'Service Areas', to: '/service-areas', isRoute: true },
     { name: 'Services', to: 'services' },
     { name: 'About', to: 'about' },

@@ -18,7 +18,9 @@ const BookingForm = ({
   defaultAirline = '',
   isDriver = false,
   defaultDriverType = 'Hourly Driver',
-  defaultTripDuration = '2 Hours'
+  defaultTripDuration = '2 Hours',
+  isRecovery = false,
+  defaultBreakdownType = 'Car Recovery'
 }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
@@ -47,7 +49,7 @@ const BookingForm = ({
     onSelect: null
   })
   
-  // One-Way Taxi / Acting Driver form data
+  // One-Way Taxi / Acting Driver / Vehicle Recovery form data
   const [oneWayData, setOneWayData] = useState({
     pickupLocation: pickupVal,
     dropLocation: dropVal,
@@ -65,7 +67,12 @@ const BookingForm = ({
     driverType: defaultDriverType || 'Hourly Driver',
     tripDuration: defaultTripDuration || '2 Hours',
     transmissionType: 'Manual',
-    specialInstructions: ''
+    specialInstructions: '',
+    breakdownType: defaultBreakdownType || 'Car Recovery',
+    emergencyLevel: 'Immediate Dispatch (High Priority)',
+    destinationGarage: '',
+    contactMethod: 'Phone Call',
+    photoAttached: false
   })
 
   // Synchronize if props change dynamically
@@ -1871,6 +1878,86 @@ const BookingForm = ({
                             value={oneWayData.specialInstructions || ''}
                             onChange={handleOneWayChange}
                             placeholder="e.g. Innova Hycross Auto, Need wheelchair assistance for parents"
+                            className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none"
+                          />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Vehicle Recovery Specific Inputs */}
+                    {isRecovery && (
+                      <div className="bg-red-950/40 p-4 rounded-xl border border-red-500/30 space-y-3">
+                        <div className="flex items-center space-x-2 text-red-400 font-bold text-xs uppercase tracking-wider">
+                          <Car className="w-4 h-4 text-red-400" />
+                          <span>Emergency Breakdown & Recovery Options</span>
+                        </div>
+                        <div className={isSidebar ? 'grid grid-cols-1 gap-3' : 'grid md:grid-cols-3 gap-3'}>
+                          <div>
+                            <label className="block text-xs font-semibold text-white/90 mb-1">
+                              Breakdown Issue / Service *
+                            </label>
+                            <select
+                              name="breakdownType"
+                              value={oneWayData.breakdownType || 'Car Recovery'}
+                              onChange={handleOneWayChange}
+                              className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none font-semibold"
+                            >
+                              <option value="Car Recovery">Car Towing & Recovery</option>
+                              <option value="Bike Recovery">Two-Wheeler / Superbike Towing</option>
+                              <option value="Flatbed Towing">Hydraulic Flatbed Tow Truck</option>
+                              <option value="Accident Recovery">Accident & Crane Winching</option>
+                              <option value="Breakdown Assistance">Roadside Breakdown Repair</option>
+                              <option value="Battery Jump Start">Battery Jump Start</option>
+                              <option value="Flat Tyre Assistance">Flat Tyre / Stepney Change</option>
+                              <option value="Fuel Delivery">Emergency Fuel Delivery</option>
+                              <option value="EV Recovery">Electric Vehicle (EV) Recovery</option>
+                              <option value="Commercial Recovery">Commercial / LCV Towing</option>
+                            </select>
+                          </div>
+
+                          <div>
+                            <label className="block text-xs font-semibold text-white/90 mb-1">
+                              Emergency Dispatch Priority *
+                            </label>
+                            <select
+                              name="emergencyLevel"
+                              value={oneWayData.emergencyLevel || 'Immediate Dispatch (High Priority)'}
+                              onChange={handleOneWayChange}
+                              className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none font-semibold"
+                            >
+                              <option value="Immediate Dispatch (High Priority)">Immediate Dispatch (High Priority)</option>
+                              <option value="Standard Roadside Help">Standard Roadside Help</option>
+                              <option value="Scheduled Garage Towing">Scheduled Garage Towing</option>
+                            </select>
+                          </div>
+
+                          <div>
+                            <label className="block text-xs font-semibold text-white/90 mb-1">
+                              Preferred Contact Method
+                            </label>
+                            <select
+                              name="contactMethod"
+                              value={oneWayData.contactMethod || 'Phone Call'}
+                              onChange={handleOneWayChange}
+                              className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none font-semibold"
+                            >
+                              <option value="Phone Call">Phone Call Hotline</option>
+                              <option value="WhatsApp Live Location">WhatsApp Live Location</option>
+                              <option value="SMS Notification">SMS Notification</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div>
+                          <label className="block text-xs font-semibold text-white/90 mb-1">
+                            Destination Garage / Delivery Address (Optional)
+                          </label>
+                          <input
+                            type="text"
+                            name="destinationGarage"
+                            value={oneWayData.destinationGarage || ''}
+                            onChange={handleOneWayChange}
+                            placeholder="e.g. Authorized Hyundai Service Center Trichy, Home garage"
                             className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none"
                           />
                         </div>

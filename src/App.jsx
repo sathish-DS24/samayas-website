@@ -7,6 +7,8 @@ import RouteIndexPage from './pages/RouteIndexPage'
 import ServiceAreasPage from './pages/ServiceAreasPage'
 import AirportDirectoryPage from './pages/AirportDirectoryPage'
 import AirportTaxiRouter from './pages/AirportTaxiRouter'
+import ActingDriverDirectoryPage from './pages/ActingDriverDirectoryPage'
+import ActingDriverRouter from './pages/ActingDriverRouter'
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton'
 import usePageTracking from './hooks/usePageTracking'
 
@@ -23,6 +25,8 @@ const AppContent = () => {
         <Route path="/one-way-taxi/:routeSlug" element={<RoutePage />} />
         <Route path="/airport-taxi" element={<AirportDirectoryPage />} />
         <Route path="/airport-taxi/:slug" element={<AirportTaxiRouter />} />
+        <Route path="/acting-driver" element={<ActingDriverDirectoryPage />} />
+        <Route path="/acting-driver/:slug" element={<ActingDriverRouter />} />
         <Route path="/one-way-taxi-:pageSlug" element={<DistrictPage />} />
         <Route path="/:pageSlug" element={<DistrictPage />} />
       </Routes>

@@ -15,10 +15,13 @@ const BookingForm = ({
   isSidebar = false,
   isAirport = false,
   defaultFlightNumber = '',
-  defaultAirline = ''
+  defaultAirline = '',
+  isDriver = false,
+  defaultDriverType = 'Hourly Driver',
+  defaultTripDuration = '2 Hours'
 }) => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: "-100px text-white" })
 
   // EmailJS Configuration
   const serviceId = 'service_pened45'
@@ -44,7 +47,7 @@ const BookingForm = ({
     onSelect: null
   })
   
-  // One-Way Taxi form data
+  // One-Way Taxi / Acting Driver form data
   const [oneWayData, setOneWayData] = useState({
     pickupLocation: pickupVal,
     dropLocation: dropVal,
@@ -58,7 +61,11 @@ const BookingForm = ({
     flightNumber: defaultFlightNumber,
     airline: defaultAirline,
     passengerCount: '1-4 Passengers',
-    meetAndGreet: true
+    meetAndGreet: true,
+    driverType: defaultDriverType || 'Hourly Driver',
+    tripDuration: defaultTripDuration || '2 Hours',
+    transmissionType: 'Manual',
+    specialInstructions: ''
   })
 
   // Synchronize if props change dynamically
@@ -1785,6 +1792,87 @@ const BookingForm = ({
                               <option value="7+ Passengers (Traveller)">7+ Passengers (Traveller)</option>
                             </select>
                           </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Acting Driver Specific Inputs */}
+                    {isDriver && (
+                      <div className="bg-primary-900/40 p-4 rounded-xl border border-accent-500/20 space-y-3">
+                        <div className="flex items-center space-x-2 text-accent-500 font-bold text-xs uppercase tracking-wider">
+                          <User className="w-4 h-4" />
+                          <span>Acting Driver Service & Vehicle Options</span>
+                        </div>
+                        <div className={isSidebar ? 'grid grid-cols-1 gap-3' : 'grid md:grid-cols-3 gap-3'}>
+                          <div>
+                            <label className="block text-xs font-semibold text-white/90 mb-1">
+                              Driver Service Type *
+                            </label>
+                            <select
+                              name="driverType"
+                              value={oneWayData.driverType || 'Hourly Driver'}
+                              onChange={handleOneWayChange}
+                              className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none font-semibold"
+                            >
+                              <option value="Hourly Driver">Hourly Driver (Local)</option>
+                              <option value="Outstation Driver">Outstation Driver (Highway)</option>
+                              <option value="Night Driver">Late Night & Party Driver</option>
+                              <option value="Senior Citizen Driver">Senior Citizen Driver</option>
+                              <option value="Wedding Driver">Wedding & Marriage Chauffeur</option>
+                              <option value="Corporate Driver">Corporate Executive Chauffeur</option>
+                              <option value="Personal Chauffeur">Personal Chauffeur</option>
+                            </select>
+                          </div>
+
+                          <div>
+                            <label className="block text-xs font-semibold text-white/90 mb-1">
+                              Estimated Duration *
+                            </label>
+                            <select
+                              name="tripDuration"
+                              value={oneWayData.tripDuration || '2 Hours'}
+                              onChange={handleOneWayChange}
+                              className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none font-semibold"
+                            >
+                              <option value="2 Hours">2 Hours (Minimum)</option>
+                              <option value="4 Hours">4 Hours Package</option>
+                              <option value="8 Hours">8 Hours Package</option>
+                              <option value="10 Hours (Full Day)">10 Hours (Full Day)</option>
+                              <option value="1 Day Outstation">1 Day Outstation</option>
+                              <option value="Multi-Day Road Trip">Multi-Day Road Trip</option>
+                            </select>
+                          </div>
+
+                          <div>
+                            <label className="block text-xs font-semibold text-white/90 mb-1">
+                              Transmission Type *
+                            </label>
+                            <select
+                              name="transmissionType"
+                              value={oneWayData.transmissionType || 'Manual'}
+                              onChange={handleOneWayChange}
+                              className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none font-semibold"
+                            >
+                              <option value="Manual">Manual Transmission</option>
+                              <option value="Automatic">Automatic Transmission</option>
+                              <option value="Hybrid / EV">Hybrid / Electric Vehicle</option>
+                              <option value="Luxury Car">Luxury Car (BMW/Merc/Audi)</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div>
+                          <label className="block text-xs font-semibold text-white/90 mb-1">
+                            Special Instructions / Car Model
+                          </label>
+                          <input
+                            type="text"
+                            name="specialInstructions"
+                            value={oneWayData.specialInstructions || ''}
+                            onChange={handleOneWayChange}
+                            placeholder="e.g. Innova Hycross Auto, Need wheelchair assistance for parents"
+                            className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none"
+                          />
                         </div>
                       </div>
                     )}

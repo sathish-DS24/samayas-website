@@ -29,6 +29,7 @@ const Navbar = ({ variant = 'home' }) => {
     { name: 'Home', href: isHome ? '#home' : '/' },
     { name: 'Taxi Routes', href: '/one-way-taxi', isRoute: true },
     { name: 'Airport Taxi', href: '/airport-taxi', isRoute: true },
+    { name: 'Acting Driver', href: '/acting-driver', isRoute: true },
     { name: 'Service Areas', href: '/service-areas', isRoute: true },
     { name: 'Services', href: `${hashBase}#services` },
     { name: 'About', href: `${hashBase}#about` },

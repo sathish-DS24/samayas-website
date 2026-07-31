@@ -5,6 +5,8 @@ import { districts } from '../src/data/districts.js'
 import { routesList } from '../src/data/routes.js'
 import { airportsMasterDataset } from '../src/data/airportsMaster.js'
 import { airportRoutesDataset } from '../src/data/airportRoutesMaster.js'
+import { actingDriversDataset } from '../src/data/actingDriversMaster.js'
+import { driverServicesDataset } from '../src/data/driverServicesMaster.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const SITE_URL = 'https://samayasorg.in'
@@ -15,6 +17,7 @@ const urls = [
   { loc: `${SITE_URL}/service-areas`, priority: '0.9', changefreq: 'weekly' },
   { loc: `${SITE_URL}/one-way-taxi`, priority: '0.9', changefreq: 'weekly' },
   { loc: `${SITE_URL}/airport-taxi`, priority: '0.95', changefreq: 'weekly' },
+  { loc: `${SITE_URL}/acting-driver`, priority: '0.95', changefreq: 'weekly' },
   ...districts.map((d) => ({
     loc: `${SITE_URL}/service-areas/${d.slug}`,
     priority: '0.8',
@@ -32,6 +35,16 @@ const urls = [
   })),
   ...airportRoutesDataset.map((ar) => ({
     loc: `${SITE_URL}/airport-taxi/${ar.slug}`,
+    priority: '0.85',
+    changefreq: 'weekly',
+  })),
+  ...actingDriversDataset.map((ad) => ({
+    loc: `${SITE_URL}/acting-driver/${ad.slug}`,
+    priority: '0.85',
+    changefreq: 'weekly',
+  })),
+  ...driverServicesDataset.map((ds) => ({
+    loc: `${SITE_URL}/acting-driver/${ds.slug}`,
     priority: '0.85',
     changefreq: 'weekly',
   })),

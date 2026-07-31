@@ -61,6 +61,13 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                       >
                         Acting Driver
                       </button>
+                    ) : bookingData.tripType === 'tours_travels' ? (
+                      <button
+                        type="button"
+                        className="px-4 py-2 rounded-lg font-semibold text-sm bg-amber-400 text-black font-extrabold"
+                      >
+                        Tours & Travels
+                      </button>
                     ) : (
                       <button
                         type="button"
@@ -83,7 +90,7 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                   <p className="text-xs sm:text-sm text-white/80 italic">
                     <span className="text-accent-400 font-semibold">Disclaimer:</span> {bookingData.tripType === 'acting-driver' 
                       ? 'This is only an estimated base fare. The final price will be calculated at the end of the trip based on the total hours the driver spent with you and any extra km driven.' 
-                      : bookingData.tripType === 'recovery_services'
+                      : bookingData.tripType === 'recovery_services' || bookingData.tripType === 'tours_travels'
                       ? bookingData.extraNote
                       : 'The price shown is an estimated price. The final price may vary based on your specific pickup and drop locations.'}
                   </p>
@@ -101,13 +108,13 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                     <div className="flex justify-between items-center py-2 border-b border-gray-200">
                       <span className="text-gray-600 font-medium">Booking Type:</span>
                       <span className="text-gray-800 font-semibold">
-                        {bookingData.tripType === 'acting-driver' ? 'Acting Driver' : bookingData.tripType === 'one-way' ? 'One Way' : bookingData.tripType === 'recovery_services' ? 'Recovery Services' : 'Round Trip'}
+                        {bookingData.tripType === 'acting-driver' ? 'Acting Driver' : bookingData.tripType === 'tours_travels' ? 'Tours & Travels' : bookingData.tripType === 'one-way' ? 'One Way' : bookingData.tripType === 'recovery_services' ? 'Recovery Services' : 'Round Trip'}
                       </span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                      <span className="text-gray-600 font-medium">Car Type:</span>
-                      <span className="text-gray-800 font-semibold lowercase">
-                        {bookingData.vehicleType.toLowerCase()}
+                      <span className="text-gray-600 font-medium">Car / Vehicle Type:</span>
+                      <span className="text-gray-800 font-semibold uppercase">
+                        {bookingData.vehicleType}
                       </span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b border-gray-200">
@@ -172,6 +179,29 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                             </span>
                             <span className="text-gray-800 font-semibold text-red-500">
                               + {formatCurrency(bookingData.nightSurcharge)}
+                            </span>
+                          </div>
+                        )}
+                      </>
+                    ) : bookingData.tripType === 'tours_travels' ? (
+                      <>
+                        {bookingData.distance > 0 && (
+                          <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                            <span className="text-gray-600 font-medium">Trip Distance:</span>
+                            <span className="text-gray-800 font-semibold">{bookingData.distance} km</span>
+                          </div>
+                        )}
+                        <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                          <span className="text-gray-600 font-medium">Base Fare / Package Price:</span>
+                          <span className="text-gray-800 font-semibold">
+                            {formatCurrency(bookingData.baseFare)}
+                          </span>
+                        </div>
+                        {bookingData.bata > 0 && (
+                          <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                            <span className="text-gray-600 font-medium">Driver Allowance (Peta):</span>
+                            <span className="text-gray-800 font-semibold text-amber-700">
+                              + {formatCurrency(bookingData.bata)}
                             </span>
                           </div>
                         )}

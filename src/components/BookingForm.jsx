@@ -141,6 +141,21 @@ const BookingForm = ({
     comments: ''
   })
 
+  // Tours & Travels form data
+  const [toursData, setToursData] = useState({
+    packageType: 'local_mini',
+    vehicleCategory: 'Sedan (4+1)',
+    days: 1,
+    pickupLocation: pickupVal,
+    dropLocation: dropVal,
+    date: '',
+    time: '',
+    timePeriod: 'AM',
+    name: '',
+    phone: '',
+    comments: ''
+  })
+
   const [errors, setErrors] = useState({})
   const [isLoading, setIsLoading] = useState(false)
   const [showSummary, setShowSummary] = useState(false)
@@ -185,6 +200,8 @@ const BookingForm = ({
   const actingDropRef = useRef(null)
   const recoveryPickupRef = useRef(null)
   const recoveryDropRef = useRef(null)
+  const toursPickupRef = useRef(null)
+  const toursDropRef = useRef(null)
   // Attach Google Places Autocomplete with error-safe fallback
   useEffect(() => {
     const initAutocomplete = () => {
@@ -258,6 +275,16 @@ const BookingForm = ({
         if (recoveryDropRef.current && activeTab === 'recovery_services') {
           const ac = new window.google.maps.places.Autocomplete(recoveryDropRef.current, options)
           ac.addListener('place_changed', () => handlePlaceSelect(ac, 'drop', recoveryDropRef, setRecoveryData))
+        }
+
+        if (toursPickupRef.current && activeTab === 'tours_travels') {
+          const ac = new window.google.maps.places.Autocomplete(toursPickupRef.current, options)
+          ac.addListener('place_changed', () => handlePlaceSelect(ac, 'pickup', toursPickupRef, setToursData))
+        }
+
+        if (toursDropRef.current && activeTab === 'tours_travels') {
+          const ac = new window.google.maps.places.Autocomplete(toursDropRef.current, options)
+          ac.addListener('place_changed', () => handlePlaceSelect(ac, 'drop', toursDropRef, setToursData))
         }
       } catch (err) {
         console.warn('Autocomplete init notice:', err)
@@ -1152,6 +1179,165 @@ const BookingForm = ({
           distance_km: finalCalculation.distance,
           fare: finalCalculation.finalAmount,
           trip_type: 'recovery_services'
+        })
+        trackBookingEvent('fare_calculated', finalCalculation)
+        trackBookingEvent('booking_submit', finalCalculation)
+        setShowSummary(true)
+      } catch (error) {
+        console.error('Calculation error:', error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+  }
+
+  const handleToursChange = (e) => {
+    const { name, value } = e.target
+    trackDateEvent(name, value, 'tours_travels')
+    setToursData(prev => ({ ...prev, [name]: value }))
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }))
+    }
+  }
+
+  const handleToursTimePeriodChange = (period) => {
+    setToursData(prev => ({ ...prev, timePeriod: period }))
+  }
+
+  const validateToursForm = () => {
+    const newErrors = {}
+    if (!toursData.name.trim()) newErrors.name = 'Required'
+    if (!toursData.phone.trim()) {
+      newErrors.phone = 'Required'
+    } else if (!/^\d{10}$/.test(toursData.phone.replace(/\s/g, ''))) {
+      newErrors.phone = 'Valid 10-digit number required'
+    }
+    if (!toursData.date) newErrors.date = 'Required'
+    if (!toursData.time) {
+      newErrors.time = 'Required'
+    } else if (isPastTime(toursData.date, toursData.time, toursData.timePeriod)) {
+      newErrors.time = 'Cannot select a time in the past'
+    }
+    if (!toursData.pickupLocation.trim()) newErrors.pickupLocation = 'Required'
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const calculateToursFare = async () => {
+    const { packageType, vehicleCategory, days, pickupLocation, dropLocation } = toursData
+    const numDays = Math.max(1, parseInt(days) || 1)
+    
+    let baseFare = 0
+    let distance = 0
+    let bata = 0
+    let extraNote = ''
+
+    if (pickupLocation && dropLocation) {
+      const routeInfo = await calculateRouteDetails(pickupLocation, dropLocation, toursData.pickupLocationCoords, toursData.dropLocationCoords)
+      distance = routeInfo.distance
+    }
+
+    if (packageType === 'local_mini') {
+      const miniRates = {
+        'Sedan (4+1)': { base: 1400, extraHr: 250, extraKm: 14 },
+        'SUV (6+1)': { base: 2000, extraHr: 400, extraKm: 20 },
+        'Premium SUV (7+1)': { base: 2500, extraHr: 500, extraKm: 25 },
+        'Tempo Traveller (12 Seater)': { base: 3000, extraHr: 500, extraKm: 24 },
+        'Tempo Traveller (18 Seater)': { base: 3500, extraHr: 600, extraKm: 28 },
+      }
+      const r = miniRates[vehicleCategory] || miniRates['Sedan (4+1)']
+      baseFare = r.base
+      extraNote = `Mini Local Package (5 Hrs / 50 KM). Overtime: Rs ${r.extraHr}/hr & Rs ${r.extraKm}/km.`
+
+    } else if (packageType === 'local_fullday') {
+      const fullRates = {
+        'Sedan (4+1)': { base: 2800, extraHr: 250, extraKm: 14 },
+        'SUV (6+1)': { base: 4000, extraHr: 400, extraKm: 20 },
+        'Premium SUV (7+1)': { base: 5000, extraHr: 500, extraKm: 25 },
+        'Tempo Traveller (12 Seater)': { base: 6000, extraHr: 500, extraKm: 24 },
+        'Tempo Traveller (18 Seater)': { base: 7000, extraHr: 600, extraKm: 28 },
+      }
+      const r = fullRates[vehicleCategory] || fullRates['Sedan (4+1)']
+      baseFare = r.base
+      extraNote = `Full Day Local Package (10 Hrs / 100 KM). Overtime: Rs ${r.extraHr}/hr & Rs ${r.extraKm}/km.`
+
+    } else if (packageType === 'outstation_round') {
+      const outRates = {
+        'Sedan (4+1)': { rateKm: 14, peta: 500 },
+        'SUV (6+1)': { rateKm: 19, peta: 600 },
+        'Premium SUV (7+1)': { rateKm: 22, peta: 800 },
+        'Tempo Traveller (12 Seater)': { rateKm: 24, peta: 800 },
+        'Tempo Traveller (14+1 Seater)': { rateKm: 26, peta: 900 },
+        'Tempo Traveller (18 Seater)': { rateKm: 28, peta: 1000 },
+      }
+      const r = outRates[vehicleCategory] || outRates['Sedan (4+1)']
+      const minDistance = numDays * 300
+      const roundTripDistance = distance > 0 ? Math.max(distance * 2, minDistance) : minDistance
+      distance = roundTripDistance
+      baseFare = roundTripDistance * r.rateKm
+      bata = numDays * r.peta
+      extraNote = `Outstation Round-Trip (${numDays} Day(s) @ min 300 KM/day). Driver Peta: Rs ${bata} (Rs ${r.peta}/day). Rate: Rs ${r.rateKm}/km.`
+
+    } else if (packageType === 'oneway_drop') {
+      const dropRates = {
+        'Sedan (4+1)': { rateKm: 15 },
+        'SUV (6+1)': { rateKm: 20 },
+        'Premium SUV (7+1)': { rateKm: 23 },
+      }
+      const r = dropRates[vehicleCategory] || dropRates['Sedan (4+1)']
+      const billableKm = Math.max(distance, 130)
+      baseFare = billableKm * r.rateKm
+      extraNote = `One-Way Drop Package. Minimum billing 130 KM limit applied. Rate: Rs ${r.rateKm}/km.`
+
+    } else if (packageType === 'bus_rental') {
+      const busRates = {
+        'Mini Bus (21 Seater)': { rateKm: 28, peta: 1000 },
+        'Executive Bus (25 Seater)': { rateKm: 34, peta: 1000 },
+        'AC Coach (40 Seater)': { rateKm: 60, peta: 1200 },
+        'Luxury AC Coach (54 Seater)': { rateKm: 70, peta: 1500 },
+      }
+      const r = busRates[vehicleCategory] || busRates['Mini Bus (21 Seater)']
+      const minDistance = numDays * 300
+      const tripDistance = distance > 0 ? Math.max(distance * 2, minDistance) : minDistance
+      distance = tripDistance
+      baseFare = tripDistance * r.rateKm
+      bata = numDays * r.peta
+      extraNote = `Bus & Group Event Rental (${numDays} Day(s) @ min 300 KM/day). Driver Peta: Rs ${bata} (Rs ${r.peta}/day). Rate: Rs ${r.rateKm}/km.`
+    }
+
+    const finalAmount = baseFare + bata
+
+    return {
+      distance,
+      baseFare,
+      bata,
+      finalAmount,
+      actualDistance: distance,
+      extraNote: `${extraNote} Exclusions: Toll charges, Interstate Permit fees, and Parking charges are extra. Day Calculation: Calendar day system (12:00 AM to 11:59 PM) applies for Driver Allowance.`
+    }
+  }
+
+  const handleToursSubmit = async (e) => {
+    e.preventDefault()
+    if (validateToursForm()) {
+      setIsLoading(true)
+      try {
+        const calculation = await calculateToursFare()
+        const finalCalculation = {
+          ...toursData,
+          tripType: 'tours_travels',
+          vehicleType: `Tours & Travels - ${toursData.vehicleCategory}`,
+          ...calculation,
+          fullTime: formatFullTime(toursData.time, toursData.timePeriod)
+        }
+        setCalculatedData(finalCalculation)
+        funnelStep.current = 'booking_submit'
+        trackEvent('route_search', {
+          pickup_city: finalCalculation.pickupLocation,
+          destination_city: finalCalculation.dropLocation || 'Local',
+          distance_km: finalCalculation.distance,
+          fare: finalCalculation.finalAmount,
+          trip_type: 'tours_travels'
         })
         trackBookingEvent('fare_calculated', finalCalculation)
         trackBookingEvent('booking_submit', finalCalculation)
@@ -2941,6 +3127,284 @@ const BookingForm = ({
                       className="w-full px-8 py-4 bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
                     >
                       {isLoading ? 'Booking...' : 'REQUEST RECOVERY SERVICE'}
+                    </motion.button>
+                  </form>
+                </motion.div>
+              ) : activeTab === 'tours_travels' ? (
+                <motion.div
+                  key="tours_travels"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4 }}
+                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10"
+                >
+                  <form onSubmit={handleToursSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      
+                      {/* Package Type */}
+                      <motion.div className="md:col-span-2">
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <Briefcase className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Select Tour Package Type *
+                        </label>
+                        <select
+                          name="packageType"
+                          value={toursData.packageType}
+                          onChange={handleToursChange}
+                          className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 shadow-sm font-semibold text-sm sm:text-base"
+                        >
+                          <option value="local_mini">Local Mini Package (5 Hours / 50 KM)</option>
+                          <option value="local_fullday">Local Full Day Package (10 Hours / 100 KM)</option>
+                          <option value="outstation_round">Outstation Round-Trip (Multi-Day Tours & Pilgrimages)</option>
+                          <option value="oneway_drop">One-Way Intercity Drop Taxi</option>
+                          <option value="bus_rental">Bus & Group Event Rentals (21 to 54 Seater Coaches)</option>
+                        </select>
+                      </motion.div>
+
+                      {/* Vehicle Category */}
+                      <motion.div className={toursData.packageType === 'outstation_round' || toursData.packageType === 'bus_rental' ? 'md:col-span-1' : 'md:col-span-2'}>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <Car className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Vehicle Category *
+                        </label>
+                        <select
+                          name="vehicleCategory"
+                          value={toursData.vehicleCategory}
+                          onChange={handleToursChange}
+                          className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 shadow-sm font-semibold text-sm sm:text-base"
+                        >
+                          {toursData.packageType === 'bus_rental' ? (
+                            <>
+                              <option value="Mini Bus (21 Seater)">Mini Bus (21 Seater) - ₹28/km</option>
+                              <option value="Executive Bus (25 Seater)">Executive Bus (25 Seater) - ₹34/km</option>
+                              <option value="AC Coach (40 Seater)">AC Coach (40 Seater) - ₹60/km</option>
+                              <option value="Luxury AC Coach (54 Seater)">Luxury AC Coach (54 Seater) - ₹70/km</option>
+                            </>
+                          ) : toursData.packageType === 'oneway_drop' ? (
+                            <>
+                              <option value="Sedan (4+1)">Sedan (4+1) (Dzire/Etios) - ₹15/km</option>
+                              <option value="SUV (6+1)">SUV (6+1) (Ertiga) - ₹20/km</option>
+                              <option value="Premium SUV (7+1)">Premium SUV (7+1) (Innova Crysta) - ₹23/km</option>
+                            </>
+                          ) : (
+                            <>
+                              <option value="Sedan (4+1)">Sedan (4+1) (Dzire/Etios)</option>
+                              <option value="SUV (6+1)">SUV (6+1) (Ertiga/XL6)</option>
+                              <option value="Premium SUV (7+1)">Premium SUV (7+1 Innova Crysta)</option>
+                              <option value="Tempo Traveller (12 Seater)">Tempo Traveller (12 Seater)</option>
+                              <option value="Tempo Traveller (18 Seater)">Tempo Traveller (18 Seater)</option>
+                            </>
+                          )}
+                        </select>
+                      </motion.div>
+
+                      {/* Days Input if Outstation or Bus */}
+                      {(toursData.packageType === 'outstation_round' || toursData.packageType === 'bus_rental') && (
+                        <motion.div>
+                          <label className="block text-sm font-semibold text-white/90 mb-2">
+                            <Calendar className="w-4 h-4 inline mr-2 text-accent-500" />
+                            Number of Days *
+                          </label>
+                          <input
+                            type="number"
+                            name="days"
+                            min="1"
+                            max="30"
+                            value={toursData.days}
+                            onChange={handleToursChange}
+                            className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 shadow-sm font-semibold"
+                          />
+                        </motion.div>
+                      )}
+
+                      {/* Customer Name */}
+                      <motion.div>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <User className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Customer Name *
+                        </label>
+                        <input
+                          type="text"
+                          name="name"
+                          value={toursData.name}
+                          onChange={handleToursChange}
+                          placeholder="Enter customer name"
+                          className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 shadow-sm"
+                        />
+                        {errors.name && <p className="mt-1 text-sm text-red-400">{errors.name}</p>}
+                      </motion.div>
+
+                      {/* Phone Number */}
+                      <motion.div>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <Phone className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Phone Number *
+                        </label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={toursData.phone}
+                          onChange={handleToursChange}
+                          placeholder="Enter 10-digit mobile number"
+                          className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 shadow-sm"
+                        />
+                        {errors.phone && <p className="mt-1 text-sm text-red-400">{errors.phone}</p>}
+                      </motion.div>
+
+                      {/* Date */}
+                      <motion.div>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <Calendar className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Date *
+                        </label>
+                        <input
+                          type="date"
+                          name="date"
+                          value={toursData.date}
+                          onChange={handleToursChange}
+                          min={new Date().toISOString().split('T')[0]}
+                          className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 shadow-sm"
+                        />
+                        {errors.date && <p className="mt-1 text-sm text-red-400">{errors.date}</p>}
+                      </motion.div>
+
+                      {/* Time */}
+                      <motion.div>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <Clock className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Time *
+                        </label>
+                        <div className="flex gap-2">
+                          <input
+                            type="time"
+                            name="time"
+                            value={toursData.time}
+                            onChange={handleToursChange}
+                            className="flex-1 px-4 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 shadow-sm"
+                          />
+                          <div className="flex gap-1 bg-primary-700/50 rounded-lg p-1">
+                            <button type="button" onClick={() => handleToursTimePeriodChange('AM')} className={`px-4 py-3 rounded-md font-semibold transition-all ${toursData.timePeriod === 'AM' ? 'bg-accent-500 text-black' : 'text-white/70 hover:text-white'}`}>AM</button>
+                            <button type="button" onClick={() => handleToursTimePeriodChange('PM')} className={`px-4 py-3 rounded-md font-semibold transition-all ${toursData.timePeriod === 'PM' ? 'bg-accent-500 text-black' : 'text-white/70 hover:text-white'}`}>PM</button>
+                          </div>
+                        </div>
+                        {errors.time && <p className="mt-1 text-sm text-red-400">{errors.time}</p>}
+                      </motion.div>
+
+                      {/* Pickup Location */}
+                      <motion.div>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <MapPin className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Pickup Location *
+                        </label>
+                        <div className="relative flex items-center">
+                          <input
+                            type="text"
+                            name="pickupLocation"
+                            ref={toursPickupRef}
+                            value={toursData.pickupLocation}
+                            onChange={handleToursChange}
+                            placeholder="Enter pickup address"
+                            className="w-full pl-4 pr-24 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 shadow-sm"
+                          />
+                          <div className="absolute right-2 flex items-center gap-1.5 z-10">
+                            <button
+                              type="button"
+                              onClick={() => handleGPSLocate('pickup', setToursData, 'pickupLocation')}
+                              disabled={isGpsLoading.pickup}
+                              className="p-1.5 rounded-md bg-gray-100 hover:bg-primary-100 text-primary-700 transition-all shadow-sm hover:scale-105 active:scale-95 disabled:opacity-50 group"
+                              title="Use Current GPS Location"
+                              aria-label="Use Current GPS Location"
+                            >
+                              {isGpsLoading.pickup ? (
+                                <Loader2 className="w-4 h-4 animate-spin text-primary-600" />
+                              ) : (
+                                <Navigation className="w-4 h-4 text-primary-600 group-hover:rotate-12 transition-transform fill-primary-600/20" />
+                              )}
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => openMapPicker('pickup', 'Select Pickup Location', toursData.pickupLocation, setToursData, 'pickupLocation')}
+                              className="p-1.5 rounded-md bg-accent-500 hover:bg-accent-600 text-black transition-all shadow-sm hover:scale-105 active:scale-95 group"
+                              title="Pick on Google Maps"
+                              aria-label="Pick on Google Maps"
+                            >
+                              <Map className="w-4 h-4 text-black group-hover:scale-110 transition-transform" />
+                            </button>
+                          </div>
+                        </div>
+                        {errors.pickupLocation && <p className="mt-1 text-sm text-red-400">{errors.pickupLocation}</p>}
+                      </motion.div>
+
+                      {/* Drop Location */}
+                      <motion.div>
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <MapPin className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Drop Location / Tour Destination
+                        </label>
+                        <div className="relative flex items-center">
+                          <input
+                            type="text"
+                            name="dropLocation"
+                            ref={toursDropRef}
+                            value={toursData.dropLocation}
+                            onChange={handleToursChange}
+                            placeholder="Enter destination / tour drop location"
+                            className="w-full pl-4 pr-24 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 shadow-sm"
+                          />
+                          <div className="absolute right-2 flex items-center gap-1.5 z-10">
+                            <button
+                              type="button"
+                              onClick={() => handleGPSLocate('drop', setToursData, 'dropLocation')}
+                              disabled={isGpsLoading.drop}
+                              className="p-1.5 rounded-md bg-gray-100 hover:bg-primary-100 text-primary-700 transition-all shadow-sm hover:scale-105 active:scale-95 disabled:opacity-50 group"
+                              title="Use Current GPS Location"
+                              aria-label="Use Current GPS Location"
+                            >
+                              {isGpsLoading.drop ? (
+                                <Loader2 className="w-4 h-4 animate-spin text-primary-600" />
+                              ) : (
+                                <Navigation className="w-4 h-4 text-primary-600 group-hover:rotate-12 transition-transform fill-primary-600/20" />
+                              )}
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => openMapPicker('drop', 'Select Drop Location', toursData.dropLocation, setToursData, 'dropLocation')}
+                              className="p-1.5 rounded-md bg-accent-500 hover:bg-accent-600 text-black transition-all shadow-sm hover:scale-105 active:scale-95 group"
+                              title="Pick on Google Maps"
+                              aria-label="Pick on Google Maps"
+                            >
+                              <Map className="w-4 h-4 text-black group-hover:scale-110 transition-transform" />
+                            </button>
+                          </div>
+                        </div>
+                      </motion.div>
+
+                      {/* Additional Comments */}
+                      <motion.div className="md:col-span-2">
+                        <label className="block text-sm font-semibold text-white/90 mb-2">
+                          <MessageSquare className="w-4 h-4 inline mr-2 text-accent-500" />
+                          Additional Comments / Special Requests (Optional)
+                        </label>
+                        <textarea
+                          name="comments"
+                          value={toursData.comments}
+                          onChange={handleToursChange}
+                          rows={4}
+                          placeholder="Any customization requests, special instructions, or additional details..."
+                          className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all outline-none text-gray-900 shadow-sm resize-none"
+                        />
+                      </motion.div>
+                    </div>
+
+                    <motion.button
+                      type="submit"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
+                      disabled={isLoading}
+                      className="w-full px-8 py-4 bg-accent-500 hover:bg-accent-600 text-black font-semibold rounded-full shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-lg uppercase tracking-wide font-extrabold"
+                    >
+                      {isLoading ? 'Calculating...' : 'GET TOURS & TRAVELS ESTIMATION'}
                     </motion.button>
                   </form>
                 </motion.div>

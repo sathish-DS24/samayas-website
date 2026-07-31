@@ -21,7 +21,7 @@ const BookingForm = ({
   defaultTripDuration = '2 Hours'
 }) => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px text-white" })
+  const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   // EmailJS Configuration
   const serviceId = 'service_pened45'

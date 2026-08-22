@@ -14,10 +14,13 @@ export interface DistrictDriverItem {
   popularLocations: string[];
   pricing: {
     hourly: string;
-    halfDay: string;
+    outOfCity?: string;
+    dropTariff?: string;
+    halfDay?: string;
     fullDay: string;
     outstationBata: string;
-    nightCharges: string;
+    outstationDaily?: string;
+    nightCharges?: string;
     waitingCharges: string;
   };
   driverCategories: {
@@ -57,7 +60,7 @@ export const actingDriversDataset: DistrictDriverItem[] = districts.map((d) => {
       subtitle: `24×7 Driver on Call in ${districtName} • Verified, Experienced & Uniformed Drivers`,
       tagline: `Book a trusted acting driver for local city travel, outstation road trips, weddings & hospital visits in your own car.`
     },
-    description: `Need a reliable acting driver in ${districtName}? SAMAYAS provides 24/7 background-verified, licensed drivers for your personal vehicle. Whether you need a 2-hour local shopping driver, outstation highway driver to Chennai/Bengaluru, or a dedicated personal chauffeur, our drivers arrive at your doorstep in 30 minutes.`,
+    description: `Need a reliable acting driver in ${districtName}? SAMAYAS provides 24/7 background-verified, licensed drivers for your personal vehicle. Whether you need a local city trip, outstation highway drive across Tamil Nadu, one-way drop driver, or a dedicated personal chauffeur, our drivers arrive at your doorstep in 30 minutes.`,
     popularLocations: [
       `${districtName} Central Railway Station & Bus Stand`,
       `${districtName} Commercial & Shopping Centers`,
@@ -66,22 +69,23 @@ export const actingDriversDataset: DistrictDriverItem[] = districts.map((d) => {
       `${districtName} Marriage Halls & Event Venues`
     ],
     pricing: {
-      hourly: '₹350 (First 2 Hours)',
-      halfDay: '₹650 (5 Hours / Local)',
+      hourly: '₹500 (4 Hours / Max 20 km + Food)',
+      outOfCity: '₹600 (4 Hours / 20–30 km + Food)',
+      dropTariff: '₹1,200 (50 km incl. bus fare + Food)',
       fullDay: '₹1,100 (10 Hours / Local)',
-      outstationBata: '₹900 / Day (12 Hours Window)',
-      nightCharges: '₹150 (10 PM to 6 AM)',
-      waitingCharges: '₹80 / additional hour'
+      outstationBata: '₹800 (6 Hours / 150 km + Food)',
+      outstationDaily: '₹1,300 - ₹1,500 / Day + Food + Accommodation',
+      waitingCharges: '₹80 - ₹90 / additional hour'
     },
     driverCategories: [
-      { name: 'Hourly Acting Driver', desc: 'Short 2 to 4-hour local trips, hospital visits & market shopping in your car.', rate: 'From ₹350' },
-      { name: 'Half-Day Driver', desc: '5-hour flexible package for local business errands & social visits.', rate: 'From ₹650' },
-      { name: 'Full-Day Driver', desc: '10-hour complete day availability for intensive city commuting.', rate: 'From ₹1,100' },
-      { name: 'Outstation Highway Driver', desc: 'Long-distance intercity road trips & weekend vacations across South India.', rate: '₹900 / Day Bata' },
-      { name: 'Late Night & Party Driver', desc: 'Designated 24/7 night driver for safe return after evening celebrations.', rate: 'From ₹450' },
-      { name: 'Senior Citizen Driver', desc: 'Gentle, patient driver with door-to-door arm support & wheelchair assistance.', rate: 'From ₹400' },
-      { name: 'Wedding & Event Driver', desc: 'Uniformed chauffeur for decorated marriage cars & guest shuttles.', rate: 'From ₹1,200' },
-      { name: 'Corporate Chauffeur', desc: 'Polite executive driver for CEO commutes & business client transfers.', rate: 'From ₹1,400' }
+      { name: 'Local City Driver (4 Hours)', desc: 'Local city errands, hospital visits & market shopping in your car (Up to 20 km + Food).', rate: 'From ₹500' },
+      { name: 'Out-of-City Local Driver (4 Hours)', desc: 'Flexible 4-hour package for 20-30 km local errands & suburbs + Food.', rate: 'From ₹600' },
+      { name: 'One-Way Drop Driver (50 km)', desc: 'Intercity one-way drop driver service including bus return fare + food.', rate: 'From ₹1,200' },
+      { name: 'Outstation Highway Driver (150 km)', desc: 'Outstation round trip (min 6 hrs / 150 km + food).', rate: 'From ₹800' },
+      { name: 'Full-Day City Driver (10 Hours)', desc: '10-hour complete day availability for intensive city commuting.', rate: 'From ₹1,100' },
+      { name: 'Multi-Day Highway Driver', desc: 'Outstation road trips below 300km/day + food + accommodation.', rate: '₹1,300 / Day' },
+      { name: 'Late Night & Party Driver', desc: 'Designated 24/7 night driver for safe return after evening celebrations.', rate: 'From ₹500' },
+      { name: 'Wedding & Corporate Chauffeur', desc: 'Uniformed chauffeur for decorated marriage cars & executive clients.', rate: 'From ₹1,200' }
     ],
     services: [
       'Hourly Driver on Call',
@@ -121,7 +125,7 @@ export const actingDriversDataset: DistrictDriverItem[] = districts.map((d) => {
     ],
     seo: {
       title: `Acting Driver in ${districtName} | 24x7 Driver on Call | SAMAYAS`,
-      description: `Hire 24/7 verified acting drivers in ${districtName} for your own car. Hourly rates from ₹350, outstation bata ₹900/day. Doorstep pickup in 30 mins.`,
+      description: `Hire 24/7 verified acting drivers in ${districtName} for your own car. Local packages from ₹500 (4 hrs), outstation from ₹800. Doorstep pickup in 30 mins.`,
       keywords: [
         `acting driver in ${districtName.toLowerCase()}`,
         `driver on call ${districtName.toLowerCase()}`,

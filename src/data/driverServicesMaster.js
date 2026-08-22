@@ -2,10 +2,10 @@ export const driverServicesDataset = [
   {
     id: 'hourly-driver',
     slug: 'hourly-driver',
-    serviceName: 'Hourly Acting Driver on Call',
-    shortName: 'Hourly Driver',
-    tagline: 'Hire a professional driver by the hour for local city errands & short trips',
-    description: 'Flexibility at its best. Book an experienced acting driver for 2, 4, or 8 hours for local shopping, hospital visits, railway station pick-drops, or city meetings in your own car.',
+    serviceName: 'Local City Acting Driver on Call',
+    shortName: 'Local Driver',
+    tagline: 'Hire a professional driver for local city errands, hospital visits & short trips',
+    description: 'Book an experienced acting driver for 4 hours (up to 20 km) for local shopping, hospital visits, railway station pick-drops, or city meetings in your own car.',
     idealFor: [
       'Local Shopping & Market Visits',
       'Hospital & Doctor Appointments',
@@ -14,16 +14,16 @@ export const driverServicesDataset = [
       'Senior Citizen Local Travel'
     ],
     benefits: [
-      { title: 'Pay Only for Hours Used', desc: 'Transparent hourly billing with 2-hour minimum package.' },
+      { title: 'Transparent Tariff', desc: '₹500 for 4 Hours (Max 20 km) + Food.' },
       { title: 'Doorstep Pickup in 30 Mins', desc: 'Verified driver arrives directly at your home or location.' },
       { title: 'Manual & Automatic Experts', desc: 'Drivers proficient in all hatchback, sedan, luxury, and SUV models.' },
       { title: 'Stress-Free City Parking', desc: 'Driver handles congested traffic, parking search, and valet waiting.' }
     ],
     pricing: {
-      baseRate: '₹350',
-      unit: 'First 2 Hours',
-      minimumBooking: '2 Hours (₹350)',
-      overtimeRate: '₹90 / additional hour',
+      baseRate: '₹500',
+      unit: '4 Hours (Max 20 km)',
+      minimumBooking: '4 Hours (₹500 + Food)',
+      overtimeRate: '₹80 / additional hour',
       nightAllowance: '₹150 (10 PM to 6 AM)'
     },
     features: [
@@ -34,18 +34,18 @@ export const driverServicesDataset = [
       'Clean & Courteous Uniformed Drivers'
     ],
     faq: [
-      { q: 'What is the minimum booking duration for an hourly acting driver?', a: 'Our minimum booking starts at 2 hours (₹350). Additional hours are charged at ₹90/hour.' },
-      { q: 'Can I hire an hourly driver for automatic or luxury cars?', a: 'Yes! All SAMAYAS acting drivers are tested and proficient in driving automatic transmission, hybrid, and luxury vehicles (BMW, Audi, Mercedes, Fortuner).' },
+      { q: 'What is the local acting driver tariff?', a: 'Local city driver tariff starts at ₹500 + Food for 4 hours (up to 20 km). Overtime is charged at ₹80/hour.' },
+      { q: 'Can I hire a driver for out of city local trips?', a: 'Yes! Out of city trips (20-30 km) for 4 hours start at ₹600 + Food with overtime at ₹90/hour.' },
       { q: 'How quickly can a driver reach my location?', a: 'We dispatch nearest verified drivers for doorstep arrival within 30 to 45 minutes of booking confirmation.' }
     ],
     reviews: [
-      { name: 'Kavitha R.', rating: 5, text: 'Booked an hourly driver for T. Nagar shopping in Chennai. Driver handled parking effortlessly while we shopped peacefully.', location: 'Chennai', date: '2026-07-20' },
+      { name: 'Kavitha R.', rating: 5, text: 'Booked a local city driver for T. Nagar shopping in Chennai. Driver handled parking effortlessly while we shopped peacefully.', location: 'Chennai', date: '2026-07-20' },
       { name: 'Senthil Nathan', rating: 5, text: 'Very polite driver for hospital visit with my elderly father in Trichy. On time and driven smoothly.', location: 'Tiruchirappalli', date: '2026-07-25' }
     ],
     seo: {
-      title: 'Hourly Acting Driver on Call | Hire Driver by Hour | SAMAYAS',
-      description: 'Hire 24/7 hourly acting drivers for local city travel in your own car. Rates start from ₹350 for 2 hours. Verified, courteous & experienced drivers.',
-      keywords: ['hourly acting driver', 'driver on call', 'temporary driver per hour', 'local driver hire', 'acting driver near me']
+      title: 'Local City Acting Driver on Call | SAMAYAS',
+      description: 'Hire 24/7 local city acting drivers for your own car. Rates start from ₹500 + Food for 4 hours (20 km). Verified, courteous & experienced drivers.',
+      keywords: ['local acting driver', 'driver on call', 'temporary driver local', 'acting driver near me']
     }
   },
 
@@ -65,15 +65,14 @@ export const driverServicesDataset = [
     ],
     benefits: [
       { title: 'Highway Certified Drivers', desc: 'Specialized in NH/SH speed management, night driving & ghat roads.' },
-      { title: 'Fixed Daily Driver Allowance', desc: 'Clear ₹900/day driver bata with no hidden charges.' },
-      { title: 'Comfort of Your Own Car', desc: 'Enjoy your own vehicle space, music, and cleanliness on long trips.' },
-      { title: 'Zero Driver Stay Hassle', desc: 'Driver arranges their own food/rest or minimal food allowance.' }
+      { title: 'Transparent Highway Tariff', desc: 'Starts at ₹800 + Food for 6 Hours / 150 km up & down.' },
+      { title: 'Comfort of Your Own Car', desc: 'Enjoy your own vehicle space, music, and cleanliness on long trips.' }
     ],
     pricing: {
-      baseRate: '₹900',
-      unit: 'Per Day (12 Hours / Outstation)',
-      minimumBooking: '1 Day (₹900 Bata)',
-      overtimeRate: '₹80 / overtime hour',
+      baseRate: '₹800',
+      unit: '6 Hours (150 km Round Trip)',
+      minimumBooking: '6 Hours / 150 km (₹800 + Food)',
+      overtimeRate: '₹90 / additional hour',
       nightAllowance: '₹200 (10 PM to 6 AM)'
     },
     features: [
@@ -84,7 +83,7 @@ export const driverServicesDataset = [
       'Luggage Loading & Vehicle Care'
     ],
     faq: [
-      { q: 'How is the outstation driver bata calculated?', a: 'Outstation driver fee is ₹900 per calendar day (12 hours of driving window). Food/night allowance applies if overnight stay is required.' },
+      { q: 'How is the outstation driver tariff calculated?', a: 'Outstation round trip starts at ₹800 + Food for 150 km / 6 hours. 250 km (6 hrs) is ₹900 + Food, and 500 km (12 hrs) is ₹1,500 + Food.' },
       { q: 'Are drivers experienced in hill station ghat roads like Ooty or Kodaikanal?', a: 'Yes, we assign specialized hill-certified drivers with hairpin bend experience for Ooty, Kodaikanal, Valparai, and Yercaud trips.' }
     ],
     reviews: [
@@ -92,7 +91,7 @@ export const driverServicesDataset = [
     ],
     seo: {
       title: 'Outstation Acting Driver Hire | Intercity Highway Drivers | SAMAYAS',
-      description: 'Book verified outstation acting drivers for long-distance road trips in your own car. Highway & ghat road certified drivers from ₹900/day.',
+      description: 'Book verified outstation acting drivers for long-distance road trips in your own car. Highway & ghat road certified drivers from ₹800 + Food.',
       keywords: ['outstation acting driver', 'outstation driver hire', 'driver for long drive', 'intercity acting driver', 'ghat road driver hire']
     }
   },
@@ -117,9 +116,9 @@ export const driverServicesDataset = [
       { title: 'Avoid Traffic Fines & Hazards', desc: 'Protect your license and safety after night events.' }
     ],
     pricing: {
-      baseRate: '₹450',
-      unit: 'First 2 Hours (Night)',
-      minimumBooking: '2 Hours (₹450)',
+      baseRate: '₹500',
+      unit: 'Night Service Base Rate',
+      minimumBooking: '₹500 + Food',
       overtimeRate: '₹100 / additional hour',
       nightAllowance: 'Included in Night Base Rate'
     },
@@ -297,10 +296,10 @@ export const driverServicesDataset = [
       { title: 'NRI Pre-Booking Support', desc: 'Children living abroad can easily book and track their parents trip.' }
     ],
     pricing: {
-      baseRate: '₹400',
-      unit: 'First 3 Hours',
-      minimumBooking: '3 Hours (₹400)',
-      overtimeRate: '₹85 / additional hour',
+      baseRate: '₹500',
+      unit: '4 Hours (Max 20 km)',
+      minimumBooking: '4 Hours (₹500 + Food)',
+      overtimeRate: '₹80 / additional hour',
       nightAllowance: '₹150'
     },
     features: [
@@ -342,9 +341,9 @@ export const driverServicesDataset = [
       { title: 'Flat Transparent Rates', desc: 'No peak surge fees during weekends or holidays.' }
     ],
     pricing: {
-      baseRate: '₹450',
-      unit: 'First 2 Hours',
-      minimumBooking: '2 Hours (₹450)',
+      baseRate: '₹500',
+      unit: 'Night Service Base Rate',
+      minimumBooking: '₹500 + Food',
       overtimeRate: '₹100 / additional hour',
       nightAllowance: 'Included'
     },

@@ -2,6 +2,12 @@ import React from 'react'
 import { MapPin, Clock, Tag, ShieldCheck, CheckCircle, Home } from 'lucide-react'
 
 const RouteSummaryCards = ({ content }) => {
+  const actualDistance = parseInt(content.distanceKm) || parseInt(content.distanceDisplay) || 0
+  const isShortRoute = actualDistance > 0 && actualDistance < 130
+  const billableKm = isShortRoute ? 130 : actualDistance
+  const baseFare = billableKm * 15
+  const startingTotalFare = baseFare + 400
+
   const cards = [
     {
       title: 'Distance',
@@ -19,8 +25,8 @@ const RouteSummaryCards = ({ content }) => {
     },
     {
       title: 'Starting Fare',
-      value: `₹${content.fare?.hatchback?.toLocaleString('en-IN')}`,
-      subtitle: 'Clear per-km rates with zero return fee',
+      value: `₹${startingTotalFare.toLocaleString('en-IN')}`,
+      subtitle: `₹${baseFare.toLocaleString('en-IN')} Base + ₹400 Driver Bata Included. Zero return fee`,
       icon: Tag,
       color: 'text-green-400',
     },

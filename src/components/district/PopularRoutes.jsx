@@ -83,7 +83,9 @@ const PopularRoutes = ({ districtName, routes }) => {
               const routeName = typeof route === 'string' ? route : route.name
               const distanceKm = typeof route === 'object' ? route.distanceKm : null
               const timeHours = typeof route === 'object' ? route.timeHours : null
-              const startingFare = distanceKm ? Math.round(Math.max(distanceKm, 130) * 15) : (typeof route === 'object' && route.startingFare ? Math.max(route.startingFare, 1950) : 1950)
+              const billableKm = Math.max(distanceKm || 130, 130)
+              const baseFare = billableKm * 15
+              const startingTotalFare = baseFare + 400
 
               // Extract destination name from route string e.g. "Trichy to Chennai" -> "Chennai"
               const destName = routeName.includes(' to ')
@@ -147,9 +149,12 @@ const PopularRoutes = ({ districtName, routes }) => {
                     {/* Bottom CTA & Price row */}
                     <div className="flex items-center justify-between pt-3 border-t border-gray-100 mt-auto">
                       <div>
-                        <span className="text-[11px] text-gray-400 block font-medium">Starting Fare</span>
-                        <span className="text-sm font-extrabold text-primary-700">
-                          {startingFare ? `₹${startingFare.toLocaleString('en-IN')}` : '₹10/km'}
+                        <span className="text-[11px] text-gray-400 block font-medium">Total Starting Fare</span>
+                        <span className="text-sm font-extrabold text-primary-700 block">
+                          ₹{startingTotalFare.toLocaleString('en-IN')}
+                        </span>
+                        <span className="text-[10px] text-gray-500 block font-normal">
+                          (Inc. ₹400 Bata)
                         </span>
                       </div>
 

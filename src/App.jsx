@@ -11,6 +11,8 @@ import ActingDriverDirectoryPage from './pages/ActingDriverDirectoryPage'
 import ActingDriverRouter from './pages/ActingDriverRouter'
 import VehicleRecoveryDirectoryPage from './pages/VehicleRecoveryDirectoryPage'
 import VehicleRecoveryRouter from './pages/VehicleRecoveryRouter'
+import TourDirectoryPage from './pages/TourDirectoryPage'
+import TourRouter from './pages/TourRouter'
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton'
 import usePageTracking from './hooks/usePageTracking'
 
@@ -31,6 +33,8 @@ const AppContent = () => {
         <Route path="/acting-driver/:slug" element={<ActingDriverRouter />} />
         <Route path="/vehicle-recovery" element={<VehicleRecoveryDirectoryPage />} />
         <Route path="/vehicle-recovery/:slug" element={<VehicleRecoveryRouter />} />
+        <Route path="/tour-packages" element={<TourDirectoryPage />} />
+        <Route path="/tour-packages/:slug" element={<TourRouter />} />
         <Route path="/one-way-taxi-:pageSlug" element={<DistrictPage />} />
         <Route path="/:pageSlug" element={<DistrictPage />} />
       </Routes>

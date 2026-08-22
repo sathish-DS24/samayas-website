@@ -48,40 +48,28 @@ const RoutePage = () => {
     ? (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length).toFixed(1)
     : '5.0'
 
-  // Build JSON-LD
+  // Build JSON-LD Schema
   const jsonLd = [
-    // LocalBusiness / TaxiService
+    // TaxiService
     {
       '@context': 'https://schema.org',
       '@type': 'TaxiService',
-      name: `SAMAYAS ${content.from} to ${content.to} Taxi Service`,
+      name: `SAMAYAS ${content.from} to ${content.to} One-Way Taxi`,
       description: content.metaDescription,
       url: `${SITE_URL}${routeUrlPath}`,
-      telephone: '+91-98948-09439',
-      email: 'samayasprem@gmail.com',
+      image: `${SITE_URL}/images/samayas-logo.png`,
       provider: {
         '@type': 'LocalBusiness',
         name: 'SAMAYAS',
         url: SITE_URL,
         telephone: '+91-98948-09439',
+        email: 'samayasprem@gmail.com',
+        priceRange: '$$',
       },
       areaServed: [
         { '@type': 'AdministrativeArea', name: content.from },
         { '@type': 'AdministrativeArea', name: content.to },
-        { '@type': 'State', name: 'Tamil Nadu' },
       ],
-      priceRange: '$$',
-      ...(reviews.length > 0
-        ? {
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: avgRating,
-              reviewCount: reviews.length,
-              bestRating: '5',
-              worstRating: '1',
-            },
-          }
-        : {}),
     },
     // FAQPage
     {

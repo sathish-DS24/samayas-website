@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser'
 import BookingSummary from './BookingSummary'
 import MapPickerModal from './MapPickerModal'
 import { getRoadDistance, getRouteInfo, reverseGeocode, getCurrentGPSLocation } from '../utils/googleMaps'
+import { apiClient } from '../services/api'
 import { trackEvent, trackBookingEvent, trackAdsConversion, debounceEvent } from '../utils/analytics'
 
 const BookingForm = ({
@@ -661,6 +662,81 @@ const BookingForm = ({
     return { distance, baseFare, bata: 0, finalAmount: baseFare + estExtraFare, estExtraHours, estExtraFare, extraNote, actualDistance: distance };
   }
 
+  const sendFareEstimateLead = (calcData) => {
+    if (!calcData || !calcData.name || !calcData.phone) return;
+    try {
+      const isRoundTrip = calcData.tripType === 'round-trip'
+      const isActingDriver = calcData.tripType === 'acting-driver'
+      const isRecovery = calcData.tripType === 'recovery_services'
+      const isTours = calcData.tripType === 'tours_travels'
+      
+      const tripName = isRecovery ? 'Vehicle Recovery' : isActingDriver ? 'Acting Driver' : isTours ? 'Tours & Travels' : isRoundTrip ? 'Round Trip Taxi' : 'One-Way Taxi'
+      const templateId = isRecovery || isTours ? OTHER_SERVICES_TEMPLATE_ID : isRoundTrip ? ROUND_TRIP_TEMPLATE_ID : ONE_WAY_TAXI_TEMPLATE_ID
+
+      const flightNumber = String(calcData.flightNumber || 'N/A')
+      const airline = String(calcData.airline || 'N/A')
+      const passengerCount = String(calcData.passengerCount || 'N/A')
+      const hasFlightInfo = flightNumber !== 'N/A' || airline !== 'N/A'
+      const flightDetailsStr = hasFlightInfo ? `Flight: ${flightNumber} | Airline: ${airline} | Passengers: ${passengerCount}` : 'N/A'
+
+      const leadComments = hasFlightInfo
+        ? `[INQUIRY LEAD] Customer checked price estimate. Name: ${calcData.name}, Phone: ${calcData.phone} | Flight Info: ${flightDetailsStr}`
+        : `[INQUIRY LEAD] Customer checked price estimate. Name: ${calcData.name}, Phone: ${calcData.phone}`
+
+      let emailSubject = `[Fare Checked Lead] ${calcData.name} - ${calcData.phone} (${tripName})`
+      if (calcData.tripType === 'one-way') {
+        const isBelow130 = (calcData.actualDistance < 130) || calcData.isMinKmApplied
+        emailSubject = isBelow130
+          ? `[ONE-WAY FARE CHECK - BELOW 130KM] ${calcData.name} - ${calcData.pickupLocation} to ${calcData.dropLocation}`
+          : `[ONE-WAY FARE LEAD - 130KM+] ${calcData.name} - ${calcData.pickupLocation} to ${calcData.dropLocation}`
+      }
+
+      const templateParams = {
+        subject: emailSubject,
+        service_type: `[Fare Checked Lead] ${tripName}`,
+        booking_type: `[Inquiry Lead] ${tripName}`,
+        trip_type: tripName,
+        customer_name: String(calcData.name || 'N/A'),
+        customer_phone: String(calcData.phone || 'N/A'),
+        vehicle_type: String(calcData.vehicleType || 'N/A'),
+        car_type: String(calcData.vehicleType || 'N/A'),
+        pickup_location: String(calcData.pickupLocation || 'N/A'),
+        drop_location: String(calcData.dropLocation || 'Local'),
+        google_maps_link: calcData.pickupLocation && calcData.dropLocation
+          ? `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(calcData.pickupLocation)}&destination=${encodeURIComponent(calcData.dropLocation)}`
+          : 'N/A',
+        booking_date: String(calcData.date || 'N/A'),
+        service_date: String(calcData.date || 'N/A'),
+        date: String(calcData.date || 'N/A'),
+        return_date: String(calcData.returnDate || 'N/A'),
+        booking_time: String(calcData.fullTime || calcData.time || 'N/A'),
+        service_time: String(calcData.fullTime || calcData.time || 'N/A'),
+        time: String(calcData.fullTime || calcData.time || 'N/A'),
+        base_fare: `₹${(calcData.baseFare || 0).toLocaleString('en-IN')}`,
+        bata: `₹${(calcData.bata || 0).toLocaleString('en-IN')}`,
+        final_amount: `₹${(calcData.finalAmount || 0).toLocaleString('en-IN')}`,
+        total_amount: `₹${(calcData.finalAmount || 0).toLocaleString('en-IN')}`,
+        distance: `${calcData.distance || 0} km`,
+        flight_number: flightNumber,
+        flightNumber: flightNumber,
+        airline_name: airline,
+        airline: airline,
+        passenger_count: passengerCount,
+        passengerCount: passengerCount,
+        flight_details: flightDetailsStr,
+        comments: leadComments,
+        customer_notes: leadComments,
+        additional_notes: leadComments
+      }
+
+      emailjs.send(serviceId, templateId, templateParams, publicKey).catch(err => {
+        console.warn('Fare estimate lead notification error (non-fatal):', err)
+      })
+    } catch (e) {
+      console.warn('Fare estimate lead send error:', e)
+    }
+  }
+
   const handleActingDriverSubmit = async (e) => {
     e.preventDefault()
     if (validateActingDriverForm()) {
@@ -700,6 +776,7 @@ const BookingForm = ({
         
         trackBookingEvent('fare_calculated', finalCalculation)
         trackBookingEvent('booking_submit', finalCalculation)
+        sendFareEstimateLead(finalCalculation)
         setShowSummary(true)
       } catch (error) {
         console.error('Calculation error:', error)
@@ -893,47 +970,120 @@ const BookingForm = ({
     return Object.keys(newErrors).length === 0
   }
 
-  const calculateFare = async (tripType = 'one-way') => {
-    const data = tripType === 'round-trip' ? roundTripData : oneWayData
-    const distance = await calculateDistance(
-      data.pickupLocation, 
-      data.dropLocation,
-      data.pickupLocationCoords,
-      data.dropLocationCoords
-    )
-    const rates = tripType === 'round-trip' ? roundTripRates : oneWayRates
-    const ratePerKm = rates[data.vehicleType] || 0
+  const calculateFare = async (tripType = 'one-way', customPayload = null) => {
+    const data = tripType === 'round-trip' ? roundTripData : oneWayData;
+    const numDays = Math.max(1, parseInt(data?.days) || 1);
     
-    // Get correct bata based on vehicle type
-    const bata = bataRates[data.vehicleType] || 400
-    
-    if (tripType === 'round-trip') {
-      // Round trip calculation - total distance is Up & Down (one-way distance * 2)
-      const roundTripTotalDistance = distance * 2
-      const minKm = 250 // Minimum 250 kms/day for round trip
-      const actualDistance = Math.max(roundTripTotalDistance, minKm)
-      const baseFare = actualDistance * ratePerKm
-      const finalAmount = baseFare + bata
-      return { distance: roundTripTotalDistance, baseFare, bata, finalAmount, minKm, actualDistance }
-    } else {
-      // One-way calculation - minimum 130 km billing limit rule
-      const minKm = 130
-      const actualDistance = Math.round(distance)
-      const billableDistance = Math.max(actualDistance, minKm)
-      const baseFare = billableDistance * ratePerKm
-      const finalAmount = baseFare + bata
-      return { 
-        distance: actualDistance, // Real distance from Google Maps e.g. 43 km
-        billableDistance,          // Minimum billable distance e.g. 130 km
-        baseFare, 
-        bata, 
-        finalAmount, 
-        minKm, 
-        isMinKmApplied: actualDistance < minKm,
-        actualDistance 
+    // Prepare payload for backend API
+    const payload = customPayload || {
+      origin: data?.pickupLocation || '',
+      destination: data?.dropLocation || '',
+      vehicle: data?.vehicleType || 'SEDAN',
+      tripType: tripType === 'round-trip' ? 'round-trip' : 'one-way',
+      days: numDays,
+    };
+
+    // Attempt Authoritative Backend Calculation First
+    try {
+      const backendFare = await apiClient.calculateFare(payload);
+      const isRoundTrip = tripType === 'round-trip';
+      
+      let finalBata = backendFare.bata;
+      let finalAmount = backendFare.finalAmount;
+
+      // Adjust round trip bata if backend returns single-day bata
+      if (isRoundTrip && numDays > 1 && backendFare.bata === 400 && backendFare.finalAmount === backendFare.baseFare + 400) {
+        finalBata = backendFare.bata * numDays;
+        finalAmount = backendFare.baseFare + finalBata;
+      }
+      
+      // Log Analytics Event: backend_fare_success
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          event: 'backend_fare_success',
+          serviceType: backendFare.tripType || tripType,
+          finalAmount: finalAmount,
+        });
+      }
+
+      return {
+        distance: Math.round(backendFare.routeDistanceKm),
+        actualDistance: Math.round(backendFare.routeDistanceKm),
+        billableDistance: Math.round(backendFare.billableDistanceKm),
+        baseFare: Math.round(backendFare.baseFare),
+        bata: Math.round(finalBata),
+        finalAmount: Math.round(finalAmount),
+        minKm: backendFare.minimumBillingKm,
+        isMinKmApplied: backendFare.isMinKmApplied,
+        ratePerKm: backendFare.ratePerKm,
+        isBackendAuthoritative: true,
+        fareSource: 'backend_success'
+      };
+    } catch (backendError) {
+      console.warn('Backend fare calculation unavailable, using local calculation fallback:', backendError.message);
+      
+      // Log Analytics Event: backend_fare_failure & fallback_fare_used
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          event: 'backend_fare_failure',
+          error: backendError.message,
+        });
+        window.dataLayer.push({
+          event: 'fallback_fare_used',
+          serviceType: tripType,
+        });
+      }
+
+      // Existing Local Calculation Fallback
+      const distance = await calculateDistance(
+        data.pickupLocation, 
+        data.dropLocation,
+        data.pickupLocationCoords,
+        data.dropLocationCoords
+      );
+      const rates = tripType === 'round-trip' ? roundTripRates : oneWayRates;
+      const ratePerKm = rates[data.vehicleType] || 0;
+      const baseBataPerDay = bataRates[data.vehicleType] || 400;
+      
+      if (tripType === 'round-trip') {
+        const roundTripTotalDistance = Math.round(distance * 2);
+        const minKm = 250 * numDays;
+        const actualDistance = Math.max(roundTripTotalDistance, minKm);
+        const baseFare = actualDistance * ratePerKm;
+        const totalBata = baseBataPerDay * numDays;
+        const finalAmount = baseFare + totalBata;
+        return {
+          distance: roundTripTotalDistance,
+          billableDistance: actualDistance,
+          baseFare,
+          bata: totalBata,
+          finalAmount,
+          minKm,
+          actualDistance,
+          isBackendAuthoritative: false,
+          fareSource: 'fallback_used'
+        };
+      } else {
+        const minKm = 130;
+        const actualDistance = Math.round(distance);
+        const billableDistance = Math.max(actualDistance, minKm);
+        const baseFare = billableDistance * ratePerKm;
+        const finalAmount = baseFare + baseBataPerDay;
+        return { 
+          distance: actualDistance,
+          billableDistance,
+          baseFare, 
+          bata: baseBataPerDay, 
+          finalAmount, 
+          minKm, 
+          isMinKmApplied: actualDistance < minKm,
+          actualDistance,
+          isBackendAuthoritative: false,
+          fareSource: 'fallback_used'
+        };
       }
     }
-  }
+  };
 
   const scrollToFirstError = (errs) => {
     const errorKeys = Object.keys(errs)
@@ -977,8 +1127,38 @@ const BookingForm = ({
           fare: finalCalculation.finalAmount,
           trip_type: 'one-way'
         })
+        trackEvent('one_way_fare_checked', {
+          service: 'one_way_taxi',
+          origin: finalCalculation.pickupLocation,
+          destination: finalCalculation.dropLocation,
+          route_distance: finalCalculation.distance,
+          billable_distance: finalCalculation.billableDistance || Math.max(finalCalculation.distance, 130),
+          vehicle: finalCalculation.vehicleType,
+          fare: finalCalculation.finalAmount,
+          minimum_distance_applied: finalCalculation.isMinKmApplied || false
+        })
+
+        if (finalCalculation.distance < 130 || finalCalculation.isMinKmApplied) {
+          trackEvent('one_way_minimum_distance_notice', {
+            service: 'one_way_taxi',
+            origin: finalCalculation.pickupLocation,
+            destination: finalCalculation.dropLocation,
+            route_distance: finalCalculation.distance,
+            billable_distance: finalCalculation.billableDistance || 130
+          })
+        } else if (finalCalculation.distance >= 130 && finalCalculation.name && finalCalculation.phone) {
+          trackEvent('one_way_eligible_lead', {
+            service: 'one_way_taxi',
+            origin: finalCalculation.pickupLocation,
+            destination: finalCalculation.dropLocation,
+            route_distance: finalCalculation.distance,
+            billable_distance: finalCalculation.billableDistance || finalCalculation.distance
+          })
+        }
+
         trackBookingEvent('fare_calculated', finalCalculation)
         trackBookingEvent('booking_submit', finalCalculation)
+        sendFareEstimateLead(finalCalculation)
         setShowSummary(true)
       } catch (err) {
         console.error('Error calculating One-Way fare:', err)
@@ -1047,6 +1227,7 @@ const BookingForm = ({
         })
         trackBookingEvent('fare_calculated', finalCalculation)
         trackBookingEvent('booking_submit', finalCalculation)
+        sendFareEstimateLead(finalCalculation)
         setShowSummary(true)
       } catch (err) {
         console.error('Error calculating Round-Trip fare:', err)
@@ -1121,43 +1302,88 @@ const BookingForm = ({
   }
 
   const calculateRecoveryFare = async () => {
-    const routeInfo = await calculateRouteDetails(recoveryData.pickupLocation, recoveryData.dropLocation, recoveryData.pickupLocationCoords, recoveryData.dropLocationCoords)
-    const oneWay = routeInfo.distance
-    const distance = oneWay * 2 // Up & Down
-
-    const minCharge = recoveryData.vehicleType === 'Flatbed' ? 2500 : 2000
-    const perKmRate = recoveryData.vehicleType === 'Flatbed' ? 35 : 30
+    const isFlatbed = recoveryData.vehicleType === 'Flatbed';
     
-    let baseFare = minCharge
-    if (distance > 30) {
-      baseFare += (distance - 30) * perKmRate
-    }
+    // Attempt Authoritative Backend API Calculation First
+    try {
+      const backendFare = await apiClient.calculateRecoveryFare({
+        recoveryType: isFlatbed ? 'FLATBED' : 'UNDER_WHEEL',
+        origin: recoveryData.pickupLocation || 'Chennai',
+        destination: recoveryData.dropLocation || 'Tambaram'
+      });
 
-    // Night charges logic
-    let nightSurcharge = 0
-    let isNight = false
-    if (recoveryData.time) {
-      const { hours } = parse24HourTime(recoveryData.time, recoveryData.timePeriod)
-
-      // 9:00 PM (21) to 6:00 AM (6)
-      if (hours >= 21 || hours < 6) {
-        isNight = true
-        nightSurcharge = baseFare * 0.20
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          event: 'backend_fare_success',
+          serviceType: 'recovery_services',
+          finalAmount: backendFare.finalAmount
+        });
       }
-    }
 
-    const finalAmount = baseFare + nightSurcharge
-    
-    return {
-      distance,
-      baseFare,
-      nightSurcharge,
-      finalAmount,
-      isNight,
-      actualDistance: distance,
-      extraNote: 'Fares shown are approximate estimates based on pickup-to-drop distance. Total kilometer calculation includes base-to-pickup and return-to-base distance (deadhead km). Final fare, tolls, and hill charges will be determined by the operator at the time of service.'
+      return {
+        distance: Math.round(backendFare.routeDistanceKm || 0),
+        baseFare: Math.round(backendFare.baseFare || backendFare.finalAmount),
+        nightSurcharge: Math.round(backendFare.bata || 0),
+        finalAmount: Math.round(backendFare.finalAmount),
+        isNight: false,
+        actualDistance: Math.round(backendFare.routeDistanceKm || 0),
+        isBackendAuthoritative: true,
+        fareSource: 'backend_success',
+        extraNote: 'Authoritative recovery fare estimate calculated by SAMAYAS API.'
+      };
+    } catch (backendErr) {
+      console.warn('Backend recovery calculation fallback activated:', backendErr.message);
+
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({ event: 'backend_fare_failure', error: backendErr.message });
+        window.dataLayer.push({ event: 'fallback_fare_used', serviceType: 'recovery_services' });
+      }
+
+      // Phase 7 Authoritative Recovery Fallback Calculation
+      const routeInfo = await calculateRouteDetails(
+        recoveryData.pickupLocation, 
+        recoveryData.dropLocation, 
+        recoveryData.pickupLocationCoords, 
+        recoveryData.dropLocationCoords
+      );
+      const oneWay = routeInfo.distance;
+      const distance = Math.round(oneWay * 2); // Round trip up & down distance
+
+      const minCharge = isFlatbed ? 2500 : 2000;
+      const excessRate = isFlatbed ? 80 : 60;
+      const baseDistanceLimit = 10;
+      
+      let baseFare = minCharge;
+      if (distance > baseDistanceLimit) {
+        baseFare += (distance - baseDistanceLimit) * excessRate;
+      }
+
+      // Night surcharge logic (20% for 9 PM to 6 AM)
+      let nightSurcharge = 0;
+      let isNight = false;
+      if (recoveryData.time) {
+        const { hours } = parse24HourTime(recoveryData.time, recoveryData.timePeriod);
+        if (hours >= 21 || hours < 6) {
+          isNight = true;
+          nightSurcharge = Math.round(baseFare * 0.20);
+        }
+      }
+
+      const finalAmount = Math.round(baseFare + nightSurcharge);
+      
+      return {
+        distance,
+        baseFare: Math.round(baseFare),
+        nightSurcharge,
+        finalAmount,
+        isNight,
+        actualDistance: distance,
+        isBackendAuthoritative: false,
+        fareSource: 'fallback_used',
+        extraNote: 'Authoritative SAMAYAS recovery fare formula: First 10 km included in base charge (Under-wheel ₹2,000 / Flatbed ₹2,500). Excess distance billed at ₹60/km (Under-wheel) / ₹80/km (Flatbed).'
+      };
     }
-  }
+  };
 
   const handleRecoverySubmit = async (e) => {
     e.preventDefault()
@@ -1182,6 +1408,7 @@ const BookingForm = ({
         })
         trackBookingEvent('fare_calculated', finalCalculation)
         trackBookingEvent('booking_submit', finalCalculation)
+        sendFareEstimateLead(finalCalculation)
         setShowSummary(true)
       } catch (error) {
         console.error('Calculation error:', error)
@@ -1224,9 +1451,69 @@ const BookingForm = ({
   }
 
   const calculateToursFare = async () => {
-    const { packageType, vehicleCategory, days, pickupLocation, dropLocation } = toursData
+    const { packageType, vehicleCategory, days, pickupLocation, dropLocation, packageId } = toursData
     const numDays = Math.max(1, parseInt(days) || 1)
     
+    // Map vehicle string to backend vehicle enum
+    const mapVehicleTier = (cat = '') => {
+      const s = String(cat).toUpperCase();
+      if (s.includes('HATCH')) return 'HATCHBACK';
+      if (s.includes('HYCROSS')) return 'INNOVA HYCROSS';
+      if (s.includes('INNOVA')) return 'INNOVA';
+      if (s.includes('SUV')) return 'SUV';
+      return 'SEDAN';
+    };
+
+    const targetPackageId = packageId || (dropLocation && dropLocation.toLowerCase().includes('ooty') ? 'ooty_2d1n' : 'ooty_2d1n');
+    const vehicleTier = mapVehicleTier(vehicleCategory);
+
+    // Attempt Authoritative Backend API Calculation First
+    try {
+      const backendFare = await apiClient.calculateToursFare({
+        packageId: targetPackageId,
+        vehicle: vehicleTier
+      });
+
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          event: 'backend_fare_success',
+          serviceType: 'tours_and_travels',
+          finalAmount: backendFare.finalAmount
+        });
+      }
+
+      return {
+        distance: Math.round(backendFare.routeDistanceKm || 0),
+        baseFare: Math.round(backendFare.baseFare || backendFare.finalAmount),
+        bata: Math.round(backendFare.bata || 0),
+        finalAmount: Math.round(backendFare.finalAmount),
+        actualDistance: Math.round(backendFare.routeDistanceKm || 0),
+        isBackendAuthoritative: true,
+        fareSource: 'backend_success',
+        extraNote: 'Authoritative tour package fare estimated by SAMAYAS API.'
+      };
+    } catch (backendErr) {
+      const isRejection = backendErr.code === 'UNSUPPORTED_VEHICLE_FOR_PACKAGE' || backendErr.status === 422;
+      console.warn(isRejection ? 'Backend tours package rejection:' : 'Backend tours calculation fallback activated:', backendErr.message);
+
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        if (isRejection) {
+          window.dataLayer.push({ event: 'backend_fare_rejected', code: backendErr.code, message: backendErr.message });
+        } else {
+          window.dataLayer.push({ event: 'backend_fare_failure', error: backendErr.message });
+          window.dataLayer.push({ event: 'fallback_fare_used', serviceType: 'tours_and_travels' });
+        }
+      }
+
+      if (isRejection) {
+        return {
+          isBackendAuthoritative: true,
+          fareSource: 'backend_rejected',
+          errorMsg: backendErr.message || 'Selected vehicle tier is not supported for this tour package.'
+        };
+      }
+    }
+
     let baseFare = 0
     let distance = 0
     let bata = 0
@@ -1305,14 +1592,16 @@ const BookingForm = ({
       extraNote = `Bus & Group Event Rental (${numDays} Day(s) @ min 300 KM/day). Driver Peta: Rs ${bata} (Rs ${r.peta}/day). Rate: Rs ${r.rateKm}/km.`
     }
 
-    const finalAmount = baseFare + bata
+    const finalAmount = Math.round(baseFare + bata)
 
     return {
-      distance,
-      baseFare,
-      bata,
+      distance: Math.round(distance),
+      baseFare: Math.round(baseFare),
+      bata: Math.round(bata),
       finalAmount,
-      actualDistance: distance,
+      actualDistance: Math.round(distance),
+      isBackendAuthoritative: false,
+      fareSource: 'fallback_used',
       extraNote: `${extraNote} Exclusions: Toll charges, Interstate Permit fees, and Parking charges are extra. Day Calculation: Calendar day system (12:00 AM to 11:59 PM) applies for Driver Allowance.`
     }
   }
@@ -1341,6 +1630,7 @@ const BookingForm = ({
         })
         trackBookingEvent('fare_calculated', finalCalculation)
         trackBookingEvent('booking_submit', finalCalculation)
+        sendFareEstimateLead(finalCalculation)
         setShowSummary(true)
       } catch (error) {
         console.error('Calculation error:', error)
@@ -1349,6 +1639,76 @@ const BookingForm = ({
       }
     }
   }
+
+  const calculateDriverFare = async (driverDataPayload = null) => {
+    const data = driverDataPayload || otherServiceData;
+    
+    // Attempt Authoritative Backend API Calculation First
+    try {
+      const backendFare = await apiClient.calculateActingDriverFare({
+        packageId: data.packageId || 'LOCAL_4H',
+        durationHours: parseInt(data.durationHours || data.hours) || 4,
+        isNightShift: Boolean(data.isNightShift || data.isNight),
+        providesFood: data.providesFood !== false
+      });
+
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          event: 'backend_fare_success',
+          serviceType: 'acting_driver',
+          finalAmount: backendFare.finalAmount
+        });
+      }
+
+      return {
+        baseFare: Math.round(backendFare.baseFare || backendFare.finalAmount),
+        overtime: Math.round(backendFare.overtime || 0),
+        nightSurcharge: Math.round(backendFare.bata || 0),
+        foodAllowance: 0,
+        finalAmount: Math.round(backendFare.finalAmount),
+        isBackendAuthoritative: true,
+        fareSource: 'backend_success'
+      };
+    } catch (backendErr) {
+      console.warn('Backend driver calculation fallback activated:', backendErr.message);
+
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({ event: 'backend_fare_failure', error: backendErr.message });
+        window.dataLayer.push({ event: 'fallback_fare_used', serviceType: 'acting_driver' });
+      }
+
+      // Phase 7 Authoritative Acting Driver Fallback Rules:
+      // Local 4H = ₹500, Out-of-City 4H = ₹600, Full-Day 10H = ₹1,100, One-Way Drop 50km = ₹1,200, Outstation Highway 6H/150km = ₹800
+      // Overtime = ₹180/hr, Night = ₹150, Food = ₹150
+      const packageType = String(data.packageType || data.serviceType || '').toLowerCase();
+      let baseFare = 500;
+      if (packageType.includes('out_of_city') || packageType.includes('out-of-city')) {
+        baseFare = 600;
+      } else if (packageType.includes('10h') || packageType.includes('full') || packageType.includes('full-day')) {
+        baseFare = 1100;
+      } else if (packageType.includes('drop') || packageType.includes('one-way')) {
+        baseFare = 1200;
+      } else if (packageType.includes('highway') || packageType.includes('outstation')) {
+        baseFare = 800;
+      }
+
+      const extraHours = Math.max(0, (parseInt(data.hours) || 4) - 4);
+      const overtime = extraHours * 180;
+      const nightSurcharge = data.isNight ? 150 : 0;
+      const foodAllowance = data.foodProvided === false ? 150 : 0;
+      const finalAmount = baseFare + overtime + nightSurcharge + foodAllowance;
+
+      return {
+        baseFare,
+        overtime,
+        nightSurcharge,
+        foodAllowance,
+        finalAmount,
+        isBackendAuthoritative: false,
+        fareSource: 'fallback_used'
+      };
+    }
+  };
 
   const handleOtherServiceSubmit = async (e) => {
     e.preventDefault()
@@ -1421,7 +1781,31 @@ const BookingForm = ({
         date: serviceDate
       }
       trackBookingEvent('booking_submit', otherBookingPayload)
-      await emailjs.send(serviceId, templateId, templateParams, publicKey)
+      let backendBooking = null;
+      try {
+        backendBooking = await apiClient.createBooking({
+          customerName,
+          customerPhone,
+          origin: pickupLocation,
+          destination: dropLocation,
+          vehicleType,
+          tripType: isRoundTrip ? 'round-trip' : 'one-way',
+          travelDate: bookingDate,
+          travelTime: formattedTime,
+          notes: finalComments,
+        });
+        if (backendBooking?.bookingReference) {
+          templateParams.booking_reference = backendBooking.bookingReference;
+          templateParams.subject = `${templateParams.subject} (${backendBooking.bookingReference})`;
+        }
+      } catch (backendErr) {
+        console.warn('Backend booking API non-blocking fallback:', backendErr.message);
+      }
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey).catch((e) => console.warn('EmailJS delivery attempt notice:', e));
+      
+      const referenceId = backendBooking?.bookingReference || `SAM-${Date.now()}`;
+      trackBookingEvent('booking_request_submitted', { ...calculatedData, booking_reference: referenceId });
       
       funnelStep.current = 'booking_completed'
       trackBookingEvent('booking_completed', { ...otherBookingPayload, booking_id: `bkg_${Date.now()}` })
@@ -1459,6 +1843,19 @@ const BookingForm = ({
       
       const tripName = isRecovery ? 'Recovery Service' : isActingDriver ? 'Acting Driver' : isRoundTrip ? 'Round Trip Taxi' : 'One-Way Taxi'
       const shortTripType = isRecovery ? 'Recovery' : isActingDriver ? 'Acting Driver' : isRoundTrip ? 'Round Trip' : 'One-Way'
+
+      // Fire booking intent event
+      if (calculatedData?.tripType === 'one-way' || !calculatedData?.tripType) {
+        trackEvent('one_way_booking_intent', {
+          service: 'one_way_taxi',
+          origin: calculatedData?.pickupLocation || 'N/A',
+          destination: calculatedData?.dropLocation || 'N/A',
+          route_distance: calculatedData?.distance || 0,
+          billable_distance: calculatedData?.billableDistance || Math.max(calculatedData?.distance || 0, 130),
+          vehicle: calculatedData?.vehicleType || 'N/A',
+          fare: calculatedData?.finalAmount || 0
+        })
+      }
       
       // Use appropriate template based on trip type
       const templateId = isRecovery ? OTHER_SERVICES_TEMPLATE_ID : isRoundTrip ? ROUND_TRIP_TEMPLATE_ID : ONE_WAY_TAXI_TEMPLATE_ID
@@ -1506,11 +1903,21 @@ const BookingForm = ({
       const finalAmount = calculatedData?.finalAmount || 0
       const distance = calculatedData?.distance || 0
 
+      const flightNumber = String(calculatedData?.flightNumber || oneWayData.flightNumber || 'N/A')
+      const airline = String(calculatedData?.airline || oneWayData.airline || 'N/A')
+      const passengerCount = String(calculatedData?.passengerCount || oneWayData.passengerCount || 'N/A')
+      const hasFlightInfo = flightNumber !== 'N/A' || airline !== 'N/A'
+      const flightDetailsStr = hasFlightInfo ? `Flight: ${flightNumber} | Airline: ${airline} | Passengers: ${passengerCount}` : 'N/A'
+
+      const finalComments = hasFlightInfo
+        ? `${comments === 'No additional comments' ? '' : comments + ' | '}Flight Details: ${flightDetailsStr}`
+        : comments
+
       // Build template params - ALWAYS include return_date (empty string for one-way)
       // EmailJS requires all variables referenced in {{#if return_date}} to be present
       const templateParams = {
         // Email subject
-        subject: `${tripName} Booking Request`,
+        subject: hasFlightInfo ? `${tripName} Booking (${flightNumber} - ${airline})` : `${tripName} Booking Request`,
         
         // Service and booking type
         service_type: tripName,
@@ -1548,10 +1955,19 @@ const BookingForm = ({
         total_amount: `₹${finalAmount.toLocaleString('en-IN')}`,
         distance: `${distance} km`,
         
+        // Flight & Arrival Details
+        flight_number: flightNumber,
+        flightNumber: flightNumber,
+        airline_name: airline,
+        airline: airline,
+        passenger_count: passengerCount,
+        passengerCount: passengerCount,
+        flight_details: flightDetailsStr,
+        
         // Additional comments/notes
-        comments: comments,
-        customer_notes: comments,
-        additional_notes: comments
+        comments: finalComments,
+        customer_notes: finalComments,
+        additional_notes: finalComments
       }
 
       // Log template params for debugging (remove in production)
@@ -1985,87 +2401,6 @@ const BookingForm = ({
                               <option value="7+ Passengers (Traveller)">7+ Passengers (Traveller)</option>
                             </select>
                           </div>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Acting Driver Specific Inputs */}
-                    {isDriver && (
-                      <div className="bg-primary-900/40 p-4 rounded-xl border border-accent-500/20 space-y-3">
-                        <div className="flex items-center space-x-2 text-accent-500 font-bold text-xs uppercase tracking-wider">
-                          <User className="w-4 h-4" />
-                          <span>Acting Driver Service & Vehicle Options</span>
-                        </div>
-                        <div className={isSidebar ? 'grid grid-cols-1 gap-3' : 'grid md:grid-cols-3 gap-3'}>
-                          <div>
-                            <label className="block text-xs font-semibold text-white/90 mb-1">
-                              Driver Service Type *
-                            </label>
-                            <select
-                              name="driverType"
-                              value={oneWayData.driverType || 'Hourly Driver'}
-                              onChange={handleOneWayChange}
-                              className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none font-semibold"
-                            >
-                              <option value="Hourly Driver">Hourly Driver (Local)</option>
-                              <option value="Outstation Driver">Outstation Driver (Highway)</option>
-                              <option value="Night Driver">Late Night & Party Driver</option>
-                              <option value="Senior Citizen Driver">Senior Citizen Driver</option>
-                              <option value="Wedding Driver">Wedding & Marriage Chauffeur</option>
-                              <option value="Corporate Driver">Corporate Executive Chauffeur</option>
-                              <option value="Personal Chauffeur">Personal Chauffeur</option>
-                            </select>
-                          </div>
-
-                          <div>
-                            <label className="block text-xs font-semibold text-white/90 mb-1">
-                              Estimated Duration *
-                            </label>
-                            <select
-                              name="tripDuration"
-                              value={oneWayData.tripDuration || '2 Hours'}
-                              onChange={handleOneWayChange}
-                              className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none font-semibold"
-                            >
-                              <option value="2 Hours">2 Hours (Minimum)</option>
-                              <option value="4 Hours">4 Hours Package</option>
-                              <option value="8 Hours">8 Hours Package</option>
-                              <option value="10 Hours (Full Day)">10 Hours (Full Day)</option>
-                              <option value="1 Day Outstation">1 Day Outstation</option>
-                              <option value="Multi-Day Road Trip">Multi-Day Road Trip</option>
-                            </select>
-                          </div>
-
-                          <div>
-                            <label className="block text-xs font-semibold text-white/90 mb-1">
-                              Transmission Type *
-                            </label>
-                            <select
-                              name="transmissionType"
-                              value={oneWayData.transmissionType || 'Manual'}
-                              onChange={handleOneWayChange}
-                              className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none font-semibold"
-                            >
-                              <option value="Manual">Manual Transmission</option>
-                              <option value="Automatic">Automatic Transmission</option>
-                              <option value="Hybrid / EV">Hybrid / Electric Vehicle</option>
-                              <option value="Luxury Car">Luxury Car (BMW/Merc/Audi)</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <div>
-                          <label className="block text-xs font-semibold text-white/90 mb-1">
-                            Special Instructions / Car Model
-                          </label>
-                          <input
-                            type="text"
-                            name="specialInstructions"
-                            value={oneWayData.specialInstructions || ''}
-                            onChange={handleOneWayChange}
-                            placeholder="e.g. Innova Hycross Auto, Need wheelchair assistance for parents"
-                            className="w-full px-3 py-2 bg-white rounded-lg text-xs border border-gray-300 text-gray-900 focus:ring-2 focus:ring-accent-500 outline-none"
-                          />
                         </div>
                       </div>
                     )}

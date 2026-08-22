@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import { Clock, ShieldCheck, Heart, Award, Building2, Moon, Sparkles, ChevronRight, UserCheck } from 'lucide-react'
 
 const CATEGORY_ITEMS = [
-  { slug: 'hourly-driver', name: 'Hourly Acting Driver', desc: 'Short 2 to 4 hour local errands, shopping & hospital visits in your car.', icon: Clock, rate: 'From ₹350' },
-  { slug: 'outstation-driver', name: 'Outstation Highway Driver', desc: 'Long-distance intercity trips & mountain ghat road travel across South India.', icon: ShieldCheck, rate: '₹900 / Day Bata' },
-  { slug: 'night-driver', name: 'Late Night Party Driver', desc: 'Designated 24/7 night driver for safe return after evening events & pub outings.', icon: Moon, rate: 'From ₹450' },
+  { slug: 'hourly-driver', name: 'Local City Driver (4 Hours)', desc: 'Local city errands, shopping & hospital visits in your car (Up to 20 km + Food).', icon: Clock, rate: 'From ₹500' },
+  { slug: 'outstation-driver', name: 'Outstation Highway Driver', desc: 'Outstation round trip (min 6 hrs / 150 km + food).', icon: ShieldCheck, rate: 'From ₹800' },
+  { slug: 'night-driver', name: 'Late Night Party Driver', desc: 'Designated 24/7 night driver for safe return after evening events & pub outings.', icon: Moon, rate: 'From ₹500' },
   { slug: 'wedding-driver', name: 'Wedding & Marriage Driver', desc: 'Uniformed chauffeurs for decorated marriage cars, VIPs & guest shuttles.', icon: Sparkles, rate: 'From ₹1,200' },
   { slug: 'corporate-driver', name: 'Corporate Chauffeur', desc: 'Refined executive drivers for CEO commuting & corporate client mobility.', icon: Building2, rate: 'From ₹1,400' },
   { slug: 'personal-chauffeur', name: 'Dedicated Personal Chauffeur', desc: 'Private assigned driver for daily family commute & household car maintenance.', icon: UserCheck, rate: 'From ₹1,100' },
-  { slug: 'driver-for-senior-citizens', name: 'Senior Citizen Driver', desc: 'Patient, gentle driver with door-to-door arm support & wheelchair loading.', icon: Heart, rate: 'From ₹400' },
-  { slug: 'designated-driver', name: 'Designated Event Driver', desc: 'Safe return designated driver for club parties & late night functions.', icon: Award, rate: 'From ₹450' }
+  { slug: 'driver-for-senior-citizens', name: 'Senior Citizen Driver', desc: 'Patient, gentle driver with door-to-door arm support & wheelchair loading.', icon: Heart, rate: 'From ₹500' },
+  { slug: 'designated-driver', name: 'Designated Event Driver', desc: 'Safe return designated driver for club parties & late night functions.', icon: Award, rate: 'From ₹500' }
 ]
 
 const DriverCategories = ({ categories = [], districtName = '' }) => {

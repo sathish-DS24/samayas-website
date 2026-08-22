@@ -49,86 +49,106 @@ const FareTable = ({ districtName, fareTable }) => {
                   <th className="px-5 py-3.5 font-semibold text-center">Distance</th>
                   <th className="px-5 py-3.5 font-semibold text-center">Travel Time</th>
                   <th className="px-5 py-3.5 font-semibold text-center">
-                    <span className="flex items-center justify-center gap-1">Hatchback</span>
+                    <span className="flex items-center justify-center gap-1">Hatchback (Inc. Bata)</span>
                   </th>
                   <th className="px-5 py-3.5 font-semibold text-center">
-                    <span className="flex items-center justify-center gap-1">Sedan</span>
+                    <span className="flex items-center justify-center gap-1">Sedan (Inc. Bata)</span>
                   </th>
                   <th className="px-5 py-3.5 font-semibold text-center">
-                    <span className="flex items-center justify-center gap-1">SUV</span>
+                    <span className="flex items-center justify-center gap-1">SUV (Inc. Bata)</span>
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {fareTable.map((row, i) => (
-                  <tr
-                    key={row.to}
-                    className={`border-t border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-accent-500/5 transition-colors`}
-                  >
-                    <td className="px-5 py-3.5">
-                      <span className="font-medium text-gray-800">{districtName} → {row.to}</span>
-                    </td>
-                    <td className="px-5 py-3.5 text-center text-gray-600">{row.distanceKm} km</td>
-                    <td className="px-5 py-3.5 text-center text-gray-600">{formatTime(row.timeHours)}</td>
-                    <td className="px-5 py-3.5 text-center">
-                      <span className="font-semibold text-green-700">₹{row.hatchback.toLocaleString('en-IN')}</span>
-                    </td>
-                    <td className="px-5 py-3.5 text-center">
-                      <span className="font-semibold text-blue-700">₹{row.sedan.toLocaleString('en-IN')}</span>
-                    </td>
-                    <td className="px-5 py-3.5 text-center">
-                      <span className="font-semibold text-purple-700">₹{row.suv.toLocaleString('en-IN')}</span>
-                    </td>
-                  </tr>
-                ))}
+                {fareTable.map((row, i) => {
+                  const billableKm = Math.max(row.distanceKm || 130, 130)
+                  const hatchbackTotal = billableKm * 15 + 400
+                  const sedanTotal = billableKm * 15 + 400
+                  const suvTotal = billableKm * 20 + 400
+
+                  return (
+                    <tr
+                      key={row.to}
+                      className={`border-t border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-accent-500/5 transition-colors`}
+                    >
+                      <td className="px-5 py-3.5">
+                        <span className="font-medium text-gray-800">{districtName} → {row.to}</span>
+                      </td>
+                      <td className="px-5 py-3.5 text-center text-gray-600">{row.distanceKm} km</td>
+                      <td className="px-5 py-3.5 text-center text-gray-600">{formatTime(row.timeHours)}</td>
+                      <td className="px-5 py-3.5 text-center">
+                        <span className="font-semibold text-green-700 block">₹{hatchbackTotal.toLocaleString('en-IN')}</span>
+                        <span className="text-[10px] text-gray-400 font-normal">₹{billableKm * 15} + ₹400</span>
+                      </td>
+                      <td className="px-5 py-3.5 text-center">
+                        <span className="font-semibold text-blue-700 block">₹{sedanTotal.toLocaleString('en-IN')}</span>
+                        <span className="text-[10px] text-gray-400 font-normal">₹{billableKm * 15} + ₹400</span>
+                      </td>
+                      <td className="px-5 py-3.5 text-center">
+                        <span className="font-semibold text-purple-700 block">₹{suvTotal.toLocaleString('en-IN')}</span>
+                        <span className="text-[10px] text-gray-400 font-normal">₹{billableKm * 20} + ₹400</span>
+                      </td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-gray-400 mt-3 ml-1">
-            * Fares are approximate and may vary by exact route, traffic, and toll charges. Inclusive of driver charges.
+          <p className="text-xs text-gray-500 mt-3 ml-1 font-medium">
+            * Fares shown above are <strong>TOTAL FARES (Base Fare + ₹400 Driver Bata Included)</strong>. Standard minimum 130 km billing applies for trips under 130 km. Tolls & parking extra where applicable.
           </p>
         </motion.div>
 
         {/* Mobile cards */}
         <div className="md:hidden space-y-3">
-          {fareTable.map((row, i) => (
-            <motion.div
-              key={row.to}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 space-y-3"
-            >
-              <div className="flex items-center justify-between">
-                <h3 className="font-semibold text-gray-800 flex items-center gap-1.5">
-                  {districtName}
-                  <ArrowRight className="w-3.5 h-3.5 text-gray-400" />
-                  {row.to}
-                </h3>
-              </div>
-              <div className="flex gap-4 text-xs text-gray-500">
-                <span>{row.distanceKm} km</span>
-                <span>{formatTime(row.timeHours)}</span>
-              </div>
-              <div className="grid grid-cols-3 gap-2">
-                <div className="text-center p-2 bg-green-50 rounded-lg">
-                  <p className="text-[10px] text-gray-500 uppercase tracking-wider">Hatch</p>
-                  <p className="font-bold text-green-700 text-sm">₹{row.hatchback.toLocaleString('en-IN')}</p>
+          {fareTable.map((row, i) => {
+            const billableKm = Math.max(row.distanceKm || 130, 130)
+            const hatchbackTotal = billableKm * 15 + 400
+            const sedanTotal = billableKm * 15 + 400
+            const suvTotal = billableKm * 20 + 400
+
+            return (
+              <motion.div
+                key={row.to}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 space-y-3"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="font-semibold text-gray-800 flex items-center gap-1.5">
+                    {districtName}
+                    <ArrowRight className="w-3.5 h-3.5 text-gray-400" />
+                    {row.to}
+                  </h3>
                 </div>
-                <div className="text-center p-2 bg-blue-50 rounded-lg">
-                  <p className="text-[10px] text-gray-500 uppercase tracking-wider">Sedan</p>
-                  <p className="font-bold text-blue-700 text-sm">₹{row.sedan.toLocaleString('en-IN')}</p>
+                <div className="flex gap-4 text-xs text-gray-500">
+                  <span>{row.distanceKm} km</span>
+                  <span>{formatTime(row.timeHours)}</span>
                 </div>
-                <div className="text-center p-2 bg-purple-50 rounded-lg">
-                  <p className="text-[10px] text-gray-500 uppercase tracking-wider">SUV</p>
-                  <p className="font-bold text-purple-700 text-sm">₹{row.suv.toLocaleString('en-IN')}</p>
+                <div className="grid grid-cols-3 gap-2">
+                  <div className="text-center p-2 bg-green-50 rounded-lg">
+                    <p className="text-[10px] text-gray-500 uppercase tracking-wider">Hatch</p>
+                    <p className="font-bold text-green-700 text-sm">₹{hatchbackTotal.toLocaleString('en-IN')}</p>
+                    <p className="text-[9px] text-gray-400">Inc. Bata</p>
+                  </div>
+                  <div className="text-center p-2 bg-blue-50 rounded-lg">
+                    <p className="text-[10px] text-gray-500 uppercase tracking-wider">Sedan</p>
+                    <p className="font-bold text-blue-700 text-sm">₹{sedanTotal.toLocaleString('en-IN')}</p>
+                    <p className="text-[9px] text-gray-400">Inc. Bata</p>
+                  </div>
+                  <div className="text-center p-2 bg-purple-50 rounded-lg">
+                    <p className="text-[10px] text-gray-500 uppercase tracking-wider">SUV</p>
+                    <p className="font-bold text-purple-700 text-sm">₹{suvTotal.toLocaleString('en-IN')}</p>
+                    <p className="text-[9px] text-gray-400">Inc. Bata</p>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-          <p className="text-xs text-gray-400 mt-2">
-            * Approximate fares. May vary by exact route, traffic, and tolls.
+              </motion.div>
+            )
+          })}
+          <p className="text-xs text-gray-500 mt-2 font-medium">
+            * Fares include ₹400 Driver Bata. Standard 130 km minimum billing applies for trips under 130 km.
           </p>
         </div>
       </div>

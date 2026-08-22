@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown, Car, Plane, UserCheck, Wrench, MapPin } from 'lucide-react'
+import { Menu, X, ChevronDown, Car, Plane, UserCheck, Wrench, MapPin, Compass } from 'lucide-react'
 
 const Navbar = ({ variant = 'home' }) => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -32,6 +32,7 @@ const Navbar = ({ variant = 'home' }) => {
     { name: 'Airport Taxi', href: '/airport-taxi', desc: '24/7 Airport pickup & drop', icon: Plane },
     { name: 'Acting Driver', href: '/acting-driver', desc: 'Verified driver for your car', icon: UserCheck },
     { name: 'Vehicle Recovery', href: '/vehicle-recovery', desc: '24/7 Towing & roadside rescue', icon: Wrench },
+    { name: 'Tour Packages', href: '/tour-packages', desc: 'South India private holiday cabs', icon: Compass },
     { name: 'Service Areas', href: '/service-areas', desc: '38 Tamil Nadu districts', icon: MapPin },
   ]
 
@@ -39,6 +40,7 @@ const Navbar = ({ variant = 'home' }) => {
     { name: 'Home', href: isHome ? '#home' : '/' },
     { name: 'One-Way Taxi', href: '/one-way-taxi', isRoute: true },
     { name: 'Airport Taxi', href: '/airport-taxi', isRoute: true },
+    { name: 'Tour Packages', href: '/tour-packages', isRoute: true },
     { name: 'Acting Driver', href: '/acting-driver', isRoute: true },
     { name: 'Vehicle Recovery', href: '/vehicle-recovery', isRoute: true },
     { name: 'Service Areas', href: '/service-areas', isRoute: true },
@@ -145,6 +147,10 @@ const Navbar = ({ variant = 'home' }) => {
 
             <Link to="/airport-taxi" className={linkClass}>
               Airport Taxi
+            </Link>
+
+            <Link to="/tour-packages" className={linkClass}>
+              Tour Packages
             </Link>
 
             <Link to="/acting-driver" className={linkClass}>

@@ -32,20 +32,41 @@ const RouteHero = ({ content }) => {
             </p>
 
             {/* Key Quick Stats Pills */}
-            <div className="grid grid-cols-3 gap-3 py-2">
-              <div className="bg-dark-800/80 border border-dark-700 p-3 rounded-xl text-center">
-                <span className="block text-xs text-gray-400 font-medium uppercase">Distance</span>
-                <span className="text-lg font-bold text-amber-400">{content.distanceDisplay}</span>
-              </div>
-              <div className="bg-dark-800/80 border border-dark-700 p-3 rounded-xl text-center">
-                <span className="block text-xs text-gray-400 font-medium uppercase">Travel Time</span>
-                <span className="text-lg font-bold text-amber-400">{content.durationDisplay}</span>
-              </div>
-              <div className="bg-dark-800/80 border border-dark-700 p-3 rounded-xl text-center">
-                <span className="block text-xs text-gray-400 font-medium uppercase">Starting Fare</span>
-                <span className="text-lg font-bold text-green-400">₹{content.fare?.hatchback?.toLocaleString('en-IN')}</span>
-              </div>
-            </div>
+            {(() => {
+              const actualDistance = parseInt(content.distanceKm) || parseInt(content.distanceDisplay) || 0
+              const isShortRoute = actualDistance > 0 && actualDistance < 130
+              const billableKm = isShortRoute ? 130 : actualDistance
+              const hatchbackRate = 15
+              const bata = 400
+              const baseFare = billableKm * hatchbackRate
+              const calculatedStartingFare = baseFare + bata
+
+              return (
+                <>
+                  {/* Highly Visible Policy Line (Above the fold) */}
+                  <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-bold flex flex-wrap items-center justify-between gap-2">
+                    <span>⚡ 130 KM min billing • Base Fare + ₹400 Driver Bata Included • No return fare</span>
+                    {isShortRoute && <span className="text-[10px] bg-amber-500 text-black px-2 py-0.5 rounded font-extrabold">SHORT ROUTE</span>}
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-3 py-2">
+                    <div className="bg-dark-800/80 border border-dark-700 p-3 rounded-xl text-center">
+                      <span className="block text-xs text-gray-400 font-medium uppercase">Route Distance</span>
+                      <span className="text-base sm:text-lg font-bold text-amber-400">{content.distanceDisplay}</span>
+                    </div>
+                    <div className="bg-dark-800/80 border border-dark-700 p-3 rounded-xl text-center">
+                      <span className="block text-xs text-gray-400 font-medium uppercase">{isShortRoute ? 'Min Billable' : 'Billable Distance'}</span>
+                      <span className="text-base sm:text-lg font-bold text-amber-400">{billableKm} km</span>
+                    </div>
+                    <div className="bg-dark-800/80 border border-dark-700 p-3 rounded-xl text-center">
+                      <span className="block text-xs text-gray-400 font-medium uppercase">Total Starting Fare</span>
+                      <span className="text-base sm:text-lg font-bold text-green-400">₹{calculatedStartingFare.toLocaleString('en-IN')}</span>
+                      <span className="block text-[10px] text-gray-400 font-normal">₹{baseFare.toLocaleString('en-IN')} + ₹400 Bata</span>
+                    </div>
+                  </div>
+                </>
+              )
+            })()}
 
             {/* Trust Badges Grid */}
             <div className="grid grid-cols-2 gap-3 pt-2">

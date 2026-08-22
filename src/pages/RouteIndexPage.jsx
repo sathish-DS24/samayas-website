@@ -88,9 +88,18 @@ const RouteIndexPage = () => {
               One-Way Taxi <span className="text-amber-400">Routes Directory</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">
-              Find high-demand intercity one-way routes across Tamil Nadu and neighboring states. Pay strictly for one direction with zero return fare charges.
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-4 leading-relaxed">
+              Book one-way intercity taxis across Tamil Nadu and nearby routes. No return fare. Minimum 130 km billing applies to applicable one-way bookings.
             </p>
+
+            {/* Compact Policy Box */}
+            <div className="max-w-2xl mx-auto bg-dark-800/90 border border-amber-500/30 rounded-xl p-3.5 mb-8 text-xs text-amber-300 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 font-medium shadow-lg">
+              <span className="font-bold text-amber-400">One-Way Fare Policy:</span>
+              <span>• One-way booking</span>
+              <span>• Driver Bata Included</span>
+              <span>• No return fare</span>
+              <span>• Minimum billing distance: 130 km</span>
+            </div>
 
             {/* Interactive Search Bar */}
             <div className="max-w-xl mx-auto relative mb-6">
@@ -144,48 +153,68 @@ const RouteIndexPage = () => {
 
           {filteredRoutes.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredRoutes.map((r, idx) => (
-                <Link
-                  key={idx}
-                  to={r.url}
-                  className="bg-dark-800/80 border border-dark-700 hover:border-amber-500/50 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between group"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="px-2.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold">
-                        {r.distanceDisplay || r.distanceKm ? `${r.distanceKm} km` : 'Outstation'}
-                      </span>
-                      <span className="text-xs font-bold text-green-400">
-                        {r.fare?.hatchback ? `From ₹${r.fare.hatchback.toLocaleString('en-IN')}` : 'Best Fare'}
-                      </span>
+              {filteredRoutes.map((r, idx) => {
+                const actualDistance = r.distanceKm || parseInt(r.distanceDisplay) || 0
+                const isShortRoute = actualDistance > 0 && actualDistance < 130
+                const billableKm = Math.max(actualDistance, 130)
+                const baseFare = billableKm * 15
+                const startingTotalFare = baseFare + 400
+
+                return (
+                  <Link
+                    key={idx}
+                    to={r.url}
+                    className="bg-dark-800/80 border border-dark-700 hover:border-amber-500/50 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between group"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-3 gap-2">
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                          <span className="px-2.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold">
+                            {actualDistance ? `${actualDistance} km` : 'Outstation'}
+                          </span>
+                          {isShortRoute && (
+                            <span className="px-2 py-0.5 rounded bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[10px] font-extrabold uppercase">
+                              130 KM MINIMUM BILLING
+                            </span>
+                          )}
+                        </div>
+                        <div className="text-right">
+                          <span className="text-xs font-extrabold text-green-400 block whitespace-nowrap">
+                            {startingTotalFare ? `From ₹${startingTotalFare.toLocaleString('en-IN')}` : 'Best Fare'}
+                          </span>
+                          <span className="text-[10px] text-gray-400 font-normal block whitespace-nowrap">
+                            (Inc. ₹400 Bata)
+                          </span>
+                        </div>
+                      </div>
+
+                      <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors mb-2">
+                        {r.name}
+                      </h3>
+
+                      <p className="text-xs text-gray-400 line-clamp-2 mb-4">
+                        {r.heroTagline || `Direct one-way cab service from ${r.from} to ${r.to}.`}
+                      </p>
+
+                      {/* Popular For Tags */}
+                      {r.popularFor && r.popularFor.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5 mb-4">
+                          {r.popularFor.map((tag, tIdx) => (
+                            <span key={tIdx} className="px-2 py-0.5 rounded bg-dark-900 text-[10px] text-gray-300 border border-dark-700">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
 
-                    <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors mb-2">
-                      {r.name}
-                    </h3>
-
-                    <p className="text-xs text-gray-400 line-clamp-2 mb-4">
-                      {r.heroTagline || `Direct one-way cab service from ${r.from} to ${r.to}.`}
-                    </p>
-
-                    {/* Popular For Tags */}
-                    {r.popularFor && r.popularFor.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 mb-4">
-                        {r.popularFor.map((tag, tIdx) => (
-                          <span key={tIdx} className="px-2 py-0.5 rounded bg-dark-900 text-[10px] text-gray-300 border border-dark-700">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="border-t border-dark-700/60 pt-3 flex items-center justify-between text-xs font-semibold text-amber-400 group-hover:text-amber-300">
-                    <span>View Full Route Fares & Map</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-all" />
-                  </div>
-                </Link>
-              ))}
+                    <div className="border-t border-dark-700/60 pt-3 flex items-center justify-between text-xs font-semibold text-amber-400 group-hover:text-amber-300">
+                      <span>View Route Fare & Book</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-all" />
+                    </div>
+                  </Link>
+                )
+              })}
             </div>
           ) : (
             <div className="text-center py-16 bg-dark-800/40 border border-dark-700 rounded-2xl p-8">

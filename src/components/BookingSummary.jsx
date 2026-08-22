@@ -209,26 +209,30 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                     ) : bookingData.tripType === 'one-way' ? (
                       <>
                         <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                          <span className="text-gray-600 font-medium">Route Distance (Google Maps):</span>
+                          <span className="text-gray-600 font-medium">Route Distance:</span>
                           <span className="text-gray-800 font-semibold">{bookingData.distance} km</span>
                         </div>
                         <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                          <span className="text-gray-600 font-medium">Minimum Billable Distance:</span>
+                          <span className="text-gray-800 font-semibold">{bookingData.billableDistance || Math.max(bookingData.distance, 130)} km</span>
+                        </div>
+                        <div className="flex justify-between items-center py-2 border-b border-gray-200">
                           <span className="text-gray-600 font-medium">
-                            Base Fare ({bookingData.isMinKmApplied ? 'Min 130 km Limit' : `${bookingData.billableDistance || bookingData.distance} km`}):
+                            Base Fare ({bookingData.isMinKmApplied ? '130 km Minimum' : `${bookingData.billableDistance || bookingData.distance} km`}):
                           </span>
                           <span className="text-gray-800 font-semibold">
                             {formatCurrency(bookingData.baseFare)}
                           </span>
                         </div>
                         <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                          <span className="text-gray-600 font-medium">Driver Bata:</span>
+                          <span className="text-gray-600 font-medium">Driver Allowance (Bata):</span>
                           <span className="text-gray-800 font-semibold">
                             {formatCurrency(bookingData.bata)}
                           </span>
                         </div>
                         {bookingData.isMinKmApplied && (
-                          <div className="mt-2 p-2.5 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-900 font-medium">
-                            ℹ️ Standard minimum billing limit of 130 km applies for one-way trips under 130 km.
+                          <div className="mt-2 p-3 bg-amber-50 border border-amber-300 rounded-lg text-xs text-amber-900 font-semibold leading-relaxed">
+                            ⚠️ <strong>130 KM Minimum Billing Policy:</strong> This route ({bookingData.distance} km) is below our minimum billing distance. The applicable one-way fare is calculated using the 130 km minimum billing rule.
                           </div>
                         )}
                       </>
@@ -263,7 +267,7 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                     )}
                     <div className="flex justify-between items-center py-2 pt-3 border-t-2 border-gray-300">
                       <span className="text-gray-800 font-bold text-lg">
-                        {bookingData.tripType === 'recovery_services' ? 'Approximate Estimated Total (₹):' : bookingData.tripType === 'acting-driver' ? 'Estimated Total (₹):' : 'Final Amount (₹):'}
+                        {bookingData.tripType === 'recovery_services' ? 'Approximate Estimated Total (₹):' : bookingData.tripType === 'acting-driver' ? 'Estimated Total (₹):' : 'Final Estimated Fare (₹):'}
                       </span>
                       <span className="text-gray-900 font-bold text-xl">
                         {formatCurrency(bookingData.finalAmount)}
@@ -275,23 +279,67 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                 {/* Note */}
                 <div className="bg-yellow-50 border-l-4 border-accent-500 rounded-lg p-4">
                   <p className="text-sm text-gray-700">
-                    <span className="font-bold text-accent-600">Note:</span>{' '}
-                    {bookingData.extraNote ? bookingData.extraNote : 'Taxi fare is calculated based on the distance and type of vehicle selected.'}
+                    <span className="font-bold text-accent-600">Fare Policy & Inclusions:</span>{' '}
+                    {bookingData.tripType === 'one-way'
+                      ? 'Includes Driver Allowance. Tolls, Parking & State Permits extra at actuals. Zero Return Fare guaranteed.'
+                      : bookingData.extraNote ? bookingData.extraNote : 'Taxi fare is calculated based on distance and vehicle selected.'}
                   </p>
                 </div>
               </div>
 
-              {/* Footer Button */}
-              <div className="p-6 bg-gray-50 rounded-b-2xl border-t border-gray-200">
+              {/* Footer Buttons */}
+              <div className="p-6 bg-gray-50 rounded-b-2xl border-t border-gray-200 space-y-3">
                 <motion.button
                   onClick={onConfirm}
                   disabled={isLoading}
                   whileHover={{ scale: isLoading ? 1 : 1.02 }}
                   whileTap={{ scale: isLoading ? 1 : 0.98 }}
-                  className="w-full px-8 py-4 bg-accent-500 hover:bg-accent-600 text-black font-bold rounded-full shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed uppercase text-lg"
+                  className="w-full px-8 py-4 bg-accent-500 hover:bg-accent-600 text-black font-extrabold rounded-full shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed uppercase text-lg tracking-wide"
                 >
-                  {isLoading ? 'Sending Confirmation...' : 'CONFIRM BOOKING'}
+                  {isLoading ? 'Processing Booking Intent...' : 'BOOK THIS TAXI'}
                 </motion.button>
+
+                <div className="flex items-center justify-center space-x-4 pt-1">
+                  <a
+                    href="tel:+919894809439"
+                    onClick={() => {
+                      import('../utils/analytics').then(({ trackEvent }) => {
+                        trackEvent('phone_click', {
+                          service: 'one_way_taxi',
+                          origin: bookingData.pickupLocation,
+                          destination: bookingData.dropLocation,
+                          route_distance: bookingData.distance,
+                          billable_distance: bookingData.billableDistance || Math.max(bookingData.distance, 130),
+                          vehicle: bookingData.vehicleType
+                        })
+                      })
+                    }}
+                    className="text-xs sm:text-sm text-gray-600 hover:text-primary-900 font-semibold underline flex items-center gap-1"
+                  >
+                    📞 Call Now (+91 98948 09439)
+                  </a>
+                  <span className="text-gray-300">•</span>
+                  <a
+                    href={`https://wa.me/919894809439?text=${encodeURIComponent(`Hi SAMAYAS, I would like to book a One-Way Taxi from ${bookingData.pickupLocation} to ${bookingData.dropLocation} (${bookingData.vehicleType}). Estimated Fare: ₹${bookingData.finalAmount}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => {
+                      import('../utils/analytics').then(({ trackEvent }) => {
+                        trackEvent('whatsapp_click', {
+                          service: 'one_way_taxi',
+                          origin: bookingData.pickupLocation,
+                          destination: bookingData.dropLocation,
+                          route_distance: bookingData.distance,
+                          billable_distance: bookingData.billableDistance || Math.max(bookingData.distance, 130),
+                          vehicle: bookingData.vehicleType
+                        })
+                      })
+                    }}
+                    className="text-xs sm:text-sm text-emerald-600 hover:text-emerald-700 font-semibold underline flex items-center gap-1"
+                  >
+                    💬 WhatsApp Booking
+                  </a>
+                </div>
               </div>
             </motion.div>
           </div>

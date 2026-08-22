@@ -99,27 +99,17 @@ const DistrictPage = () => {
     {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
-      name: 'SAMAYAS',
+      name: `SAMAYAS ${district.name} Transportation Services`,
       description: `One-way taxi and transportation services in ${district.name}, Tamil Nadu.`,
       url: `${SITE_URL}${getDistrictUrl(district.slug)}`,
       telephone: '+91-98948-09439',
       email: 'samayasprem@gmail.com',
+      image: `${SITE_URL}/images/samayas-logo.png`,
       areaServed: [
         { '@type': 'AdministrativeArea', name: district.name },
         { '@type': 'State', name: 'Tamil Nadu' },
       ],
       priceRange: '$$',
-      ...(avgRating && reviews.length > 0
-        ? {
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: avgRating,
-              reviewCount: reviews.length,
-              bestRating: '5',
-              worstRating: '1',
-            },
-          }
-        : {}),
     },
     // FAQPage
     {

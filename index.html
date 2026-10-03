@@ -14,15 +14,33 @@
         };
       })();
     </script>
-    <!-- Deferred Analytics (GTM & Microsoft Clarity) - Non-render-blocking -->
+    <!-- User-Interaction Deferred Analytics (GTM, Google Analytics, Microsoft Clarity) -->
+    <!-- Injected strictly upon first user interaction (scroll, touch, mousemove, keydown) or 3500ms fallback -->
     <script>
       (function() {
         window.dataLayer = window.dataLayer || [];
         var gtmId = '%VITE_GTM_ID%';
         var clarityId = '%VITE_CLARITY_ID%';
+        var loaded = false;
+        var fallbackTimer = null;
+        var events = ['scroll', 'mousemove', 'touchstart', 'keydown', 'wheel'];
+        var listenerOptions = { passive: true, once: true };
 
-        function initTracking() {
-          // Google Tag Manager
+        function injectTrackingScripts() {
+          if (loaded) return;
+          loaded = true;
+
+          if (fallbackTimer) {
+            clearTimeout(fallbackTimer);
+            fallbackTimer = null;
+          }
+
+          events.forEach(function(evt) {
+            window.removeEventListener(evt, trigger, listenerOptions);
+            document.removeEventListener(evt, trigger, listenerOptions);
+          });
+
+          // Google Tag Manager (GTM & Google Analytics)
           if (gtmId && gtmId.indexOf('GTM-') === 0) {
             window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
             var gtmScript = document.createElement('script');
@@ -41,11 +59,17 @@
           }
         }
 
-        if ('requestIdleCallback' in window) {
-          window.requestIdleCallback(initTracking);
-        } else {
-          setTimeout(initTracking, 3000);
+        function trigger() {
+          injectTrackingScripts();
         }
+
+        events.forEach(function(evt) {
+          window.addEventListener(evt, trigger, listenerOptions);
+          document.addEventListener(evt, trigger, listenerOptions);
+        });
+
+        // 3500ms safety fallback in case no interaction occurs
+        fallbackTimer = setTimeout(injectTrackingScripts, 3500);
       })();
     </script>
     <link rel="icon" type="image/webp" href="/logo.webp" />

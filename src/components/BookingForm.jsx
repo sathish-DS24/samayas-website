@@ -402,7 +402,7 @@ const BookingForm = ({
         type: 'SUV', 
         icon: Car, 
         rate: currentRates.SUV,
-        image: '/images/cars/SUV.webp',
+        image: '/images/cars/suv.webp',
         model: 'Hyundai Creta / Ertiga',
         alt: 'Hyundai Creta SUV taxi for family outstation trips'
       },
@@ -702,9 +702,12 @@ const BookingForm = ({
         car_type: String(calcData.vehicleType || 'N/A'),
         pickup_location: String(calcData.pickupLocation || 'N/A'),
         drop_location: String(calcData.dropLocation || 'Local'),
-        google_maps_link: calcData.pickupLocation && calcData.dropLocation
+                google_maps_link: (calcData.pickupLocation && calcData.dropLocation && calcData.dropLocation !== 'Local' && calcData.dropLocation !== 'N/A')
           ? `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(calcData.pickupLocation)}&destination=${encodeURIComponent(calcData.dropLocation)}`
-          : 'N/A',
+          : (calcData.pickupLocation && calcData.pickupLocation !== 'N/A' ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(calcData.pickupLocation)}` : 'N/A'),
+        google_maps_route: (calcData.pickupLocation && calcData.dropLocation && calcData.dropLocation !== 'Local' && calcData.dropLocation !== 'N/A')
+          ? `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(calcData.pickupLocation)}&destination=${encodeURIComponent(calcData.dropLocation)}`
+          : (calcData.pickupLocation && calcData.pickupLocation !== 'N/A' ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(calcData.pickupLocation)}` : 'N/A'),
         booking_date: String(calcData.date || 'N/A'),
         service_date: String(calcData.date || 'N/A'),
         date: String(calcData.date || 'N/A'),
@@ -1935,9 +1938,12 @@ const BookingForm = ({
         // Location information
         pickup_location: pickupLocation,
         drop_location: dropLocation,
-        google_maps_link: pickupLocation !== 'N/A' && dropLocation !== 'N/A' 
+                google_maps_link: (pickupLocation !== 'N/A' && dropLocation !== 'N/A' && dropLocation !== 'Local') 
           ? `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(pickupLocation)}&destination=${encodeURIComponent(dropLocation)}`
-          : 'N/A',
+          : (pickupLocation !== 'N/A' ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(pickupLocation)}` : 'N/A'),
+        google_maps_route: (pickupLocation !== 'N/A' && dropLocation !== 'N/A' && dropLocation !== 'Local') 
+          ? `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(pickupLocation)}&destination=${encodeURIComponent(dropLocation)}`
+          : (pickupLocation !== 'N/A' ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(pickupLocation)}` : 'N/A'),
         
         // Date and time
         booking_date: formattedDate || 'N/A',

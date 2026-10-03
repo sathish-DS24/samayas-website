@@ -83,120 +83,13 @@ export const apiClient = {
   },
 
   /**
-   * Authoritative Backend Fare Calculation for One-Way Taxi
-   */
-  async calculateOneWayFare(payload) {
-    const mapVehicle = (v = '') => {
-      const str = String(v).toUpperCase();
-      if (str.includes('HATCH')) return 'HATCHBACK';
-      if (str.includes('SEDAN')) return 'SEDAN';
-      if (str.includes('HYCROSS')) return 'INNOVA HYCROSS';
-      if (str.includes('INNOVA')) return 'INNOVA';
-      if (str.includes('TRAVELLER') || str.includes('TEMPO')) return 'TEMPO TRAVELLER';
-      if (str.includes('SUV')) return 'SUV';
-      return 'SEDAN';
-    };
-
-    const normalizedPayload = {
-      origin: payload.origin || payload.pickupLocation || 'Trichy',
-      destination: payload.destination || payload.dropLocation || 'Chennai',
-      vehicle: mapVehicle(payload.vehicle || payload.vehicleType)
-    };
-
-    const res = await request('/fare/one-way', {
-      method: 'POST',
-      body: JSON.stringify(normalizedPayload),
-    });
-
-    return {
-      ...res,
-      fareSource: 'backend_success'
-    };
-  },
-
-  /**
-   * Authoritative Backend Fare Calculation for Round-Trip Taxi
-   */
-  async calculateRoundTripFare(payload) {
-    const mapVehicle = (v = '') => {
-      const str = String(v).toUpperCase();
-      if (str.includes('HATCH')) return 'HATCHBACK';
-      if (str.includes('SEDAN')) return 'SEDAN';
-      if (str.includes('HYCROSS')) return 'INNOVA HYCROSS';
-      if (str.includes('INNOVA')) return 'INNOVA';
-      if (str.includes('TRAVELLER') || str.includes('TEMPO')) return 'TEMPO TRAVELLER';
-      if (str.includes('SUV')) return 'SUV';
-      return 'SEDAN';
-    };
-
-    const normalizedPayload = {
-      origin: payload.origin || payload.pickupLocation || 'Trichy',
-      destination: payload.destination || payload.dropLocation || 'Chennai',
-      vehicle: mapVehicle(payload.vehicle || payload.vehicleType),
-      days: Math.max(1, parseInt(payload.days) || 1)
-    };
-
-    const res = await request('/fare/round-trip', {
-      method: 'POST',
-      body: JSON.stringify(normalizedPayload),
-    });
-
-    return {
-      ...res,
-      fareSource: 'backend_success'
-    };
-  },
-
-  /**
-   * Universal Calculate Fare router delegating to service-specific endpoints
+   * Authoritative Backend Fare Calculation for all 5 SAMAYAS Services
    */
   async calculateFare(payload) {
-    if (payload.tripType === 'round-trip') {
-      return this.calculateRoundTripFare(payload);
-    }
-    return this.calculateOneWayFare(payload);
-  },
-
-  /**
-   * Authoritative Backend Fare Calculation for Acting Driver
-   */
-  async calculateActingDriverFare(payload) {
-    const res = await request('/fare/acting-driver', {
+    return request('/fare/calculate', {
       method: 'POST',
       body: JSON.stringify(payload),
     });
-    return {
-      ...res,
-      fareSource: 'backend_success'
-    };
-  },
-
-  /**
-   * Authoritative Backend Fare Calculation for Tours & Travels
-   */
-  async calculateToursFare(payload) {
-    const res = await request('/fare/tours', {
-      method: 'POST',
-      body: JSON.stringify(payload),
-    });
-    return {
-      ...res,
-      fareSource: 'backend_success'
-    };
-  },
-
-  /**
-   * Authoritative Backend Fare Calculation for Recovery Services
-   */
-  async calculateRecoveryFare(payload) {
-    const res = await request('/fare/recovery', {
-      method: 'POST',
-      body: JSON.stringify(payload),
-    });
-    return {
-      ...res,
-      fareSource: 'backend_success'
-    };
   },
 
   /**
@@ -232,5 +125,82 @@ export const apiClient = {
    */
   async getBooking(bookingReference) {
     return request(`/bookings/${encodeURIComponent(bookingReference)}`);
+  },
+
+  /**
+   * Admin Login
+   */
+  async adminLogin(password) {
+    return request('/admin/login', {
+      method: 'POST',
+      body: JSON.stringify({ password }),
+    });
+  },
+
+  /**
+   * Get Admin Dashboard Overview Statistics
+   */
+  async getAdminStats(token) {
+    return request('/admin/stats', {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+  },
+
+  /**
+   * Get Admin Bookings List with Search & Filtering
+   */
+  async getAdminBookings(token, params = {}) {
+    const queryParts = [];
+    if (params.page) queryParts.push(`page=${encodeURIComponent(params.page)}`);
+    if (params.limit) queryParts.push(`limit=${encodeURIComponent(params.limit)}`);
+    if (params.search) queryParts.push(`search=${encodeURIComponent(params.search)}`);
+    if (params.status) queryParts.push(`status=${encodeURIComponent(params.status)}`);
+    if (params.serviceType) queryParts.push(`serviceType=${encodeURIComponent(params.serviceType)}`);
+
+    const queryString = queryParts.length > 0 ? `?${queryParts.join('&')}` : '';
+
+    return request(`/admin/bookings${queryString}`, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+  },
+
+  /**
+   * Get Admin Leads List with Search & Filtering
+   */
+  async getAdminLeads(token, params = {}) {
+    const queryParts = [];
+    if (params.page) queryParts.push(`page=${encodeURIComponent(params.page)}`);
+    if (params.limit) queryParts.push(`limit=${encodeURIComponent(params.limit)}`);
+    if (params.search) queryParts.push(`search=${encodeURIComponent(params.search)}`);
+    if (params.serviceType) queryParts.push(`serviceType=${encodeURIComponent(params.serviceType)}`);
+    if (params.source) queryParts.push(`source=${encodeURIComponent(params.source)}`);
+
+    const queryString = queryParts.length > 0 ? `?${queryParts.join('&')}` : '';
+
+    return request(`/admin/leads${queryString}`, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+  },
+
+  /**
+   * Update Booking Status (requested, confirmed, assigned, completed, cancelled)
+   */
+  async updateAdminBookingStatus(token, bookingId, status, notes = '') {
+    return request(`/admin/bookings/${encodeURIComponent(bookingId)}/status`, {
+      method: 'PATCH',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ status, notes }),
+    });
   },
 };

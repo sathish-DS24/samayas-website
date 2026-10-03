@@ -1,3 +1,4 @@
+import AdminPage from './pages/admin/AdminPage'
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
@@ -22,6 +23,7 @@ const AppContent = () => {
   return (
     <>
       <Routes>
+        <Route path="/admin" element={<AdminPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/service-areas" element={<ServiceAreasPage />} />
         <Route path="/service-areas/:districtSlug" element={<DistrictPage />} />

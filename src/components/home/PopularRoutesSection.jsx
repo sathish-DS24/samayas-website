@@ -1,12 +1,88 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { MapPin, ArrowRight, ShieldCheck, Car, Sparkles, Navigation, Clock } from 'lucide-react'
-import { featuredRoutes, getRouteUrl } from '../../data/routesMaster'
+
+const getRouteUrl = (slug) => `/one-way-taxi/${slug}`
+
+// Top 8 featured routes curated for instantaneous render without bundling 182KB routesMaster into the initial bundle
+const INITIAL_FEATURED_ROUTES = [
+  {
+    slug: 'trichy-to-chennai',
+    from: 'Trichy',
+    to: 'Chennai',
+    category: 'City',
+    distanceKm: 330,
+    estimatedTime: '5.5 Hours',
+    estDistance: '330 km'
+  },
+  {
+    slug: 'chennai-to-trichy',
+    from: 'Chennai',
+    to: 'Trichy',
+    category: 'City',
+    distanceKm: 330,
+    estimatedTime: '5.5 Hours',
+    estDistance: '330 km'
+  },
+  {
+    slug: 'chennai-to-madurai',
+    from: 'Chennai',
+    to: 'Madurai',
+    category: 'City',
+    distanceKm: 460,
+    estimatedTime: '7.5 Hours',
+    estDistance: '460 km'
+  },
+  {
+    slug: 'madurai-to-chennai',
+    from: 'Madurai',
+    to: 'Chennai',
+    category: 'City',
+    distanceKm: 460,
+    estimatedTime: '7.5 Hours',
+    estDistance: '460 km'
+  },
+  {
+    slug: 'chennai-to-coimbatore',
+    from: 'Chennai',
+    to: 'Coimbatore',
+    category: 'City',
+    distanceKm: 500,
+    estimatedTime: '8.5 Hours',
+    estDistance: '500 km'
+  },
+  {
+    slug: 'chennai-to-thanjavur',
+    from: 'Chennai',
+    to: 'Thanjavur',
+    category: 'City',
+    distanceKm: 340,
+    estimatedTime: '6 Hours',
+    estDistance: '340 km'
+  },
+  {
+    slug: 'chennai-to-vellore',
+    from: 'Chennai',
+    to: 'Vellore',
+    category: 'City',
+    distanceKm: 140,
+    estimatedTime: '2.75 Hours',
+    estDistance: '140 km'
+  },
+  {
+    slug: 'trichy-to-madurai',
+    from: 'Trichy',
+    to: 'Madurai',
+    category: 'City',
+    distanceKm: 135,
+    estimatedTime: '2.25 Hours',
+    estDistance: '135 km'
+  }
+]
 
 const PopularRoutesSection = () => {
-  // Show top 8 featured routes on homepage
-  const topRoutes = featuredRoutes.slice(0, 8)
+  const [topRoutes] = useState(INITIAL_FEATURED_ROUTES)
 
   return (
     <section className="py-16 bg-dark-950 border-t border-dark-800 relative overflow-hidden">

@@ -1,4 +1,27 @@
-// Helper for Google Maps Distance Matrix and Places Autocomplete
+import { Loader } from '@googlemaps/js-api-loader'
+
+// Dynamic on-demand Google Maps Loader
+let mapsLoaderPromise = null
+
+export const loadGoogleMaps = () => {
+  if (typeof window === 'undefined') return Promise.resolve(null)
+  if (window.google && window.google.maps) {
+    return Promise.resolve(window.google.maps)
+  }
+  if (!mapsLoaderPromise) {
+    const loader = new Loader({
+      apiKey: 'AIzaSyCPNzKYzBGxu4b_AcUeKPbB6KCTmU1uBZw',
+      version: 'weekly',
+      libraries: ['places', 'geometry']
+    })
+    mapsLoaderPromise = loader.load().then(() => window.google.maps).catch((err) => {
+      console.warn('Failed to dynamically load Google Maps:', err)
+      mapsLoaderPromise = null
+      return null
+    })
+  }
+  return mapsLoaderPromise
+}
 
 // Convert input to a value the Distance Matrix API accepts:
 // - If it's a {lat, lng} object, create a google.maps.LatLng
@@ -13,7 +36,8 @@ const toLatLngOrString = (input) => {
   return input
 }
 
-export const getRoadDistance = (origin, destination) => {
+export const getRoadDistance = async (origin, destination) => {
+  await loadGoogleMaps()
   return new Promise((resolve) => {
     if (window.googleMapsFailed || !window.google || !window.google.maps || !window.google.maps.DistanceMatrixService) {
       console.warn('Google Maps API not available or auth failed. Falling back to local calculator.')
@@ -54,7 +78,8 @@ export const getRoadDistance = (origin, destination) => {
   })
 }
 
-export const getRouteInfo = (origin, destination) => {
+export const getRouteInfo = async (origin, destination) => {
+  await loadGoogleMaps()
   return new Promise((resolve) => {
     if (window.googleMapsFailed || !window.google || !window.google.maps || !window.google.maps.DistanceMatrixService) {
       resolve(null)
@@ -92,7 +117,8 @@ export const getRouteInfo = (origin, destination) => {
   })
 }
 
-export const reverseGeocode = (lat, lng) => {
+export const reverseGeocode = async (lat, lng) => {
+  await loadGoogleMaps()
   return new Promise((resolve) => {
     if (window.googleMapsFailed || !window.google || !window.google.maps || !window.google.maps.Geocoder) {
       resolve(null)

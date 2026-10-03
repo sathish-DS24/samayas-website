@@ -4,7 +4,7 @@ import { Calendar, Clock, MapPin, User, Phone, Car, Loader2, Briefcase, CheckCir
 import emailjs from '@emailjs/browser'
 import BookingSummary from './BookingSummary'
 import MapPickerModal from './MapPickerModal'
-import { getRoadDistance, getRouteInfo, reverseGeocode, getCurrentGPSLocation } from '../utils/googleMaps'
+import { loadGoogleMaps, getRoadDistance, getRouteInfo, reverseGeocode, getCurrentGPSLocation } from '../utils/googleMaps'
 import { apiClient } from '../services/api'
 import { trackEvent, trackBookingEvent, trackAdsConversion, debounceEvent } from '../utils/analytics'
 
@@ -2040,7 +2040,7 @@ const BookingForm = ({
 
   return (
     <>
-      <section id="booking" className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900">
+      <section id="booking" onFocusCapture={loadGoogleMaps} onPointerDownCapture={loadGoogleMaps} className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div ref={ref}>
             {/* Section Header */}
@@ -2184,7 +2184,7 @@ const BookingForm = ({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.4 }}
-                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10"
+                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10 min-h-[580px]"
                 >
                   <form onSubmit={handleOneWaySubmit} className="space-y-6">
                     {/* Location Fields */}
@@ -2496,7 +2496,7 @@ const BookingForm = ({
                       <label className="block text-sm font-semibold text-white/90 mb-3">
                         Select Vehicle Type *
                       </label>
-                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 min-h-[250px]">
                         {getVehicleTypes().map((vehicle, index) => {
                           const isSelected = oneWayData.vehicleType === vehicle.type
                           return (
@@ -2621,6 +2621,40 @@ const BookingForm = ({
                       />
                     </div>
 
+                    
+                    {/* Calculation Skeleton Loader (Zero CLS layout stabilization) */}
+                    {isLoading && (
+                      <div className="w-full min-h-[200px] p-5 bg-primary-950/70 border border-accent-500/30 rounded-2xl animate-pulse flex flex-col justify-between my-4 space-y-3">
+                        <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-9 h-9 rounded-full bg-accent-500/20 flex items-center justify-center">
+                              <Loader2 className="w-5 h-5 animate-spin text-accent-500" />
+                            </div>
+                            <div>
+                              <div className="h-3.5 w-36 bg-white/20 rounded mb-1.5" />
+                              <div className="h-2.5 w-24 bg-white/10 rounded" />
+                            </div>
+                          </div>
+                          <div className="h-7 w-24 bg-accent-500/20 rounded-lg" />
+                        </div>
+                        <div className="grid grid-cols-3 gap-2.5 py-1">
+                          <div className="h-14 bg-white/5 rounded-xl border border-white/5 p-2.5 flex flex-col justify-between">
+                            <div className="h-2 w-14 bg-white/10 rounded" />
+                            <div className="h-3.5 w-10 bg-white/20 rounded" />
+                          </div>
+                          <div className="h-14 bg-white/5 rounded-xl border border-white/5 p-2.5 flex flex-col justify-between">
+                            <div className="h-2 w-14 bg-white/10 rounded" />
+                            <div className="h-3.5 w-10 bg-white/20 rounded" />
+                          </div>
+                          <div className="h-14 bg-white/5 rounded-xl border border-white/5 p-2.5 flex flex-col justify-between">
+                            <div className="h-2 w-14 bg-white/10 rounded" />
+                            <div className="h-3.5 w-16 bg-accent-500/30 rounded" />
+                          </div>
+                        </div>
+                        <div className="h-10 w-full bg-accent-500/20 rounded-xl" />
+                      </div>
+                    )}
+
                     {/* Submit Button */}
                     <motion.button
                       type="submit"
@@ -2647,7 +2681,7 @@ const BookingForm = ({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.4 }}
-                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10"
+                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10 min-h-[580px]"
                 >
                   <form onSubmit={handleRoundTripSubmit} className="space-y-6">
                     {/* Location Fields */}
@@ -2845,7 +2879,7 @@ const BookingForm = ({
                       <label className="block text-sm font-semibold text-white/90 mb-4">
                         Select Vehicle Type *
                       </label>
-                      <div className="grid grid-cols-2 sm:grid-cols-3 min-[1100px]:grid-cols-5 gap-3">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 min-[1100px]:grid-cols-5 gap-3 min-h-[250px]">
                         {getVehicleTypes().map((vehicle, index) => {
                           const isSelected = roundTripData.vehicleType === vehicle.type
                           return (
@@ -2970,6 +3004,40 @@ const BookingForm = ({
                       />
                     </div>
 
+                    
+                    {/* Calculation Skeleton Loader (Zero CLS layout stabilization) */}
+                    {isLoading && (
+                      <div className="w-full min-h-[200px] p-5 bg-primary-950/70 border border-accent-500/30 rounded-2xl animate-pulse flex flex-col justify-between my-4 space-y-3">
+                        <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-9 h-9 rounded-full bg-accent-500/20 flex items-center justify-center">
+                              <Loader2 className="w-5 h-5 animate-spin text-accent-500" />
+                            </div>
+                            <div>
+                              <div className="h-3.5 w-36 bg-white/20 rounded mb-1.5" />
+                              <div className="h-2.5 w-24 bg-white/10 rounded" />
+                            </div>
+                          </div>
+                          <div className="h-7 w-24 bg-accent-500/20 rounded-lg" />
+                        </div>
+                        <div className="grid grid-cols-3 gap-2.5 py-1">
+                          <div className="h-14 bg-white/5 rounded-xl border border-white/5 p-2.5 flex flex-col justify-between">
+                            <div className="h-2 w-14 bg-white/10 rounded" />
+                            <div className="h-3.5 w-10 bg-white/20 rounded" />
+                          </div>
+                          <div className="h-14 bg-white/5 rounded-xl border border-white/5 p-2.5 flex flex-col justify-between">
+                            <div className="h-2 w-14 bg-white/10 rounded" />
+                            <div className="h-3.5 w-10 bg-white/20 rounded" />
+                          </div>
+                          <div className="h-14 bg-white/5 rounded-xl border border-white/5 p-2.5 flex flex-col justify-between">
+                            <div className="h-2 w-14 bg-white/10 rounded" />
+                            <div className="h-3.5 w-16 bg-accent-500/30 rounded" />
+                          </div>
+                        </div>
+                        <div className="h-10 w-full bg-accent-500/20 rounded-xl" />
+                      </div>
+                    )}
+
                     {/* Submit Button */}
                     <motion.button
                       type="submit"
@@ -2996,7 +3064,7 @@ const BookingForm = ({
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10"
+                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10 min-h-[580px]"
                 >
                   <form onSubmit={handleActingDriverSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -3237,7 +3305,7 @@ const BookingForm = ({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.4 }}
-                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10"
+                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10 min-h-[580px]"
                 >
                   <form onSubmit={handleRecoverySubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -3478,7 +3546,7 @@ const BookingForm = ({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.4 }}
-                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10"
+                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10 min-h-[580px]"
                 >
                   <form onSubmit={handleToursSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -3756,7 +3824,7 @@ const BookingForm = ({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.4 }}
-                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10"
+                  className="bg-primary-800/60 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white/10 min-h-[580px]"
                 >
                   <form onSubmit={handleOtherServiceSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

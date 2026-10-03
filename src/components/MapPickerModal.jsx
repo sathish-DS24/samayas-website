@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, MapPin, Navigation, Check, Loader2 } from 'lucide-react'
-import { reverseGeocode, getCurrentGPSLocation } from '../utils/googleMaps'
+import { loadGoogleMaps, reverseGeocode, getCurrentGPSLocation } from '../utils/googleMaps'
 
 const MapPickerModal = ({ isOpen, onClose, onSelectLocation, initialAddress = '', title = 'Select Location' }) => {
   const mapRef = useRef(null)
@@ -23,6 +23,7 @@ const MapPickerModal = ({ isOpen, onClose, onSelectLocation, initialAddress = ''
     let isMounted = true
 
     const initOrUpdateMap = async () => {
+      await loadGoogleMaps()
       if (!mapRef.current || !window.google || !window.google.maps) return
 
       let center = { lat: 10.7905, lng: 78.7047 } // Trichy fallback

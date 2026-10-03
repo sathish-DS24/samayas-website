@@ -41,7 +41,7 @@ const TaxiFareTable = ({ content }) => {
         </div>
 
         {/* Responsive Table Card */}
-        <div className="bg-dark-800/80 border border-dark-700 rounded-2xl overflow-hidden shadow-2xl">
+        <div className="bg-dark-800/80 border border-dark-700 rounded-2xl overflow-hidden shadow-2xl min-h-[350px]">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm text-gray-300">
               <thead className="bg-dark-900/90 text-xs uppercase text-amber-400 font-bold border-b border-dark-700">

@@ -4,7 +4,12 @@ import { Car, Users, Clock, Grid, ChevronDown, Eye, EyeOff } from 'lucide-react'
 import TariffModal from './TariffModal'
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 768
+    }
+    return false
+  })
   const [videoError, setVideoError] = useState(false)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -149,8 +154,9 @@ const Hero = () => {
     }, 1000)
   }
 
-  // Initialize first video on mount
+  // Initialize first video on mount (Desktop only)
   useEffect(() => {
+    if (isMobile) return
     if (videoRef1.current) {
       const video = videoRef1.current
       const videoSrcObj = videoPlaylist[0]
@@ -205,8 +211,9 @@ const Hero = () => {
     }
   }, []) // Empty dependency array to run only on mount
 
-  // Preload next video immediately when current video index changes
+  // Preload next video immediately when current video index changes (Desktop only)
   useEffect(() => {
+    if (isMobile) return
     const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
     const nextVideoSrc = getBestVideoSrc(videoPlaylist[nextIndex])
     const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
@@ -261,74 +268,79 @@ const Hero = () => {
       className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
       style={{ minHeight: '115vh', width: '100vw' }}
     >
-      {/* Background Video - Taxi City Drive */}
+      {/* Background Visual: Responsive Picture for Mobile (Sub-second LCP) + Desktop Cinematic Video */}
       <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
         <div className="relative w-full h-full">
-          {/* Video 1 - Crossfade between two videos for smooth transitions */}
-          <motion.video
-            ref={videoRef1}
-            autoPlay
-            muted
-            playsInline
-            loop={false}
-            preload="auto"
-            fetchpriority="high"
-            className="absolute inset-0 w-full h-full object-cover z-0"
-            style={{ minHeight: '115vh', width: '100vw' }}
-            initial={{ opacity: 1 }}
-            animate={{ opacity: activeVideo === 0 ? 1 : 0 }}
-            transition={{ duration: 0.8, ease: 'easeInOut' }}
-            onError={handleVideoError}
-            onEnded={handleVideoEnd}
-            onTimeUpdate={handleTimeUpdate}
-            onLoadedData={() => {
-              setVideoError(false)
-              if (videoRef1.current && activeVideo === 0) {
-                videoRef1.current.play().catch(console.error)
-              }
-            }}
-          >
-            Your browser does not support the video tag.
-          </motion.video>
-          
-          {/* Video 2 - For crossfade transitions */}
-          <motion.video
-            ref={videoRef2}
-            autoPlay
-            muted
-            playsInline
-            loop={false}
-            preload="auto"
-            fetchpriority="low"
-            className="absolute inset-0 w-full h-full object-cover z-0"
-            style={{ minHeight: '115vh', width: '100vw' }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: activeVideo === 1 ? 1 : 0 }}
-            transition={{ duration: 0.8, ease: 'easeInOut' }}
-            onError={handleVideoError}
-            onEnded={handleVideoEnd}
-            onTimeUpdate={handleTimeUpdate}
-            onLoadedData={() => {
-              setVideoError(false)
-              if (videoRef2.current && activeVideo === 1) {
-                videoRef2.current.play().catch(console.error)
-              }
-            }}
-          >
-            Your browser does not support the video tag.
-          </motion.video>
-          
-          {/* Fallback background image - only show if all videos fail */}
-          <motion.div 
-            className="absolute inset-0 w-full h-full object-cover bg-cover bg-center"
-            style={{ 
-              backgroundImage: "url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80')"
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: videoError ? 1 : 0 }}
-            transition={{ duration: 0.5 }}
-            id="fallback-bg"
-          />
+          {/* Responsive Hero Picture: 40KB WebP on mobile, high-res on desktop */}
+          <picture className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+            <source media="(max-width: 768px)" srcSet="/hero-mobile.webp" type="image/webp" />
+            <img
+              src="/hero-desktop.webp"
+              alt="SAMAYAS Taxi Service"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              className="w-full h-full object-cover"
+              style={{ minHeight: '115vh', width: '100vw' }}
+            />
+          </picture>
+
+          {/* Desktop-only Video Background */}
+          {!isMobile && (
+            <>
+              {/* Video 1 - Crossfade between two videos for smooth transitions */}
+              <motion.video
+                ref={videoRef1}
+                autoPlay
+                muted
+                playsInline
+                loop={false}
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-cover z-0"
+                style={{ minHeight: '115vh', width: '100vw' }}
+                initial={{ opacity: 1 }}
+                animate={{ opacity: activeVideo === 0 ? 1 : 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut' }}
+                onError={handleVideoError}
+                onEnded={handleVideoEnd}
+                onTimeUpdate={handleTimeUpdate}
+                onLoadedData={() => {
+                  setVideoError(false)
+                  if (videoRef1.current && activeVideo === 0) {
+                    videoRef1.current.play().catch(console.error)
+                  }
+                }}
+              >
+                Your browser does not support the video tag.
+              </motion.video>
+              
+              {/* Video 2 - For crossfade transitions */}
+              <motion.video
+                ref={videoRef2}
+                autoPlay
+                muted
+                playsInline
+                loop={false}
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-cover z-0"
+                style={{ minHeight: '115vh', width: '100vw' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: activeVideo === 1 ? 1 : 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut' }}
+                onError={handleVideoError}
+                onEnded={handleVideoEnd}
+                onTimeUpdate={handleTimeUpdate}
+                onLoadedData={() => {
+                  setVideoError(false)
+                  if (videoRef2.current && activeVideo === 1) {
+                    videoRef2.current.play().catch(console.error)
+                  }
+                }}
+              >
+                Your browser does not support the video tag.
+              </motion.video>
+            </>
+          )}
           
           {/* Dark gradient overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/65 to-black/80 z-10" />
@@ -344,41 +356,29 @@ const Hero = () => {
       >
         {/* Main Content */}
         <div className="py-8 sm:py-20 w-full max-w-7xl mx-auto">
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          {/* Subtitle - static (no fade-in) so it paints instantly for LCP */}
+          <p
             className="text-base sm:text-lg md:text-xl text-white/90 mb-3 sm:mb-4 font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
           >
             Your Trusted Travel Partner | Reliable Rides, Anytime, Anywhere
-          </motion.p>
+          </p>
 
-          {/* Main Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+          {/* Main Title - static (no fade-in) so it paints instantly for LCP */}
+          <h1
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] px-2"
           >
             One-Way Taxi &
             <br />
             <span className="text-accent-500 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Acting Driver in Tamil Nadu</span>
-          </motion.h1>
+          </h1>
 
-          {/* One-Way Taxi CTA Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+          {/* One-Way Taxi CTA Section - static container (above-the-fold text, LCP candidate) */}
+          <div
             className="mb-8 sm:mb-12 max-w-2xl mx-auto w-full px-4"
           >
             <div className="backdrop-blur-md bg-black/25 hover:bg-black/35 rounded-2xl p-6 sm:p-8 border border-white/15 text-center shadow-2xl transition-all duration-300">
               {/* Badge */}
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.7, type: "spring" }}
+              <div
                 className="flex flex-col items-center justify-center gap-2 sm:gap-3 mb-4"
               >
                 <span className="bg-accent-500 text-black px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-bold">
@@ -401,7 +401,7 @@ const Hero = () => {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Primary CTA Button */}
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -434,7 +434,7 @@ const Hero = () => {
                 தமிழ்நாடு முழுவதும் 24/7 சிறந்த ஒன்-வே டாக்ஸி மற்றும் ஆக்டிங் டிரைவர் சேவை.
               </p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Stats Section */}
           <motion.div

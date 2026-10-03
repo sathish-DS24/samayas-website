@@ -41,7 +41,7 @@ const FareTable = ({ districtName, fareTable }) => {
           viewport={{ once: true }}
           className="hidden md:block"
         >
-          <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+          <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm min-h-[300px]">
             <table className="w-full text-left">
               <thead>
                 <tr className="bg-primary-900 text-white text-sm">
@@ -100,7 +100,7 @@ const FareTable = ({ districtName, fareTable }) => {
         </motion.div>
 
         {/* Mobile cards */}
-        <div className="md:hidden space-y-3">
+        <div className="md:hidden space-y-3 min-h-[300px]">
           {fareTable.map((row, i) => {
             const billableKm = Math.max(row.distanceKm || 130, 130)
             const hatchbackTotal = billableKm * 15 + 400

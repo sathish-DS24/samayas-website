@@ -10,7 +10,9 @@
   AddType image/jpeg .jpg .jpeg
   AddType image/svg+xml .svg
   AddType image/webp .webp
+  AddType image/avif .avif
   AddType video/mp4 .mp4
+  AddType video/webm .webm
 </IfModule>
 
 # Enable URL rewriting
@@ -34,33 +36,50 @@
   RewriteRule . /index.html [L]
 </IfModule>
 
-# Enable compression (gzip)
+# Enable compression (gzip / deflate)
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript text/javascript
+  AddOutputFilterByType DEFLATE application/json application/xml application/xhtml+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
-# Browser caching
+# Browser caching & Aggressive 1-Year Cache-Control
 <IfModule mod_expires.c>
   ExpiresActive On
 
-  # Images
+  # Images & Media - 1 Year (max-age=31536000)
   ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
-
-  # Videos
+  ExpiresByType image/avif "access plus 1 year"
   ExpiresByType video/mp4 "access plus 1 year"
   ExpiresByType video/webm "access plus 1 year"
 
-  # CSS and JavaScript
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType text/javascript "access plus 1 month"
+  # CSS and JavaScript - 1 Year (Vite builds generate unique content-hashed filenames)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
 
-  # HTML
+  # HTML - No cache for instant SPA updates
   ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Aggressive 1-year immutable caching for static assets
+  <FilesMatch "\.(js|css|webp|avif|png|jpg|jpeg|svg|gif|woff2?|webm|mp4)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+  </FilesMatch>
+
+  # HTML files must never be cached so users receive new hashed bundles immediately
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+  </FilesMatch>
 </IfModule>
 
 # Security headers

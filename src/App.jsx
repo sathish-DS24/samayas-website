@@ -1,3 +1,4 @@
+import { LazyMotion, domAnimation } from 'framer-motion'
 import AdminPage from './pages/admin/AdminPage'
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
@@ -46,7 +47,11 @@ const AppContent = () => {
 }
 
 function App() {
-  return <AppContent />
+  return (
+    <LazyMotion features={domAnimation}>
+      <AppContent />
+    </LazyMotion>
+  )
 }
 
 export default App

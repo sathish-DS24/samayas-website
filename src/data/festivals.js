@@ -217,11 +217,33 @@ export const festivals = [
  * @returns {Object|null} - The active festival or null
  */
 export const getActiveFestival = (date = new Date()) => {
-  const dateString = date.toISOString().split('T')[0] // Format: YYYY-MM-DD
+  const dateString = toISTDateString(date) // Format: YYYY-MM-DD (IST calendar date)
   
   return festivals.find(festival => {
     return dateString >= festival.startDate && dateString <= festival.endDate
   })
+}
+
+/**
+ * Format a Date as YYYY-MM-DD in Indian Standard Time (Asia/Kolkata).
+ * Our services operate in Tamil Nadu, so the festival day must roll over at
+ * IST midnight regardless of the visitor's device timezone (toISOString() uses
+ * UTC, which would switch the date at 5:30 AM IST).
+ * The 'en-CA' locale formats dates as YYYY-MM-DD.
+ * @param {Date} date
+ * @returns {string}
+ */
+const istDateFormatter = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Asia/Kolkata',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+})
+
+export const toISTDateString = (date = new Date()) => {
+  const parts = istDateFormatter.formatToParts(date)
+  const get = (type) => parts.find(p => p.type === type)?.value
+  return `${get('year')}-${get('month')}-${get('day')}`
 }
 
 /**

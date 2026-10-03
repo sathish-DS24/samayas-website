@@ -14,29 +14,48 @@
         };
       })();
     </script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','%VITE_GTM_ID%');</script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "%VITE_CLARITY_ID%");
+    <!-- Deferred Analytics (GTM & Microsoft Clarity) - Non-render-blocking -->
+    <script>
+      (function() {
+        window.dataLayer = window.dataLayer || [];
+        var gtmId = '%VITE_GTM_ID%';
+        var clarityId = '%VITE_CLARITY_ID%';
+
+        function initTracking() {
+          // Google Tag Manager
+          if (gtmId && gtmId.indexOf('GTM-') === 0) {
+            window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            var gtmScript = document.createElement('script');
+            gtmScript.async = true;
+            gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId;
+            document.head.appendChild(gtmScript);
+          }
+
+          // Microsoft Clarity
+          if (clarityId && clarityId !== '%VITE_CLARITY_ID%') {
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", clarityId);
+          }
+        }
+
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(initTracking);
+        } else {
+          setTimeout(initTracking, 3000);
+        }
+      })();
     </script>
-    <!-- End Microsoft Clarity -->
     <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/logo.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
     <link rel="shortcut icon" href="/logo.png" />
     <meta name="msapplication-TileImage" content="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Preload Mobile Hero Image for Instant LCP -->
+    <link rel="preload" href="/hero-mobile.webp" as="image" type="image/webp" media="(max-width: 768px)" fetchpriority="high" />
     <meta name="description" content="One-way taxi, acting driver &amp; tours across Tamil Nadu. 24/7 recovery. Book online – SAMAYAS." />
     <link rel="canonical" href="https://samayasorg.in/" />
     <meta name="robots" content="index, follow" />
@@ -152,7 +171,6 @@
         border: 0;
       }
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPNzKYzBGxu4b_AcUeKPbB6KCTmU1uBZw&libraries=places,geometry&loading=async"></script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

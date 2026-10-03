@@ -1,88 +1,101 @@
 import React, { useState, useEffect, useMemo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { X, Sparkles } from 'lucide-react'
 import { getActiveFestival } from '../data/festivals'
 
+// Performance notes:
+// - The active festival is resolved synchronously during the first render so the
+//   banner occupies its final space on first paint (no useEffect state flip => no CLS).
+// - The greeting text renders fully visible immediately (no opacity fade) so it can be
+//   painted as the LCP element as soon as the bundle executes.
+// - Decorative elements are capped (~10) and use deterministic positions (no
+//   Math.random() during render, so nothing "jumps" on re-render).
+// - All looping animations are disabled on mobile viewports and for users who
+//   prefer reduced motion.
+
+const MOBILE_QUERY = '(max-width: 767px)'
+const STAR_COUNT = 6
+const PARTICLE_COUNT = 4
+
+// Deterministic pseudo-random number in [0, 1) derived from an index + salt.
+// Stable across renders, unlike Math.random().
+const seeded = (i, salt = 1) => {
+  const x = Math.sin((i + 1) * 12.9898 * salt + salt * 78.233) * 43758.5453
+  return x - Math.floor(x)
+}
+
+const getIsMobile = () =>
+  typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+    ? window.matchMedia(MOBILE_QUERY).matches
+    : false
+
+const isDismissedToday = () => {
+  try {
+    return localStorage.getItem('festivalBannerDismissed') === new Date().toDateString()
+  } catch {
+    return false
+  }
+}
+
 // Particle component for floating elements
-const Particle = ({ delay, duration, startX, startY, emoji, size = 'text-2xl' }) => (
+const Particle = ({ delay, duration, startX, drift, emoji, size = 'text-2xl' }) => (
   <motion.div
-    className={`absolute ${size} pointer-events-none select-none`}
-    initial={{ 
-      x: startX, 
-      y: startY, 
-      opacity: 0, 
-      scale: 0,
-      rotate: 0 
-    }}
-    animate={{ 
-      y: [startY, startY - 200, startY - 400],
-      x: [startX, startX + Math.random() * 100 - 50, startX + Math.random() * 150 - 75],
+    className={`absolute bottom-0 ${size} pointer-events-none select-none`}
+    style={{ left: startX }}
+    initial={{ y: 0, opacity: 0, scale: 0.5 }}
+    animate={{
+      y: [0, -200, -400],
+      x: [0, drift, drift * 1.5],
       opacity: [0, 1, 0],
       scale: [0.5, 1.2, 0.8],
       rotate: [0, 180, 360]
     }}
-    transition={{ 
-      duration: duration,
-      delay: delay,
+    transition={{
+      duration,
+      delay,
       repeat: Infinity,
-      ease: "easeOut"
+      ease: 'easeOut'
     }}
+    aria-hidden="true"
   >
     {emoji}
   </motion.div>
 )
 
 // Snow particle for Christmas
-const Snowflake = ({ delay, startX }) => (
+const Snowflake = ({ delay, startX, duration, fontSize, drift }) => (
   <motion.div
-    className="absolute text-white pointer-events-none select-none"
-    initial={{ x: startX, y: -20, opacity: 0 }}
-    animate={{ 
+    className="absolute top-0 text-white pointer-events-none select-none"
+    style={{ left: startX, fontSize }}
+    initial={{ y: -20, opacity: 0 }}
+    animate={{
       y: [0, 600],
-      x: [startX, startX + Math.sin(delay * 10) * 50],
+      x: [0, drift],
       opacity: [0, 1, 1, 0],
       rotate: [0, 360]
     }}
-    transition={{ 
-      duration: 8 + Math.random() * 4,
-      delay: delay,
+    transition={{
+      duration,
+      delay,
       repeat: Infinity,
-      ease: "linear"
+      ease: 'linear'
     }}
-    style={{ fontSize: `${10 + Math.random() * 15}px` }}
+    aria-hidden="true"
   >
     ❄
   </motion.div>
 )
 
 // Diya/lamp for Diwali
-const Diya = ({ delay, x, y }) => (
+const Diya = ({ delay, x, y, animated }) => (
   <motion.div
     className="absolute pointer-events-none"
     style={{ left: x, top: y }}
-    initial={{ scale: 0, opacity: 0 }}
-    animate={{ 
-      scale: [1, 1.1, 1],
-      opacity: 1
-    }}
-    transition={{ 
-      duration: 2,
-      delay: delay,
-      repeat: Infinity,
-      repeatType: "reverse"
-    }}
+    animate={animated ? { scale: [1, 1.1, 1] } : undefined}
+    transition={animated ? { duration: 2, delay, repeat: Infinity, repeatType: 'reverse' } : undefined}
+    aria-hidden="true"
   >
-    <div className="relative">
-      <span className="text-3xl">🪔</span>
-      <motion.div
-        className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-6 bg-gradient-to-t from-orange-500 via-yellow-400 to-transparent rounded-full blur-sm"
-        animate={{ 
-          scale: [1, 1.3, 1],
-          opacity: [0.8, 1, 0.8]
-        }}
-        transition={{ duration: 0.5, repeat: Infinity }}
-      />
-    </div>
+    <span className="text-3xl">🪔</span>
   </motion.div>
 )
 
@@ -94,22 +107,16 @@ const Firework = ({ delay, x, y, colors }) => (
     initial={{ scale: 0, opacity: 0 }}
     animate={{ scale: [0, 1.5, 2], opacity: [0, 1, 0] }}
     transition={{ duration: 1.5, delay, repeat: Infinity, repeatDelay: 3 }}
+    aria-hidden="true"
   >
-    {[...Array(8)].map((_, i) => (
-      <motion.div
+    {[...Array(6)].map((_, i) => (
+      <div
         key={i}
         className="absolute w-2 h-2 rounded-full"
-        style={{ 
+        style={{
           backgroundColor: colors[i % colors.length],
-          boxShadow: `0 0 10px ${colors[i % colors.length]}`
+          transform: `translate(${Math.cos((i * 60 * Math.PI) / 180) * 60}px, ${Math.sin((i * 60 * Math.PI) / 180) * 60}px)`
         }}
-        animate={{
-          x: Math.cos((i * 45 * Math.PI) / 180) * 60,
-          y: Math.sin((i * 45 * Math.PI) / 180) * 60,
-          opacity: [1, 0],
-          scale: [1, 0.5]
-        }}
-        transition={{ duration: 1, delay: delay + 0.3 }}
       />
     ))}
   </motion.div>
@@ -206,37 +213,62 @@ const festivalThemes = {
   }
 }
 
+const formatFestivalDate = (festival) =>
+  festival.startDate === festival.endDate
+    ? new Date(festival.startDate).toLocaleDateString('en-US', {
+        weekday: 'long',
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+      })
+    : `${new Date(festival.startDate).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+      })} - ${new Date(festival.endDate).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+      })}`
+
 const FestivalBanner = ({ previewDate = null, className = '', persistDismissal = false }) => {
-  const [isVisible, setIsVisible] = useState(false)
-  const [festival, setFestival] = useState(null)
+  // Resolve the festival synchronously so the banner is present on the very first paint.
+  const festival = useMemo(
+    () => getActiveFestival(previewDate || new Date()) || null,
+    [previewDate]
+  )
+
+  // Dismissal state is also read synchronously (lazy initializer) to avoid a layout flip.
+  // If persistDismissal is false, the banner always shows again on refresh.
+  const [isDismissed, setIsDismissed] = useState(() => persistDismissal && isDismissedToday())
+
+  // Animation gating: off on mobile viewports and for prefers-reduced-motion users.
+  const prefersReducedMotion = useReducedMotion()
+  const [isMobile, setIsMobile] = useState(getIsMobile)
 
   useEffect(() => {
-    const checkDismissed = () => {
-      // If persistDismissal is false, always show banner on refresh
-      if (!persistDismissal) return true
-      const dismissedDate = localStorage.getItem('festivalBannerDismissed')
-      const today = new Date().toDateString()
-      return dismissedDate !== today
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return
+    const mql = window.matchMedia(MOBILE_QUERY)
+    const onChange = (e) => setIsMobile(e.matches)
+    if (mql.addEventListener) mql.addEventListener('change', onChange)
+    else mql.addListener(onChange)
+    return () => {
+      if (mql.removeEventListener) mql.removeEventListener('change', onChange)
+      else mql.removeListener(onChange)
     }
+  }, [])
 
-    const checkDate = previewDate || new Date()
-    const activeFestival = getActiveFestival(checkDate)
-    
-    if (activeFestival && checkDismissed()) {
-      setFestival(activeFestival)
-      setIsVisible(true)
-    } else {
-      setIsVisible(false)
-    }
-  }, [previewDate, persistDismissal])
+  const animated = !isMobile && !prefersReducedMotion
 
   const handleClose = () => {
     // Only store in localStorage if persistDismissal is true
     if (persistDismissal) {
-      const today = new Date().toDateString()
-      localStorage.setItem('festivalBannerDismissed', today)
+      try {
+        localStorage.setItem('festivalBannerDismissed', new Date().toDateString())
+      } catch {
+        /* storage unavailable - dismiss for this session only */
+      }
     }
-    setIsVisible(false)
+    setIsDismissed(true)
   }
 
   // Get theme based on festival ID
@@ -245,285 +277,229 @@ const FestivalBanner = ({ previewDate = null, className = '', persistDismissal =
     return festivalThemes[festival.id] || festivalThemes.default
   }, [festival])
 
-  // Generate random particles
-  const particles = useMemo(() => {
-    if (!theme) return []
-    return [...Array(15)].map((_, i) => ({
-      id: i,
-      delay: i * 0.5,
-      duration: 4 + Math.random() * 3,
-      startX: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
-      startY: 400 + Math.random() * 200,
-      emoji: theme.particles[Math.floor(Math.random() * theme.particles.length)]
-    }))
-  }, [theme])
+  // Static twinkle stars (deterministic positions; twinkle only when animated)
+  const stars = useMemo(
+    () =>
+      [...Array(STAR_COUNT)].map((_, i) => ({
+        id: i,
+        left: `${Math.round(seeded(i, 3) * 100)}%`,
+        top: `${Math.round(seeded(i, 7) * 100)}%`,
+        duration: 2 + seeded(i, 11) * 2,
+        delay: seeded(i, 13) * 2,
+      })),
+    []
+  )
 
-  // Generate snowflakes for Christmas
+  // Floating particles (deterministic)
+  const particles = useMemo(
+    () =>
+      [...Array(PARTICLE_COUNT)].map((_, i) => ({
+        id: i,
+        delay: i * 1.2,
+        duration: 5 + seeded(i, 17) * 3,
+        startX: `${10 + Math.round(seeded(i, 19) * 80)}%`,
+        drift: Math.round(seeded(i, 23) * 100 - 50),
+        emoji: theme.particles[i % theme.particles.length],
+      })),
+    [theme]
+  )
+
+  // Snowflakes for Christmas (deterministic)
   const snowflakes = useMemo(() => {
-    if (!theme?.hasSnow) return []
-    return [...Array(30)].map((_, i) => ({
+    if (!theme.hasSnow) return []
+    return [...Array(6)].map((_, i) => ({
       id: i,
-      delay: i * 0.3,
-      startX: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200)
+      delay: i * 0.8,
+      startX: `${Math.round(seeded(i, 29) * 100)}%`,
+      duration: 8 + seeded(i, 31) * 4,
+      fontSize: `${10 + Math.round(seeded(i, 37) * 15)}px`,
+      drift: Math.round(Math.sin(i * 3) * 50),
     }))
   }, [theme])
 
-  // Generate diyas for Diwali
+  // Diyas for Diwali (deterministic)
   const diyas = useMemo(() => {
-    if (!theme?.hasDiyas) return []
-    return [...Array(8)].map((_, i) => ({
+    if (!theme.hasDiyas) return []
+    return [...Array(4)].map((_, i) => ({
       id: i,
       delay: i * 0.2,
-      x: `${10 + (i * 12)}%`,
-      y: `${70 + Math.random() * 20}%`
+      x: `${10 + i * 24}%`,
+      y: `${70 + Math.round(seeded(i, 41) * 20)}%`,
     }))
   }, [theme])
 
-  // Generate fireworks
+  // Fireworks (deterministic)
   const fireworks = useMemo(() => {
-    if (!theme?.hasFireworks) return []
-    return [...Array(5)].map((_, i) => ({
+    if (!theme.hasFireworks) return []
+    return [...Array(3)].map((_, i) => ({
       id: i,
       delay: i * 1.5,
-      x: `${15 + (i * 18)}%`,
-      y: `${20 + Math.random() * 30}%`,
-      colors: ['#FFD700', '#FF6B6B', '#4ECDC4', '#A855F7', '#F97316']
+      x: `${15 + i * 30}%`,
+      y: `${20 + Math.round(seeded(i, 43) * 30)}%`,
+      colors: ['#FFD700', '#FF6B6B', '#4ECDC4', '#A855F7', '#F97316'],
     }))
   }, [theme])
 
-  if (!isVisible || !festival) {
+  if (!festival) {
     return null
   }
 
+  const [greetingHeadline, ...greetingRest] = festival.greeting.split('!')
+  const greetingSubtitle = greetingRest.join('!').trim()
+
   return (
-    <AnimatePresence>
-      {isVisible && (
+    // initial={false}: render in final state on first paint (no entrance transition),
+    // while still allowing the exit animation when the banner is dismissed.
+    <AnimatePresence initial={false}>
+      {!isDismissed && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
+          key="festival-banner"
           exit={{ opacity: 0, y: -100, scale: 0.95 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
           className={`relative w-full min-h-[500px] md:min-h-[550px] lg:min-h-[600px] overflow-hidden ${className}`}
         >
-          {/* Animated Gradient Background */}
-          <motion.div
-            className={`absolute inset-0 bg-gradient-to-br ${theme.gradient}`}
-            animate={{
-              backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'],
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
-          />
+          {/* Gradient Background (static) */}
+          <div className={`absolute inset-0 bg-gradient-to-br ${theme.gradient}`} />
 
-          {/* Animated mesh overlay */}
-          <div className="absolute inset-0 opacity-30">
+          {/* Mesh overlay */}
+          <div className="absolute inset-0 opacity-30" aria-hidden="true">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.1)_0%,transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05)_0%,transparent_70%)]" />
           </div>
 
-          {/* Animated glow orbs */}
-          <motion.div
-            className="absolute w-96 h-96 rounded-full bg-white/10 blur-3xl"
-            animate={{
-              x: ['-10%', '10%', '-10%'],
-              y: ['-10%', '20%', '-10%'],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          {/* Glow orbs (static - animating large blurred layers is expensive to paint) */}
+          <div
+            className="absolute w-96 h-96 rounded-full bg-white/10 blur-3xl pointer-events-none"
             style={{ left: '10%', top: '10%' }}
+            aria-hidden="true"
           />
-          <motion.div
-            className="absolute w-80 h-80 rounded-full bg-white/10 blur-3xl"
-            animate={{
-              x: ['10%', '-10%', '10%'],
-              y: ['10%', '-20%', '10%'],
-              scale: [1.2, 1, 1.2],
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+          <div
+            className="absolute w-80 h-80 rounded-full bg-white/10 blur-3xl pointer-events-none"
             style={{ right: '10%', bottom: '10%' }}
+            aria-hidden="true"
           />
 
           {/* Stars/sparkles background */}
-          <div className="absolute inset-0">
-            {[...Array(50)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-1 h-1 bg-white rounded-full"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                }}
-                animate={{
-                  opacity: [0.2, 1, 0.2],
-                  scale: [0.5, 1.5, 0.5],
-                }}
-                transition={{
-                  duration: 2 + Math.random() * 2,
-                  delay: Math.random() * 2,
-                  repeat: Infinity,
-                }}
-              />
-            ))}
+          <div className="absolute inset-0" aria-hidden="true">
+            {stars.map((s) =>
+              animated ? (
+                <motion.div
+                  key={s.id}
+                  className="absolute w-1 h-1 bg-white rounded-full"
+                  style={{ left: s.left, top: s.top }}
+                  animate={{ opacity: [0.2, 1, 0.2], scale: [0.5, 1.5, 0.5] }}
+                  transition={{ duration: s.duration, delay: s.delay, repeat: Infinity }}
+                />
+              ) : (
+                <div
+                  key={s.id}
+                  className="absolute w-1 h-1 bg-white/60 rounded-full"
+                  style={{ left: s.left, top: s.top }}
+                />
+              )
+            )}
           </div>
 
-          {/* Festival-specific effects */}
-          {/* Snowflakes for Christmas */}
-          {theme.hasSnow && snowflakes.map(flake => (
-            <Snowflake key={flake.id} delay={flake.delay} startX={flake.startX} />
+          {/* Festival-specific effects (desktop + motion allowed only) */}
+          {animated && theme.hasSnow && snowflakes.map((flake) => (
+            <Snowflake key={flake.id} {...flake} />
           ))}
 
-          {/* Diyas for Diwali */}
-          {theme.hasDiyas && diyas.map(diya => (
-            <Diya key={diya.id} delay={diya.delay} x={diya.x} y={diya.y} />
+          {theme.hasDiyas && diyas.map((diya) => (
+            <Diya key={diya.id} delay={diya.delay} x={diya.x} y={diya.y} animated={animated} />
           ))}
 
-          {/* Fireworks */}
-          {theme.hasFireworks && fireworks.map(fw => (
+          {animated && theme.hasFireworks && fireworks.map((fw) => (
             <Firework key={fw.id} delay={fw.delay} x={fw.x} y={fw.y} colors={fw.colors} />
           ))}
 
-          {/* Floating particles */}
-          {particles.map(p => (
+          {animated && particles.map((p) => (
             <Particle
               key={p.id}
               delay={p.delay}
               duration={p.duration}
               startX={p.startX}
-              startY={p.startY}
+              drift={p.drift}
               emoji={p.emoji}
             />
           ))}
 
-          {/* Content Container */}
+          {/* Content Container - rendered fully visible on first paint (LCP-friendly) */}
           <div className="relative z-10 h-full min-h-[500px] md:min-h-[550px] lg:min-h-[600px] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center pt-24">
-            
+
             {/* Decorative top elements - floating emojis */}
-            <motion.div
-              className="flex gap-6 mb-6"
-              initial={{ y: -30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}
-            >
-              {[...Array(3)].map((_, i) => (
-                <motion.span
-                  key={i}
-                  className="text-5xl md:text-6xl"
-                  animate={{ 
-                    y: [0, -15, 0],
-                    rotate: [0, 10, -10, 0]
-                  }}
-                  transition={{ 
-                    duration: 2, 
-                    delay: i * 0.2, 
-                    repeat: Infinity 
-                  }}
-                >
-                  {theme.particles[i]}
-                </motion.span>
-              ))}
-            </motion.div>
+            <div className="flex gap-6 mb-6" aria-hidden="true">
+              {[0, 1, 2].map((i) =>
+                animated ? (
+                  <motion.span
+                    key={i}
+                    className="text-5xl md:text-6xl"
+                    animate={{ y: [0, -15, 0], rotate: [0, 10, -10, 0] }}
+                    transition={{ duration: 2, delay: i * 0.2, repeat: Infinity }}
+                  >
+                    {theme.particles[i]}
+                  </motion.span>
+                ) : (
+                  <span key={i} className="text-5xl md:text-6xl">
+                    {theme.particles[i]}
+                  </span>
+                )
+              )}
+            </div>
 
             {/* Festival Name Badge */}
-            <motion.div
-              initial={{ scale: 0, rotate: -180 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={{ delay: 0.3, duration: 0.6, type: 'spring' }}
-              className="mb-6"
-            >
+            <div className="mb-6">
               <div className={`relative inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border ${theme.borderGlow} shadow-2xl ${theme.glowColor}`}>
                 <Sparkles className={`w-5 h-5 ${theme.accentColor}`} />
                 <span className="text-white font-bold text-lg tracking-wide">
                   {festival.name}
                 </span>
                 <Sparkles className={`w-5 h-5 ${theme.accentColor}`} />
-                
+
                 {/* Glow effect */}
                 <div className="absolute inset-0 rounded-full bg-white/20 blur-xl -z-10" />
               </div>
-            </motion.div>
+            </div>
 
-            {/* Main Greeting */}
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="relative"
-            >
-              <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight ${theme.textGlow}`}>
-                {festival.greeting.split('!')[0]}!
-              </h1>
-              
+            {/* Main Greeting - <h2> so the page keeps a single <h1> (in Hero) */}
+            <div className="relative">
+              <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight ${theme.textGlow}`}>
+                {greetingHeadline}!
+              </h2>
+
               {/* Subtitle with remaining greeting text */}
-              {festival.greeting.split('!').length > 1 && (
-                <motion.p
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.7, duration: 0.5 }}
-                  className="mt-4 text-xl sm:text-2xl md:text-3xl text-white/90 font-medium"
-                >
-                  {festival.greeting.split('!').slice(1).join('!').trim()}
-                </motion.p>
+              {greetingSubtitle && (
+                <p className="mt-4 text-xl sm:text-2xl md:text-3xl text-white/90 font-medium">
+                  {greetingSubtitle}
+                </p>
               )}
-            </motion.div>
+            </div>
 
             {/* Date Badge */}
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.4 }}
-              className="mt-8"
-            >
+            <div className="mt-8">
               <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-black/30 backdrop-blur-sm rounded-full border border-white/20">
-                <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                <div className={`w-2 h-2 rounded-full bg-green-400 ${animated ? 'animate-pulse' : ''}`} />
                 <span className="text-white/90 font-medium">
-                  {festival.startDate === festival.endDate
-                    ? new Date(festival.startDate).toLocaleDateString('en-US', {
-                        weekday: 'long',
-                        month: 'long',
-                        day: 'numeric',
-                        year: 'numeric',
-                      })
-                    : `${new Date(festival.startDate).toLocaleDateString('en-US', {
-                        month: 'short',
-                        day: 'numeric',
-                      })} - ${new Date(festival.endDate).toLocaleDateString('en-US', {
-                        month: 'short',
-                        day: 'numeric',
-                        year: 'numeric',
-                      })}`}
+                  {formatFestivalDate(festival)}
                 </span>
               </div>
-            </motion.div>
+            </div>
 
-            {/* Animated decorative line */}
-            <motion.div
-              className="mt-8 flex items-center gap-4"
-              initial={{ scaleX: 0, opacity: 0 }}
-              animate={{ scaleX: 1, opacity: 1 }}
-              transition={{ delay: 1, duration: 0.6 }}
-            >
+            {/* Decorative line */}
+            <div className="mt-8 flex items-center gap-4" aria-hidden="true">
               <div className="w-16 h-0.5 bg-gradient-to-r from-transparent to-white/50" />
-              <motion.span
-                className="text-2xl"
-                animate={{ rotate: [0, 360] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-              >
-                {theme.particles[0]}
-              </motion.span>
+              <span className="text-2xl">{theme.particles[0]}</span>
               <div className="w-16 h-0.5 bg-gradient-to-l from-transparent to-white/50" />
-            </motion.div>
+            </div>
 
           </div>
 
           {/* Close Button - positioned outside content container for better accessibility */}
           <motion.button
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.3, type: 'spring' }}
-            whileHover={{ scale: 1.1, rotate: 90 }}
+            whileHover={animated ? { scale: 1.1, rotate: 90 } : undefined}
             whileTap={{ scale: 0.9 }}
             onClick={handleClose}
-            className="absolute top-24 right-4 sm:top-28 sm:right-6 z-50 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full border border-white/20 transition-all duration-300 group shadow-lg cursor-pointer"
+            className="absolute top-24 right-4 sm:top-28 sm:right-6 z-50 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full border border-white/20 transition-colors duration-300 group shadow-lg cursor-pointer"
             aria-label="Close banner"
           >
             <X className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
@@ -531,22 +507,14 @@ const FestivalBanner = ({ previewDate = null, className = '', persistDismissal =
 
           {/* Bottom gradient fade */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/30 to-transparent" />
-          
-          {/* Corner decorations */}
-          <motion.div
-            className="absolute bottom-4 left-4 text-5xl opacity-30"
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-          >
+
+          {/* Corner decorations (static) */}
+          <div className="absolute bottom-4 left-4 text-5xl opacity-30" aria-hidden="true">
             {theme.particles[theme.particles.length - 1]}
-          </motion.div>
-          <motion.div
-            className="absolute bottom-4 right-4 text-5xl opacity-30"
-            animate={{ rotate: [0, -10, 10, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-          >
+          </div>
+          <div className="absolute bottom-4 right-4 text-5xl opacity-30" aria-hidden="true">
             {theme.particles[theme.particles.length - 2]}
-          </motion.div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

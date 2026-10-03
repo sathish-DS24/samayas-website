@@ -277,6 +277,8 @@ const Hero = () => {
             <img
               src="/hero-desktop.webp"
               alt="SAMAYAS Taxi Service"
+              width="1920"
+              height="1080"
               fetchpriority="high"
               loading="eager"
               decoding="async"

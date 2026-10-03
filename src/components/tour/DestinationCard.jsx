@@ -17,6 +17,10 @@ const DestinationCard = ({ destination }) => {
           <img
             src={destination.heroImage || '/images/cars/sedan.webp'}
             alt={destination.name}
+            width="400"
+            height="192"
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute top-3 left-3">

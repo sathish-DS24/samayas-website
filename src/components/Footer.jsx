@@ -76,6 +76,10 @@ const Footer = () => {
               <img 
                 src="/logo.webp" 
                 alt="SAMAYAS Logo" 
+                width="96"
+                height="96"
+                loading="lazy"
+                decoding="async"
                 className="w-24 h-24 object-contain"
               />
               <span className="text-3xl font-bold" style={{ color: '#D4AF37' }}>

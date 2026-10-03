@@ -57,7 +57,7 @@ const RoutePage = () => {
       name: `SAMAYAS ${content.from} to ${content.to} One-Way Taxi`,
       description: content.metaDescription,
       url: `${SITE_URL}${routeUrlPath}`,
-      image: `${SITE_URL}/images/samayas-logo.png`,
+      image: `${SITE_URL}/logo.webp`,
       provider: {
         '@type': 'LocalBusiness',
         name: 'SAMAYAS',

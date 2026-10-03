@@ -75,6 +75,8 @@ const Navbar = ({ variant = 'home' }) => {
               <img
                 src="/logo.webp"
                 alt="SAMAYAS Logo"
+                width="48"
+                height="48"
                 className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
               />
               <span className="text-xl sm:text-2xl font-black tracking-wider whitespace-nowrap" style={{ color: '#D4AF37' }}>

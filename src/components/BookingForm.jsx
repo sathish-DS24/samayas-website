@@ -2529,6 +2529,10 @@ const BookingForm = ({
                                     <img
                                       src={vehicle.image}
                                       alt={vehicle.alt || vehicle.type}
+                                      width="160"
+                                      height="80"
+                                      loading="lazy"
+                                      decoding="async"
                                       className={`w-full h-full object-contain rounded-lg transition-all duration-300 ${
                                         isSelected 
                                           ? 'brightness-110 scale-105' 
@@ -2912,6 +2916,10 @@ const BookingForm = ({
                                     <img
                                       src={vehicle.image}
                                       alt={vehicle.alt || vehicle.type}
+                                      width="160"
+                                      height="80"
+                                      loading="lazy"
+                                      decoding="async"
                                       className={`w-full h-full object-contain rounded-lg transition-all duration-300 ${
                                         isSelected 
                                           ? 'brightness-110 scale-105' 
@@ -3347,6 +3355,10 @@ const BookingForm = ({
                                       <img
                                         src={vehicle.image}
                                         alt={vehicle.alt}
+                                        width="200"
+                                        height="96"
+                                        loading="lazy"
+                                        decoding="async"
                                         className={`w-full h-full object-contain rounded-lg transition-all duration-300 ${
                                           isSelected 
                                             ? 'brightness-110 scale-105' 

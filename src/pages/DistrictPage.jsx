@@ -104,7 +104,7 @@ const DistrictPage = () => {
       url: `${SITE_URL}${getDistrictUrl(district.slug)}`,
       telephone: '+91-98948-09439',
       email: 'samayasprem@gmail.com',
-      image: `${SITE_URL}/images/samayas-logo.png`,
+      image: `${SITE_URL}/logo.webp`,
       areaServed: [
         { '@type': 'AdministrativeArea', name: district.name },
         { '@type': 'State', name: 'Tamil Nadu' },

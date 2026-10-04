@@ -87,6 +87,7 @@ const LiveEmergencyAssist = () => {
               <input
                 type="file"
                 accept="image/*"
+                aria-label="Upload breakdown or accident photo"
                 className="hidden"
                 onChange={() => setPhotoSelected(true)}
               />

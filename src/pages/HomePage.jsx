@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
-import About from '../components/About'
-import Services from '../components/Services'
-import PopularRoutesSection from '../components/home/PopularRoutesSection'
-import Contact from '../components/Contact'
-import BookingForm from '../components/BookingForm'
-import Footer from '../components/Footer'
 import { usePageSeo } from '../utils/seo'
+
+// Lazy-load below-the-fold components to keep initial bundle ultra-lean for instant FCP/LCP
+const About = lazy(() => import('../components/About'))
+const Services = lazy(() => import('../components/Services'))
+const PopularRoutesSection = lazy(() => import('../components/home/PopularRoutesSection'))
+const Contact = lazy(() => import('../components/Contact'))
+const BookingForm = lazy(() => import('../components/BookingForm'))
+const Footer = lazy(() => import('../components/Footer'))
+
+const SectionFallback = () => <div className="min-h-[100px]" />
 
 const HomePage = () => {
   usePageSeo({
@@ -22,13 +26,15 @@ const HomePage = () => {
       <Navbar variant="home" />
       <main>
         <Hero />
-        <About />
-        <Services />
-        <PopularRoutesSection />
-        <Contact />
-        <BookingForm />
+        <Suspense fallback={<SectionFallback />}>
+          <About />
+          <Services />
+          <PopularRoutesSection />
+          <Contact />
+          <BookingForm />
+          <Footer />
+        </Suspense>
       </main>
-      <Footer />
     </div>
   )
 }

@@ -2195,7 +2195,7 @@ const BookingForm = ({
                           Pickup Location *
                         </label>
                         <div className="relative flex items-center">
-                          <input
+                          <input aria-label="Enter pickup address"
                             ref={oneWayPickupRef}
                             type="text"
                             name="pickupLocation"
@@ -2243,7 +2243,7 @@ const BookingForm = ({
                           Drop Location *
                         </label>
                         <div className="relative flex items-center">
-                          <input
+                          <input aria-label="Enter drop address"
                             ref={oneWayDropRef}
                             type="text"
                             name="dropLocation"
@@ -2293,7 +2293,7 @@ const BookingForm = ({
                           <Calendar className="w-4 h-4 inline mr-2 text-accent-500" />
                           Date *
                         </label>
-                        <input
+                        <input aria-label="Date"
                           type="date"
                           name="date"
                           value={oneWayData.date}
@@ -2314,7 +2314,7 @@ const BookingForm = ({
                           Time *
                         </label>
                         <div className="flex gap-2">
-                          <input
+                          <input aria-label="Time"
                             type="time"
                             name="time"
                             value={oneWayData.time}
@@ -2368,7 +2368,7 @@ const BookingForm = ({
                             <label className="block text-xs font-semibold text-white/90 mb-1">
                               Flight Number (Optional)
                             </label>
-                            <input
+                            <input aria-label="e.g. TR602, MH182"
                               type="text"
                               name="flightNumber"
                               value={oneWayData.flightNumber || ''}
@@ -2381,7 +2381,7 @@ const BookingForm = ({
                             <label className="block text-xs font-semibold text-white/90 mb-1">
                               Airline Name
                             </label>
-                            <input
+                            <input aria-label="e.g. Scoot, AirAsia, Indigo"
                               type="text"
                               name="airline"
                               value={oneWayData.airline || ''}
@@ -2394,7 +2394,7 @@ const BookingForm = ({
                             <label className="block text-xs font-semibold text-white/90 mb-1">
                               Passenger Count
                             </label>
-                            <select
+                            <select aria-label="Passenger Count"
                               name="passengerCount"
                               value={oneWayData.passengerCount || '1-4 Passengers'}
                               onChange={handleOneWayChange}
@@ -2423,7 +2423,7 @@ const BookingForm = ({
                             <label className="block text-xs font-semibold text-white/90 mb-1">
                               Breakdown Issue / Service *
                             </label>
-                            <select
+                            <select aria-label="Breakdown Type"
                               name="breakdownType"
                               value={oneWayData.breakdownType || 'Car Recovery'}
                               onChange={handleOneWayChange}
@@ -2446,7 +2446,7 @@ const BookingForm = ({
                             <label className="block text-xs font-semibold text-white/90 mb-1">
                               Emergency Dispatch Priority *
                             </label>
-                            <select
+                            <select aria-label="Emergency Level"
                               name="emergencyLevel"
                               value={oneWayData.emergencyLevel || 'Immediate Dispatch (High Priority)'}
                               onChange={handleOneWayChange}
@@ -2462,7 +2462,7 @@ const BookingForm = ({
                             <label className="block text-xs font-semibold text-white/90 mb-1">
                               Preferred Contact Method
                             </label>
-                            <select
+                            <select aria-label="Contact Method"
                               name="contactMethod"
                               value={oneWayData.contactMethod || 'Phone Call'}
                               onChange={handleOneWayChange}
@@ -2479,7 +2479,7 @@ const BookingForm = ({
                           <label className="block text-xs font-semibold text-white/90 mb-1">
                             Destination Garage / Delivery Address (Optional)
                           </label>
-                          <input
+                          <input aria-label="e.g. Authorized Hyundai Service Center Trichy, Home garage"
                             type="text"
                             name="destinationGarage"
                             value={oneWayData.destinationGarage || ''}
@@ -2573,7 +2573,7 @@ const BookingForm = ({
                           <User className="w-4 h-4 inline mr-2 text-accent-500" />
                           Full Name *
                         </label>
-                        <input
+                        <input aria-label="Enter your full name"
                           type="text"
                           name="name"
                           value={oneWayData.name}
@@ -2593,7 +2593,7 @@ const BookingForm = ({
                           <Phone className="w-4 h-4 inline mr-2 text-accent-500" />
                           Mobile Number *
                         </label>
-                        <input
+                        <input aria-label="Enter 10-digit mobile number"
                           type="tel"
                           name="phone"
                           value={oneWayData.phone}
@@ -2615,7 +2615,7 @@ const BookingForm = ({
                         <MessageSquare className="w-4 h-4 inline mr-2 text-accent-500" />
                         Additional Comments / Special Requests (Optional)
                       </label>
-                      <textarea
+                      <textarea aria-label="Any customization requests, special instructions, or additional details..."
                         name="comments"
                         value={oneWayData.comments}
                         onChange={handleOneWayChange}
@@ -2696,7 +2696,7 @@ const BookingForm = ({
                           Pickup Location *
                         </label>
                         <div className="relative flex items-center">
-                          <input
+                          <input aria-label="Enter pickup address"
                             ref={roundTripPickupRef}
                             type="text"
                             name="pickupLocation"
@@ -2744,7 +2744,7 @@ const BookingForm = ({
                           Destination City / Visiting Place *
                         </label>
                         <div className="relative flex items-center">
-                          <input
+                          <input aria-label="Enter destination or visiting place"
                             ref={roundTripDropRef}
                             type="text"
                             name="dropLocation"
@@ -2794,7 +2794,7 @@ const BookingForm = ({
                           <Calendar className="w-4 h-4 inline mr-2 text-accent-500" />
                           Pickup Date *
                         </label>
-                        <input
+                        <input aria-label="Date"
                           type="date"
                           name="date"
                           value={roundTripData.date}
@@ -2814,7 +2814,7 @@ const BookingForm = ({
                           <Calendar className="w-4 h-4 inline mr-2 text-accent-500" />
                           Return Date *
                         </label>
-                        <input
+                        <input aria-label="Return Date"
                           type="date"
                           name="returnDate"
                           value={roundTripData.returnDate}
@@ -2837,7 +2837,7 @@ const BookingForm = ({
                         Time *
                       </label>
                       <div className="flex gap-2">
-                        <input
+                        <input aria-label="Time"
                           type="time"
                           name="time"
                           value={roundTripData.time}
@@ -2960,7 +2960,7 @@ const BookingForm = ({
                           <User className="w-4 h-4 inline mr-2 text-accent-500" />
                           Full Name *
                         </label>
-                        <input
+                        <input aria-label="Enter your full name"
                           type="text"
                           name="name"
                           value={roundTripData.name}
@@ -2980,7 +2980,7 @@ const BookingForm = ({
                           <Phone className="w-4 h-4 inline mr-2 text-accent-500" />
                           Mobile Number *
                         </label>
-                        <input
+                        <input aria-label="Enter 10-digit mobile number"
                           type="tel"
                           name="phone"
                           value={roundTripData.phone}
@@ -3002,7 +3002,7 @@ const BookingForm = ({
                         <MessageSquare className="w-4 h-4 inline mr-2 text-accent-500" />
                         Additional Comments / Special Requests (Optional)
                       </label>
-                      <textarea
+                      <textarea aria-label="Any customization requests, special instructions, or additional details..."
                         name="comments"
                         value={roundTripData.comments}
                         onChange={handleRoundTripChange}
@@ -3081,7 +3081,7 @@ const BookingForm = ({
                         <label className="block text-sm font-semibold text-white/90 mb-2">
                           Trip Type *
                         </label>
-                        <select
+                        <select aria-label="Acting Trip Type"
                           name="actingTripType"
                           value={actingDriverData.actingTripType}
                           onChange={handleActingDriverChange}
@@ -3099,7 +3099,7 @@ const BookingForm = ({
                           <label className="block text-sm font-semibold text-white/90 mb-2">
                             Package Selection *
                           </label>
-                          <select
+                          <select aria-label="Local Package"
                             name="localPackage"
                             value={actingDriverData.localPackage}
                             onChange={handleActingDriverChange}
@@ -3116,7 +3116,7 @@ const BookingForm = ({
                           <label className="block text-sm font-semibold text-white/90 mb-2">
                             Number of Days *
                           </label>
-                          <input
+                          <input aria-label="Days"
                             type="number"
                             name="days"
                             min="2"
@@ -3132,7 +3132,7 @@ const BookingForm = ({
                         <label className="block text-sm font-semibold text-white/90 mb-2">
                           Customer Name *
                         </label>
-                        <input
+                        <input aria-label="Enter customer name"
                           type="text"
                           name="name"
                           value={actingDriverData.name}
@@ -3147,7 +3147,7 @@ const BookingForm = ({
                         <label className="block text-sm font-semibold text-white/90 mb-2">
                           Phone Number *
                         </label>
-                        <input
+                        <input aria-label="Enter phone number"
                           type="tel"
                           name="phone"
                           value={actingDriverData.phone}
@@ -3162,7 +3162,7 @@ const BookingForm = ({
                         <label className="block text-sm font-semibold text-white/90 mb-2">
                           Date *
                         </label>
-                        <input
+                        <input aria-label="Date"
                           type="date"
                           name="date"
                           value={actingDriverData.date}
@@ -3178,7 +3178,7 @@ const BookingForm = ({
                           Time *
                         </label>
                         <div className="flex gap-2">
-                          <input
+                          <input aria-label="Time"
                             type="time"
                             name="time"
                             value={actingDriverData.time}
@@ -3198,7 +3198,7 @@ const BookingForm = ({
                           Pickup Location *
                         </label>
                         <div className="relative flex items-center">
-                          <input
+                          <input aria-label="Enter pickup location"
                             type="text"
                             name="pickupLocation"
                             ref={actingPickupRef}
@@ -3242,7 +3242,7 @@ const BookingForm = ({
                             {actingDriverData.actingTripType === 'drop' ? 'Drop Location *' : 'Destination City (Outstation) *'}
                           </label>
                           <div className="relative flex items-center">
-                            <input
+                            <input aria-label="Enter drop location"
                               type="text"
                               name="dropLocation"
                               ref={actingDropRef}
@@ -3285,7 +3285,7 @@ const BookingForm = ({
                         <label className="block text-sm font-semibold text-white/90 mb-2">
                           Additional Comments (Optional)
                         </label>
-                        <textarea
+                        <textarea aria-label="Comments"
                           name="comments"
                           value={actingDriverData.comments}
                           onChange={handleActingDriverChange}
@@ -3386,7 +3386,7 @@ const BookingForm = ({
                       {/* Name */}
                       <motion.div>
                         <label className="block text-sm font-semibold text-white/90 mb-2">Customer Name *</label>
-                        <input
+                        <input aria-label="Enter customer name"
                           type="text"
                           name="name"
                           value={recoveryData.name}
@@ -3400,7 +3400,7 @@ const BookingForm = ({
                       {/* Phone */}
                       <motion.div>
                         <label className="block text-sm font-semibold text-white/90 mb-2">Phone Number *</label>
-                        <input
+                        <input aria-label="Enter phone number"
                           type="tel"
                           name="phone"
                           value={recoveryData.phone}
@@ -3414,7 +3414,7 @@ const BookingForm = ({
                       {/* Date */}
                       <motion.div>
                         <label className="block text-sm font-semibold text-white/90 mb-2">Date *</label>
-                        <input
+                        <input aria-label="Date"
                           type="date"
                           name="date"
                           value={recoveryData.date}
@@ -3429,7 +3429,7 @@ const BookingForm = ({
                       <motion.div>
                         <label className="block text-sm font-semibold text-white/90 mb-2">Time *</label>
                         <div className="flex gap-2">
-                          <input
+                          <input aria-label="Time"
                             type="time"
                             name="time"
                             value={recoveryData.time}
@@ -3448,7 +3448,7 @@ const BookingForm = ({
                       <motion.div>
                         <label className="block text-sm font-semibold text-white/90 mb-2">Pickup Location (Breakdown) *</label>
                         <div className="relative flex items-center">
-                          <input
+                          <input aria-label="Enter breakdown location"
                             type="text"
                             name="pickupLocation"
                             ref={recoveryPickupRef}
@@ -3490,7 +3490,7 @@ const BookingForm = ({
                       <motion.div>
                         <label className="block text-sm font-semibold text-white/90 mb-2">Drop Location (Delivery) *</label>
                         <div className="relative flex items-center">
-                          <input
+                          <input aria-label="Enter delivery location"
                             type="text"
                             name="dropLocation"
                             ref={recoveryDropRef}
@@ -3530,7 +3530,7 @@ const BookingForm = ({
 
                       <motion.div className="md:col-span-2">
                         <label className="block text-sm font-semibold text-white/90 mb-2">Additional Comments (Optional)</label>
-                        <textarea
+                        <textarea aria-label="Comments"
                           name="comments"
                           value={recoveryData.comments}
                           onChange={handleRecoveryChange}
@@ -3569,7 +3569,7 @@ const BookingForm = ({
                           <Briefcase className="w-4 h-4 inline mr-2 text-accent-500" />
                           Select Tour Package Type *
                         </label>
-                        <select
+                        <select aria-label="Package Type"
                           name="packageType"
                           value={toursData.packageType}
                           onChange={handleToursChange}
@@ -3589,7 +3589,7 @@ const BookingForm = ({
                           <Car className="w-4 h-4 inline mr-2 text-accent-500" />
                           Vehicle Category *
                         </label>
-                        <select
+                        <select aria-label="Vehicle Category"
                           name="vehicleCategory"
                           value={toursData.vehicleCategory}
                           onChange={handleToursChange}
@@ -3627,7 +3627,7 @@ const BookingForm = ({
                             <Calendar className="w-4 h-4 inline mr-2 text-accent-500" />
                             Number of Days *
                           </label>
-                          <input
+                          <input aria-label="Days"
                             type="number"
                             name="days"
                             min="1"
@@ -3645,7 +3645,7 @@ const BookingForm = ({
                           <User className="w-4 h-4 inline mr-2 text-accent-500" />
                           Customer Name *
                         </label>
-                        <input
+                        <input aria-label="Enter customer name"
                           type="text"
                           name="name"
                           value={toursData.name}
@@ -3662,7 +3662,7 @@ const BookingForm = ({
                           <Phone className="w-4 h-4 inline mr-2 text-accent-500" />
                           Phone Number *
                         </label>
-                        <input
+                        <input aria-label="Enter 10-digit mobile number"
                           type="tel"
                           name="phone"
                           value={toursData.phone}
@@ -3679,7 +3679,7 @@ const BookingForm = ({
                           <Calendar className="w-4 h-4 inline mr-2 text-accent-500" />
                           Date *
                         </label>
-                        <input
+                        <input aria-label="Date"
                           type="date"
                           name="date"
                           value={toursData.date}
@@ -3697,7 +3697,7 @@ const BookingForm = ({
                           Time *
                         </label>
                         <div className="flex gap-2">
-                          <input
+                          <input aria-label="Time"
                             type="time"
                             name="time"
                             value={toursData.time}
@@ -3719,7 +3719,7 @@ const BookingForm = ({
                           Pickup Location *
                         </label>
                         <div className="relative flex items-center">
-                          <input
+                          <input aria-label="Enter pickup address"
                             type="text"
                             name="pickupLocation"
                             ref={toursPickupRef}
@@ -3764,7 +3764,7 @@ const BookingForm = ({
                           Drop Location / Tour Destination
                         </label>
                         <div className="relative flex items-center">
-                          <input
+                          <input aria-label="Enter destination / tour drop location"
                             type="text"
                             name="dropLocation"
                             ref={toursDropRef}
@@ -3807,7 +3807,7 @@ const BookingForm = ({
                           <MessageSquare className="w-4 h-4 inline mr-2 text-accent-500" />
                           Additional Comments / Special Requests (Optional)
                         </label>
-                        <textarea
+                        <textarea aria-label="Any customization requests, special instructions, or additional details..."
                           name="comments"
                           value={toursData.comments}
                           onChange={handleToursChange}
@@ -3867,7 +3867,7 @@ const BookingForm = ({
                               </div>
                             ) : field.type === 'time' && field.hasTimePeriod ? (
                               <div className="flex gap-2">
-                                <input
+                                <input aria-label="Input"
                                   type="time"
                                   name={field.name}
                                   value={otherServiceData[field.name]}
@@ -3907,7 +3907,7 @@ const BookingForm = ({
                               </div>
                             ) : field.name === 'pickupLocation' || field.name === 'dropLocation' ? (
                               <div className="relative flex items-center">
-                                <input
+                                <input aria-label="Input"
                                   type={field.type}
                                   name={field.name}
                                   value={otherServiceData[field.name]}
@@ -3945,7 +3945,7 @@ const BookingForm = ({
                                 </div>
                               </div>
                             ) : (
-                              <input
+                              <input aria-label="Input"
                                 type={field.type}
                                 name={field.name}
                                 value={otherServiceData[field.name]}
@@ -3977,7 +3977,7 @@ const BookingForm = ({
                         <MessageSquare className="w-4 h-4 inline mr-2 text-accent-500" />
                         Additional Comments / Special Requests (Optional)
                       </label>
-                      <textarea
+                      <textarea aria-label="Any customization requests, special instructions, or additional details..."
                         name="comments"
                         value={otherServiceData.comments}
                         onChange={handleOtherServiceChange}

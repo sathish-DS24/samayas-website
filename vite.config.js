@@ -9,6 +9,7 @@ export default defineConfig({
     open: true
   },
   build: {
+    target: 'es2022',
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -32,6 +33,9 @@ export default defineConfig({
             }
             if (id.includes('framer-motion') || id.includes('lucide-react')) {
               return 'vendor-ui'
+            }
+            if (id.includes('@emailjs')) {
+              return 'vendor-email'
             }
             if (id.includes('@supabase')) {
               return 'vendor-backend'

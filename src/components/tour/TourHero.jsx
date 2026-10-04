@@ -62,6 +62,7 @@ const TourHero = ({ onSearch, categories = [], states = [] }) => {
               <Search className="w-5 h-5 text-amber-400 absolute left-3 pointer-events-none" />
               <input
                 type="text"
+                aria-label="Search destination"
                 placeholder="Search destination (e.g. Ooty, Munnar)"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -73,6 +74,7 @@ const TourHero = ({ onSearch, categories = [], states = [] }) => {
             <div className="relative flex items-center">
               <MapPin className="w-5 h-5 text-amber-400 absolute left-3 pointer-events-none" />
               <select
+                aria-label="Filter by State"
                 value={selectedState}
                 onChange={(e) => setSelectedState(e.target.value)}
                 className="w-full pl-10 pr-3 py-3 bg-dark-950/80 border border-dark-800 rounded-xl text-sm text-white focus:outline-none focus:border-amber-400 transition cursor-pointer"

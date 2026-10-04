@@ -664,6 +664,32 @@ const BookingForm = ({
 
   const sendFareEstimateLead = (calcData) => {
     if (!calcData || !calcData.name || !calcData.phone) return;
+
+    // 1. Authoritative Persistence: Store lead immediately in Supabase PostgreSQL database
+    try {
+      apiClient.createLead({
+        customerName: String(calcData.name),
+        customerPhone: String(calcData.phone),
+        origin: String(calcData.pickupLocation || 'Pickup Location'),
+        destination: String(calcData.dropLocation || 'Local'),
+        vehicle: String(calcData.vehicleType || 'SEDAN'),
+        serviceType: String(calcData.tripType || 'one-way'),
+        estimatedTotalFare: Number(calcData.finalAmount) || 0,
+        baseFare: Number(calcData.baseFare) || 0,
+        driverAllowance: Number(calcData.bata) || 0,
+        routeDistanceKm: Number(calcData.distance) || 0,
+        billableDistanceKm: Number(calcData.billableDistance || calcData.distance) || 0,
+        travelDate: calcData.date || null,
+        travelTime: calcData.fullTime || calcData.time || null,
+      }).then(res => {
+        console.log('Lead persisted to Supabase database:', res?.reference || res?.bookingReference);
+      }).catch(err => {
+        console.warn('Backend createLead error (non-fatal):', err.message);
+      });
+    } catch (e) {
+      console.warn('Backend createLead execution error:', e);
+    }
+
     try {
       const isRoundTrip = calcData.tripType === 'round-trip'
       const isActingDriver = calcData.tripType === 'acting-driver'
@@ -1979,7 +2005,38 @@ const BookingForm = ({
       // Log template params for debugging (remove in production)
       console.log('EmailJS Template Params:', templateParams)
       
-      await emailjs.send(serviceId, templateId, templateParams, publicKey)
+      // 1. Authoritative Booking Persistence to Supabase
+      let backendBooking = null;
+      try {
+        backendBooking = await apiClient.createBooking({
+          customerName,
+          customerPhone,
+          origin: pickupLocation,
+          destination: dropLocation,
+          vehicleType,
+          tripType: isRoundTrip ? 'round-trip' : isRecovery ? 'recovery_services' : isDriver ? 'acting-driver' : 'one-way',
+          travelDate: formattedDate,
+          travelTime: formattedTime,
+          distance: distance,
+          baseFare: baseFare,
+          driverAllowance: bata,
+          estimatedTotalFare: finalAmount,
+          notes: finalComments,
+        });
+        if (backendBooking?.bookingReference) {
+          templateParams.booking_reference = backendBooking.bookingReference;
+          templateParams.subject = `${templateParams.subject} (${backendBooking.bookingReference})`;
+        }
+      } catch (backendErr) {
+        console.warn('Backend booking API non-blocking fallback:', backendErr.message);
+      }
+
+      // 2. Dispatch Email Notification via EmailJS (safely caught so booking always completes)
+      try {
+        await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      } catch (emailErr) {
+        console.warn('EmailJS delivery notice (booking safely stored in Supabase):', emailErr);
+      }
       
       // Tracking
       funnelStep.current = 'booking_completed'

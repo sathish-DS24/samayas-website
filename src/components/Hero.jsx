@@ -1,260 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Car, Users, Clock, Grid, ChevronDown, Eye, EyeOff } from 'lucide-react'
+import { Users, Clock, Grid, ChevronDown } from 'lucide-react'
 import TariffModal from './TariffModal'
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return window.innerWidth < 768
-    }
-    return false
-  })
-  const [videoError, setVideoError] = useState(false)
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [activeVideo, setActiveVideo] = useState(0) // 0 or 1 for crossfade
-  const [isOverlayHidden, setIsOverlayHidden] = useState(false)
-  const videoRef1 = React.useRef(null)
-  const videoRef2 = React.useRef(null)
-  const bgVideoRef1 = React.useRef(null)
-  const bgVideoRef2 = React.useRef(null)
-
-  // Video playlist in sequence (with WebM fallback)
-  const videoPlaylist = [
-    { mp4: '/videos/madurai-temple.webm', webm: '/videos/madurai-temple.webm' },
-    { mp4: '/videos/trichy-mainguard.webm', webm: '/videos/trichy-mainguard.webm' },
-    { mp4: '/videos/chennai-airport.webm', webm: '/videos/chennai-airport.webm' }
-  ]
-
-  const getBestVideoSrc = useCallback((videoObj) => {
-    const v = document.createElement('video')
-    // WebM is preferred if browser supports it
-    return v.canPlayType('video/webm') ? videoObj.webm : videoObj.mp4
-  }, [])
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
-
-  // Handle video end - move to next video with smooth transition
-  const handleVideoEnd = useCallback(() => {
-    const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
-    const nextVideoSrc = getBestVideoSrc(videoPlaylist[nextIndex])
-    const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
-    
-    const nextBgVideoRef = activeVideo === 0 ? bgVideoRef2 : bgVideoRef1
-    
-    if (nextVideoRef.current) {
-      // Ensure the next video source is set correctly
-      if (nextVideoRef.current.src && !nextVideoRef.current.src.includes(encodeURI(nextVideoSrc))) {
-        nextVideoRef.current.src = nextVideoSrc
-        nextVideoRef.current.style.objectPosition = videoPlaylist[nextIndex].objectPosition || 'center'
-        nextVideoRef.current.load()
-      }
-      if (nextBgVideoRef.current && nextBgVideoRef.current.src && !nextBgVideoRef.current.src.includes(encodeURI(nextVideoSrc))) {
-        nextBgVideoRef.current.src = nextVideoSrc
-        nextBgVideoRef.current.load()
-      }
-      
-      // Start crossfade immediately - next video should already be loaded
-      setActiveVideo(activeVideo === 0 ? 1 : 0)
-      setCurrentVideoIndex(nextIndex)
-      
-      // Ensure next video is playing
-      const playNext = () => {
-        if (nextVideoRef.current) {
-          nextVideoRef.current.currentTime = 0
-          nextVideoRef.current.play().catch(console.error)
-        }
-        if (nextBgVideoRef.current) {
-          nextBgVideoRef.current.currentTime = 0
-          nextBgVideoRef.current.play().catch(console.error)
-        }
-      }
-      
-      // If video is ready, play immediately, otherwise wait for canplay
-      if (nextVideoRef.current.readyState >= 3) {
-        playNext()
-      } else {
-        nextVideoRef.current.addEventListener('canplay', playNext, { once: true })
-      }
-    }
-  }, [currentVideoIndex, activeVideo, videoPlaylist.length])
-
-  // Handle video time update - start preloading next video when current is near end
-  const handleTimeUpdate = useCallback((e) => {
-    const video = e.target
-    // Only process time updates from the currently active video
-    const isActiveVideo = (activeVideo === 0 && video === videoRef1.current) || 
-                          (activeVideo === 1 && video === videoRef2.current)
-    
-    if (!isActiveVideo) return
-    
-    const duration = video.duration
-    const currentTime = video.currentTime
-    
-    // When video is 80% complete, start preparing next video
-    if (duration && currentTime / duration > 0.8) {
-      const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
-      const nextVideoSrc = getBestVideoSrc(videoPlaylist[nextIndex])
-      const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
-      
-      const nextBgVideoRef = activeVideo === 0 ? bgVideoRef2 : bgVideoRef1
-      
-      if (nextVideoRef.current && (!nextVideoRef.current.src || !nextVideoRef.current.src.includes(encodeURI(nextVideoSrc)))) {
-        nextVideoRef.current.src = nextVideoSrc
-        nextVideoRef.current.style.objectPosition = videoPlaylist[nextIndex].objectPosition || 'center'
-        nextVideoRef.current.load()
-        nextVideoRef.current.preload = 'auto'
-      }
-      if (nextBgVideoRef.current && (!nextBgVideoRef.current.src || !nextBgVideoRef.current.src.includes(encodeURI(nextVideoSrc)))) {
-        nextBgVideoRef.current.src = nextVideoSrc
-        nextBgVideoRef.current.load()
-        nextBgVideoRef.current.preload = 'auto'
-      }  
-        // When next video is ready, start playing it muted in background
-        const handleNextReady = () => {
-          if (nextVideoRef.current && nextVideoRef.current.paused) {
-            nextVideoRef.current.currentTime = 0
-            nextVideoRef.current.play().catch(console.error)
-          }
-        }
-        
-        nextVideoRef.current.addEventListener('canplay', handleNextReady, { once: true })
-        if (nextVideoRef.current.readyState >= 3) {
-          handleNextReady()
-        }
-      }
-  }, [currentVideoIndex, activeVideo, videoPlaylist.length])
-
-  // Handle video load error
-  const handleVideoError = (e) => {
-    const video = e.target
-    console.error(`Video error for ${video.src}:`, e)
-    console.error('Video error details:', {
-      error: video.error,
-      networkState: video.networkState,
-      readyState: video.readyState,
-      src: video.src
-    })
-    
-    // Try next video if current one fails
-    setTimeout(() => {
-      setCurrentVideoIndex((prevIndex) => {
-        const nextIndex = (prevIndex + 1) % videoPlaylist.length
-        console.log(`Video ${prevIndex} failed, trying next video ${nextIndex}`)
-        return nextIndex
-      })
-    }, 1000)
-  }
-
-  // Initialize first video on mount (Desktop only)
-  useEffect(() => {
-    if (isMobile) return
-    if (videoRef1.current) {
-      const video = videoRef1.current
-      const videoSrcObj = videoPlaylist[0]
-      const src = getBestVideoSrc(videoSrcObj)
-      
-      video.src = src
-      video.style.objectPosition = videoSrcObj.objectPosition || 'center'
-      video.load()
-      
-      if (bgVideoRef1.current) {
-        bgVideoRef1.current.src = src
-        bgVideoRef1.current.load()
-      }
-      
-      const playVideo = async () => {
-        try {
-          await video.play()
-          if (bgVideoRef1.current) bgVideoRef1.current.play().catch(() => {})
-          setVideoError(false)
-        } catch (err) {
-          console.log('Autoplay prevented:', err)
-        }
-      }
-      
-      const handleCanPlay = () => {
-        playVideo()
-      }
-      
-      video.addEventListener('canplay', handleCanPlay, { once: true })
-      
-      if (video.readyState >= 3) {
-        playVideo()
-      }
-      
-      // If autoplay blocked, play on user interaction
-      const handleInteraction = () => {
-        playVideo()
-        document.removeEventListener('click', handleInteraction)
-        document.removeEventListener('touchstart', handleInteraction)
-        document.removeEventListener('scroll', handleInteraction)
-        document.removeEventListener('mousemove', handleInteraction)
-      }
-      
-      document.addEventListener('click', handleInteraction, { once: true })
-      document.addEventListener('touchstart', handleInteraction, { once: true })
-      document.addEventListener('scroll', handleInteraction, { once: true })
-      document.addEventListener('mousemove', handleInteraction, { once: true })
-      
-      return () => {
-        video.removeEventListener('canplay', handleCanPlay)
-      }
-    }
-  }, []) // Empty dependency array to run only on mount
-
-  // Preload next video immediately when current video index changes (Desktop only)
-  useEffect(() => {
-    if (isMobile) return
-    const nextIndex = (currentVideoIndex + 1) % videoPlaylist.length
-    const nextVideoSrc = getBestVideoSrc(videoPlaylist[nextIndex])
-    const nextVideoRef = activeVideo === 0 ? videoRef2 : videoRef1
-    
-    const nextBgVideoRef = activeVideo === 0 ? bgVideoRef2 : bgVideoRef1
-    
-    if (nextVideoRef.current) {
-      // Always ensure the source is set correctly for the next video
-      // This is important when reusing video elements (e.g., videoRef1 for video 0 and video 2)
-      const currentSrc = nextVideoRef.current.src
-      const videoFileName = nextVideoSrc.split('/').pop()
-      
-      // Check if current source doesn't match the next video we need
-      if (!currentSrc || !currentSrc.includes(videoFileName)) {
-        nextVideoRef.current.src = nextVideoSrc
-        nextVideoRef.current.load()
-        nextVideoRef.current.preload = 'auto'
-        if (nextBgVideoRef.current) {
-          nextBgVideoRef.current.src = nextVideoSrc
-          nextBgVideoRef.current.load()
-          nextBgVideoRef.current.preload = 'auto'
-        }
-      }
-      
-      // Preload and prepare next video
-      const handleNextReady = () => {
-        if (nextVideoRef.current) {
-          nextVideoRef.current.currentTime = 0
-          // Don't play yet, just prepare it
-        }
-      }
-      
-      // Remove any existing listeners to avoid duplicates
-      nextVideoRef.current.removeEventListener('canplay', handleNextReady)
-      nextVideoRef.current.addEventListener('canplay', handleNextReady, { once: true })
-      
-      if (nextVideoRef.current.readyState >= 3) {
-        handleNextReady()
-      }
-    }
-  }, [currentVideoIndex, activeVideo, videoPlaylist])
 
   const stats = [
     { icon: Users, number: '1000+', label: 'Happy Customers' },
@@ -268,7 +18,7 @@ const Hero = () => {
       className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
       style={{ minHeight: '115vh', width: '100vw' }}
     >
-      {/* Background Visual: Responsive Picture for Mobile (Sub-second LCP) + Desktop Cinematic Video */}
+      {/* Background Visual: Responsive Picture (40KB WebP on mobile, high-res on desktop) */}
       <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
         <div className="relative w-full h-full">
           {/* Responsive Hero Picture: 40KB WebP on mobile, high-res on desktop */}
@@ -287,63 +37,6 @@ const Hero = () => {
             />
           </picture>
 
-          {/* Desktop-only Video Background */}
-          {!isMobile && (
-            <>
-              {/* Video 1 - Crossfade between two videos for smooth transitions */}
-              <motion.video
-                ref={videoRef1}
-                autoPlay
-                muted
-                playsInline
-                loop={false}
-                preload="auto"
-                className="absolute inset-0 w-full h-full object-cover z-0"
-                style={{ minHeight: '115vh', width: '100vw' }}
-                initial={{ opacity: 1 }}
-                animate={{ opacity: activeVideo === 0 ? 1 : 0 }}
-                transition={{ duration: 0.8, ease: 'easeInOut' }}
-                onError={handleVideoError}
-                onEnded={handleVideoEnd}
-                onTimeUpdate={handleTimeUpdate}
-                onLoadedData={() => {
-                  setVideoError(false)
-                  if (videoRef1.current && activeVideo === 0) {
-                    videoRef1.current.play().catch(console.error)
-                  }
-                }}
-              >
-                Your browser does not support the video tag.
-              </motion.video>
-              
-              {/* Video 2 - For crossfade transitions */}
-              <motion.video
-                ref={videoRef2}
-                autoPlay
-                muted
-                playsInline
-                loop={false}
-                preload="auto"
-                className="absolute inset-0 w-full h-full object-cover z-0"
-                style={{ minHeight: '115vh', width: '100vw' }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: activeVideo === 1 ? 1 : 0 }}
-                transition={{ duration: 0.8, ease: 'easeInOut' }}
-                onError={handleVideoError}
-                onEnded={handleVideoEnd}
-                onTimeUpdate={handleTimeUpdate}
-                onLoadedData={() => {
-                  setVideoError(false)
-                  if (videoRef2.current && activeVideo === 1) {
-                    videoRef2.current.play().catch(console.error)
-                  }
-                }}
-              >
-                Your browser does not support the video tag.
-              </motion.video>
-            </>
-          )}
-          
           {/* Dark gradient overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/65 to-black/80 z-10" />
         </div>
@@ -351,10 +44,7 @@ const Hero = () => {
 
       {/* Content - Hero Text Overlay */}
       <div 
-        onClick={isOverlayHidden ? () => setIsOverlayHidden(false) : undefined}
-        className={`relative z-10 text-center text-white flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-10 w-full pt-20 sm:pt-0 transition-all duration-500 ${
-          isOverlayHidden ? 'opacity-0 pointer-events-none scale-95 cursor-pointer' : 'opacity-100 scale-100'
-        }`}
+        className="relative z-10 text-center text-white flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-10 w-full pt-20 sm:pt-0"
       >
         {/* Main Content */}
         <div className="py-8 sm:py-20 w-full max-w-7xl mx-auto">
@@ -480,33 +170,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Floating Watch Video / Toggle Overlay Button */}
-      <motion.button
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1.2, duration: 0.5 }}
-        onClick={() => setIsOverlayHidden(!isOverlayHidden)}
-        className="fixed top-20 right-4 sm:top-28 sm:right-8 z-30 flex items-center gap-2 bg-black/50 hover:bg-black/80 backdrop-blur-md text-white px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-full border border-white/20 shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 group"
-        aria-label={isOverlayHidden ? "Show Overlay Text" : "Watch Full Video"}
-        title={isOverlayHidden ? "Show Overlay Text" : "Watch Full Video"}
-      >
-        {isOverlayHidden ? (
-          <>
-            <Eye className="w-4 h-4 text-accent-400 group-hover:rotate-12 transition-transform" />
-            <span className="text-xs font-semibold tracking-wide">Show Text</span>
-          </>
-        ) : (
-          <>
-            <EyeOff className="w-4 h-4 text-accent-400 group-hover:-rotate-12 transition-transform" />
-            <span className="text-xs font-semibold tracking-wide">Watch Video</span>
-          </>
-        )}
-      </motion.button>
-
       {/* Floating Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: isOverlayHidden ? 0 : 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10 pointer-events-auto"
       >

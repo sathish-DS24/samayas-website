@@ -8,7 +8,7 @@ const DriverPricing = ({ pricing = null, districtName = '' }) => {
     fullDay: '₹1,100 (10 Hours / Local)',
     outstationBata: '₹800 (6 Hours / 150 km)',
     nightCharges: '₹150 (10 PM to 6 AM)',
-    waitingCharges: '₹80 - ₹90 / additional hour'
+    waitingCharges: '₹100 / additional hour'
   }
 
   return (
@@ -46,7 +46,7 @@ const DriverPricing = ({ pricing = null, districtName = '' }) => {
             </div>
             <ul className="space-y-2 text-xs text-gray-300 border-t border-dark-700 pt-4">
               <li className="flex items-center"><CheckCircle className="w-3.5 h-3.5 text-green-400 mr-2" /> 4 Hours / Max 20 km (₹500 + Food)</li>
-              <li className="flex items-center"><CheckCircle className="w-3.5 h-3.5 text-green-400 mr-2" /> Overtime: ₹80/extra hour</li>
+              <li className="flex items-center"><CheckCircle className="w-3.5 h-3.5 text-green-400 mr-2" /> Overtime: ₹100/extra hour</li>
             </ul>
           </div>
 

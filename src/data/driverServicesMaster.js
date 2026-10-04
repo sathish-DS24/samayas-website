@@ -23,7 +23,7 @@ export const driverServicesDataset = [
       baseRate: '₹500',
       unit: '4 Hours (Max 20 km)',
       minimumBooking: '4 Hours (₹500 + Food)',
-      overtimeRate: '₹80 / additional hour',
+      overtimeRate: '₹100 / additional hour',
       nightAllowance: '₹150 (10 PM to 6 AM)'
     },
     features: [
@@ -34,7 +34,7 @@ export const driverServicesDataset = [
       'Clean & Courteous Uniformed Drivers'
     ],
     faq: [
-      { q: 'What is the local acting driver tariff?', a: 'Local city driver tariff starts at ₹500 + Food for 4 hours (up to 20 km). Overtime is charged at ₹80/hour.' },
+      { q: 'What is the local acting driver tariff?', a: 'Local city driver tariff starts at ₹500 + Food for 4 hours (up to 20 km). Overtime is charged at ₹100/hour.' },
       { q: 'Can I hire a driver for out of city local trips?', a: 'Yes! Out of city trips (20-30 km) for 4 hours start at ₹600 + Food with overtime at ₹90/hour.' },
       { q: 'How quickly can a driver reach my location?', a: 'We dispatch nearest verified drivers for doorstep arrival within 30 to 45 minutes of booking confirmation.' }
     ],
@@ -299,7 +299,7 @@ export const driverServicesDataset = [
       baseRate: '₹500',
       unit: '4 Hours (Max 20 km)',
       minimumBooking: '4 Hours (₹500 + Food)',
-      overtimeRate: '₹80 / additional hour',
+      overtimeRate: '₹100 / additional hour',
       nightAllowance: '₹150'
     },
     features: [

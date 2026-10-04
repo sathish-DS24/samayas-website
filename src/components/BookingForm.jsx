@@ -601,7 +601,7 @@ const BookingForm = ({
     if (actingTripType === 'local') {
       if (localPackage === '20km') {
         baseFare = 500;
-        extraNote = '+ Rs 80/hr extra for additional hours beyond 4 hours (Excluding Food)';
+        extraNote = '+ Rs 100/hr extra for additional hours beyond 4 hours (Excluding Food)';
       } else {
         baseFare = 600;
         extraNote = '+ Rs 90/hr extra for additional hours beyond 4 hours (Excluding Food)';

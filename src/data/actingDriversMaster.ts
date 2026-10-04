@@ -75,7 +75,7 @@ export const actingDriversDataset: DistrictDriverItem[] = districts.map((d) => {
       fullDay: '₹1,100 (10 Hours / Local)',
       outstationBata: '₹800 (6 Hours / 150 km + Food)',
       outstationDaily: '₹1,300 - ₹1,500 / Day + Food + Accommodation',
-      waitingCharges: '₹80 - ₹90 / additional hour'
+      waitingCharges: '₹100 / additional hour'
     },
     driverCategories: [
       { name: 'Local City Driver (4 Hours)', desc: 'Local city errands, hospital visits & market shopping in your car (Up to 20 km + Food).', rate: 'From ₹500' },

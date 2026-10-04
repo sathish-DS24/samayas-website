@@ -22,7 +22,7 @@ const TariffModal = ({ isOpen, onClose }) => {
   ]
 
   const actingDriverLocalData = [
-    { service: 'Minimum 4 Hour (25 kms surrounding)', rate: 'Rs.500 + Food', additional: 'After per Hour: Rs.80' },
+    { service: 'Minimum 4 Hour (25 kms surrounding)', rate: 'Rs.500 + Food', additional: 'After per Hour: Rs.100' },
     { service: 'Night Fare (10:00 PM to 6:00 AM)', rate: 'Rs.100', additional: 'Additional to regular charges' },
   ]
 

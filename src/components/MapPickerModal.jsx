@@ -33,7 +33,9 @@ const MapPickerModal = ({ isOpen, onClose, onSelectLocation, initialAddress = ''
         const geocoder = new window.google.maps.Geocoder()
         try {
           const results = await new Promise((resolve) => {
+            const safetyTimer = setTimeout(() => resolve(null), 3000)
             geocoder.geocode({ address: initialAddress }, (res, status) => {
+              clearTimeout(safetyTimer)
               if (status === 'OK' && res[0]) resolve(res[0])
               else resolve(null)
             })
@@ -80,6 +82,14 @@ const MapPickerModal = ({ isOpen, onClose, onSelectLocation, initialAddress = ''
       })
 
       mapInstanceRef.current = map
+
+      // Trigger map resize after modal animation settles
+      setTimeout(() => {
+        if (window.google?.maps?.event && mapInstanceRef.current) {
+          window.google.maps.event.trigger(mapInstanceRef.current, 'resize')
+          mapInstanceRef.current.setCenter(center)
+        }
+      }, 200)
 
       // Geocode initial center
       updateAddressFromCenter(center.lat, center.lng, true)

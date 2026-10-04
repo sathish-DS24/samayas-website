@@ -1,25 +1,61 @@
-import { Loader } from '@googlemaps/js-api-loader'
-
-// Dynamic on-demand Google Maps Loader
+// Dynamic on-demand Google Maps Script Loader (Zero dependencies, 100% on-demand)
 let mapsLoaderPromise = null
 
 export const loadGoogleMaps = () => {
   if (typeof window === 'undefined') return Promise.resolve(null)
+  
   if (window.google && window.google.maps) {
     return Promise.resolve(window.google.maps)
   }
-  if (!mapsLoaderPromise) {
-    const loader = new Loader({
-      apiKey: 'AIzaSyCPNzKYzBGxu4b_AcUeKPbB6KCTmU1uBZw',
-      version: 'weekly',
-      libraries: ['places', 'geometry']
-    })
-    mapsLoaderPromise = loader.load().then(() => window.google.maps).catch((err) => {
-      console.warn('Failed to dynamically load Google Maps:', err)
-      mapsLoaderPromise = null
-      return null
-    })
+
+  if (mapsLoaderPromise) {
+    return mapsLoaderPromise
   }
+
+  mapsLoaderPromise = new Promise((resolve) => {
+    // Check if script is already present in DOM
+    const existingScript = document.querySelector('script[src*="maps.googleapis.com/maps/api/js"]')
+    if (existingScript) {
+      if (window.google && window.google.maps) {
+        resolve(window.google.maps)
+        return
+      }
+      existingScript.addEventListener('load', () => resolve(window.google?.maps || null), { once: true })
+      existingScript.addEventListener('error', () => {
+        mapsLoaderPromise = null
+        resolve(null)
+      }, { once: true })
+      return
+    }
+
+    const callbackName = `__samayasGoogleMapsLoaded_${Date.now()}`
+    window[callbackName] = () => {
+      try {
+        delete window[callbackName]
+      } catch (e) {
+        window[callbackName] = undefined
+      }
+      resolve(window.google?.maps || null)
+    }
+
+    const script = document.createElement('script')
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCPNzKYzBGxu4b_AcUeKPbB6KCTmU1uBZw&libraries=places,geometry&callback=${callbackName}`
+    script.async = true
+    script.defer = true
+    script.onerror = (err) => {
+      console.warn('Failed to dynamically load Google Maps:', err)
+      try {
+        delete window[callbackName]
+      } catch (e) {
+        window[callbackName] = undefined
+      }
+      mapsLoaderPromise = null
+      resolve(null)
+    }
+
+    document.head.appendChild(script)
+  })
+
   return mapsLoaderPromise
 }
 

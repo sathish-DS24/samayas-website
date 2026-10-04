@@ -7,7 +7,6 @@ import PopularRoutesSection from '../components/home/PopularRoutesSection'
 import Contact from '../components/Contact'
 import BookingForm from '../components/BookingForm'
 import Footer from '../components/Footer'
-import FestivalBanner from '../components/FestivalBanner'
 import { usePageSeo } from '../utils/seo'
 
 const HomePage = () => {
@@ -20,7 +19,6 @@ const HomePage = () => {
 
   return (
     <div className="relative">
-      <FestivalBanner />
       <Navbar variant="home" />
       <main>
         <Hero />

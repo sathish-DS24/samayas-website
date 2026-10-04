@@ -177,7 +177,7 @@ const MapPickerModal = ({ isOpen, onClose, onSelectLocation, initialAddress = ''
             <div className="flex items-center justify-between px-5 py-3.5 bg-primary-900 text-white flex-shrink-0">
               <div className="flex items-center space-x-2">
                 <MapPin className="w-5 h-5 text-accent-400" />
-                <h3 className="text-base sm:text-lg font-bold">{title}</h3>
+                <h2 className="text-base sm:text-lg font-bold">{title}</h2>
               </div>
               <button
                 onClick={onClose}

@@ -46,6 +46,15 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
               {/* Header */}
               <div className="bg-primary-900 p-4 rounded-t-2xl">
                 <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-lg sm:text-xl font-bold text-white">Booking Fare Summary</h2>
+                  <button
+                    onClick={onClose}
+                    className="p-2 rounded-full hover:bg-white/10 transition-colors text-white"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+                <div className="flex items-center justify-between mb-2">
                   <div className="flex space-x-2">
                     {bookingData.tripType === 'one-way' ? (
                       <button
@@ -77,12 +86,6 @@ const BookingSummary = ({ isOpen, onClose, onConfirm, bookingData, isLoading }) 
                       </button>
                     )}
                   </div>
-                  <button
-                    onClick={onClose}
-                    className="p-2 rounded-full hover:bg-white/10 transition-colors text-white"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
                 </div>
                 
                 {/* Disclaimer */}

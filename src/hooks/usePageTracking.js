@@ -9,8 +9,13 @@ const usePageTracking = () => {
   const location = useLocation()
 
   useEffect(() => {
-    // Initialize session data (runs once on first load)
-    initSessionAnalytics()
+    // Initialize session data asynchronously so it never blocks initial render
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(() => initSessionAnalytics())
+    } else {
+      setTimeout(() => initSessionAnalytics(), 50)
+    }
+
     // Determine a dynamic page title based on the path
     let pageTitle = document.title
     const path = location.pathname
@@ -26,8 +31,8 @@ const usePageTracking = () => {
     // Trigger virtual page view event in GTM
     trackPageView(location.pathname + location.search, pageTitle)
 
-    // Scroll to top on route change (UX best practice), but NOT for hash links
-    if (!location.hash) {
+    // Scroll to top on route change only if user had scrolled down
+    if (!location.hash && window.scrollY > 0) {
       window.scrollTo(0, 0)
     }
   }, [location])

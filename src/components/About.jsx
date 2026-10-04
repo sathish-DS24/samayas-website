@@ -41,10 +41,12 @@ const About = () => {
     }
   ]
 
-  // Initialize video on mount - similar to Hero component
+  // Initialize video only when scrolled into view to save 1.06MB on initial page load
   useEffect(() => {
+    if (!isInView) return
+
     const video = videoRef.current
-    if (!video) return
+    if (!video || video.src) return
 
     const videoSrc = '/videos/samayas-owner-video.webm'
     
@@ -72,33 +74,14 @@ const About = () => {
       playVideo()
     }, { once: true })
     
-    // If video is already ready, play immediately
     if (video.readyState >= 3) {
       playVideo()
     }
 
-    // If autoplay blocked, play on user interaction
-    const handleInteraction = () => {
-      playVideo()
-      document.removeEventListener('click', handleInteraction)
-      document.removeEventListener('touchstart', handleInteraction)
-      document.removeEventListener('scroll', handleInteraction)
-      document.removeEventListener('mousemove', handleInteraction)
-    }
-
-    document.addEventListener('click', handleInteraction, { once: true })
-    document.addEventListener('touchstart', handleInteraction, { once: true })
-    document.addEventListener('scroll', handleInteraction, { once: true })
-    document.addEventListener('mousemove', handleInteraction, { once: true })
-
     return () => {
       video.removeEventListener('canplay', handleCanPlay)
-      document.removeEventListener('click', handleInteraction)
-      document.removeEventListener('touchstart', handleInteraction)
-      document.removeEventListener('scroll', handleInteraction)
-      document.removeEventListener('mousemove', handleInteraction)
     }
-  }, [])
+  }, [isInView])
 
   return (
     <section id="about" className="py-20 bg-gray-50">
@@ -122,7 +105,8 @@ const About = () => {
                 loop
                 muted={isMuted}
                 playsInline
-                preload="auto"
+                preload="none"
+                aria-label="About SAMAYAS Video"
                 className="absolute inset-0 w-full h-full object-cover object-top z-[1]"
                 onError={(e) => {
                   const video = e.target
@@ -132,10 +116,10 @@ const About = () => {
                     readyState: video.readyState,
                     src: video.src
                   })
-                  // Fallback to gradient if video fails
                   e.target.style.display = 'none'
                 }}
               >
+                <track kind="captions" srcLang="en" label="English" default />
                 Your browser does not support the video tag.
               </video>
 

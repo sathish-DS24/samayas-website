@@ -16,12 +16,11 @@ const Hero = () => {
     <section
       id="home"
       className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
-      style={{ minHeight: '115vh', width: '100vw' }}
     >
-      {/* Background Visual: Responsive Picture (40KB WebP on mobile, high-res on desktop) */}
+      {/* Background Visual: Responsive Picture */}
       <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
         <div className="relative w-full h-full">
-          {/* Responsive Hero Picture: 40KB WebP on mobile, high-res on desktop */}
+          {/* Responsive Hero Picture: optimized mobile WebP, high-res desktop */}
           <picture className="absolute inset-0 w-full h-full z-0 pointer-events-none">
             <source media="(max-width: 768px)" srcSet="/hero-mobile.webp" type="image/webp" />
             <img
@@ -33,7 +32,6 @@ const Hero = () => {
               loading="eager"
               decoding="async"
               className="w-full h-full object-cover"
-              style={{ minHeight: '115vh', width: '100vw' }}
             />
           </picture>
 

@@ -30,7 +30,7 @@ export const initSessionAnalytics = () => {
     gclid: urlParams.get('gclid') || null,
     fbclid: urlParams.get('fbclid') || null,
     device_type: /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop',
-    screen_width: window.innerWidth,
+    screen_width: typeof window !== 'undefined' && window.screen ? window.screen.width : 0,
     language: navigator.language
   };
 

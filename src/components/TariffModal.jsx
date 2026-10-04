@@ -340,9 +340,9 @@ const TariffModal = ({ isOpen, onClose }) => {
                     <div className="grid md:grid-cols-2 gap-4">
                       {/* Drop Trips */}
                       <div className="bg-gray-800/30 rounded-lg p-4 border border-white/10">
-                        <h4 className="text-accent-500 font-semibold mb-3 text-base sm:text-lg">
+                        <h3 className="text-accent-500 font-semibold mb-3 text-base sm:text-lg">
                           Drop Trips:
-                        </h4>
+                        </h3>
                         <ul className="space-y-2 text-white/80 text-sm sm:text-base">
                           <li>• Driver Bata Rs.400</li>
                           <li>• Waiting Charges Rs.100 per hour</li>
@@ -352,9 +352,9 @@ const TariffModal = ({ isOpen, onClose }) => {
 
                       {/* Round Trips */}
                       <div className="bg-gray-800/30 rounded-lg p-4 border border-white/10">
-                        <h4 className="text-accent-500 font-semibold mb-3 text-base sm:text-lg">
+                        <h3 className="text-accent-500 font-semibold mb-3 text-base sm:text-lg">
                           Round Trips:
-                        </h4>
+                        </h3>
                         <ul className="space-y-2 text-white/80 text-sm sm:text-base">
                           <li>• Driver Bata Rs.300/day</li>
                           <li>• Minimum 250 kms/day (Bangalore pickup: 300 kms/day)</li>

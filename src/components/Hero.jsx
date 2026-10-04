@@ -99,19 +99,13 @@ const Hero = () => {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <motion.a
                   href="#booking"
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.85 }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-xl transition-all duration-300 w-full sm:w-auto"
+                  className="bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-xl transition-all duration-300 w-full sm:w-auto text-center"
                 >
                   Book Now
                 </motion.a>
                 <motion.button
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.9 }}
                   whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(253, 197, 0, 0.4)" }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setIsModalOpen(true)}
@@ -128,71 +122,45 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Stats Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
+          {/* Stats Section - Static instant paint for fast Speed Index */}
+          <div
             className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-center text-white mt-8 sm:mt-12 mb-16 sm:mb-0 max-w-4xl mx-auto w-full px-4"
           >
             {stats.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.3 + index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="backdrop-blur-md bg-black/25 hover:bg-black/35 rounded-xl p-4 sm:p-6 border border-white/15 shadow-xl transition-all duration-300"
+                className="backdrop-blur-md bg-black/25 hover:bg-black/35 rounded-xl p-4 sm:p-6 border border-white/15 shadow-xl transition-all duration-300 hover:scale-105"
               >
-                <motion.div
-                  animate={{ 
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 5, 0, -5, 0]
-                  }}
-                  transition={{ 
-                    duration: 3, 
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
+                <div
                   className="inline-flex items-center justify-center w-16 h-16 bg-accent-500/20 rounded-full mb-4"
                 >
                   <stat.icon className="w-8 h-8 text-accent-500" />
-                </motion.div>
+                </div>
                 <div className="text-3xl sm:text-4xl font-bold text-white mb-2">
                   {stat.number}
                 </div>
                 <div className="text-sm sm:text-base text-white/80">
                   {stat.label}
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
 
-      {/* Floating Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+      {/* Floating Scroll Indicator - lightweight pure CSS */}
+      <div
         className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10 pointer-events-auto"
       >
         <a href="#about" aria-label="Scroll to about section">
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center cursor-pointer"
-          >
+          <div className="flex flex-col items-center cursor-pointer hover:opacity-80 transition-opacity">
             <span className="text-white/70 text-xs sm:text-sm mb-1 sm:mb-2">Scroll</span>
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            >
+            <div className="animate-bounce">
               <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-accent-500" />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </a>
-      </motion.div>
+      </div>
 
       {/* Tariff Modal */}
       <TariffModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

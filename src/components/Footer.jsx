@@ -119,7 +119,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Quick Links</h3>
+            <h2 className="text-xl font-bold mb-6">Quick Links</h2>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <motion.li
@@ -151,7 +151,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Our Services</h3>
+            <h2 className="text-xl font-bold mb-6">Our Services</h2>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <motion.li
@@ -173,7 +173,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Contact Us</h3>
+            <h2 className="text-xl font-bold mb-6">Contact Us</h2>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 text-gray-300">
                 <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 text-accent-400" />

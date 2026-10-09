@@ -7,7 +7,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://api.samayasor
  */
 async function request(endpoint, options = {}) {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 12000);
+  const timeoutId = setTimeout(() => controller.abort(), 25000);
 
   const headers = {
     'Content-Type': 'application/json',
@@ -201,6 +201,69 @@ export const apiClient = {
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({ status, notes }),
+    });
+  },
+
+  /**
+   * Update Full Booking Details (Price, Service, Vehicle, Route, Date/Time, Status, Notes)
+   */
+  async updateAdminBooking(token, bookingId, payload) {
+    return request(`/admin/bookings/${encodeURIComponent(bookingId)}`, {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(payload),
+    });
+  },
+
+  /**
+   * Permanently Delete Booking and Associated Records from Supabase
+   */
+  async deleteAdminBooking(token, bookingId) {
+    return request(`/admin/bookings/${encodeURIComponent(bookingId)}`, {
+      method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+  },
+
+  /**
+   * Update Lead Details (Finalized Price, Route, Service Type, Vehicle, Travel Date & Time, Status)
+   */
+  async updateAdminLead(token, leadId, payload) {
+    return request(`/admin/leads/${encodeURIComponent(leadId)}`, {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(payload),
+    });
+  },
+
+  /**
+   * Convert Lead Directly into Confirmed/Requested Booking
+   */
+  async convertAdminLeadToBooking(token, leadId, payload = {}) {
+    return request(`/admin/leads/${encodeURIComponent(leadId)}/convert`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(payload),
+    });
+  },
+
+  /**
+   * Permanently Delete Lead from Supabase
+   */
+  async deleteAdminLead(token, leadId) {
+    return request(`/admin/leads/${encodeURIComponent(leadId)}`, {
+      method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
   },
 };

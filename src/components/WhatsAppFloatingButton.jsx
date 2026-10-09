@@ -44,6 +44,11 @@ const WhatsAppFloatingButton = () => {
     }
   }, [location.pathname])
 
+  // Hide floating action buttons on Admin portal / dashboard
+  if (location.pathname.startsWith('/admin')) {
+    return null
+  }
+
   return (
     <div className="fixed bottom-20 right-4 sm:bottom-24 sm:right-8 z-50 flex flex-col items-end gap-3">
       {/* Tooltip speech bubble */}
